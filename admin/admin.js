@@ -46,7 +46,10 @@
             eye.innerHTML = t === "text" ? '<i class="fa-solid fa-eye-slash"></i>' : '<i class="fa-solid fa-eye"></i>';
         });
 
+        var entered = false;
         function enterApp(session) {
+            if (entered) return;          // run once
+            entered = true;
             loginScreen.style.display = "none";
             app.hidden = false;
             bootApp(session);
@@ -54,10 +57,17 @@
 
         if (!sb) { errEl.textContent = "Internet connection chahiye (Supabase load nahi hua)."; }
 
-        // existing session?
-        if (sb) sb.auth.getSession().then(function (r) {
-            if (r.data && r.data.session) enterApp(r.data.session);
-        });
+        // Enter via auth-state — this fires AFTER the access token is applied to
+        // the client, fixing the race where the first query ran as anon (0 orders).
+        // setTimeout escapes the auth callback (Supabase deadlock-safety).
+        if (sb) {
+            sb.auth.onAuthStateChange(function (event, session) {
+                if (session) setTimeout(function () { enterApp(session); }, 0);
+            });
+            sb.auth.getSession().then(function (r) {
+                if (r.data && r.data.session) setTimeout(function () { enterApp(r.data.session); }, 0);
+            });
+        }
 
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
@@ -70,7 +80,7 @@
             var res = await sb.auth.signInWithPassword({ email: email, password: pass });
             btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In';
             if (res.error) { errEl.textContent = "Galat email/password ya user mojood nahi. (" + res.error.message + ")"; return; }
-            enterApp(res.data.session);
+            // onAuthStateChange (SIGNED_IN) will call enterApp once the token is set.
         });
     }
 
@@ -82,6 +92,32 @@
         document.getElementById("admin-user-av").textContent = email[0].toUpperCase();
 
         initNav(); initSidebarToggle(); initOrdersFilter(); initLogout(); initSettings(email);
+
+        // Refresh button in the top bar
+        var top = document.querySelector(".admin-top");
+        if (top && !document.getElementById("admin-refresh")) {
+            var rb = document.createElement("button");
+            rb.id = "admin-refresh";
+            rb.title = "Refresh orders";
+            rb.innerHTML = '<i class="fa-solid fa-rotate"></i>';
+            rb.style.cssText = "margin-left:auto;margin-right:14px;width:42px;height:42px;border-radius:50%;border:1px solid var(--a-border);background:rgba(255,255,255,0.04);color:#fff;cursor:pointer;font-size:1rem;transition:transform .3s,background .2s;";
+            rb.onmouseenter = function () { rb.style.background = "var(--a-primary)"; };
+            rb.onmouseleave = function () { rb.style.background = "rgba(255,255,255,0.04)"; };
+            rb.addEventListener("click", function () {
+                rb.querySelector("i").classList.add("fa-spin");
+                loadData().then(function () { setTimeout(function () { rb.querySelector("i").classList.remove("fa-spin"); }, 400); });
+            });
+            // place it just before the user block (which has margin-left:auto)
+            var userBlock = top.querySelector(".admin-user");
+            if (userBlock) { userBlock.style.marginLeft = "0"; top.insertBefore(rb, userBlock); }
+            else top.appendChild(rb);
+        }
+
+        // Auto-refresh when the admin tab regains focus (e.g. after taking an order on WhatsApp)
+        if (!window.__mdcFocusBound) {
+            window.__mdcFocusBound = true;
+            window.addEventListener("focus", function () { loadData(); });
+        }
 
         await loadData();
     }
