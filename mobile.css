@@ -1,0 +1,157 @@
+/* ==========================================================================
+   MALIK DATA CENTRE — Mobile Optimization Layer (loaded LAST)
+   Coordinates all floating widgets + polishes layout/typography for phones.
+   ========================================================================== */
+
+/* ---------- Prevent horizontal scroll everywhere ---------- */
+html, body { max-width: 100%; overflow-x: hidden; }
+* { -webkit-tap-highlight-color: rgba(99,102,241,0.2); }
+
+/* ==========================================================================
+   TABLET (<= 1024px) minor tuning
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .section-container { padding: 64px 22px; }
+    .nav-menu { gap: 20px; }
+}
+
+/* ==========================================================================
+   PHONES (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    html { font-size: 15px; }
+
+    /* ---- Hero ---- */
+    .hero-section { padding-top: 104px; padding-bottom: 30px; }
+    .hero-container { gap: 28px; }
+    .hero-title { font-size: 2.05rem; line-height: 1.18; }
+    .hero-description { font-size: 0.98rem; margin-bottom: 26px; }
+    .badge-trusted { font-size: 0.72rem; }
+    .hero-search-box { padding: 6px; border-radius: 14px; }
+    .hero-search-box input { font-size: 0.9rem; }
+    .hero-search-box .btn { padding: 10px 16px; }
+    .channel-promo-banner { padding: 12px 14px; }
+
+    /* hero stats: 2 columns instead of cramped 4 */
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px 12px; padding-top: 24px; }
+    .stat-number { font-size: 1.35rem; }
+    .stat-label { font-size: 0.74rem; }
+
+    /* hero 3D scene lighter + shorter */
+    .hero-graphic-container { max-width: 360px; }
+
+    /* ---- Sections / headings ---- */
+    .section-container { padding: 48px 16px; }
+    .section-header { margin-bottom: 36px; }
+    .section-title { font-size: 1.55rem; }
+    .section-subtitle { font-size: 0.92rem; }
+
+    /* ---- Cards spacing ---- */
+    .grid { gap: 16px; }
+    .glass-card { padding: 20px; }
+    .tool-card { min-height: auto; }
+
+    /* ---- Deal banner / countdown ---- */
+    .mdc-deal-banner { padding: 14px 12px; gap: 10px; }
+    .mdc-cd-box { min-width: 46px; padding: 7px 5px; }
+    .mdc-cd-num { font-size: 1.2rem; }
+
+    /* ---- Refund flow / how-it-works already stack via their own rules ---- */
+
+    /* ---- Footer ---- */
+    .footer-container { padding: 0 18px 40px; }
+    .footer-bottom-container { padding: 0 18px; }
+
+    /* ---- Tap targets ---- */
+    .nav-link, .drawer-link, .btn, .tab-btn { min-height: 40px; }
+}
+
+/* ==========================================================================
+   SMALL PHONES (<= 600px) — FLOATING WIDGET COORDINATION (no overlap)
+   Right column (stacked): WhatsApp -> Cart -> Back-to-top
+   Left: AI launcher (round). Coupon badge above it. Toasts move to TOP.
+   ========================================================================== */
+@media (max-width: 600px) {
+    /* WhatsApp main button */
+    .floating-whatsapp {
+        bottom: 16px !important; right: 16px !important;
+        width: 52px !important; height: 52px !important; font-size: 1.6rem !important;
+    }
+    /* Cart FAB sits above WhatsApp */
+    .mdc-cart-fab {
+        bottom: 80px !important; right: 18px !important;
+        width: 48px !important; height: 48px !important; font-size: 1.2rem !important;
+    }
+    /* Back-to-top above cart */
+    .mdc-top-btn {
+        bottom: 138px !important; right: 20px !important;
+        width: 40px !important; height: 40px !important;
+    }
+
+    /* AI assistant launcher -> compact round icon, bottom-left */
+    .mdc-ai-launcher {
+        left: 16px !important; bottom: 16px !important;
+        width: 52px; height: 52px; padding: 0 !important; gap: 0 !important;
+        border-radius: 50%; justify-content: center; font-size: 0 !important;
+    }
+    .mdc-ai-launcher .ai-ico { width: 100%; height: 100%; background: transparent; font-size: 1.35rem; }
+    .mdc-ai-launcher .ai-dot { top: 4px; left: auto; right: 4px; }
+
+    /* Active coupon badge -> above the AI launcher (left side) */
+    .mdc-coupon-active {
+        left: 14px !important; right: auto !important; bottom: 78px !important;
+        font-size: 0.74rem; padding: 7px 12px;
+    }
+
+    /* Order toasts -> move to TOP (under navbar) to avoid bottom clutter */
+    .mdc-toast-stack {
+        top: 80px !important; bottom: auto !important;
+        left: 10px !important; right: 10px !important; max-width: none !important;
+    }
+    .mdc-toast { padding: 10px 14px; }
+
+    /* Cookie bar -> full width bottom, sits above the FABs while shown */
+    .mdc-cookie {
+        left: 10px !important; right: 10px !important; bottom: 10px !important;
+        margin-left: 0 !important; max-width: none !important; z-index: 450;
+    }
+
+    /* AI chat panel full-screen feel */
+    .mdc-ai-panel { left: 6px !important; right: 6px !important; bottom: 6px !important; width: auto !important; height: calc(100vh - 12px) !important; }
+
+    /* Checkout / cart / exit modals comfortable padding */
+    .mdc-co-card { padding: 26px 18px; border-radius: 18px; }
+    .mdc-cart-drawer { width: 100%; max-width: 100%; }
+
+    /* Section titles a touch smaller */
+    .section-title { font-size: 1.4rem; }
+    .hero-title { font-size: 1.85rem; }
+
+    /* Reviews images taller already handled; ensure marquee speed ok */
+    .mdc-marquee-item { font-size: 0.95rem; }
+
+    /* Refer & earn / pay strips padding */
+    .mdc-ref-card, .mdc-pay-strip { padding: 28px 18px; }
+    .mdc-ref-form input { min-width: 0; }
+}
+
+/* ==========================================================================
+   TINY PHONES (<= 380px)
+   ========================================================================== */
+@media (max-width: 380px) {
+    .hero-title { font-size: 1.65rem; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .logo-text { font-size: 0.95rem; }
+    .mdc-cd-box { min-width: 42px; }
+    .mdc-cd-num { font-size: 1.05rem; }
+}
+
+/* ==========================================================================
+   Landscape phones: keep FABs from crowding
+   ========================================================================== */
+@media (max-height: 480px) and (max-width: 900px) {
+    .mdc-top-btn { display: none; }
+}
+
+/* Smooth momentum scroll on iOS for horizontal tab strips */
+.category-tabs-wrapper { -webkit-overflow-scrolling: touch; }
