@@ -150,10 +150,16 @@
       ]
     }
     </script>
-    <!-- Google Fonts: Outfit (headings) and Inter (body) -->
+    <!-- Performance: preconnect to CDNs used -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fxlqaqocsszrbdyrcdgj.supabase.co">
+    <!-- Preload the hero image (LCP) -->
+    <link rel="preload" as="image" href="assets/hero_banner.png" fetchpriority="high">
+    <!-- Google Fonts: Outfit (headings) and Inter (body) — trimmed weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="index.css">
     <!-- Premium 3D / Animation Layer -->
@@ -170,8 +176,7 @@
     <link rel="stylesheet" href="mobile.css">
     <!-- FontAwesome for Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Three.js for real 3D scenes -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <!-- Three.js is loaded on-demand (desktop only) by effects.js for speed -->
 </head>
 <body>
     <!-- Cinematic Preloader -->
@@ -1494,9 +1499,7 @@
     <script src="ux.js" defer></script>
     <!-- Advanced Engine (AI assistant + referral) -->
     <script src="advanced.js" defer></script>
-    <!-- Supabase client (order capture) -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <!-- Store backend (saves orders to database, then WhatsApp) -->
+    <!-- Store backend (loads Supabase on-demand at checkout for speed) -->
     <script src="store-backend.js" defer></script>
 </body>
 </html>

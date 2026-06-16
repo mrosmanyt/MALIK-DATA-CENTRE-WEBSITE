@@ -155,3 +155,23 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 /* Smooth momentum scroll on iOS for horizontal tab strips */
 .category-tabs-wrapper { -webkit-overflow-scrolling: touch; }
+
+/* ==========================================================================
+   PERFORMANCE — render below-the-fold sections only when near viewport.
+   Big first-paint speedup; applies on all screen sizes.
+   ========================================================================== */
+.reviews-section,
+.refund-policy-section,
+.faq-section,
+.video-section,
+.how-section,
+#payments-section,
+#referral-section,
+.mdc-marquee {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+}
+
+/* Hint the GPU for the animated background canvas without forcing layers elsewhere */
+#mdc-bg-canvas, #mdc-hero-canvas { will-change: opacity; }
+

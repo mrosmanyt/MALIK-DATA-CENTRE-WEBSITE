@@ -11,6 +11,19 @@
     var SUPABASE_KEY = "sb_publishable_yulV5o_-xOxCXW_oItHH5A_yCvKjziy";
 
     var sb = null;
+    var supaLoading = null;
+    function ensureSupabase() {
+        if (window.supabase && window.supabase.createClient) return Promise.resolve(true);
+        if (supaLoading) return supaLoading;
+        supaLoading = new Promise(function (resolve) {
+            var s = document.createElement("script");
+            s.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+            s.onload = function () { resolve(true); };
+            s.onerror = function () { resolve(false); };
+            document.head.appendChild(s);
+        });
+        return supaLoading;
+    }
     function client() {
         if (!sb && window.supabase && window.supabase.createClient) {
             sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -158,6 +171,7 @@
 
             var orderNo = null;
             try {
+                await ensureSupabase();
                 var c = client();
                 if (c) {
                     var res = await c.rpc("place_order", {

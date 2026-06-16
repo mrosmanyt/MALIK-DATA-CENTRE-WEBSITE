@@ -183,7 +183,7 @@
        8. THREE.JS — PARTICLE NETWORK BACKGROUND
        ====================================================================== */
     function initBackground3D() {
-        if (!hasTHREE || prefersReduced) return;
+        if (!window.THREE || prefersReduced) return;
         const canvas = document.getElementById("mdc-bg-canvas");
         if (!canvas) return;
         const THREE = window.THREE;
@@ -197,7 +197,7 @@
         camera.position.z = 320;
 
         // --- Particle field ---
-        const COUNT = isMobile ? 90 : 180;
+        const COUNT = isMobile ? 70 : 130;
         const SPREAD = 600;
         const positions = new Float32Array(COUNT * 3);
         const velocities = [];
@@ -265,8 +265,16 @@
         });
 
         const pos = pGeo.attributes.position.array;
+        let frame = 0;
+        let paused = false;
+        document.addEventListener("visibilitychange", () => {
+            paused = document.hidden;
+            if (!paused) requestAnimationFrame(animate);
+        });
 
         function animate() {
+            if (paused) return;
+            frame++;
             // move particles
             for (let i = 0; i < COUNT; i++) {
                 const ix = i * 3;
@@ -281,26 +289,29 @@
             }
             pGeo.attributes.position.needsUpdate = true;
 
-            // build connecting lines
-            let v = 0;
-            for (let i = 0; i < COUNT; i++) {
-                for (let j = i + 1; j < COUNT; j++) {
-                    const dx = pos[i * 3] - pos[j * 3];
-                    const dy = pos[i * 3 + 1] - pos[j * 3 + 1];
-                    const dz = pos[i * 3 + 2] - pos[j * 3 + 2];
-                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-                    if (dist < CONNECT_DIST) {
-                        linePositions[v++] = pos[i * 3];
-                        linePositions[v++] = pos[i * 3 + 1];
-                        linePositions[v++] = pos[i * 3 + 2];
-                        linePositions[v++] = pos[j * 3];
-                        linePositions[v++] = pos[j * 3 + 1];
-                        linePositions[v++] = pos[j * 3 + 2];
+            // build connecting lines (throttled: every 2nd frame — saves CPU)
+            if (frame % 2 === 0) {
+                let v = 0;
+                const cd2 = CONNECT_DIST * CONNECT_DIST;
+                for (let i = 0; i < COUNT; i++) {
+                    for (let j = i + 1; j < COUNT; j++) {
+                        const dx = pos[i * 3] - pos[j * 3];
+                        const dy = pos[i * 3 + 1] - pos[j * 3 + 1];
+                        const dz = pos[i * 3 + 2] - pos[j * 3 + 2];
+                        const d2 = dx * dx + dy * dy + dz * dz;
+                        if (d2 < cd2) {
+                            linePositions[v++] = pos[i * 3];
+                            linePositions[v++] = pos[i * 3 + 1];
+                            linePositions[v++] = pos[i * 3 + 2];
+                            linePositions[v++] = pos[j * 3];
+                            linePositions[v++] = pos[j * 3 + 1];
+                            linePositions[v++] = pos[j * 3 + 2];
+                        }
                     }
                 }
+                lineGeo.setDrawRange(0, v / 3);
+                lineGeo.attributes.position.needsUpdate = true;
             }
-            lineGeo.setDrawRange(0, v / 3);
-            lineGeo.attributes.position.needsUpdate = true;
 
             // camera parallax + gentle rotation
             mx += (tmx - mx) * 0.04;
@@ -328,7 +339,7 @@
        9. THREE.JS — HERO FLOATING OBJECTS + GLOWING GLOBE
        ====================================================================== */
     function initHero3D() {
-        if (!hasTHREE || prefersReduced) return;
+        if (!window.THREE || prefersReduced) return;
         const canvas = document.getElementById("mdc-hero-canvas");
         if (!canvas) return;
         const THREE = window.THREE;
@@ -481,6 +492,17 @@
     /* ======================================================================
        INIT
        ====================================================================== */
+    // Load Three.js ONLY on desktop (saves ~600KB + heavy GPU work on phones).
+    function load3D() {
+        if (isMobile || prefersReduced) return;      // phones rely on CSS effects (fast)
+        if (window.THREE) { initBackground3D(); initHero3D(); return; }
+        const s = document.createElement("script");
+        s.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+        s.async = true;
+        s.onload = () => { initBackground3D(); initHero3D(); };
+        document.head.appendChild(s);
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
         initScrollProgress();
         initCursorGlow();
@@ -488,8 +510,9 @@
         initCounters();
         initTilt();
         initMagnetic();
-        initBackground3D();
-        initHero3D();
         enhanceToolCards();
+        // defer 3D until the page is idle so it never blocks first paint
+        if ("requestIdleCallback" in window) requestIdleCallback(load3D, { timeout: 2000 });
+        else setTimeout(load3D, 800);
     });
 })();
