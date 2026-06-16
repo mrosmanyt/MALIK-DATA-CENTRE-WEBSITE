@@ -1,0 +1,389 @@
+/* ==========================================================================
+   MALIK DATA CENTRE — Conversion / Promo Layer
+   Loaded after effects.css. Adds: live order toasts + counter, payment
+   trust badges, countdown deal banner, coupon code system.
+   ========================================================================== */
+
+/* ----------------------------------------------------------------------------
+   1. LIVE ORDER TOASTS (bottom-left) + LIVE COUNTER
+   -------------------------------------------------------------------------- */
+.mdc-toast-stack {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 95;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+    max-width: 330px;
+}
+
+.mdc-toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px 12px 12px;
+    border-radius: 14px;
+    background: rgba(15, 15, 20, 0.92);
+    border: 1px solid var(--border-glass, #2a2a31);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 18px rgba(16, 185, 129, 0.08);
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+    pointer-events: auto;
+}
+
+.mdc-toast.show { transform: translateX(0); opacity: 1; }
+
+.mdc-toast-avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary, #6366f1), hsl(280, 89%, 60%));
+}
+
+.mdc-toast-body { line-height: 1.35; }
+
+.mdc-toast-title {
+    font-size: 0.82rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.mdc-toast-title b { color: hsl(150, 80%, 65%); font-weight: 700; }
+
+.mdc-toast-sub {
+    font-size: 0.7rem;
+    color: var(--text-muted, #a1a1aa);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.mdc-toast-sub .vd {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #25d366; box-shadow: 0 0 8px #25d366;
+    display: inline-block;
+    animation: pulse 1.6s infinite;
+}
+
+/* live counter pill (top of catalog) */
+.mdc-live-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: var(--success, #10b981);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+.mdc-live-counter .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #25d366; box-shadow: 0 0 10px #25d366;
+    animation: pulse 1.6s infinite;
+}
+
+.mdc-live-counter b { color: #fff; }
+
+/* ----------------------------------------------------------------------------
+   2. COUNTDOWN DEAL BANNER
+   -------------------------------------------------------------------------- */
+.mdc-deal-banner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 22px;
+    padding: 16px 22px;
+    margin: 0 auto 36px auto;
+    max-width: 760px;
+    border-radius: var(--radius-lg, 16px);
+    background: linear-gradient(120deg, rgba(249, 115, 22, 0.12), rgba(99, 102, 241, 0.12));
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mdc-deal-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -60%;
+    width: 40%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,0.10), transparent);
+    transform: skewX(-20deg);
+    animation: deal-sheen 5s ease-in-out infinite;
+}
+
+@keyframes deal-sheen {
+    0%, 100% { left: -60%; }
+    50% { left: 130%; }
+}
+
+.mdc-deal-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.mdc-deal-text i { color: var(--accent-orange, #f97316); animation: pulse 1.6s infinite; }
+.mdc-deal-text span { color: var(--accent-orange, #f97316); }
+
+.mdc-countdown { display: flex; align-items: center; gap: 8px; }
+
+.mdc-cd-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 52px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--border-glass, #2a2a31);
+}
+
+.mdc-cd-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+}
+
+.mdc-cd-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted, #a1a1aa);
+    margin-top: 4px;
+}
+
+.mdc-cd-sep { font-size: 1.3rem; font-weight: 800; color: var(--text-muted, #a1a1aa); }
+
+/* ----------------------------------------------------------------------------
+   3. COUPON CODE SYSTEM
+   -------------------------------------------------------------------------- */
+.mdc-coupon-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 auto 40px auto;
+    max-width: 720px;
+}
+
+.mdc-coupon-codes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.mdc-coupon-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: var(--accent-orange, #f97316);
+    background: rgba(249, 115, 22, 0.08);
+    border: 1px dashed rgba(249, 115, 22, 0.4);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.mdc-coupon-chip:hover {
+    background: rgba(249, 115, 22, 0.16);
+    border-style: solid;
+    transform: translateY(-2px);
+}
+
+.mdc-coupon-chip i { font-size: 0.7rem; }
+
+.mdc-coupon-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card, #161618);
+    border: 1px solid var(--border-glass, #2a2a31);
+    border-radius: var(--radius-md, 10px);
+    padding: 6px;
+}
+
+.mdc-coupon-form input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    width: 160px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.mdc-coupon-form input::placeholder { color: var(--text-dark, #6b7280); text-transform: none; letter-spacing: 0; }
+
+.mdc-coupon-msg {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 1.2em;
+}
+
+.mdc-coupon-msg.ok { color: var(--success, #10b981); }
+.mdc-coupon-msg.err { color: hsl(0, 80%, 65%); }
+
+/* active coupon floating badge */
+.mdc-coupon-active {
+    position: fixed;
+    bottom: 24px;
+    right: 104px;
+    z-index: 96;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: var(--success, #10b981);
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.mdc-coupon-active.show { display: inline-flex; animation: zoomIn 0.4s ease; }
+
+.mdc-coupon-active .x {
+    cursor: pointer;
+    opacity: 0.7;
+    pointer-events: auto;
+}
+.mdc-coupon-active .x:hover { opacity: 1; }
+
+/* ----------------------------------------------------------------------------
+   4. SECURE PAYMENT TRUST STRIP
+   -------------------------------------------------------------------------- */
+.mdc-pay-section { padding: 20px 24px 0 24px; }
+
+.mdc-pay-strip {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: var(--radius-lg, 16px);
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--border-glass, #2a2a31);
+}
+
+.mdc-pay-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-muted, #a1a1aa);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mdc-pay-title i { color: var(--success, #10b981); }
+
+.mdc-pay-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.mdc-pay-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass, #2a2a31);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.mdc-pay-badge:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.mdc-pay-badge .pay-ico {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; color: #fff;
+}
+
+.pay-easypaisa .pay-ico { background: #00a651; }
+.pay-jazzcash .pay-ico { background: #e60000; }
+.pay-meezan   .pay-ico { background: #00857b; }
+.pay-bank     .pay-ico { background: var(--primary, #6366f1); }
+.pay-easypaisa { border-color: rgba(0, 166, 81, 0.3); }
+.pay-jazzcash  { border-color: rgba(230, 0, 0, 0.3); }
+.pay-meezan    { border-color: rgba(0, 133, 123, 0.3); }
+.pay-bank      { border-color: rgba(99, 102, 241, 0.3); }
+
+.mdc-pay-note {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted, #a1a1aa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.mdc-pay-note i { color: var(--success, #10b981); }
+
+/* ----------------------------------------------------------------------------
+   5. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+    .mdc-toast-stack { left: 12px; right: 12px; bottom: 88px; max-width: none; }
+    .mdc-deal-banner { gap: 10px 14px; padding: 14px; }
+    .mdc-cd-box { min-width: 44px; }
+    .mdc-cd-num { font-size: 1.15rem; }
+    .mdc-coupon-active { right: 12px; bottom: 84px; }
+    .mdc-coupon-form input { width: 130px; }
+}

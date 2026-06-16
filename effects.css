@@ -1,0 +1,426 @@
+/* ==========================================================================
+   MALIK DATA CENTRE — Premium 3D / Animation Layer
+   Loaded AFTER index.css. Adds: preloader, Three.js canvas, 3D tilt cards,
+   scroll reveals, animated counters, magnetic buttons, custom cursor,
+   shine effects, logo marquee, refined glass.
+   ========================================================================== */
+
+/* ----------------------------------------------------------------------------
+   0. Extra design tokens
+   -------------------------------------------------------------------------- */
+:root {
+    --glow-purple: rgba(124, 92, 255, 0.55);
+    --glow-blue: rgba(56, 189, 248, 0.5);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ----------------------------------------------------------------------------
+   1. CINEMATIC PRELOADER
+   -------------------------------------------------------------------------- */
+.mdc-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(99, 102, 241, 0.15), transparent 60%),
+        var(--bg-darker, #050507);
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.mdc-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Spinning 3D-ish ring stack */
+.preloader-orbit {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    animation: pre-spin 8s linear infinite;
+}
+
+.preloader-orbit .ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.preloader-orbit .ring-1 {
+    border-top-color: var(--primary, #6366f1);
+    border-bottom-color: var(--primary, #6366f1);
+    animation: pre-rot 1.6s linear infinite;
+}
+
+.preloader-orbit .ring-2 {
+    inset: 16px;
+    border-left-color: var(--accent-blue, #38bdf8);
+    border-right-color: var(--accent-blue, #38bdf8);
+    animation: pre-rot 2.2s linear infinite reverse;
+}
+
+.preloader-orbit .ring-3 {
+    inset: 32px;
+    border-top-color: var(--success, #10b981);
+    border-left-color: var(--success, #10b981);
+    animation: pre-rot 1.2s linear infinite;
+}
+
+.preloader-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--primary, #6366f1), hsl(280, 89%, 60%));
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.7);
+    animation: pre-pulse 1.6s ease-in-out infinite;
+}
+
+.preloader-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-align: center;
+}
+
+.preloader-brand span {
+    background: linear-gradient(135deg, var(--accent-blue, #38bdf8), var(--primary, #6366f1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.preloader-sub {
+    font-size: 0.78rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted, #a1a1aa);
+}
+
+.preloader-bar {
+    width: 220px;
+    height: 3px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.preloader-bar span {
+    display: block;
+    height: 100%;
+    width: 40%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent-blue, #38bdf8), var(--primary, #6366f1));
+    animation: pre-load 1.3s ease-in-out infinite;
+}
+
+@keyframes pre-spin { to { transform: rotateY(360deg); } }
+@keyframes pre-rot { to { transform: rotate(360deg); } }
+@keyframes pre-pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.15); }
+}
+@keyframes pre-load {
+    0% { transform: translateX(-120%); }
+    100% { transform: translateX(320%); }
+}
+
+/* ----------------------------------------------------------------------------
+   2. THREE.JS BACKGROUND CANVAS
+   -------------------------------------------------------------------------- */
+#mdc-bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;            /* sits behind content, above body bg */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.4s ease;
+}
+
+#mdc-bg-canvas.ready { opacity: 1; }
+
+/* Hero 3D object canvas (floating shapes around hero image) */
+#mdc-hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-graphic-container { position: relative; }
+
+/* give the hero image card a subtle 3D platform feel */
+.hero-image-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* ----------------------------------------------------------------------------
+   3. CUSTOM CURSOR GLOW (desktop only)
+   -------------------------------------------------------------------------- */
+.mdc-cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.10) 0%, transparent 65%);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    will-change: left, top;
+}
+
+body.cursor-active .mdc-cursor-glow { opacity: 1; }
+
+/* ----------------------------------------------------------------------------
+   4. 3D TILT CARDS
+   -------------------------------------------------------------------------- */
+.tilt-3d {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.2s ease;
+}
+
+/* glare sweep on tilt cards */
+.tilt-3d .tilt-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at var(--glare-x, 50%) var(--glare-y, 0%),
+        rgba(255, 255, 255, 0.16) 0%,
+        transparent 45%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.tilt-3d.is-tilting .tilt-glare { opacity: 1; }
+
+/* lift inner content on tilt for parallax depth */
+.tilt-3d .tilt-layer { transform: translateZ(40px); }
+
+/* ----------------------------------------------------------------------------
+   5. SCROLL REVEAL
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+[data-reveal="left"]  { transform: translateX(-50px); }
+[data-reveal="right"] { transform: translateX(50px); }
+[data-reveal="zoom"]  { transform: scale(0.9); }
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* stagger helper (delay applied inline via JS too, but provide fallbacks) */
+[data-reveal].d1 { transition-delay: 0.08s; }
+[data-reveal].d2 { transition-delay: 0.16s; }
+[data-reveal].d3 { transition-delay: 0.24s; }
+[data-reveal].d4 { transition-delay: 0.32s; }
+
+/* ----------------------------------------------------------------------------
+   6. BUTTON SHINE SWEEP
+   -------------------------------------------------------------------------- */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.btn:hover::after { left: 130%; }
+
+/* magnetic buttons need transform readiness */
+.magnetic { will-change: transform; transition: transform 0.25s var(--ease-spring); }
+
+/* ----------------------------------------------------------------------------
+   7. GRADIENT SHIMMER on key headings
+   -------------------------------------------------------------------------- */
+.text-gradient {
+    background-size: 200% auto;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+    to { background-position: 200% center; }
+}
+
+/* animated underline accent under section titles */
+.section-title { position: relative; display: inline-block; }
+.section-header { display: flex; flex-direction: column; align-items: center; }
+
+/* ----------------------------------------------------------------------------
+   8. FLOATING BADGES — upgrade to 3D drift
+   -------------------------------------------------------------------------- */
+.floating-badge {
+    animation-name: float-3d !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(99, 102, 241, 0.18);
+}
+
+@keyframes float-3d {
+    0%   { transform: translateY(0) translateX(0) rotate(-1deg); }
+    33%  { transform: translateY(-14px) translateX(6px) rotate(1.5deg); }
+    66%  { transform: translateY(6px) translateX(-6px) rotate(-1.5deg); }
+    100% { transform: translateY(0) translateX(0) rotate(-1deg); }
+}
+
+/* ----------------------------------------------------------------------------
+   9. LOGO / BRAND MARQUEE (trusted tools strip)
+   -------------------------------------------------------------------------- */
+.mdc-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 0;
+    border-top: 1px solid var(--border-glass, #2a2a31);
+    border-bottom: 1px solid var(--border-glass, #2a2a31);
+    background: rgba(255, 255, 255, 0.015);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.mdc-marquee-track {
+    display: flex;
+    gap: 56px;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+}
+
+.mdc-marquee:hover .mdc-marquee-track { animation-play-state: paused; }
+
+.mdc-marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-muted, #a1a1aa);
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.mdc-marquee-item i { font-size: 1.25rem; color: var(--primary, #6366f1); }
+.mdc-marquee-item:hover { color: #fff; }
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
+/* ----------------------------------------------------------------------------
+   10. TOOL CARD GLOW BORDER on hover (premium)
+   -------------------------------------------------------------------------- */
+.tool-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--primary), var(--accent-blue), var(--success));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tool-card:hover::before { opacity: 0.8; }
+
+/* keep tool inner content above glow */
+.tool-card-top, .tool-card-footer { position: relative; z-index: 2; }
+
+/* ----------------------------------------------------------------------------
+   11. SCROLL PROGRESS BAR
+   -------------------------------------------------------------------------- */
+.mdc-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    z-index: 200;
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary), hsl(280, 89%, 60%));
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+    transition: width 0.1s linear;
+}
+
+/* ----------------------------------------------------------------------------
+   12. STAT COUNTER pop
+   -------------------------------------------------------------------------- */
+.stat-number { transition: transform 0.3s var(--ease-spring); }
+.stat-item:hover .stat-number { transform: scale(1.12); color: var(--primary); }
+
+/* ----------------------------------------------------------------------------
+   13. REDUCED MOTION + MOBILE PERFORMANCE
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    #mdc-bg-canvas, #mdc-hero-canvas { display: none; }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+@media (max-width: 768px) {
+    /* lighten heavy effects on phones */
+    .mdc-cursor-glow { display: none; }
+    #mdc-hero-canvas { opacity: 0.7; }
+    .tilt-3d .tilt-layer { transform: none; }
+    .preloader-bar { width: 180px; }
+}

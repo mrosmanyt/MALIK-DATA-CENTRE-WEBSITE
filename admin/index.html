@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | MALIK DATA CENTRE</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Animated background orbs -->
+    <div class="admin-orb orb-1"></div>
+    <div class="admin-orb orb-2"></div>
+    <div class="admin-orb orb-3"></div>
+
+    <!-- ============ LOGIN SCREEN ============ -->
+    <div class="admin-login" id="admin-login">
+        <form class="login-card" id="login-form" autocomplete="off">
+            <div class="login-logo">
+                <span class="login-logo-icon"><img src="../assets/logo.png" alt="MALIK DATA CENTRE logo"></span>
+            </div>
+            <h1 class="login-title">MALIK DATA <span>CENTRE</span></h1>
+            <p class="login-sub">Admin Control Panel</p>
+
+            <div class="login-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="login-email" placeholder="Email address" required autocomplete="username">
+            </div>
+            <div class="login-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
+                <button type="button" class="login-eye" id="login-eye" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+            </div>
+
+            <div class="login-error" id="login-error"></div>
+
+            <button type="submit" class="login-btn" id="login-btn">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In
+            </button>
+            <div class="login-foot"><i class="fa-solid fa-shield-halved"></i> Secure admin access only</div>
+        </form>
+    </div>
+
+    <!-- ============ ADMIN APP ============ -->
+    <div class="admin-app" id="admin-app" hidden>
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-brand">
+                <span class="sidebar-logo"><img src="../assets/logo.png" alt="MALIK DATA CENTRE logo"></span>
+                <span class="sidebar-name">MALIK <span>DATA</span></span>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="snav active" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> <span>Dashboard</span></button>
+                <button class="snav" data-view="orders"><i class="fa-solid fa-receipt"></i> <span>Orders</span></button>
+                <button class="snav" data-view="products"><i class="fa-solid fa-box-open"></i> <span>Products</span></button>
+                <button class="snav" data-view="customers"><i class="fa-solid fa-users"></i> <span>Customers</span></button>
+                <button class="snav" data-view="settings"><i class="fa-solid fa-gear"></i> <span>Settings</span></button>
+            </nav>
+            <button class="sidebar-logout" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></button>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+            <header class="admin-top">
+                <button class="admin-menu-toggle" id="admin-menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+                <div>
+                    <h2 class="admin-page-title" id="admin-page-title">Dashboard</h2>
+                    <div class="admin-date" id="admin-date"></div>
+                </div>
+                <div class="admin-user">
+                    <div class="admin-user-av" id="admin-user-av">A</div>
+                    <div class="admin-user-meta">
+                        <span class="admin-user-name" id="admin-user-name">Admin</span>
+                        <span class="admin-user-role">Administrator</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- DASHBOARD VIEW -->
+            <section class="admin-view active" id="view-dashboard">
+                <div class="kpi-grid" id="kpi-grid"></div>
+                <div class="chart-row">
+                    <div class="admin-card chart-card">
+                        <div class="card-head"><h3>Revenue (Last 14 Days)</h3><span class="card-tag" id="rev-tag"></span></div>
+                        <canvas id="revenueChart" height="120"></canvas>
+                    </div>
+                    <div class="admin-card chart-card chart-small">
+                        <div class="card-head"><h3>Sales by Category</h3></div>
+                        <canvas id="categoryChart" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="card-head"><h3>Recent Orders</h3><a class="card-link" data-view="orders">View all <i class="fa-solid fa-arrow-right"></i></a></div>
+                    <div class="table-wrap"><table class="admin-table" id="recent-orders"></table></div>
+                </div>
+            </section>
+
+            <!-- ORDERS VIEW -->
+            <section class="admin-view" id="view-orders">
+                <div class="admin-card">
+                    <div class="card-head">
+                        <h3>All Orders</h3>
+                        <div class="orders-filter" id="orders-filter">
+                            <button class="ofilter active" data-status="all">All</button>
+                            <button class="ofilter" data-status="completed">Completed</button>
+                            <button class="ofilter" data-status="pending">Pending</button>
+                        </div>
+                    </div>
+                    <div class="table-wrap"><table class="admin-table" id="orders-table"></table></div>
+                </div>
+            </section>
+
+            <!-- PRODUCTS VIEW -->
+            <section class="admin-view" id="view-products">
+                <div class="admin-card">
+                    <div class="card-head"><h3>Products &amp; Pricing</h3><span class="card-tag" id="prod-count"></span></div>
+                    <p class="view-note"><i class="fa-solid fa-circle-info"></i> Yahan price edit karke "Save" dabayein. (Demo: changes is browser mein save hote hain. Live database connect hone par sab devices par sync honge.)</p>
+                    <div class="table-wrap"><table class="admin-table" id="products-table"></table></div>
+                </div>
+            </section>
+
+            <!-- CUSTOMERS VIEW -->
+            <section class="admin-view" id="view-customers">
+                <div class="admin-card">
+                    <div class="card-head"><h3>Customers</h3><span class="card-tag" id="cust-count"></span></div>
+                    <div class="table-wrap"><table class="admin-table" id="customers-table"></table></div>
+                </div>
+            </section>
+
+            <!-- SETTINGS VIEW -->
+            <section class="admin-view" id="view-settings">
+                <div class="admin-card settings-card">
+                    <div class="card-head"><h3>Account Settings</h3></div>
+                    <p class="view-note"><i class="fa-solid fa-triangle-exclamation"></i> Pehli baar login ke baad apna password zaroor badlein.</p>
+                    <form id="settings-form" autocomplete="off">
+                        <label class="set-label">Admin Email</label>
+                        <input type="email" id="set-email" class="set-input" placeholder="admin@malikdatacentre.store" autocomplete="username">
+                        <label class="set-label">New Password</label>
+                        <input type="password" id="set-pass" class="set-input" placeholder="New password (min 6 chars)" autocomplete="new-password">
+                        <label class="set-label">Confirm New Password</label>
+                        <input type="password" id="set-pass2" class="set-input" placeholder="Confirm password" autocomplete="new-password">
+                        <div class="set-msg" id="set-msg"></div>
+                        <button type="submit" class="login-btn" style="margin-top:8px"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+                    </form>
+                </div>
+                <div class="admin-card settings-card">
+                    <div class="card-head"><h3>Security Note</h3></div>
+                    <p class="view-note" style="margin:0"><i class="fa-solid fa-lock"></i> Yeh login ek basic gate hai. Maximum security ke liye Netlify par "Password protection" (Site settings &rarr; Visitor access) bhi enable karein, ya database/auth connect karwayein.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

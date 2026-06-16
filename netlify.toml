@@ -1,0 +1,12 @@
+# MALIK DATA CENTRE — Netlify config (static site, no build step)
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URL for the admin panel
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# SPA-style fallback is NOT needed; this is a multi-page static site.

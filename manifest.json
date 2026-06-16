@@ -1,0 +1,43 @@
+{
+  "name": "MALIK DATA CENTRE — Premium AI Subscriptions",
+  "short_name": "Malik Data Centre",
+  "description": "Premium AI tools & software subscriptions at unbeatable prices. Private accounts, instant activation, full warranty.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "lang": "en",
+  "categories": ["shopping", "business", "productivity"],
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%236366f1'/%3E%3Ctext x='96' y='130' font-family='Arial,sans-serif' font-size='112' font-weight='bold' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Tools",
+      "url": "./index.html#catalog-section"
+    },
+    {
+      "name": "Chat Support",
+      "url": "https://wa.me/923445739206"
+    }
+  ]
+}

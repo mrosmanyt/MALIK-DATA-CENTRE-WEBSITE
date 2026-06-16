@@ -1,0 +1,109 @@
+/* ==========================================================================
+   MALIK DATA CENTRE — UX Layer
+   Save badge, active nav scroll-spy, anchor offset, back-to-top, cookie bar
+   ========================================================================== */
+
+/* Fixed-header anchor offset so section titles aren't hidden under navbar */
+section[id], div[id="how-section"] { scroll-margin-top: 92px; }
+
+/* ----------------------------------------------------------------------------
+   SAVE % BADGE (top-right of tool cards)
+   -------------------------------------------------------------------------- */
+.tool-save-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding: 4px 9px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--success, #10b981), #059669);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+/* ----------------------------------------------------------------------------
+   ACTIVE NAV (scroll-spy)
+   -------------------------------------------------------------------------- */
+.nav-link.active { color: var(--text-main, #fff); }
+.nav-link.active::after { width: 100%; }
+
+/* ----------------------------------------------------------------------------
+   BACK TO TOP
+   -------------------------------------------------------------------------- */
+.mdc-top-btn {
+    position: fixed;
+    bottom: 168px;
+    right: 34px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    z-index: 97;
+    border: 1px solid var(--border-glass, #2a2a31);
+    background: rgba(15, 15, 20, 0.85);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.mdc-top-btn.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.mdc-top-btn:hover { background: var(--primary, #6366f1); border-color: var(--primary, #6366f1); transform: translateY(-3px); }
+
+/* ----------------------------------------------------------------------------
+   COOKIE CONSENT BAR
+   -------------------------------------------------------------------------- */
+.mdc-cookie {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 400;
+    max-width: 380px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(15, 15, 20, 0.96);
+    border: 1px solid var(--border-glass, #2a2a31);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
+    transform: translateY(140%);
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mdc-cookie.show { transform: translateY(0); }
+.mdc-cookie p {
+    font-size: 0.85rem;
+    color: var(--text-muted, #a1a1aa);
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+.mdc-cookie p i { color: var(--primary, #6366f1); margin-right: 6px; }
+.mdc-cookie a { color: var(--primary, #6366f1); }
+.mdc-cookie-actions { display: flex; gap: 10px; }
+.mdc-cookie-actions button {
+    flex: 1;
+    padding: 9px 14px;
+    border-radius: 9px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    cursor: pointer;
+    border: 1px solid var(--border-glass, #2a2a31);
+    transition: all 0.25s ease;
+}
+.mdc-cookie-accept { background: var(--primary, #6366f1); color: #fff; border-color: var(--primary, #6366f1); }
+.mdc-cookie-accept:hover { background: var(--primary-hover, #7c5cff); transform: translateY(-2px); }
+.mdc-cookie-decline { background: transparent; color: var(--text-muted, #a1a1aa); }
+.mdc-cookie-decline:hover { color: #fff; border-color: rgba(255,255,255,0.25); }
+
+@media (max-width: 600px) {
+    .mdc-cookie { left: 12px; right: 12px; max-width: none; bottom: 12px; }
+    .mdc-top-btn { bottom: 150px; right: 26px; width: 42px; height: 42px; }
+}

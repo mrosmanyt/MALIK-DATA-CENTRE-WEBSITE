@@ -1,0 +1,12 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local deploy helpers / secrets (never commit)
+deploy.bat
+mdc-deploy.bat
+*.local
+
+# Node (if ever added)
+node_modules/
