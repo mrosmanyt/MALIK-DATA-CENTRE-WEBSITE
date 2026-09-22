@@ -1475,63 +1475,154 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        <!-- FAQ Section / Help Center -->
         <section class="faq-section" id="faq-section">
             <div class="section-container">
                 <div class="section-header" data-reveal>
+                    <div class="badge-trusted" style="margin: 0 auto 12px auto;"><i class="fa-solid fa-headset"></i> 24/7 Support &amp; Knowledge Base</div>
                     <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle">Everything you need to know about purchasing, delivery, and setup of premium accounts.</p>
+                    <p class="section-subtitle">Search or filter below to find instant answers about delivery, warranty replacements, payment methods (EasyPaisa / JazzCash / USDT), and account privacy.</p>
                 </div>
+
+                <!-- Instant FAQ Search Box -->
+                <div class="faq-search-wrapper" data-reveal>
+                    <div class="faq-search-box glass-card">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="faq-search-input" placeholder="Search questions (e.g., delivery, warranty, USDT, EasyPaisa, private email)..." aria-label="Search FAQs">
+                        <button id="faq-search-clear" class="faq-search-clear" title="Clear search" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Category Filter Chips -->
+                <div class="faq-filter-chips" id="faq-filter-chips" data-reveal>
+                    <button class="faq-chip active" data-category="all"><i class="fa-solid fa-layer-group"></i> All Questions</button>
+                    <button class="faq-chip" data-category="delivery"><i class="fa-solid fa-bolt"></i> Delivery &amp; Setup</button>
+                    <button class="faq-chip" data-category="warranty"><i class="fa-solid fa-shield-halved"></i> Warranty &amp; Refunds</button>
+                    <button class="faq-chip" data-category="payment"><i class="fa-solid fa-credit-card"></i> Payment &amp; USDT</button>
+                    <button class="faq-chip" data-category="privacy"><i class="fa-solid fa-lock"></i> Account Privacy</button>
+                </div>
+
+                <!-- FAQ Accordion List -->
                 <div class="faq-accordion-container" id="faq-accordion-wrapper" data-reveal>
                     <!-- FAQ 1 -->
-                    <div class="faq-item glass-card" id="faq-item-1">
+                    <div class="faq-item glass-card" id="faq-item-1" data-category="delivery">
                         <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
-                            <span>How long does account activation take?</span>
+                            <span><i class="fa-solid fa-clock-rotate-left faq-q-icon"></i> Account activation kitni der mein milti hai? (Delivery Time)</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer" id="faq-answer-1" hidden>
-                            <p>Most AI tool and software activations take between 5 to 30 minutes after your payment is confirmed. For subscriptions that require client email activation (like Gemini or Lovable Pro), we will request access or an activation code via WhatsApp to set it up directly on your email address.</p>
+                            <p>Most AI tool and software activations take between <strong>5 to 30 minutes</strong> after your payment confirmation. Client email activation tools (such as Gemini 1.5 Pro, Lovable Pro, or Google AI Ultra Family Invite) are activated directly on your email address immediately upon receiving your details on WhatsApp.</p>
                         </div>
                     </div>
+
                     <!-- FAQ 2 -->
-                    <div class="faq-item glass-card" id="faq-item-2">
+                    <div class="faq-item glass-card" id="faq-item-2" data-category="warranty">
                         <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
-                            <span>What payment methods do you accept?</span>
+                            <span><i class="fa-solid fa-arrows-rotate faq-q-icon"></i> Warranty replacement ka kya procedure hai?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer" id="faq-answer-2" hidden>
-                            <p>We support all major payment methods in Pakistan, including EasyPaisa, JazzCash, and direct Bank Transfers. For international customers, we also accept USDT via Binance (BEP20 &amp; TRC20 networks). The details will be shared with you on WhatsApp when you place an order.</p>
+                            <p>Every purchase comes with full duration warranty replacement protection. If you face any login or subscription issue during your warranty period, simply send a screenshot of the error to our WhatsApp support at <a href="https://wa.me/923445739206" target="_blank"><strong>+92 344 5739206</strong></a>. Our support team will resolve or replace your account within <strong>10 to 30 minutes</strong>.</p>
                         </div>
                     </div>
+
                     <!-- FAQ 3 -->
-                    <div class="faq-item glass-card" id="faq-item-3">
+                    <div class="faq-item glass-card" id="faq-item-3" data-category="payment">
                         <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
-                            <span>Are these accounts private or shared?</span>
+                            <span><i class="fa-solid fa-wallet faq-q-icon"></i> Payment kin tareeqon se accept hoti hai? (Local &amp; International)</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer" id="faq-answer-3" hidden>
-                            <p>We offer both options depending on your budget. However, tools with the label "ON CLIENT EMAIL" are 100% private accounts activated on your personal email. They have full privacy, and your files, templates, and history are visible only to you. Shared accounts are clearly labelled and priced lower.</p>
+                            <p>We support all official payment methods:
+                            <br>• <strong>Local (Pakistan)</strong>: EasyPaisa, JazzCash, Meezan Bank, and all local Bank Transfers.
+                            <br>• <strong>International / Overseas</strong>: USDT via Binance Crypto Transfer (BEP20 &amp; TRC20 networks) for instant, fee-friendly international checkout.</p>
                         </div>
                     </div>
+
                     <!-- FAQ 4 -->
-                    <div class="faq-item glass-card" id="faq-item-4">
+                    <div class="faq-item glass-card" id="faq-item-4" data-category="payment">
                         <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
-                            <span>How does your warranty/refund system work?</span>
+                            <span><i class="fa-brands fa-bitcoin faq-q-icon"></i> Overseas / International clients USDT se payment kaise karein?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer" id="faq-answer-4" hidden>
-                            <p>Every account is covered under our full duration warranty. If your subscription is interrupted, message us on WhatsApp with the screenshots. We will fix or replace it. If we are unable to replace the subscription for any reason, we will issue a pro-rata or full refund depending on the issue.</p>
+                            <p>Jab aap WhatsApp par order place karein, bas hamari support team ko batayein ke aap <strong>USDT (Binance)</strong> se pay karna chahte hain. Team aapko live PKR to USDT calculation ke saath official BEP20 / TRC20 wallet deposit address share kar degi.</p>
                         </div>
                     </div>
+
                     <!-- FAQ 5 -->
-                    <div class="faq-item glass-card" id="faq-item-5">
+                    <div class="faq-item glass-card" id="faq-item-5" data-category="privacy">
                         <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
-                            <span>How do I get in touch for help?</span>
+                            <span><i class="fa-solid fa-shield-halved faq-q-icon"></i> "ON CLIENT EMAIL" (Private) aur Shared accounts mein kya farq hai?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer" id="faq-answer-5" hidden>
-                            <p>You can contact us 24/7 directly via WhatsApp at <strong>+92 344 5739206</strong>. Alternatively, you can click any of the "Buy via WhatsApp" or support buttons on this website, which will open a conversation with us instantly.</p>
+                            <p>• <strong>Private Accounts (ON CLIENT EMAIL)</strong>: 100% private subscription setup directly on your personal Gmail/Email. Aap ka data, code, prompts, aur files 100% confidential aur sirf aap ke paas rehti hain.
+                            <br>• <strong>Shared Accounts</strong>: Budget-friendly option jahan multiple buyers login share karte hain. Subscriptions clearly labelled hoti hain taake buyer sahi choice kar sake.</p>
                         </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item glass-card" id="faq-item-6" data-category="warranty">
+                        <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
+                            <span><i class="fa-solid fa-hand-holding-dollar faq-q-icon"></i> Money-back refund policy ki kya guarantees hain?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-6" hidden>
+                            <p>Humari refund policy 100% transparent aur customer-first hai. Agar aap ki warranty duration mein koi subscription technical issue aaye aur hum usse replace ya fix na kar payein, toh hum instant <strong>Pro-Rata / Money-Back Refund</strong> issue karte hain.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="faq-item glass-card" id="faq-item-7" data-category="delivery">
+                        <button class="faq-question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-answer-7">
+                            <span><i class="fa-solid fa-book-open-reader faq-q-icon"></i> Order ke baad login ya usage setup guide milti hai?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-7" hidden>
+                            <p>Ji bilkul! Full step-by-step video / screenshot setup guide aur best practices aapko WhatsApp par order delivery ke saath bheji jati hain taake aap bina kisi diqqat ke instant start kar sakain.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="faq-item glass-card" id="faq-item-8" data-category="privacy">
+                        <button class="faq-question" id="faq-btn-8" aria-expanded="false" aria-controls="faq-answer-8">
+                            <span><i class="fa-solid fa-mobile-screen-button faq-q-icon"></i> CapCut Pro kitne devices par use ho sakta hai?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-8" hidden>
+                            <p>CapCut Pro plans <strong>2 devices (PC, Mobile, Tablet)</strong> par simultaneously active aur login rehte hain with 100% full Pro effects, 4K export, AI text-to-speech, aur full warranty support.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 9 -->
+                    <div class="faq-item glass-card" id="faq-item-9" data-category="delivery">
+                        <button class="faq-question" id="faq-btn-9" aria-expanded="false" aria-controls="faq-answer-9">
+                            <span><i class="fa-solid fa-wand-magic-sparkles faq-q-icon"></i> Google AI Ultra (Veo 3, Antigravity, Flow) invitation link kaise kaam karta hai?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-9" hidden>
+                            <p>Google AI Ultra Family Invitation plan lene par aap ke email address par official Google activation invitation bheja jata hai. Accept karne par aap ka apna account 25K AI credits, Veo 3 Video Generator, Google Antigravity, aur Gemini Ultra features se active ho jata hai.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 10 -->
+                    <div class="faq-item glass-card" id="faq-item-10" data-category="payment">
+                        <button class="faq-question" id="faq-btn-10" aria-expanded="false" aria-controls="faq-answer-10">
+                            <span><i class="fa-solid fa-tag faq-q-icon"></i> Direct discount coupon codes kaise apply hote hain?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-10" hidden>
+                            <p>Checkout drawer mein coupon input field mojood hai. Promo code enter karne par (e.g. <code>MDC10</code>) aap ki total cart amount se instant price deduct ho jati hai aur discount WhatsApp message mein automatic embed ho jata hai.</p>
+                        </div>
+                    </div>
+
+                    <!-- Empty State for Search -->
+                    <div id="faq-empty-state" class="faq-empty-state glass-card" style="display:none;">
+                        <i class="fa-solid fa-circle-question empty-faq-icon"></i>
+                        <h4>Koi sawal nahi mila</h4>
+                        <p>Jo sawal aap dhoond rahe hain woh list mein nahi? Hamari 24/7 WhatsApp support se poochain!</p>
+                        <a href="https://wa.me/923445739206?text=Hello%20MALIK%20DATA%20CENTRE%2C%20mujhe%20ek%20question%20poochna%20hai" target="_blank" class="btn btn-success" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Chat Support on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -1679,19 +1770,19 @@
     </div>
 
     <!-- App JavaScript -->
-    <script src="index.js?v=2.7"></script>
+    <script src="index.js?v=2.8"></script>
     <!-- Premium 3D / Animation Engine -->
-    <script src="effects.js?v=2.7" defer></script>
+    <script src="effects.js?v=2.8" defer></script>
     <!-- Conversion / Promo Engine -->
-    <script src="promo.js?v=2.7" defer></script>
+    <script src="promo.js?v=2.8" defer></script>
     <!-- Cart + Exit-Intent + PWA Engine -->
-    <script src="cart.js?v=2.7" defer></script>
+    <script src="cart.js?v=2.8" defer></script>
     <!-- UX Engine -->
-    <script src="ux.js?v=2.7" defer></script>
+    <script src="ux.js?v=2.8" defer></script>
     <!-- Advanced Engine (AI assistant + referral) -->
-    <script src="advanced.js?v=2.7" defer></script>
+    <script src="advanced.js?v=2.8" defer></script>
     <!-- Store backend (loads Supabase on-demand at checkout for speed) -->
-    <script src="store-backend.js?v=2.7" defer></script>
+    <script src="store-backend.js?v=2.8" defer></script>
 
     <!-- Global Multi-Language Translation Engine -->
     <div id="google_translate_element" style="display:none;"></div>

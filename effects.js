@@ -198,9 +198,9 @@
             positions[i * 3 + 1] = (Math.random() - 0.5) * SPREAD;
             positions[i * 3 + 2] = (Math.random() - 0.5) * SPREAD;
             velocities.push(new THREE.Vector3(
-                (Math.random() - 0.5) * 0.25,
-                (Math.random() - 0.5) * 0.25,
-                (Math.random() - 0.5) * 0.25
+                (Math.random() - 0.5) * 0.09,
+                (Math.random() - 0.5) * 0.09,
+                (Math.random() - 0.5) * 0.09
             ));
         }
         const pGeo = new THREE.BufferGeometry();
@@ -311,8 +311,8 @@
             camera.position.x += (mx * 120 - camera.position.x) * 0.05;
             camera.position.y += (-my * 120 - camera.position.y) * 0.05;
             camera.lookAt(scene.position);
-            points.rotation.y += 0.0006;
-            lines.rotation.y += 0.0006;
+            points.rotation.y += 0.00022;
+            lines.rotation.y += 0.00022;
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);

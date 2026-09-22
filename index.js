@@ -1016,8 +1016,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Setup FAQ Accordion Toggles
+    // Setup FAQ Accordion Toggles, Search & Category Filters
     const faqWrapper = document.getElementById("faq-accordion-wrapper");
+    const faqSearchInput = document.getElementById("faq-search-input");
+    const faqSearchClear = document.getElementById("faq-search-clear");
+    const faqChips = document.querySelectorAll(".faq-chip");
+    const faqEmptyState = document.getElementById("faq-empty-state");
+
+    let currentFaqCategory = "all";
+
+    function filterFaqs() {
+        if (!faqWrapper) return;
+        const query = (faqSearchInput ? faqSearchInput.value.trim().toLowerCase() : "");
+        const items = faqWrapper.querySelectorAll(".faq-item");
+        let visibleCount = 0;
+
+        items.forEach(item => {
+            const cat = item.getAttribute("data-category") || "all";
+            const matchesCat = (currentFaqCategory === "all" || cat === currentFaqCategory);
+
+            const qText = item.querySelector(".faq-question")?.textContent.toLowerCase() || "";
+            const aText = item.querySelector(".faq-answer")?.textContent.toLowerCase() || "";
+            const matchesQuery = !query || qText.includes(query) || aText.includes(query);
+
+            if (matchesCat && matchesQuery) {
+                item.classList.remove("hidden-faq");
+                visibleCount++;
+            } else {
+                item.classList.add("hidden-faq");
+            }
+        });
+
+        if (faqEmptyState) {
+            faqEmptyState.style.display = (visibleCount === 0) ? "block" : "none";
+        }
+    }
+
     if (faqWrapper) {
         faqWrapper.addEventListener("click", (e) => {
             const questionBtn = e.target.closest(".faq-question");
@@ -1030,6 +1064,34 @@ document.addEventListener("DOMContentLoaded", () => {
             // Toggle current FAQ
             questionBtn.setAttribute("aria-expanded", !isExpanded);
             answer.hidden = isExpanded;
+        });
+    }
+
+    if (faqChips.length > 0) {
+        faqChips.forEach(chip => {
+            chip.addEventListener("click", () => {
+                faqChips.forEach(c => c.classList.remove("active"));
+                chip.classList.add("active");
+                currentFaqCategory = chip.getAttribute("data-category") || "all";
+                filterFaqs();
+            });
+        });
+    }
+
+    if (faqSearchInput) {
+        faqSearchInput.addEventListener("input", () => {
+            if (faqSearchClear) {
+                faqSearchClear.style.display = faqSearchInput.value ? "block" : "none";
+            }
+            filterFaqs();
+        });
+    }
+
+    if (faqSearchClear) {
+        faqSearchClear.addEventListener("click", () => {
+            if (faqSearchInput) faqSearchInput.value = "";
+            faqSearchClear.style.display = "none";
+            filterFaqs();
         });
     }
 
