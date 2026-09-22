@@ -1188,6 +1188,21 @@ function filterAndRender() {
 }
 window.filterAndRender = filterAndRender;
 
+// Helper to manage Google Translate cookies across domains
+function setGoogleTranslateCookie(langCode) {
+    var domain = window.location.hostname;
+    var cookieVal = (langCode && langCode !== "en") ? ("/en/" + langCode) : "";
+    var expires = (langCode && langCode !== "en") ? "; expires=Thu, 31 Dec 2037 23:59:59 GMT" : "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    
+    document.cookie = "googtrans=" + cookieVal + expires + "; path=/;";
+    if (domain) {
+        document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=" + domain;
+        if (domain.includes(".")) {
+            document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=." + domain.replace(/^www\./, "");
+        }
+    }
+}
+
 // Global Multi-Language Switcher Manager
 window.initLanguageSelector = function() {
     var savedLang = "en";
@@ -1206,41 +1221,49 @@ window.initLanguageSelector = function() {
     });
 
     if (savedLang && savedLang !== "en") {
+        setGoogleTranslateCookie(savedLang);
         setTimeout(function() {
-            window.changeSiteLanguage(savedLang);
+            var combo = document.querySelector(".goog-te-combo");
+            if (combo && combo.value !== savedLang) {
+                combo.value = savedLang;
+                combo.dispatchEvent(new Event("change"));
+            }
         }, 600);
     }
 };
 
 window.changeSiteLanguage = function(langCode) {
     if (!langCode) return;
+    
     try {
         localStorage.setItem("mdc_language", langCode);
     } catch(e){}
+
+    setGoogleTranslateCookie(langCode);
 
     ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
         var el = document.getElementById(id);
         if (el) el.value = langCode;
     });
 
-    function applyTranslation() {
-        var combo = document.querySelector(".goog-te-combo");
-        if (combo) {
-            combo.value = langCode;
-            combo.dispatchEvent(new Event("change"));
-            return true;
-        }
-        return false;
-    }
-
-    if (!applyTranslation()) {
-        var count = 0;
+    var combo = document.querySelector(".goog-te-combo");
+    if (combo) {
+        combo.value = langCode;
+        combo.dispatchEvent(new Event("change"));
+    } else {
+        var tries = 0;
         var timer = setInterval(function() {
-            count++;
-            if (applyTranslation() || count > 25) {
+            tries++;
+            var cb = document.querySelector(".goog-te-combo");
+            if (cb) {
+                cb.value = langCode;
+                cb.dispatchEvent(new Event("change"));
                 clearInterval(timer);
+            } else if (tries >= 8) {
+                clearInterval(timer);
+                window.location.reload();
             }
-        }, 200);
+        }, 150);
     }
 };
 
