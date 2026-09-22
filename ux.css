@@ -109,15 +109,17 @@ section[id], div[id="how-section"] { scroll-margin-top: 92px; }
 }
 
 /* ----------------------------------------------------------------------------
-   CURRENCY SELECTOR
+   CURRENCY & LANGUAGE SELECTORS
    -------------------------------------------------------------------------- */
-.mdc-currency-selector-wrap {
+.mdc-currency-selector-wrap,
+.mdc-lang-selector-wrap {
     position: relative;
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 6px;
     vertical-align: middle;
 }
-.mdc-currency-select {
+.mdc-currency-select,
+.mdc-lang-select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -127,7 +129,7 @@ section[id], div[id="how-section"] { scroll-margin-top: 92px; }
     font-family: 'Outfit', sans-serif;
     font-size: 0.82rem;
     font-weight: 600;
-    padding: 8px 28px 8px 12px;
+    padding: 8px 28px 8px 10px;
     border-radius: 9px;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -136,15 +138,47 @@ section[id], div[id="how-section"] { scroll-margin-top: 92px; }
     background-position: right 10px center;
     background-size: 12px;
 }
-.mdc-currency-select:hover, .mdc-currency-select:focus {
+.mdc-currency-select:hover, .mdc-currency-select:focus,
+.mdc-lang-select:hover, .mdc-lang-select:focus {
     border-color: var(--primary, #6366f1);
     background-color: rgba(15, 15, 20, 0.98);
     outline: none;
     box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
 }
 @media (max-width: 768px) {
-    .mdc-currency-selector-wrap {
+    .mdc-currency-selector-wrap,
+    .mdc-lang-selector-wrap {
         display: none;
     }
 }
+
+/* ----------------------------------------------------------------------------
+   GOOGLE TRANSLATE ENGINE CLEAN OVERRIDES
+   -------------------------------------------------------------------------- */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+    position: static !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+#google_translate_element {
+    display: none !important;
+}
+.skiptranslate {
+    display: inline !important;
+}
+body > .skiptranslate {
+    display: none !important;
+}
+
 

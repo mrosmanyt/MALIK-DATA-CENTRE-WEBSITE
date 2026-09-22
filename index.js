@@ -53,9 +53,10 @@ window.currencyConverter = {
             var el = document.getElementById(id);
             if (el) {
                 el.value = self.currentCurrency;
-                el.addEventListener("change", function (e) {
+                // Remove any old listeners by replacing or assigning onchange
+                el.onchange = function (e) {
                     self.setCurrency(e.target.value);
-                });
+                };
             }
         });
     },
@@ -66,7 +67,9 @@ window.currencyConverter = {
             localStorage.setItem("mdc_currency", curr);
         } catch (e) {}
         this.updateSelectors();
-        if (typeof filterAndRender === "function") {
+        if (typeof window.filterAndRender === "function") {
+            window.filterAndRender();
+        } else if (typeof filterAndRender === "function") {
             filterAndRender();
         }
         var event = new CustomEvent("mdcCurrencyChanged", { detail: curr });
@@ -844,6 +847,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.currencyConverter.init();
     }
 
+    // Initialize Multi-Language Selector
+    if (typeof window.initLanguageSelector === "function") {
+        window.initLanguageSelector();
+    }
+
     // Render initial database (sorted by popularity)
     filterAndRender();
 
@@ -1178,6 +1186,63 @@ function filterAndRender() {
 
     renderTools(filtered);
 }
+window.filterAndRender = filterAndRender;
+
+// Global Multi-Language Switcher Manager
+window.initLanguageSelector = function() {
+    var savedLang = "en";
+    try {
+        savedLang = localStorage.getItem("mdc_language") || "en";
+    } catch(e){}
+
+    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) {
+            el.value = savedLang;
+            el.onchange = function(e) {
+                window.changeSiteLanguage(e.target.value);
+            };
+        }
+    });
+
+    if (savedLang && savedLang !== "en") {
+        setTimeout(function() {
+            window.changeSiteLanguage(savedLang);
+        }, 600);
+    }
+};
+
+window.changeSiteLanguage = function(langCode) {
+    if (!langCode) return;
+    try {
+        localStorage.setItem("mdc_language", langCode);
+    } catch(e){}
+
+    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.value = langCode;
+    });
+
+    function applyTranslation() {
+        var combo = document.querySelector(".goog-te-combo");
+        if (combo) {
+            combo.value = langCode;
+            combo.dispatchEvent(new Event("change"));
+            return true;
+        }
+        return false;
+    }
+
+    if (!applyTranslation()) {
+        var count = 0;
+        var timer = setInterval(function() {
+            count++;
+            if (applyTranslation() || count > 25) {
+                clearInterval(timer);
+            }
+        }, 200);
+    }
+};
 
 // Sort engine
 function sortTools(list) {
