@@ -1,5 +1,5 @@
 /* MALIK DATA CENTRE — Service Worker (offline + installable PWA) */
-const CACHE = "mdc-cache-v2";
+const CACHE = "mdc-cache-v7";
 const ASSETS = [
   "./",
   "./index.html",
@@ -41,13 +41,19 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
-  // Network-first for navigations, cache-first for static assets
-  if (req.mode === "navigate") {
+  
+  // Network-first for navigations, JS & CSS scripts to guarantee instant live updates
+  if (req.mode === "navigate" || req.url.includes(".js") || req.url.includes(".css")) {
     e.respondWith(
-      fetch(req).catch(() => caches.match("./index.html"))
+      fetch(req).then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
+        return res;
+      }).catch(() => caches.match(req))
     );
     return;
   }
+
   e.respondWith(
     caches.match(req).then((cached) =>
       cached ||

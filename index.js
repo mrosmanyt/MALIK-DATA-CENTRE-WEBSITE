@@ -176,7 +176,7 @@ const TOOLS_DATABASE = [
         name: "CapCut Pro 1 Month",
         category: "creative",
         duration: "1 Month",
-        price: 804,
+        price: 800,
         originalPrice: 2000,
         setup: "2 Devices Login",
         desc: "CapCut Pro 1 Month • 2 Devices • Premium Features • Instant Delivery • Warranty Available.",
