@@ -1,5 +1,5 @@
 /* MALIK DATA CENTRE — Service Worker (offline + installable PWA) */
-const CACHE = "mdc-cache-v7";
+const CACHE = "mdc-cache-v8";
 const ASSETS = [
   "./",
   "./index.html",
