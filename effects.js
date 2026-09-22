@@ -16,15 +16,7 @@
     /* ======================================================================
        1. PRELOADER
        ====================================================================== */
-    function hidePreloader() {
-        const pre = document.getElementById("mdc-preloader");
-        if (!pre) return;
-        pre.classList.add("loaded");
-        setTimeout(() => pre.remove(), 900);
-    }
-    window.addEventListener("load", () => setTimeout(hidePreloader, 600));
-    // safety: never trap the user behind the loader
-    setTimeout(hidePreloader, 4000);
+    function hidePreloader() {}
 
     /* ======================================================================
        2. SCROLL PROGRESS BAR
