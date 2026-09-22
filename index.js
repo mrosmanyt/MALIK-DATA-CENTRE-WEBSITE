@@ -1,5 +1,99 @@
 // Malik Data Centre - Application Script
 
+// Currency Converter Utility Configuration
+window.currencyConverter = {
+    currentCurrency: "PKR",
+    rates: {
+        PKR: 1.0,
+        USD: 0.0036,
+        EUR: 0.0033,
+        GBP: 0.0028,
+        INR: 0.30,
+        BDT: 0.42,
+        LKR: 1.08,
+        UZS: 45.45,
+        MYR: 0.017,
+        IDR: 58.82,
+        TRY: 0.12,
+        SAR: 0.0135,
+        AED: 0.0132,
+        KWD: 0.0011,
+        QAR: 0.0131,
+        OMR: 0.0014
+    },
+    symbols: {
+        PKR: "Rs",
+        USD: "$",
+        EUR: "€",
+        GBP: "£",
+        INR: "₹",
+        BDT: "৳",
+        LKR: "Rs",
+        UZS: "soʻm",
+        MYR: "RM",
+        IDR: "Rp",
+        TRY: "₺",
+        SAR: "ر.س",
+        AED: "د.إ",
+        KWD: "KD",
+        QAR: "ر.ق",
+        OMR: "ر.ع."
+    },
+    init: function () {
+        try {
+            var stored = localStorage.getItem("mdc_currency");
+            if (stored && this.rates[stored]) {
+                this.currentCurrency = stored;
+            }
+        } catch (e) {}
+        this.updateSelectors();
+        
+        var self = this;
+        ["mdc-currency-select", "drawer-currency-select"].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.value = self.currentCurrency;
+                el.addEventListener("change", function (e) {
+                    self.setCurrency(e.target.value);
+                });
+            }
+        });
+    },
+    setCurrency: function (curr) {
+        if (!this.rates[curr]) return;
+        this.currentCurrency = curr;
+        try {
+            localStorage.setItem("mdc_currency", curr);
+        } catch (e) {}
+        this.updateSelectors();
+        if (typeof filterAndRender === "function") {
+            filterAndRender();
+        }
+        var event = new CustomEvent("mdcCurrencyChanged", { detail: curr });
+        window.dispatchEvent(event);
+    },
+    updateSelectors: function () {
+        var self = this;
+        ["mdc-currency-select", "drawer-currency-select"].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) el.value = self.currentCurrency;
+        });
+    },
+    convert: function (pkrAmount) {
+        var rate = this.rates[this.currentCurrency] || 1.0;
+        return pkrAmount * rate;
+    },
+    format: function (pkrAmount) {
+        var converted = this.convert(pkrAmount);
+        var symbol = this.symbols[this.currentCurrency] || "Rs";
+        if (this.currentCurrency === "PKR") {
+            return symbol + " " + Math.round(converted).toLocaleString();
+        } else {
+            return symbol + " " + converted.toFixed(2);
+        }
+    }
+};
+
 // Comprehensive 34-item AI Tools & Premium Software Subscriptions Database
 const TOOLS_DATABASE = [
     {
@@ -27,15 +121,15 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #4285f4"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><path d="M12 2c3.5 4 6.5 7 10 10-3.5 3-6.5 6-10 10C8.5 19 5.5 16 2 12c3.5-3 6.5-6 10-10z" fill="currentColor" fill-opacity="0.1" stroke-linejoin="round"/></svg>`
     },
     {
-        id: "grok-3m",
+        id: "grok-10d",
         name: "Super Grok + X Premium+",
         category: "ai-chat",
-        duration: "3 Months Account",
-        price: 3500,
-        originalPrice: 8000,
+        duration: "10 Days Plan",
+        price: 1500,
+        originalPrice: 4000,
         setup: "Activated on Client Email",
         desc: "Get X (formerly Twitter) Premium+ access with a Blue Verification Tick and access to Grok AI chatbot with real-time X search data.",
-        specs: ["Official Blue Tick Badge", "Grok AI Assistant Access", "Full Ad-Free X Experience", "2x Reply Boost & Monetization"],
+        specs: ["Official Blue Tick Badge", "Grok AI Assistant Access", "7 Days Full Warranty", "Full Ad-Free X Experience"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #e2e8f0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
     },
     {
@@ -180,6 +274,18 @@ const TOOLS_DATABASE = [
         setup: "Private Account",
         desc: "Code, build, and deploy software within a high-performance cloud IDE. Includes Replit AI Assistant, cloud server resources, and workspace integrations.",
         specs: ["12 Months Core Access", "Unlimited AI Autocomplete & Chat", "Boosted Cloud VMs for Projects", "Collaborative Workspaces"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f97316"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "replit-core-100",
+        name: "Replit Core $100 Topup",
+        category: "ai-coding",
+        duration: "$100 Credit Plan",
+        price: 9500,
+        originalPrice: 22000,
+        setup: "Ready-Made Account",
+        desc: "Official Replit Core ready-made account pre-loaded with $100 topup credits. Access Replit AI, custom deployments, and high-performance server power.",
+        specs: ["$100 Loaded Credit Balance", "20 Days Full Warranty", "Ready-Made Private Account", "Replit AI Assistant & Fast VMs"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f97316"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>`
     },
     {
@@ -402,25 +508,309 @@ const TOOLS_DATABASE = [
         id: "higgsfield-plus",
         name: "Higgsfield Plus Plan",
         category: "video-audio",
-        duration: "1K Credits Monthly",
-        price: 6500,
-        originalPrice: 14000,
+        duration: "1200 Credits Plan",
+        price: 7500,
+        originalPrice: 15000,
         setup: "Creator Account",
         desc: "AI video generation app optimized for creators. Animate characters, apply physical control actions, and generate high-fidelity stories.",
-        specs: ["1,000 monthly visual credits", "Premium character animator access", "Advanced physics & motion curves", "Full creator support warranty"],
+        specs: ["1,200 Visual Credits Pack", "20 Days Full Warranty", "Premium Character Animator", "Advanced Physics & Motion Curves"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #10b981"><path d="M12 2L2 22h20L12 2z" stroke-linejoin="round"/></svg>`
+    },
+    {
+        id: "xbox-random-1m",
+        name: "Gift Xbox Random",
+        category: "entertainment",
+        duration: "1 Month Plan",
+        price: 1800,
+        originalPrice: 3500,
+        setup: "Digital Code Delivery",
+        desc: "Get a random Xbox Game Pass or subscription voucher code. Redeemable on Microsoft accounts.",
+        specs: ["1 Month Validity", "Random Voucher Code", "Global Server Activation", "Full Warranty Support"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #107c10"><path d="M12.016 0C5.378 0 0 5.379 0 12.016c0 6.637 5.378 12.016 12.016 12.016 6.637 0 12.016-5.379 12.016-12.016C24.032 5.379 18.653 0 12.016 0zM12 1.58a10.38 10.38 0 0 1 5.926 1.838c-1.42 1.488-3.41 2.656-5.926 3.486-2.516-.83-4.506-1.998-5.926-3.486A10.38 10.38 0 0 1 12 1.58zm-7.058 3.12c1.393 1.399 3.298 2.502 5.666 3.284C8.423 8.71 6.136 9.605 3.75 9.77a10.354 10.354 0 0 1 1.192-5.07zm14.116 0A10.354 10.354 0 0 1 20.25 9.77c-2.386-.165-4.673-1.06-6.858-1.786 2.368-.782 4.273-1.885 5.666-3.284zM12 9.206c2.404.793 4.887 1.769 7.424 2.1a10.463 10.463 0 0 1-.225 3.324c-1.636-1.502-3.87-2.906-7.199-3.799-3.329.893-5.563 2.297-7.199 3.799.145-1.127.07-2.261-.225-3.324 2.537-.331 5.02-1.307 7.424-2.1zm-7.464 6.727c1.34-1.026 3.178-2.148 5.918-2.943v8.528A10.392 10.392 0 0 1 4.536 15.933zm14.928 0a10.392 10.392 0 0 1-5.918 5.603v-8.528c2.74.795 4.578 1.917 5.918 2.943z"/></svg>`
+    },
+    {
+        id: "picsart-pro-11m",
+        name: "Picsart Pro",
+        category: "creative",
+        duration: "11 Months Plan",
+        price: 3500,
+        originalPrice: 8000,
+        setup: "Activated on Client Email",
+        desc: "Unlock Picsart Pro advanced AI image generation, design templates, photo filters, custom fonts, and high-res exports.",
+        specs: ["Full Premium assets access", "AI Design Studio Tools", "No ads or watermarks", "11 Months Duration Support"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ff3c88"><circle cx="12" cy="12" r="10"/><path d="M8 12c2.5-1 5.5-1 8 0" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "key-hma",
+        name: "HMA VPN Key",
+        category: "vpn-security",
+        duration: "Yearly License Key",
+        price: 5500,
+        originalPrice: 12000,
+        setup: "License Key Delivery",
+        desc: "Official HideMyAss (HMA) VPN subscription activation retail license key. Access global high-speed servers.",
+        specs: ["Secure encryption tunnels", "Access 1100+ servers", "Supports up to 5 devices", "12 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #4687ff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.111 8.529c.356.924.364 2.167-.323 3.018l-3.327 3.996a.82.82 0 0 1-.95.234l-2.072-.94a.52.52 0 0 0-.46.042l-1.393.978a.4.4 0 0 1-.606-.412l.643-3.486a.54.54 0 0 0-.168-.488l-1.92-1.764c-.38-.349-.185-1.026.34-.143l2.845 2.502a.5.5 0 0 0 .61.042l2.378-1.576a.56.56 0 0 1 .64.048l2.003 1.554c.25.194.615.11.758-.17l1.782-3.483a.4.4 0 0 1 .632-.143z"/></svg>`
+    },
+    {
+        id: "windows-activation-key",
+        name: "Windows 10/11 Pro Key",
+        category: "vpn-security",
+        duration: "Lifetime License",
+        price: 2000,
+        originalPrice: 6000,
+        setup: "Instant Retail Key",
+        desc: "Official lifetime retail activation key for Windows 10 Professional or Windows 11 Professional.",
+        specs: ["Lifetime activation key", "Support both Win 10 & 11 Pro", "Official Microsoft Updates", "Instant setup code"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #06b6d4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V9M15 17v-4" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "zoom-pro-monthly",
+        name: "Zoom Pro",
+        category: "entertainment",
+        duration: "Monthly Access",
+        price: 1500,
+        originalPrice: 4000,
+        setup: "Premium Account Login",
+        desc: "Host unlimited group meetings up to 30 hours, up to 100 participants per meeting, with cloud recording support.",
+        specs: ["Host meetings up to 30 hours", "100 participants capacity", "Cloud meeting recordings", "Full Monthly Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #7c3aed"><rect x="2" y="3" width="20" height="14" rx="2" stroke-linejoin="round"/><path d="M8 21h8M12 17v4" stroke-linecap="round"/><path d="M10 8l5 3-5 3V8z" fill="currentColor"/></svg>`
+    },
+    {
+        id: "linkedin-career-3m",
+        name: "LinkedIn Career",
+        category: "creative",
+        duration: "3 Months Plan",
+        price: 1800,
+        originalPrice: 9000,
+        setup: "Professional Premium",
+        desc: "Get stand-out status for job applications, direct InMail credits, profile view insights, and LinkedIn Learning.",
+        specs: ["5 InMail credits per month", "See who viewed your profile", "Full LinkedIn Learning access", "3 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #0077b5"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>`
+    },
+    {
+        id: "ms-office-1y",
+        name: "Microsoft Office 365",
+        category: "vpn-security",
+        duration: "12 Months Plan",
+        price: 29900,
+        originalPrice: 45000,
+        setup: "Activated on Client Email",
+        desc: "Premium access to Word, Excel, PowerPoint, Outlook, and OneDrive cloud storage up to 1TB.",
+        specs: ["Word, Excel, PowerPoint Pro", "1TB OneDrive cloud storage", "Use on up to 5 devices", "1 Year Official Access"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ff6c37"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6" stroke-linejoin="round"/></svg>`
+    },
+    {
+        id: "canva-pro-1y",
+        name: "Canva Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 400,
+        originalPrice: 3000,
+        setup: "Activated on Client Email",
+        desc: "Access Canva's full assets library, premium templates, magic AI design tools, and brand kits.",
+        specs: ["Magic Resize & BG Remover", "Millions of premium stocks", "Collaborative brand workspace", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #00c4cc"><circle cx="12" cy="12" r="10"/><path d="M8 12c2.5-1 5.5-1 8 0" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "adobe-cc-4m",
+        name: "Adobe Creative Cloud",
+        category: "creative",
+        duration: "4 Months Plan",
+        price: 3900,
+        originalPrice: 16000,
+        setup: "Activated on Client Email",
+        desc: "Access 20+ Adobe desktop and mobile creative apps including Photoshop, Illustrator, Premiere Pro.",
+        specs: ["Photoshop, Premiere, Illustrator", "Adobe Firefly AI credits", "100GB Cloud Storage sync", "4 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #ff0000"><path d="M13.9 2H22v20h-8.1zM9.5 2H2v20h7.5zM12 7.5l4.8 11.5h-2.5l-1.3-3.2H9l-1.3 3.2H5.2z"/></svg>`
+    },
+    {
+        id: "coursera-premium-12m",
+        name: "Coursera Plus Premium",
+        category: "entertainment",
+        duration: "12 Months Plan",
+        price: 3200,
+        originalPrice: 12000,
+        setup: "Private Activation",
+        desc: "Unlimited access to 7,000+ courses, guided projects, and professional certificates from top universities.",
+        specs: ["7,000+ courses & specializations", "Professional certificates included", "Learn at your own pace", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f59e0b"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round"/></svg>`
+    },
+    {
+        id: "replit-core-12m",
+        name: "Replit Core",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 10700,
+        originalPrice: 32000,
+        setup: "Private Account",
+        desc: "Write, build, and deploy software within a collaborative cloud IDE. Includes Replit AI Assistant.",
+        specs: ["Replit AI Autocomplete & Chat", "Boosted workspace VM resources", "1-click cloud deployments", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f97316"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "warp-build-12m",
+        name: "Warp Build CI/CD",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 4800,
+        originalPrice: 18000,
+        setup: "Premium Plan",
+        desc: "High-speed runners to accelerate GitHub Actions builds and software CI pipelines. Save 50% build time.",
+        specs: ["High performance runners", "GitHub Actions integration", "Pre-cached environments", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #a855f7"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor" fill-opacity="0.1"/></svg>`
+    },
+    {
+        id: "n8n-starter-12m",
+        name: "n8n Starter Cloud",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 6500,
+        originalPrice: 20000,
+        setup: "Private Account",
+        desc: "Integrate APIs, automate workflows, and sync databases. Includes starter tier cloud hosting.",
+        specs: ["5 active cloud workflows", "20k monthly executions", "Node-based automation creator", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ff6c37"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6M18 9v6M9 6h6M9 18h6" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "whisper-flow-12m",
+        name: "Wispr Flow Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 7500,
+        originalPrice: 22000,
+        setup: "Writing Assistant",
+        desc: "Fast real-time voice transcription tool. Automatically format dictations for emails and scripts.",
+        specs: ["AI voice transcription engine", "Smart paragraph formatting", "Works in any writing editor", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ec4899"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v3M8 22h8" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "notion-business-12m",
+        name: "Notion Business",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 4600,
+        originalPrice: 15000,
+        setup: "Workspace Activation",
+        desc: "Unlock collaborative workspaces, infinite page history, advanced block permissions, and Notion AI features.",
+        specs: ["Collaborative workspace blocks", "Infinite page edits history", "Advanced export & print options", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ff6c37"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6" stroke-linejoin="round"/></svg>`
+    },
+    {
+        id: "gumloop-pro-12m",
+        name: "Gumloop Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 4550,
+        originalPrice: 18000,
+        setup: "Activated on Client Email",
+        desc: "Build custom AI web scrapers and data extraction pipelines visually. Run workflows autonomously.",
+        specs: ["Visual AI agent pipeline builder", "Advanced web data extraction", "Schedule scraping operations", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #3b82f6"><circle cx="12" cy="12" r="10"/><path d="M8 12c2.5-1 5.5-1 8 0" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "grammarly-pro-12m",
+        name: "Grammarly Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 3500,
+        originalPrice: 12000,
+        setup: "Activated on Client Email",
+        desc: "Access advanced grammar suggestions, tone adjustments, plagiarism checkers, and Grammarly AI assistance.",
+        specs: ["Tone check & vocabulary builder", "Built-in plagiarism detector", "Grammarly AI writing credits", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ec4899"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v3M8 22h8" stroke-linecap="round"/></svg>`
+    },
+    {
+        id: "amazon-prime-6m",
+        name: "Amazon Prime Video",
+        category: "entertainment",
+        duration: "6 Months Plan",
+        price: 1500,
+        originalPrice: 4000,
+        setup: "Private Profile Login",
+        desc: "Watch premium movies, TV shows, and Amazon Originals in 4K Ultra HD. Ad-free streaming.",
+        specs: ["4K Ultra HD video playback", "Ad-free Prime Video streams", "Supports multi-device screens", "6 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #ff0000"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`
+    },
+    {
+        id: "linkedin-sales-nav-2m",
+        name: "LinkedIn Sales Navigator",
+        category: "creative",
+        duration: "2 Months Plan",
+        price: 1800,
+        originalPrice: 22000,
+        setup: "Core Account Upgrade",
+        desc: "Target the right buyers, understand key insights, and engage with personalized InMail outreach.",
+        specs: ["50 InMail messages monthly", "Advanced lead search filters", "Real-time buyer updates notifications", "2 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #0077b5"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>`
+    },
+    {
+        id: "youtube-premium-3m",
+        name: "YouTube Premium",
+        category: "entertainment",
+        duration: "3 Months Plan",
+        price: 1200,
+        originalPrice: 3500,
+        setup: "Activated on Client Email",
+        desc: "Remove all commercial advertisements from YouTube. Includes background play and YouTube Music.",
+        specs: ["Ad-free video streaming", "Background picture-in-picture play", "YouTube Music premium access", "3 Months Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #ff0000"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`
+    },
+    {
+        id: "cursor-pro-12m",
+        name: "Cursor Pro Yearly",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 21000,
+        originalPrice: 56000,
+        setup: "Private Account",
+        desc: "Get yearly premium Cursor editor access. Access unlimited fast queries to Claude 3.5 Sonnet & GPT-4o.",
+        specs: ["Unlimited fast Claude & GPT-4o", "Full codebase indexing capability", "Interactive terminal chat tools", "1 Year Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #06b6d4"><path d="M5 3l14 9-14 9V3z" fill="currentColor" fill-opacity="0.1"/></svg>`
+    },
+    {
+        id: "claude-api-10m",
+        name: "Claude 10M API Tokens",
+        category: "ai-chat",
+        duration: "API Key Pack",
+        price: 1200,
+        originalPrice: 4000,
+        setup: "API Key Access",
+        desc: "Access Anthropic's Claude 3.5 models through API keys. Fully loaded with 10 Million input/output tokens.",
+        specs: ["10M input/output tokens pack", "High concurrency API keys", "Claude 3.5 Sonnet & Opus support", "Full warranty replacement"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #e2e8f0"><path d="M12.016 0C5.378 0 0 5.379 0 12.016c0 6.637 5.378 12.016 12.016 12.016 6.637 0 12.016-5.379 12.016-12.016C24.032 5.379 18.653 0 12.016 0zM12 1.58a10.38 10.38 0 0 1 5.926 1.838c-1.42 1.488-3.41 2.656-5.926 3.486-2.516-.83-4.506-1.998-5.926-3.486A10.38 10.38 0 0 1 12 1.58zm-7.058 3.12c1.393 1.399 3.298 2.502 5.666 3.284C8.423 8.71 6.136 9.605 3.75 9.77a10.354 10.354 0 0 1 1.192-5.07zm14.116 0A10.354 10.354 0 0 1 20.25 9.77c-2.386-.165-4.673-1.06-6.858-1.786 2.368-.782 4.273-1.885 5.666-3.284zM12 9.206c2.404.793 4.887 1.769 7.424 2.1a10.463 10.463 0 0 1-.225 3.324c-1.636-1.502-3.87-2.906-7.199-3.799-3.329.893-5.563 2.297-7.199 3.799.145-1.127.07-2.261-.225-3.324 2.537-.331 5.02-1.307 7.424-2.1zm-7.464 6.727c1.34-1.026 3.178-2.148 5.918-2.943v8.528A10.392 10.392 0 0 1 4.536 15.933zm14.928 0a10.392 10.392 0 0 1-5.918 5.603v-8.528c2.74.795 4.578 1.917 5.918 2.943z"/></svg>`
+    },
+    {
+        id: "cinem-ai-monthly",
+        name: "Cinem AI Video",
+        category: "video-audio",
+        duration: "Monthly Access",
+        price: 7000,
+        originalPrice: 15000,
+        setup: "Creator Account Portal",
+        desc: "Leading-edge video generation AI software. Generate cinematic, high-definition videos from prompts.",
+        specs: ["Cinematic photorealistic videos", "High frame-rate rendering options", "Creator tools subscription tier", "Full monthly warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #7c3aed"><rect x="2" y="3" width="20" height="14" rx="2" stroke-linejoin="round"/><path d="M8 21h8M12 17v4" stroke-linecap="round"/><path d="M10 8l5 3-5 3V8z" fill="currentColor"/></svg>`
     }
 ];
 
-// Official WhatsApp contact number
+// Official WhatsApp contact numbers (Line 1 & Line 2)
+const WHATSAPP_NUMBERS = ["923445739206", "923489057646"];
+let waCounter = 0;
+function getWhatsAppNumber() {
+    const num = WHATSAPP_NUMBERS[waCounter % WHATSAPP_NUMBERS.length];
+    waCounter++;
+    return num;
+}
 const WHATSAPP_NUMBER = "+923445739206";
+const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
-const BESTSELLER_IDS = ["grok-3m", "chatgpt-go-6m"];
+const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m"];
 const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro", "adobe-12m", "youtube-12m", "cursor-pro"];
 // Order used by the "Most Popular" sort
 const POPULARITY_ORDER = [
-    "grok-3m", "chatgpt-go-6m", "gemini-18m", "canva-yearly", "capcut-pro",
+    "grok-10d", "chatgpt-go-6m", "gemini-18m", "canva-yearly", "capcut-pro",
     "adobe-12m", "youtube-12m", "cursor-pro", "lovable-200", "grok-6m",
     "elevenlabs-creator", "heygen-200"
 ];
@@ -449,6 +839,11 @@ const drawerLinks = document.querySelectorAll(".drawer-link");
 
 // Initialize Application
 document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Currency Converter
+    if (window.currencyConverter) {
+        window.currencyConverter.init();
+    }
+
     // Render initial database (sorted by popularity)
     filterAndRender();
 
@@ -671,17 +1066,26 @@ function renderTools(tools = TOOLS_DATABASE) {
     }
 
     const cardsHTML = tools.map(tool => {
-        // Construct the predefined WhatsApp checkout message
+        // Format price based on active currency
+        var priceDisplay = window.currencyConverter ? window.currencyConverter.format(tool.price) : `Rs ${tool.price.toLocaleString()}`;
+        var originalPriceDisplay = window.currencyConverter ? window.currencyConverter.format(tool.originalPrice) : `Rs ${tool.originalPrice.toLocaleString()}`;
+        
+        // WhatsApp single-item checkout message (include converted price + original PKR reference if converted)
+        var checkoutPriceStr = priceDisplay;
+        if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+            checkoutPriceStr += ` (Rs. ${tool.price.toLocaleString()})`;
+        }
+        
         const waText = encodeURIComponent(
             `Hello MALIK DATA CENTRE! I want to buy:\n\n` +
             `🛍️ Tool: ${tool.name}\n` +
             `⏱️ Plan: ${tool.duration}\n` +
-            `💰 Price: Rs. ${tool.price.toLocaleString()}\n` +
+            `💰 Price: ${checkoutPriceStr}\n` +
             `⚙️ Setup: ${tool.setup}\n\n` +
             `Please share payment details (EasyPaisa/JazzCash/Bank) and setup instructions.\n` +
             `Source: malikdatacentre.store`
         );
-        const checkoutURL = `https://wa.me/923445739206?text=${waText}`;
+        const checkoutURL = `https://wa.me/${getWhatsAppNumber()}?text=${waText}`;
 
         const badgeClass = `badge-${tool.category}`;
         const specsHTML = tool.specs.map(spec => `<li><i class="fa-solid fa-circle-check"></i> ${spec}</li>`).join("");
@@ -725,8 +1129,8 @@ function renderTools(tools = TOOLS_DATABASE) {
                 </div>
                 <div class="tool-card-footer">
                     <div class="tool-price-wrapper">
-                        <span class="tool-original-price">Rs ${tool.originalPrice.toLocaleString()}</span>
-                        <span class="tool-price">Rs ${tool.price.toLocaleString()}</span>
+                        <span class="tool-original-price">${originalPriceDisplay}</span>
+                        <span class="tool-price">${priceDisplay}</span>
                     </div>
                     <a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Buy Now

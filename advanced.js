@@ -148,12 +148,20 @@
 
         function toolReply(matches) {
             return matches.map(function (t) {
+                var priceStr = window.currencyConverter ? window.currencyConverter.format(t.price) : "Rs " + t.price.toLocaleString();
+                var originalPriceStr = window.currencyConverter ? window.currencyConverter.format(t.originalPrice) : "Rs " + t.originalPrice.toLocaleString();
+                
+                var checkoutPriceStr = priceStr;
+                if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+                    checkoutPriceStr += " (Rs. " + t.price.toLocaleString() + ")";
+                }
+                
                 var msg = "Hello MALIK DATA CENTRE! I want to buy:\n\n\u{1F6CD}️ Tool: " + t.name +
-                    "\n⏱️ Plan: " + t.duration + "\n\u{1F4B0} Price: Rs. " + t.price.toLocaleString() +
+                    "\n⏱️ Plan: " + t.duration + "\n\u{1F4B0} Price: " + checkoutPriceStr +
                     "\n\nPlease share payment & setup details.\nSource: malikdatacentre.store";
                 return '<div style="margin-bottom:8px"><b>' + esc(t.name) + '</b> (' + esc(t.duration) + ')<br>' +
-                    '<span style="color:#10b981;font-weight:700">Rs ' + t.price.toLocaleString() + '</span> ' +
-                    '<span style="text-decoration:line-through;color:#888;font-size:.8em">Rs ' + t.originalPrice.toLocaleString() + '</span>' +
+                    '<span style="color:#10b981;font-weight:700">' + priceStr + '</span> ' +
+                    '<span style="text-decoration:line-through;color:#888;font-size:.8em">' + originalPriceStr + '</span>' +
                     '<br><a class="ai-wa" href="' + waLink(msg) + '" target="_blank"><i class="fa-brands fa-whatsapp"></i> Order Now</a></div>';
             }).join("");
         }
@@ -181,7 +189,7 @@
             // best / popular / deals
             if (/(best|popular|deal|top|recommend|sasta|trending)/i.test(ql)) {
                 var tools = getTools();
-                var picks = tools.filter(function (t) { return ["grok-3m", "chatgpt-go-6m", "canva-yearly", "gemini-18m"].indexOf(t.id) !== -1; });
+                var picks = tools.filter(function (t) { return ["grok-10d", "chatgpt-go-6m", "canva-yearly", "gemini-18m"].indexOf(t.id) !== -1; });
                 if (picks.length) return "Hamare sabse popular deals: " + toolReply(picks);
             }
             // private vs shared

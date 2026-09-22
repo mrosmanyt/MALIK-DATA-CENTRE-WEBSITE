@@ -107,3 +107,44 @@ section[id], div[id="how-section"] { scroll-margin-top: 92px; }
     .mdc-cookie { left: 12px; right: 12px; max-width: none; bottom: 12px; }
     .mdc-top-btn { bottom: 150px; right: 26px; width: 42px; height: 42px; }
 }
+
+/* ----------------------------------------------------------------------------
+   CURRENCY SELECTOR
+   -------------------------------------------------------------------------- */
+.mdc-currency-selector-wrap {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.mdc-currency-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(15, 15, 20, 0.85);
+    border: 1px solid var(--border-glass, #2a2a31);
+    color: var(--text-main, #fff);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 28px 8px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+.mdc-currency-select:hover, .mdc-currency-select:focus {
+    border-color: var(--primary, #6366f1);
+    background-color: rgba(15, 15, 20, 0.98);
+    outline: none;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
+}
+@media (max-width: 768px) {
+    .mdc-currency-selector-wrap {
+        display: none;
+    }
+}
+

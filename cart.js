@@ -4,7 +4,13 @@
 (function () {
     "use strict";
 
-    const WA = "https://wa.me/923445739206?text=";
+    const WA_NUMBERS = ["923445739206", "923489057646"];
+    let cartWaIdx = 0;
+    function getWaUrl(text) {
+        const num = WA_NUMBERS[cartWaIdx % WA_NUMBERS.length];
+        cartWaIdx++;
+        return "https://wa.me/" + num + "?text=" + encodeURIComponent(text);
+    }
     let cart = []; // { id, name, price, duration, setup }
 
     /* ======================================================================
@@ -89,10 +95,18 @@
         let msg = "Hello MALIK DATA CENTRE! Main yeh order karna chahta/chahti hoon:\n\n";
         let total = 0;
         cart.forEach((item, idx) => {
-            msg += (idx + 1) + ") " + item.name + " — " + item.duration + " — Rs " + item.price.toLocaleString() + "\n";
+            var priceStr = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
+            if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+                priceStr += " (Rs " + item.price.toLocaleString() + ")";
+            }
+            msg += (idx + 1) + ") " + item.name + " — " + item.duration + " — " + priceStr + "\n";
             total += item.price;
         });
-        msg += "\nTotal: Rs " + total.toLocaleString() + "\n\n";
+        var totalStr = window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString();
+        if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+            totalStr += " (Rs " + total.toLocaleString() + ")";
+        }
+        msg += "\nTotal: " + totalStr + "\n\n";
         msg += "Please payment details (EasyPaisa/JazzCash/Bank) aur setup steps share karein.\nSource: malikdatacentre.store";
         return msg;
     }
@@ -112,7 +126,7 @@
             itemsEl.innerHTML =
                 '<div class="mdc-cart-empty"><i class="fa-solid fa-cart-shopping"></i>' +
                 '<p>Aapka cart khaali hai.<br>Tools par <b>+</b> dabaa kar add karein.</p></div>';
-            totalEl.textContent = "Rs 0";
+            totalEl.textContent = window.currencyConverter ? window.currencyConverter.format(0) : "Rs 0";
             checkout.style.opacity = "0.5";
             checkout.style.pointerEvents = "none";
             checkout.setAttribute("href", "#");
@@ -122,21 +136,22 @@
         let total = 0;
         itemsEl.innerHTML = cart.map((item) => {
             total += item.price;
+            var priceDisplay = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
             return (
                 '<div class="mdc-cart-item">' +
                     '<div class="mdc-cart-item-info">' +
                         '<div class="mdc-cart-item-name">' + item.name + '</div>' +
                         '<div class="mdc-cart-item-dur">' + item.duration + ' · ' + item.setup + '</div>' +
-                        '<div class="mdc-cart-item-price">Rs ' + item.price.toLocaleString() + '</div>' +
+                        '<div class="mdc-cart-item-price">' + priceDisplay + '</div>' +
                     '</div>' +
                     '<button class="mdc-cart-item-remove" data-remove="' + item.id + '" aria-label="Remove"><i class="fa-solid fa-trash-can"></i></button>' +
                 '</div>'
             );
         }).join("");
-        totalEl.textContent = "Rs " + total.toLocaleString();
+        totalEl.textContent = window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString();
         checkout.style.opacity = "1";
         checkout.style.pointerEvents = "auto";
-        checkout.setAttribute("href", WA + encodeURIComponent(buildOrderText()));
+        checkout.setAttribute("href", getWaUrl(buildOrderText()));
 
         itemsEl.querySelectorAll("[data-remove]").forEach((btn) => {
             btn.addEventListener("click", () => removeFromCart(btn.getAttribute("data-remove")));
@@ -177,7 +192,7 @@
         const overlay = document.createElement("div");
         overlay.className = "mdc-exit-overlay";
         overlay.id = "mdc-exit-overlay";
-        const waLink = WA + encodeURIComponent(
+        const waLink = getWaUrl(
             "Hello MALIK DATA CENTRE! Main WAIT5 coupon (5% off) use karna chahta hoon. Mujhe details bhejein."
         );
         overlay.innerHTML =
@@ -228,6 +243,22 @@
         if (!btns.length) return;
         const allVideos = document.querySelectorAll(".mdc-video");
 
+        // Pre-buffer video streams when user hovers video card
+        document.querySelectorAll(".video-card").forEach((card) => {
+            card.addEventListener("mouseenter", () => {
+                const vid = card.querySelector("video");
+                if (vid && vid.readyState < 2) {
+                    vid.load();
+                }
+            }, { once: true });
+            card.addEventListener("touchstart", () => {
+                const vid = card.querySelector("video");
+                if (vid && vid.readyState < 2) {
+                    vid.load();
+                }
+            }, { once: true });
+        });
+
         btns.forEach((btn) => {
             const vid = document.getElementById(btn.getAttribute("data-target"));
             if (!vid) return;
@@ -241,7 +272,13 @@
                         b.innerHTML = '<i class="fa-solid fa-play"></i>';
                     });
                     vid.muted = false;
-                    vid.play().catch(() => { vid.muted = true; vid.play().catch(() => {}); });
+                    const playPromise = vid.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(() => {
+                            vid.muted = true;
+                            vid.play().catch(() => {});
+                        });
+                    }
                     btn.classList.add("playing");
                     btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
                 } else {
@@ -279,5 +316,9 @@
         buildExitPopup();
         initVideos();
         registerSW();
+
+        window.addEventListener("mdcCurrencyChanged", () => {
+            renderCart();
+        });
     });
 })();
