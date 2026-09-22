@@ -124,6 +124,90 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #4285f4"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><path d="M12 2c3.5 4 6.5 7 10 10-3.5 3-6.5 6-10 10C8.5 19 5.5 16 2 12c3.5-3 6.5-6 10-10z" fill="currentColor" fill-opacity="0.1" stroke-linejoin="round"/></svg>`
     },
     {
+        id: "google-ai-ultra-shared-1m",
+        name: "Google AI Ultra Shared Base Unlimited",
+        category: "ai-chat",
+        duration: "1 Month Subscription",
+        price: 2500,
+        originalPrice: 6000,
+        setup: "Shared Premium Account",
+        desc: "Google AI Ultra Shared Base unlimited video generation, Antigravity, and all other premium features included.",
+        specs: ["25 Days Full Warranty", "Unlimited Video Generation", "Google Antigravity & Veo Access", "All Premium AI Features"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #4285f4"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
+    },
+    {
+        id: "google-ai-ultra-family-1m",
+        name: "Google AI Ultra Private Family Invitation",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 8500,
+        originalPrice: 18000,
+        setup: "Private Family Invitation",
+        desc: "Google AI Ultra Family Invitation 🚀 — 25K AI Credits, Veo 3, Google Antigravity, Flow, Gemini Ultra & Premium AI Features with high usage limits.",
+        specs: ["25K AI Credits Included", "Veo 3 & Google Antigravity", "Flow & Gemini Ultra Access", "25 Days Full Warranty"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #ea4335"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`
+    },
+    {
+        id: "google-ai-ultra-25k-slot",
+        name: "Google AI Ultra 25k Credits Slot",
+        category: "ai-chat",
+        duration: "1 Month Subscription",
+        price: 26000,
+        originalPrice: 45000,
+        setup: "Dedicated Slot",
+        desc: "Google AI Ultra 25k Credits Slot with full access to Gemini Ultra, Veo 3, and high usage limit AI features.",
+        specs: ["25K High Usage AI Credits", "28 Days Full Warranty", "Veo 3 & Gemini Ultra", "Manual Fast Delivery"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #fbbc04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>`
+    },
+    {
+        id: "gemini-pro-18m-private",
+        name: "Gemini Pro 18 Months (Private 5TB)",
+        category: "ai-chat",
+        duration: "18 Months Subscription",
+        price: 700,
+        originalPrice: 3500,
+        setup: "Full Private Code",
+        desc: "Google AI Pro 18 Months — Full Private • 5TB Storage • 1,000 AI Credits • Premium AI Features • Instant Redeem.",
+        specs: ["5TB Google Cloud Storage", "1,000 AI Credits Included", "Full Private Account", "1 Day Warranty / Instant Redeem"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #34a853"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>`
+    },
+    {
+        id: "capcut-pro-1m",
+        name: "CapCut Pro 1 Month",
+        category: "creative",
+        duration: "1 Month",
+        price: 804,
+        originalPrice: 2000,
+        setup: "2 Devices Login",
+        desc: "CapCut Pro 1 Month • 2 Devices • Premium Features • Instant Delivery • Warranty Available.",
+        specs: ["2 Devices Supported", "25 Days Warranty", "Pro Video Effects & 4K Export", "Manual Fast Delivery"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #00f2fe"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM15 16H5V8h10v8z"/></svg>`
+    },
+    {
+        id: "capcut-pro-3m",
+        name: "CapCut Pro 3 Months",
+        category: "creative",
+        duration: "3 Months",
+        price: 2800,
+        originalPrice: 5500,
+        setup: "2 Devices Login",
+        desc: "CapCut Pro 3 Months • 2 Devices • Premium Features • Instant Delivery • Warranty Available.",
+        specs: ["2 Devices Supported", "90 Days Full Warranty", "Pro AI Video Tools & Templates", "Manual Fast Delivery"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #4facfe"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM15 16H5V8h10v8z"/></svg>`
+    },
+    {
+        id: "capcut-pro-6m",
+        name: "CapCut Pro 6 Months",
+        category: "creative",
+        duration: "6 Months",
+        price: 4800,
+        originalPrice: 10000,
+        setup: "2 Devices Login",
+        desc: "CapCut Pro 6 Months • 2 Devices • Premium Features • Instant Delivery • Full Warranty.",
+        specs: ["2 Devices Supported", "180 Days Full Warranty", "Pro Animation & Cloud Sync", "Manual Fast Delivery"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #00c6ff"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM15 16H5V8h10v8z"/></svg>`
+    },
+    {
         id: "grok-10d",
         name: "Super Grok + X Premium+",
         category: "ai-chat",
@@ -809,13 +893,14 @@ const WHATSAPP_NUMBER = "+923445739206";
 const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
-const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m"];
-const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro", "adobe-12m", "youtube-12m", "cursor-pro"];
+const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m"];
+const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
 // Order used by the "Most Popular" sort
 const POPULARITY_ORDER = [
-    "grok-10d", "chatgpt-go-6m", "gemini-18m", "canva-yearly", "capcut-pro",
-    "adobe-12m", "youtube-12m", "cursor-pro", "lovable-200", "grok-6m",
-    "elevenlabs-creator", "heygen-200"
+    "grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m", "google-ai-ultra-shared-1m",
+    "gemini-18m", "capcut-pro-1m", "canva-yearly", "capcut-pro-3m", "capcut-pro-6m",
+    "adobe-12m", "youtube-12m", "cursor-pro", "gemini-pro-18m-private", "google-ai-ultra-25k-slot",
+    "lovable-200", "grok-6m", "elevenlabs-creator", "heygen-200"
 ];
 
 // State Management
