@@ -256,7 +256,12 @@
 .mdc-co-pay-item small { display: block; font-size: 0.7rem; color: var(--text-dim,#6b7280); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
 .mdc-co-pay-item b { font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.02em; }
 .mdc-co-pay-val { display: flex; align-items: center; gap: 10px; }
-.mdc-co-copy { background: var(--success,#10b981); color: #fff; border: none; border-radius: 7px; padding: 5px 12px; font-size: 0.74rem; font-weight: 700; cursor: pointer; }
+.mdc-co-copy { background: var(--success,#10b981); color: #fff; border: none; border-radius: 7px; padding: 5px 12px; font-size: 0.74rem; font-weight: 700; cursor: pointer; flex-shrink: 0; }
 .mdc-co-copy:hover { background: #059669; }
+.mdc-co-pay-crypto { background: rgba(240,185,11,0.07); border-color: rgba(240,185,11,0.3); }
+.mdc-co-pay-crypto .mdc-co-pay-title i { color: #F0B90B; }
+.mdc-co-pay-addr { font-size: 0.72rem !important; word-break: break-all; }
+.mdc-co-pay-warn { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; font-size: 0.72rem; color: #fbbf24; line-height: 1.5; }
+.mdc-co-pay-warn i { margin-top: 2px; flex-shrink: 0; }
 .mdc-co-wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; border-radius: 11px; background: #25d366; color: #fff; font-family: 'Outfit', sans-serif; font-weight: 700; box-shadow: 0 8px 24px rgba(37,211,102,0.35); transition: transform .25s, background .25s; }
 .mdc-co-wa:hover { background: #1ebea5; transform: translateY(-2px); }

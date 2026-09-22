@@ -5,7 +5,7 @@
 (function () {
     "use strict";
 
-    var WA = "https://wa.me/923445739206?text=";
+    var WA = "https://wa.me/923489057646?text=";
     function getTools() {
         try { if (typeof TOOLS_DATABASE !== "undefined" && Array.isArray(TOOLS_DATABASE)) return TOOLS_DATABASE; }
         catch (e) {}
@@ -28,7 +28,7 @@
             var r = "";
             try { r = localStorage.getItem("mdc_ref") || ""; } catch (e2) {}
             if (!r) return;
-            var link = e.target.closest('a[href*="wa.me/923445739206?text="]');
+            var link = e.target.closest('a[href*="wa.me/923489057646?text="], a[href*="wa.me/923445739206?text="]');
             if (!link) return;
             var href = link.getAttribute("href");
             if (!href || href.indexOf("Referral") !== -1) return;

@@ -198,10 +198,10 @@
         // Inject coupon line into WhatsApp order links on click (capture phase)
         document.addEventListener("click", (e) => {
             if (!activeCoupon) return;
-            const link = e.target.closest('a.btn-buy, a[href*="wa.me/923445739206?text="]');
+            const link = e.target.closest('a.btn-buy, a[href*="wa.me/923489057646?text="], a[href*="wa.me/923445739206?text="]');
             if (!link) return;
             const href = link.getAttribute("href");
-            if (!href || href.indexOf("wa.me/923445739206?text=") === -1) return;
+            if (!href || (href.indexOf("wa.me/923489057646?text=") === -1 && href.indexOf("wa.me/923445739206?text=") === -1)) return;
             if (href.indexOf("Coupon") !== -1) return; // already added
             const extra = encodeURIComponent(
                 "\n🎟️ Coupon: " + activeCoupon.code + " (" + activeCoupon.pct + "% OFF)"

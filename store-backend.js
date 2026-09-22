@@ -70,6 +70,15 @@
                             '<div class="mdc-co-pay-item"><small>Account Title</small><b>MALIK AMIR USMAN</b></div>' +
                         '</div>' +
                     '</div>' +
+                    '<div class="mdc-co-pay mdc-co-pay-crypto">' +
+                        '<div class="mdc-co-pay-title"><i class="fa-brands fa-bitcoin"></i> International? Pay with USDT (Binance)</div>' +
+                        '<div class="mdc-co-pay-methods">For customers outside Pakistan</div>' +
+                        '<div class="mdc-co-pay-acc">' +
+                            '<div class="mdc-co-pay-item"><small>USDT (BEP20 &ndash; BNB Smart Chain)</small><div class="mdc-co-pay-val"><b class="mdc-co-pay-addr">0x062ef134ad2221ff2b72076b7c30aebbdcf881d4</b><button class="mdc-co-copy" data-copy="0x062ef134ad2221ff2b72076b7c30aebbdcf881d4">Copy</button></div></div>' +
+                            '<div class="mdc-co-pay-item"><small>USDT (TRC20 &ndash; Tron)</small><div class="mdc-co-pay-val"><b class="mdc-co-pay-addr">TKAyBNGG2pqJ25vXFsTWqzhTASSHVmpw9x</b><button class="mdc-co-copy" data-copy="TKAyBNGG2pqJ25vXFsTWqzhTASSHVmpw9x">Copy</button></div></div>' +
+                        '</div>' +
+                        '<div class="mdc-co-pay-warn"><i class="fa-solid fa-triangle-exclamation"></i> Sirf USDT bhejein, aur sahi network (BEP20 ya TRC20) select karein &mdash; ghalat network se coins recover nahi hote.</div>' +
+                    '</div>' +
                     '<a class="mdc-co-wa" id="mdc-co-wa" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> Send Payment Proof on WhatsApp</a>' +
                 '</div>' +
             '</div>';
@@ -135,7 +144,7 @@
     function startCheckout(context, baseHref) {
         ctx = context;
         ctx.meta = parseFromHref(baseHref || "");
-        ctx.baseHref = baseHref || "https://wa.me/923445739206";
+        ctx.baseHref = baseHref || "https://wa.me/923489057646";
         // summary
         var sum = ctx.items.map(function (i) {
             return '<div class="mdc-co-line"><span>' + (i.name || "Item") + (i.duration ? ' <small>(' + i.duration + ')</small>' : '') + '</span><b>' + money(i.price) + '</b></div>';
@@ -199,7 +208,7 @@
             var cart = e.target.closest("#mdc-cart-checkout");
             if (!buy && !cart) return;
             var href = (buy || cart).getAttribute("href") || "";
-            if (href.indexOf("wa.me/923445739206") === -1) return; // safety
+            if (href.indexOf("wa.me/923489057646") === -1 && href.indexOf("wa.me/923445739206") === -1) return; // safety
             e.preventDefault();
             e.stopPropagation();
             var context = buy ? fromBuyButton(buy) : fromCart();

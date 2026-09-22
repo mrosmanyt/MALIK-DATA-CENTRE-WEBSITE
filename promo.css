@@ -360,10 +360,12 @@
 .pay-jazzcash .pay-ico { background: #e60000; }
 .pay-meezan   .pay-ico { background: #00857b; }
 .pay-bank     .pay-ico { background: var(--primary, #6366f1); }
+.pay-binance  .pay-ico { background: #F0B90B; color: #1e2026; }
 .pay-easypaisa { border-color: rgba(0, 166, 81, 0.3); }
 .pay-jazzcash  { border-color: rgba(230, 0, 0, 0.3); }
 .pay-meezan    { border-color: rgba(0, 133, 123, 0.3); }
 .pay-bank      { border-color: rgba(99, 102, 241, 0.3); }
+.pay-binance   { border-color: rgba(240, 185, 11, 0.35); }
 
 .mdc-pay-note {
     margin-top: 20px;
