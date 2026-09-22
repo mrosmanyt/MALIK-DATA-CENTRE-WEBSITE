@@ -882,15 +882,15 @@ const TOOLS_DATABASE = [
 ];
 
 // Official WhatsApp contact numbers (Line 1 Primary & Line 2 Secondary)
-const WHATSAPP_NUMBERS = ["923489057646", "923445739206"];
+const WHATSAPP_NUMBERS = ["923445739206", "923489057646"];
 let waCounter = 0;
 function getWhatsAppNumber() {
     const num = WHATSAPP_NUMBERS[waCounter % WHATSAPP_NUMBERS.length];
     waCounter++;
     return num;
 }
-const WHATSAPP_NUMBER = "+923489057646";
-const WHATSAPP_NUMBER_2 = "+923445739206";
+const WHATSAPP_NUMBER = "+923445739206";
+const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
 const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m"];
