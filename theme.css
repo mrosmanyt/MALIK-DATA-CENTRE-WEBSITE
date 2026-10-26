@@ -228,3 +228,38 @@ h1, h2, h3, .section-title, .hero-title { font-family: 'Inter', system-ui, sans-
 .step-number, .how-step-num { background: #fff !important; color: #111827 !important; border: 1px solid #e5e5e8 !important; }
 .pg-usd { display: inline-block; font-size: .8rem; color: #6b7280; font-weight: 500; }
 .tool-price-wrapper .pg-usd { display: block; margin-top: 2px; }
+
+/* ---------- Header fit (v2.2): pill grows with its content, items drop out step by step ---------- */
+.navbar, .navbar.scrolled { width: max-content !important; max-width: calc(100% - 24px) !important; }
+.navbar .navbar-container { max-width: none !important; width: auto !important; gap: 18px; padding: 0 8px 0 14px !important; }
+.navbar .nav-menu { gap: 20px; flex-wrap: nowrap; }
+.navbar .logo { margin-right: 6px !important; }
+.navbar .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; flex-wrap: nowrap; }
+.navbar .nav-search-wrapper, .navbar .nav-community-cta { display: none !important; }
+.navbar .mdc-currency-select, .navbar .mdc-lang-select {
+    height: 38px; border-radius: 999px !important; padding: 0 12px !important; border: 1px solid var(--border-glass) !important;
+    background: #fff !important; color: #111827 !important; font-size: .85rem !important; font-weight: 600; cursor: pointer;
+}
+.navbar .mdc-currency-select { width: 104px; }
+.navbar .mdc-lang-select { width: 150px; }
+.navbar .nav-channel-cta {
+    display: inline-flex !important; align-items: center; gap: 6px; height: 38px; padding: 0 14px !important; border-radius: 999px !important;
+    background: #fff !important; color: #111827 !important; border: 1px solid var(--border-glass) !important; font-size: .88rem; white-space: nowrap; box-shadow: none !important;
+}
+.navbar .nav-channel-cta:hover { border-color: #c7c7cc !important; }
+.navbar .nav-cta { height: 40px; display: inline-flex !important; align-items: center; gap: 6px; }
+.navbar .mdc-currency-selector-wrap, .navbar .mdc-lang-selector-wrap { display: block !important; }
+@media (max-width: 1480px) { .navbar .mdc-lang-selector-wrap { display: none !important; } }
+@media (max-width: 1340px) { .navbar .nav-channel-cta { display: none !important; } }
+@media (max-width: 1260px) { .navbar .nav-menu { gap: 14px; } .navbar .nav-link { font-size: .9rem; } }
+@media (max-width: 1180px) {
+    .navbar .mdc-currency-selector-wrap { display: none !important; }
+    .navbar, .navbar.scrolled { width: calc(100% - 24px) !important; }
+    .navbar .navbar-container { justify-content: space-between; }
+}
+.navbar .mdc-lang-select { width: 128px; }
+@media (max-width: 760px) {
+    .navbar .nav-cta { display: none !important; }
+    .navbar .mobile-toggle { display: inline-flex !important; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 999px; background: #111827 !important; color: #fff !important; border: 0; flex-shrink: 0; }
+    .navbar .logo-text { font-size: 1.05rem; }
+}
