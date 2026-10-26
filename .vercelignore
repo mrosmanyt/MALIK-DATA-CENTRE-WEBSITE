@@ -1,0 +1,5 @@
+# Source files used only by the page generator / GitHub Actions
+site-content/
+scripts/
+build-pages.js
+.github/

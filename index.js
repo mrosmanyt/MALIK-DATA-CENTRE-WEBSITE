@@ -1276,6 +1276,7 @@ function renderTools(tools = TOOLS_DATABASE) {
                         <h3 class="tool-title">${tool.name}</h3>
                         <div class="tool-duration">${tool.duration}</div>
                         <p class="tool-desc">${tool.desc}</p>
+                        ${(window.MDC_TOOL_PAGES && window.MDC_TOOL_PAGES[tool.id]) ? `<a class="tool-details-link" href="${window.MDC_TOOL_PAGES[tool.id]}">Full price, plans &amp; details <i class="fa-solid fa-arrow-right"></i></a>` : ""}
                         <ul class="tool-specs">
                             <li><i class="fa-solid fa-shield-halved" style="color: var(--primary)"></i> <strong>${tool.setup}</strong></li>
                             ${specsHTML}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Free Online Design Maker: Thumbnails, Posts & Flyers | MDC Design Studio</title>
+<meta name="description" content="Free online design tool by MALIK DATA CENTRE. Make YouTube thumbnails, Instagram posts, WhatsApp status, sale posts, Eid and Jumma designs and flyers in your browser. Urdu fonts and AI background remover included.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a0a0f">
+<link rel="canonical" href="https://malikdatacentre.store/design/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MALIK DATA CENTRE">
+<meta property="og:title" content="MDC Design Studio — free thumbnail, post & flyer maker">
+<meta property="og:description" content="Make thumbnails, social posts, WhatsApp status and flyers free in your browser. Urdu fonts and AI background remover included.">
+<meta property="og:url" content="https://malikdatacentre.store/design/">
+<meta property="og:image" content="https://malikdatacentre.store/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Lobster&family=Montserrat:wght@400;700;900&family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;600;700;800;900&family=Pacifico&family=Playfair+Display:wght@400;700;900&family=Poppins:wght@400;600;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="studio.css?v=1.0">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MDC Design Studio","url":"https://malikdatacentre.store/design/","applicationCategory":"DesignApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"PKR"},"publisher":{"@type":"Organization","name":"MALIK DATA CENTRE","url":"https://malikdatacentre.store/"},"description":"Free browser-based design maker for YouTube thumbnails, Instagram posts, WhatsApp status, sale posts and flyers, with Urdu fonts and an AI background remover."}</script>
+</head>
+<body>
+<div class="ds-app" id="ds-app">
+
+  <!-- Top bar -->
+  <header class="ds-top">
+    <a href="../index.html" class="ds-brand" title="Back to MALIK DATA CENTRE">
+      <img src="../assets/logo.png" alt="" width="30" height="30">
+      <span><b>MDC</b> Design Studio</span>
+    </a>
+    <div class="ds-top-mid">
+      <button class="ds-ibtn" id="btn-undo" title="Undo (Ctrl+Z)"><i class="fa-solid fa-rotate-left"></i></button>
+      <button class="ds-ibtn" id="btn-redo" title="Redo (Ctrl+Y)"><i class="fa-solid fa-rotate-right"></i></button>
+      <span class="ds-sep"></span>
+      <button class="ds-btn ghost" id="btn-resize" title="Change size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> <span id="size-label">1080 × 1080</span></button>
+      <span class="ds-sep hide-sm"></span>
+      <button class="ds-ibtn hide-sm" id="btn-zoom-out" title="Zoom out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+      <span class="ds-zoom hide-sm" id="zoom-label">100%</span>
+      <button class="ds-ibtn hide-sm" id="btn-zoom-in" title="Zoom in"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+      <button class="ds-ibtn hide-sm" id="btn-zoom-fit" title="Fit to screen"><i class="fa-solid fa-expand"></i></button>
+    </div>
+    <div class="ds-top-right">
+      <div class="ds-menu-wrap">
+        <button class="ds-btn ghost hide-sm" id="btn-file"><i class="fa-regular fa-folder-open"></i> File</button>
+        <div class="ds-menu" id="menu-file">
+          <button data-act="new"><i class="fa-regular fa-file"></i> New blank design</button>
+          <button data-act="save"><i class="fa-solid fa-floppy-disk"></i> Save project (.mdc)</button>
+          <button data-act="open"><i class="fa-regular fa-folder-open"></i> Open project</button>
+        </div>
+      </div>
+      <div class="ds-menu-wrap">
+        <button class="ds-btn primary" id="btn-download"><i class="fa-solid fa-download"></i> <span class="hide-xs">Download</span></button>
+        <div class="ds-menu right" id="menu-download">
+          <div class="ds-menu-title">Download as</div>
+          <button data-dl="png"><i class="fa-regular fa-image"></i> PNG (best quality)</button>
+          <button data-dl="jpg"><i class="fa-regular fa-file-image"></i> JPG (smaller file)</button>
+          <button data-dl="png2"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> PNG 2× (extra sharp)</button>
+          <button data-dl="pngt"><i class="fa-solid fa-chess-board"></i> PNG transparent</button>
+          <div class="ds-menu-sep"></div>
+          <button data-act="save"><i class="fa-solid fa-floppy-disk"></i> Save project (.mdc)</button>
+          <button data-act="open"><i class="fa-regular fa-folder-open"></i> Open project</button>
+          <button data-act="new"><i class="fa-regular fa-file"></i> New blank design</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ds-body">
+    <!-- Left rail -->
+    <nav class="ds-rail" aria-label="Tools">
+      <button class="active" data-panel="templates"><i class="fa-solid fa-table-cells-large"></i><span>Templates</span></button>
+      <button data-panel="text"><i class="fa-solid fa-font"></i><span>Text</span></button>
+      <button data-panel="elements"><i class="fa-solid fa-shapes"></i><span>Elements</span></button>
+      <button data-panel="uploads"><i class="fa-solid fa-cloud-arrow-up"></i><span>Uploads</span></button>
+      <button data-panel="background"><i class="fa-solid fa-fill-drip"></i><span>Background</span></button>
+      <button data-panel="ai"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI</span></button>
+      <button data-panel="layers"><i class="fa-solid fa-layer-group"></i><span>Layers</span></button>
+    </nav>
+
+    <!-- Side panel -->
+    <aside class="ds-panel" id="ds-panel">
+      <button class="ds-panel-close" id="panel-close" aria-label="Close panel"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <section data-panel="templates" class="active">
+        <h3>Templates</h3>
+        <div class="ds-chips" id="tpl-filter"></div>
+        <div class="ds-tpl-grid" id="tpl-grid"></div>
+      </section>
+
+      <section data-panel="text">
+        <h3>Text</h3>
+        <button class="ds-textadd h1" data-text="heading">Add a heading</button>
+        <button class="ds-textadd h2" data-text="subheading">Add a subheading</button>
+        <button class="ds-textadd p" data-text="body">Add body text</button>
+        <button class="ds-textadd urdu" data-text="urdu">اردو عنوان شامل کریں</button>
+        <h4>Text styles</h4>
+        <div class="ds-style-grid" id="text-styles"></div>
+      </section>
+
+      <section data-panel="elements">
+        <h3>Elements</h3>
+        <h4>Shapes</h4>
+        <div class="ds-el-grid" id="el-shapes"></div>
+        <h4>Badges &amp; labels</h4>
+        <div class="ds-el-grid" id="el-badges"></div>
+        <h4>Stickers</h4>
+        <div class="ds-emoji-grid" id="el-emoji"></div>
+      </section>
+
+      <section data-panel="uploads">
+        <h3>Uploads</h3>
+        <label class="ds-drop" id="drop-zone">
+          <input type="file" id="file-input" accept="image/*" multiple hidden>
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <b>Upload images</b>
+          <span>Click or drag photos here. They stay on your device.</span>
+        </label>
+        <p class="ds-hint"><i class="fa-solid fa-lightbulb"></i> Select a photo frame in a template first, then upload: the photo fills the frame.</p>
+        <div class="ds-up-grid" id="up-grid"></div>
+      </section>
+
+      <section data-panel="background">
+        <h3>Background</h3>
+        <h4>Colour</h4>
+        <div class="ds-swatches" id="bg-colors"></div>
+        <label class="ds-row">Custom colour <input type="color" id="bg-custom" value="#ffffff"></label>
+        <h4>Gradients</h4>
+        <div class="ds-swatches big" id="bg-grads"></div>
+        <h4>Image</h4>
+        <label class="ds-btn ghost full"><input type="file" id="bg-file" accept="image/*" hidden><i class="fa-regular fa-image"></i> Use a photo as background</label>
+      </section>
+
+      <section data-panel="ai">
+        <h3>AI tools</h3>
+        <div class="ds-ai-card">
+          <div class="ds-ai-head"><i class="fa-solid fa-scissors"></i><b>Remove background</b><span class="ds-tag">Free</span></div>
+          <p>Select a photo on your design and remove its background in one click. Runs in your browser, so your photo is not uploaded.</p>
+          <button class="ds-btn primary full" id="ai-bg-remove"><i class="fa-solid fa-wand-magic-sparkles"></i> Remove background</button>
+          <p class="ds-hint" id="ai-bg-status"></p>
+        </div>
+        <div class="ds-ai-card">
+          <div class="ds-ai-head"><i class="fa-solid fa-pen-nib"></i><b>Headline ideas</b><span class="ds-tag">Free</span></div>
+          <p>Get catchy headlines for your post. Pick a type and tap one to add it.</p>
+          <select id="ai-head-type" class="ds-input">
+            <option value="sale">Sale / discount</option>
+            <option value="youtube">YouTube thumbnail</option>
+            <option value="food">Food / restaurant</option>
+            <option value="course">Course / class</option>
+            <option value="hiring">Hiring</option>
+            <option value="islamic">Jumma / Eid / Ramadan</option>
+            <option value="motivation">Motivation</option>
+          </select>
+          <div class="ds-ideas" id="ai-ideas"></div>
+        </div>
+        <div class="ds-ai-card soon">
+          <div class="ds-ai-head"><i class="fa-solid fa-image"></i><b>Text to image</b><span class="ds-tag soon">Coming soon</span></div>
+          <p>Describe an image and AI will create it. Launching soon with free daily credits.</p>
+        </div>
+      </section>
+
+      <section data-panel="layers">
+        <h3>Layers</h3>
+        <p class="ds-hint">Top of the list is the front of the design. Tap to select.</p>
+        <div class="ds-layers" id="layers-list"></div>
+      </section>
+
+      <a class="ds-promo" href="../tools/canva-pro/">
+        <i class="fa-solid fa-crown"></i>
+        <span><b>Need more?</b> Get Canva Pro for a full year in PKR</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </aside>
+
+    <!-- Workspace -->
+    <main class="ds-work" id="ds-work">
+      <!-- Context toolbar -->
+      <div class="ds-ctx" id="ds-ctx" hidden>
+        <div class="ds-ctx-group" data-for="text">
+          <select id="p-font" class="ds-input" title="Font"></select>
+          <input type="number" id="p-size" class="ds-input num" min="6" max="600" title="Font size">
+          <button class="ds-ibtn" id="p-bold" title="Bold"><i class="fa-solid fa-bold"></i></button>
+          <button class="ds-ibtn" id="p-italic" title="Italic"><i class="fa-solid fa-italic"></i></button>
+          <button class="ds-ibtn" id="p-underline" title="Underline"><i class="fa-solid fa-underline"></i></button>
+          <button class="ds-ibtn" id="p-align" title="Alignment"><i class="fa-solid fa-align-center"></i></button>
+          <button class="ds-ibtn" id="p-case" title="UPPERCASE / lowercase"><span style="font-weight:800;font-size:.8rem">Aa</span></button>
+        </div>
+        <div class="ds-ctx-group" data-for="fill">
+          <label class="ds-color" title="Colour"><input type="color" id="p-fill"><i class="fa-solid fa-droplet"></i></label>
+        </div>
+        <div class="ds-ctx-group" data-for="image">
+          <button class="ds-btn ghost sm" id="p-filters"><i class="fa-solid fa-sliders"></i> Adjust</button>
+          <button class="ds-btn ghost sm" id="p-removebg"><i class="fa-solid fa-scissors"></i> Remove BG</button>
+          <button class="ds-ibtn" id="p-flip" title="Flip"><i class="fa-solid fa-left-right"></i></button>
+        </div>
+        <div class="ds-ctx-group">
+          <button class="ds-btn ghost sm" id="p-effects"><i class="fa-solid fa-wand-sparkles"></i> <span class="hide-xs">Effects</span></button>
+          <button class="ds-btn ghost sm" id="p-position"><i class="fa-solid fa-arrows-to-dot"></i> <span class="hide-xs">Position</span></button>
+          <button class="ds-ibtn" id="p-dup" title="Duplicate (Ctrl+D)"><i class="fa-regular fa-copy"></i></button>
+          <button class="ds-ibtn" id="p-lock" title="Lock"><i class="fa-solid fa-lock-open"></i></button>
+          <button class="ds-ibtn danger" id="p-del" title="Delete (Del)"><i class="fa-regular fa-trash-can"></i></button>
+        </div>
+      </div>
+
+      <!-- Popovers -->
+      <div class="ds-pop" id="pop-effects" hidden>
+        <h4>Effects</h4>
+        <label class="ds-row">Transparency <input type="range" id="e-opacity" min="0" max="100"></label>
+        <div class="ds-only-text">
+          <label class="ds-row">Outline <input type="color" id="e-stroke" value="#000000"></label>
+          <label class="ds-row">Outline width <input type="range" id="e-strokew" min="0" max="30" value="0"></label>
+          <label class="ds-row">Highlight bg <input type="color" id="e-hl" value="#ffeb3b"></label>
+          <label class="ds-check"><input type="checkbox" id="e-hl-on"> Use highlight</label>
+          <label class="ds-row">Letter spacing <input type="range" id="e-spacing" min="-100" max="800" value="0"></label>
+          <label class="ds-row">Line height <input type="range" id="e-lh" min="70" max="250" value="116"></label>
+        </div>
+        <div class="ds-only-shape">
+          <label class="ds-row">Border <input type="color" id="e-sstroke" value="#ffffff"></label>
+          <label class="ds-row">Border width <input type="range" id="e-sstrokew" min="0" max="40" value="0"></label>
+          <label class="ds-row ds-only-rect">Corner radius <input type="range" id="e-radius" min="0" max="300" value="0"></label>
+        </div>
+        <label class="ds-check"><input type="checkbox" id="e-shadow"> Shadow</label>
+        <label class="ds-row">Shadow blur <input type="range" id="e-shblur" min="0" max="60" value="18"></label>
+        <label class="ds-row">Shadow colour <input type="color" id="e-shcolor" value="#000000"></label>
+      </div>
+      <div class="ds-pop" id="pop-position" hidden>
+        <h4>Position</h4>
+        <div class="ds-grid2">
+          <button class="ds-btn ghost sm" data-pos="front"><i class="fa-solid fa-angles-up"></i> To front</button>
+          <button class="ds-btn ghost sm" data-pos="back"><i class="fa-solid fa-angles-down"></i> To back</button>
+          <button class="ds-btn ghost sm" data-pos="up"><i class="fa-solid fa-angle-up"></i> Forward</button>
+          <button class="ds-btn ghost sm" data-pos="down"><i class="fa-solid fa-angle-down"></i> Backward</button>
+          <button class="ds-btn ghost sm" data-pos="ch"><i class="fa-solid fa-arrows-left-right-to-line"></i> Center H</button>
+          <button class="ds-btn ghost sm" data-pos="cv"><i class="fa-solid fa-arrows-up-to-line"></i> Center V</button>
+          <button class="ds-btn ghost sm" data-pos="left"><i class="fa-solid fa-align-left"></i> Left</button>
+          <button class="ds-btn ghost sm" data-pos="right"><i class="fa-solid fa-align-right"></i> Right</button>
+          <button class="ds-btn ghost sm" data-pos="top"><i class="fa-solid fa-arrow-up"></i> Top</button>
+          <button class="ds-btn ghost sm" data-pos="bottom"><i class="fa-solid fa-arrow-down"></i> Bottom</button>
+        </div>
+      </div>
+      <div class="ds-pop" id="pop-filters" hidden>
+        <h4>Adjust photo</h4>
+        <label class="ds-row">Brightness <input type="range" id="f-bright" min="-60" max="60" value="0"></label>
+        <label class="ds-row">Contrast <input type="range" id="f-contrast" min="-60" max="60" value="0"></label>
+        <label class="ds-row">Saturation <input type="range" id="f-sat" min="-100" max="100" value="0"></label>
+        <label class="ds-row">Blur <input type="range" id="f-blur" min="0" max="50" value="0"></label>
+        <label class="ds-check"><input type="checkbox" id="f-gray"> Black &amp; white</label>
+        <label class="ds-check"><input type="checkbox" id="f-sepia"> Vintage (sepia)</label>
+        <button class="ds-btn ghost sm full" id="f-reset">Reset</button>
+      </div>
+
+      <div class="ds-stage" id="ds-stage">
+        <div class="ds-canvas-wrap" id="ds-canvas-wrap"><canvas id="ds-canvas"></canvas></div>
+      </div>
+      <div class="ds-toast" id="ds-toast" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <!-- Resize dialog -->
+  <dialog class="ds-dialog" id="dlg-size">
+    <h3>Design size</h3>
+    <div class="ds-size-grid" id="size-grid"></div>
+    <div class="ds-row" style="gap:8px;margin-top:12px">
+      <input type="number" id="size-w" class="ds-input num" min="50" max="5000" placeholder="Width"> ×
+      <input type="number" id="size-h" class="ds-input num" min="50" max="5000" placeholder="Height"> px
+      <button class="ds-btn primary sm" id="size-apply">Apply</button>
+    </div>
+    <label class="ds-check"><input type="checkbox" id="size-scale" checked> Fit my design to the new size</label>
+    <button class="ds-btn ghost sm" id="size-close" style="margin-top:10px">Close</button>
+  </dialog>
+  <input type="file" id="open-input" accept=".mdc,.json,application/json" hidden>
+</div>
+
+<noscript><p style="padding:20px;color:#fff">MDC Design Studio needs JavaScript to run.</p></noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+<script src="templates.js?v=1.0"></script>
+<script src="studio.js?v=1.0"></script>
+</body>
+</html>
