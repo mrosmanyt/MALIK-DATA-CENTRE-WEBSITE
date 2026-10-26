@@ -263,3 +263,46 @@ h1, h2, h3, .section-title, .hero-title { font-family: 'Inter', system-ui, sans-
     .navbar .mobile-toggle { display: inline-flex !important; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 999px; background: #111827 !important; color: #fff !important; border: 0; flex-shrink: 0; }
     .navbar .logo-text { font-size: 1.05rem; }
 }
+
+/* ==========================================================================
+   Smooth hover (v2.3): no blur, no "transition: all", shadow on its own layer
+   ========================================================================== */
+.glass-card, .tool-card, .pg-card, a.pg-card, .blog-card, .review-card, .feature-card, .how-step, .faq-item {
+    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+    transition: transform .22s ease, border-color .22s ease !important;
+}
+.glass-card:hover, .tool-card:hover, .pg-card:hover, a.pg-card:hover, .blog-card:hover {
+    transform: translate3d(0, -3px, 0) !important;
+    box-shadow: var(--shadow-sm) !important;
+    background-color: #fff !important;
+}
+.faq-item:hover, .faq-item.glass-card:hover { transform: none !important; }
+/* Shadow fades in on a separate composited layer, so the card itself is not repainted */
+.tool-card::after, .pg-card::after, .blog-card::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    box-shadow: 0 18px 40px rgba(17, 24, 39, .10); opacity: 0; transition: opacity .22s ease;
+}
+.pg-card, .blog-card { position: relative; }
+.tool-card:hover::after, .pg-card:hover::after, .blog-card:hover::after { opacity: 1; }
+.tool-card .tool-icon-box { transition: none !important; }
+.tool-card:hover .tool-icon-box { border-color: var(--border-glass) !important; color: inherit !important; }
+
+/* Header: solid white instead of a live blur while scrolling */
+.navbar, .navbar.scrolled, .pg-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(255,255,255,.97) !important; }
+
+/* Ribbons sit on the card edge, never on top of the category badge or icon */
+.tool-card .tool-ribbon { top: -11px !important; left: 18px !important; border-radius: 999px !important; padding: 4px 11px !important; font-size: .66rem !important; }
+.tool-card .tool-save-badge { position: absolute !important; top: -11px !important; right: 18px !important; left: auto !important; border-radius: 999px !important; padding: 4px 10px !important; font-size: .68rem !important; border: 1px solid #bbf7d0 !important; z-index: 5; }
+
+@media (prefers-reduced-motion: reduce) {
+    .glass-card, .tool-card, .pg-card, .blog-card { transition: none !important; }
+    .glass-card:hover, .tool-card:hover, .pg-card:hover, .blog-card:hover { transform: none !important; }
+}
+
+/* Continuous animations must never trigger layout or repaint (v2.3) */
+.mdc-deal-banner::before, .mdc-deal-banner::after { animation: none !important; display: none !important; }
+.mdc-deal-banner { animation: none !important; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+.mdc-deal-text i { animation: none !important; }
+/* Static status dots: a blinking dot inside the catalog repainted the whole section every frame */
+.dot, .mdc-live-counter .dot, .status-dot, .live-dot { animation: none !important; box-shadow: none !important; }
