@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — template library
+   Postly Design Studio — template library
    Each template is plain data. Coordinates are in design pixels.
    Object types: text, rect, circle, tri, star, line, photo (image frame)
    Gradient fill: { g: [angleDeg, ["#c1", 0], ["#c2", 1]] }

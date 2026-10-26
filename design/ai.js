@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — AI features
+   Postly Design Studio — AI features
    Engine: Pollinations.ai (direct with a publishable key, or through /api/ai)
    Settings live in ai-config.js. Photo tools that run fully in the browser
    (Enhance 2×, Magic eraser) do not use the AI quota.
@@ -181,11 +181,16 @@
     caption: q => `Write 3 different engaging social media captions (2-3 sentences each, with a call to action and 1-2 emojis) for: ${q}. Separate captions with a line containing only ---.`,
     hashtags: q => `Give 20 relevant hashtags for a social media post about: ${q}. Mix popular and niche tags. Output them on one line separated by spaces.`,
     toUrdu: q => `Translate this into natural Urdu (Urdu script). Reply with the translation only:\n${q}`,
-    toEnglish: q => `Translate this into natural English. Reply with the translation only:\n${q}`
+    toEnglish: q => `Translate this into natural English. Reply with the translation only:\n${q}`,
+    ytTitle: q => `Write 8 click-worthy but honest YouTube video titles (max 60 characters each) for a video about: ${q}. Use curiosity, numbers or strong benefits. One per line, no numbering, no quotes.`,
+    thumbText: q => `Write 8 short YouTube thumbnail texts (2 to 4 words each, punchy, ALL CAPS) for a video about: ${q}. They must not repeat the title, they should create curiosity. One per line, no numbering, no quotes.`,
+    adPrimary: q => `Write 3 Facebook/Instagram ad primary texts for: ${q}. Use a hook in the first line, 2-3 short benefit lines with emojis, and a clear call to action. Keep each under 90 words. Separate ads with a line containing only ---.`,
+    adHeadline: q => `Write 8 short ad headlines (max 40 characters) for: ${q}. Benefit-focused, clear, no clickbait. One per line, no numbering, no quotes.`,
+    googleAds: q => `Write 10 Google Ads responsive search ad headlines for: ${q}. Each headline MUST be 30 characters or fewer including spaces. Include the main keyword in some. One per line, no numbering, no quotes.`
   };
   function updateWriteForm() {
     const t = $("#ai-write-type").value, tr = t === "toUrdu" || t === "toEnglish";
-    $("#ai-write-q").placeholder = tr ? "Select a text on your design (or type text here)" : "What is it about? e.g. home bakery cakes";
+    $("#ai-write-q").placeholder = tr ? "Select a text on your design (or type text here)" : /yt|thumb/.test(t) ? "What is the video about? e.g. earning online with AI" : /ad|google/i.test(t) ? "Product or service + offer, e.g. organic honey, 20% off" : "What is it about? e.g. home bakery cakes";
   }
   $("#ai-write-type").addEventListener("change", updateWriteForm); updateWriteForm();
   let writeOut = [];
@@ -199,13 +204,15 @@
     busy(btn, true, "Writing…");
     try {
       const out = await aiText([{ role: "system", content: "You write short, clear marketing copy for small businesses. Never invent prices, phone numbers or facts." }, { role: "user", content: WRITE[type](q) }]);
-      writeOut = type === "caption" ? out.split(/\n-{3,}\n|\n\s*\n/).map(s => s.trim()).filter(Boolean)
+      writeOut = type === "caption" || type === "adPrimary" ? out.split(/\n-{3,}\n|\n\s*\n/).map(s => s.trim()).filter(Boolean)
         : type === "hashtags" || type.startsWith("to") ? [out.trim()]
         : out.split("\n").map(s => s.replace(/^\s*(\d+[.)]|[-*•])\s*/, "").replace(/^["“]|["”]$/g, "").trim()).filter(Boolean).slice(0, 8);
       const replace = type.startsWith("to") && sel && sel.type === "textbox";
-      $("#ai-write-out").innerHTML = writeOut.map((t, i) => `<button type="button" data-w="${i}" style="${S.isRTL(t) ? "direction:rtl;text-align:right;font-family:'Noto Nastaliq Urdu';line-height:2" : ""}">${esc(t)}</button>`).join("")
-        + `<p class="ds-hint">${replace ? "Tap to replace the selected text." : type === "caption" || type === "hashtags" ? "Tap to copy (paste it into your post)." : "Tap to add to your design."}</p>`;
-      $("#ai-write-out").dataset.mode = replace ? "replace" : (type === "caption" || type === "hashtags") ? "copy" : "add";
+      if (type === "googleAds") writeOut = writeOut.map(t => t.length > 30 ? t.slice(0, 30).replace(/\s+\S*$/, "") : t);
+      const copyTypes = ["caption", "hashtags", "adPrimary", "ytTitle", "googleAds", "adHeadline"];
+      $("#ai-write-out").innerHTML = writeOut.map((t, i) => `<button type="button" data-w="${i}" style="${S.isRTL(t) ? "direction:rtl;text-align:right;font-family:'Noto Nastaliq Urdu';line-height:2" : ""}">${esc(t)}${type === "googleAds" ? ` <small style="opacity:.6">(${t.length})</small>` : ""}</button>`).join("")
+        + `<p class="ds-hint">${replace ? "Tap to replace the selected text." : copyTypes.includes(type) ? "Tap to copy." : "Tap to add to your design."}</p>`;
+      $("#ai-write-out").dataset.mode = replace ? "replace" : copyTypes.includes(type) ? "copy" : "add";
     } catch (e) { console.warn(e); S.toast(friendly(e), 5000); }
     busy(btn, false);
   };

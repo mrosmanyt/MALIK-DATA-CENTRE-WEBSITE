@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — extra free features (no API keys, no cost)
+   Postly Design Studio — extra free features (no API keys, no cost)
    Pages · PDF/ZIP export · Resize for other sizes · Smart guides · Grid
    Group/ungroup · Pinch zoom · Free photos · Icons · QR codes
    Crop & shape masks · Brand kit · Print order · "Design it for me"
@@ -152,7 +152,7 @@
         else doc.addPage([w, h], o);
         doc.addImage(el.toDataURL("image/jpeg", 0.93), "JPEG", 0, 0, w, h);
       });
-      S.saveBlob(doc.output("blob"), `mdc-design-${els.length}-page${els.length > 1 ? "s" : ""}.pdf`);
+      S.saveBlob(doc.output("blob"), `postly-design-${els.length}-page${els.length > 1 ? "s" : ""}.pdf`);
       S.toast(`PDF downloaded ✔ (${els.length} page${els.length > 1 ? "s" : ""})`);
     } catch (e) { console.error(e); S.toast("Could not make the PDF. Check your internet and try again."); }
   }
@@ -166,7 +166,7 @@
         const blob = await new Promise(r => els[i].toBlob(r, "image/png"));
         zip.file(`page-${String(i + 1).padStart(2, "0")}-${els[i].width}x${els[i].height}.png`, blob);
       }
-      S.saveBlob(await zip.generateAsync({ type: "blob" }), "mdc-design-pages.zip");
+      S.saveBlob(await zip.generateAsync({ type: "blob" }), "postly-design-pages.zip");
       S.toast(`ZIP downloaded ✔ (${els.length} images)`);
     } catch (e) { console.error(e); S.toast("Could not make the ZIP file. Please try again."); }
   }
@@ -574,7 +574,7 @@
     e.preventDefault();
     const f = new FormData(e.target), [W, H] = S.size;
     if (pages.length > 1) exportPDF(); else S.download("png2");
-    openWA(["Hello MALIK DATA CENTRE! I want to order prints from MDC Design Studio.", "",
+    openWA(["Hello MALIK DATA CENTRE! I want to order prints from Postly Design Studio.", "",
       `Product: ${f.get("product")}`, `Quantity: ${f.get("qty")}`, `City: ${f.get("city")}`, `Name: ${f.get("name")}`,
       f.get("notes") ? `Notes: ${f.get("notes")}` : "", `Design: ${W} × ${H} px, ${pages.length} page(s)`, "",
       "I have downloaded my design and will attach it here."].filter(x => x !== "").join("\n"));
@@ -586,7 +586,7 @@
     const f = new FormData(e.target);
     if (f.get("attach") && S.userObjects().length) S.download("png");
     openWA(["Hello MALIK DATA CENTRE! Please design this for me.", "", `Type: ${f.get("type")}`, `Details: ${f.get("details")}`,
-      f.get("deadline") ? `Needed by: ${f.get("deadline")}` : "", f.get("attach") && S.userObjects().length ? "I'll attach my draft from MDC Design Studio." : ""].filter(Boolean).join("\n"));
+      f.get("deadline") ? `Needed by: ${f.get("deadline")}` : "", f.get("attach") && S.userObjects().length ? "I'll attach my draft from Postly Design Studio." : ""].filter(Boolean).join("\n"));
     closeDialog($("#dlg-dfm"));
   });
 

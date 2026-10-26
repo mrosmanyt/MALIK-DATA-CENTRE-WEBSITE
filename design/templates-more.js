@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — extra template library (100+)
+   Postly Design Studio — extra template library (100+)
    Every template is built from: a layout function + a colour palette + content.
    To add a template, add one line to CONTENT at the bottom of this file.
    ========================================================================== */
@@ -509,4 +509,6 @@
     out.push({ id: "x-" + id, name, cat, w: W, h: H, bg: p.bg, objects });
   });
   window.MDC_TEMPLATES = (window.MDC_TEMPLATES || []).concat(out);
+  // shared helpers for other template packs (templates-pro.js)
+  window.MDC_TPL_KIT = { P, g, alpha, T, fitSize, lineCount, pill, button, star, crescent, isDarkBg, SIZES };
 })();

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — editor engine (Fabric.js 5)
+   Postly Design Studio — editor engine (Fabric.js 5)
    Runs fully in the browser. No server needed.
    ========================================================================== */
 (function () {
@@ -74,7 +74,10 @@
     base.set({ fill: "rgba(148,163,184,.28)", stroke: "rgba(148,163,184,.9)", strokeWidth: Math.max(3, w / 160), strokeDashArray: [18, 12] });
     const icon = new fabric.Text("＋", { fontSize: Math.min(w, h) * 0.22, fill: "rgba(226,232,240,.95)", originX: "center", originY: "center", top: -Math.min(w, h) * 0.06, fontFamily: "Inter" });
     const label = new fabric.Text(spec.name || "Add photo", { fontSize: Math.max(18, Math.min(w, h) * 0.075), fill: "rgba(226,232,240,.95)", originX: "center", originY: "center", top: Math.min(w, h) * 0.12, fontFamily: "Inter", fontWeight: 600 });
-    const g = new fabric.Group([base, icon, label], { left: spec.l, top: spec.top, subTargetCheck: false });
+    // tiny frames (e.g. in a 728×90 banner) show only the "+" so the label never covers the design
+    const parts = Math.min(w, h) >= 150 ? [base, icon, label] : [base, icon];
+    if (Math.min(w, h) < 150) icon.set({ top: 0, fontSize: Math.min(w, h) * 0.45 });
+    const g = new fabric.Group(parts, { left: spec.l, top: spec.top, subTargetCheck: false });
     g.set({ mdcType: "frame", mdcFrame: { w, h, rx: spec.rx || 0, shape: spec.shape || "rect" }, name: spec.name || "Photo frame" });
     return g;
   }
@@ -195,7 +198,7 @@
   }
   function loadSnapshot(str, cb) {
     let data; try { data = typeof str === "string" ? JSON.parse(str) : str; } catch (e) { toast("Could not open this file."); return; }
-    if (!data || !data.json) { toast("This is not an MDC design file."); return; }
+    if (!data || !data.json) { toast("This is not a Postly design file."); return; }
     restoring = true;
     W = data.w; H = data.h; $("#size-label").textContent = `${W} × ${H}`;
     const fonts = (data.json.objects || []).filter(o => o.fontFamily).map(o => o.fontFamily);
@@ -749,7 +752,7 @@
     if (a === "new") { restoring = true; canvas.clear(); setBackground("#ffffff"); restoring = false; fit(); saveState(); toast("New blank design · Ctrl+Z to undo"); }
     if (a === "save") {
       const blob = new Blob([snapshot()], { type: "application/json" });
-      saveBlob(blob, `mdc-design-${W}x${H}.mdc`); toast("Project saved. Open it later with File → Open project.");
+      saveBlob(blob, `postly-design-${W}x${H}.postly`); toast("Project saved. Open it later with File → Open project.");
     }
     if (a === "open") $("#open-input").click();
   });
@@ -785,7 +788,7 @@
     const jpg = kind === "jpg";
     let out = el;
     if (jpg) { out = document.createElement("canvas"); out.width = el.width; out.height = el.height; const x = out.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0, 0, out.width, out.height); x.drawImage(el, 0, 0); }
-    out.toBlob(b => { saveBlob(b, `mdc-design-${W * mult}x${H * mult}.${jpg ? "jpg" : "png"}`); toast("Downloaded ✔ Made with MDC Design Studio"); }, jpg ? "image/jpeg" : "image/png", 0.92);
+    out.toBlob(b => { saveBlob(b, `postly-design-${W * mult}x${H * mult}.${jpg ? "jpg" : "png"}`); toast("Downloaded ✔ Made with Postly Design Studio"); }, jpg ? "image/jpeg" : "image/png", 0.92);
     if (frames.length) setTimeout(() => toast("Tip: empty photo frames were left out of the download."), 2800);
   }
 

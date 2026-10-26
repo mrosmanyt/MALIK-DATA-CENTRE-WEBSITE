@@ -130,7 +130,7 @@ function header(rel, active) {
       <a href="${rel}index.html#catalog-section">Store</a>
       <a href="${rel}tools/"${a("tools")}>All Tools</a>
       <a href="${rel}comparisons/"${a("compare")}>Compare</a>
-      <a href="${rel}design/">Design Studio <span class="pg-save" style="margin-left:2px">Free</span></a>
+      <a href="${rel}design/">Postly Studio <span class="pg-save" style="margin-left:2px">Free</span></a>
       <div class="pg-dd">
         <button type="button" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down" style="font-size:.65rem"></i></button>
         <div class="pg-dd-menu">
@@ -152,7 +152,7 @@ function header(rel, active) {
     <a href="${rel}index.html#catalog-section">Store &amp; Catalog</a>
     <a href="${rel}tools/">All Tool Guides</a>
     <a href="${rel}comparisons/">Compare Tools</a>
-    <a href="${rel}design/">Free Design Studio</a>
+    <a href="${rel}design/">Postly Design Studio (Free)</a>
     <div class="pg-mobile-label">Services</div>
     <a href="${rel}social-media-services/">Social Media Services</a>
     <a href="${rel}ai-automation-services/">AI Automation</a>
@@ -198,7 +198,7 @@ function footer(rel) {
           <li><a href="${rel}index.html#catalog-section">Catalog</a></li>
           <li><a href="${rel}tools/">All tool guides</a></li>
           <li><a href="${rel}comparisons/">Comparisons</a></li>
-          <li><a href="${rel}design/">Free Design Studio</a></li>
+          <li><a href="${rel}design/">Postly Design Studio (Free)</a></li>
           <li><a href="${rel}social-media-services/">Social media services</a></li>
           <li><a href="${rel}ai-automation-services/">AI automation</a></li>
           <li><a href="${rel}enterprise-ai-api-credits/">API credits</a></li>
@@ -882,8 +882,8 @@ function updateHomepage() {
                     <div class="pg-card-icon" style="width:64px;height:64px;font-size:1.7rem"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <div style="flex:1 1 320px">
                         <span class="pg-save">NEW · 100% FREE</span>
-                        <h3 style="font-size:1.5rem;margin:8px 0 6px">MDC Design Studio: make thumbnails &amp; posts in your browser</h3>
-                        <p>140+ ready templates for Eid, Ramadan, 14 August, weddings, sales, menus and YouTube. Free photos, icons, QR codes, brand kit, multi-page PDF, AI image maker, AI writer and background remover. No signup.</p>
+                        <h3 style="font-size:1.5rem;margin:8px 0 6px">Postly Design Studio: YouTube thumbnails &amp; ad creatives, free</h3>
+                        <p>Make YouTube thumbnails and ad creatives that get clicks: 200+ templates, face cut-out with outline, thumbnail text effects, video feed preview, Facebook, Instagram and Google ad sizes in one click, AI image maker and AI ad copy. No signup.</p>
                     </div>
                     <span class="btn btn-gradient"><i class="fa-solid fa-palette"></i> Start designing</span>
                 </a>
@@ -961,7 +961,7 @@ function buildLlms() {
     "", "## Comparisons", "",
     ...CONTENT.comparisons.map(c => `- [${c.short}](${SITE}/comparisons/${c.slug}/)`),
     "", "## Free tools", "",
-    `- [MDC Design Studio](${SITE}/design/): free browser design maker with 140+ templates (Eid, Ramadan, 14 August, weddings, sales, restaurant menus, YouTube thumbnails, Reels covers, business cards), free stock photos and icons, QR codes, brand kit, photo crop and shape masks, multi-page PDF export, resize to many sizes, AI text-to-image, AI writer and translation, AI background remover, magic eraser and AI product photos.`,
+    `- [Postly Design Studio](${SITE}/design/): free YouTube thumbnail maker and ad creative maker with 200+ templates (YouTube thumbnails, Facebook/Instagram/Google ads, Eid, Ramadan, 14 August, weddings, sales, restaurant menus, YouTube thumbnails, Reels covers, business cards), free stock photos and icons, QR codes, brand kit, photo crop and shape masks, multi-page PDF export, resize to many sizes, AI text-to-image, AI writer and translation, AI background remover, magic eraser and AI product photos.`,
     "", "## Services", "",
     ...Object.values(CONTENT.services).map(s => `- [${s.title}](${SITE}/${s.slug}/)`),
     "", "## Policies", "",

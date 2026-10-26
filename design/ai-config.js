@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — AI settings (the only file you need to edit)
+   Postly Design Studio — AI settings (the only file you need to edit)
 
    mode "direct": the browser talks to Pollinations.ai with a PUBLISHABLE key.
      1. Sign in at https://enter.pollinations.ai (free)

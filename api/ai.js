@@ -1,4 +1,4 @@
-// Vercel serverless function: AI proxy for MDC Design Studio.
+// Vercel serverless function: AI proxy for Postly Design Studio.
 // Keeps the secret API key on the server. Only used when design/ai-config.js has mode: "proxy".
 // Environment variables (Vercel → Settings → Environment Variables):
 //   POLLINATIONS_API_KEY = sk_...   (text + images through Pollinations)

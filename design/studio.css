@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MDC Design Studio — editor UI
+   Postly Design Studio — editor UI
    ========================================================================== */
 :root {
     --bg: #0b0b10; --bg2: #121219; --bg3: #191922; --line: #262632; --line2: #34344a;
@@ -270,3 +270,36 @@ textarea.ds-input { height: auto; padding: 8px 9px; resize: vertical; line-heigh
 #ai-img-out { grid-template-columns: 1fr; }
 #ai-img-out .res { grid-column: auto; }
 #ai-img-out .res button { aspect-ratio: auto; height: 32px; background: var(--bg2); overflow: visible; border: 1px solid var(--line2); }
+
+/* ---------- YT & Ads kit ---------- */
+.ds-panel h4 small { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--tx3); }
+.ds-fx-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.ds-fx-grid button { border-radius: 9px; border: 1px solid var(--line); background: #f4f4f5; padding: 6px 2px 4px; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.ds-fx-grid button:hover { outline: 2px solid var(--pri); }
+.ds-fx-grid span { font-size: 1.25rem; line-height: 1.2; padding: 0 4px; border-radius: 4px; }
+.ds-fx-grid small { font-size: .6rem; color: #52525b; }
+.ds-kit-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.ds-kit-list button { font-size: .72rem; font-weight: 800; padding: 7px 10px; min-width: 44px; display: grid; place-items: center; }
+.ds-kit-list button:hover { outline: 2px solid var(--pri); }
+#kit-safe.on { border-color: var(--pri); background: var(--pri-glow); }
+.ds-safe { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+.ds-safe > div { position: absolute; border: 2px dashed #ff3ea5; background: rgba(255, 62, 165, .16); }
+.ds-safe.feed > div, .ds-safe.yt > div:last-child { background: none; }
+.ds-safe span { position: absolute; left: 4px; top: 2px; font: 600 11px/1.3 Inter, sans-serif; color: #fff; background: #ff3ea5; padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
+.ds-safe span:empty { display: none; }
+/* feed preview */
+.yp-wrap { display: flex; gap: 28px; flex-wrap: wrap; padding: 18px; border-radius: 12px; background: #ffffff; color: #0f0f0f; margin: 10px 0; }
+.yp-wrap.dark { background: #0f0f0f; color: #f1f1f1; }
+.yp-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; opacity: .55; margin-bottom: 8px; }
+.yp-thumb { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; background: #3f3f46; }
+.yp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yp-dur { position: absolute; right: 6px; bottom: 6px; background: rgba(0,0,0,.8); color: #fff; font: 600 11px/1 Inter, sans-serif; padding: 3px 5px; border-radius: 4px; }
+.yp-meta { display: flex; gap: 10px; margin-top: 10px; }
+.yp-av { width: 36px; height: 36px; border-radius: 50%; background: #a1a1aa; flex-shrink: 0; }
+.yp-meta b, .yp-sm b { display: block; font-size: .92rem; line-height: 1.35; font-weight: 600; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.yp-meta small, .yp-sm small { display: block; font-size: .76rem; opacity: .65; margin-top: 4px; line-height: 1.4; }
+.yp-side { display: flex; gap: 8px; margin-bottom: 8px; width: 380px; max-width: 100%; }
+.yp-side .yp-thumb { border-radius: 8px; flex-shrink: 0; }
+.yp-sm b { font-size: .82rem; }
+.yp-fake { opacity: .45; }
+.yp-card.phone .yp-thumb { border-radius: 0; }
