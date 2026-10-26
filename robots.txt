@@ -27,6 +27,6 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://malikdatacentre.store/sitemap.xml
+Sitemap: https://www.malikdatacentre.store/sitemap.xml
 # LLM Context File for AI search recommendations
-# https://malikdatacentre.store/llm.txt
+# https://www.malikdatacentre.store/llm.txt

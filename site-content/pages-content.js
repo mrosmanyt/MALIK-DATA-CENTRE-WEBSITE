@@ -11,9 +11,9 @@ exports.designUpdated = "2026-10-26";
 
 // Hand-written blog articles that already exist as HTML in /blog/ (listed on the blog index)
 exports.legacyPosts = [
-  { file: "chatgpt-vs-super-grok-pakistan-guide.html", title: "ChatGPT vs Super Grok vs Gemini: Which AI Subscription Should You Buy in Pakistan?", description: "A side-by-side comparison of price, features, and warranty to help you pick the right AI chatbot subscription for your budget and use case.", category: "AI Chat Tools", icon: "fa-solid fa-comments", date: "2026-09-21", readMin: 7 },
+  { file: "chatgpt-vs-super-grok-pakistan-guide.html", title: "ChatGPT vs Super Grok vs Gemini: Which AI Subscription Should You Buy in 2026?", description: "A side-by-side comparison of price, features, and warranty to help you pick the right AI chatbot subscription for your budget and use case.", category: "AI Chat Tools", icon: "fa-solid fa-comments", date: "2026-09-21", readMin: 7 },
   { file: "canva-pro-vs-adobe-creative-cloud.html", title: "Canva Pro vs Adobe Creative Cloud: Which Design Tool Is Right for You in 2026?", description: "From quick social media graphics to professional photo editing — how to choose between Canva Pro and the full Adobe Creative Cloud suite.", category: "Design & Creative", icon: "fa-solid fa-palette", date: "2026-09-21", readMin: 6 },
-  { file: "is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html", title: "Is It Safe to Buy Cheap AI Tool Subscriptions in Pakistan? A Complete Buyer's Guide", description: "How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay.", category: "Buying Guide", icon: "fa-solid fa-shield-halved", date: "2026-09-21", readMin: 8 },
+  { file: "is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html", title: "Is It Safe to Buy Cheap AI Tool Subscriptions? A Complete Buyer's Guide", description: "How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay.", category: "Buying Guide", icon: "fa-solid fa-shield-halved", date: "2026-09-21", readMin: 8 },
   { file: "capcut-pro-review.html", title: "CapCut Pro Review 2026: Features, Pricing & Is It Worth It?", description: "An honest look at CapCut Pro's editing tools, export quality, and pricing plans — and who should (and shouldn't) upgrade from the free version.", category: "AI Video & Audio", icon: "fa-solid fa-video", date: "2026-09-21", readMin: 6 }
 ];
 
@@ -38,12 +38,12 @@ exports.comparisons = [
       ["Trying Ultra video features on a budget", "google-ai-ultra"]
     ],
     faqs: [
-      ["Kya main Pro se Ultra par baad mein upgrade kar sakta hoon?", "Yes. Start with Gemini Pro and message us on WhatsApp when you need Ultra. We will suggest the right Ultra option for your usage."]
+      ["Can I upgrade from Pro to Ultra later?", "Yes. Start with Gemini Pro and message us on WhatsApp when you need Ultra. We will suggest the right Ultra option for your usage."]
     ]
   },
   {
     slug: "cursor-vs-replit-vs-lovable",
-    title: "Cursor vs Replit vs Lovable: Best AI Coding Tool in Pakistan",
+    title: "Cursor vs Replit vs Lovable: Which AI Coding Tool Should You Buy?",
     short: "Cursor vs Replit vs Lovable",
     lead: "All three let AI write code for you, but they suit very different people. Here is how to choose without wasting a month's subscription.",
     cols: ["cursor-pro", "replit-core", "lovable-pro"],
@@ -60,7 +60,7 @@ exports.comparisons = [
       ["Launching an MVP or client website fast", "lovable-pro"]
     ],
     faqs: [
-      ["Kya main do tools saath use kar sakta hoon?", "Many builders design the first version in Lovable, then continue in Cursor once the project grows. Start with one and add the other when you need it."]
+      ["Can I use two of these tools together?", "Many builders design the first version in Lovable, then continue in Cursor once the project grows. Start with one and add the other when you need it."]
     ]
   },
   {
@@ -84,7 +84,7 @@ exports.comparisons = [
   },
   {
     slug: "nordvpn-vs-surfshark",
-    title: "NordVPN vs Surfshark: Which VPN Should You Buy in Pakistan?",
+    title: "NordVPN vs Surfshark: Which VPN Should You Buy in 2026?",
     short: "NordVPN vs Surfshark",
     lead: "Both are well-known premium VPNs. The choice usually comes down to budget and whether you want the account on your own email.",
     cols: ["nordvpn", "surfshark-vpn"],
@@ -104,45 +104,46 @@ exports.comparisons = [
 
 // Existing blog articles that also act as comparisons (linked from the hub)
 exports.blogComparisons = [
-  ["ChatGPT vs SuperGrok: Pakistan buying guide", "blog/chatgpt-vs-super-grok-pakistan-guide.html"],
+  ["ChatGPT vs SuperGrok vs Gemini: buying guide", "blog/chatgpt-vs-super-grok-pakistan-guide.html"],
   ["Canva Pro vs Adobe Creative Cloud", "blog/canva-pro-vs-adobe-creative-cloud.html"]
 ];
 
 exports.faqs = [
   { cat: "Ordering & delivery", items: [
-    ["Order kaise karein?", "Choose a plan in the catalog or on any tool page and tap Buy Now. Enter your name and WhatsApp number, then send the payment screenshot on WhatsApp. We confirm and activate your plan."],
-    ["Activation kitni der mein hoti hai?", "Most activations finish 5 to 30 minutes after we confirm your payment. Email activations and family invitations are sent as soon as we receive your email address on WhatsApp."],
-    ["Setup guide milti hai?", "Yes. Every delivery comes with step-by-step setup instructions (text, screenshots or video) on WhatsApp."],
-    ["Kya main ek se zyada tools ek saath order kar sakta hoon?", "Yes. Add several tools to the cart on the homepage and check out once. The full order is sent to us together."]
+    ["How do I order?", "Choose a plan in the catalog or on any tool page and tap Buy Now. Enter your name and WhatsApp number, then send the payment screenshot on WhatsApp. We confirm and activate your plan."],
+    ["How long does activation take?", "Most activations finish 5 to 30 minutes after we confirm your payment. Email activations and family invitations are sent as soon as we receive your email address on WhatsApp."],
+    ["Do I get a setup guide?", "Yes. Every delivery comes with step-by-step setup instructions (text, screenshots or video) on WhatsApp."],
+    ["Can I order several tools at once?", "Yes. Add several tools to the cart on the homepage and check out once. The full order is sent to us together."]
   ]},
   { cat: "Payments", items: [
-    ["Payment kin tareeqon se hoti hai?", "In Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer. Outside Pakistan: USDT via Binance (BEP20 or TRC20)."],
-    ["International customers kaise pay karein?", "Tell our team on WhatsApp that you want to pay in USDT. We share the PKR to USDT amount and the official wallet address. Always choose the correct network, because coins sent on the wrong network cannot be recovered."],
-    ["Coupon code kaise lagta hai?", "Enter the code in the coupon box above the catalog. The discount is applied to your cart total and included in your WhatsApp order message."]
+    ["Do you sell outside Pakistan?", "Yes. We serve customers worldwide, including the UK, USA, Canada, UAE, Saudi Arabia, Qatar, Europe, India and Bangladesh. Every plan is delivered online, on your email or as login details on WhatsApp, so your location does not matter."],
+    ["Which payment methods do you accept?", "Worldwide: USDT via Binance (BEP20 or TRC20). In Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer."],
+    ["How can international customers pay?", "Tell our team on WhatsApp that you want to pay in USDT. We confirm the exact USDT amount and share the official wallet address. Always choose the correct network, because coins sent on the wrong network cannot be recovered."],
+    ["How do I apply a coupon code?", "Enter the code in the coupon box above the catalog. The discount is applied to your cart total and included in your WhatsApp order message."]
   ]},
   { cat: "Privacy & accounts", items: [
-    ["Private aur shared account mein kya farq hai?", "Private (on client email) plans are activated on your own email, so your chats, files and history stay with you. Shared plans are lower-cost logins used by more than one buyer. Every plan is labelled so you can choose before paying."],
-    ["Kya aap mera email password maangte hain?", "No. We never need your email password. For email activations we only need your email address, and invitations arrive in your inbox."],
-    ["Shared account par kya dhyan rakhna chahiye?", "Do not change the password or account details, and do not store private or confidential work on a shared login. Back up important files to your own device."]
+    ["What is the difference between private and shared accounts?", "Private (on client email) plans are activated on your own email, so your chats, files and history stay with you. Shared plans are lower-cost logins used by more than one buyer. Every plan is labelled so you can choose before paying."],
+    ["Do you ask for my email password?", "No. We never need your email password. For email activations we only need your email address, and invitations arrive in your inbox."],
+    ["What should I keep in mind on a shared account?", "Do not change the password or account details, and do not store private or confidential work on a shared login. Back up important files to your own device."]
   ]},
   { cat: "Warranty & refunds", items: [
-    ["Warranty kaise claim karein?", "Send a screenshot of the error to our WhatsApp support during the warranty period. We fix or replace the account, usually within 10 to 30 minutes."],
-    ["Refund kab milta hai?", "If we cannot deliver your plan, you get a full refund. If an active plan develops an issue during warranty that we cannot fix or replace, we refund the remaining value. See the Refund Policy for details."],
-    ["Warranty kitne din ki hoti hai?", "Each plan shows its warranty period. Most plans are covered for their full duration."]
+    ["How do I claim warranty?", "Send a screenshot of the error to our WhatsApp support during the warranty period. We fix or replace the account, usually within 10 to 30 minutes."],
+    ["When do I get a refund?", "If we cannot deliver your plan, you get a full refund. If an active plan develops an issue during warranty that we cannot fix or replace, we refund the remaining value. See the Refund Policy for details."],
+    ["How long is the warranty?", "Each plan shows its warranty period. Most plans are covered for their full duration."]
   ]}
 ];
 
 exports.services = {
   social: {
     slug: "social-media-services",
-    title: "Social Media Services in Pakistan",
+    title: "Social Media Services",
     eyebrow: "Growth & management",
     lead: "Content, channel setup, page management and ad campaigns for YouTube, Facebook, Instagram, TikTok and WhatsApp. Tell us your platform and goal, and we will send a clear quote on WhatsApp.",
     items: [
       ["fa-brands fa-youtube", "YouTube channel setup & SEO", "Channel branding, titles, descriptions, tags and playlists set up so your videos are easier to find."],
       ["fa-solid fa-image", "Thumbnails & post design", "Eye-catching thumbnails, reels covers and post creatives made with Canva Pro and Adobe."],
       ["fa-brands fa-facebook", "Facebook & Instagram page management", "Regular posting, captions and inbox handling for business pages."],
-      ["fa-solid fa-bullhorn", "Meta ads campaign setup", "Targeting, creatives and budget setup for Facebook and Instagram ads that reach Pakistani buyers."],
+      ["fa-solid fa-bullhorn", "Meta ads campaign setup", "Targeting, creatives and budget setup for Facebook and Instagram ads that reach buyers in your target countries."],
       ["fa-brands fa-tiktok", "TikTok & Reels content", "Short-form video editing with CapCut Pro and AI tools for consistent posting."],
       ["fa-brands fa-whatsapp", "WhatsApp Channel & Business setup", "WhatsApp Business catalog, quick replies and channel setup for stores."]
     ],
@@ -174,11 +175,11 @@ exports.services = {
     slug: "enterprise-ai-api-credits",
     title: "Enterprise AI API Credits",
     eyebrow: "For developers & businesses",
-    lead: "Need API access for Claude, OpenAI, Gemini or DeepSeek in your product, chatbot or automation? Tell us your monthly volume and we will send a custom quote in PKR or USDT.",
+    lead: "Need API access for Claude, OpenAI, Gemini or DeepSeek in your product, chatbot or automation? Tell us your monthly volume and we will send a custom quote in USD, USDT or PKR.",
     items: [
       ["fa-solid fa-plug", "Claude API token packs", "Ready token packs for apps and bots. See our 10M token pack."],
       ["fa-solid fa-microchip", "OpenAI, Gemini & DeepSeek", "Volume credits for other major model providers on request."],
-      ["fa-solid fa-file-invoice", "Local payment", "Pay in PKR via bank or wallets, or USDT for international teams."],
+      ["fa-solid fa-file-invoice", "Flexible payment", "USDT for teams anywhere in the world, or PKR via bank and wallets in Pakistan."],
       ["fa-solid fa-headset", "Integration help", "Setup help for n8n, Python, Node and popular SDKs."]
     ],
     formFields: ["provider", "volume", "usecase"]

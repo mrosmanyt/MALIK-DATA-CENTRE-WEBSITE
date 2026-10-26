@@ -1,80 +1,81 @@
 # MALIK DATA CENTRE
 
-> Pakistan-based store for AI tools and software subscriptions with PKR pricing, local payments (EasyPaisa, JazzCash, bank, USDT), WhatsApp activation in 5–30 minutes and a written warranty.
+> Online store for AI tools and software subscriptions, serving customers worldwide. Prices are set in PKR with approximate USD shown; payment by USDT (Binance) from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. WhatsApp activation in 5–30 minutes and a written warranty.
 
-Website: https://malikdatacentre.store/
+Website: https://www.malikdatacentre.store/
 WhatsApp: +92 344 5739206, +92 348 9057646
 Email: support@malikdatacentre.store
 Prices last changed: 2026-10-25
 
-## Tools and starting prices (PKR)
+## Tools and starting prices (PKR, approx. USD in brackets)
 
-- [ChatGPT Go](https://malikdatacentre.store/tools/chatgpt-go/): from Rs 2,200 — 6 Months Plan Rs 2,200 (Shared Premium Account)
-- [Gemini Pro (Google AI Pro)](https://malikdatacentre.store/tools/gemini-pro/): from Rs 700 — 18 Months Subscription Rs 700 (Full Private Code); 18 Months Plan Rs 2,200 (Activated on Client Email)
-- [Google AI Ultra](https://malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 — 1 Month Subscription Rs 2,500 (Shared Premium Account); 1 Month Plan Rs 8,500 (Private Family Invitation); 1 Month Subscription Rs 26,000 (Dedicated Slot)
-- [SuperGrok + X Premium+](https://malikdatacentre.store/tools/super-grok/): from Rs 1,500 — 10 Days Plan Rs 1,500 (Activated on Client Email); 6 Months Account Rs 6,300 (Activated on Client Email); 12 Months Account Rs 9,500 (Activated on Client Email)
-- [CapCut Pro](https://malikdatacentre.store/tools/capcut-pro/): from Rs 800 — 1 Month Rs 800 (2 Devices Login); 3 Months Rs 2,800 (2 Devices Login); 6 Months Rs 4,800 (2 Devices Login); Monthly Access Rs 1,250 (Private Activation)
-- [Canva Pro](https://malikdatacentre.store/tools/canva-pro/): from Rs 400 — 12 Months Plan Rs 400 (Activated on Client Email); 12 Months Plan Rs 4,500 (Admin Panel Access)
-- [Adobe Creative Cloud](https://malikdatacentre.store/tools/adobe-creative-cloud/): from Rs 3,900 — 3 Months Plan Rs 4,000 (Creative Cloud Suite); 4 Months Plan Rs 3,900 (Activated on Client Email); 6 Months Plan Rs 7,000 (Creative Cloud Suite); 12 Months Plan Rs 12,000 (Creative Cloud Suite)
-- [Cursor Pro](https://malikdatacentre.store/tools/cursor-pro/): from Rs 4,200 — 1 Month Plan Rs 4,200 (Private Account); 12 Months Plan Rs 21,000 (Private Account)
-- [Lovable Pro](https://malikdatacentre.store/tools/lovable-pro/): from Rs 3,500 — 200 Credits Plan Rs 3,500 (Activated on Client Email); 400 Credits Plan Rs 5,000 (Activated on Client Email); 600 Credits Plan Rs 6,000 (Activated on Client Email)
-- [Replit Core](https://malikdatacentre.store/tools/replit-core/): from Rs 9,500 — 12 Months Plan Rs 10,700 (Private Account); $100 Credit Plan Rs 9,500 (Ready-Made Account)
-- [n8n Starter Cloud](https://malikdatacentre.store/tools/n8n-starter/): from Rs 6,500 — 12 Months Plan Rs 6,500 (Private Account)
-- [Gumloop Pro](https://malikdatacentre.store/tools/gumloop-pro/): from Rs 4,550 — 12 Months Plan Rs 4,550 (Activated on Client Email)
-- [Warp Build CI/CD](https://malikdatacentre.store/tools/warp-build/): from Rs 4,800 — 12 Months Plan Rs 4,800 (Premium Plan)
-- [Wispr Flow Pro](https://malikdatacentre.store/tools/wispr-flow/): from Rs 7,500 — 12 Months Plan Rs 7,500 (Writing Assistant)
-- [Manus Pro](https://malikdatacentre.store/tools/manus-ai/): from Rs 13,000 — 12 Months Plan Rs 13,000 (Private Account)
-- [Gamma Pro](https://malikdatacentre.store/tools/gamma-pro/): from Rs 9,500 — 12 Months Plan Rs 9,500 (Private Account)
-- [Notion Business](https://malikdatacentre.store/tools/notion-business/): from Rs 4,600 — 12 Months Plan Rs 4,600 (Workspace Activation)
-- [Grammarly Pro](https://malikdatacentre.store/tools/grammarly-pro/): from Rs 3,500 — 12 Months Plan Rs 3,500 (Activated on Client Email)
-- [ElevenLabs Creator](https://malikdatacentre.store/tools/elevenlabs-creator/): from Rs 12,000 — 12 Months Plan Rs 12,000 (Private Account)
-- [HeyGen Creator](https://malikdatacentre.store/tools/heygen/): from Rs 5,800 — 200 Credits Plan Rs 5,800 (Private Account)
-- [Higgsfield Plus](https://malikdatacentre.store/tools/higgsfield/): from Rs 7,500 — 1200 Credits Plan Rs 7,500 (Creator Account)
-- [Kling AI](https://malikdatacentre.store/tools/kling-ai/): from Rs 1,300 — 660 Credits Monthly Rs 1,300 (Premium Account)
-- [Cinem AI Video](https://malikdatacentre.store/tools/cinem-ai/): from Rs 7,000 — Monthly Access Rs 7,000 (Creator Account Portal)
-- [Picsart Pro](https://malikdatacentre.store/tools/picsart-pro/): from Rs 3,500 — 11 Months Plan Rs 3,500 (Activated on Client Email)
-- [YouTube Premium](https://malikdatacentre.store/tools/youtube-premium/): from Rs 500 — Monthly Access Rs 500 (Activated on Client Email); 3 Months Plan Rs 1,200 (Activated on Client Email); 12 Months Plan Rs 6,200 (Activated on Client Email)
-- [Amazon Prime Video](https://malikdatacentre.store/tools/amazon-prime-video/): from Rs 1,500 — 6 Months Plan Rs 1,500 (Private Profile Login)
-- [Xbox Gift Codes](https://malikdatacentre.store/tools/xbox-gift/): from Rs 600 — Random Voucher Rs 600 (Digital Code Delivery); 1 Month Plan Rs 1,800 (Digital Code Delivery)
-- [LinkedIn Premium](https://malikdatacentre.store/tools/linkedin-premium/): from Rs 1,800 — 3 Months Plan Rs 1,800 (Professional Premium); 2 Months Plan Rs 1,800 (Core Account Upgrade)
-- [Coursera Plus](https://malikdatacentre.store/tools/coursera-plus/): from Rs 3,200 — 12 Months Plan Rs 3,200 (Private Activation)
-- [Zoom Pro](https://malikdatacentre.store/tools/zoom-pro/): from Rs 1,500 — Monthly Access Rs 1,500 (Premium Account Login)
-- [Microsoft 365](https://malikdatacentre.store/tools/microsoft-office-365/): from Rs 29,900 — 12 Months Plan Rs 29,900 (Activated on Client Email)
-- [Windows 10/11 Pro Key](https://malikdatacentre.store/tools/windows-pro-key/): from Rs 2,000 — Lifetime License Rs 2,000 (Instant Retail Key)
-- [NordVPN](https://malikdatacentre.store/tools/nordvpn/): from Rs 2,500 — Monthly Access Rs 2,500 (Activated on Client Email)
-- [Surfshark VPN](https://malikdatacentre.store/tools/surfshark-vpn/): from Rs 400 — Monthly Access Rs 400 (Shared Premium Account)
-- [HMA VPN](https://malikdatacentre.store/tools/hma-vpn/): from Rs 5,500 — Yearly License Key Rs 5,500 (License Key Delivery)
-- [Claude API Tokens](https://malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 — API Key Pack Rs 1,200 (API Key Access)
+- [ChatGPT Go](https://www.malikdatacentre.store/tools/chatgpt-go/): from Rs 2,200 ($7.92) — 6 Months Plan Rs 2,200 / $7.92 (Shared Premium Account)
+- [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 700 ($2.52) — 18 Months Subscription Rs 700 / $2.52 (Full Private Code); 18 Months Plan Rs 2,200 / $7.92 (Activated on Client Email)
+- [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 8,500 / $30.60 (Private Family Invitation); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
+- [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 1,500 ($5.40) — 10 Days Plan Rs 1,500 / $5.40 (Activated on Client Email); 6 Months Account Rs 6,300 / $22.68 (Activated on Client Email); 12 Months Account Rs 9,500 / $34.20 (Activated on Client Email)
+- [CapCut Pro](https://www.malikdatacentre.store/tools/capcut-pro/): from Rs 800 ($2.88) — 1 Month Rs 800 / $2.88 (2 Devices Login); 3 Months Rs 2,800 / $10.08 (2 Devices Login); 6 Months Rs 4,800 / $17.28 (2 Devices Login); Monthly Access Rs 1,250 / $4.50 (Private Activation)
+- [Canva Pro](https://www.malikdatacentre.store/tools/canva-pro/): from Rs 400 ($1.44) — 12 Months Plan Rs 400 / $1.44 (Activated on Client Email); 12 Months Plan Rs 4,500 / $16.20 (Admin Panel Access)
+- [Adobe Creative Cloud](https://www.malikdatacentre.store/tools/adobe-creative-cloud/): from Rs 3,900 ($14.04) — 3 Months Plan Rs 4,000 / $14.40 (Creative Cloud Suite); 4 Months Plan Rs 3,900 / $14.04 (Activated on Client Email); 6 Months Plan Rs 7,000 / $25.20 (Creative Cloud Suite); 12 Months Plan Rs 12,000 / $43.20 (Creative Cloud Suite)
+- [Cursor Pro](https://www.malikdatacentre.store/tools/cursor-pro/): from Rs 4,200 ($15.12) — 1 Month Plan Rs 4,200 / $15.12 (Private Account); 12 Months Plan Rs 21,000 / $75.60 (Private Account)
+- [Lovable Pro](https://www.malikdatacentre.store/tools/lovable-pro/): from Rs 3,500 ($12.60) — 200 Credits Plan Rs 3,500 / $12.60 (Activated on Client Email); 400 Credits Plan Rs 5,000 / $18 (Activated on Client Email); 600 Credits Plan Rs 6,000 / $21.60 (Activated on Client Email)
+- [Replit Core](https://www.malikdatacentre.store/tools/replit-core/): from Rs 9,500 ($34.20) — 12 Months Plan Rs 10,700 / $38.52 (Private Account); $100 Credit Plan Rs 9,500 / $34.20 (Ready-Made Account)
+- [n8n Starter Cloud](https://www.malikdatacentre.store/tools/n8n-starter/): from Rs 6,500 ($23.40) — 12 Months Plan Rs 6,500 / $23.40 (Private Account)
+- [Gumloop Pro](https://www.malikdatacentre.store/tools/gumloop-pro/): from Rs 4,550 ($16.38) — 12 Months Plan Rs 4,550 / $16.38 (Activated on Client Email)
+- [Warp Build CI/CD](https://www.malikdatacentre.store/tools/warp-build/): from Rs 4,800 ($17.28) — 12 Months Plan Rs 4,800 / $17.28 (Premium Plan)
+- [Wispr Flow Pro](https://www.malikdatacentre.store/tools/wispr-flow/): from Rs 7,500 ($27) — 12 Months Plan Rs 7,500 / $27 (Writing Assistant)
+- [Manus Pro](https://www.malikdatacentre.store/tools/manus-ai/): from Rs 13,000 ($46.80) — 12 Months Plan Rs 13,000 / $46.80 (Private Account)
+- [Gamma Pro](https://www.malikdatacentre.store/tools/gamma-pro/): from Rs 9,500 ($34.20) — 12 Months Plan Rs 9,500 / $34.20 (Private Account)
+- [Notion Business](https://www.malikdatacentre.store/tools/notion-business/): from Rs 4,600 ($16.56) — 12 Months Plan Rs 4,600 / $16.56 (Workspace Activation)
+- [Grammarly Pro](https://www.malikdatacentre.store/tools/grammarly-pro/): from Rs 3,500 ($12.60) — 12 Months Plan Rs 3,500 / $12.60 (Activated on Client Email)
+- [ElevenLabs Creator](https://www.malikdatacentre.store/tools/elevenlabs-creator/): from Rs 12,000 ($43.20) — 12 Months Plan Rs 12,000 / $43.20 (Private Account)
+- [HeyGen Creator](https://www.malikdatacentre.store/tools/heygen/): from Rs 5,800 ($20.88) — 200 Credits Plan Rs 5,800 / $20.88 (Private Account)
+- [Higgsfield Plus](https://www.malikdatacentre.store/tools/higgsfield/): from Rs 7,500 ($27) — 1200 Credits Plan Rs 7,500 / $27 (Creator Account)
+- [Kling AI](https://www.malikdatacentre.store/tools/kling-ai/): from Rs 1,300 ($4.68) — 660 Credits Monthly Rs 1,300 / $4.68 (Premium Account)
+- [Cinem AI Video](https://www.malikdatacentre.store/tools/cinem-ai/): from Rs 7,000 ($25.20) — Monthly Access Rs 7,000 / $25.20 (Creator Account Portal)
+- [Picsart Pro](https://www.malikdatacentre.store/tools/picsart-pro/): from Rs 3,500 ($12.60) — 11 Months Plan Rs 3,500 / $12.60 (Activated on Client Email)
+- [YouTube Premium](https://www.malikdatacentre.store/tools/youtube-premium/): from Rs 500 ($1.80) — Monthly Access Rs 500 / $1.80 (Activated on Client Email); 3 Months Plan Rs 1,200 / $4.32 (Activated on Client Email); 12 Months Plan Rs 6,200 / $22.32 (Activated on Client Email)
+- [Amazon Prime Video](https://www.malikdatacentre.store/tools/amazon-prime-video/): from Rs 1,500 ($5.40) — 6 Months Plan Rs 1,500 / $5.40 (Private Profile Login)
+- [Xbox Gift Codes](https://www.malikdatacentre.store/tools/xbox-gift/): from Rs 600 ($2.16) — Random Voucher Rs 600 / $2.16 (Digital Code Delivery); 1 Month Plan Rs 1,800 / $6.48 (Digital Code Delivery)
+- [LinkedIn Premium](https://www.malikdatacentre.store/tools/linkedin-premium/): from Rs 1,800 ($6.48) — 3 Months Plan Rs 1,800 / $6.48 (Professional Premium); 2 Months Plan Rs 1,800 / $6.48 (Core Account Upgrade)
+- [Coursera Plus](https://www.malikdatacentre.store/tools/coursera-plus/): from Rs 3,200 ($11.52) — 12 Months Plan Rs 3,200 / $11.52 (Private Activation)
+- [Zoom Pro](https://www.malikdatacentre.store/tools/zoom-pro/): from Rs 1,500 ($5.40) — Monthly Access Rs 1,500 / $5.40 (Premium Account Login)
+- [Microsoft 365](https://www.malikdatacentre.store/tools/microsoft-office-365/): from Rs 29,900 ($107.64) — 12 Months Plan Rs 29,900 / $107.64 (Activated on Client Email)
+- [Windows 10/11 Pro Key](https://www.malikdatacentre.store/tools/windows-pro-key/): from Rs 2,000 ($7.20) — Lifetime License Rs 2,000 / $7.20 (Instant Retail Key)
+- [NordVPN](https://www.malikdatacentre.store/tools/nordvpn/): from Rs 2,500 ($9) — Monthly Access Rs 2,500 / $9 (Activated on Client Email)
+- [Surfshark VPN](https://www.malikdatacentre.store/tools/surfshark-vpn/): from Rs 400 ($1.44) — Monthly Access Rs 400 / $1.44 (Shared Premium Account)
+- [HMA VPN](https://www.malikdatacentre.store/tools/hma-vpn/): from Rs 5,500 ($19.80) — Yearly License Key Rs 5,500 / $19.80 (License Key Delivery)
+- [Claude API Tokens](https://www.malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 ($4.32) — API Key Pack Rs 1,200 / $4.32 (API Key Access)
 
 ## Latest guides
 
-- [How to Buy AI Tools in Pakistan Without a Credit Card (2026)](https://malikdatacentre.store/blog/buy-ai-tools-pakistan-without-credit-card.html): Pay for ChatGPT, Gemini, Canva, CapCut and other AI tools in Pakistan with EasyPaisa, JazzCash or bank transfer, and know what to check before you pay.
-- [ChatGPT vs Super Grok vs Gemini: Which AI Subscription Should You Buy in Pakistan?](https://malikdatacentre.store/blog/chatgpt-vs-super-grok-pakistan-guide.html): A side-by-side comparison of price, features, and warranty to help you pick the right AI chatbot subscription for your budget and use case.
-- [Canva Pro vs Adobe Creative Cloud: Which Design Tool Is Right for You in 2026?](https://malikdatacentre.store/blog/canva-pro-vs-adobe-creative-cloud.html): From quick social media graphics to professional photo editing — how to choose between Canva Pro and the full Adobe Creative Cloud suite.
-- [Is It Safe to Buy Cheap AI Tool Subscriptions in Pakistan? A Complete Buyer's Guide](https://malikdatacentre.store/blog/is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html): How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay.
-- [CapCut Pro Review 2026: Features, Pricing & Is It Worth It?](https://malikdatacentre.store/blog/capcut-pro-review.html): An honest look at CapCut Pro's editing tools, export quality, and pricing plans — and who should (and shouldn't) upgrade from the free version.
+- [How to Buy ChatGPT and AI Tools Without a Credit Card (2026)](https://www.malikdatacentre.store/blog/buy-ai-tools-without-credit-card-worldwide.html): A worldwide guide to paying for ChatGPT, Gemini, Canva, CapCut and other AI tools without a credit card, using USDT or local payment, and what to check first.
+- [How to Buy AI Tools in Pakistan Without a Credit Card (2026)](https://www.malikdatacentre.store/blog/buy-ai-tools-pakistan-without-credit-card.html): Pay for ChatGPT, Gemini, Canva, CapCut and other AI tools in Pakistan with EasyPaisa, JazzCash or bank transfer, and know what to check before you pay.
+- [ChatGPT vs Super Grok vs Gemini: Which AI Subscription Should You Buy in 2026?](https://www.malikdatacentre.store/blog/chatgpt-vs-super-grok-pakistan-guide.html): A side-by-side comparison of price, features, and warranty to help you pick the right AI chatbot subscription for your budget and use case.
+- [Canva Pro vs Adobe Creative Cloud: Which Design Tool Is Right for You in 2026?](https://www.malikdatacentre.store/blog/canva-pro-vs-adobe-creative-cloud.html): From quick social media graphics to professional photo editing — how to choose between Canva Pro and the full Adobe Creative Cloud suite.
+- [Is It Safe to Buy Cheap AI Tool Subscriptions? A Complete Buyer's Guide](https://www.malikdatacentre.store/blog/is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html): How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay.
+- [CapCut Pro Review 2026: Features, Pricing & Is It Worth It?](https://www.malikdatacentre.store/blog/capcut-pro-review.html): An honest look at CapCut Pro's editing tools, export quality, and pricing plans — and who should (and shouldn't) upgrade from the free version.
 
 ## Comparisons
 
-- [Gemini Pro vs Google AI Ultra](https://malikdatacentre.store/comparisons/gemini-pro-vs-google-ai-ultra/)
-- [Cursor vs Replit vs Lovable](https://malikdatacentre.store/comparisons/cursor-vs-replit-vs-lovable/)
-- [ElevenLabs vs HeyGen](https://malikdatacentre.store/comparisons/elevenlabs-vs-heygen/)
-- [NordVPN vs Surfshark](https://malikdatacentre.store/comparisons/nordvpn-vs-surfshark/)
+- [Gemini Pro vs Google AI Ultra](https://www.malikdatacentre.store/comparisons/gemini-pro-vs-google-ai-ultra/)
+- [Cursor vs Replit vs Lovable](https://www.malikdatacentre.store/comparisons/cursor-vs-replit-vs-lovable/)
+- [ElevenLabs vs HeyGen](https://www.malikdatacentre.store/comparisons/elevenlabs-vs-heygen/)
+- [NordVPN vs Surfshark](https://www.malikdatacentre.store/comparisons/nordvpn-vs-surfshark/)
 
 ## Free tools
 
-- [MDC Design Studio](https://malikdatacentre.store/design/): free browser design maker for YouTube thumbnails, Instagram posts, WhatsApp status, sale posts, Eid/Jumma designs and flyers, with Urdu fonts and an AI background remover.
+- [MDC Design Studio](https://www.malikdatacentre.store/design/): free browser design maker for YouTube thumbnails, Instagram posts, WhatsApp status, sale posts, Eid/Jumma designs and flyers, with Urdu fonts and an AI background remover.
 
 ## Services
 
-- [Social Media Services in Pakistan](https://malikdatacentre.store/social-media-services/)
-- [AI Automation Services](https://malikdatacentre.store/ai-automation-services/)
-- [Enterprise AI API Credits](https://malikdatacentre.store/enterprise-ai-api-credits/)
+- [Social Media Services](https://www.malikdatacentre.store/social-media-services/)
+- [AI Automation Services](https://www.malikdatacentre.store/ai-automation-services/)
+- [Enterprise AI API Credits](https://www.malikdatacentre.store/enterprise-ai-api-credits/)
 
 ## Policies
 
-- [Refund & warranty](https://malikdatacentre.store/refund-policy/)
-- [Delivery](https://malikdatacentre.store/delivery-policy/)
-- [FAQ](https://malikdatacentre.store/frequently-asked-questions/)
-- [About](https://malikdatacentre.store/about-us/)
-- [Contact](https://malikdatacentre.store/contact-us/)
+- [Refund & warranty](https://www.malikdatacentre.store/refund-policy/)
+- [Delivery](https://www.malikdatacentre.store/delivery-policy/)
+- [FAQ](https://www.malikdatacentre.store/frequently-asked-questions/)
+- [About](https://www.malikdatacentre.store/about-us/)
+- [Contact](https://www.malikdatacentre.store/contact-us/)

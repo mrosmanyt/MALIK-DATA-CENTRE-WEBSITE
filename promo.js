@@ -171,12 +171,12 @@
             if (!code) { setMsg("Pehle coupon code likhein.", false); return; }
             if (COUPONS[code]) {
                 activeCoupon = { code: code, pct: COUPONS[code] };
-                setMsg("✓ Coupon applied! " + COUPONS[code] + "% off — har order par apply hoga.", true);
+                setMsg("✓ Coupon applied! " + COUPONS[code] + "% off will be applied to your order.", true);
                 showBadge();
             } else {
                 activeCoupon = null;
                 if (badge) badge.classList.remove("show");
-                setMsg("✗ Yeh coupon valid nahi hai. MALIK10 ya WAIT5 try karein.", false);
+                setMsg("✗ This coupon is not valid. Try MALIK10 or WAIT5.", false);
             }
         }
 

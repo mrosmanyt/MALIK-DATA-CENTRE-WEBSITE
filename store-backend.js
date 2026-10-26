@@ -46,7 +46,7 @@
                     '<div class="mdc-co-head"><i class="fa-solid fa-bag-shopping"></i> Complete Your Order</div>' +
                     '<div class="mdc-co-summary" id="mdc-co-summary"></div>' +
                     '<form id="mdc-co-form">' +
-                        '<label>Aapka Naam *</label>' +
+                        '<label>Your name *</label>' +
                         '<input type="text" id="mdc-co-name" placeholder="Full name" required>' +
                         '<label>WhatsApp Number *</label>' +
                         '<input type="tel" id="mdc-co-phone" placeholder="03XX XXXXXXX" required>' +
@@ -54,16 +54,16 @@
                         '<input type="text" id="mdc-co-city" placeholder="e.g. Lahore">' +
                         '<div class="mdc-co-err" id="mdc-co-err"></div>' +
                         '<button type="submit" class="mdc-co-submit" id="mdc-co-submit"><i class="fa-solid fa-circle-check"></i> Place Order</button>' +
-                        '<div class="mdc-co-note"><i class="fa-solid fa-shield-halved"></i> Order save hone ke baad WhatsApp par payment details aur proof bhejein. Hum 5-30 min mein approve kar dete hain.</div>' +
+                        '<div class="mdc-co-note"><i class="fa-solid fa-shield-halved"></i> After placing your order, send the payment proof on WhatsApp. We confirm within 5–30 minutes.</div>' +
                     '</form>' +
                 '</div>' +
                 '<div class="mdc-co-success" id="mdc-co-success" hidden>' +
                     '<div class="mdc-co-tick"><i class="fa-solid fa-circle-check"></i></div>' +
                     '<h3>Order Placed! ✅</h3>' +
                     '<div class="mdc-co-orderno" id="mdc-co-orderno"></div>' +
-                    '<p>Neeche diye account par payment bhejein, phir WhatsApp par screenshot bhejein. Hum 5-30 minute mein activate kar denge.</p>' +
+                    '<p>Send the payment to the account below, then share the screenshot on WhatsApp. We activate your plan within 5–30 minutes.</p>' +
                     '<div class="mdc-co-pay">' +
-                        '<div class="mdc-co-pay-title"><i class="fa-solid fa-wallet"></i> Payment yahan bhejein</div>' +
+                        '<div class="mdc-co-pay-title"><i class="fa-solid fa-wallet"></i> Send payment to</div>' +
                         '<div class="mdc-co-pay-methods">EasyPaisa &middot; JazzCash &middot; NayaPay &middot; UPaisa</div>' +
                         '<div class="mdc-co-pay-acc">' +
                             '<div class="mdc-co-pay-item"><small>Account Number</small><div class="mdc-co-pay-val"><b id="mdc-co-accnum">0336 3337895</b><button class="mdc-co-copy" data-copy="03363337895">Copy</button></div></div>' +
@@ -77,7 +77,7 @@
                             '<div class="mdc-co-pay-item"><small>USDT (BEP20 &ndash; BNB Smart Chain)</small><div class="mdc-co-pay-val"><b class="mdc-co-pay-addr">0x062ef134ad2221ff2b72076b7c30aebbdcf881d4</b><button class="mdc-co-copy" data-copy="0x062ef134ad2221ff2b72076b7c30aebbdcf881d4">Copy</button></div></div>' +
                             '<div class="mdc-co-pay-item"><small>USDT (TRC20 &ndash; Tron)</small><div class="mdc-co-pay-val"><b class="mdc-co-pay-addr">TKAyBNGG2pqJ25vXFsTWqzhTASSHVmpw9x</b><button class="mdc-co-copy" data-copy="TKAyBNGG2pqJ25vXFsTWqzhTASSHVmpw9x">Copy</button></div></div>' +
                         '</div>' +
-                        '<div class="mdc-co-pay-warn"><i class="fa-solid fa-triangle-exclamation"></i> Sirf USDT bhejein, aur sahi network (BEP20 ya TRC20) select karein &mdash; ghalat network se coins recover nahi hote.</div>' +
+                        '<div class="mdc-co-pay-warn"><i class="fa-solid fa-triangle-exclamation"></i> Send USDT only and choose the correct network (BEP20 or TRC20) &mdash; coins sent on the wrong network cannot be recovered.</div>' +
                     '</div>' +
                     '<a class="mdc-co-wa" id="mdc-co-wa" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> Send Payment Proof on WhatsApp</a>' +
                 '</div>' +
@@ -160,7 +160,7 @@
 
     function buildWaUrl(orderNo) {
         var base = ctx.baseHref;
-        var extra = encodeURIComponent("\n\n\u{1F9FE} Order #" + orderNo + " (website)\nMaine payment ka screenshot bhej raha/rahi hoon.");
+        var extra = encodeURIComponent("\n\n\u{1F9FE} Order #" + orderNo + " (website)\nI am sending the payment screenshot.");
         if (base.indexOf("text=") === -1) base += (base.indexOf("?") === -1 ? "?text=" : "&text=") + encodeURIComponent("Order #" + orderNo);
         else base += extra;
         return base;
@@ -174,7 +174,7 @@
             var city = modal.querySelector("#mdc-co-city").value.trim();
             var err = modal.querySelector("#mdc-co-err");
             var submit = modal.querySelector("#mdc-co-submit");
-            if (!name || !phone) { err.textContent = "Naam aur WhatsApp number zaroori hai."; return; }
+            if (!name || !phone) { err.textContent = "Please enter your name and WhatsApp number."; return; }
             err.textContent = "";
             submit.disabled = true; submit.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Saving...';
 

@@ -1,18 +1,17 @@
 /* MALIK DATA CENTRE — Service Worker (offline + installable PWA) */
-const CACHE = "mdc-cache-v14";
+const CACHE = "mdc-cache-v16";
 const ASSETS = [
   "./",
   "./index.html",
   "./index.css",
-  "./effects.css",
   "./promo.css",
   "./cart.css",
   "./ux.css",
   "./advanced.css",
   "./mobile.css",
   "./pages.css",
+  "./theme.css",
   "./index.js",
-  "./effects.js",
   "./promo.js",
   "./cart.js",
   "./ux.js",
@@ -21,8 +20,9 @@ const ASSETS = [
   "./pages.js",
   "./tool-links.js",
   "./manifest.json",
-  "./assets/logo.png",
-  "./assets/hero_banner.png"
+  "./assets/logo.webp",
+  "./assets/logo-96.png",
+  "./assets/hero_banner.webp"
 ];
 
 self.addEventListener("install", (e) => {

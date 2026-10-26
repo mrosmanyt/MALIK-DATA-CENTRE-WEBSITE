@@ -42,7 +42,7 @@
             '<div class="mdc-cart-foot">' +
                 '<div class="mdc-cart-total"><span>Total</span><b id="mdc-cart-total">Rs 0</b></div>' +
                 '<a class="mdc-cart-checkout" id="mdc-cart-checkout" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> Order All on WhatsApp</a>' +
-                '<div class="mdc-cart-note">Aap ko payment details aur setup steps WhatsApp par mil jayenge.</div>' +
+                '<div class="mdc-cart-note">You will receive payment details and setup steps on WhatsApp.</div>' +
             '</div>';
         document.body.appendChild(drawer);
 
@@ -92,7 +92,7 @@
     }
 
     function buildOrderText() {
-        let msg = "Hello MALIK DATA CENTRE! Main yeh order karna chahta/chahti hoon:\n\n";
+        let msg = "Hello MALIK DATA CENTRE! I would like to order:\n\n";
         let total = 0;
         cart.forEach((item, idx) => {
             var priceStr = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
@@ -107,7 +107,7 @@
             totalStr += " (Rs " + total.toLocaleString() + ")";
         }
         msg += "\nTotal: " + totalStr + "\n\n";
-        msg += "Please payment details (EasyPaisa/JazzCash/Bank) aur setup steps share karein.\nSource: malikdatacentre.store";
+        msg += "Please share payment details (EasyPaisa/JazzCash/Bank) and setup steps.\nSource: malikdatacentre.store";
         return msg;
     }
 
@@ -125,7 +125,7 @@
         if (cart.length === 0) {
             itemsEl.innerHTML =
                 '<div class="mdc-cart-empty"><i class="fa-solid fa-cart-shopping"></i>' +
-                '<p>Aapka cart khaali hai.<br>Tools par <b>+</b> dabaa kar add karein.</p></div>';
+                '<p>Your cart is empty.<br>Tap <b>+</b> on any tool to add it.</p></div>';
             totalEl.textContent = window.currencyConverter ? window.currencyConverter.format(0) : "Rs 0";
             checkout.style.opacity = "0.5";
             checkout.style.pointerEvents = "none";
@@ -193,14 +193,14 @@
         overlay.className = "mdc-exit-overlay";
         overlay.id = "mdc-exit-overlay";
         const waLink = getWaUrl(
-            "Hello MALIK DATA CENTRE! Main WAIT5 coupon (5% off) use karna chahta hoon. Mujhe details bhejein."
+            "Hello MALIK DATA CENTRE! I would like to use the WAIT5 coupon (5% off). Please send me the details."
         );
         overlay.innerHTML =
             '<div class="mdc-exit-card">' +
                 '<button class="mdc-exit-close" id="mdc-exit-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>' +
                 '<div class="mdc-exit-emoji">🎁</div>' +
                 '<h2>Ruko! <span>5% OFF</span> le jao</h2>' +
-                '<p>Jaane se pehle yeh exclusive coupon claim karein — aaj hi apna premium subscription order karein.</p>' +
+                '<p>Before you go, claim this exclusive coupon and order your premium subscription today.</p>' +
                 '<div class="mdc-exit-code"><b id="mdc-exit-code-text">WAIT5</b>' +
                     '<button class="mdc-exit-copy" id="mdc-exit-copy">Copy</button></div>' +
                 '<a class="mdc-exit-cta" href="' + waLink + '" target="_blank"><i class="fa-brands fa-whatsapp"></i> Claim on WhatsApp</a>' +

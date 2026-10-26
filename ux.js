@@ -75,8 +75,8 @@
         bar.setAttribute("role", "dialog");
         bar.setAttribute("aria-label", "Cookie consent");
         bar.innerHTML =
-            '<p><i class="fa-solid fa-cookie-bite"></i> Hum aapke experience ko behtar banane ke liye basic cookies use karte hain. ' +
-            'Tafseel ke liye <a href="privacy.html">Privacy Policy</a> dekhein.</p>' +
+            '<p><i class="fa-solid fa-cookie-bite"></i> We use basic cookies to improve your experience. ' +
+            'See our <a href="privacy.html">Privacy Policy</a> for details.</p>' +
             '<div class="mdc-cookie-actions">' +
                 '<button class="mdc-cookie-decline" id="mdc-cookie-decline">Decline</button>' +
                 '<button class="mdc-cookie-accept" id="mdc-cookie-accept">Accept</button>' +

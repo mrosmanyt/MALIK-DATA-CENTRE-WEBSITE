@@ -22,7 +22,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = __dirname;
-const SITE = "https://malikdatacentre.store";
+const SITE = "https://www.malikdatacentre.store";
 const BRAND = "MALIK DATA CENTRE";
 const WA1 = "923445739206";
 const WA2 = "923489057646";
@@ -77,6 +77,10 @@ const PRICE_HUMAN = human(PRICE_DATE);
 /* ---------- helpers ---------- */
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const rs = n => "Rs " + Number(n).toLocaleString("en-US");
+// USD rate is read from index.js so the site's currency switcher and these pages always agree.
+const USD_RATE = Number((fs.readFileSync(path.join(__dirname, "index.js"), "utf8").match(/USD:\s*([0-9.]+)/) || [])[1]) || 0.0036;
+const usd = n => "$" + (Number(n) * USD_RATE).toFixed(2).replace(/\.00$/, "");
+const both = n => `${usd(n)} (${rs(n)})`;
 const pct = (p, o) => (o > p ? Math.round(((o - p) / o) * 100) : 0);
 const waLink = (text, num = WA1) => `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
 const wa = (num = WA1) => `https://wa.me/${num}`;
@@ -119,7 +123,7 @@ function header(rel, active) {
 <header class="pg-header">
   <div class="pg-header-inner">
     <a href="${rel}index.html" class="logo" aria-label="${BRAND} home">
-      <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.png" alt="${BRAND} logo" width="36" height="36"></span>
+      <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.webp" alt="${BRAND} logo" width="36" height="36"></span>
       <span class="logo-text">MALIK DATA <span class="logo-highlight">CENTRE</span></span>
     </a>
     <nav class="pg-nav" aria-label="Main">
@@ -172,10 +176,10 @@ function footer(rel) {
     <div class="pg-footer-grid">
       <div>
         <a href="${rel}index.html" class="logo">
-          <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.png" alt="${BRAND} logo" width="36" height="36"></span>
+          <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.webp" alt="${BRAND} logo" width="36" height="36"></span>
           <span class="logo-text">MALIK DATA <span class="logo-highlight">CENTRE</span></span>
         </a>
-        <p class="pg-foot-about">AI tools and software subscriptions with PKR pricing, local payments, WhatsApp support and a written warranty.</p>
+        <p class="pg-foot-about">AI tools and software subscriptions for customers worldwide, with USDT and local payments, WhatsApp support and a written warranty.</p>
         <div class="footer-socials">
           <a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="${CHANNEL}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp Channel"><i class="fa-solid fa-bullhorn"></i></a>
@@ -248,7 +252,7 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <meta name="theme-color" content="#0a0a0f">
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="${ogType}">
-<meta property="og:locale" content="en_PK">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="${BRAND}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -258,7 +262,7 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <meta name="twitter:site" content="@realmickeyai">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
-<link rel="icon" type="image/png" href="${rel}assets/logo.png">
+<link rel="icon" type="image/png" href="${rel}assets/logo-96.png">
 <link rel="manifest" href="${rel}manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -267,6 +271,7 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <link rel="stylesheet" href="${rel}index.css">
 ${checkout ? `<link rel="stylesheet" href="${rel}advanced.css">` : ""}
 <link rel="stylesheet" href="${rel}pages.css">
+<link rel="stylesheet" href="${rel}theme.css?v=2.1">
 ${extraCss.map(c => `<link rel="stylesheet" href="${rel}${c}">`).join("\n")}
 ${ld}
 </head>
@@ -306,9 +311,10 @@ const crumbHtml = (rel, items) => `<nav class="pg-crumb" aria-label="Breadcrumb"
   i === items.length - 1 ? `<span>${esc(n)}</span>` : `<a href="${rel}${u}">${esc(n)}</a><span>/</span>`).join("")}</nav>`;
 
 const COMMON_FAQS = [
-  ["Payment kaise karein?", "Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. International customers can pay with USDT (BEP20 or TRC20)."],
-  ["Delivery kitni der mein hoti hai?", "Usually 5 to 30 minutes after payment is confirmed. You receive setup steps on WhatsApp."],
-  ["Agar beech mein masla aaye to?", "Send a screenshot to WhatsApp support during the warranty period. We fix or replace the plan, and refund the remaining value if we cannot."]
+  ["Can I buy from outside Pakistan?", "Yes. We deliver worldwide, because every plan is activated online on your email or with login details sent on WhatsApp. Customers in the UK, USA, UAE, Saudi Arabia, Europe, India and elsewhere pay with USDT (Binance, BEP20 or TRC20). The exact amount in your currency is confirmed on WhatsApp before you pay."],
+  ["How do I pay?", "Worldwide: USDT via Binance (BEP20 or TRC20). In Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Payment details are shared on WhatsApp when you order."],
+  ["How long does delivery take?", "Usually 5 to 30 minutes after payment is confirmed. You receive setup steps on WhatsApp."],
+  ["What if something stops working?", "Send a screenshot to WhatsApp support during the warranty period. We fix or replace the plan, and refund the remaining value if we cannot."]
 ];
 
 function familyCard(rel, f) {
@@ -332,7 +338,7 @@ function planRow(t, f) {
   const msg =
     `Hello MALIK DATA CENTRE! I want to buy:\n\n` +
     `🛍️ Tool: ${t.name}\n⏱️ Plan: ${t.duration}\n💰 Price: Rs ${t.price.toLocaleString("en-US")}\n⚙️ Setup: ${t.setup}\n\n` +
-    `Please share payment details (EasyPaisa/JazzCash/Bank) and setup instructions.\nSource: malikdatacentre.store/tools/${f.slug}/`;
+    `Please share payment details and setup instructions.\nSource: malikdatacentre.store/tools/${f.slug}/`;
   return `<article class="pg-plan tool-card" id="plan-${t.id}">
     <div>
       <div class="pg-plan-name tool-title">${esc(t.name)} &middot; <span class="tool-duration">${esc(t.duration)}</span></div>
@@ -346,6 +352,7 @@ function planRow(t, f) {
       <div class="tool-price-wrapper">
         ${t.originalPrice > t.price ? `<span class="tool-original-price">${rs(t.originalPrice)}</span>` : ""}
         <span class="tool-price">${rs(t.price)}</span>
+        <span class="pg-usd">≈ ${usd(t.price)}</span>
       </div>
       <a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-buy"><i class="fa-brands fa-whatsapp"></i> Buy Now</a>
       <button class="btn-addcart" type="button" tabindex="-1" aria-hidden="true" data-id="${esc(t.id)}" data-name="${esc(t.name)}" data-price="${t.price}" data-duration="${esc(t.duration)}" data-setup="${esc(t.setup)}"></button>
@@ -358,8 +365,8 @@ function buildToolPage(f) {
   if (!st) return;
   const url = `tools/${f.slug}/`;
   const faqs = [...(f.faqs || []), ...COMMON_FAQS];
-  const title = `${f.name} Price in Pakistan (${new Date().getFullYear()}) | From ${rs(st.min.price)} | ${BRAND}`;
-  const desc = `Buy ${f.name} in Pakistan from ${rs(st.min.price)}. ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}, EasyPaisa/JazzCash payment, 5–30 min activation on WhatsApp and full plan warranty.`;
+  const title = `Buy ${f.name} Online (${new Date().getFullYear()}) | From ${usd(st.min.price)} | ${BRAND}`;
+  const desc = `Buy ${f.name} online from ${usd(st.min.price)} (${rs(st.min.price)}). ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.`;
   const related = (f.related || []).map(s => FAM[s]).filter(Boolean);
   const accessTypes = [...new Set(st.plans.map(p => p.setup))];
 
@@ -383,12 +390,13 @@ function buildToolPage(f) {
   ${crumbHtml(rel, [["Home", "index.html"], ["All Tools", "tools/"], [f.name, ""]])}
   <section class="pg-hero">
     <span class="pg-eyebrow"><i class="${CAT_ICON[f.cat]}"></i> ${esc(CAT[f.cat])}</span>
-    <h1>${esc(f.name)} price in Pakistan</h1>
+    <h1>Buy ${esc(f.name)} online</h1>
     <p class="pg-lead">${esc(f.intro)}</p>
     <div class="pg-meta">
       <span><i class="fa-regular fa-calendar"></i> Prices updated ${PRICE_HUMAN}</span>
       <span><i class="fa-solid fa-bolt"></i> 5–30 min activation</span>
-      <span><i class="fa-solid fa-wallet"></i> EasyPaisa · JazzCash · Bank · USDT</span>
+      <span><i class="fa-solid fa-globe"></i> Worldwide delivery</span>
+      <span><i class="fa-solid fa-wallet"></i> USDT · EasyPaisa · JazzCash · Bank</span>
     </div>
   </section>
 
@@ -396,14 +404,14 @@ function buildToolPage(f) {
     <div>
       <section class="pg-section" id="plans" style="padding-top:0">
         <h2>Plans &amp; prices</h2>
-        <p>All prices are in Pakistani rupees. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.</p>
+        <p>Prices are set in Pakistani rupees (PKR), with an approximate US dollar price shown next to each plan. The exact amount in your currency is confirmed on WhatsApp. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.</p>
         <div class="pg-plans">${st.plans.map(t => planRow(t, f)).join("")}</div>
       </section>
 
       <section class="pg-section pg-prose">
         <h2>Overview</h2>
         <p>${esc(f.intro)}</p>
-        <p>Paying for ${esc(f.name)} directly usually needs an international card and dollar billing. With ${BRAND} you pay in PKR through a local wallet or bank, get setup help on WhatsApp, and keep a written warranty for the plan period.</p>
+        <p>Paying for ${esc(f.name)} directly usually needs an international credit card and full-price billing. With ${BRAND} you can buy from anywhere in the world: pay with USDT (Binance), or with a local wallet or bank in Pakistan, get setup help on WhatsApp, and keep a written warranty for the plan period.</p>
         ${f.official ? `<p>Official product website: <a href="${f.official}" target="_blank" rel="noopener nofollow">${esc(f.official.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       </section>
 
@@ -421,7 +429,7 @@ function buildToolPage(f) {
         <h2>Plan, access &amp; warranty</h2>
         <div class="pg-table-wrap"><table class="pg-table">
           <thead><tr><th>Plan</th><th>Duration</th><th>Access type</th><th>Warranty</th><th>Price</th></tr></thead>
-          <tbody>${st.plans.map(t => `<tr><td>${esc(t.name)}</td><td>${esc(t.duration)}</td><td>${esc(t.setup)}</td><td>${esc(warrantyOf(t))}</td><td><strong style="color:#fff">${rs(t.price)}</strong></td></tr>`).join("")}</tbody>
+          <tbody>${st.plans.map(t => `<tr><td>${esc(t.name)}</td><td>${esc(t.duration)}</td><td>${esc(t.setup)}</td><td>${esc(warrantyOf(t))}</td><td><strong style="color:var(--text-main)">${rs(t.price)}</strong><br><span class="pg-usd">≈ ${usd(t.price)}</span></td></tr>`).join("")}</tbody>
         </table></div>
         ${accessTypes.some(a => /shared/i.test(a)) ? `<div class="pg-note warn"><strong>Shared plans:</strong> the login is used by more than one buyer. Do not change the password or account details, and keep private work in your own account. Choose a plan marked private or "on client email" if you need full privacy.</div>` : ""}
         <p style="font-size:.88rem">Features and limits are set by the tool's owner and can change. Confirm the exact plan on WhatsApp before paying.</p>
@@ -432,7 +440,7 @@ function buildToolPage(f) {
         <ol class="pg-steps">
           <li><span><strong>Choose your plan</strong>Pick a duration above and tap Buy Now.</span></li>
           <li><span><strong>Place the order</strong>Enter your name and WhatsApp number. Your order number appears on screen.</span></li>
-          <li><span><strong>Pay locally</strong>Send the amount via EasyPaisa, JazzCash, bank or USDT and share the screenshot on WhatsApp.</span></li>
+          <li><span><strong>Pay</strong>Send the amount with USDT from anywhere, or via EasyPaisa, JazzCash or bank in Pakistan, and share the screenshot on WhatsApp.</span></li>
           <li><span><strong>Get activated</strong>We activate on your email or send login details, usually within 5–30 minutes, with a setup guide.</span></li>
           <li><span><strong>Use your warranty</strong>Any problem during the warranty period? Message support with a screenshot.</span></li>
         </ol>
@@ -467,11 +475,13 @@ function buildToolPage(f) {
       <h2>${esc(f.name)}</h2>
       <div class="pg-from">Starting from</div>
       <div class="pg-from-price">${rs(st.min.price)}</div>
+      <div class="pg-usd" style="margin-top:2px">≈ ${usd(st.min.price)} USD</div>
       <div>${st.min.originalPrice > st.min.price ? `<span class="pg-from-old">${rs(st.min.originalPrice)}</span>` : ""}${pct(st.min.price, st.min.originalPrice) ? `<span class="pg-save">Save ${pct(st.min.price, st.min.originalPrice)}%</span>` : ""}</div>
       <ul>
         <li><i class="fa-solid fa-check"></i> ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} available</li>
         <li><i class="fa-solid fa-check"></i> ${esc(accessTypes.join(" / "))}</li>
         <li><i class="fa-solid fa-check"></i> Activation in 5–30 minutes</li>
+        <li><i class="fa-solid fa-check"></i> Delivered worldwide</li>
         <li><i class="fa-solid fa-check"></i> Warranty + refund if we can't fix it</li>
       </ul>
       <a href="#plans" class="btn btn-gradient"><i class="fa-solid fa-list"></i> Choose a plan</a>
@@ -482,7 +492,7 @@ function buildToolPage(f) {
 </div>`;
 
   write(url, page({ urlPath: url, title, desc, body, active: "tools", jsonld, ogType: "product", checkout: true,
-    keywords: `${f.name} Pakistan, ${f.name} price in Pakistan, buy ${f.name} Pakistan, ${f.name} JazzCash, ${f.name} EasyPaisa, cheap ${f.name}` }));
+    keywords: `buy ${f.name}, ${f.name} price, cheap ${f.name}, ${f.name} subscription, ${f.name} discount, ${f.name} USDT, ${f.name} worldwide, ${f.name} UK, ${f.name} USA, ${f.name} UAE, ${f.name} India, ${f.name} Pakistan` }));
 }
 
 /* ======================================================================
@@ -502,8 +512,8 @@ function finderHtml() {
         </select></div>
       <div><label for="f-budget">Budget</label>
         <select id="f-budget" name="budget">
-          <option value="1000">Under Rs 1,000</option>
-          <option value="5000" selected>Up to Rs 5,000</option>
+          <option value="1000">Under ${usd(1000)} (Rs 1,000)</option>
+          <option value="5000" selected>Up to ${usd(5000)} (Rs 5,000)</option>
           <option value="999999">No limit</option>
         </select></div>
       <div><label for="f-privacy">Account type</label>
@@ -537,8 +547,8 @@ function buildToolsIndex() {
   ${crumbHtml(rel, [["Home", "index.html"], ["All Tools", ""]])}
   <section class="pg-hero">
     <span class="pg-eyebrow"><i class="fa-solid fa-layer-group"></i> ${fams.length} tools &middot; from ${rs(minAll)}</span>
-    <h1>AI tools &amp; subscriptions in Pakistan</h1>
-    <p class="pg-lead">Every tool we sell, with PKR prices, access type, warranty and a full buying guide. Pay with EasyPaisa, JazzCash, bank or USDT and get activated on WhatsApp in 5–30 minutes.</p>
+    <h1>AI tools &amp; subscriptions, worldwide</h1>
+    <p class="pg-lead">Every tool we sell, with prices, access type, warranty and a full buying guide. Delivered worldwide: pay with USDT from any country, or EasyPaisa, JazzCash or bank in Pakistan, and get activated on WhatsApp in 5–30 minutes.</p>
   </section>
 
   <section class="pg-section" style="padding-top:0">
@@ -556,7 +566,7 @@ function buildToolsIndex() {
     <p>Already know what you want? Order straight from this list.</p>
     <div class="pg-table-wrap"><table class="pg-table">
       <thead><tr><th>Tool</th><th>Category</th><th>From</th><th>Plans</th><th></th></tr></thead>
-      <tbody>${fams.map(f => { const s = famStats(f); return `<tr><td><a href="${rel}tools/${f.slug}/">${esc(f.name)}</a></td><td>${esc(CAT[f.cat])}</td><td><strong style="color:#fff">${rs(s.min.price)}</strong></td><td>${s.plans.length}</td><td><a href="${rel}tools/${f.slug}/#plans">Order <i class="fa-solid fa-arrow-right"></i></a></td></tr>`; }).join("")}</tbody>
+      <tbody>${fams.map(f => { const s = famStats(f); return `<tr><td><a href="${rel}tools/${f.slug}/">${esc(f.name)}</a></td><td>${esc(CAT[f.cat])}</td><td><strong style="color:var(--text-main)">${rs(s.min.price)}</strong></td><td>${s.plans.length}</td><td><a href="${rel}tools/${f.slug}/#plans">Order <i class="fa-solid fa-arrow-right"></i></a></td></tr>`; }).join("")}</tbody>
     </table></div>
   </section>
 
@@ -574,10 +584,10 @@ function buildToolsIndex() {
 </div>`;
   write(url, page({
     urlPath: url, active: "tools",
-    title: `All AI Tools & Subscriptions in Pakistan (PKR Prices) | ${BRAND}`,
-    desc: `Compare ${fams.length} AI tools and software subscriptions in Pakistan from ${rs(minAll)}: ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva, Adobe, CapCut, Cursor and more. Local payments and WhatsApp activation.`,
+    title: `Buy AI Tools & Subscriptions Online, Worldwide | ${BRAND}`,
+    desc: `Compare ${fams.length} AI tools and software subscriptions from ${usd(minAll)}: ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva, Adobe, CapCut, Cursor and more. Worldwide delivery, USDT payment and WhatsApp activation.`,
     jsonld: [crumbLd([["Home", ""], ["All Tools", url]]), {
-      "@context": "https://schema.org", "@type": "ItemList", name: "AI tools in Pakistan",
+      "@context": "https://schema.org", "@type": "ItemList", name: "AI tools and subscriptions",
       itemListElement: fams.map((f, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/tools/${f.slug}/`, name: f.name }))
     }],
     body
@@ -591,7 +601,7 @@ function buildComparisons() {
   CONTENT.comparisons.forEach(c => {
     const url = `comparisons/${c.slug}/`;
     const cols = c.cols.map(s => FAM[s]).filter(Boolean);
-    const priceRow = ["Starting price", ...cols.map(f => { const s = famStats(f); return s ? rs(s.min.price) : "—"; })];
+    const priceRow = ["Starting price", ...cols.map(f => { const s = famStats(f); return s ? both(s.min.price) : "—"; })];
     const body = rel => `
 <div class="pg-narrow">
   ${crumbHtml(rel, [["Home", "index.html"], ["Compare", "comparisons/"], [c.short, ""]])}
@@ -605,9 +615,9 @@ function buildComparisons() {
     <h2>Side-by-side</h2>
     <div class="pg-table-wrap"><table class="pg-table">
       <thead><tr><th></th>${cols.map(f => `<th><a href="${rel}tools/${f.slug}/">${esc(f.name)}</a></th>`).join("")}</tr></thead>
-      <tbody>${[priceRow, ...c.rows].map(r => `<tr><td><strong style="color:#fff">${esc(r[0])}</strong></td>${r.slice(1).map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody>
+      <tbody>${[priceRow, ...c.rows].map(r => `<tr><td><strong style="color:var(--text-main)">${esc(r[0])}</strong></td>${r.slice(1).map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody>
     </table></div>
-    <p style="font-size:.85rem">Prices are ${BRAND} PKR prices. Features are set by each tool's owner and can change.</p>
+    <p style="font-size:.85rem">Prices are ${BRAND} prices in PKR; USD is approximate. Features are set by each tool's owner and can change.</p>
   </section>
   <section class="pg-section">
     <h2>Which one should you buy?</h2>
@@ -629,7 +639,7 @@ function buildComparisons() {
   <section class="pg-hero">
     <span class="pg-eyebrow"><i class="fa-solid fa-scale-balanced"></i> Compare before you buy</span>
     <h1>AI tool comparisons</h1>
-    <p class="pg-lead">Honest side-by-side guides with PKR prices, so you buy the right plan the first time.</p>
+    <p class="pg-lead">Honest side-by-side guides with real prices, so you buy the right plan the first time.</p>
   </section>
   <section class="pg-section" style="padding-top:0">
     <div class="pg-grid three">
@@ -638,8 +648,8 @@ function buildComparisons() {
     </div>
   </section>
 </div>`;
-  write(url, page({ urlPath: url, active: "compare", title: `AI Tool Comparisons for Pakistani Buyers | ${BRAND}`,
-    desc: "Compare Gemini Pro vs Google AI Ultra, Cursor vs Replit vs Lovable, ElevenLabs vs HeyGen and more, with PKR prices.",
+  write(url, page({ urlPath: url, active: "compare", title: `AI Tool Comparisons: Which Subscription Should You Buy? | ${BRAND}`,
+    desc: "Compare Gemini Pro vs Google AI Ultra, Cursor vs Replit vs Lovable, ElevenLabs vs HeyGen and more, with prices in USD and PKR.",
     jsonld: [crumbLd([["Home", ""], ["Compare", url]])], body }));
 }
 
@@ -725,20 +735,20 @@ function buildPolicies() {
 
   simplePage("about-us/", {
     title: "About Us", h1: `About ${BRAND}`, eyebrow: "Who we are", icon: "fa-solid fa-building", active: "about",
-    desc: `${BRAND} is a Pakistan-based store for AI tools and software subscriptions with PKR pricing, local payments and WhatsApp support.`,
+    desc: `${BRAND} sells AI tools and software subscriptions to customers worldwide, with USDT and local payments, fast activation and WhatsApp support.`,
     lead: `${BRAND} helps students, freelancers, creators and businesses get premium AI tools and software without needing an international card.`,
     inner: rel => `
 <section class="pg-section"><h2>What we do</h2>
-<p>We sell AI assistants, coding tools, AI video and voice tools, design software, productivity apps, VPNs and entertainment subscriptions, with clear PKR prices and a written warranty. We also offer <a href="${rel}ai-automation-services/">AI automation</a>, <a href="${rel}social-media-services/">social media services</a> and <a href="${rel}enterprise-ai-api-credits/">API credits</a> for businesses.</p></section>
+<p>We sell AI assistants, coding tools, AI video and voice tools, design software, productivity apps, VPNs and entertainment subscriptions, with clear prices and a written warranty, delivered worldwide. We also offer <a href="${rel}ai-automation-services/">AI automation</a>, <a href="${rel}social-media-services/">social media services</a> and <a href="${rel}enterprise-ai-api-credits/">API credits</a> for businesses.</p></section>
 <section class="pg-section"><h2>How we work</h2>
 <ul class="pg-checks">
-<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:#fff">Clear labels.</strong> Every plan shows its duration, access type (private, invitation or shared) and warranty before you pay.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:#fff">Local payments.</strong> EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank, bank transfer, and USDT for overseas buyers.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:#fff">Fast WhatsApp support.</strong> Orders, setup help and warranty claims are handled by real people on WhatsApp.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:#fff">No passwords.</strong> We never ask for your email password.</span></li>
+<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:var(--text-main)">Clear labels.</strong> Every plan shows its duration, access type (private, invitation or shared) and warranty before you pay.</span></li>
+<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:var(--text-main)">Pay from anywhere.</strong> USDT (Binance) worldwide, plus EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer in Pakistan.</span></li>
+<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:var(--text-main)">Fast WhatsApp support.</strong> Orders, setup help and warranty claims are handled by real people on WhatsApp.</span></li>
+<li><i class="fa-solid fa-circle-check"></i><span><strong style="color:var(--text-main)">No passwords.</strong> We never ask for your email password.</span></li>
 </ul></section>
 <section class="pg-section"><h2>Who we serve</h2>
-<p>Students preparing assignments and theses, freelancers working for international clients, YouTubers and content creators, developers and startups, and small businesses across Pakistan and overseas.</p></section>
+<p>Students preparing assignments and theses, freelancers working for international clients, YouTubers and content creators, developers and startups, and small businesses in Pakistan, the Gulf, the UK, Europe, North America and across Asia.</p></section>
 <section class="pg-section"><h2>See our work</h2>
 <p>We post completed setups and customer feedback on our <a href="${CHANNEL}" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a> and <a href="${SOCIAL.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a>, and you can read customer screenshots in the <a href="${rel}index.html#reviews-section">reviews section</a>.</p></section>
 <p class="pg-disclaimer">${BRAND} is an independent reseller. We are not an official partner of the software companies whose products we sell unless stated in writing. All product names are trademarks of their owners.</p>`
@@ -776,7 +786,7 @@ function buildPolicies() {
 const FIELD = {
   platform: `<div><label>Platform</label><select name="Platform"><option>YouTube</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>WhatsApp</option><option>Several</option></select></div>`,
   goal: `<div><label>Goal</label><input name="Goal" placeholder="e.g. more sales, channel setup"></div>`,
-  budget: `<div><label>Budget (PKR)</label><input name="Budget" placeholder="e.g. 15,000 / month"></div>`,
+  budget: `<div><label>Budget</label><input name="Budget" placeholder="e.g. $50 / month or Rs 15,000"></div>`,
   business: `<div><label>Business type</label><input name="Business" placeholder="e.g. clothing store, clinic"></div>`,
   task: `<div><label>What should be automated?</label><input name="Task" placeholder="e.g. WhatsApp replies, lead follow-up"></div>`,
   provider: `<div><label>Provider</label><select name="Provider"><option>Claude (Anthropic)</option><option>OpenAI</option><option>Gemini</option><option>DeepSeek</option><option>Several</option></select></div>`,
@@ -889,7 +899,7 @@ function updateHomepage() {
                 <div class="pg-grid three">
                     <a class="pg-card" href="ai-automation-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-robot"></i></div><h3>AI Automation Services</h3></div><p>WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.</p><span class="pg-card-more">Get a quote <i class="fa-solid fa-arrow-right"></i></span></a>
                     <a class="pg-card" href="social-media-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-hashtag"></i></div><h3>Social Media Services</h3></div><p>Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.</p><span class="pg-card-more">See services <i class="fa-solid fa-arrow-right"></i></span></a>
-                    <a class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-plug"></i></div><h3>Enterprise API Credits</h3></div><p>Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in PKR or USDT.</p><span class="pg-card-more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <a class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-plug"></i></div><h3>Enterprise API Credits</h3></div><p>Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.</p><span class="pg-card-more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
             </div>
         </section>
@@ -942,10 +952,10 @@ function buildLlms() {
   const fams = FAMILIES.filter(f => famStats(f));
   const lines = [
     `# ${BRAND}`, "",
-    `> Pakistan-based store for AI tools and software subscriptions with PKR pricing, local payments (EasyPaisa, JazzCash, bank, USDT), WhatsApp activation in 5–30 minutes and a written warranty.`, "",
+    `> Online store for AI tools and software subscriptions, serving customers worldwide. Prices are set in PKR with approximate USD shown; payment by USDT (Binance) from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. WhatsApp activation in 5–30 minutes and a written warranty.`, "",
     `Website: ${SITE}/`, `WhatsApp: +92 344 5739206, +92 348 9057646`, `Email: ${EMAIL}`, `Prices last changed: ${PRICE_DATE}`, "",
-    "## Tools and starting prices (PKR)", "",
-    ...fams.map(f => { const s = famStats(f); return `- [${f.name}](${SITE}/tools/${f.slug}/): from Rs ${s.min.price.toLocaleString("en-US")} — ${s.plans.map(p => `${p.duration} Rs ${p.price.toLocaleString("en-US")} (${p.setup})`).join("; ")}`; }),
+    "## Tools and starting prices (PKR, approx. USD in brackets)", "",
+    ...fams.map(f => { const s = famStats(f); return `- [${f.name}](${SITE}/tools/${f.slug}/): from Rs ${s.min.price.toLocaleString("en-US")} (${usd(s.min.price)}) — ${s.plans.map(p => `${p.duration} Rs ${p.price.toLocaleString("en-US")} / ${usd(p.price)} (${p.setup})`).join("; ")}`; }),
     "", "## Latest guides", "",
     ...allBlogItems().slice(0, 40).map(it => `- [${it.title}](${SITE}/${it.href}): ${it.description}`),
     "", "## Comparisons", "",
@@ -991,7 +1001,7 @@ function buildBlog() {
       {
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: p.title, description: p.description, keywords: p.keywords.join(", "),
-        datePublished: p.date, dateModified: p.updated || p.date, inLanguage: "en-PK",
+        datePublished: p.date, dateModified: p.updated || p.date, inLanguage: "en",
         image: `${SITE}/assets/logo.png`, mainEntityOfPage: `${SITE}/${url}`,
         author: { "@type": "Organization", name: `${BRAND} Team`, url: `${SITE}/about-us/` },
         publisher: { "@type": "Organization", name: BRAND, logo: { "@type": "ImageObject", url: `${SITE}/assets/logo.png` } }
@@ -1034,7 +1044,7 @@ function buildBlog() {
   <section class="pg-hero">
     <span class="pg-eyebrow"><i class="fa-solid fa-newspaper"></i> ${items.length} guides</span>
     <h1>AI tools guides &amp; reviews</h1>
-    <p class="pg-lead">Buying guides, comparisons, setup tutorials and price updates for AI tools in Pakistan, written by the ${BRAND} team.</p>
+    <p class="pg-lead">Buying guides, comparisons, setup tutorials and price updates for AI tools, written by the ${BRAND} team for buyers worldwide.</p>
   </section>
   <section class="pg-section" style="padding-top:0">
     <div class="pg-filter" data-pg-filter>
@@ -1047,8 +1057,8 @@ function buildBlog() {
   </section>
 </div>`;
   // blog/index.html (keeps existing /blog/index.html links working)
-  const html = page({ urlPath: "blog/index.html", active: "blog", title: `AI Tools Guides & Reviews for Pakistan | ${BRAND} Blog`,
-    desc: "Buying guides, comparisons, setup tutorials and price updates for ChatGPT, Gemini, Grok, Canva, Adobe, CapCut, Cursor and more in Pakistan.",
+  const html = page({ urlPath: "blog/index.html", active: "blog", title: `AI Tools Guides, Reviews & Comparisons | ${BRAND} Blog`,
+    desc: "Buying guides, comparisons, setup tutorials and price updates for ChatGPT, Gemini, Grok, Canva, Adobe, CapCut, Cursor and more, for buyers worldwide.",
     extraCss: ["blog.css"], jsonld: [{ "@context": "https://schema.org", "@type": "Blog", name: `${BRAND} Blog`, url: `${SITE}/blog/`,
       blogPost: POSTS.slice(0, 20).map(p => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}.html`, datePublished: p.date })) },
       crumbLd([["Home", ""], ["Blog", url]])], body }).replace(`<link rel="canonical" href="${SITE}/blog/index.html">`, `<link rel="canonical" href="${SITE}/blog/">`);
@@ -1058,7 +1068,7 @@ function buildBlog() {
   // RSS feed
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
-<title>${esc(BRAND)} Blog</title><link>${SITE}/blog/</link><description>AI tools guides for Pakistan</description><language>en-pk</language>
+<title>${esc(BRAND)} Blog</title><link>${SITE}/blog/</link><description>AI tools guides, reviews and comparisons</description><language>en</language>
 <atom:link href="${SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>
 ${items.slice(0, 30).map(it => `<item><title>${esc(it.title)}</title><link>${SITE}/${it.href}</link><guid>${SITE}/${it.href}</guid><pubDate>${new Date(it.date + "T05:00:00Z").toUTCString()}</pubDate><description>${esc(it.description)}</description></item>`).join("\n")}
 </channel></rss>

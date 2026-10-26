@@ -43,8 +43,8 @@
         if (gen && input && out) {
             gen.addEventListener("click", function () {
                 var name = (input.value || "").trim().replace(/\s+/g, "-").replace(/[^A-Za-z0-9_-]/g, "");
-                if (!name) { out.value = "Pehle apna naam ya ID likhein."; return; }
-                out.value = "https://malikdatacentre.store/?ref=" + encodeURIComponent(name);
+                if (!name) { out.value = "Please enter your name or ID first."; return; }
+                out.value = "https://www.malikdatacentre.store/?ref=" + encodeURIComponent(name);
             });
             if (copy) copy.addEventListener("click", function () {
                 if (out.value.indexOf("http") === 0 && navigator.clipboard) {
@@ -84,7 +84,7 @@
             '<div class="mdc-ai-body" id="mdc-ai-body"></div>' +
             '<div class="mdc-ai-chips" id="mdc-ai-chips"></div>' +
             '<form class="mdc-ai-input" id="mdc-ai-form">' +
-                '<input type="text" id="mdc-ai-text" placeholder="Apna sawal likhein..." autocomplete="off">' +
+                '<input type="text" id="mdc-ai-text" placeholder="Type your question..." autocomplete="off">' +
                 '<button class="mdc-ai-send" type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>' +
             '</form>';
         document.body.appendChild(panel);
@@ -170,36 +170,36 @@
             var ql = q.toLowerCase();
             // greetings
             if (/^(hi|hello|hey|salam|asalam|aoa|assalam)/i.test(ql.trim()))
-                return "Assalam-o-Alaikum! \u{1F44B} Main Malik AI Assistant hoon. Aap kis premium tool ya subscription mein interested hain? (ChatGPT, Grok, Canva, Adobe, YouTube, VPN...)";
+                return "Hello! \u{1F44B} I'm the Malik AI Assistant. Which premium tool or subscription are you interested in? (ChatGPT, Grok, Canva, Adobe, YouTube, VPN...)";
             // payment
             if (/(payment|pay|easypaisa|jazz|bank|kaise.*paise|how.*pay)/i.test(ql))
-                return "Hum yeh payment methods accept karte hain: ✅ EasyPaisa, ✅ JazzCash, ✅ Meezan Bank, ✅ Bank Transfer. Order ke waqt details WhatsApp par milti hain. Order karna chahein? <a class='ai-wa' href='" + waLink("Hello! Payment details chahiye order ke liye.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> WhatsApp</a>";
+                return "We accept: ✅ EasyPaisa, ✅ JazzCash, ✅ Meezan Bank, ✅ Bank Transfer, and USDT for overseas buyers. Payment details are shared on WhatsApp when you order. Ready to order? <a class='ai-wa' href='" + waLink("Hello! I need payment details for my order.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> WhatsApp</a>";
             // warranty / refund
             if (/(warranty|refund|guarantee|wapsi|paise wapas)/i.test(ql))
-                return "Har purchase par <b>full-duration warranty</b> hoti hai. Agar subscription mein masla aaye, hum repair ya replace karte hain. Agar replace na ho saake to <b>full refund</b>. Aap 100% protected hain. \u{1F6E1}️";
+                return "Every purchase comes with a <b>full-duration warranty</b>. If your subscription has a problem, we fix or replace it, and if we can't, you get a <b>refund</b>. \u{1F6E1}️";
             // how / setup / activation
             if (/(how.*order|how.*work|setup|activat|kaise|order kaise|process)/i.test(ql))
-                return "Bohat asaan — 3 steps: <br>1️⃣ Tool chunein<br>2️⃣ \"Buy Now\" se WhatsApp par order + payment<br>3️⃣ 5-30 min mein account ready! ⚡";
+                return "It's easy, just 3 steps: <br>1️⃣ Choose a tool<br>2️⃣ Tap \"Buy Now\" to order and pay via WhatsApp<br>3️⃣ Your account is ready in 5–30 minutes ⚡";
             // coupon / discount
             if (/(coupon|discount|promo|code|sasta|kam price)/i.test(ql))
-                return "Active coupons: \u{1F3F7}️ <b>MALIK10</b> = 10% off, <b>WAIT5</b> = 5% off. Checkout par WhatsApp message mein apply ho jata hai!";
+                return "Active coupons: \u{1F3F7}️ <b>MALIK10</b> = 10% off, <b>WAIT5</b> = 5% off. It's applied to your WhatsApp order message at checkout.";
             // contact / human
             if (/(human|agent|talk|contact|baat|rabta|whatsapp|number)/i.test(ql))
-                return "Hamari team 24/7 available hai! \u{1F4F1} <a class='ai-wa' href='" + waLink("Hello MALIK DATA CENTRE! Mujhe help chahiye.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Chat on WhatsApp</a> ya call: +92 344 5739206";
+                return "Our team is available 24/7. \u{1F4F1} <a class='ai-wa' href='" + waLink("Hello MALIK DATA CENTRE! I need help.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Chat on WhatsApp</a> or call: +92 344 5739206";
             // best / popular / deals
             if (/(best|popular|deal|top|recommend|sasta|trending)/i.test(ql)) {
                 var tools = getTools();
                 var picks = tools.filter(function (t) { return ["grok-10d", "chatgpt-go-6m", "canva-yearly", "gemini-18m"].indexOf(t.id) !== -1; });
-                if (picks.length) return "Hamare sabse popular deals: " + toolReply(picks);
+                if (picks.length) return "Our most popular deals: " + toolReply(picks);
             }
             // private vs shared
             if (/(private|shared|personal|email par)/i.test(ql))
-                return "Hum dono offer karte hain. \"ON CLIENT EMAIL\" wale tools <b>100% private</b> hote hain (aapke apne email par). Shared accounts clearly labelled aur saste hote hain.";
+                return "We offer both. Plans marked \"On client email\" are <b>private</b> and activated on your own email. Shared accounts are clearly labelled and cost less.";
             // product search
             var matches = findTools(q);
-            if (matches.length) return "Yeh mil gaya aapke liye: " + toolReply(matches);
+            if (matches.length) return "Here's what I found for you: " + toolReply(matches);
             // fallback
-            return "Is baare mein behtareen tareeqa hai humse direct baat karein — hamari team foran reply degi. <a class='ai-wa' href='" + waLink("Hello! Mera sawal: " + q) + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Ask on WhatsApp</a><br><br>Ya neeche diye options try karein \u{1F447}";
+            return "The best way to get an answer is to message our team directly — we reply quickly. <a class='ai-wa' href='" + waLink("Hello! My question: " + q) + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Ask on WhatsApp</a><br><br>Or try one of the options below \u{1F447}";
         }
 
         function handleUser(text) {
@@ -223,7 +223,7 @@
                 greeted = true;
                 renderChips();
                 setTimeout(function () {
-                    addMsg("Assalam-o-Alaikum! \u{1F44B} Main <b>Malik AI Assistant</b> hoon. Premium AI tools, prices, warranty ya order ke baare mein kuch bhi poochein!", "bot");
+                    addMsg("Hello! \u{1F44B} I'm the <b>Malik AI Assistant</b>. Ask me anything about premium AI tools, prices, warranty or ordering.", "bot");
                 }, 250);
             }
         }

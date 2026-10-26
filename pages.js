@@ -12,7 +12,7 @@
         return s ? s.getAttribute("src").replace(/pages\.js.*$/, "") : "";
     }
     function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-    function rs(n) { return "Rs " + Number(n).toLocaleString("en-US"); }
+    function rs(n) { var c = window.currencyConverter; return "Rs " + Number(n).toLocaleString("en-US") + (c && c.rates.USD ? " (≈ $" + (n * c.rates.USD).toFixed(2).replace(/\.00$/, "") + ")" : ""); }
 
     document.addEventListener("DOMContentLoaded", function () {
         /* Mobile menu */
@@ -90,3 +90,13 @@
         });
     });
 })();
+
+/* Homepage hero category chips → open the matching catalog tab */
+document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-hero-cat]");
+    if (!b) return;
+    var tab = document.querySelector('.tab-btn[data-category="' + b.getAttribute("data-hero-cat") + '"]');
+    if (tab) tab.click();
+    var cat = document.getElementById("catalog-section");
+    if (cat) cat.scrollIntoView({ behavior: "smooth" });
+});

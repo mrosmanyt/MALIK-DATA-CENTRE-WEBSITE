@@ -44,8 +44,12 @@ window.currencyConverter = {
             var stored = localStorage.getItem("mdc_currency");
             if (stored && this.rates[stored]) {
                 this.currentCurrency = stored;
+            } else {
+                this.currentCurrency = this.detect();
             }
-        } catch (e) {}
+        } catch (e) {
+            this.currentCurrency = this.detect();
+        }
         this.updateSelectors();
         
         var self = this;
@@ -59,6 +63,22 @@ window.currencyConverter = {
                 };
             }
         });
+    },
+    // First visit: pick the visitor's currency from their time zone (no network call, no tracking).
+    detect: function () {
+        try {
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+            var map = {
+                "Asia/Karachi": "PKR", "Asia/Kolkata": "INR", "Asia/Calcutta": "INR", "Asia/Dhaka": "BDT",
+                "Asia/Colombo": "LKR", "Asia/Tashkent": "UZS", "Asia/Samarkand": "UZS", "Asia/Kuala_Lumpur": "MYR",
+                "Asia/Jakarta": "IDR", "Europe/Istanbul": "TRY", "Asia/Riyadh": "SAR", "Asia/Dubai": "AED",
+                "Asia/Kuwait": "KWD", "Asia/Qatar": "QAR", "Asia/Muscat": "OMR", "Europe/London": "GBP"
+            };
+            if (map[tz]) return map[tz];
+            var euro = ["Amsterdam","Athens","Berlin","Bratislava","Brussels","Dublin","Helsinki","Lisbon","Ljubljana","Luxembourg","Madrid","Malta","Monaco","Paris","Riga","Rome","Tallinn","Vienna","Vilnius","Zagreb","Nicosia"];
+            if (tz.indexOf("Europe/") === 0 && euro.indexOf(tz.slice(7)) > -1) return "EUR";
+            return tz ? "USD" : "PKR";
+        } catch (e) { return "USD"; }
     },
     setCurrency: function (curr) {
         if (!this.rates[curr]) return;
