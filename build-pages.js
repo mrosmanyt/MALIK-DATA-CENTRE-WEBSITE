@@ -883,7 +883,7 @@ function updateHomepage() {
                     <div style="flex:1 1 320px">
                         <span class="pg-save">NEW · 100% FREE</span>
                         <h3 style="font-size:1.5rem;margin:8px 0 6px">MDC Design Studio: make thumbnails &amp; posts in your browser</h3>
-                        <p>YouTube thumbnails, Instagram posts, WhatsApp status, sale posts, Jumma &amp; Eid designs and flyers. Urdu fonts, ready templates and an AI background remover. No signup.</p>
+                        <p>140+ ready templates for Eid, Ramadan, 14 August, weddings, sales, menus and YouTube. Free photos, icons, QR codes, brand kit, multi-page PDF, AI image maker, AI writer and background remover. No signup.</p>
                     </div>
                     <span class="btn btn-gradient"><i class="fa-solid fa-palette"></i> Start designing</span>
                 </a>
@@ -961,7 +961,7 @@ function buildLlms() {
     "", "## Comparisons", "",
     ...CONTENT.comparisons.map(c => `- [${c.short}](${SITE}/comparisons/${c.slug}/)`),
     "", "## Free tools", "",
-    `- [MDC Design Studio](${SITE}/design/): free browser design maker for YouTube thumbnails, Instagram posts, WhatsApp status, sale posts, Eid/Jumma designs and flyers, with Urdu fonts and an AI background remover.`,
+    `- [MDC Design Studio](${SITE}/design/): free browser design maker with 140+ templates (Eid, Ramadan, 14 August, weddings, sales, restaurant menus, YouTube thumbnails, Reels covers, business cards), free stock photos and icons, QR codes, brand kit, photo crop and shape masks, multi-page PDF export, resize to many sizes, AI text-to-image, AI writer and translation, AI background remover, magic eraser and AI product photos.`,
     "", "## Services", "",
     ...Object.values(CONTENT.services).map(s => `- [${s.title}](${SITE}/${s.slug}/)`),
     "", "## Policies", "",

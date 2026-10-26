@@ -201,3 +201,72 @@ select.ds-input { cursor: pointer; }
     .ds-tpl-grid { grid-template-columns: 1fr 1fr; }
     #p-font { width: 118px; }
 }
+
+/* ==========================================================================
+   v2 additions: photos, icons, QR, brand kit, masks, pages, guides, dialogs
+   ========================================================================== */
+.ds-input.full { width: 100%; margin-bottom: 8px; }
+textarea.ds-input { height: auto; padding: 8px 9px; resize: vertical; line-height: 1.4; }
+#tpl-search { margin-bottom: 10px; }
+.ds-search { display: flex; gap: 6px; margin-bottom: 10px; }
+.ds-search .ds-input { flex: 1; }
+.ds-icon-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.ds-icon-grid button { aspect-ratio: 1; border-radius: 8px; background: #f4f4f8; display: grid; place-items: center; padding: 8px; border: 1px solid var(--line); }
+.ds-icon-grid button:hover { outline: 2px solid var(--pri); }
+.ds-icon-grid img { width: 100%; height: 100%; object-fit: contain; }
+#photo-grid button { position: relative; }
+#photo-grid button.busy::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='18' fill='none' stroke='%23fff' stroke-width='4' stroke-dasharray='80 40'/%3E%3C/svg%3E") center/30px no-repeat; }
+.ds-brand-logo { height: 90px; border-radius: 10px; border: 1px dashed var(--line2); display: grid; place-items: center; background: var(--bg3); margin-bottom: 8px; overflow: hidden; }
+.ds-brand-logo img { max-width: 80%; max-height: 80px; object-fit: contain; }
+.ds-brand-logo span { color: var(--tx3); font-size: .8rem; }
+.ds-brand-colors { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.ds-brand-colors .sw { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.ds-brand-colors input[type=color] { width: 100%; height: 38px; border: 1px solid var(--line2); border-radius: 8px; background: none; padding: 2px; cursor: pointer; }
+.ds-brand-colors button { font-size: .66rem; color: var(--tx2); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--line); }
+.ds-brand-colors button:hover { color: #fff; border-color: var(--pri); }
+.ds-mask-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 6px; }
+.ds-mask-grid button { aspect-ratio: 1; border-radius: 8px; background: var(--bg3); border: 1px solid var(--line); display: grid; place-items: center; padding: 7px; }
+.ds-mask-grid button.on, .ds-mask-grid button:hover { border-color: var(--pri); background: var(--pri-glow); }
+.ds-mask-grid svg { width: 100%; height: 100%; }
+.ds-canvas-wrap { position: relative; }
+.ds-grid-overlay { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
+.ds-guides { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+.ds-guides i { position: absolute; background: #ff3ea5; }
+.ds-guides i.v { width: 1px; top: 0; bottom: 0; }
+.ds-guides i.h { height: 1px; left: 0; right: 0; }
+.ds-pages { flex-shrink: 0; display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: var(--bg2); border-top: 1px solid var(--line); overflow-x: auto; }
+.ds-pages-list { display: flex; gap: 8px; align-items: center; }
+.ds-page { position: relative; height: 52px; border-radius: 6px; overflow: hidden; border: 2px solid var(--line2); background: #2a2a33; flex-shrink: 0; }
+.ds-page img { height: 100%; display: block; }
+.ds-page.cur { border-color: var(--pri); }
+.ds-page b { position: absolute; left: 3px; bottom: 2px; font-size: .62rem; background: rgba(0,0,0,.7); color: #fff; padding: 0 4px; border-radius: 4px; line-height: 1.5; }
+.ds-check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 6px; }
+.ds-check-grid label { display: flex; gap: 8px; align-items: center; padding: 9px; border-radius: 9px; background: var(--bg3); border: 1px solid var(--line); font-size: .8rem; cursor: pointer; }
+.ds-check-grid label small { display: block; color: var(--tx3); font-size: .7rem; }
+.ds-check-grid input { accent-color: var(--pri); }
+.ds-form { display: flex; flex-direction: column; gap: 8px; }
+.ds-form label { display: flex; flex-direction: column; gap: 4px; font-size: .8rem; color: var(--tx2); }
+.ds-form .ds-check { flex-direction: row; }
+.ds-dialog.wide { width: min(860px, 96vw); }
+.ds-erase-wrap { position: relative; display: inline-block; max-width: 100%; line-height: 0; background: #222; border-radius: 8px; overflow: hidden; }
+.ds-erase-wrap canvas { max-width: 100%; height: auto; display: block; }
+#erase-mask { position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: crosshair; touch-action: none; }
+.ds-ai-out { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; }
+#ai-img-out .res { display: flex; flex-direction: column; gap: 4px; grid-column: span 3; }
+#ai-img-out .res img { width: 100%; border-radius: 8px; }
+.ds-ai-card .ds-chips { margin: 8px 0; }
+.ds-ai-card .ds-chips button { font-size: .7rem; padding: 4px 9px; }
+#ai-quota { margin-top: -4px; }
+/* bigger handles and buttons on touch screens */
+@media (pointer: coarse) {
+    .ds-ibtn { width: 42px; height: 42px; }
+    .ds-btn.sm { height: 38px; }
+    .ds-chips button { padding: 8px 12px; }
+}
+@media (max-width: 860px) {
+    .ds-pages { padding: 4px 8px; }
+    .ds-page { height: 40px; }
+}
+#ai-img-out { grid-template-columns: 1fr; }
+#ai-img-out .res { grid-column: auto; }
+#ai-img-out .res button { aspect-ratio: auto; height: 32px; background: var(--bg2); overflow: visible; border: 1px solid var(--line2); }

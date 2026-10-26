@@ -536,6 +536,12 @@
 
   /* ---------------- AI: background removal (in browser) ---------------- */
   let bgLib = null;
+  async function removeBgBlob(blob, onStatus) {
+    if (!bgLib) bgLib = await import("https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/+esm");
+    return bgLib.removeBackground(blob, {
+      progress: (key, cur, total) => { if (total && /fetch/.test(key) && onStatus) onStatus(`Downloading AI model… ${Math.round((cur / total) * 100)}%`); }
+    });
+  }
   async function removeBg() {
     const o = active();
     const status = $("#ai-bg-status");
@@ -543,15 +549,12 @@
     const say = m => { status.textContent = m; toast(m, 4000); };
     try {
       say("Preparing AI… the first time downloads the AI model (about 40 MB).");
-      if (!bgLib) bgLib = await import("https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/+esm");
       const src = o._originalElement || o.getElement();
       const c = document.createElement("canvas"); c.width = src.naturalWidth || src.width; c.height = src.naturalHeight || src.height;
       c.getContext("2d").drawImage(src, 0, 0);
       const blob = await new Promise(r => c.toBlob(r, "image/png"));
       say("Removing background… please wait.");
-      const out = await bgLib.removeBackground(blob, {
-        progress: (key, cur, total) => { if (total && /fetch/.test(key)) status.textContent = `Downloading AI model… ${Math.round((cur / total) * 100)}%`; }
-      });
+      const out = await removeBgBlob(blob, m => { status.textContent = m; });
       const url = await new Promise(r => { const fr = new FileReader(); fr.onload = () => r(fr.result); fr.readAsDataURL(out); });
       const el = new Image();
       el.onload = () => { o.setElement(el); if (o.filters && o.filters.length) o.applyFilters(); canvas.requestRenderAll(); saveState(); say("Background removed ✔"); };
@@ -603,15 +606,47 @@
   const thumbCache = {};
   const cats = ["All", ...new Set(MDC_TEMPLATES.map(t => t.cat))];
   $("#tpl-filter").innerHTML = cats.map((c, i) => `<button class="${i ? "" : "active"}" data-cat="${c}">${c}</button>`).join("");
+  let tplCat = "All", tplQuery = "";
   function renderTemplates(cat) {
-    const list = MDC_TEMPLATES.filter(t => cat === "All" || t.cat === cat);
+    if (cat != null) tplCat = cat;
+    const q = tplQuery.trim().toLowerCase();
+    const list = MDC_TEMPLATES.filter(t => (tplCat === "All" || t.cat === tplCat) && (!q || (t.name + " " + t.cat + " " + t.id).toLowerCase().includes(q)));
     $("#tpl-grid").innerHTML = list.map(t => `<button class="ds-tpl" data-tpl="${t.id}" title="${t.name}">
-      <div class="thumb" style="aspect-ratio:${t.w}/${t.h}">${thumbCache[t.id] ? `<img src="${thumbCache[t.id]}" alt="">` : '<i class="fa-solid fa-spinner fa-spin" style="color:#555"></i>'}</div><span>${t.name}</span></button>`).join("");
+      <div class="thumb" style="aspect-ratio:${t.w}/${t.h}">${thumbCache[t.id] ? `<img src="${thumbCache[t.id]}" alt="">` : '<i class="fa-solid fa-spinner fa-spin" style="color:#555"></i>'}</div><span>${t.name}</span></button>`).join("")
+      || '<p class="ds-hint">No templates match. Try another word or category.</p>';
+    observeThumbs();
+  }
+  // Thumbnails are drawn only when a template scrolls into view, so 140+ templates do not slow down the first load.
+  const thumbQueue = [];
+  let thumbBusy = false;
+  const thumbObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { thumbObserver.unobserve(en.target); queueThumb(en.target.dataset.tpl); } });
+  }, { root: document.querySelector("#ds-panel"), rootMargin: "300px" }) : null;
+  function observeThumbs() {
+    $$("#tpl-grid [data-tpl]").forEach(b => { if (!thumbCache[b.dataset.tpl]) { if (thumbObserver) thumbObserver.observe(b); else queueThumb(b.dataset.tpl); } });
+  }
+  function queueThumb(id) { if (!thumbQueue.includes(id)) thumbQueue.push(id); runThumbs(); }
+  async function runThumbs() {
+    if (thumbBusy) return; thumbBusy = true;
+    while (thumbQueue.length) {
+      const id = thumbQueue.shift(); if (thumbCache[id]) continue;
+      const t = MDC_TEMPLATES.find(x => x.id === id); if (!t) continue;
+      const el = document.createElement("canvas");
+      const sc = new fabric.StaticCanvas(el, { width: t.w, height: t.h, renderOnAddRemove: false, enableRetinaScaling: false });
+      try { await buildTemplate(sc, t); sc.renderAll(); thumbCache[id] = sc.toDataURL({ format: "jpeg", quality: 0.8, multiplier: 300 / t.w }); } catch (e) { console.warn(e); }
+      sc.dispose();
+      const box = document.querySelector(`[data-tpl="${id}"] .thumb`);
+      if (box && thumbCache[id]) box.innerHTML = `<img src="${thumbCache[id]}" alt="">`;
+      await new Promise(r => setTimeout(r, 0));
+    }
+    thumbBusy = false;
   }
   $("#tpl-filter").addEventListener("click", e => {
     const b = e.target.closest("button"); if (!b) return;
     $$("#tpl-filter button").forEach(x => x.classList.toggle("active", x === b)); renderTemplates(b.dataset.cat);
   });
+  const tplSearch = $("#tpl-search");
+  if (tplSearch) tplSearch.addEventListener("input", () => { tplQuery = tplSearch.value; renderTemplates(); });
   $("#tpl-grid").addEventListener("click", e => {
     const b = e.target.closest("[data-tpl]"); if (!b) return;
     const tpl = MDC_TEMPLATES.find(t => t.id === b.dataset.tpl); loadTemplate(tpl);
@@ -623,20 +658,7 @@
     fit(); restoring = false; saveState(); updateCtx(); closeMobilePanel();
     toast(`"${tpl.name}" loaded. Tap any text to edit · Ctrl+Z to undo`);
   }
-  async function makeThumbs() {
-    for (const t of MDC_TEMPLATES) {
-      if (thumbCache[t.id]) continue;
-      const el = document.createElement("canvas");
-      const sc = new fabric.StaticCanvas(el, { width: t.w, height: t.h, renderOnAddRemove: false, enableRetinaScaling: false });
-      await buildTemplate(sc, t);
-      sc.renderAll();
-      thumbCache[t.id] = sc.toDataURL({ format: "jpeg", quality: 0.8, multiplier: 300 / t.w });
-      sc.dispose();
-      const img = document.querySelector(`[data-tpl="${t.id}"] .thumb`);
-      if (img) img.innerHTML = `<img src="${thumbCache[t.id]}" alt="">`;
-      await new Promise(r => setTimeout(r, 0));
-    }
-  }
+
 
   /* text panel */
   $$("[data-text]").forEach(b => b.onclick = () => addText(b.dataset.text));
@@ -739,20 +761,27 @@
     const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
     document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
   }
-  function download(kind) {
+  // Draws the current page at real size (empty photo frames left out)
+  function renderToCanvas(mult = 1, transparent = false) {
     canvas.discardActiveObject();
     const frames = canvas.getObjects().filter(o => o.mdcType === "frame" && o.visible !== false);
-    const bg = bgObj(); const transparent = kind === "pngt";
+    const bg = bgObj();
     frames.forEach(o => o.visible = false);
     if (transparent && bg) bg.visible = false;
     const vpt = canvas.viewportTransform.slice();
     canvas.setViewportTransform([1, 0, 0, 1, 0, 0]);
-    const mult = kind === "png2" ? 2 : 1;
     const el = canvas.toCanvasElement(mult, { left: 0, top: 0, width: W, height: H });
     canvas.setViewportTransform(vpt);
     frames.forEach(o => o.visible = true);
     if (bg) bg.visible = true;
     canvas.requestRenderAll();
+    el.hadFrames = frames.length > 0;
+    return el;
+  }
+  function download(kind) {
+    const mult = kind === "png2" ? 2 : 1;
+    const el = renderToCanvas(mult, kind === "pngt");
+    const frames = el.hadFrames ? [1] : [];
     const jpg = kind === "jpg";
     let out = el;
     if (jpg) { out = document.createElement("canvas"); out.width = el.width; out.height = el.height; const x = out.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0, 0, out.width, out.height); x.drawImage(el, 0, 0); }
@@ -811,8 +840,17 @@
   if (saved) loadSnapshot(saved, () => { autoFit = true; fit(); history = [snapshot()]; hIndex = 0; updateUndo(); toast("Welcome back! Your last design was restored."); });
   else startBlank();
   updateUndo();
-  setTimeout(makeThumbs, 300);
 
   // Expose a small API for testing / future AI features
-  window.MDC_STUDIO = { canvas, loadTemplate: id => loadTemplate(MDC_TEMPLATES.find(t => t.id === id)), addText, setSize, download, get size() { return [W, H]; } };
+  window.MDC_STUDIO = {
+    canvas, PROPS, FONTS, isRTL, toast, saveState, snapshot, loadSnapshot, centerAdd, makeObj, addImageURL, addText, readImage,
+    setBackground, bgObj, userObjects, fit, applyZoom, setSize, fontLoad, openPanel, closeMobilePanel, updateCtx, refreshLayers,
+    removeBgBlob, renderToCanvas, saveBlob, download, buildTemplate, makeFill,
+    loadTemplate: id => loadTemplate(typeof id === "string" ? MDC_TEMPLATES.find(t => t.id === id) : id),
+    renderTemplates: () => renderTemplates(),
+    get size() { return [W, H]; }, get zoom() { return zoom; },
+    set autoFit(v) { autoFit = v; }, get restoring() { return restoring; }, set restoring(v) { restoring = v; },
+    resetHistory() { history = [snapshot()]; hIndex = 0; updateUndo(); }
+  };
+  document.dispatchEvent(new CustomEvent("mdc:ready"));
 })();
