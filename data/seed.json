@@ -417,7 +417,7 @@
     "category": "payment",
     "q": "How do I apply a discount coupon?",
     "icon": "fa-solid fa-tag",
-    "a": "Enter your code (e.g. MDC10) in the coupon box above the catalog. The discount is deducted from your cart total and added to your WhatsApp order message automatically."
+    "a": "Enter your code (e.g. `MDC10`) in the coupon box above the catalog. The discount is deducted from your cart total and added to your WhatsApp order message automatically."
    }
   ]
  },
@@ -2296,5 +2296,5 @@
  "blog": {
   "posts": []
  },
- "_generated": "2026-10-27T06:54:02.069Z"
+ "_generated": "2026-10-27T14:20:29.535Z"
 }

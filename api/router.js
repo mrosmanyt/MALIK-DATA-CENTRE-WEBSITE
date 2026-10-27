@@ -190,7 +190,7 @@ async function sitemapCMS(req, res) {
    ====================================================================== */
 async function adminRoute(req, res, parts) {
   H.noStore(res);
-  if (!dbReady()) return fail(res, 503, "The database is not connected yet. Follow ADMIN-SETUP.md step 1 (Upstash Redis).");
+  if (!dbReady()) return fail(res, 503, "The database is not connected yet. Follow ADMIN-SETUP.md step 2 (Upstash Redis), then redeploy.");
   const method = req.method, write = method !== "GET" && method !== "HEAD";
   if (write && req.headers["x-mdc-admin"] !== "1") return fail(res, 403, "Blocked (missing security header).");
   const [area, sub, sub2] = parts;

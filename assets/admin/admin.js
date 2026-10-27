@@ -372,8 +372,17 @@
     return out;
   }
   // full working copy → what we store (lists with diffBy keep only changed items/fields)
+  // sections drawn from the page's own HTML: store only what differs from the original, so publishing
+  // one change never rewrites the rest (e.g. the footer text, which differs between page types)
+  var HTML_SECTIONS = ["hero", "how", "why", "services", "videos", "reviews", "refund", "faq", "payments", "referral", "contact"];
   function storedValue(key, full) {
-    var lf = listField(key); if (!lf) return full;
+    var lf = listField(key);
+    if (!lf) {
+      if (HTML_SECTIONS.indexOf(key) < 0) return full;
+      var sd = seedOf(key), out0 = {};
+      Object.keys(full).forEach(function (k) { if (k === "_hidden" || !same(full[k], sd[k])) out0[k] = full[k]; });
+      return out0;
+    }
     var seed = seedOf(key), by = lf.diffBy, smap = {}; (seed[lf.k] || []).forEach(function (s) { smap[s[by]] = s; });
     var out = Object.assign({}, full);
     out[lf.k] = (full[lf.k] || []).map(function (it) {

@@ -27,9 +27,9 @@
     if (img && !/^(https:\/\/|http:\/\/localhost[:/]|\/|\.\.?\/|[a-z0-9_-]+\/)/i.test(u)) return "";
     return u;
   }
-  // **bold**, *italic*, [text](url), "- " lists, blank line = new paragraph
+  // **bold**, *italic*, `code`, [text](url), "- " lists, blank line = new paragraph
   function inline(s) {
-    return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
+    return esc(s).replace(/`([^`\n]+)`/g, "<code>$1</code>").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
       .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, t, u) { var s2 = safeUrl(u.replace(/&amp;/g, "&")); return s2 ? '<a href="' + esc(s2) + '"' + (/^https?:/i.test(s2) ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + t + "</a>" : t; })
       .replace(/\n/g, "<br>");
   }
@@ -51,6 +51,7 @@
           var t = c.tagName;
           if (t === "STRONG" || t === "B") { var b = []; walk(c, b); buf.push("**" + b.join("").trim() + "**"); }
           else if (t === "EM") { var e = []; walk(c, e); buf.push("*" + e.join("").trim() + "*"); }
+          else if (t === "CODE") { var cd = []; walk(c, cd); buf.push("`" + cd.join("").trim() + "`"); }
           else if (t === "A") { var a = []; walk(c, a); buf.push("[" + a.join("").trim() + "](" + c.getAttribute("href") + ")"); }
           else if (t === "BR") buf.push("\n");
           else if (t === "I" || t === "SVG" || t === "svg") { /* icons are part of the design */ }
@@ -161,14 +162,19 @@
   function writeList(box, items) {
     var olds = box.querySelectorAll(":scope > [data-cms-item]");
     if (!olds.length || !Array.isArray(items)) return;
-    var tpl = olds[0].cloneNode(true), sepEl = box.querySelector(":scope > [data-cms-sep]"), sepTpl = sepEl ? sepEl.cloneNode(true) : null;
+    // each position keeps its own original item as the template (animation delays, open state…);
+    // extra items copy the last one
+    var tpls = Array.prototype.map.call(olds, function (o) { return o.cloneNode(true); }), sepEl = box.querySelector(":scope > [data-cms-sep]"), sepTpl = sepEl ? sepEl.cloneNode(true) : null;
     var last = olds[olds.length - 1], anchor = last.nextSibling;
     while (anchor && anchor.nodeType === 1 && anchor.hasAttribute("data-cms-sep")) anchor = anchor.nextSibling;
+    // keep the white space that separated the original items (inline layouts show it as a gap)
+    var gap = olds[0].nextSibling && olds[0].nextSibling.nodeType === 3 && !olds[0].nextSibling.nodeValue.trim() ? olds[0].nextSibling.nodeValue : "";
     Array.prototype.forEach.call(box.querySelectorAll(":scope > [data-cms-item], :scope > [data-cms-sep]"), function (n) { n.remove(); });
     var shown = items.filter(function (it) { return it && !it._hidden; });
     shown.forEach(function (it, i) {
-      if (i && sepTpl) box.insertBefore(sepTpl.cloneNode(true), anchor);
-      var node = tpl.cloneNode(true);
+      if (i && gap) box.insertBefore(document.createTextNode(gap), anchor);
+      if (i && sepTpl) { box.insertBefore(sepTpl.cloneNode(true), anchor); if (gap) box.insertBefore(document.createTextNode(gap), anchor); }
+      var node = (tpls[i] || tpls[tpls.length - 1]).cloneNode(true);
       renumber(node, i);
       fieldsIn(node).forEach(function (f) { writeField(f, it, i); });
       box.insertBefore(node, anchor);
@@ -236,6 +242,13 @@
     if (!linkMap.length) return;
     // bubble listener on window runs after the site's own click handlers and before the browser follows the link
     window.addEventListener("click", function (e) { var a = e.target.closest && e.target.closest("a[href]"); if (a) { var h = a.getAttribute("href"), n = mapUrl(h); if (n !== h) a.setAttribute("href", n); } });
+    // links the site builds later (catalog cards, cart, pop-ups) are fixed as soon as they appear,
+    // so "copy link", long-press and middle-click use the new number too
+    if (window.MutationObserver) {
+      var queued = false;
+      new MutationObserver(function () { if (queued) return; queued = true; setTimeout(function () { queued = false; rewriteLinks(); }, 50); })
+        .observe(document.documentElement, { childList: true, subtree: true });
+    }
     var open = window.open;
     window.open = function (u) { var args = Array.prototype.slice.call(arguments); args[0] = mapUrl(String(u || "")); return open.apply(window, args); };
   }

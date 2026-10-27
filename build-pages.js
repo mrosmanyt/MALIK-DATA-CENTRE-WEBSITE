@@ -289,7 +289,7 @@ ${body(rel)}
 </main>
 ${footer(rel)}
 <script src="/api/content.js"></script>
-<script src="${rel}assets/js/cms.js?v=1.0"></script>
+<script src="${rel}assets/js/cms.js?v=1.1"></script>
 <script src="${rel}tool-links.js" defer></script>
 <script src="${rel}pages.js" defer></script>
 ${checkout ? `<script src="${rel}store-backend.js" defer></script>` : ""}
@@ -540,6 +540,7 @@ function requestFormHtml() {
       <div><label for="r-tool">Tool name *</label><input id="r-tool" name="Tool" required placeholder="e.g. Midjourney, Perplexity Pro"></div>
       <div><label for="r-dur">Duration</label><input id="r-dur" name="Duration" placeholder="e.g. 1 month, 1 year"></div>
       <div><label for="r-acc">Account type</label><select id="r-acc" name="Account type"><option>Private / on my email</option><option>Shared is fine</option><option>Not sure</option></select></div>
+      <div><label for="r-wa">Your WhatsApp number</label><input id="r-wa" name="WhatsApp" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +92 300 1234567"></div>
     </div>
     <div><label for="r-note">Notes</label><textarea id="r-note" name="Notes" placeholder="Budget, usage, deadline..."></textarea></div>
     <button class="btn btn-success" type="submit" style="justify-self:start"><i class="fa-brands fa-whatsapp"></i> Send request on WhatsApp</button>
@@ -779,6 +780,7 @@ function buildPolicies() {
 <p>Fill this in and it opens WhatsApp with your message ready to send.</p>
 <form class="pg-form" data-pg-waform data-intro="Hello MALIK DATA CENTRE!">
   <div class="row"><div><label for="c-name">Your name *</label><input id="c-name" name="Name" required></div>
+  <div><label for="c-wa">Your WhatsApp number</label><input id="c-wa" name="WhatsApp" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +92 300 1234567"></div>
   <div><label for="c-topic">Topic</label><select id="c-topic" name="Topic"><option>New order</option><option>Setup help</option><option>Warranty claim</option><option>Request a tool</option><option>Services / quote</option><option>Other</option></select></div>
   <div><label for="c-order">Order number (if any)</label><input id="c-order" name="Order #"></div></div>
   <div><label for="c-msg">Message *</label><textarea id="c-msg" name="Message" required></textarea></div>
@@ -821,7 +823,7 @@ function buildServices() {
     <h2>Get a quote</h2>
     <p>${esc(s.note || "Send your details and we will reply on WhatsApp with a written quote.")}</p>
     <form class="pg-form" data-pg-waform data-intro="Hello MALIK DATA CENTRE! I want a quote for ${esc(s.title)}:">
-      <div class="row"><div><label>Your name *</label><input name="Name" required></div>${s.formFields.map(k => FIELD[k]).join("")}</div>
+      <div class="row"><div><label>Your name *</label><input name="Name" required></div><div><label>Your WhatsApp number</label><input name="WhatsApp" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +92 300 1234567"></div>${s.formFields.map(k => FIELD[k]).join("")}</div>
       <div><label>Details</label><textarea name="Details" placeholder="Tell us more..."></textarea></div>
       <button class="btn btn-success" type="submit" style="justify-self:start"><i class="fa-brands fa-whatsapp"></i> Request quote on WhatsApp</button>
     </form>
