@@ -431,5 +431,5 @@
     busy(btn, false);
   };
 
-  window.MDC_AI = { aiText, aiImage, pickTemplate, fillTexts, get used() { return used(); } };
+  window.MDC_AI = { aiText, aiImage, pickTemplate, fillTexts, get used() { return used(); }, setDailyLimit(n) { CFG.dailyLimit = n; showQuota(); } };
 })();

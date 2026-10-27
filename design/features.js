@@ -69,6 +69,7 @@
     pageTimer = setTimeout(() => { persistPages(); refreshThumb(cur); }, 700);
   }
   ["object:added", "object:removed", "object:modified", "text:changed"].forEach(ev => c.on(ev, schedulePages));
+  document.addEventListener("mdc:saved", schedulePages);   // also after templates, undo and size changes
   function renderPages() {
     $("#pages-list").innerHTML = pages.map((_, i) => `<button class="ds-page${i === cur ? " cur" : ""}" data-page="${i}" title="Page ${i + 1}">${thumbs[i] ? `<img src="${thumbs[i]}" alt="">` : '<span style="display:block;width:52px"></span>'}<b>${i + 1}</b></button>`).join("");
     $("#page-del").disabled = pages.length < 2;
@@ -91,6 +92,14 @@
     return JSON.stringify({ v: 1, w: W, h: H, json: { version: fabric.version, objects: [{ type: "rect", left: 0, top: 0, width: W, height: H, fill: "#ffffff", selectable: false, evented: false, hasControls: false, hasBorders: false, name: "Background", mdcType: "bg", mdcBg: "#ffffff", strokeWidth: 0 }] } });
   }
   $("#pages-list").addEventListener("click", e => { const b = e.target.closest("[data-page]"); if (b) goToPage(+b.dataset.page); });
+  // add a page after the current one (blank, or from a saved snapshot) and open it
+  function addPage(str, done) { pages[cur] = S.snapshot(); pages.splice(cur + 1, 0, str || blankSnapshot()); thumbs.splice(cur + 1, 0, ""); goToPage(cur + 1, done); }
+  // replace every page (opening a cloud design)
+  function replacePages(list, at, done) {
+    if (!Array.isArray(list) || !list.length) return;
+    pages = list.slice(); thumbs = pages.map(() => ""); cur = -1;
+    goToPage(Math.min(Math.max(0, at || 0), pages.length - 1), () => { pages.forEach((_, i) => refreshThumb(i)); done && done(); });
+  }
   $("#page-add").onclick = () => { pages[cur] = S.snapshot(); pages.splice(cur + 1, 0, blankSnapshot()); thumbs.splice(cur + 1, 0, ""); goToPage(cur + 1, () => S.toast(`Page ${cur + 1} added`)); };
   $("#page-dup").onclick = () => { pages[cur] = S.snapshot(); pages.splice(cur + 1, 0, pages[cur]); thumbs.splice(cur + 1, 0, thumbs[cur]); goToPage(cur + 1, () => S.toast("Page duplicated")); };
   $("#page-del").onclick = () => {
@@ -592,5 +601,5 @@
 
   /* ---------------- start ---------------- */
   initPages();
-  window.MDC_FEATURES = { get pages() { return pages; }, get cur() { return cur; }, goToPage, exportPDF, exportZIP, renderSnapshot, scaledSnapshot, applyMask, applyCrop, searchPhotos, searchIcons, brand };
+  window.MDC_FEATURES = { get pages() { return pages; }, get cur() { return cur; }, goToPage, addPage, replacePages, exportPDF, exportZIP, renderSnapshot, scaledSnapshot, applyMask, applyCrop, searchPhotos, searchIcons, brand };
 })();

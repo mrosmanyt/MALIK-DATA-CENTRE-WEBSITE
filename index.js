@@ -901,6 +901,9 @@ const TOOLS_DATABASE = [
     }
 ];
 
+// Admin panel (CMS): apply published prices, stock, badges, hidden and new tools
+if (window.MDC_CMS && typeof window.MDC_CMS.tools === "function") { try { window.MDC_CMS.tools(TOOLS_DATABASE); } catch (e) { console.warn(e); } }
+
 // Official WhatsApp contact numbers (Line 1 Primary & Line 2 Secondary)
 const WHATSAPP_NUMBERS = ["923445739206", "923489057646"];
 let waCounter = 0;
@@ -915,6 +918,7 @@ const WHATSAPP_NUMBER_2 = "+923489057646";
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
 const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m"];
 const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
+if (window.MDC_CMS && typeof window.MDC_CMS.ribbons === "function") { try { window.MDC_CMS.ribbons(BESTSELLER_IDS, POPULAR_IDS); } catch (e) { console.warn(e); } }
 // Order used by the "Most Popular" sort
 const POPULARITY_ORDER = [
     "grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m", "google-ai-ultra-shared-1m",
@@ -1271,7 +1275,9 @@ function renderTools(tools = TOOLS_DATABASE) {
 
         // Best Seller / Popular ribbon
         let ribbonHTML = "";
-        if (BESTSELLER_IDS.includes(tool.id)) {
+        if (tool.cmsBadge) {
+            ribbonHTML = `<div class="tool-ribbon ribbon-popular"><i class="fa-solid fa-tag"></i> ${tool.cmsBadge}</div>`;
+        } else if (BESTSELLER_IDS.includes(tool.id)) {
             ribbonHTML = `<div class="tool-ribbon ribbon-bestseller"><i class="fa-solid fa-fire"></i> Best Seller</div>`;
         } else if (POPULAR_IDS.includes(tool.id)) {
             ribbonHTML = `<div class="tool-ribbon ribbon-popular"><i class="fa-solid fa-star"></i> Popular</div>`;
@@ -1308,10 +1314,10 @@ function renderTools(tools = TOOLS_DATABASE) {
                         <span class="tool-original-price">${originalPriceDisplay}</span>
                         <span class="tool-price">${priceDisplay}</span>
                     </div>
-                    <a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
+                    ${tool.cmsSoldOut ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Buy Now
-                    </a>
-                    <button class="btn-addcart" id="addcart-${tool.id}"
+                    </a>`}
+                    ${tool.cmsSoldOut ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
                         data-id="${tool.id}"
                         data-name="${tool.name.replace(/"/g, '&quot;')}"
                         data-price="${tool.price}"
@@ -1319,7 +1325,7 @@ function renderTools(tools = TOOLS_DATABASE) {
                         data-setup="${tool.setup.replace(/"/g, '&quot;')}"
                         aria-label="Add ${tool.name.replace(/"/g, '&quot;')} to cart" title="Add to cart">
                         <i class="fa-solid fa-cart-plus"></i>
-                    </button>
+                    </button>`}
                 </div>
             </article>
         `;

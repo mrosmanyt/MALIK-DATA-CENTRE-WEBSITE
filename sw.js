@@ -1,5 +1,5 @@
 /* MALIK DATA CENTRE — Service Worker (offline + installable PWA) */
-const CACHE = "mdc-cache-v16";
+const CACHE = "mdc-cache-v21";
 const ASSETS = [
   "./",
   "./index.html",
@@ -44,6 +44,10 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
+  // never cache live data or the admin panel (private, must always be fresh)
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+  if (/^\/(api\/|admin|assets\/admin\/|data\/|blog\/p\/|sitemap-cms\.xml)/.test(url.pathname)) return;
   
   // Network-first for navigations, JS & CSS scripts to guarantee instant live updates
   if (req.mode === "navigate" || req.url.includes(".js") || req.url.includes(".css")) {

@@ -22,7 +22,10 @@
     { id: "ad-sky", name: "Google ad 160×600 (Skyscraper)", w: 160, h: 600, cat: "Ads" },
     { id: "ad-mobile", name: "Google ad 320×50 (Mobile banner)", w: 320, h: 50, cat: "Ads" },
     { id: "x-post", name: "X / Twitter post", w: 1600, h: 900, cat: "Social" },
-    { id: "pin", name: "Pinterest pin", w: 1000, h: 1500, cat: "Social" }
+    { id: "pin", name: "Pinterest pin", w: 1000, h: 1500, cat: "Social" },
+    { id: "yt-profile", name: "YouTube profile picture", w: 800, h: 800, cat: "YouTube" },
+    { id: "yt-endscreen", name: "YouTube end screen", w: 1920, h: 1080, cat: "YouTube" },
+    { id: "yt-shorts", name: "YouTube Shorts cover", w: 1080, h: 1920, cat: "YouTube" }
   ];
   AD_SIZES.forEach(s => { if (!MDC_SIZES.some(x => x.id === s.id)) MDC_SIZES.push(s); });
   window.MDC_AD_SETS = {
@@ -204,8 +207,9 @@
     o.push(frame(cx - pw / 2, y, pw, ph, "Product photo", { rx: 28 * u }));
     if (c.price) {
       const r = Math.min(150 * u, ph * 0.32);
-      o.push(star(cx + pw / 2 - r * 1.3, y - r * 0.35, r, p.a, 18, 0.86));
-      o.push(T(c.price, cx + pw / 2 - r * 1.3 + r * 0.15, y - r * 0.35 + r * 0.62, r * 1.7, r * 0.34, ANTON, p.bt === "#ffffff" ? "#ffffff" : "#111111", { lh: 0.95, weight: "normal" }));
+      const sx = Math.min(cx + pw / 2 - r * 1.3, W - 2 * r - 14 * u);   // keep the price burst inside the page
+      o.push(star(sx, y - r * 0.35, r, p.a, 18, 0.86));
+      o.push(T(c.price, sx + r * 0.15, y - r * 0.35 + r * 0.62, r * 1.7, r * 0.34, ANTON, p.bt === "#ffffff" ? "#ffffff" : "#111111", { lh: 0.95, weight: "normal" }));
     }
     if (c.cta) o.push(...btn(c.cta, cx, bottom + 20 * u, u, p.a, p.bt));
     if (c.trust) o.push(trustRow(c.trust, m, H - 80 * u, cw, u, p.mu));
@@ -406,6 +410,49 @@
     ["ad-g-mobile", "Google 320×50: mobile", "mobile", "banner", "shopDark", { t: "50% Off Today Only", cta: "Shop" }],
     ["ad-link-sale", "Link ad 1200×628: sale", "link", "banner", "sunset", { t: "Weekend Mega Sale", s: "Up to 50% off fashion, shoes and bags", cta: "Shop now" }]
   ];
+  /* ---------------- YouTube channel kit ---------------- */
+  const KIT = [];
+  const SAFE = { w: 1546, h: 423 };   // visible on every device, centred in 2560×1440
+  const banner = (id, name, p, c) => {
+    const W = 2560, H = 1440, x0 = (W - SAFE.w) / 2, y0 = (H - SAFE.h) / 2, o = [];
+    o.push({ t: "circle", l: -300, top: -400, r: 900, fill: alpha(p.a, 0.12) });
+    o.push({ t: "circle", l: W - 900, top: H - 700, r: 800, fill: alpha(p.a2 || p.a, 0.12) });
+    if (c.photo) o.push(frame(x0, y0 + 20, 380, 380, "Your photo", { shape: "circle" }));
+    const tx = c.photo ? x0 + 430 : x0, tw = c.photo ? SAFE.w - 430 : SAFE.w, al = c.photo ? "left" : "center";
+    o.push(T(c.t, tx, y0 + 30, tw, fitSize(c.t, tw, 190, 1, c.f || ANTON), c.f || ANTON, p.tx, { align: al, weight: c.f ? 900 : "normal" }));
+    o.push(T(c.s, tx, y0 + 250, tw, fitSize(c.s, tw, 58, 1, POP), POP, p.mu, { align: al, weight: 600 }));
+    if (c.k) { const w = c.k.length * 26 + 90; o.push({ t: "rect", l: al === "left" ? tx : W / 2 - w / 2, top: y0 + 345, w, h: 64, rx: 32, fill: p.a }); o.push(T(c.k, al === "left" ? tx : W / 2 - w / 2, y0 + 360, w, 30, MONT, p.bt, { weight: 800 })); }
+    KIT.push({ id, name, cat: "YouTube", w: W, h: H, bg: p.bg, objects: o, safe: "banner" });
+  };
+  banner("kit-banner-bold", "Channel banner: bold", P.red, { t: "YOUR CHANNEL", s: "Tech reviews · tutorials · honest opinions", k: "NEW VIDEOS EVERY FRIDAY" });
+  banner("kit-banner-photo", "Channel banner: with photo", P.blue, { t: "Ali Explains", s: "Money, business and AI made simple", k: "SUBSCRIBE FOR WEEKLY VIDEOS", photo: true, f: MONT });
+  banner("kit-banner-gaming", "Channel banner: gaming", P.neon, { t: "GAMER ZONE", s: "Live streams · highlights · tips", k: "LIVE EVERY NIGHT 9 PM" });
+  banner("kit-banner-clean", "Channel banner: clean", P.clean, { t: "Sana's Kitchen", s: "Easy home recipes in under 30 minutes", k: "NEW RECIPE EVERY SUNDAY", f: MONT });
+  // profile picture
+  KIT.push({ id: "kit-profile", name: "Channel profile picture", cat: "YouTube", w: 800, h: 800, bg: P.red.bg, objects: [
+    { t: "circle", l: 40, top: 40, r: 360, fill: "rgba(0,0,0,0)", stroke: "#ffe600", sw: 18 },
+    T("YC", 100, 220, 600, 300, ANTON, "#ffffff", { weight: "normal", stroke: "#000", sw: 10, shadow: hard(1.5) })
+  ] });
+  // end screen with marked zones (zones are photo frames, so they are left out of downloads)
+  KIT.push({ id: "kit-endscreen", name: "End screen (20 s)", cat: "YouTube", w: 1920, h: 1080, bg: P.black.bg, objects: [
+    T("WATCH NEXT", 120, 90, 1100, 120, ANTON, "#ffffff", { align: "left", weight: "normal" }),
+    T("Thanks for watching!", 120, 230, 1100, 50, POP, "#c9c9d1", { align: "left", weight: 600 }),
+    frame(120, 330, 880, 495, "Video zone (add in YouTube Studio)", { rx: 16 }),
+    frame(1180, 300, 560, 560, "Subscribe zone", { shape: "circle" }),
+    T("SUBSCRIBE FOR MORE", 1100, 900, 720, 54, ANTON, "#ffd400", { weight: "normal" })
+  ], safe: "endscreen" });
+  KIT.push({ id: "kit-shorts-cover", name: "Shorts cover", cat: "YouTube", w: 1080, h: 1920, bg: P.red.bg, objects: [
+    frame(0, 0, 1080, 1920, "Background photo"),
+    { t: "rect", l: 0, top: 820, w: 1080, h: 1100, fill: { g: [180, ["rgba(0,0,0,0)", 0], ["rgba(0,0,0,.85)", 1]] } },
+    ...tag("PART 1", 80, 1080, 1.6, "#ffe600", "#000000", -3),
+    big("3 THINGS I WISH I KNEW", 80, 1220, 920, 190, 3, "#ffffff", 1.5)
+  ] });
+  KIT.push({ id: "kit-shorts-cover-2", name: "Shorts cover: tip", cat: "YouTube", w: 1080, h: 1920, bg: P.neon.bg, objects: [
+    T("💡", 390, 260, 300, 240, "Inter", "#000"),
+    big("THE 10-SECOND TRICK", 80, 620, 920, 200, 3, "#ffffff", 1.5, { align: "center" }),
+    frame(190, 1180, 700, 600, "Your photo", { rx: 40 })
+  ] });
+
   const SZ = { fbfeed: [1080, 1080], fb45: [1080, 1350], story: [1080, 1920], link: [1200, 628], mrec: [300, 250], lrec: [336, 280], leader: [728, 90], billboard: [970, 250], halfpage: [300, 600], sky: [160, 600], mobile: [320, 50] };
 
   const out = [];
@@ -417,8 +464,22 @@
     const [W, H] = SZ[size], p = P[pal], lay = autoAd(W, H) || layout;
     try { out.push({ id, name, cat: "Ads", w: W, h: H, bg: p.bg, objects: AD[lay](W, H, c, p, Math.min(W, H) / 1080) }); } catch (e) { console.warn(id, e); }
   });
+  KIT.forEach(t => out.push(t));
   out.forEach(t => t.objects.forEach(o => { if (o.t === "text") delete o.h; }));
   // Thumbnails and ads go first in the library: they are the most used.
   window.MDC_TEMPLATES = out.concat(window.MDC_TEMPLATES || []);
-  window.MDC_PRO_KIT = { ARROW, P };
+  // build a fresh thumbnail from any layout + palette + content (used by "Thumbnail from a title")
+  function makeThumb(layout, pal, c, id) {
+    const W = 1280, H = 720, p = P[pal] || P.red, objects = (TH[layout] || TH.face)(W, H, c, p, H / 720);
+    objects.forEach(o => { if (o.t === "text") delete o.h; });
+    return { id: id || "ai-" + layout, name: "Thumbnail idea", cat: "YouTube", w: W, h: H, bg: p.bg, objects };
+  }
+  // build a fresh ad from any layout + size + palette + content (used by "AI ad variations")
+  function makeAd(layout, size, pal, c, id) {
+    const [W, H] = Array.isArray(size) ? size : SZ[size] || SZ.fbfeed, p = P[pal] || P.shopWhite, lay = autoAd(W, H) || layout;
+    const objects = (AD[lay] || AD.product)(W, H, c, p, Math.min(W, H) / 1080);
+    objects.forEach(o => { if (o.t === "text") delete o.h; });
+    return { id: id || "ai-ad", name: "Ad variation", cat: "Ads", w: W, h: H, bg: p.bg, objects };
+  }
+  window.MDC_PRO_KIT = { ARROW, P, makeThumb, makeAd, layouts: Object.keys(TH), adLayouts: Object.keys(AD) };
 })();

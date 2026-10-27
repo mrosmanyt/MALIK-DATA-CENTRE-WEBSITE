@@ -189,6 +189,7 @@
       if (history.length > 60) history.shift();
       hIndex = history.length - 1;
       updateUndo(); refreshLayers();
+      document.dispatchEvent(new Event("mdc:saved"));
       clearTimeout(storeTimer);
       storeTimer = setTimeout(() => {
         try { localStorage.setItem(STORE_KEY, s); }
@@ -612,8 +613,8 @@
   let tplCat = "All", tplQuery = "";
   function renderTemplates(cat) {
     if (cat != null) tplCat = cat;
-    const q = tplQuery.trim().toLowerCase();
-    const list = MDC_TEMPLATES.filter(t => (tplCat === "All" || t.cat === tplCat) && (!q || (t.name + " " + t.cat + " " + t.id).toLowerCase().includes(q)));
+    const qs = tplQuery.toLowerCase().split(/[|,]/).map(x => x.trim()).filter(Boolean);   // "eid|ramadan" matches either word
+    const list = MDC_TEMPLATES.filter(t => (tplCat === "All" || t.cat === tplCat) && (!qs.length || qs.some(q => (t.name + " " + t.cat + " " + t.id).toLowerCase().includes(q))));
     $("#tpl-grid").innerHTML = list.map(t => `<button class="ds-tpl" data-tpl="${t.id}" title="${t.name}">
       <div class="thumb" style="aspect-ratio:${t.w}/${t.h}">${thumbCache[t.id] ? `<img src="${thumbCache[t.id]}" alt="">` : '<i class="fa-solid fa-spinner fa-spin" style="color:#555"></i>'}</div><span>${t.name}</span></button>`).join("")
       || '<p class="ds-hint">No templates match. Try another word or category.</p>';

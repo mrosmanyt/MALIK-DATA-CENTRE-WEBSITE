@@ -20,8 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Lobster&family=Montserrat:wght@400;700;900&family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;600;700;800;900&family=Pacifico&family=Playfair+Display:wght@400;700;900&family=Poppins:wght@400;600;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="studio.css?v=2.2">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Postly Design Studio","url":"https://www.malikdatacentre.store/design/","applicationCategory":"DesignApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"PKR"},"publisher":{"@type":"Organization","name":"MALIK DATA CENTRE","url":"https://www.malikdatacentre.store/"},"description":"Free YouTube thumbnail and ad creative maker with 200+ templates, face cut-out, text effects, feed preview, one-click ad sets, free stock photos and icons, QR codes, brand kit, multi-page PDF export, AI text-to-image, AI writer, background remover and magic eraser. Urdu fonts included."}</script>
+<link rel="stylesheet" href="studio.css?v=2.6">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Postly Design Studio","url":"https://www.malikdatacentre.store/design/","applicationCategory":"DesignApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"PKR"},"publisher":{"@type":"Organization","name":"MALIK DATA CENTRE","url":"https://www.malikdatacentre.store/"},"description":"Free YouTube thumbnail and ad creative maker with 200+ templates, face cut-out, text effects, feed preview, one-click ad sets, free stock photos and icons, QR codes, brand kit, multi-page PDF export, AI text-to-image, AI writer, thumbnail ideas from a title, thumbnail score and A/B compare, animated video and GIF ads, background remover and magic eraser. Urdu fonts included."}</script>
 </head>
 <body>
 <div class="ds-app" id="ds-app">
@@ -48,6 +48,18 @@
     </div>
     <div class="ds-top-right">
       <div class="ds-menu-wrap">
+        <button class="ds-btn ghost" id="btn-account" title="Your account"><i class="fa-regular fa-circle-user"></i> <span class="hide-xs" id="acct-label">Sign in</span></button>
+        <div class="ds-menu right" id="menu-account">
+          <div class="ds-menu-title" id="acct-email">Not signed in</div>
+          <button data-acct="designs"><i class="fa-solid fa-cloud"></i> My designs</button>
+          <button data-acct="save"><i class="fa-solid fa-cloud-arrow-up"></i> Save to cloud</button>
+          <button data-acct="review"><i class="fa-solid fa-user-check"></i> Send for client approval</button>
+          <div class="ds-menu-sep"></div>
+          <button data-acct="pro"><i class="fa-solid fa-crown"></i> <span id="acct-pro-label">Postly Pro</span></button>
+          <button data-acct="out" id="acct-out"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+        </div>
+      </div>
+      <div class="ds-menu-wrap">
         <button class="ds-btn ghost hide-sm" id="btn-file"><i class="fa-regular fa-folder-open"></i> File</button>
         <div class="ds-menu" id="menu-file">
           <button data-act="new"><i class="fa-regular fa-file"></i> New blank design</button>
@@ -69,6 +81,7 @@
           <button data-dl="pdf"><i class="fa-regular fa-file-pdf"></i> PDF (all pages)</button>
           <button data-dl="zip"><i class="fa-solid fa-file-zipper"></i> All pages as PNG (ZIP)</button>
           <div class="ds-menu-sep"></div>
+          <button data-act="share"><i class="fa-solid fa-share-nodes"></i> Share (WhatsApp, Instagram…)</button>
           <button data-act="print"><i class="fa-solid fa-print"></i> Order prints of this design</button>
           <button data-act="designforme"><i class="fa-solid fa-hand-holding-heart"></i> Ask us to design it for you</button>
           <div class="ds-menu-sep"></div>
@@ -85,6 +98,7 @@
     <nav class="ds-rail" aria-label="Tools">
       <button class="active" data-panel="templates"><i class="fa-solid fa-table-cells-large"></i><span>Templates</span></button>
       <button data-panel="kit"><i class="fa-solid fa-bolt"></i><span>YT &amp; Ads</span></button>
+      <button data-panel="animate"><i class="fa-solid fa-film"></i><span>Animate</span></button>
       <button data-panel="text"><i class="fa-solid fa-font"></i><span>Text</span></button>
       <button data-panel="elements"><i class="fa-solid fa-shapes"></i><span>Elements</span></button>
       <button data-panel="photos"><i class="fa-regular fa-images"></i><span>Photos</span></button>
@@ -114,6 +128,28 @@
           <button class="ds-btn ghost sm" id="kit-tpl-thumb"><i class="fa-solid fa-table-cells-large"></i> Thumbnail templates</button>
           <button class="ds-btn ghost sm" id="kit-tpl-ads"><i class="fa-solid fa-table-cells-large"></i> Ad templates</button>
         </div>
+        <div class="ds-thbox">
+          <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Thumbnail from your video title</h4>
+          <textarea id="th-title" class="ds-input" rows="2" maxlength="140" placeholder="e.g. I tried 5 AI tools to make money in 30 days"></textarea>
+          <label class="ds-check"><input type="checkbox" id="th-ai-bg"> Add an AI background picture <small>(uses 1 AI credit per idea)</small></label>
+          <label class="ds-btn ghost sm full ds-file-btn"><i class="fa-regular fa-image"></i> <span id="th-photo-name">Add your photo (optional)</span><input type="file" id="th-photo" accept="image/*" hidden></label>
+          <button class="ds-btn primary full" id="th-make"><i class="fa-solid fa-bolt"></i> Make 3 thumbnail ideas</button>
+          <p class="ds-hint">Each idea opens as a new page with a short hook (not the title), so you can compare them.</p>
+        </div>
+        <h4><i class="fa-brands fa-youtube"></i> Import a YouTube video</h4>
+        <div class="ds-row" style="gap:6px">
+          <input id="yt-link" class="ds-input" style="flex:1;min-width:0" placeholder="Paste a YouTube link">
+          <button class="ds-btn ghost sm" id="yt-import" type="button">Import</button>
+        </div>
+        <div id="yt-out"></div>
+        <h4><i class="fa-solid fa-gauge-high"></i> Test your thumbnail</h4>
+        <div class="ds-grid2">
+          <button class="ds-btn ghost sm" id="th-score"><i class="fa-solid fa-gauge-high"></i> Thumbnail score</button>
+          <button class="ds-btn ghost sm" id="th-ab"><i class="fa-solid fa-code-compare"></i> A/B compare</button>
+          <button class="ds-btn ghost sm" id="th-pop"><i class="fa-solid fa-sun"></i> One-click pop</button>
+          <button class="ds-btn ghost sm" id="th-blur"><i class="fa-solid fa-user"></i> Blur behind me</button>
+        </div>
+        <p class="ds-hint">Pop and blur work on the selected photo (or the biggest photo on the page).</p>
         <h4>Text effects <small>(select a text first)</small></h4>
         <div class="ds-fx-grid" id="kit-text-fx"></div>
         <h4>Photo effects <small>(select a photo first)</small></h4>
@@ -137,10 +173,51 @@
         <button class="ds-btn ghost full" id="kit-safe"><i class="fa-solid fa-border-none"></i> Show safe zones</button>
         <button class="ds-btn primary full" id="kit-yt-dl"><i class="fa-solid fa-download"></i> Download for YouTube (JPG, under 2 MB)</button>
         <h4>Ad tools</h4>
+        <div class="ds-grid2">
+          <button class="ds-btn primary sm" id="ad-variations"><i class="fa-solid fa-wand-magic-sparkles"></i> AI ad variations</button>
+          <button class="ds-btn ghost sm" id="ad-preview"><i class="fa-brands fa-instagram"></i> FB &amp; IG preview</button>
+          <button class="ds-btn ghost sm" id="ad-mockups"><i class="fa-solid fa-mobile-screen"></i> Product mockups</button>
+          <button class="ds-btn ghost sm" id="ad-carousel"><i class="fa-solid fa-images"></i> Carousel builder</button>
+        </div>
         <button class="ds-btn ghost full" data-adset="meta"><i class="fa-brands fa-meta"></i> Make Facebook &amp; Instagram ad set</button>
         <button class="ds-btn ghost full" data-adset="google"><i class="fa-brands fa-google"></i> Make Google Display ad set</button>
         <button class="ds-btn ghost full" data-adset="social"><i class="fa-solid fa-share-nodes"></i> Make all social sizes</button>
         <p class="ds-hint">Each size is added as a new page. Fine-tune them, then download all as a ZIP. For ad copy, use AI writer in the AI panel.</p>
+      </section>
+
+      <section data-panel="animate">
+        <h3>Animate</h3>
+        <p class="ds-hint">Turn any design into a video ad or GIF. Moving ads get noticed more in the feed.</p>
+        <h4>One-click styles</h4>
+        <div class="ds-grid2 ds-anim-styles">
+          <button class="ds-btn ghost sm" data-anim-style="smooth"><i class="fa-solid fa-feather"></i> Smooth</button>
+          <button class="ds-btn ghost sm" data-anim-style="punchy"><i class="fa-solid fa-burst"></i> Punchy</button>
+          <button class="ds-btn ghost sm" data-anim-style="slide"><i class="fa-solid fa-right-left"></i> Slide in</button>
+          <button class="ds-btn ghost sm" data-anim-style="type"><i class="fa-solid fa-keyboard"></i> Typewriter</button>
+          <button class="ds-btn ghost sm" data-anim-style="sale"><i class="fa-solid fa-tags"></i> Big sale</button>
+          <button class="ds-btn ghost sm" id="anim-clear"><i class="fa-solid fa-xmark"></i> Remove all</button>
+        </div>
+        <h4>Selected element</h4>
+        <p class="ds-hint" id="anim-el-none">Select a text, photo or shape on your design to animate it.</p>
+        <div id="anim-el" hidden>
+          <p class="ds-anim-name" id="anim-el-name"></p>
+          <label class="ds-field">Entrance <select id="anim-in" class="ds-input"></select></label>
+          <label class="ds-row">Starts after <input type="range" id="anim-delay" min="0" max="6" step="0.1" value="0"><span id="anim-delay-v">0.0s</span></label>
+          <label class="ds-row">Speed <input type="range" id="anim-dur" min="0.2" max="3" step="0.1" value="0.7"><span id="anim-dur-v">0.7s</span></label>
+          <label class="ds-field">Then keep <select id="anim-loop" class="ds-input"></select></label>
+        </div>
+        <h4>Animated elements <small id="anim-count"></small></h4>
+        <div id="anim-list" class="ds-anim-list"></div>
+        <h4>Video</h4>
+        <label class="ds-row">Length <input type="range" id="anim-len" min="3" max="15" step="1" value="6"><span id="anim-len-v">6s</span></label>
+        <label class="ds-row">Quality <select id="anim-res" class="ds-input" style="width:auto">
+          <option value="1080" selected>Full HD (1080 px)</option><option value="720">Smaller file (720 px)</option><option value="480">Small (480 px)</option></select></label>
+        <button class="ds-btn ghost full" id="anim-preview"><i class="fa-solid fa-play"></i> Preview</button>
+        <div class="ds-grid2" style="margin-top:6px">
+          <button class="ds-btn primary sm" id="anim-dl-vid"><i class="fa-solid fa-video"></i> Download video</button>
+          <button class="ds-btn ghost sm" id="anim-dl-gif"><i class="fa-solid fa-film"></i> Download GIF</button>
+        </div>
+        <p class="ds-hint">Video is MP4 in Chrome, Edge and Safari (WebM in some browsers). Keep this tab open while it records.</p>
       </section>
 
       <section data-panel="text">
@@ -496,11 +573,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
 <script src="templates.js?v=1.0"></script>
 <script src="templates-more.js?v=1.1"></script>
-<script src="templates-pro.js?v=1.1"></script>
-<script src="studio.js?v=2.2"></script>
-<script src="features.js?v=1.1"></script>
+<script src="templates-pro.js?v=1.3"></script>
+<script src="studio.js?v=2.3"></script>
+<script src="features.js?v=1.4"></script>
 <script src="ai-config.js?v=1.0"></script>
-<script src="ai.js?v=1.2"></script>
-<script src="pro.js?v=1.0"></script>
+<script src="ai.js?v=1.3"></script>
+<script src="pro.js?v=1.1"></script>
+<script src="thumbs.js?v=1.0"></script>
+<script src="animate.js?v=1.0"></script>
+<script src="adtools.js?v=1.0"></script>
+<script src="cloud-config.js?v=1.1"></script>
+<script src="cloud.js?v=1.1"></script>
+<script src="deeplink.js?v=1.3"></script>
 </body>
 </html>

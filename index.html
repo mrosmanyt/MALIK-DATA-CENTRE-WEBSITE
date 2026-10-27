@@ -258,7 +258,7 @@
     <!-- Inner pages + homepage guides/finder blocks -->
     <link rel="stylesheet" href="pages.css?v=3.0">
     <!-- Light professional theme (loaded last) -->
-    <link rel="stylesheet" href="theme.css?v=2.3">
+    <link rel="stylesheet" href="theme.css?v=2.4">
     <!-- FontAwesome for Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -460,20 +460,20 @@
                 <span class="deco-pill deco-p4">Design</span>
             </div>
             <div class="mdc-hero-inner">
-                <p class="mdc-hero-eyebrow">AI tools &amp; subscriptions &bull; Delivered worldwide</p>
+                <p class="mdc-hero-eyebrow" data-cms="hero.eyebrow">AI tools &amp; subscriptions &bull; Delivered worldwide</p>
                 <h1 class="mdc-hero-title" id="main-heading">
-                    <span class="mdc-hero-brand">Malik Data Centre</span>
-                    Premium AI tools, worldwide.
+                    <span class="mdc-hero-brand" data-cms="hero.brand">Malik Data Centre</span>
+                    <span data-cms="hero.title">Premium AI tools, worldwide.</span>
                 </h1>
-                <p class="mdc-hero-lead">ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva Pro, Adobe, CapCut, Cursor and 30+ more tools. No international credit card needed: pay with USDT from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. Get activated on WhatsApp in 5&ndash;30 minutes, with a written warranty.</p>
+                <p class="mdc-hero-lead" data-cms="hero.lead">ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva Pro, Adobe, CapCut, Cursor and 30+ more tools. No international credit card needed: pay with USDT from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. Get activated on WhatsApp in 5&ndash;30 minutes, with a written warranty.</p>
                 <div class="mdc-hero-cta">
-                    <a href="https://wa.me/923445739206" target="_blank" rel="noopener noreferrer" class="mdc-btn-dark"><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
-                    <a href="#catalog-section" class="mdc-btn-soft">Browse tools</a>
+                    <a href="https://wa.me/923445739206" target="_blank" rel="noopener noreferrer" class="mdc-btn-dark" data-cms="hero.btn1Text" data-cms-href="hero.btn1Link"><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
+                    <a href="#catalog-section" class="mdc-btn-soft" data-cms="hero.btn2Text" data-cms-href="hero.btn2Link">Browse tools</a>
                 </div>
-                <div class="mdc-hero-facts">
-                    <span><b>65+</b> plans listed</span>
-                    <span><b>5&ndash;30 min</b> activation</span>
-                    <span><b>Refund</b> if we can't fix it</span>
+                <div class="mdc-hero-facts" data-cms-list="hero.facts">
+                    <span data-cms-item data-cms-f-tail="text"><b data-cms-f="num">65+</b> plans listed</span>
+                    <span data-cms-item data-cms-f-tail="text"><b data-cms-f="num">5&ndash;30 min</b> activation</span>
+                    <span data-cms-item data-cms-f-tail="text"><b data-cms-f="num">Refund</b> if we can't fix it</span>
                 </div>
                 <div class="mdc-hero-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -492,80 +492,80 @@
         </section>
 
         <!-- How It Works -->
-        <section class="how-section" id="how-section">
+        <section class="how-section" id="how-section" data-cms-section="how">
             <div class="section-container">
                 <div class="section-header" data-reveal>
-                    <div class="badge-trusted"><i class="fa-solid fa-wand-magic-sparkles"></i> Simple 3-Step Process</div>
-                    <h2 class="section-title">How It Works</h2>
-                    <p class="section-subtitle">Getting a premium subscription is easy — your account is ready in three simple steps.</p>
+                    <div class="badge-trusted" data-cms="how.badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Simple 3-Step Process</div>
+                    <h2 class="section-title" data-cms="how.title">How It Works</h2>
+                    <p class="section-subtitle" data-cms="how.subtitle">Getting a premium subscription is easy — your account is ready in three simple steps.</p>
                 </div>
-                <div class="how-grid">
-                    <div class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="0">
+                <div class="how-grid" data-cms-list="how.steps">
+                    <div data-cms-item class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="0">
                         <span class="tilt-glare"></span>
-                        <div class="how-num">1</div>
-                        <div class="how-icon color-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <h3>Choose a Tool</h3>
-                        <p>Pick an AI tool or subscription from the catalog, or add several tools to your cart.</p>
+                        <div class="how-num" data-cms-index>1</div>
+                        <div class="how-icon color-purple" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink"><i class="fa-solid fa-magnifying-glass" data-cms-f-icon="icon"></i></div>
+                        <h3 data-cms-f="title">Choose a Tool</h3>
+                        <p data-cms-f="text">Pick an AI tool or subscription from the catalog, or add several tools to your cart.</p>
                     </div>
-                    <div class="how-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="120">
+                    <div class="how-arrow" data-cms-sep><i class="fa-solid fa-chevron-right"></i></div>
+                    <div data-cms-item class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="120">
                         <span class="tilt-glare"></span>
-                        <div class="how-num">2</div>
-                        <div class="how-icon color-green"><i class="fa-brands fa-whatsapp"></i></div>
-                        <h3>WhatsApp Order</h3>
-                        <p>Tap "Buy Now" and your order goes to WhatsApp. Pay with USDT from anywhere, or EasyPaisa, JazzCash or bank in Pakistan.</p>
+                        <div class="how-num" data-cms-index>2</div>
+                        <div class="how-icon color-green" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink"><i class="fa-brands fa-whatsapp" data-cms-f-icon="icon"></i></div>
+                        <h3 data-cms-f="title">WhatsApp Order</h3>
+                        <p data-cms-f="text">Tap "Buy Now" and your order goes to WhatsApp. Pay with USDT from anywhere, or EasyPaisa, JazzCash or bank in Pakistan.</p>
                     </div>
-                    <div class="how-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="240">
+                    <div class="how-arrow" data-cms-sep><i class="fa-solid fa-chevron-right"></i></div>
+                    <div data-cms-item class="how-step glass-card tilt-3d" data-reveal data-reveal-delay="240">
                         <span class="tilt-glare"></span>
-                        <div class="how-num">3</div>
-                        <div class="how-icon color-blue"><i class="fa-solid fa-bolt"></i></div>
-                        <h3>Instant Setup</h3>
-                        <p>As soon as payment is confirmed, your premium account is activated in 5–30 minutes, with full warranty.</p>
+                        <div class="how-num" data-cms-index>3</div>
+                        <div class="how-icon color-blue" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink"><i class="fa-solid fa-bolt" data-cms-f-icon="icon"></i></div>
+                        <h3 data-cms-f="title">Instant Setup</h3>
+                        <p data-cms-f="text">As soon as payment is confirmed, your premium account is activated in 5–30 minutes, with full warranty.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Trust Badges & Core Pillars -->
-        <section class="why-us-section" id="why-us-section">
+        <section class="why-us-section" id="why-us-section" data-cms-section="why">
             <div class="section-container">
                 <div class="section-header" data-reveal>
-                    <h2 class="section-title">Why Professionals Choose Us</h2>
-                    <p class="section-subtitle">We don't just sell subscriptions. We provide fully supported, private access with industry-leading reliability.</p>
+                    <h2 class="section-title" data-cms="why.title">Why Professionals Choose Us</h2>
+                    <p class="section-subtitle" data-cms="why.subtitle">We don't just sell subscriptions. We provide fully supported, private access with industry-leading reliability.</p>
                 </div>
-                <div class="grid grid-4" id="features-grid">
-                    <div class="glass-card feature-card tilt-3d" data-reveal>
+                <div class="grid grid-4" id="features-grid" data-cms-list="why.cards">
+                    <div data-cms-item class="glass-card feature-card tilt-3d" data-reveal>
                         <span class="tilt-glare"></span>
-                        <div class="feature-icon-wrapper color-purple">
-                            <i class="fa-solid fa-user-lock"></i>
+                        <div class="feature-icon-wrapper color-purple" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">
+                            <i class="fa-solid fa-user-lock" data-cms-f-icon="icon"></i>
                         </div>
-                        <h3 class="feature-card-title">100% Private Accounts</h3>
-                        <p class="feature-card-desc">No shared profiles. Where specified, subscriptions are activated directly on your email, keeping your workspace and history private.</p>
+                        <h3 class="feature-card-title" data-cms-f="title">100% Private Accounts</h3>
+                        <p class="feature-card-desc" data-cms-f="text">No shared profiles. Where specified, subscriptions are activated directly on your email, keeping your workspace and history private.</p>
                     </div>
-                    <div class="glass-card feature-card tilt-3d" data-reveal>
+                    <div data-cms-item class="glass-card feature-card tilt-3d" data-reveal>
                         <span class="tilt-glare"></span>
-                        <div class="feature-icon-wrapper color-green">
-                            <i class="fa-solid fa-shield-halved"></i>
+                        <div class="feature-icon-wrapper color-green" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">
+                            <i class="fa-solid fa-shield-halved" data-cms-f-icon="icon"></i>
                         </div>
-                        <h3 class="feature-card-title">Full Warranty Coverage</h3>
-                        <p class="feature-card-desc">Every purchase is backed by a full duration warranty. If a tool acts up, our support will resolve it immediately.</p>
+                        <h3 class="feature-card-title" data-cms-f="title">Full Warranty Coverage</h3>
+                        <p class="feature-card-desc" data-cms-f="text">Every purchase is backed by a full duration warranty. If a tool acts up, our support will resolve it immediately.</p>
                     </div>
-                    <div class="glass-card feature-card tilt-3d" data-reveal>
+                    <div data-cms-item class="glass-card feature-card tilt-3d" data-reveal>
                         <span class="tilt-glare"></span>
-                        <div class="feature-icon-wrapper color-blue">
-                            <i class="fa-solid fa-rotate-left"></i>
+                        <div class="feature-icon-wrapper color-blue" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">
+                            <i class="fa-solid fa-rotate-left" data-cms-f-icon="icon"></i>
                         </div>
-                        <h3 class="feature-card-title">Open Refund Policy</h3>
-                        <p class="feature-card-desc">Refund policy is open at all times. If a subscription encounters issues that we cannot replace, we will refund your payment.</p>
+                        <h3 class="feature-card-title" data-cms-f="title">Open Refund Policy</h3>
+                        <p class="feature-card-desc" data-cms-f="text">Refund policy is open at all times. If a subscription encounters issues that we cannot replace, we will refund your payment.</p>
                     </div>
-                    <div class="glass-card feature-card tilt-3d" data-reveal>
+                    <div data-cms-item class="glass-card feature-card tilt-3d" data-reveal>
                         <span class="tilt-glare"></span>
-                        <div class="feature-icon-wrapper color-orange">
-                            <i class="fa-solid fa-bolt"></i>
+                        <div class="feature-icon-wrapper color-orange" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">
+                            <i class="fa-solid fa-bolt" data-cms-f-icon="icon"></i>
                         </div>
-                        <h3 class="feature-card-title">Instant Setup</h3>
-                        <p class="feature-card-desc">Minimize downtime. Our system ensures rapid account provision, so you can start working with your premium AI models immediately.</p>
+                        <h3 class="feature-card-title" data-cms-f="title">Instant Setup</h3>
+                        <p class="feature-card-desc" data-cms-f="text">Minimize downtime. Our system ensures rapid account provision, so you can start working with your premium AI models immediately.</p>
                     </div>
                 </div>
             </div>
@@ -670,73 +670,73 @@
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-comments"></i></div>
       <div><div class="pg-card-cat">AI Chat &amp; Assistants</div><h3>ChatGPT Go</h3></div></div>
     <p>ChatGPT Go is OpenAI's lower-cost paid plan, with higher message, upload and image limits than the free tier.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 2,200</b><s>Rs 5,000</s> <span class="pg-save">Up to 56% off</span></div>
+    <div class="pg-card-price" data-cms-from="chatgpt-go-6m" data-p-chatgpt-go-6m="2200" data-o-chatgpt-go-6m="5000"><span class="pg-from">From</span> <b>Rs 2,200</b><s>Rs 5,000</s> <span class="pg-save">Up to 56% off</span></div>
     <span class="pg-card-more">1 plan &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/gemini-pro/" data-cat="ai-chat" data-name="gemini pro (google ai pro) gemini-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-star-of-life"></i></div>
       <div><div class="pg-card-cat">AI Chat &amp; Assistants</div><h3>Gemini Pro (Google AI Pro)</h3></div></div>
     <p>Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 700</b><s>Rs 3,500</s> <span class="pg-save">Up to 80% off</span></div>
+    <div class="pg-card-price" data-cms-from="gemini-pro-18m-private,gemini-18m" data-p-gemini-pro-18m-private="700" data-o-gemini-pro-18m-private="3500" data-p-gemini-18m="2200" data-o-gemini-18m="8500"><span class="pg-from">From</span> <b>Rs 700</b><s>Rs 3,500</s> <span class="pg-save">Up to 80% off</span></div>
     <span class="pg-card-more">2 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/google-ai-ultra/" data-cat="ai-chat" data-name="google ai ultra google-ai-ultra">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-brands fa-google"></i></div>
       <div><div class="pg-card-cat">AI Chat &amp; Assistants</div><h3>Google AI Ultra</h3></div></div>
     <p>Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 2,500</b><s>Rs 6,000</s> <span class="pg-save">Up to 58% off</span></div>
+    <div class="pg-card-price" data-cms-from="google-ai-ultra-shared-1m,google-ai-ultra-family-1m,google-ai-ultra-25k-slot" data-p-google-ai-ultra-shared-1m="2500" data-o-google-ai-ultra-shared-1m="6000" data-p-google-ai-ultra-family-1m="8500" data-o-google-ai-ultra-family-1m="18000" data-p-google-ai-ultra-25k-slot="26000" data-o-google-ai-ultra-25k-slot="45000"><span class="pg-from">From</span> <b>Rs 2,500</b><s>Rs 6,000</s> <span class="pg-save">Up to 58% off</span></div>
     <span class="pg-card-more">3 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/super-grok/" data-cat="ai-chat" data-name="supergrok + x premium+ super-grok">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-brands fa-x-twitter"></i></div>
       <div><div class="pg-card-cat">AI Chat &amp; Assistants</div><h3>SuperGrok + X Premium+</h3></div></div>
     <p>X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 1,500</b><s>Rs 4,000</s> <span class="pg-save">Up to 66% off</span></div>
+    <div class="pg-card-price" data-cms-from="grok-10d,grok-6m,grok-12m" data-p-grok-10d="1500" data-o-grok-10d="4000" data-p-grok-6m="6300" data-o-grok-6m="15000" data-p-grok-12m="9500" data-o-grok-12m="28000"><span class="pg-from">From</span> <b>Rs 1,500</b><s>Rs 4,000</s> <span class="pg-save">Up to 66% off</span></div>
     <span class="pg-card-more">3 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/capcut-pro/" data-cat="creative" data-name="capcut pro capcut-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-scissors"></i></div>
       <div><div class="pg-card-cat">Design &amp; Creative</div><h3>CapCut Pro</h3></div></div>
     <p>CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 800</b><s>Rs 2,000</s> <span class="pg-save">Up to 64% off</span></div>
+    <div class="pg-card-price" data-cms-from="capcut-pro-1m,capcut-pro-3m,capcut-pro-6m,capcut-pro" data-p-capcut-pro-1m="800" data-o-capcut-pro-1m="2000" data-p-capcut-pro-3m="2800" data-o-capcut-pro-3m="5500" data-p-capcut-pro-6m="4800" data-o-capcut-pro-6m="10000" data-p-capcut-pro="1250" data-o-capcut-pro="3500"><span class="pg-from">From</span> <b>Rs 800</b><s>Rs 2,000</s> <span class="pg-save">Up to 64% off</span></div>
     <span class="pg-card-more">4 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/canva-pro/" data-cat="creative" data-name="canva pro canva-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-palette"></i></div>
       <div><div class="pg-card-cat">Design &amp; Creative</div><h3>Canva Pro</h3></div></div>
     <p>Canva Pro gives you premium templates, the full stock library, brand kits, background remover and Canva's AI tools.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 400</b><s>Rs 3,000</s> <span class="pg-save">Up to 87% off</span></div>
+    <div class="pg-card-price" data-cms-from="canva-yearly,canva-admin" data-p-canva-yearly="400" data-o-canva-yearly="3000" data-p-canva-admin="4500" data-o-canva-admin="15000"><span class="pg-from">From</span> <b>Rs 400</b><s>Rs 3,000</s> <span class="pg-save">Up to 87% off</span></div>
     <span class="pg-card-more">2 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/adobe-creative-cloud/" data-cat="creative" data-name="adobe creative cloud adobe-creative-cloud">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
       <div><div class="pg-card-cat">Design &amp; Creative</div><h3>Adobe Creative Cloud</h3></div></div>
     <p>The full Adobe Creative Cloud bundle includes Photoshop, Illustrator, Premiere Pro, After Effects, Acrobat and Firefly AI.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 3,900</b><s>Rs 16,000</s> <span class="pg-save">Up to 76% off</span></div>
+    <div class="pg-card-price" data-cms-from="adobe-3m,adobe-cc-4m,adobe-6m,adobe-12m" data-p-adobe-3m="4000" data-o-adobe-3m="15000" data-p-adobe-cc-4m="3900" data-o-adobe-cc-4m="16000" data-p-adobe-6m="7000" data-o-adobe-6m="26000" data-p-adobe-12m="12000" data-o-adobe-12m="45000"><span class="pg-from">From</span> <b>Rs 3,900</b><s>Rs 16,000</s> <span class="pg-save">Up to 76% off</span></div>
     <span class="pg-card-more">4 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/cursor-pro/" data-cat="ai-coding" data-name="cursor pro cursor-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-code"></i></div>
       <div><div class="pg-card-cat">AI Coding &amp; Dev</div><h3>Cursor Pro</h3></div></div>
     <p>Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 4,200</b><s>Rs 8,000</s> <span class="pg-save">Up to 63% off</span></div>
+    <div class="pg-card-price" data-cms-from="cursor-pro,cursor-pro-12m" data-p-cursor-pro="4200" data-o-cursor-pro="8000" data-p-cursor-pro-12m="21000" data-o-cursor-pro-12m="56000"><span class="pg-from">From</span> <b>Rs 4,200</b><s>Rs 8,000</s> <span class="pg-save">Up to 63% off</span></div>
     <span class="pg-card-more">2 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/lovable-pro/" data-cat="ai-coding" data-name="lovable pro lovable-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-heart"></i></div>
       <div><div class="pg-card-cat">AI Coding &amp; Dev</div><h3>Lovable Pro</h3></div></div>
     <p>Lovable builds full web apps from plain-English prompts, with a database, login and one-click publishing.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 3,500</b><s>Rs 9,000</s> <span class="pg-save">Up to 70% off</span></div>
+    <div class="pg-card-price" data-cms-from="lovable-200,lovable-400,lovable-600" data-p-lovable-200="3500" data-o-lovable-200="9000" data-p-lovable-400="5000" data-o-lovable-400="15000" data-p-lovable-600="6000" data-o-lovable-600="20000"><span class="pg-from">From</span> <b>Rs 3,500</b><s>Rs 9,000</s> <span class="pg-save">Up to 70% off</span></div>
     <span class="pg-card-more">3 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/replit-core/" data-cat="ai-coding" data-name="replit core replit-core">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-terminal"></i></div>
       <div><div class="pg-card-cat">AI Coding &amp; Dev</div><h3>Replit Core</h3></div></div>
     <p>Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 9,500</b><s>Rs 22,000</s> <span class="pg-save">Up to 67% off</span></div>
+    <div class="pg-card-price" data-cms-from="replit-core-12m,replit-core-100" data-p-replit-core-12m="10700" data-o-replit-core-12m="32000" data-p-replit-core-100="9500" data-o-replit-core-100="22000"><span class="pg-from">From</span> <b>Rs 9,500</b><s>Rs 22,000</s> <span class="pg-save">Up to 67% off</span></div>
     <span class="pg-card-more">2 plans &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/n8n-starter/" data-cat="ai-coding" data-name="n8n starter cloud n8n-starter">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
       <div><div class="pg-card-cat">AI Coding &amp; Dev</div><h3>n8n Starter Cloud</h3></div></div>
     <p>n8n is a workflow automation platform for connecting apps, APIs and AI agents.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 6,500</b><s>Rs 20,000</s> <span class="pg-save">Up to 68% off</span></div>
+    <div class="pg-card-price" data-cms-from="n8n-starter-12m" data-p-n8n-starter-12m="6500" data-o-n8n-starter-12m="20000"><span class="pg-from">From</span> <b>Rs 6,500</b><s>Rs 20,000</s> <span class="pg-save">Up to 68% off</span></div>
     <span class="pg-card-more">1 plan &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a><a class="pg-card" href="tools/gumloop-pro/" data-cat="ai-coding" data-name="gumloop pro gumloop-pro">
     <div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-infinity"></i></div>
       <div><div class="pg-card-cat">AI Coding &amp; Dev</div><h3>Gumloop Pro</h3></div></div>
     <p>Gumloop is a no-code AI automation builder for scraping, data enrichment and AI workflows.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>Rs 4,550</b><s>Rs 18,000</s> <span class="pg-save">Up to 75% off</span></div>
+    <div class="pg-card-price" data-cms-from="gumloop-pro-12m" data-p-gumloop-pro-12m="4550" data-o-gumloop-pro-12m="18000"><span class="pg-from">From</span> <b>Rs 4,550</b><s>Rs 18,000</s> <span class="pg-save">Up to 75% off</span></div>
     <span class="pg-card-more">1 plan &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a></div>
                 <div style="text-align:center;margin-top:24px"><a href="tools/" class="btn btn-gradient"><i class="fa-solid fa-layer-group"></i> View all 36 tool guides</a> <a href="comparisons/" class="btn btn-outline" style="margin-left:6px"><i class="fa-solid fa-scale-balanced"></i> Compare tools</a></div>
@@ -786,16 +786,16 @@
             </div>
         </section>
 
-        <section class="mdc-hp-section" id="services-strip">
+        <section class="mdc-hp-section" id="services-strip" data-cms-section="services">
             <div class="pg-wrap">
                 <div class="section-header">
-                    <span class="section-badge"><i class="fa-solid fa-briefcase"></i> For businesses</span>
-                    <h2 class="section-title">More than <span class="text-gradient">subscriptions</span></h2>
+                    <span class="section-badge" data-cms="services.badge"><i class="fa-solid fa-briefcase"></i> For businesses</span>
+                    <h2 class="section-title"><span data-cms="services.title">More than</span> <span class="text-gradient" data-cms="services.highlight">subscriptions</span></h2>
                 </div>
-                <div class="pg-grid three">
-                    <a class="pg-card" href="ai-automation-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-robot"></i></div><h3>AI Automation Services</h3></div><p>WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.</p><span class="pg-card-more">Get a quote <i class="fa-solid fa-arrow-right"></i></span></a>
-                    <a class="pg-card" href="social-media-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-hashtag"></i></div><h3>Social Media Services</h3></div><p>Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.</p><span class="pg-card-more">See services <i class="fa-solid fa-arrow-right"></i></span></a>
-                    <a class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-plug"></i></div><h3>Enterprise API Credits</h3></div><p>Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.</p><span class="pg-card-more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
+                <div class="pg-grid three" data-cms-list="services.cards">
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="ai-automation-services/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-robot"></i></div><h3 data-cms-f="title">AI Automation Services</h3></div><p data-cms-f="text">WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.</p><span class="pg-card-more" data-cms-f="more">Get a quote <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="social-media-services/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-hashtag"></i></div><h3 data-cms-f="title">Social Media Services</h3></div><p data-cms-f="text">Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.</p><span class="pg-card-more" data-cms-f="more">See services <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-plug"></i></div><h3 data-cms-f="title">Enterprise API Credits</h3></div><p data-cms-f="text">Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.</p><span class="pg-card-more" data-cms-f="more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
             </div>
         </section>
@@ -852,17 +852,17 @@
         <!-- MDC:GUIDES:END -->
 
         <!-- Video Showcase (Live Facebook Ad Creatives) -->
-        <section class="video-section" id="video-section">
+        <section class="video-section" id="video-section" data-cms-section="videos">
             <div class="section-container">
                 <div class="section-header" data-reveal>
-                    <div class="badge-trusted"><i class="fa-solid fa-circle-play"></i> Watch Us Live</div>
-                    <h2 class="section-title">See MALIK DATA CENTRE in Action</h2>
-                    <p class="section-subtitle">These are our official ads currently running on Facebook. See how we deliver premium subscriptions.</p>
+                    <div class="badge-trusted" data-cms="videos.badge"><i class="fa-solid fa-circle-play"></i> Watch Us Live</div>
+                    <h2 class="section-title" data-cms="videos.title">See MALIK DATA CENTRE in Action</h2>
+                    <p class="section-subtitle" data-cms="videos.subtitle">These are our official ads currently running on Facebook. See how we deliver premium subscriptions.</p>
                 </div>
-                <div class="video-grid">
-                    <div class="video-card glass-card tilt-3d" data-reveal>
+                <div class="video-grid" data-cms-list="videos.items">
+                    <div data-cms-item class="video-card glass-card tilt-3d" data-reveal>
                         <span class="tilt-glare"></span>
-                        <div class="video-frame">
+                        <div class="video-frame" data-cms-f-video="video" data-cms-f-poster="poster">
                             <video id="ad-video-1" class="mdc-video" playsinline muted loop preload="none" poster="assets/hero_banner.webp">
                                 <source src="assets/videos/ad-1.mp4" type="video/mp4">
                                 Your browser does not support video playback.
@@ -870,11 +870,11 @@
                             <button class="video-play-btn" aria-label="Play video" data-target="ad-video-1"><i class="fa-solid fa-play"></i></button>
                             <span class="video-tag"><i class="fa-brands fa-facebook"></i> Live Ad</span>
                         </div>
-                        <div class="video-caption"><i class="fa-solid fa-bolt"></i> Premium AI Subscriptions Promo</div>
+                        <div class="video-caption" data-cms-f="caption"><i class="fa-solid fa-bolt"></i> Premium AI Subscriptions Promo</div>
                     </div>
-                    <div class="video-card glass-card tilt-3d" data-reveal data-reveal-delay="120">
+                    <div data-cms-item class="video-card glass-card tilt-3d" data-reveal data-reveal-delay="120">
                         <span class="tilt-glare"></span>
-                        <div class="video-frame">
+                        <div class="video-frame" data-cms-f-video="video" data-cms-f-poster="poster">
                             <video id="ad-video-2" class="mdc-video" playsinline muted loop preload="none" poster="assets/hero_banner.webp">
                                 <source src="assets/videos/ad-2.mp4" type="video/mp4">
                                 Your browser does not support video playback.
@@ -882,32 +882,32 @@
                             <button class="video-play-btn" aria-label="Play video" data-target="ad-video-2"><i class="fa-solid fa-play"></i></button>
                             <span class="video-tag"><i class="fa-brands fa-facebook"></i> Live Ad</span>
                         </div>
-                        <div class="video-caption"><i class="fa-solid fa-bolt"></i> Trusted Service Showcase</div>
+                        <div class="video-caption" data-cms-f="caption"><i class="fa-solid fa-bolt"></i> Trusted Service Showcase</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Customer Reviews & Testimonials Section -->
-        <section class="reviews-section" id="reviews-section">
+        <section class="reviews-section" id="reviews-section" data-cms-section="reviews">
             <div class="section-container">
                 <div class="section-header" data-reveal>
-                    <div class="badge-trusted"><i class="fa-solid fa-star"></i> Verified Feedback</div>
-                    <h2 class="section-title">What Our Customers Say</h2>
-                    <p class="section-subtitle">Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.</p>
+                    <div class="badge-trusted" data-cms="reviews.badge"><i class="fa-solid fa-star"></i> Verified Feedback</div>
+                    <h2 class="section-title" data-cms="reviews.title">What Our Customers Say</h2>
+                    <p class="section-subtitle" data-cms="reviews.subtitle">Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.</p>
                 </div>
 
-                <div class="grid grid-3 reviews-grid">
+                <div class="grid grid-3 reviews-grid" data-cms-list="reviews.items">
                     <!-- Review 1 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">AH</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">AH</div>
                             <div class="client-info">
-                                <h4 class="client-name">Ameer Hamza</h4>
-                                <span class="client-purchase">Grok 3 Months Plan</span>
+                                <h4 class="client-name" data-cms-f="name">Ameer Hamza</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Grok 3 Months Plan</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -915,30 +915,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Super fast activation! The subscription was activated directly on my email, and I got the Grok Premium guide. Absolutely seamless service."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-arham.webp" alt="Grok 3 Months Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Super fast activation! The subscription was activated directly on my email, and I got the Grok Premium guide. Absolutely seamless service."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-arham.webp" alt="Grok 3 Months Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 2 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-blue">KS</div>
+                            <div class="client-avatar color-blue" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">KS</div>
                             <div class="client-info">
-                                <h4 class="client-name">Kamran Shah</h4>
-                                <span class="client-purchase">ChatGPT Go 6 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Kamran Shah</h4>
+                                <span class="client-purchase" data-cms-f="purchase">ChatGPT Go 6 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -946,30 +946,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Got my 6 months ChatGPT Go plan and Grok 3 months setup. Working flawlessly, support shared simple guide steps. Best pricing in town!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-chatgpt-grok.webp" alt="ChatGPT Go Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Got my 6 months ChatGPT Go plan and Grok 3 months setup. Working flawlessly, support shared simple guide steps. Best pricing in town!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-chatgpt-grok.webp" alt="ChatGPT Go Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 3 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-green">UA</div>
+                            <div class="client-avatar color-green" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">UA</div>
                             <div class="client-info">
-                                <h4 class="client-name">Usman Ali</h4>
-                                <span class="client-purchase">Super Grok + X Premium+</span>
+                                <h4 class="client-name" data-cms-f="name">Usman Ali</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok + X Premium+</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -977,30 +977,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Sent payment through EasyPaisa, transaction was verified instantly. Got my Super Grok 3 months account right after. Very reliable seller."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-easypaisa-grok.webp" alt="EasyPaisa Payment & Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Sent payment through EasyPaisa, transaction was verified instantly. Got my Super Grok 3 months account right after. Very reliable seller."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-easypaisa-grok.webp" alt="EasyPaisa Payment & Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-credit-card"></i> Payment Proof</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-credit-card"></i> Payment Proof</span>
                         </div>
                     </div>
 
                     <!-- Review 4 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-orange">ZM</div>
+                            <div class="client-avatar color-orange" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">ZM</div>
                             <div class="client-info">
-                                <h4 class="client-name">Zahid Mahmood</h4>
-                                <span class="client-purchase">VEO 3 Ultra Flow Portal</span>
+                                <h4 class="client-name" data-cms-f="name">Zahid Mahmood</h4>
+                                <span class="client-purchase" data-cms-f="purchase">VEO 3 Ultra Flow Portal</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1008,30 +1008,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"The portal setup was extremely quick, and the guide videos shared by the team helped me login and start using VEO 3 instantly. Top service!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-veo3-setup.webp" alt="VEO 3 Portal Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"The portal setup was extremely quick, and the guide videos shared by the team helped me login and start using VEO 3 instantly. Top service!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-veo3-setup.webp" alt="VEO 3 Portal Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Portal Setup</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Portal Setup</span>
                         </div>
                     </div>
 
                     <!-- Review 5 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">MF</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">MF</div>
                             <div class="client-info">
-                                <h4 class="client-name">Muhammad Farooq</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Muhammad Farooq</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1039,30 +1039,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Excellent customer service! Got my premium Grok + X Premium+ activated with the blue verification tick. Full support and warranty."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-super-grok.webp" alt="Super Grok 3 Months Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Excellent customer service! Got my premium Grok + X Premium+ activated with the blue verification tick. Full support and warranty."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-super-grok.webp" alt="Super Grok 3 Months Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 6 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">MA</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">MA</div>
                             <div class="client-info">
-                                <h4 class="client-name">Muhammad Anees</h4>
-                                <span class="client-purchase">Gemini Pro 18 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Muhammad Anees</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Gemini Pro 18 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1070,30 +1070,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Got my 18 Months Google Gemini Pro official subscription. Extremely prompt response and direct activation. Thanks for using Malik Data Centre Services message confirmed it!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-gemini-18months.webp" alt="Gemini Advanced Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Got my 18 Months Google Gemini Pro official subscription. Extremely prompt response and direct activation. Thanks for using Malik Data Centre Services message confirmed it!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-gemini-18months.webp" alt="Gemini Advanced Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 7 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-blue">ZK</div>
+                            <div class="client-avatar color-blue" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">ZK</div>
                             <div class="client-info">
-                                <h4 class="client-name">Zubair Khan</h4>
-                                <span class="client-purchase">Google Service Links</span>
+                                <h4 class="client-name" data-cms-f="name">Zubair Khan</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Google Service Links</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1101,30 +1101,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Purchased premium Google subscription activation links for order #1894. Very smooth onboarding, got active immediately. Highly recommended!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-google-order1894.webp" alt="Google Order #1894 Activation Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Purchased premium Google subscription activation links for order #1894. Very smooth onboarding, got active immediately. Highly recommended!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-google-order1894.webp" alt="Google Order #1894 Activation Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Links Active</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Links Active</span>
                         </div>
                     </div>
 
                     <!-- Review 8 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-green">BA</div>
+                            <div class="client-avatar color-green" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">BA</div>
                             <div class="client-info">
-                                <h4 class="client-name">Bilal Ahmed</h4>
-                                <span class="client-purchase">ChatGPT Go 6 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Bilal Ahmed</h4>
+                                <span class="client-purchase" data-cms-f="purchase">ChatGPT Go 6 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1132,30 +1132,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Excellent chat guidance! Got my 6 months ChatGPT Go plan done via audio notes in chat. Best customer support ever."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-chatgpt-6months.webp" alt="ChatGPT Go 6 Months Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Excellent chat guidance! Got my 6 months ChatGPT Go plan done via audio notes in chat. Best customer support ever."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-chatgpt-6months.webp" alt="ChatGPT Go 6 Months Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 9 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-orange">RM</div>
+                            <div class="client-avatar color-orange" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">RM</div>
                             <div class="client-info">
-                                <h4 class="client-name">Rashid Minhas</h4>
-                                <span class="client-purchase">Google Service Links</span>
+                                <h4 class="client-name" data-cms-f="name">Rashid Minhas</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Google Service Links</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1163,30 +1163,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Google activation links for order #1879 delivered within minutes. Fast delivery and reliable setup guides. Recommended!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-google-order1879.webp" alt="Google Order #1879 Activation Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Google activation links for order #1879 delivered within minutes. Fast delivery and reliable setup guides. Recommended!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-google-order1879.webp" alt="Google Order #1879 Activation Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Links Active</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Links Active</span>
                         </div>
                     </div>
 
                     <!-- Review 10 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">SA</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">SA</div>
                             <div class="client-info">
-                                <h4 class="client-name">Shahbaz Ali</h4>
-                                <span class="client-purchase">YouTube OTP Verification</span>
+                                <h4 class="client-name" data-cms-f="name">Shahbaz Ali</h4>
+                                <span class="client-purchase" data-cms-f="purchase">YouTube OTP Verification</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1194,30 +1194,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Verified my YouTube channel phone lock. They provided the recovery number and verification code in less than a minute. Done thanks!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-youtube-verification.webp" alt="YouTube OTP Verification Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Verified my YouTube channel phone lock. They provided the recovery number and verification code in less than a minute. Done thanks!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-youtube-verification.webp" alt="YouTube OTP Verification Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> OTP Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> OTP Done</span>
                         </div>
                     </div>
 
                     <!-- Review 11 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">RA</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">RA</div>
                             <div class="client-info">
-                                <h4 class="client-name">Raza Ahmed</h4>
-                                <span class="client-purchase">CapCut Pro Monthly</span>
+                                <h4 class="client-name" data-cms-f="name">Raza Ahmed</h4>
+                                <span class="client-purchase" data-cms-f="purchase">CapCut Pro Monthly</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1225,30 +1225,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Sent payment through Meezan Bank. Verified and got CapCut Pro activated on my phone in 5 minutes! Excellent."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-capcut-meezan.webp" alt="CapCut Pro Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Sent payment through Meezan Bank. Verified and got CapCut Pro activated on my phone in 5 minutes! Excellent."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-capcut-meezan.webp" alt="CapCut Pro Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 14, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-credit-card"></i> Payment Proof</span>
+                            <span class="review-date" data-cms-f="date">June 14, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-credit-card"></i> Payment Proof</span>
                         </div>
                     </div>
 
                     <!-- Review 12 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-blue">MK</div>
+                            <div class="client-avatar color-blue" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">MK</div>
                             <div class="client-info">
-                                <h4 class="client-name">Mubeen Khan</h4>
-                                <span class="client-purchase">Super Grok + Canva Pro</span>
+                                <h4 class="client-name" data-cms-f="name">Mubeen Khan</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok + Canva Pro</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1256,30 +1256,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Asked about Grok and Canva bundles, got them activated together. Highly cost-effective and swift setup."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-canva.webp" alt="Super Grok & Canva Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Asked about Grok and Canva bundles, got them activated together. Highly cost-effective and swift setup."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-canva.webp" alt="Super Grok & Canva Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 13 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-green">MB</div>
+                            <div class="client-avatar color-green" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">MB</div>
                             <div class="client-info">
-                                <h4 class="client-name">Muhammad Bilal</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Muhammad Bilal</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1287,30 +1287,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Super Grok setup completed directly on X. Very active and helpful support on WhatsApp."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-bilal.webp" alt="Super Grok Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Super Grok setup completed directly on X. Very active and helpful support on WhatsApp."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-bilal.webp" alt="Super Grok Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 14 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-orange">FS</div>
+                            <div class="client-avatar color-orange" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">FS</div>
                             <div class="client-info">
-                                <h4 class="client-name">Faisal Shah</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Faisal Shah</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1318,30 +1318,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Team worked on my setup and got it done. Super Grok 3 Months activated with full warranty."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-progress.webp" alt="Super Grok Progress Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Team worked on my setup and got it done. Super Grok 3 Months activated with full warranty."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-progress.webp" alt="Super Grok Progress Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 15 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">HN</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">HN</div>
                             <div class="client-info">
-                                <h4 class="client-name">Hassan Nawaz</h4>
-                                <span class="client-purchase">HeyGen Pro Creator</span>
+                                <h4 class="client-name" data-cms-f="name">Hassan Nawaz</h4>
+                                <span class="client-purchase" data-cms-f="purchase">HeyGen Pro Creator</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1349,30 +1349,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Got account details and complete setup tutorial video. HeyGen Creator setup works perfectly!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-heygen-setup.webp" alt="HeyGen Pro Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Got account details and complete setup tutorial video. HeyGen Creator setup works perfectly!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-heygen-setup.webp" alt="HeyGen Pro Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 16 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">SI</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">SI</div>
                             <div class="client-info">
-                                <h4 class="client-name">Shahid Imran</h4>
-                                <span class="client-purchase">ElevenLabs Pro Creator</span>
+                                <h4 class="client-name" data-cms-f="name">Shahid Imran</h4>
+                                <span class="client-purchase" data-cms-f="purchase">ElevenLabs Pro Creator</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1380,30 +1380,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Purchased the ElevenLabs Creator plan. High-quality speech synthesis activated directly on email. Smooth setup!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-elevenlabs-creator.webp" alt="ElevenLabs Creator Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Purchased the ElevenLabs Creator plan. High-quality speech synthesis activated directly on email. Smooth setup!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-elevenlabs-creator.webp" alt="ElevenLabs Creator Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 17 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-blue">YM</div>
+                            <div class="client-avatar color-blue" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">YM</div>
                             <div class="client-info">
-                                <h4 class="client-name">Yasir Mahmood</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Yasir Mahmood</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1411,30 +1411,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Activated Grok 3 months directly. Clean onboarding guide shared in WhatsApp. Excellent support!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-edu.webp" alt="Super Grok Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Activated Grok 3 months directly. Clean onboarding guide shared in WhatsApp. Excellent support!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-edu.webp" alt="Super Grok Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 18 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-green">AK</div>
+                            <div class="client-avatar color-green" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">AK</div>
                             <div class="client-info">
-                                <h4 class="client-name">Arsalan Khan</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Arsalan Khan</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1442,30 +1442,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Very professional team. Got my Super Grok active within minutes. Thank you MALIK DATA CENTRE!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-thanks.webp" alt="Super Grok Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Very professional team. Got my Super Grok active within minutes. Thank you MALIK DATA CENTRE!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-thanks.webp" alt="Super Grok Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 19 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-orange">NS</div>
+                            <div class="client-avatar color-orange" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">NS</div>
                             <div class="client-info">
-                                <h4 class="client-name">Noman Siddiqui</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Noman Siddiqui</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1473,30 +1473,30 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Extremely fast setup delivery! Highly recommended for urgent premium account setups."</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-fast.webp" alt="Super Grok Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Extremely fast setup delivery! Highly recommended for urgent premium account setups."</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-fast.webp" alt="Super Grok Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
                     <!-- Review 20 -->
-                    <div class="glass-card review-card tilt-3d">
+                    <div data-cms-item class="glass-card review-card tilt-3d">
                         <span class="tilt-glare"></span>
                         <div class="review-header">
-                            <div class="client-avatar color-purple">UR</div>
+                            <div class="client-avatar color-purple" data-cms-f-initials="name" data-cms-f-color="color" data-cms-colors="color-purple color-green color-blue color-orange color-pink">UR</div>
                             <div class="client-info">
-                                <h4 class="client-name">Usama Rashid</h4>
-                                <span class="client-purchase">Super Grok 3 Months</span>
+                                <h4 class="client-name" data-cms-f="name">Usama Rashid</h4>
+                                <span class="client-purchase" data-cms-f="purchase">Super Grok 3 Months</span>
                             </div>
-                            <div class="rating-stars">
+                            <div class="rating-stars" data-cms-f-stars="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -1504,17 +1504,17 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Super Grok active with full verification blue tick. Responsive support 24/7. Awesome service!"</p>
-                        <div class="review-image-wrapper">
-                            <img src="assets/reviews/review-grok-done.webp" alt="Super Grok Setup Proof" class="review-thumbnail" loading="lazy">
+                        <p class="review-text" data-cms-f="text">"Super Grok active with full verification blue tick. Responsive support 24/7. Awesome service!"</p>
+                        <div class="review-image-wrapper" data-cms-f-show="image">
+                            <img src="assets/reviews/review-grok-done.webp" alt="Super Grok Setup Proof" class="review-thumbnail" data-cms-f-src="image" loading="lazy">
                             <div class="thumbnail-overlay">
                                 <i class="fa-solid fa-maximize expand-icon"></i>
                                 <span>Click to View Proof</span>
                             </div>
                         </div>
                         <div class="review-meta">
-                            <span class="review-date">June 15, 2026</span>
-                            <span class="review-badge verified"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
+                            <span class="review-date" data-cms-f="date">June 15, 2026</span>
+                            <span class="review-badge verified" data-cms-f="badge"><i class="fa-solid fa-circle-check"></i> Setup Done</span>
                         </div>
                     </div>
 
@@ -1573,41 +1573,41 @@
         </section>
 
         <!-- Refund Policy / Trust Section -->
-        <section class="refund-policy-section" id="refund-policy-section">
+        <section class="refund-policy-section" id="refund-policy-section" data-cms-section="refund">
             <div class="section-container">
                 <div class="refund-card glass-card" data-reveal="zoom">
                     <div class="refund-content">
-                        <div class="badge-refund"><i class="fa-solid fa-handshake-angle"></i> 100% Risk-Free Guarantee</div>
-                        <h2 class="refund-title">Our Open Refund & Replacement Promise</h2>
-                        <p class="refund-desc">
+                        <div class="badge-refund" data-cms="refund.badge"><i class="fa-solid fa-handshake-angle"></i> 100% Risk-Free Guarantee</div>
+                        <h2 class="refund-title" data-cms="refund.title">Our Open Refund & Replacement Promise</h2>
+                        <p class="refund-desc" data-cms-rich="refund.desc">
                             At <strong>MALIK DATA CENTRE</strong>, we build relationships based on trust. If you encounter any technical issues with your purchased premium account, our promise is simple, transparent, and always open:
                         </p>
                         
                         <!-- Dynamic Refund Flow Diagram -->
-                        <div class="refund-flow">
-                            <div class="flow-step tilt-3d" data-reveal>
-                                <div class="step-num">1</div>
-                                <div class="step-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-                                <h4>Report Issue</h4>
-                                <p>Message our WhatsApp support about the error.</p>
+                        <div class="refund-flow" data-cms-list="refund.steps">
+                            <div data-cms-item class="flow-step tilt-3d" data-reveal>
+                                <div class="step-num" data-cms-index>1</div>
+                                <div class="step-icon"><i data-cms-f-icon="icon" class="fa-solid fa-envelope-open-text"></i></div>
+                                <h4 data-cms-f="title">Report Issue</h4>
+                                <p data-cms-f="text">Message our WhatsApp support about the error.</p>
                             </div>
-                            <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="flow-step tilt-3d" data-reveal>
-                                <div class="step-num">2</div>
-                                <div class="step-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
-                                <h4>Instant Replacement</h4>
-                                <p>We provide a fresh premium account profile.</p>
+                            <div class="flow-arrow" data-cms-sep><i class="fa-solid fa-chevron-right"></i></div>
+                            <div data-cms-item class="flow-step tilt-3d" data-reveal>
+                                <div class="step-num" data-cms-index>2</div>
+                                <div class="step-icon"><i data-cms-f-icon="icon" class="fa-solid fa-arrows-rotate"></i></div>
+                                <h4 data-cms-f="title">Instant Replacement</h4>
+                                <p data-cms-f="text">We provide a fresh premium account profile.</p>
                             </div>
-                            <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="flow-step highlight-step tilt-3d" data-reveal>
-                                <div class="step-num">3</div>
-                                <div class="step-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                                <h4>Unable to Replace?</h4>
-                                <p>We issue a full refund of your payment immediately.</p>
+                            <div class="flow-arrow" data-cms-sep><i class="fa-solid fa-chevron-right"></i></div>
+                            <div data-cms-item class="flow-step highlight-step tilt-3d" data-reveal>
+                                <div class="step-num" data-cms-index>3</div>
+                                <div class="step-icon"><i data-cms-f-icon="icon" class="fa-solid fa-hand-holding-dollar"></i></div>
+                                <h4 data-cms-f="title">Unable to Replace?</h4>
+                                <p data-cms-f="text">We issue a full refund of your payment immediately.</p>
                             </div>
                         </div>
 
-                        <div class="refund-footer-note">
+                        <div class="refund-footer-note" data-cms="refund.note">
                             <i class="fa-solid fa-circle-info"></i> Our customer-centric refund policy is active 24/7/365. You are always protected.
                         </div>
                     </div>
@@ -1616,12 +1616,12 @@
         </section>
 
         <!-- FAQ Section / Help Center -->
-        <section class="faq-section" id="faq-section">
+        <section class="faq-section" id="faq-section" data-cms-section="faq">
             <div class="section-container">
                 <div class="section-header" data-reveal>
-                    <div class="badge-trusted" style="margin: 0 auto 12px auto;"><i class="fa-solid fa-headset"></i> 24/7 Support &amp; Knowledge Base</div>
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle">Search or filter below to find instant answers about delivery, warranty replacements, payment methods (USDT / EasyPaisa / JazzCash), and account privacy.</p>
+                    <div class="badge-trusted" data-cms="faq.badge" style="margin: 0 auto 12px auto;"><i class="fa-solid fa-headset"></i> 24/7 Support &amp; Knowledge Base</div>
+                    <h2 class="section-title" data-cms="faq.title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle" data-cms="faq.subtitle">Search or filter below to find instant answers about delivery, warranty replacements, payment methods (USDT / EasyPaisa / JazzCash), and account privacy.</p>
                 </div>
 
                 <!-- Instant FAQ Search Box -->
@@ -1643,36 +1643,36 @@
                 </div>
 
                 <!-- FAQ Accordion List -->
-                <div class="faq-accordion-container" id="faq-accordion-wrapper" data-reveal>
+                <div class="faq-accordion-container" id="faq-accordion-wrapper" data-reveal data-cms-list="faq.items">
                     <!-- FAQ 1 -->
-                    <div class="faq-item glass-card" id="faq-item-1" data-category="delivery">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-1" data-category="delivery">
                         <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
-                            <span><i class="fa-solid fa-clock-rotate-left faq-q-icon"></i> How long does activation take? (Delivery time)</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-clock-rotate-left faq-q-icon"></i> How long does activation take? (Delivery time)</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-1" hidden>
+                        <div class="faq-answer" id="faq-answer-1" hidden data-cms-f-rich="a">
                             <p>Most AI tool and software activations take between <strong>5 to 30 minutes</strong> after your payment confirmation. Client email activation tools (such as Gemini 1.5 Pro, Lovable Pro, or Google AI Ultra Family Invite) are activated directly on your email address immediately upon receiving your details on WhatsApp.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="faq-item glass-card" id="faq-item-2" data-category="warranty">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-2" data-category="warranty">
                         <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
-                            <span><i class="fa-solid fa-arrows-rotate faq-q-icon"></i> How does a warranty replacement work?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-arrows-rotate faq-q-icon"></i> How does a warranty replacement work?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-2" hidden>
+                        <div class="faq-answer" id="faq-answer-2" hidden data-cms-f-rich="a">
                             <p>Every purchase comes with full duration warranty replacement protection. If you face any login or subscription issue during your warranty period, simply send a screenshot of the error to our WhatsApp support at <a href="https://wa.me/923445739206" target="_blank"><strong>+92 344 5739206</strong></a>. Our support team will resolve or replace your account within <strong>10 to 30 minutes</strong>.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="faq-item glass-card" id="faq-item-3" data-category="payment">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-3" data-category="payment">
                         <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
-                            <span><i class="fa-solid fa-wallet faq-q-icon"></i> Which payment methods do you accept? (Worldwide &amp; Pakistan)</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-wallet faq-q-icon"></i> Which payment methods do you accept? (Worldwide &amp; Pakistan)</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-3" hidden>
+                        <div class="faq-answer" id="faq-answer-3" hidden data-cms-f-rich="a">
                             <p>We support all official payment methods:
                             <br>• <strong>Worldwide</strong>: USDT via Binance (BEP20 &amp; TRC20 networks), for fast, low-fee checkout from any country.
                             <br>• <strong>Pakistan</strong>: EasyPaisa, JazzCash, Meezan Bank and all local bank transfers.</p>
@@ -1680,79 +1680,79 @@
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="faq-item glass-card" id="faq-item-4" data-category="payment">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-4" data-category="payment">
                         <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
-                            <span><i class="fa-brands fa-bitcoin faq-q-icon"></i> How can international customers pay with USDT?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-brands fa-bitcoin faq-q-icon"></i> How can international customers pay with USDT?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-4" hidden>
+                        <div class="faq-answer" id="faq-answer-4" hidden data-cms-f-rich="a">
                             <p>When you place your order on WhatsApp, tell our support team you want to pay with <strong>USDT (Binance)</strong>. The team will confirm the exact USDT amount and share our official BEP20 / TRC20 wallet address.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="faq-item glass-card" id="faq-item-5" data-category="privacy">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-5" data-category="privacy">
                         <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
-                            <span><i class="fa-solid fa-shield-halved faq-q-icon"></i> What is the difference between "On client email" (private) and shared accounts?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-shield-halved faq-q-icon"></i> What is the difference between "On client email" (private) and shared accounts?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-5" hidden>
+                        <div class="faq-answer" id="faq-answer-5" hidden data-cms-f-rich="a">
                             <p>• <strong>Private Accounts (ON CLIENT EMAIL)</strong>: 100% private subscription setup directly on your personal Gmail/Email. Your data, code, prompts and files stay confidential and only in your account.
                             <br>• <strong>Shared Accounts</strong>: A budget-friendly option where several buyers share one login. Every plan is clearly labelled so you can choose the right one.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="faq-item glass-card" id="faq-item-6" data-category="warranty">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-6" data-category="warranty">
                         <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
-                            <span><i class="fa-solid fa-hand-holding-dollar faq-q-icon"></i> What does your money-back refund policy cover?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-hand-holding-dollar faq-q-icon"></i> What does your money-back refund policy cover?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-6" hidden>
+                        <div class="faq-answer" id="faq-answer-6" hidden data-cms-f-rich="a">
                             <p>Our refund policy is transparent and customer-first. If your subscription has a technical issue during the warranty period and we cannot fix or replace it, we issue a <strong>pro-rata / money-back refund</strong>.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="faq-item glass-card" id="faq-item-7" data-category="delivery">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-7" data-category="delivery">
                         <button class="faq-question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-answer-7">
-                            <span><i class="fa-solid fa-book-open-reader faq-q-icon"></i> Do I get a setup guide after ordering?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-book-open-reader faq-q-icon"></i> Do I get a setup guide after ordering?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-7" hidden>
+                        <div class="faq-answer" id="faq-answer-7" hidden data-cms-f-rich="a">
                             <p>Yes. A step-by-step video or screenshot setup guide is sent with your order on WhatsApp, so you can start using your tool right away.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 8 -->
-                    <div class="faq-item glass-card" id="faq-item-8" data-category="privacy">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-8" data-category="privacy">
                         <button class="faq-question" id="faq-btn-8" aria-expanded="false" aria-controls="faq-answer-8">
-                            <span><i class="fa-solid fa-mobile-screen-button faq-q-icon"></i> On how many devices can I use CapCut Pro?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-mobile-screen-button faq-q-icon"></i> On how many devices can I use CapCut Pro?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-8" hidden>
+                        <div class="faq-answer" id="faq-answer-8" hidden data-cms-f-rich="a">
                             <p>CapCut Pro plans <strong>2 devices (PC, Mobile, Tablet)</strong> can stay logged in at the same time, with all Pro effects, 4K export, AI text-to-speech and full warranty support.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 9 -->
-                    <div class="faq-item glass-card" id="faq-item-9" data-category="delivery">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-9" data-category="delivery">
                         <button class="faq-question" id="faq-btn-9" aria-expanded="false" aria-controls="faq-answer-9">
-                            <span><i class="fa-solid fa-wand-magic-sparkles faq-q-icon"></i> How does the Google AI Ultra (Veo 3, Antigravity, Flow) invitation work?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-wand-magic-sparkles faq-q-icon"></i> How does the Google AI Ultra (Veo 3, Antigravity, Flow) invitation work?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-9" hidden>
+                        <div class="faq-answer" id="faq-answer-9" hidden data-cms-f-rich="a">
                             <p>With the Google AI Ultra Family Invitation plan, an official Google invitation is sent to your email. Once you accept it, your own account gets 25K AI credits, Veo 3, Google Antigravity and Gemini Ultra features.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 10 -->
-                    <div class="faq-item glass-card" id="faq-item-10" data-category="payment">
+                    <div data-cms-item data-cms-f-attr="data-category:category" class="faq-item glass-card" id="faq-item-10" data-category="payment">
                         <button class="faq-question" id="faq-btn-10" aria-expanded="false" aria-controls="faq-answer-10">
-                            <span><i class="fa-solid fa-tag faq-q-icon"></i> How do I apply a discount coupon?</span>
+                            <span data-cms-f="q"><i data-cms-f-icon="icon" class="fa-solid fa-tag faq-q-icon"></i> How do I apply a discount coupon?</span>
                             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer" id="faq-answer-10" hidden>
+                        <div class="faq-answer" id="faq-answer-10" hidden data-cms-f-rich="a">
                             <p>Enter your code (e.g. <code>MDC10</code>) in the coupon box above the catalog. The discount is deducted from your cart total and added to your WhatsApp order message automatically.</p>
                         </div>
                     </div>
@@ -1768,26 +1768,26 @@
             </div>
         </section>
         <!-- Secure Payment Trust Strip -->
-        <section class="mdc-pay-section" id="payments-section">
+        <section class="mdc-pay-section" id="payments-section" data-cms-section="payments">
             <div class="mdc-pay-strip" data-reveal="zoom">
-                <div class="mdc-pay-title"><i class="fa-solid fa-lock"></i> Secure &amp; Trusted Payment Methods</div>
-                <div class="mdc-pay-logos">
-                    <div class="mdc-pay-badge pay-easypaisa"><span class="pay-ico"><i class="fa-solid fa-wallet"></i></span> EasyPaisa</div>
-                    <div class="mdc-pay-badge pay-jazzcash"><span class="pay-ico"><i class="fa-solid fa-bolt"></i></span> JazzCash</div>
-                    <div class="mdc-pay-badge pay-meezan"><span class="pay-ico"><i class="fa-solid fa-building-columns"></i></span> Meezan Bank</div>
-                    <div class="mdc-pay-badge pay-bank"><span class="pay-ico"><i class="fa-solid fa-money-bill-transfer"></i></span> Bank Transfer</div>
-                    <div class="mdc-pay-badge pay-binance"><span class="pay-ico"><i class="fa-brands fa-bitcoin"></i></span> Binance / USDT (International)</div>
+                <div class="mdc-pay-title" data-cms="payments.title"><i class="fa-solid fa-lock"></i> Secure &amp; Trusted Payment Methods</div>
+                <div class="mdc-pay-logos" data-cms-list="payments.items">
+                    <div data-cms-item data-cms-f-tail="name" class="mdc-pay-badge pay-easypaisa" data-cms-f-color="style" data-cms-colors="pay-easypaisa pay-jazzcash pay-meezan pay-bank pay-binance"><span class="pay-ico"><i data-cms-f-icon="icon" class="fa-solid fa-wallet"></i></span> EasyPaisa</div>
+                    <div data-cms-item data-cms-f-tail="name" class="mdc-pay-badge pay-jazzcash" data-cms-f-color="style" data-cms-colors="pay-easypaisa pay-jazzcash pay-meezan pay-bank pay-binance"><span class="pay-ico"><i data-cms-f-icon="icon" class="fa-solid fa-bolt"></i></span> JazzCash</div>
+                    <div data-cms-item data-cms-f-tail="name" class="mdc-pay-badge pay-meezan" data-cms-f-color="style" data-cms-colors="pay-easypaisa pay-jazzcash pay-meezan pay-bank pay-binance"><span class="pay-ico"><i data-cms-f-icon="icon" class="fa-solid fa-building-columns"></i></span> Meezan Bank</div>
+                    <div data-cms-item data-cms-f-tail="name" class="mdc-pay-badge pay-bank" data-cms-f-color="style" data-cms-colors="pay-easypaisa pay-jazzcash pay-meezan pay-bank pay-binance"><span class="pay-ico"><i data-cms-f-icon="icon" class="fa-solid fa-money-bill-transfer"></i></span> Bank Transfer</div>
+                    <div data-cms-item data-cms-f-tail="name" class="mdc-pay-badge pay-binance" data-cms-f-color="style" data-cms-colors="pay-easypaisa pay-jazzcash pay-meezan pay-bank pay-binance"><span class="pay-ico"><i data-cms-f-icon="icon" class="fa-brands fa-bitcoin"></i></span> Binance / USDT (International)</div>
                 </div>
-                <div class="mdc-pay-note"><i class="fa-solid fa-shield-halved"></i> Payment details are shared on WhatsApp when you place your order.</div>
+                <div class="mdc-pay-note" data-cms="payments.note"><i class="fa-solid fa-shield-halved"></i> Payment details are shared on WhatsApp when you place your order.</div>
             </div>
         </section>
 
         <!-- Refer & Earn -->
-        <section class="mdc-pay-section" id="referral-section">
+        <section class="mdc-pay-section" id="referral-section" data-cms-section="referral">
             <div class="mdc-ref-card" data-reveal="zoom">
-                <div class="ref-badge"><i class="fa-solid fa-gift"></i> Refer &amp; Earn</div>
-                <h2>Refer a friend, get rewarded</h2>
-                <p>Create your referral link and share it with friends. When they order through your link, you get a special discount or reward. Enter your name to generate your link:</p>
+                <div class="ref-badge" data-cms="referral.badge"><i class="fa-solid fa-gift"></i> Refer &amp; Earn</div>
+                <h2 data-cms="referral.title">Refer a friend, get rewarded</h2>
+                <p data-cms="referral.text">Create your referral link and share it with friends. When they order through your link, you get a special discount or reward. Enter your name to generate your link:</p>
                 <div class="mdc-ref-form">
                     <input type="text" id="mdc-ref-name" placeholder="Your name or ID (e.g. ahmed)" aria-label="Your name or ID">
                     <button class="btn btn-gradient" id="mdc-ref-gen">Generate Link</button>
@@ -1825,7 +1825,7 @@
                     <span class="logo-icon logo-icon-img"><img src="assets/logo.webp" width="40" height="40" alt="MALIK DATA CENTRE logo"></span>
                     <span class="logo-text">MALIK DATA <span class="logo-highlight">CENTRE</span></span>
                 </a>
-                <p class="footer-tagline">Premium AI tools, software licenses and developer subscriptions, delivered to customers worldwide.</p>
+                <p class="footer-tagline" data-cms="contact.footerNote">Premium AI tools, software licenses and developer subscriptions, delivered to customers worldwide.</p>
                 <div class="footer-socials">
                     <a href="https://wa.me/923445739206" target="_blank" class="social-icon" aria-label="WhatsApp Support" title="WhatsApp Support" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z" target="_blank" class="social-icon" aria-label="WhatsApp Channel" title="WhatsApp Channel" rel="noopener noreferrer"><i class="fa-solid fa-bullhorn"></i></a>
@@ -1919,6 +1919,8 @@
 
     <!-- App JavaScript -->
     <!-- Tool page links + tool finder data (generated by build-pages.js) -->
+    <script src="/api/content.js"></script>
+    <script src="assets/js/cms.js?v=1.0"></script>
     <script src="tool-links.js?v=3.0"></script>
     <script src="index.js?v=3.2"></script>
     <script src="pages.js?v=3.2" defer></script>

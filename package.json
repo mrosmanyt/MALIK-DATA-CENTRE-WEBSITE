@@ -1,0 +1,11 @@
+{
+  "name": "malik-data-centre-website",
+  "private": true,
+  "description": "Static site + one Vercel function (api/router.js) for the admin panel",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.0"
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="same-origin">
+<meta name="theme-color" content="#111827">
+<title>MALIK DATA CENTRE Admin</title>
+<link rel="icon" type="image/png" href="/assets/logo-96.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/assets/admin/admin.css?v=1.0">
+<script src="/assets/admin/theme-init.js"></script>
+</head>
+<body>
+<noscript><p style="padding:30px;font-family:sans-serif">Please turn on JavaScript to use the admin panel.</p></noscript>
+
+<!-- Sign in -->
+<section class="ad-login" id="login" hidden>
+  <form class="ad-login-card" id="login-form" autocomplete="on">
+    <img src="/assets/logo.webp" alt="" width="64" height="64" class="ad-login-logo">
+    <h1>MALIK DATA <span>CENTRE</span></h1>
+    <p class="ad-muted">Admin panel</p>
+    <label for="login-u">Username</label>
+    <input id="login-u" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+    <label for="login-p">Password</label>
+    <div class="ad-pass"><input id="login-p" type="password" autocomplete="current-password" required><button type="button" class="ad-eye" data-eye="login-p" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+    <p class="ad-err" id="login-err" role="alert"></p>
+    <button class="ad-btn primary full" type="submit" id="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</button>
+    <p class="ad-hint">First time? Sign in as <b>admin</b> with the ADMIN_PASSWORD you set in Vercel.</p>
+  </form>
+</section>
+
+<!-- Forced new password -->
+<section class="ad-login" id="newpass" hidden>
+  <form class="ad-login-card" id="newpass-form">
+    <img src="/assets/logo.webp" alt="" width="64" height="64" class="ad-login-logo">
+    <h1>Choose your own password</h1>
+    <p class="ad-muted">For safety, set a new password before you continue.</p>
+    <label for="np-cur">Current (temporary) password</label>
+    <input id="np-cur" type="password" autocomplete="current-password" required>
+    <label for="np-new">New password</label>
+    <input id="np-new" type="password" autocomplete="new-password" required minlength="10">
+    <label for="np-new2">New password again</label>
+    <input id="np-new2" type="password" autocomplete="new-password" required minlength="10">
+    <p class="ad-hint">At least 10 characters, with letters and numbers.</p>
+    <p class="ad-err" id="np-err" role="alert"></p>
+    <button class="ad-btn primary full" type="submit"><i class="fa-solid fa-lock"></i> Save password</button>
+  </form>
+</section>
+
+<!-- App -->
+<div class="ad-app" id="app" hidden>
+  <aside class="ad-side" id="side">
+    <a class="ad-brand" href="/admin.html#dashboard"><img src="/assets/logo.webp" alt="" width="34" height="34"><span><b>MALIK DATA CENTRE</b><small>Admin</small></span></a>
+    <nav class="ad-nav" id="nav"></nav>
+    <div class="ad-side-foot">
+      <a href="/" target="_blank" rel="noopener" class="ad-navlink"><i class="fa-solid fa-arrow-up-right-from-square"></i> View website</a>
+      <button class="ad-navlink" id="theme-toggle" type="button"><i class="fa-solid fa-circle-half-stroke"></i> Light / dark</button>
+    </div>
+  </aside>
+  <div class="ad-scrim" id="scrim"></div>
+  <main class="ad-main">
+    <header class="ad-top">
+      <button class="ad-icon-btn ad-menu-btn" id="menu-btn" type="button" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <h2 id="page-title">Dashboard</h2>
+      <div class="ad-user" id="user-box"><span class="ad-av" id="user-av">A</span><span class="ad-user-txt"><b id="user-name">Admin</b><small id="user-role"></small></span>
+        <button class="ad-icon-btn" id="logout-btn" type="button" title="Sign out" aria-label="Sign out"><i class="fa-solid fa-right-from-bracket"></i></button></div>
+    </header>
+    <div class="ad-view" id="view"></div>
+  </main>
+</div>
+
+<div class="ad-toasts" id="toasts" aria-live="polite"></div>
+<dialog class="ad-dialog" id="confirm"><form method="dialog"><h3 id="confirm-title">Are you sure?</h3><p id="confirm-text"></p>
+  <div class="ad-row end"><button class="ad-btn ghost" value="no">Cancel</button><button class="ad-btn danger" value="yes" id="confirm-yes">Yes</button></div></form></dialog>
+
+<script src="/assets/admin/schema.js?v=1.0"></script>
+<script src="/assets/admin/admin.js?v=1.0"></script>
+</body>
+</html>

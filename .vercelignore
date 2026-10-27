@@ -3,3 +3,7 @@ site-content/
 scripts/
 build-pages.js
 .github/
+
+# Admin panel docs and database scripts (not part of the website)
+ADMIN-SETUP.md
+supabase/

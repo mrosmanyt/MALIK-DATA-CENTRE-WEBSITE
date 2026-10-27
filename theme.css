@@ -306,3 +306,12 @@ h1, h2, h3, .section-title, .hero-title { font-family: 'Inter', system-ui, sans-
 .mdc-deal-text i { animation: none !important; }
 /* Static status dots: a blinking dot inside the catalog repainted the whole section every frame */
 .dot, .mdc-live-counter .dot, .status-dot, .live-dot { animation: none !important; box-shadow: none !important; }
+
+/* Postly tool pages */
+.pg-footer-grid { grid-template-columns: 1.3fr repeat(5, 1fr); }
+@media (max-width: 1100px) { .pg-footer-grid { grid-template-columns: 1fr 1fr 1fr; } .pg-footer-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 640px) { .pg-footer-grid { grid-template-columns: 1fr 1fr; } }
+.pg-tpl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 14px 0 10px; align-items: start; }
+.pg-tpl { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-glass); background: #fff; box-shadow: var(--shadow-sm); transition: transform .2s ease; }
+.pg-tpl:hover { transform: translate3d(0, -3px, 0); }
+.pg-tpl img { width: 100%; height: auto; display: block; }

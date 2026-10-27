@@ -57,6 +57,7 @@ const loadTools = CONTENTLIB.loadTools;
 const TOOLS = loadTools();
 const FAMILIES = require("./site-content/families.js");
 const CONTENT = require("./site-content/pages-content.js");
+const POSTLY = require("./site-content/postly-tools.js");
 const FAM = {};
 FAMILIES.forEach(f => { FAM[f.slug] = f; });
 const POSTS = CONTENTLIB.loadPosts().filter(p => CONTENTLIB.isPublished(p, TODAY) && p.slug)
@@ -179,7 +180,7 @@ function footer(rel) {
           <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.webp" alt="${BRAND} logo" width="36" height="36"></span>
           <span class="logo-text">MALIK DATA <span class="logo-highlight">CENTRE</span></span>
         </a>
-        <p class="pg-foot-about">AI tools and software subscriptions for customers worldwide, with USDT and local payments, WhatsApp support and a written warranty.</p>
+        <p class="pg-foot-about" data-cms="contact.footerNote">AI tools and software subscriptions for customers worldwide, with USDT and local payments, WhatsApp support and a written warranty.</p>
         <div class="footer-socials">
           <a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="${CHANNEL}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp Channel"><i class="fa-solid fa-bullhorn"></i></a>
@@ -204,6 +205,11 @@ function footer(rel) {
           <li><a href="${rel}enterprise-ai-api-credits/">API credits</a></li>
           <li><a href="${rel}blog/index.html">Blog</a></li>
         </ul>
+      </div>
+      <div>
+        <h4>Free design tools</h4>
+        <ul>${POSTLY.slice(0, 7).map(t => `<li><a href="${rel}${t.slug}/">${esc(t.h1.replace(/^Free /, ""))}</a></li>`).join("")}
+          <li><a href="${rel}free-design-tools/">All free tools</a></li></ul>
       </div>
       <div>
         <h4>Policies</h4>
@@ -235,9 +241,9 @@ function footer(rel) {
 <a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="pg-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`;
 }
 
-function page({ urlPath, title, desc, body, active, jsonld = [], ogType = "website", checkout = false, keywords = "", extraCss = [], file = null }) {
+function page({ urlPath, title, desc, body, active, jsonld = [], ogType = "website", checkout = false, keywords = "", extraCss = [], file = null, absolute = false }) {
   const depth = urlPath.split("/").filter(Boolean).length - (urlPath.endsWith(".html") ? 1 : 0);
-  const rel = "../".repeat(depth);
+  const rel = absolute ? "/" : "../".repeat(depth);   // absolute: links from the site root (admin-panel blog pages)
   const canonical = SITE + "/" + urlPath;
   const ld = jsonld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `<!DOCTYPE html>
@@ -271,7 +277,7 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <link rel="stylesheet" href="${rel}index.css">
 ${checkout ? `<link rel="stylesheet" href="${rel}advanced.css">` : ""}
 <link rel="stylesheet" href="${rel}pages.css">
-<link rel="stylesheet" href="${rel}theme.css?v=2.3">
+<link rel="stylesheet" href="${rel}theme.css?v=2.4">
 ${extraCss.map(c => `<link rel="stylesheet" href="${rel}${c}">`).join("\n")}
 ${ld}
 </head>
@@ -282,6 +288,8 @@ ${header(rel, active)}
 ${body(rel)}
 </main>
 ${footer(rel)}
+<script src="/api/content.js"></script>
+<script src="${rel}assets/js/cms.js?v=1.0"></script>
 <script src="${rel}tool-links.js" defer></script>
 <script src="${rel}pages.js" defer></script>
 ${checkout ? `<script src="${rel}store-backend.js" defer></script>` : ""}
@@ -324,7 +332,7 @@ function familyCard(rel, f) {
     <div class="pg-card-top"><div class="pg-card-icon"><i class="${f.icon}"></i></div>
       <div><div class="pg-card-cat">${esc(CAT[f.cat] || f.cat)}</div><h3>${esc(f.name)}</h3></div></div>
     <p>${esc(f.intro.split(". ")[0].replace(/\.$/, ""))}.</p>
-    <div class="pg-card-price"><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? `<s>${rs(st.min.originalPrice)}</s>` : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
+    <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.plans.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? `<s>${rs(st.min.originalPrice)}</s>` : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
     <span class="pg-card-more">${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a>`;
 }
@@ -828,6 +836,66 @@ function buildServices() {
 }
 
 /* ======================================================================
+   5b) POSTLY TOOL PAGES (SEO landing pages that open the design studio)
+   ====================================================================== */
+function postlyCard(rel, t) {
+  return `<a class="pg-card" href="${rel}${t.slug}/"><div class="pg-card-top"><div class="pg-card-icon"><i class="${t.icon}"></i></div><h3>${esc(t.h1)}</h3></div><p>${esc(t.lead.split(". ")[0])}.</p><span class="pg-card-more">Open free tool <i class="fa-solid fa-arrow-right"></i></span></a>`;
+}
+function buildPostlyPages() {
+  const shot = id => fs.existsSync(path.join(ROOT, "assets", "postly", id + ".webp"));
+  POSTLY.forEach(t => {
+    const url = t.slug + "/";
+    const open = rel => `${rel}design/?tool=${t.tool}`;
+    const body = rel => `
+<div class="pg-wrap">
+  ${crumbHtml(rel, [["Home", "index.html"], ["Free design tools", "free-design-tools/"], [t.h1, ""]])}
+  <section class="pg-hero">
+    <span class="pg-eyebrow"><i class="${t.icon}"></i> Postly Design Studio · free</span>
+    <h1>${esc(t.h1)}</h1>
+    <p class="pg-lead">${esc(t.lead)}</p>
+    <div class="pg-hero-cta" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+      <a class="btn btn-gradient" href="${open(rel)}"><i class="fa-solid fa-wand-magic-sparkles"></i> Open ${esc(t.h1.replace(/^Free /, ""))}</a>
+      <a class="btn btn-outline" href="#how"><i class="fa-solid fa-circle-play"></i> How it works</a>
+    </div>
+    <div class="pg-meta"><span><i class="fa-solid fa-check"></i> No signup</span><span><i class="fa-solid fa-check"></i> No watermark</span><span><i class="fa-solid fa-check"></i> Works on phone &amp; computer</span></div>
+  </section>
+  ${t.templates.some(shot) ? `<section class="pg-section" style="padding-top:0"><h2>Start from a template</h2>
+    <div class="pg-tpl-grid">${t.templates.filter(shot).map(id => `<a href="${rel}design/?tpl=${id}" class="pg-tpl"><img src="${rel}assets/postly/${id}.webp" alt="${esc(t.h1)} template" loading="lazy"></a>`).join("")}</div>
+    <p style="font-size:.88rem">Tap a template to open it in Postly and make it yours.</p></section>` : ""}
+  <section class="pg-section"><h2>What you can do</h2>
+    <div class="pg-grid three">${t.features.map(([ic, h, d]) => `<div class="pg-card"><div class="pg-card-top"><div class="pg-card-icon"><i class="${ic}"></i></div><h3>${esc(h)}</h3></div><p>${esc(d)}</p></div>`).join("")}</div></section>
+  <section class="pg-section" id="how"><h2>How it works</h2><ol class="pg-steps">${t.steps.map(([a, b]) => `<li><span><strong>${esc(a)}</strong>${esc(b)}</span></li>`).join("")}</ol>
+    <a class="btn btn-gradient" href="${open(rel)}" style="margin-top:14px"><i class="fa-solid fa-arrow-right"></i> Start designing free</a></section>
+  <section class="pg-section pg-prose">${t.tips}</section>
+  <section class="pg-section"><h2>Frequently asked questions</h2>${faqHtml(t.faqs)}</section>
+  <section class="pg-section"><h2>More free design tools</h2><div class="pg-grid">${POSTLY.filter(x => x.slug !== t.slug).slice(0, 6).map(x => postlyCard(rel, x)).join("")}</div></section>
+  <div class="pg-cta"><h2>Prefer us to design it?</h2><p>Our team makes thumbnails, ads, flyers and social posts for you. Send your details on WhatsApp.</p>
+    <div class="pg-cta-btns"><a class="btn btn-success" href="${waLink("Hello MALIK DATA CENTRE! I'd like you to design this for me: " + t.h1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Get it designed</a><a class="btn btn-outline" href="${rel}social-media-services/">Our design services</a></div></div>
+</div>`;
+    write(url, page({ urlPath: url, active: "design", title: `${t.title} | Postly`, desc: t.lead, keywords: t.keywords,
+      jsonld: [crumbLd([["Home", ""], ["Free design tools", "free-design-tools/"], [t.h1, url]]),
+        { "@context": "https://schema.org", "@type": "WebApplication", name: `Postly ${t.h1.replace(/^Free /, "")}`, url: `${SITE}/${url}`, applicationCategory: "DesignApplication", operatingSystem: "Any (web browser)",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, description: t.lead, publisher: { "@type": "Organization", name: BRAND, url: SITE } },
+        faqLd(t.faqs)].filter(Boolean), body }));
+  });
+  // hub page
+  const url = "free-design-tools/";
+  const body = rel => `
+<div class="pg-wrap">
+  ${crumbHtml(rel, [["Home", "index.html"], ["Free design tools", ""]])}
+  <section class="pg-hero">
+    <span class="pg-eyebrow"><i class="fa-solid fa-palette"></i> Postly Design Studio</span>
+    <h1>Free design tools</h1>
+    <p class="pg-lead">YouTube thumbnails, ads, banners, QR codes, background removal, Eid and wedding cards, flyers, menus and business cards. All free, in your browser, with no signup and no watermark.</p>
+    <a class="btn btn-gradient" href="${rel}design/" style="margin-top:16px"><i class="fa-solid fa-wand-magic-sparkles"></i> Open Postly Design Studio</a>
+  </section>
+  <section class="pg-section" style="padding-top:0"><div class="pg-grid three">${POSTLY.map(t => postlyCard(rel, t)).join("")}</div></section>
+</div>`;
+  write(url, page({ urlPath: url, active: "design", title: `Free Design Tools: Thumbnail, Ad, QR & Card Makers | Postly`, desc: "Free online design tools by Postly: YouTube thumbnail maker, ad maker, banner maker, QR code maker, background remover, Eid and wedding card makers, flyers, menus and business cards.",
+    jsonld: [crumbLd([["Home", ""], ["Free design tools", url]])], body }));
+}
+
+/* ======================================================================
    6) tool-links.js, homepage block, sitemap, llms.txt
    ====================================================================== */
 function buildToolLinks() {
@@ -890,16 +958,16 @@ function updateHomepage() {
             </div>
         </section>
 
-        <section class="mdc-hp-section" id="services-strip">
+        <section class="mdc-hp-section" id="services-strip" data-cms-section="services">
             <div class="pg-wrap">
                 <div class="section-header">
-                    <span class="section-badge"><i class="fa-solid fa-briefcase"></i> For businesses</span>
-                    <h2 class="section-title">More than <span class="text-gradient">subscriptions</span></h2>
+                    <span class="section-badge" data-cms="services.badge"><i class="fa-solid fa-briefcase"></i> For businesses</span>
+                    <h2 class="section-title"><span data-cms="services.title">More than</span> <span class="text-gradient" data-cms="services.highlight">subscriptions</span></h2>
                 </div>
-                <div class="pg-grid three">
-                    <a class="pg-card" href="ai-automation-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-robot"></i></div><h3>AI Automation Services</h3></div><p>WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.</p><span class="pg-card-more">Get a quote <i class="fa-solid fa-arrow-right"></i></span></a>
-                    <a class="pg-card" href="social-media-services/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-hashtag"></i></div><h3>Social Media Services</h3></div><p>Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.</p><span class="pg-card-more">See services <i class="fa-solid fa-arrow-right"></i></span></a>
-                    <a class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i class="fa-solid fa-plug"></i></div><h3>Enterprise API Credits</h3></div><p>Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.</p><span class="pg-card-more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
+                <div class="pg-grid three" data-cms-list="services.cards">
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="ai-automation-services/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-robot"></i></div><h3 data-cms-f="title">AI Automation Services</h3></div><p data-cms-f="text">WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.</p><span class="pg-card-more" data-cms-f="more">Get a quote <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="social-media-services/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-hashtag"></i></div><h3 data-cms-f="title">Social Media Services</h3></div><p data-cms-f="text">Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.</p><span class="pg-card-more" data-cms-f="more">See services <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <a data-cms-item data-cms-f-href="link" class="pg-card" href="enterprise-ai-api-credits/"><div class="pg-card-top"><div class="pg-card-icon"><i data-cms-f-icon="icon" class="fa-solid fa-plug"></i></div><h3 data-cms-f="title">Enterprise API Credits</h3></div><p data-cms-f="text">Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.</p><span class="pg-card-more" data-cms-f="more">Request pricing <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
             </div>
         </section>
@@ -962,6 +1030,8 @@ function buildLlms() {
     ...CONTENT.comparisons.map(c => `- [${c.short}](${SITE}/comparisons/${c.slug}/)`),
     "", "## Free tools", "",
     `- [Postly Design Studio](${SITE}/design/): free YouTube thumbnail maker and ad creative maker with 200+ templates (YouTube thumbnails, Facebook/Instagram/Google ads, Eid, Ramadan, 14 August, weddings, sales, restaurant menus, YouTube thumbnails, Reels covers, business cards), free stock photos and icons, QR codes, brand kit, photo crop and shape masks, multi-page PDF export, resize to many sizes, AI text-to-image, AI writer and translation, AI background remover, magic eraser and AI product photos.`,
+    "", "## Free design tools (Postly)", "",
+    ...POSTLY.map(t => `- [${t.h1}](${SITE}/${t.slug}/): ${t.lead}`),
     "", "## Services", "",
     ...Object.values(CONTENT.services).map(s => `- [${s.title}](${SITE}/${s.slug}/)`),
     "", "## Policies", "",
@@ -1034,6 +1104,12 @@ function buildBlog() {
       ogType: "article", jsonld, extraCss: ["blog.css"], body }));
   });
 
+  // Page shell for blog posts written in the admin panel (rendered by api/router.js at /blog/p/<slug>/)
+  let shell = page({ urlPath: "__CMS_PATH__/", absolute: true, active: "blog", title: "__CMS_TITLE__", desc: "__CMS_DESC__", ogType: "article", extraCss: ["blog.css"], body: () => "<!--CMS_BODY-->" });
+  shell = shell.split(`${SITE}/__CMS_PATH__/`).join("__CMS_URL__").replace(`<meta property="og:image" content="${SITE}/assets/logo.png">`, `<meta property="og:image" content="__CMS_IMAGE__">`).replace("</head>", "<!--CMS_JSONLD-->\n</head>");
+  fs.mkdirSync(path.join(ROOT, "data"), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, "data", "page-shell.html"), shell);
+
   // Blog index
   const items = allBlogItems();
   const cats = [...new Set(items.map(i => i.category))];
@@ -1085,6 +1161,7 @@ buildToolsIndex();
 buildComparisons();
 buildPolicies();
 buildServices();
+buildPostlyPages();
 buildBlog();
 buildToolLinks();
 updateHomepage();

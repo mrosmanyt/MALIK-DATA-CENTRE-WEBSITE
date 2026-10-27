@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 # Explicitly allow AI Search Indexers & LLM Crawlers for GEO (Generative Engine Optimization)
 User-agent: GPTBot
@@ -28,5 +32,6 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: https://www.malikdatacentre.store/sitemap.xml
+Sitemap: https://www.malikdatacentre.store/sitemap-cms.xml
 # LLM Context File for AI search recommendations
 # https://www.malikdatacentre.store/llm.txt

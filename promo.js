@@ -131,10 +131,12 @@
     /* ======================================================================
        4. COUPON CODE SYSTEM
        ====================================================================== */
-    const COUPONS = {
+    // Coupon codes: the admin panel's published list replaces these defaults
+    const DEFAULT_COUPONS = {
         "MALIK10": 10,
         "WAIT5": 5
     };
+    const COUPONS = (window.MDC_CMS && typeof window.MDC_CMS.coupons === "function") ? window.MDC_CMS.coupons(DEFAULT_COUPONS) : DEFAULT_COUPONS;
     let activeCoupon = null; // { code, pct }
 
     function initCoupons() {
@@ -176,7 +178,7 @@
             } else {
                 activeCoupon = null;
                 if (badge) badge.classList.remove("show");
-                setMsg("✗ This coupon is not valid. Try MALIK10 or WAIT5.", false);
+                setMsg("✗ This coupon is not valid." + (Object.keys(COUPONS).length ? " Try " + Object.keys(COUPONS).slice(0, 2).join(" or ") + "." : ""), false);
             }
         }
 
@@ -214,9 +216,10 @@
        INIT
        ====================================================================== */
     document.addEventListener("DOMContentLoaded", () => {
-        initToasts();
-        initLiveCounter();
-        initCountdown();
+        const on = (k) => !(window.MDC_CMS && window.MDC_CMS.extra && !window.MDC_CMS.extra(k));   // switches in the admin panel
+        if (on("toasts")) initToasts();
+        if (on("counter")) initLiveCounter();
+        if (on("countdown")) initCountdown();
         initCoupons();
     });
 })();

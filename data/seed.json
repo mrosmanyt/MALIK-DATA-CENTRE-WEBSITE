@@ -1,0 +1,2300 @@
+{
+ "hero": {
+  "image": "",
+  "eyebrow": "AI tools & subscriptions • Delivered worldwide",
+  "brand": "Malik Data Centre",
+  "title": "Premium AI tools, worldwide.",
+  "lead": "ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva Pro, Adobe, CapCut, Cursor and 30+ more tools. No international credit card needed: pay with USDT from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. Get activated on WhatsApp in 5–30 minutes, with a written warranty.",
+  "btn1Text": "Order on WhatsApp",
+  "btn2Text": "Browse tools",
+  "btn1Link": "https://wa.me/923445739206",
+  "btn2Link": "#catalog-section",
+  "facts": [
+   {
+    "text": "plans listed",
+    "num": "65+"
+   },
+   {
+    "text": "activation",
+    "num": "5–30 min"
+   },
+   {
+    "text": "if we can't fix it",
+    "num": "Refund"
+   }
+  ]
+ },
+ "how": {
+  "badge": "Simple 3-Step Process",
+  "title": "How It Works",
+  "subtitle": "Getting a premium subscription is easy — your account is ready in three simple steps.",
+  "steps": [
+   {
+    "color": "color-purple",
+    "icon": "fa-solid fa-magnifying-glass",
+    "title": "Choose a Tool",
+    "text": "Pick an AI tool or subscription from the catalog, or add several tools to your cart."
+   },
+   {
+    "color": "color-green",
+    "icon": "fa-brands fa-whatsapp",
+    "title": "WhatsApp Order",
+    "text": "Tap \"Buy Now\" and your order goes to WhatsApp. Pay with USDT from anywhere, or EasyPaisa, JazzCash or bank in Pakistan."
+   },
+   {
+    "color": "color-blue",
+    "icon": "fa-solid fa-bolt",
+    "title": "Instant Setup",
+    "text": "As soon as payment is confirmed, your premium account is activated in 5–30 minutes, with full warranty."
+   }
+  ]
+ },
+ "why": {
+  "title": "Why Professionals Choose Us",
+  "subtitle": "We don't just sell subscriptions. We provide fully supported, private access with industry-leading reliability.",
+  "cards": [
+   {
+    "color": "color-purple",
+    "icon": "fa-solid fa-user-lock",
+    "title": "100% Private Accounts",
+    "text": "No shared profiles. Where specified, subscriptions are activated directly on your email, keeping your workspace and history private."
+   },
+   {
+    "color": "color-green",
+    "icon": "fa-solid fa-shield-halved",
+    "title": "Full Warranty Coverage",
+    "text": "Every purchase is backed by a full duration warranty. If a tool acts up, our support will resolve it immediately."
+   },
+   {
+    "color": "color-blue",
+    "icon": "fa-solid fa-rotate-left",
+    "title": "Open Refund Policy",
+    "text": "Refund policy is open at all times. If a subscription encounters issues that we cannot replace, we will refund your payment."
+   },
+   {
+    "color": "color-orange",
+    "icon": "fa-solid fa-bolt",
+    "title": "Instant Setup",
+    "text": "Minimize downtime. Our system ensures rapid account provision, so you can start working with your premium AI models immediately."
+   }
+  ]
+ },
+ "services": {
+  "badge": "For businesses",
+  "title": "More than",
+  "highlight": "subscriptions",
+  "cards": [
+   {
+    "link": "ai-automation-services/",
+    "icon": "fa-solid fa-robot",
+    "title": "AI Automation Services",
+    "text": "WhatsApp AI chatbots, n8n workflows, lead follow-up and custom AI agents built for your business.",
+    "more": "Get a quote"
+   },
+   {
+    "link": "social-media-services/",
+    "icon": "fa-solid fa-hashtag",
+    "title": "Social Media Services",
+    "text": "Channel setup, thumbnails, page management and ad campaigns for YouTube, Facebook, Instagram and TikTok.",
+    "more": "See services"
+   },
+   {
+    "link": "enterprise-ai-api-credits/",
+    "icon": "fa-solid fa-plug",
+    "title": "Enterprise API Credits",
+    "text": "Claude, OpenAI, Gemini and DeepSeek API credits for apps and bots, with a custom quote in USD, USDT or PKR.",
+    "more": "Request pricing"
+   }
+  ]
+ },
+ "videos": {
+  "badge": "Watch Us Live",
+  "title": "See MALIK DATA CENTRE in Action",
+  "subtitle": "These are our official ads currently running on Facebook. See how we deliver premium subscriptions.",
+  "items": [
+   {
+    "video": "assets/videos/ad-1.mp4",
+    "poster": "assets/hero_banner.webp",
+    "caption": "Premium AI Subscriptions Promo"
+   },
+   {
+    "video": "assets/videos/ad-2.mp4",
+    "poster": "assets/hero_banner.webp",
+    "caption": "Trusted Service Showcase"
+   }
+  ]
+ },
+ "reviews": {
+  "badge": "Verified Feedback",
+  "title": "What Our Customers Say",
+  "subtitle": "Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.",
+  "items": [
+   {
+    "color": "color-purple",
+    "name": "Ameer Hamza",
+    "purchase": "Grok 3 Months Plan",
+    "rating": 5,
+    "text": "\"Super fast activation! The subscription was activated directly on my email, and I got the Grok Premium guide. Absolutely seamless service.\"",
+    "image": "assets/reviews/review-grok-arham.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-blue",
+    "name": "Kamran Shah",
+    "purchase": "ChatGPT Go 6 Months",
+    "rating": 5,
+    "text": "\"Got my 6 months ChatGPT Go plan and Grok 3 months setup. Working flawlessly, support shared simple guide steps. Best pricing in town!\"",
+    "image": "assets/reviews/review-chatgpt-grok.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-green",
+    "name": "Usman Ali",
+    "purchase": "Super Grok + X Premium+",
+    "rating": 5,
+    "text": "\"Sent payment through EasyPaisa, transaction was verified instantly. Got my Super Grok 3 months account right after. Very reliable seller.\"",
+    "image": "assets/reviews/review-easypaisa-grok.webp",
+    "date": "June 15, 2026",
+    "badge": "Payment Proof"
+   },
+   {
+    "color": "color-orange",
+    "name": "Zahid Mahmood",
+    "purchase": "VEO 3 Ultra Flow Portal",
+    "rating": 5,
+    "text": "\"The portal setup was extremely quick, and the guide videos shared by the team helped me login and start using VEO 3 instantly. Top service!\"",
+    "image": "assets/reviews/review-veo3-setup.webp",
+    "date": "June 15, 2026",
+    "badge": "Portal Setup"
+   },
+   {
+    "color": "color-purple",
+    "name": "Muhammad Farooq",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Excellent customer service! Got my premium Grok + X Premium+ activated with the blue verification tick. Full support and warranty.\"",
+    "image": "assets/reviews/review-super-grok.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-purple",
+    "name": "Muhammad Anees",
+    "purchase": "Gemini Pro 18 Months",
+    "rating": 5,
+    "text": "\"Got my 18 Months Google Gemini Pro official subscription. Extremely prompt response and direct activation. Thanks for using Malik Data Centre Services message confirmed it!\"",
+    "image": "assets/reviews/review-gemini-18months.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-blue",
+    "name": "Zubair Khan",
+    "purchase": "Google Service Links",
+    "rating": 5,
+    "text": "\"Purchased premium Google subscription activation links for order #1894. Very smooth onboarding, got active immediately. Highly recommended!\"",
+    "image": "assets/reviews/review-google-order1894.webp",
+    "date": "June 15, 2026",
+    "badge": "Links Active"
+   },
+   {
+    "color": "color-green",
+    "name": "Bilal Ahmed",
+    "purchase": "ChatGPT Go 6 Months",
+    "rating": 5,
+    "text": "\"Excellent chat guidance! Got my 6 months ChatGPT Go plan done via audio notes in chat. Best customer support ever.\"",
+    "image": "assets/reviews/review-chatgpt-6months.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-orange",
+    "name": "Rashid Minhas",
+    "purchase": "Google Service Links",
+    "rating": 5,
+    "text": "\"Google activation links for order #1879 delivered within minutes. Fast delivery and reliable setup guides. Recommended!\"",
+    "image": "assets/reviews/review-google-order1879.webp",
+    "date": "June 15, 2026",
+    "badge": "Links Active"
+   },
+   {
+    "color": "color-purple",
+    "name": "Shahbaz Ali",
+    "purchase": "YouTube OTP Verification",
+    "rating": 5,
+    "text": "\"Verified my YouTube channel phone lock. They provided the recovery number and verification code in less than a minute. Done thanks!\"",
+    "image": "assets/reviews/review-youtube-verification.webp",
+    "date": "June 15, 2026",
+    "badge": "OTP Done"
+   },
+   {
+    "color": "color-purple",
+    "name": "Raza Ahmed",
+    "purchase": "CapCut Pro Monthly",
+    "rating": 5,
+    "text": "\"Sent payment through Meezan Bank. Verified and got CapCut Pro activated on my phone in 5 minutes! Excellent.\"",
+    "image": "assets/reviews/review-capcut-meezan.webp",
+    "date": "June 14, 2026",
+    "badge": "Payment Proof"
+   },
+   {
+    "color": "color-blue",
+    "name": "Mubeen Khan",
+    "purchase": "Super Grok + Canva Pro",
+    "rating": 5,
+    "text": "\"Asked about Grok and Canva bundles, got them activated together. Highly cost-effective and swift setup.\"",
+    "image": "assets/reviews/review-grok-canva.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-green",
+    "name": "Muhammad Bilal",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Super Grok setup completed directly on X. Very active and helpful support on WhatsApp.\"",
+    "image": "assets/reviews/review-grok-bilal.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-orange",
+    "name": "Faisal Shah",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Team worked on my setup and got it done. Super Grok 3 Months activated with full warranty.\"",
+    "image": "assets/reviews/review-grok-progress.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-purple",
+    "name": "Hassan Nawaz",
+    "purchase": "HeyGen Pro Creator",
+    "rating": 5,
+    "text": "\"Got account details and complete setup tutorial video. HeyGen Creator setup works perfectly!\"",
+    "image": "assets/reviews/review-heygen-setup.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-purple",
+    "name": "Shahid Imran",
+    "purchase": "ElevenLabs Pro Creator",
+    "rating": 5,
+    "text": "\"Purchased the ElevenLabs Creator plan. High-quality speech synthesis activated directly on email. Smooth setup!\"",
+    "image": "assets/reviews/review-elevenlabs-creator.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-blue",
+    "name": "Yasir Mahmood",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Activated Grok 3 months directly. Clean onboarding guide shared in WhatsApp. Excellent support!\"",
+    "image": "assets/reviews/review-grok-edu.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-green",
+    "name": "Arsalan Khan",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Very professional team. Got my Super Grok active within minutes. Thank you MALIK DATA CENTRE!\"",
+    "image": "assets/reviews/review-grok-thanks.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-orange",
+    "name": "Noman Siddiqui",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Extremely fast setup delivery! Highly recommended for urgent premium account setups.\"",
+    "image": "assets/reviews/review-grok-fast.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   },
+   {
+    "color": "color-purple",
+    "name": "Usama Rashid",
+    "purchase": "Super Grok 3 Months",
+    "rating": 5,
+    "text": "\"Super Grok active with full verification blue tick. Responsive support 24/7. Awesome service!\"",
+    "image": "assets/reviews/review-grok-done.webp",
+    "date": "June 15, 2026",
+    "badge": "Setup Done"
+   }
+  ]
+ },
+ "refund": {
+  "badge": "100% Risk-Free Guarantee",
+  "title": "Our Open Refund & Replacement Promise",
+  "note": "Our customer-centric refund policy is active 24/7/365. You are always protected.",
+  "desc": "At **MALIK DATA CENTRE**, we build relationships based on trust. If you encounter any technical issues with your purchased premium account, our promise is simple, transparent, and always open:",
+  "steps": [
+   {
+    "icon": "fa-solid fa-envelope-open-text",
+    "title": "Report Issue",
+    "text": "Message our WhatsApp support about the error."
+   },
+   {
+    "icon": "fa-solid fa-arrows-rotate",
+    "title": "Instant Replacement",
+    "text": "We provide a fresh premium account profile."
+   },
+   {
+    "icon": "fa-solid fa-hand-holding-dollar",
+    "title": "Unable to Replace?",
+    "text": "We issue a full refund of your payment immediately."
+   }
+  ]
+ },
+ "faq": {
+  "badge": "24/7 Support & Knowledge Base",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Search or filter below to find instant answers about delivery, warranty replacements, payment methods (USDT / EasyPaisa / JazzCash), and account privacy.",
+  "items": [
+   {
+    "category": "delivery",
+    "q": "How long does activation take? (Delivery time)",
+    "icon": "fa-solid fa-clock-rotate-left",
+    "a": "Most AI tool and software activations take between **5 to 30 minutes** after your payment confirmation. Client email activation tools (such as Gemini 1.5 Pro, Lovable Pro, or Google AI Ultra Family Invite) are activated directly on your email address immediately upon receiving your details on WhatsApp."
+   },
+   {
+    "category": "warranty",
+    "q": "How does a warranty replacement work?",
+    "icon": "fa-solid fa-arrows-rotate",
+    "a": "Every purchase comes with full duration warranty replacement protection. If you face any login or subscription issue during your warranty period, simply send a screenshot of the error to our WhatsApp support at [**+92 344 5739206**](https://wa.me/923445739206). Our support team will resolve or replace your account within **10 to 30 minutes**."
+   },
+   {
+    "category": "payment",
+    "q": "Which payment methods do you accept? (Worldwide & Pakistan)",
+    "icon": "fa-solid fa-wallet",
+    "a": "We support all official payment methods:\n• **Worldwide**: USDT via Binance (BEP20 & TRC20 networks), for fast, low-fee checkout from any country.\n• **Pakistan**: EasyPaisa, JazzCash, Meezan Bank and all local bank transfers."
+   },
+   {
+    "category": "payment",
+    "q": "How can international customers pay with USDT?",
+    "icon": "fa-brands fa-bitcoin",
+    "a": "When you place your order on WhatsApp, tell our support team you want to pay with **USDT (Binance)**. The team will confirm the exact USDT amount and share our official BEP20 / TRC20 wallet address."
+   },
+   {
+    "category": "privacy",
+    "q": "What is the difference between \"On client email\" (private) and shared accounts?",
+    "icon": "fa-solid fa-shield-halved",
+    "a": "• **Private Accounts (ON CLIENT EMAIL)**: 100% private subscription setup directly on your personal Gmail/Email. Your data, code, prompts and files stay confidential and only in your account.\n• **Shared Accounts**: A budget-friendly option where several buyers share one login. Every plan is clearly labelled so you can choose the right one."
+   },
+   {
+    "category": "warranty",
+    "q": "What does your money-back refund policy cover?",
+    "icon": "fa-solid fa-hand-holding-dollar",
+    "a": "Our refund policy is transparent and customer-first. If your subscription has a technical issue during the warranty period and we cannot fix or replace it, we issue a **pro-rata / money-back refund**."
+   },
+   {
+    "category": "delivery",
+    "q": "Do I get a setup guide after ordering?",
+    "icon": "fa-solid fa-book-open-reader",
+    "a": "Yes. A step-by-step video or screenshot setup guide is sent with your order on WhatsApp, so you can start using your tool right away."
+   },
+   {
+    "category": "privacy",
+    "q": "On how many devices can I use CapCut Pro?",
+    "icon": "fa-solid fa-mobile-screen-button",
+    "a": "CapCut Pro plans **2 devices (PC, Mobile, Tablet)** can stay logged in at the same time, with all Pro effects, 4K export, AI text-to-speech and full warranty support."
+   },
+   {
+    "category": "delivery",
+    "q": "How does the Google AI Ultra (Veo 3, Antigravity, Flow) invitation work?",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "a": "With the Google AI Ultra Family Invitation plan, an official Google invitation is sent to your email. Once you accept it, your own account gets 25K AI credits, Veo 3, Google Antigravity and Gemini Ultra features."
+   },
+   {
+    "category": "payment",
+    "q": "How do I apply a discount coupon?",
+    "icon": "fa-solid fa-tag",
+    "a": "Enter your code (e.g. MDC10) in the coupon box above the catalog. The discount is deducted from your cart total and added to your WhatsApp order message automatically."
+   }
+  ]
+ },
+ "payments": {
+  "title": "Secure & Trusted Payment Methods",
+  "note": "Payment details are shared on WhatsApp when you place your order.",
+  "items": [
+   {
+    "style": "pay-easypaisa",
+    "name": "EasyPaisa",
+    "icon": "fa-solid fa-wallet"
+   },
+   {
+    "style": "pay-jazzcash",
+    "name": "JazzCash",
+    "icon": "fa-solid fa-bolt"
+   },
+   {
+    "style": "pay-meezan",
+    "name": "Meezan Bank",
+    "icon": "fa-solid fa-building-columns"
+   },
+   {
+    "style": "pay-bank",
+    "name": "Bank Transfer",
+    "icon": "fa-solid fa-money-bill-transfer"
+   },
+   {
+    "style": "pay-binance",
+    "name": "Binance / USDT (International)",
+    "icon": "fa-brands fa-bitcoin"
+   }
+  ]
+ },
+ "referral": {
+  "badge": "Refer & Earn",
+  "title": "Refer a friend, get rewarded",
+  "text": "Create your referral link and share it with friends. When they order through your link, you get a special discount or reward. Enter your name to generate your link:"
+ },
+ "contact": {
+  "orderWhatsapp": "923489057646",
+  "supportWhatsapp": "923445739206",
+  "channel": "https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z",
+  "community": "https://chat.whatsapp.com/FA4CLYGdoZn1PXhENEAMGJ",
+  "youtube": "https://www.youtube.com/@MalikDataCentre0",
+  "facebook": "https://www.facebook.com/people/Malik-Data-Centre-Pro/61566733492225/",
+  "x": "https://x.com/realmickeyai",
+  "footerNote": "Premium AI tools, software licenses and developer subscriptions, delivered to customers worldwide."
+ },
+ "tools": {
+  "categories": [
+   {
+    "id": "ai-chat",
+    "label": "AI Chat & Assistants"
+   },
+   {
+    "id": "creative",
+    "label": "Design & Creative"
+   },
+   {
+    "id": "video-audio",
+    "label": "AI Video & Audio"
+   },
+   {
+    "id": "ai-coding",
+    "label": "AI Coding & Dev"
+   },
+   {
+    "id": "entertainment",
+    "label": "Entertainment"
+   },
+   {
+    "id": "vpn-security",
+    "label": "VPNs & Security"
+   }
+  ],
+  "items": [
+   {
+    "id": "chatgpt-go-6m",
+    "name": "ChatGPT Go",
+    "category": "ai-chat",
+    "duration": "6 Months Plan",
+    "price": 2200,
+    "originalPrice": 5000,
+    "setup": "Shared Premium Account",
+    "desc": "Access OpenAI's advanced GPT-4o model with deep reasoning, web search, custom GPT creators, and data analysis tools.",
+    "specs": "Full Warranty Support\nGPT-4o & GPT-4 Access\nAdvanced Data Analysis\nCustom GPTs",
+    "stock": "in",
+    "ribbon": "bestseller",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "gemini-18m",
+    "name": "Gemini Advanced",
+    "category": "ai-chat",
+    "duration": "18 Months Plan",
+    "price": 2200,
+    "originalPrice": 8500,
+    "setup": "Activated on Client Email",
+    "desc": "Access Google's state-of-the-art Gemini 1.5 Pro model. Features massive 1M token context, high-speed coding assistance, and seamless Google Workspace integrations.",
+    "specs": "Full Warranty & Private\nGemini 1.5 Pro Access\n1M Token Context Window\nGoogle Docs/Gmail Sync",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "google-ai-ultra-shared-1m",
+    "name": "Google AI Ultra Shared Base Unlimited",
+    "category": "ai-chat",
+    "duration": "1 Month Subscription",
+    "price": 2500,
+    "originalPrice": 6000,
+    "setup": "Shared Premium Account",
+    "desc": "Google AI Ultra Shared Base unlimited video generation, Antigravity, and all other premium features included.",
+    "specs": "25 Days Full Warranty\nUnlimited Video Generation\nGoogle Antigravity & Veo Access\nAll Premium AI Features",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "google-ai-ultra-family-1m",
+    "name": "Google AI Ultra Private Family Invitation",
+    "category": "ai-chat",
+    "duration": "1 Month Plan",
+    "price": 8500,
+    "originalPrice": 18000,
+    "setup": "Private Family Invitation",
+    "desc": "Google AI Ultra Family Invitation 🚀 — 25K AI Credits, Veo 3, Google Antigravity, Flow, Gemini Ultra & Premium AI Features with high usage limits.",
+    "specs": "25K AI Credits Included\nVeo 3 & Google Antigravity\nFlow & Gemini Ultra Access\n25 Days Full Warranty",
+    "stock": "in",
+    "ribbon": "bestseller",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "google-ai-ultra-25k-slot",
+    "name": "Google AI Ultra 25k Credits Slot",
+    "category": "ai-chat",
+    "duration": "1 Month Subscription",
+    "price": 26000,
+    "originalPrice": 45000,
+    "setup": "Dedicated Slot",
+    "desc": "Google AI Ultra 25k Credits Slot with full access to Gemini Ultra, Veo 3, and high usage limit AI features.",
+    "specs": "25K High Usage AI Credits\n28 Days Full Warranty\nVeo 3 & Gemini Ultra\nManual Fast Delivery",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "gemini-pro-18m-private",
+    "name": "Gemini Pro 18 Months (Private 5TB)",
+    "category": "ai-chat",
+    "duration": "18 Months Subscription",
+    "price": 700,
+    "originalPrice": 3500,
+    "setup": "Full Private Code",
+    "desc": "Google AI Pro 18 Months — Full Private • 5TB Storage • 1,000 AI Credits • Premium AI Features • Instant Redeem.",
+    "specs": "5TB Google Cloud Storage\n1,000 AI Credits Included\nFull Private Account\n1 Day Warranty / Instant Redeem",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "capcut-pro-1m",
+    "name": "CapCut Pro 1 Month",
+    "category": "creative",
+    "duration": "1 Month",
+    "price": 800,
+    "originalPrice": 2000,
+    "setup": "2 Devices Login",
+    "desc": "CapCut Pro 1 Month • 2 Devices • Premium Features • Instant Delivery • Warranty Available.",
+    "specs": "2 Devices Supported\n25 Days Warranty\nPro Video Effects & 4K Export\nManual Fast Delivery",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "capcut-pro-3m",
+    "name": "CapCut Pro 3 Months",
+    "category": "creative",
+    "duration": "3 Months",
+    "price": 2800,
+    "originalPrice": 5500,
+    "setup": "2 Devices Login",
+    "desc": "CapCut Pro 3 Months • 2 Devices • Premium Features • Instant Delivery • Warranty Available.",
+    "specs": "2 Devices Supported\n90 Days Full Warranty\nPro AI Video Tools & Templates\nManual Fast Delivery",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "capcut-pro-6m",
+    "name": "CapCut Pro 6 Months",
+    "category": "creative",
+    "duration": "6 Months",
+    "price": 4800,
+    "originalPrice": 10000,
+    "setup": "2 Devices Login",
+    "desc": "CapCut Pro 6 Months • 2 Devices • Premium Features • Instant Delivery • Full Warranty.",
+    "specs": "2 Devices Supported\n180 Days Full Warranty\nPro Animation & Cloud Sync\nManual Fast Delivery",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grok-10d",
+    "name": "Super Grok + X Premium+",
+    "category": "ai-chat",
+    "duration": "10 Days Plan",
+    "price": 1500,
+    "originalPrice": 4000,
+    "setup": "Activated on Client Email",
+    "desc": "Get X (formerly Twitter) Premium+ access with a Blue Verification Tick and access to Grok AI chatbot with real-time X search data.",
+    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\n7 Days Full Warranty\nFull Ad-Free X Experience",
+    "stock": "in",
+    "ribbon": "bestseller",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grok-6m",
+    "name": "Super Grok + X Premium+",
+    "category": "ai-chat",
+    "duration": "6 Months Account",
+    "price": 6300,
+    "originalPrice": 15000,
+    "setup": "Activated on Client Email",
+    "desc": "Double the duration. Includes X Premium+ features, Blue Tick verification, and access to Grok AI with no ads.",
+    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\nFull Ad-Free X Experience\n6 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grok-12m",
+    "name": "Super Grok + X Premium+",
+    "category": "ai-chat",
+    "duration": "12 Months Account",
+    "price": 9500,
+    "originalPrice": 28000,
+    "setup": "Activated on Client Email",
+    "desc": "Best yearly deal. Get X Premium+ features, blue verified badge, and Grok AI access activated directly on your email.",
+    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\nFull Ad-Free X Experience\n1 Year Warranty Protection",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "capcut-pro",
+    "name": "CapCut Pro",
+    "category": "video-audio",
+    "duration": "Monthly Access",
+    "price": 1250,
+    "originalPrice": 3500,
+    "setup": "Private Activation",
+    "desc": "Unlock advanced AI video filters, keyframe animation tools, speech-to-text auto-captions, and premium editing assets on desktop & mobile.",
+    "specs": "Remove Video Watermarks\nExclusive Pro Effects & Transitions\nAI Voiceover & Subtitles\n4K Ultra-HD Exports",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "heygen-200",
+    "name": "HeyGen Creator Plan",
+    "category": "video-audio",
+    "duration": "200 Credits Plan",
+    "price": 5800,
+    "originalPrice": 12000,
+    "setup": "Private Account",
+    "desc": "Create professional AI videos using realistic talking avatars, high-fidelity voice cloning, and text-to-video generation.",
+    "specs": "200 Video Credits Included\n80+ Realistic AI Avatars\nVoice Cloning Capabilities\n1080p Full-HD Rendering",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "kling-std",
+    "name": "Kling AI Standard Plan",
+    "category": "video-audio",
+    "duration": "660 Credits Monthly",
+    "price": 1300,
+    "originalPrice": 4000,
+    "setup": "Premium Account",
+    "desc": "Leading-edge video generation AI tool. Allows you to generate highly photorealistic, high-frame-rate videos from text prompts.",
+    "specs": "660 Credits Pack\nRealistic Physics Engine\nHigh Definition Video Outputs\nFast Queue Priority Processing",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "lovable-200",
+    "name": "Lovable Pro Monthly",
+    "category": "ai-coding",
+    "duration": "200 Credits Plan",
+    "price": 3500,
+    "originalPrice": 9000,
+    "setup": "Activated on Client Email",
+    "desc": "Build complete, production-ready full-stack web applications from raw text descriptions. Fast prototyping & direct GitHub deployments.",
+    "specs": "200 Premium Build Credits\nPrivate App Development\nOne-Click Deploy & GitHub Sync\nClient Email Custom Setup",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "lovable-400",
+    "name": "Lovable Pro Monthly",
+    "category": "ai-coding",
+    "duration": "400 Credits Plan",
+    "price": 5000,
+    "originalPrice": 15000,
+    "setup": "Activated on Client Email",
+    "desc": "Mid-tier builder plan offering 400 credits. Best for active developers constructing mid-scale full-stack projects.",
+    "specs": "400 Premium Build Credits\nCustom Domain Mapping Support\nOne-Click Deploy & GitHub Sync\nFull 30-Day Project Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "lovable-600",
+    "name": "Lovable Pro Monthly",
+    "category": "ai-coding",
+    "duration": "600 Credits Plan",
+    "price": 6000,
+    "originalPrice": 20000,
+    "setup": "Activated on Client Email",
+    "desc": "Ultimate builder tier. 600 credits for agency-level builders and advanced SaaS applications creation.",
+    "specs": "600 Premium Build Credits\nCustom Domains & API Access\nPriority Dedicated Support\nClient Email Activation",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "canva-yearly",
+    "name": "Canva Pro Yearly",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 400,
+    "originalPrice": 3000,
+    "setup": "Activated on Client Email",
+    "desc": "Access Canva's complete asset catalog. Features magic AI design tools, brand kits, background removers, and premium font sets.",
+    "specs": "Full 1-Year Access\nMagic Resize & AI Design Studio\nMillions of Stock Images & Templates\nPrivate Canvas Settings",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "manus-pro",
+    "name": "Manus Pro AI",
+    "category": "ai-chat",
+    "duration": "12 Months Plan",
+    "price": 13000,
+    "originalPrice": 35000,
+    "setup": "Private Account",
+    "desc": "Unleash Manus Pro - the advanced autonomous AI agent that controls browsers, performs automated market research, and codes scripts for you.",
+    "specs": "12 Months Full Pro Access\nUnrestricted Browser Actions\nAutonomous Multi-Step Workflows\nAPI Integrations Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "gamma-pro",
+    "name": "Gamma Pro Yearly",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 9500,
+    "originalPrice": 24000,
+    "setup": "Private Account",
+    "desc": "Generate stunning presentations, pitch decks, dynamic reports, and landing pages in seconds using interactive AI layout prompts.",
+    "specs": "Unlimited AI Credits\nCustom Fonts & Style Kits\nAdvanced View Analytics\nExport to PDF & Powerpoint",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "replit-core",
+    "name": "Replit Core Yearly",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 12000,
+    "originalPrice": 32000,
+    "setup": "Private Account",
+    "desc": "Code, build, and deploy software within a high-performance cloud IDE. Includes Replit AI Assistant, cloud server resources, and workspace integrations.",
+    "specs": "12 Months Core Access\nUnlimited AI Autocomplete & Chat\nBoosted Cloud VMs for Projects\nCollaborative Workspaces",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "replit-core-100",
+    "name": "Replit Core $100 Topup",
+    "category": "ai-coding",
+    "duration": "$100 Credit Plan",
+    "price": 9500,
+    "originalPrice": 22000,
+    "setup": "Ready-Made Account",
+    "desc": "Official Replit Core ready-made account pre-loaded with $100 topup credits. Access Replit AI, custom deployments, and high-performance server power.",
+    "specs": "$100 Loaded Credit Balance\n20 Days Full Warranty\nReady-Made Private Account\nReplit AI Assistant & Fast VMs",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "warp-build",
+    "name": "Warp Build CI/CD",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 6000,
+    "originalPrice": 18000,
+    "setup": "Premium Plan",
+    "desc": "Lightning-fast runners designed to accelerate GitHub Actions builds and software CI pipelines. Save up to 50% build time.",
+    "specs": "High-Performance VM Runners\nSeamless GitHub Actions Sync\nPre-Installed Packages Support\nFull 1 Year Warranty Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "n8n-starter",
+    "name": "n8n Starter Cloud",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 7000,
+    "originalPrice": 20000,
+    "setup": "Private Account",
+    "desc": "Integrate APIs, automate data pipelines, and connect chat interfaces using n8n's node-based automation tools. Cloud hosting included.",
+    "specs": "5 active workflows\n20,000 execution credits/mo\nAdvanced Webhooks & API Connectors\n12 Months Duration Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "wispr-flow",
+    "name": "Wispr Flow Pro",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 7500,
+    "originalPrice": 22000,
+    "setup": "Writing Assistant",
+    "desc": "Dictate documents, codes, or emails in real-time. Wispr Flow Pro processes speaking patterns and edits formatting automatically.",
+    "specs": "High-Fidelity Voice Transcription\nSmart Editing & Formatting\nWorks across any desktop application\nPrivate dictation workspace",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "canva-admin",
+    "name": "Canva Admin Panel",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 4500,
+    "originalPrice": 15000,
+    "setup": "Admin Panel Access",
+    "desc": "Get an enterprise-level admin dashboard supporting up to 500 premium student/team seats. Ideal for resellers or business managers.",
+    "specs": "500 Premium Brand Seats\nSeat Allocation Dashboard\nBrand Kits & Custom Fonts Control\nFull Yearly Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "elevenlabs-creator",
+    "name": "ElevenLabs Creator",
+    "category": "video-audio",
+    "duration": "12 Months Plan",
+    "price": 12000,
+    "originalPrice": 38000,
+    "setup": "Private Account",
+    "desc": "Convert text to high-fidelity audio streams. Access professional voice actors, advanced voice design sliders, and cloning suites.",
+    "specs": "100,000 monthly text characters\nAccess 30+ default premium voices\nCustom Instant Voice Cloning\nCommercial distribution license",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "youtube-12m",
+    "name": "YouTube Premium",
+    "category": "entertainment",
+    "duration": "12 Months Plan",
+    "price": 6200,
+    "originalPrice": 12000,
+    "setup": "Activated on Client Email",
+    "desc": "Remove commercials and banner ads from videos. Play videos in the background and download high-quality videos for offline access.",
+    "specs": "12 Months Duration Guarantee\nYouTube Music Premium access\nBackground Picture-in-Picture play\nNo-ads across TV, Mobile, Desktop",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "youtube-3m",
+    "name": "YouTube Premium",
+    "category": "entertainment",
+    "duration": "3 Months Plan",
+    "price": 2000,
+    "originalPrice": 3500,
+    "setup": "Activated on Client Email",
+    "desc": "Enjoy video content without interruptions. Includes high-fidelity YouTube Music access activated directly on your email.",
+    "specs": "3 Months Duration Guarantee\nYouTube Music Premium access\nOffline download options\nAd-Free visual interface",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "youtube-1m",
+    "name": "YouTube Premium",
+    "category": "entertainment",
+    "duration": "Monthly Access",
+    "price": 500,
+    "originalPrice": 1200,
+    "setup": "Activated on Client Email",
+    "desc": "Get monthly premium access to video and music without ads. Activated instantly on client email.",
+    "specs": "1 Month Duration Guarantee\nAd-free experience\nOffline background play\nYouTube Music Included",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "xbox-code",
+    "name": "Xbox Gift Code",
+    "category": "entertainment",
+    "duration": "Random Voucher",
+    "price": 600,
+    "originalPrice": 1500,
+    "setup": "Digital Code Delivery",
+    "desc": "Receive random Xbox balance or game vouchers. Redeem codes directly inside the Microsoft Store dashboard.",
+    "specs": "Instant Delivery\nUsable globally on Xbox console\nSecure unused voucher codes\nFull redemption warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "linkedin-career",
+    "name": "LinkedIn Career",
+    "category": "creative",
+    "duration": "3 Months Plan",
+    "price": 800,
+    "originalPrice": 9000,
+    "setup": "Professional Premium",
+    "desc": "Boost your job application search. Includes competitive applicant analytics, profile highlights, and 5 InMail messages per month.",
+    "specs": "5 Premium InMail Credits/mo\nSee who viewed your profile\nLinkedIn Learning Access\nAdvanced applicant statistics",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "hotmail-verified",
+    "name": "Verified Hotmail Account",
+    "category": "vpn-security",
+    "duration": "Aged Outlook Profile",
+    "price": 50,
+    "originalPrice": 200,
+    "setup": "Account Delivery",
+    "desc": "Aged, PVA verified Hotmail/Outlook email profiles. Clean registration history, perfect for signing up to third party services.",
+    "specs": "Aged & Active email profile\nVerified phone recovery status\nIMAP/SMTP enabled access\nFull replacement warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "nordvpn-monthly",
+    "name": "Nord VPN",
+    "category": "vpn-security",
+    "duration": "Monthly Access",
+    "price": 2500,
+    "originalPrice": 4500,
+    "setup": "Activated on Client Email",
+    "desc": "Unlock secure virtual networks. Features high-speed server tunnels, Threat Protection malware blocking, and access on up to 10 devices.",
+    "specs": "Activated on Client Email\n6,000+ Fast Servers Access\nAdvanced threat block engine\nPrivate double-hop VPN",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "surfshark-monthly",
+    "name": "Surfshark VPN",
+    "category": "vpn-security",
+    "duration": "Monthly Access",
+    "price": 400,
+    "originalPrice": 1500,
+    "setup": "Shared Premium Account",
+    "desc": "High-speed browsing VPN featuring unlimited simultaneous device installations, CleanWeb advertisement block, and strict no-logs protocols.",
+    "specs": "Fast Shared Account Profile\nCleanWeb ads blocking utility\n3,200+ secure server locations\nUnlimited device connections",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "adobe-12m",
+    "name": "Adobe Full Bundle Plan",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 12000,
+    "originalPrice": 45000,
+    "setup": "Creative Cloud Suite",
+    "desc": "Unlock access to 20+ desktop & mobile apps including Photoshop, Illustrator, Premiere Pro, and Acrobat. Activated directly on client email.",
+    "specs": "Photoshop, Illustrator, Premiere\nAdobe Firefly Generative AI\n100GB Cloud Storage Sync\nFull 1 Year Warranty Protection",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "adobe-3m",
+    "name": "Adobe Full Bundle Plan",
+    "category": "creative",
+    "duration": "3 Months Plan",
+    "price": 4000,
+    "originalPrice": 15000,
+    "setup": "Creative Cloud Suite",
+    "desc": "Short duration bundle. Access Photoshop, Premiere, and all major Adobe apps with high-speed cloud sync.",
+    "specs": "20+ Adobe creative utilities\nFirefly AI generative credits\nHigh-speed cloud cloud backup\n3 Months Duration Guarantee",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "adobe-6m",
+    "name": "Adobe Full Bundle Plan",
+    "category": "creative",
+    "duration": "6 Months Plan",
+    "price": 7000,
+    "originalPrice": 26000,
+    "setup": "Creative Cloud Suite",
+    "desc": "Mid-term bundle. 6 months complete Creative Cloud access activated on client email with full warranty.",
+    "specs": "Complete Creative Cloud suite\nAcrobat PDF editor included\nMobile & Tablet apps support\n6 Months Duration Guarantee",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "yt-otp",
+    "name": "YouTube Verification OTP",
+    "category": "vpn-security",
+    "duration": "One-Time OTP",
+    "price": 300,
+    "originalPrice": 1000,
+    "setup": "Virtual Verification Number",
+    "desc": "Secure online bypass for phone number locks. Access virtual numbers to verify YouTube channels without using personal phone numbers.",
+    "specs": "Instant OTP delivery\nSuited for YouTube Channel validation\nSecure virtual gateway\nFresh unused number pool",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "cursor-pro",
+    "name": "Cursor Pro Monthly",
+    "category": "ai-coding",
+    "duration": "1 Month Plan",
+    "price": 4200,
+    "originalPrice": 8000,
+    "setup": "Private Account",
+    "desc": "Get premium Cursor editor capabilities. Access high-speed inline edits, full codebase indices, and fast calls to Claude 3.5 Sonnet & GPT-4o.",
+    "specs": "Fast Claude 3.5 & GPT-4o access\nFull codebase indexing capacity\nInline edits & terminal chat\nPrivate account environment",
+    "stock": "in",
+    "ribbon": "popular",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "higgsfield-plus",
+    "name": "Higgsfield Plus Plan",
+    "category": "video-audio",
+    "duration": "1200 Credits Plan",
+    "price": 7500,
+    "originalPrice": 15000,
+    "setup": "Creator Account",
+    "desc": "AI video generation app optimized for creators. Animate characters, apply physical control actions, and generate high-fidelity stories.",
+    "specs": "1,200 Visual Credits Pack\n20 Days Full Warranty\nPremium Character Animator\nAdvanced Physics & Motion Curves",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "xbox-random-1m",
+    "name": "Gift Xbox Random",
+    "category": "entertainment",
+    "duration": "1 Month Plan",
+    "price": 1800,
+    "originalPrice": 3500,
+    "setup": "Digital Code Delivery",
+    "desc": "Get a random Xbox Game Pass or subscription voucher code. Redeemable on Microsoft accounts.",
+    "specs": "1 Month Validity\nRandom Voucher Code\nGlobal Server Activation\nFull Warranty Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "picsart-pro-11m",
+    "name": "Picsart Pro",
+    "category": "creative",
+    "duration": "11 Months Plan",
+    "price": 3500,
+    "originalPrice": 8000,
+    "setup": "Activated on Client Email",
+    "desc": "Unlock Picsart Pro advanced AI image generation, design templates, photo filters, custom fonts, and high-res exports.",
+    "specs": "Full Premium assets access\nAI Design Studio Tools\nNo ads or watermarks\n11 Months Duration Support",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "key-hma",
+    "name": "HMA VPN Key",
+    "category": "vpn-security",
+    "duration": "Yearly License Key",
+    "price": 5500,
+    "originalPrice": 12000,
+    "setup": "License Key Delivery",
+    "desc": "Official HideMyAss (HMA) VPN subscription activation retail license key. Access global high-speed servers.",
+    "specs": "Secure encryption tunnels\nAccess 1100+ servers\nSupports up to 5 devices\n12 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "windows-activation-key",
+    "name": "Windows 10/11 Pro Key",
+    "category": "vpn-security",
+    "duration": "Lifetime License",
+    "price": 2000,
+    "originalPrice": 6000,
+    "setup": "Instant Retail Key",
+    "desc": "Official lifetime retail activation key for Windows 10 Professional or Windows 11 Professional.",
+    "specs": "Lifetime activation key\nSupport both Win 10 & 11 Pro\nOfficial Microsoft Updates\nInstant setup code",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "zoom-pro-monthly",
+    "name": "Zoom Pro",
+    "category": "entertainment",
+    "duration": "Monthly Access",
+    "price": 1500,
+    "originalPrice": 4000,
+    "setup": "Premium Account Login",
+    "desc": "Host unlimited group meetings up to 30 hours, up to 100 participants per meeting, with cloud recording support.",
+    "specs": "Host meetings up to 30 hours\n100 participants capacity\nCloud meeting recordings\nFull Monthly Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "linkedin-career-3m",
+    "name": "LinkedIn Career",
+    "category": "creative",
+    "duration": "3 Months Plan",
+    "price": 1800,
+    "originalPrice": 9000,
+    "setup": "Professional Premium",
+    "desc": "Get stand-out status for job applications, direct InMail credits, profile view insights, and LinkedIn Learning.",
+    "specs": "5 InMail credits per month\nSee who viewed your profile\nFull LinkedIn Learning access\n3 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "ms-office-1y",
+    "name": "Microsoft Office 365",
+    "category": "vpn-security",
+    "duration": "12 Months Plan",
+    "price": 29900,
+    "originalPrice": 45000,
+    "setup": "Activated on Client Email",
+    "desc": "Premium access to Word, Excel, PowerPoint, Outlook, and OneDrive cloud storage up to 1TB.",
+    "specs": "Word, Excel, PowerPoint Pro\n1TB OneDrive cloud storage\nUse on up to 5 devices\n1 Year Official Access",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "canva-pro-1y",
+    "name": "Canva Pro",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 400,
+    "originalPrice": 3000,
+    "setup": "Activated on Client Email",
+    "desc": "Access Canva's full assets library, premium templates, magic AI design tools, and brand kits.",
+    "specs": "Magic Resize & BG Remover\nMillions of premium stocks\nCollaborative brand workspace\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "adobe-cc-4m",
+    "name": "Adobe Creative Cloud",
+    "category": "creative",
+    "duration": "4 Months Plan",
+    "price": 3900,
+    "originalPrice": 16000,
+    "setup": "Activated on Client Email",
+    "desc": "Access 20+ Adobe desktop and mobile creative apps including Photoshop, Illustrator, Premiere Pro.",
+    "specs": "Photoshop, Premiere, Illustrator\nAdobe Firefly AI credits\n100GB Cloud Storage sync\n4 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "coursera-premium-12m",
+    "name": "Coursera Plus Premium",
+    "category": "entertainment",
+    "duration": "12 Months Plan",
+    "price": 3200,
+    "originalPrice": 12000,
+    "setup": "Private Activation",
+    "desc": "Unlimited access to 7,000+ courses, guided projects, and professional certificates from top universities.",
+    "specs": "7,000+ courses & specializations\nProfessional certificates included\nLearn at your own pace\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "replit-core-12m",
+    "name": "Replit Core",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 10700,
+    "originalPrice": 32000,
+    "setup": "Private Account",
+    "desc": "Write, build, and deploy software within a collaborative cloud IDE. Includes Replit AI Assistant.",
+    "specs": "Replit AI Autocomplete & Chat\nBoosted workspace VM resources\n1-click cloud deployments\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "warp-build-12m",
+    "name": "Warp Build CI/CD",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 4800,
+    "originalPrice": 18000,
+    "setup": "Premium Plan",
+    "desc": "High-speed runners to accelerate GitHub Actions builds and software CI pipelines. Save 50% build time.",
+    "specs": "High performance runners\nGitHub Actions integration\nPre-cached environments\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "n8n-starter-12m",
+    "name": "n8n Starter Cloud",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 6500,
+    "originalPrice": 20000,
+    "setup": "Private Account",
+    "desc": "Integrate APIs, automate workflows, and sync databases. Includes starter tier cloud hosting.",
+    "specs": "5 active cloud workflows\n20k monthly executions\nNode-based automation creator\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "whisper-flow-12m",
+    "name": "Wispr Flow Pro",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 7500,
+    "originalPrice": 22000,
+    "setup": "Writing Assistant",
+    "desc": "Fast real-time voice transcription tool. Automatically format dictations for emails and scripts.",
+    "specs": "AI voice transcription engine\nSmart paragraph formatting\nWorks in any writing editor\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "notion-business-12m",
+    "name": "Notion Business",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 4600,
+    "originalPrice": 15000,
+    "setup": "Workspace Activation",
+    "desc": "Unlock collaborative workspaces, infinite page history, advanced block permissions, and Notion AI features.",
+    "specs": "Collaborative workspace blocks\nInfinite page edits history\nAdvanced export & print options\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "gumloop-pro-12m",
+    "name": "Gumloop Pro",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 4550,
+    "originalPrice": 18000,
+    "setup": "Activated on Client Email",
+    "desc": "Build custom AI web scrapers and data extraction pipelines visually. Run workflows autonomously.",
+    "specs": "Visual AI agent pipeline builder\nAdvanced web data extraction\nSchedule scraping operations\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grammarly-pro-12m",
+    "name": "Grammarly Pro",
+    "category": "creative",
+    "duration": "12 Months Plan",
+    "price": 3500,
+    "originalPrice": 12000,
+    "setup": "Activated on Client Email",
+    "desc": "Access advanced grammar suggestions, tone adjustments, plagiarism checkers, and Grammarly AI assistance.",
+    "specs": "Tone check & vocabulary builder\nBuilt-in plagiarism detector\nGrammarly AI writing credits\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "amazon-prime-6m",
+    "name": "Amazon Prime Video",
+    "category": "entertainment",
+    "duration": "6 Months Plan",
+    "price": 1500,
+    "originalPrice": 4000,
+    "setup": "Private Profile Login",
+    "desc": "Watch premium movies, TV shows, and Amazon Originals in 4K Ultra HD. Ad-free streaming.",
+    "specs": "4K Ultra HD video playback\nAd-free Prime Video streams\nSupports multi-device screens\n6 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "linkedin-sales-nav-2m",
+    "name": "LinkedIn Sales Navigator",
+    "category": "creative",
+    "duration": "2 Months Plan",
+    "price": 1800,
+    "originalPrice": 22000,
+    "setup": "Core Account Upgrade",
+    "desc": "Target the right buyers, understand key insights, and engage with personalized InMail outreach.",
+    "specs": "50 InMail messages monthly\nAdvanced lead search filters\nReal-time buyer updates notifications\n2 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "youtube-premium-3m",
+    "name": "YouTube Premium",
+    "category": "entertainment",
+    "duration": "3 Months Plan",
+    "price": 1200,
+    "originalPrice": 3500,
+    "setup": "Activated on Client Email",
+    "desc": "Remove all commercial advertisements from YouTube. Includes background play and YouTube Music.",
+    "specs": "Ad-free video streaming\nBackground picture-in-picture play\nYouTube Music premium access\n3 Months Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "cursor-pro-12m",
+    "name": "Cursor Pro Yearly",
+    "category": "ai-coding",
+    "duration": "12 Months Plan",
+    "price": 21000,
+    "originalPrice": 56000,
+    "setup": "Private Account",
+    "desc": "Get yearly premium Cursor editor access. Access unlimited fast queries to Claude 3.5 Sonnet & GPT-4o.",
+    "specs": "Unlimited fast Claude & GPT-4o\nFull codebase indexing capability\nInteractive terminal chat tools\n1 Year Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "claude-api-10m",
+    "name": "Claude 10M API Tokens",
+    "category": "ai-chat",
+    "duration": "API Key Pack",
+    "price": 1200,
+    "originalPrice": 4000,
+    "setup": "API Key Access",
+    "desc": "Access Anthropic's Claude 3.5 models through API keys. Fully loaded with 10 Million input/output tokens.",
+    "specs": "10M input/output tokens pack\nHigh concurrency API keys\nClaude 3.5 Sonnet & Opus support\nFull warranty replacement",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "cinem-ai-monthly",
+    "name": "Cinem AI Video",
+    "category": "video-audio",
+    "duration": "Monthly Access",
+    "price": 7000,
+    "originalPrice": 15000,
+    "setup": "Creator Account Portal",
+    "desc": "Leading-edge video generation AI software. Generate cinematic, high-definition videos from prompts.",
+    "specs": "Cinematic photorealistic videos\nHigh frame-rate rendering options\nCreator tools subscription tier\nFull monthly warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   }
+  ]
+ },
+ "coupons": {
+  "items": [
+   {
+    "code": "MALIK10",
+    "percent": 10,
+    "active": true,
+    "chip": true,
+    "expires": "",
+    "note": ""
+   },
+   {
+    "code": "WAIT5",
+    "percent": 5,
+    "active": true,
+    "chip": true,
+    "expires": "",
+    "note": ""
+   }
+  ]
+ },
+ "announcement": {
+  "on": false,
+  "text": "",
+  "link": "",
+  "linkText": "Shop now",
+  "bg": "#111827",
+  "color": "#ffffff",
+  "start": "",
+  "end": "",
+  "dismissible": true
+ },
+ "popup": {
+  "on": false,
+  "image": "",
+  "title": "",
+  "text": "",
+  "link": "",
+  "buttonText": "See offer",
+  "pages": "home",
+  "frequency": "day",
+  "delay": 5,
+  "start": "",
+  "end": ""
+ },
+ "extras": {
+  "toasts": true,
+  "counter": true,
+  "countdown": true
+ },
+ "seo": {
+  "items": [
+   {
+    "path": "/",
+    "title": "Buy ChatGPT, Gemini, Canva Pro & AI Tools Online, Worldwide | MALIK DATA CENTRE",
+    "description": "MALIK DATA CENTRE — World's Best Online AI Tools & Software Buying Platform. Trusted by 50,000+ active buyers globally for Super Grok 10 Days Plan, Google AI Ultra, ChatGPT Plus, Gemini Advanced, Adobe Creative Cloud, Canva Pro, CapCut Pro & YouTube Premium. Delivered worldwide with USDT or local payment, private accounts, 5–30 min activation & full warranty.",
+    "image": ""
+   },
+   {
+    "path": "/about-us/",
+    "title": "About Us | MALIK DATA CENTRE",
+    "description": "MALIK DATA CENTRE sells AI tools and software subscriptions to customers worldwide, with USDT and local payments, fast activation and WhatsApp support.",
+    "image": ""
+   },
+   {
+    "path": "/ad-maker/",
+    "title": "Free Ad Maker for Facebook, Instagram & Google Ads | Postly",
+    "description": "Design high-converting ads for Facebook, Instagram, TikTok and Google Display in one place. Start from 34+ ad templates, resize one design into every ad size in a click, animate it, and write the ad copy with AI.",
+    "image": ""
+   },
+   {
+    "path": "/ai-automation-services/",
+    "title": "AI Automation Services | MALIK DATA CENTRE",
+    "description": "We build AI chatbots and automations that save your team hours every week, using n8n, Gumloop, OpenAI, Claude and Gemini. You keep ownership of everything we build.",
+    "image": ""
+   },
+   {
+    "path": "/ai-image-generator/",
+    "title": "Free AI Image Generator: Text to Image Online | Postly",
+    "description": "Describe what you want and AI creates the image. Use it as a background, a product scene or an illustration, then add text and download. Free daily credits, no signup.",
+    "image": ""
+   },
+   {
+    "path": "/background-remover/",
+    "title": "Free Background Remover: Remove Image Background Online | Postly",
+    "description": "Remove the background from any photo in one click, right in your browser. Your photo is not uploaded to a server. Then put your product or portrait on a new background, add an outline, or turn it into a studio product photo.",
+    "image": ""
+   },
+   {
+    "path": "/blog/",
+    "title": "AI Tools Guides, Reviews & Comparisons | MALIK DATA CENTRE Blog",
+    "description": "Buying guides, comparisons, setup tutorials and price updates for ChatGPT, Gemini, Grok, Canva, Adobe, CapCut, Cursor and more, for buyers worldwide.",
+    "image": ""
+   },
+   {
+    "path": "/blog/buy-ai-tools-pakistan-without-credit-card.html",
+    "title": "How to Buy AI Tools in Pakistan Without a Credit Card (2026) | MALIK DATA CENTRE",
+    "description": "Pay for ChatGPT, Gemini, Canva, CapCut and other AI tools in Pakistan with EasyPaisa, JazzCash or bank transfer, and know what to check before you pay.",
+    "image": ""
+   },
+   {
+    "path": "/blog/buy-ai-tools-without-credit-card-worldwide.html",
+    "title": "How to Buy ChatGPT and AI Tools Without a Credit Card (2026) | MALIK DATA CENTRE",
+    "description": "A worldwide guide to paying for ChatGPT, Gemini, Canva, CapCut and other AI tools without a credit card, using USDT or local payment, and what to check first.",
+    "image": ""
+   },
+   {
+    "path": "/blog/canva-pro-vs-adobe-creative-cloud.html",
+    "title": "Canva Pro vs Adobe Creative Cloud: Which Design Tool to Buy in 2026?",
+    "description": "Canva Pro or Adobe Creative Cloud? Compare price, learning curve and features to pick the right design subscription for social media, print, or professional creative work.",
+    "image": ""
+   },
+   {
+    "path": "/blog/capcut-pro-review.html",
+    "title": "CapCut Pro Review 2026: Features, Pricing & Is It Worth It?",
+    "description": "An honest CapCut Pro review — editing tools, 4K export quality, pricing plans, and who should (and shouldn't) upgrade from the free version.",
+    "image": ""
+   },
+   {
+    "path": "/blog/chatgpt-vs-super-grok-pakistan-guide.html",
+    "title": "ChatGPT vs Super Grok vs Gemini: Best AI Subscription to Buy (2026)",
+    "description": "Compare ChatGPT Go, Super Grok + X Premium+, and Gemini Advanced on price, features and warranty to find the best AI chatbot subscription for your budget, wherever you are.",
+    "image": ""
+   },
+   {
+    "path": "/blog/is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html",
+    "title": "Is It Safe to Buy Cheap AI Tool Subscriptions? (2026 Guide)",
+    "description": "How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay for a cheap ChatGPT, Canva, or Adobe subscription.",
+    "image": ""
+   },
+   {
+    "path": "/business-card-maker/",
+    "title": "Free Business Card Maker (Visiting Card Design) | Postly",
+    "description": "Design professional visiting cards with your logo, contact details and a QR code. Download print-ready files or order printing.",
+    "image": ""
+   },
+   {
+    "path": "/comparisons/",
+    "title": "AI Tool Comparisons: Which Subscription Should You Buy? | MALIK DATA CENTRE",
+    "description": "Compare Gemini Pro vs Google AI Ultra, Cursor vs Replit vs Lovable, ElevenLabs vs HeyGen and more, with prices in USD and PKR.",
+    "image": ""
+   },
+   {
+    "path": "/comparisons/cursor-vs-replit-vs-lovable/",
+    "title": "Cursor vs Replit vs Lovable: Which AI Coding Tool Should You Buy? | MALIK DATA CENTRE",
+    "description": "All three let AI write code for you, but they suit very different people. Here is how to choose without wasting a month's subscription.",
+    "image": ""
+   },
+   {
+    "path": "/comparisons/elevenlabs-vs-heygen/",
+    "title": "ElevenLabs vs HeyGen: AI Voice or AI Avatar Videos? | MALIK DATA CENTRE",
+    "description": "ElevenLabs makes voices. HeyGen makes presenter videos with avatars. Faceless YouTube channels often use one or both, so pick based on what your content actually needs.",
+    "image": ""
+   },
+   {
+    "path": "/comparisons/gemini-pro-vs-google-ai-ultra/",
+    "title": "Gemini Pro vs Google AI Ultra: Which Google AI Plan Should You Buy? | MALIK DATA CENTRE",
+    "description": "Both plans run on Google's Gemini models. The real difference is how much video generation and usage you need, and how much you want to spend each month.",
+    "image": ""
+   },
+   {
+    "path": "/comparisons/nordvpn-vs-surfshark/",
+    "title": "NordVPN vs Surfshark: Which VPN Should You Buy in 2026? | MALIK DATA CENTRE",
+    "description": "Both are well-known premium VPNs. The choice usually comes down to budget and whether you want the account on your own email.",
+    "image": ""
+   },
+   {
+    "path": "/contact-us/",
+    "title": "Contact Us | MALIK DATA CENTRE",
+    "description": "Contact MALIK DATA CENTRE on WhatsApp (+92 344 5739206, +92 348 9057646) or email for orders, setup help and warranty claims.",
+    "image": ""
+   },
+   {
+    "path": "/delivery-policy/",
+    "title": "Delivery Policy | MALIK DATA CENTRE",
+    "description": "How and when MALIK DATA CENTRE delivers AI tools, subscriptions, licence keys and invitations after payment.",
+    "image": ""
+   },
+   {
+    "path": "/design/",
+    "title": "Free YouTube Thumbnail Maker & Ad Creative Maker with AI | Postly Design Studio",
+    "description": "Free YouTube thumbnail maker and ad creative maker: 200+ templates, face cut-out with outline, thumbnail text effects, video feed preview, Facebook, Instagram and Google ad sizes in one click, AI image maker and AI ad copy. Works in your browser, no signup.",
+    "image": ""
+   },
+   {
+    "path": "/eid-card-maker/",
+    "title": "Free Eid Mubarak Card & Post Maker (Urdu + English) | Postly",
+    "description": "Make beautiful Eid ul Fitr and Eid ul Adha greetings, Ramadan posts and Jumma Mubarak designs with Urdu and English text, Islamic arches, crescents and gold styles. Free, in your browser.",
+    "image": ""
+   },
+   {
+    "path": "/enterprise-ai-api-credits/",
+    "title": "Enterprise AI API Credits | MALIK DATA CENTRE",
+    "description": "Need API access for Claude, OpenAI, Gemini or DeepSeek in your product, chatbot or automation? Tell us your monthly volume and we will send a custom quote in USD, USDT or PKR.",
+    "image": ""
+   },
+   {
+    "path": "/flyer-maker/",
+    "title": "Free Flyer & Poster Maker for Small Businesses | Postly",
+    "description": "Make flyers and posters for sales, admissions, grand openings, events and services. A4 print-ready designs with QR codes, then download a PDF or order prints.",
+    "image": ""
+   },
+   {
+    "path": "/free-design-tools/",
+    "title": "Free Design Tools: Thumbnail, Ad, QR & Card Makers | Postly",
+    "description": "Free online design tools by Postly: YouTube thumbnail maker, ad maker, banner maker, QR code maker, background remover, Eid and wedding card makers, flyers, menus and business cards.",
+    "image": ""
+   },
+   {
+    "path": "/frequently-asked-questions/",
+    "title": "Frequently Asked Questions | MALIK DATA CENTRE",
+    "description": "Answers about ordering, payment, delivery, private vs shared accounts, warranty and refunds at MALIK DATA CENTRE.",
+    "image": ""
+   },
+   {
+    "path": "/instagram-post-maker/",
+    "title": "Free Instagram Post, Story & Reel Cover Maker | Postly",
+    "description": "Design Instagram posts, carousels, Stories and Reel covers with ready templates, free photos and icons, and AI captions and hashtags. Share straight to Instagram or WhatsApp from your phone.",
+    "image": ""
+   },
+   {
+    "path": "/privacy.html",
+    "title": "Privacy Policy | MALIK DATA CENTRE",
+    "description": "Privacy Policy for MALIK DATA CENTRE — learn how we collect, protect, and handle your data with full transparency.",
+    "image": ""
+   },
+   {
+    "path": "/qr-code-maker/",
+    "title": "Free QR Code Maker for WhatsApp, Websites & Payments | Postly",
+    "description": "Make a QR code for your WhatsApp number, website, phone or any text, then place it straight onto your flyer, menu, business card or poster. No signup, no expiry.",
+    "image": ""
+   },
+   {
+    "path": "/refund-policy/",
+    "title": "Refund & Warranty Policy | MALIK DATA CENTRE",
+    "description": "How MALIK DATA CENTRE handles warranty replacements and refunds for AI tool and software subscriptions.",
+    "image": ""
+   },
+   {
+    "path": "/restaurant-menu-maker/",
+    "title": "Free Restaurant Menu Maker with QR Code | Postly",
+    "description": "Create restaurant and cafe menus, deal posters and price lists. Add a QR code for online orders on WhatsApp, and download for print or sharing.",
+    "image": ""
+   },
+   {
+    "path": "/social-media-services/",
+    "title": "Social Media Services | MALIK DATA CENTRE",
+    "description": "Content, channel setup, page management and ad campaigns for YouTube, Facebook, Instagram, TikTok and WhatsApp. Tell us your platform and goal, and we will send a clear quote on WhatsApp.",
+    "image": ""
+   },
+   {
+    "path": "/terms.html",
+    "title": "Terms & Conditions | MALIK DATA CENTRE",
+    "description": "Terms & Conditions for purchasing premium AI subscriptions and developer tools from MALIK DATA CENTRE. Warranty, activation, and refund policies.",
+    "image": ""
+   },
+   {
+    "path": "/tools/",
+    "title": "Buy AI Tools & Subscriptions Online, Worldwide | MALIK DATA CENTRE",
+    "description": "Compare 36 AI tools and software subscriptions from $1.44: ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva, Adobe, CapCut, Cursor and more. Worldwide delivery, USDT payment and WhatsApp activation.",
+    "image": ""
+   },
+   {
+    "path": "/tools/adobe-creative-cloud/",
+    "title": "Buy Adobe Creative Cloud Online (2026) | From $14.04 | MALIK DATA CENTRE",
+    "description": "Buy Adobe Creative Cloud online from $14.04 (Rs 3,900). 4 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/amazon-prime-video/",
+    "title": "Buy Amazon Prime Video Online (2026) | From $5.40 | MALIK DATA CENTRE",
+    "description": "Buy Amazon Prime Video online from $5.40 (Rs 1,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/canva-pro/",
+    "title": "Buy Canva Pro Online (2026) | From $1.44 | MALIK DATA CENTRE",
+    "description": "Buy Canva Pro online from $1.44 (Rs 400). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/capcut-pro/",
+    "title": "Buy CapCut Pro Online (2026) | From $2.88 | MALIK DATA CENTRE",
+    "description": "Buy CapCut Pro online from $2.88 (Rs 800). 4 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/chatgpt-go/",
+    "title": "Buy ChatGPT Go Online (2026) | From $7.92 | MALIK DATA CENTRE",
+    "description": "Buy ChatGPT Go online from $7.92 (Rs 2,200). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/cinem-ai/",
+    "title": "Buy Cinem AI Video Online (2026) | From $25.20 | MALIK DATA CENTRE",
+    "description": "Buy Cinem AI Video online from $25.20 (Rs 7,000). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/claude-api-tokens/",
+    "title": "Buy Claude API Tokens Online (2026) | From $4.32 | MALIK DATA CENTRE",
+    "description": "Buy Claude API Tokens online from $4.32 (Rs 1,200). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/coursera-plus/",
+    "title": "Buy Coursera Plus Online (2026) | From $11.52 | MALIK DATA CENTRE",
+    "description": "Buy Coursera Plus online from $11.52 (Rs 3,200). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/cursor-pro/",
+    "title": "Buy Cursor Pro Online (2026) | From $15.12 | MALIK DATA CENTRE",
+    "description": "Buy Cursor Pro online from $15.12 (Rs 4,200). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/elevenlabs-creator/",
+    "title": "Buy ElevenLabs Creator Online (2026) | From $43.20 | MALIK DATA CENTRE",
+    "description": "Buy ElevenLabs Creator online from $43.20 (Rs 12,000). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/gamma-pro/",
+    "title": "Buy Gamma Pro Online (2026) | From $34.20 | MALIK DATA CENTRE",
+    "description": "Buy Gamma Pro online from $34.20 (Rs 9,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/gemini-pro/",
+    "title": "Buy Gemini Pro (Google AI Pro) Online (2026) | From $2.52 | MALIK DATA CENTRE",
+    "description": "Buy Gemini Pro (Google AI Pro) online from $2.52 (Rs 700). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/google-ai-ultra/",
+    "title": "Buy Google AI Ultra Online (2026) | From $9 | MALIK DATA CENTRE",
+    "description": "Buy Google AI Ultra online from $9 (Rs 2,500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/grammarly-pro/",
+    "title": "Buy Grammarly Pro Online (2026) | From $12.60 | MALIK DATA CENTRE",
+    "description": "Buy Grammarly Pro online from $12.60 (Rs 3,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/gumloop-pro/",
+    "title": "Buy Gumloop Pro Online (2026) | From $16.38 | MALIK DATA CENTRE",
+    "description": "Buy Gumloop Pro online from $16.38 (Rs 4,550). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/heygen/",
+    "title": "Buy HeyGen Creator Online (2026) | From $20.88 | MALIK DATA CENTRE",
+    "description": "Buy HeyGen Creator online from $20.88 (Rs 5,800). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/higgsfield/",
+    "title": "Buy Higgsfield Plus Online (2026) | From $27 | MALIK DATA CENTRE",
+    "description": "Buy Higgsfield Plus online from $27 (Rs 7,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/hma-vpn/",
+    "title": "Buy HMA VPN Online (2026) | From $19.80 | MALIK DATA CENTRE",
+    "description": "Buy HMA VPN online from $19.80 (Rs 5,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/kling-ai/",
+    "title": "Buy Kling AI Online (2026) | From $4.68 | MALIK DATA CENTRE",
+    "description": "Buy Kling AI online from $4.68 (Rs 1,300). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/linkedin-premium/",
+    "title": "Buy LinkedIn Premium Online (2026) | From $6.48 | MALIK DATA CENTRE",
+    "description": "Buy LinkedIn Premium online from $6.48 (Rs 1,800). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/lovable-pro/",
+    "title": "Buy Lovable Pro Online (2026) | From $12.60 | MALIK DATA CENTRE",
+    "description": "Buy Lovable Pro online from $12.60 (Rs 3,500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/manus-ai/",
+    "title": "Buy Manus Pro Online (2026) | From $46.80 | MALIK DATA CENTRE",
+    "description": "Buy Manus Pro online from $46.80 (Rs 13,000). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/microsoft-office-365/",
+    "title": "Buy Microsoft 365 Online (2026) | From $107.64 | MALIK DATA CENTRE",
+    "description": "Buy Microsoft 365 online from $107.64 (Rs 29,900). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/n8n-starter/",
+    "title": "Buy n8n Starter Cloud Online (2026) | From $23.40 | MALIK DATA CENTRE",
+    "description": "Buy n8n Starter Cloud online from $23.40 (Rs 6,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/nordvpn/",
+    "title": "Buy NordVPN Online (2026) | From $9 | MALIK DATA CENTRE",
+    "description": "Buy NordVPN online from $9 (Rs 2,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/notion-business/",
+    "title": "Buy Notion Business Online (2026) | From $16.56 | MALIK DATA CENTRE",
+    "description": "Buy Notion Business online from $16.56 (Rs 4,600). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/picsart-pro/",
+    "title": "Buy Picsart Pro Online (2026) | From $12.60 | MALIK DATA CENTRE",
+    "description": "Buy Picsart Pro online from $12.60 (Rs 3,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/replit-core/",
+    "title": "Buy Replit Core Online (2026) | From $34.20 | MALIK DATA CENTRE",
+    "description": "Buy Replit Core online from $34.20 (Rs 9,500). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/super-grok/",
+    "title": "Buy SuperGrok + X Premium+ Online (2026) | From $5.40 | MALIK DATA CENTRE",
+    "description": "Buy SuperGrok + X Premium+ online from $5.40 (Rs 1,500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/surfshark-vpn/",
+    "title": "Buy Surfshark VPN Online (2026) | From $1.44 | MALIK DATA CENTRE",
+    "description": "Buy Surfshark VPN online from $1.44 (Rs 400). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/warp-build/",
+    "title": "Buy Warp Build CI/CD Online (2026) | From $17.28 | MALIK DATA CENTRE",
+    "description": "Buy Warp Build CI/CD online from $17.28 (Rs 4,800). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/windows-pro-key/",
+    "title": "Buy Windows 10/11 Pro Key Online (2026) | From $7.20 | MALIK DATA CENTRE",
+    "description": "Buy Windows 10/11 Pro Key online from $7.20 (Rs 2,000). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/wispr-flow/",
+    "title": "Buy Wispr Flow Pro Online (2026) | From $27 | MALIK DATA CENTRE",
+    "description": "Buy Wispr Flow Pro online from $27 (Rs 7,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/xbox-gift/",
+    "title": "Buy Xbox Gift Codes Online (2026) | From $2.16 | MALIK DATA CENTRE",
+    "description": "Buy Xbox Gift Codes online from $2.16 (Rs 600). 2 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/youtube-premium/",
+    "title": "Buy YouTube Premium Online (2026) | From $1.80 | MALIK DATA CENTRE",
+    "description": "Buy YouTube Premium online from $1.80 (Rs 500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/zoom-pro/",
+    "title": "Buy Zoom Pro Online (2026) | From $5.40 | MALIK DATA CENTRE",
+    "description": "Buy Zoom Pro online from $5.40 (Rs 1,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/wedding-card-maker/",
+    "title": "Free Wedding Card Maker: Shaadi, Mehndi, Walima Invitations | Postly",
+    "description": "Design elegant shaadi, nikah, mehndi, barat and walima invitations with Urdu and English text. Print them or send digital invites on WhatsApp.",
+    "image": ""
+   },
+   {
+    "path": "/youtube-banner-maker/",
+    "title": "Free YouTube Banner & Channel Art Maker | Postly",
+    "description": "Create a complete YouTube channel kit: channel banner with the safe area that shows on every device, profile picture, end screen and Shorts cover. All in matching colours and fonts.",
+    "image": ""
+   },
+   {
+    "path": "/youtube-thumbnail-maker/",
+    "title": "Free YouTube Thumbnail Maker with AI (No Signup) | Postly",
+    "description": "Make click-worthy YouTube thumbnails in minutes. Start from 40+ proven layouts, cut out your face with a white outline in one click, add bold text effects, and preview how it looks in the video feed before you upload.",
+    "image": ""
+   }
+  ]
+ },
+ "pages": {
+  "items": [
+   {
+    "path": "/about-us/",
+    "heading": "About MALIK DATA CENTRE",
+    "intro": "MALIK DATA CENTRE helps students, freelancers, creators and businesses get premium AI tools and software without needing an international card."
+   },
+   {
+    "path": "/ad-maker/",
+    "heading": "Free Ad Creative Maker",
+    "intro": "Design high-converting ads for Facebook, Instagram, TikTok and Google Display in one place. Start from 34+ ad templates, resize one design into every ad size in a click, animate it, and write the ad copy with AI."
+   },
+   {
+    "path": "/ai-automation-services/",
+    "heading": "AI Automation Services",
+    "intro": "We build AI chatbots and automations that save your team hours every week, using n8n, Gumloop, OpenAI, Claude and Gemini. You keep ownership of everything we build."
+   },
+   {
+    "path": "/ai-image-generator/",
+    "heading": "AI Image Generator",
+    "intro": "Describe what you want and AI creates the image. Use it as a background, a product scene or an illustration, then add text and download. Free daily credits, no signup."
+   },
+   {
+    "path": "/background-remover/",
+    "heading": "Free Background Remover",
+    "intro": "Remove the background from any photo in one click, right in your browser. Your photo is not uploaded to a server. Then put your product or portrait on a new background, add an outline, or turn it into a studio product photo."
+   },
+   {
+    "path": "/blog/",
+    "heading": "AI tools guides & reviews",
+    "intro": "Buying guides, comparisons, setup tutorials and price updates for AI tools, written by the MALIK DATA CENTRE team for buyers worldwide."
+   },
+   {
+    "path": "/business-card-maker/",
+    "heading": "Business Card Maker",
+    "intro": "Design professional visiting cards with your logo, contact details and a QR code. Download print-ready files or order printing."
+   },
+   {
+    "path": "/comparisons/",
+    "heading": "AI tool comparisons",
+    "intro": "Honest side-by-side guides with real prices, so you buy the right plan the first time."
+   },
+   {
+    "path": "/comparisons/cursor-vs-replit-vs-lovable/",
+    "heading": "Cursor vs Replit vs Lovable: Which AI Coding Tool Should You Buy?",
+    "intro": "All three let AI write code for you, but they suit very different people. Here is how to choose without wasting a month's subscription."
+   },
+   {
+    "path": "/comparisons/elevenlabs-vs-heygen/",
+    "heading": "ElevenLabs vs HeyGen: AI Voice or AI Avatar Videos?",
+    "intro": "ElevenLabs makes voices. HeyGen makes presenter videos with avatars. Faceless YouTube channels often use one or both, so pick based on what your content actually needs."
+   },
+   {
+    "path": "/comparisons/gemini-pro-vs-google-ai-ultra/",
+    "heading": "Gemini Pro vs Google AI Ultra: Which Google AI Plan Should You Buy?",
+    "intro": "Both plans run on Google's Gemini models. The real difference is how much video generation and usage you need, and how much you want to spend each month."
+   },
+   {
+    "path": "/comparisons/nordvpn-vs-surfshark/",
+    "heading": "NordVPN vs Surfshark: Which VPN Should You Buy in 2026?",
+    "intro": "Both are well-known premium VPNs. The choice usually comes down to budget and whether you want the account on your own email."
+   },
+   {
+    "path": "/contact-us/",
+    "heading": "Contact Us",
+    "intro": "WhatsApp is the fastest way to reach us for orders, setup help and warranty claims."
+   },
+   {
+    "path": "/delivery-policy/",
+    "heading": "Delivery Policy",
+    "intro": "All products are digital. Nothing is shipped by post. Most orders are activated within 5–30 minutes after payment is confirmed."
+   },
+   {
+    "path": "/eid-card-maker/",
+    "heading": "Eid Mubarak Card Maker",
+    "intro": "Make beautiful Eid ul Fitr and Eid ul Adha greetings, Ramadan posts and Jumma Mubarak designs with Urdu and English text, Islamic arches, crescents and gold styles. Free, in your browser."
+   },
+   {
+    "path": "/enterprise-ai-api-credits/",
+    "heading": "Enterprise AI API Credits",
+    "intro": "Need API access for Claude, OpenAI, Gemini or DeepSeek in your product, chatbot or automation? Tell us your monthly volume and we will send a custom quote in USD, USDT or PKR."
+   },
+   {
+    "path": "/flyer-maker/",
+    "heading": "Flyer & Poster Maker",
+    "intro": "Make flyers and posters for sales, admissions, grand openings, events and services. A4 print-ready designs with QR codes, then download a PDF or order prints."
+   },
+   {
+    "path": "/free-design-tools/",
+    "heading": "Free design tools",
+    "intro": "YouTube thumbnails, ads, banners, QR codes, background removal, Eid and wedding cards, flyers, menus and business cards. All free, in your browser, with no signup and no watermark."
+   },
+   {
+    "path": "/frequently-asked-questions/",
+    "heading": "Frequently Asked Questions",
+    "intro": "Everything buyers usually ask before and after ordering. Can't find your answer? Message us on WhatsApp."
+   },
+   {
+    "path": "/instagram-post-maker/",
+    "heading": "Instagram Post & Story Maker",
+    "intro": "Design Instagram posts, carousels, Stories and Reel covers with ready templates, free photos and icons, and AI captions and hashtags. Share straight to Instagram or WhatsApp from your phone."
+   },
+   {
+    "path": "/qr-code-maker/",
+    "heading": "Free QR Code Maker",
+    "intro": "Make a QR code for your WhatsApp number, website, phone or any text, then place it straight onto your flyer, menu, business card or poster. No signup, no expiry."
+   },
+   {
+    "path": "/refund-policy/",
+    "heading": "Refund & Warranty Policy",
+    "intro": "If a plan stops working during its warranty period, we fix it or replace it. If we cannot, we refund you. This page explains exactly how."
+   },
+   {
+    "path": "/restaurant-menu-maker/",
+    "heading": "Restaurant & Cafe Menu Maker",
+    "intro": "Create restaurant and cafe menus, deal posters and price lists. Add a QR code for online orders on WhatsApp, and download for print or sharing."
+   },
+   {
+    "path": "/social-media-services/",
+    "heading": "Social Media Services",
+    "intro": "Content, channel setup, page management and ad campaigns for YouTube, Facebook, Instagram, TikTok and WhatsApp. Tell us your platform and goal, and we will send a clear quote on WhatsApp."
+   },
+   {
+    "path": "/tools/",
+    "heading": "AI tools & subscriptions, worldwide",
+    "intro": "Every tool we sell, with prices, access type, warranty and a full buying guide. Delivered worldwide: pay with USDT from any country, or EasyPaisa, JazzCash or bank in Pakistan, and get activated on WhatsApp in 5–30 minutes."
+   },
+   {
+    "path": "/tools/adobe-creative-cloud/",
+    "heading": "Buy Adobe Creative Cloud online",
+    "intro": "The full Adobe Creative Cloud bundle includes Photoshop, Illustrator, Premiere Pro, After Effects, Acrobat and Firefly AI. Pick a 3, 4, 6 or 12 month plan instead of paying Adobe's full dollar price every month."
+   },
+   {
+    "path": "/tools/amazon-prime-video/",
+    "heading": "Buy Amazon Prime Video online",
+    "intro": "Prime Video gives you movies, series and Amazon Originals. Our 6-month plan comes with a private profile login."
+   },
+   {
+    "path": "/tools/canva-pro/",
+    "heading": "Buy Canva Pro online",
+    "intro": "Canva Pro gives you premium templates, the full stock library, brand kits, background remover and Canva's AI tools. Our yearly plan is activated on your own email, and the Admin Panel option lets resellers and teams add members."
+   },
+   {
+    "path": "/tools/capcut-pro/",
+    "heading": "Buy CapCut Pro online",
+    "intro": "CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor. Our plans run on 2 devices, so you can edit on your phone and PC."
+   },
+   {
+    "path": "/tools/chatgpt-go/",
+    "heading": "Buy ChatGPT Go online",
+    "intro": "ChatGPT Go is OpenAI's lower-cost paid plan, with higher message, upload and image limits than the free tier. We set it up for you without an international credit card, wherever you are."
+   },
+   {
+    "path": "/tools/cinem-ai/",
+    "heading": "Buy Cinem AI Video online",
+    "intro": "Cinem AI is a creator portal for generating AI video content. The monthly plan gives you access through a creator account."
+   },
+   {
+    "path": "/tools/claude-api-tokens/",
+    "heading": "Buy Claude API Tokens online",
+    "intro": "API token packs for developers who want to use Claude models inside their own apps, bots and automations. Contact us for larger volumes."
+   },
+   {
+    "path": "/tools/coursera-plus/",
+    "heading": "Buy Coursera Plus online",
+    "intro": "Coursera Plus unlocks thousands of courses, professional certificates and guided projects from Google, IBM, Meta and top universities."
+   },
+   {
+    "path": "/tools/cursor-pro/",
+    "heading": "Buy Cursor Pro online",
+    "intro": "Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete. Cursor Pro raises the usage limits so you can code with AI all day."
+   },
+   {
+    "path": "/tools/elevenlabs-creator/",
+    "heading": "Buy ElevenLabs Creator online",
+    "intro": "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning."
+   },
+   {
+    "path": "/tools/gamma-pro/",
+    "heading": "Buy Gamma Pro online",
+    "intro": "Gamma creates presentations, documents and simple websites from a prompt, with modern design built in. Pro removes the watermark and unlocks more AI generation."
+   },
+   {
+    "path": "/tools/gemini-pro/",
+    "heading": "Buy Gemini Pro (Google AI Pro) online",
+    "intro": "Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets. Our long-duration plans are one of the lowest monthly cost ways to use Google AI."
+   },
+   {
+    "path": "/tools/google-ai-ultra/",
+    "heading": "Buy Google AI Ultra online",
+    "intro": "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to a private family invitation with credits on your own account."
+   },
+   {
+    "path": "/tools/grammarly-pro/",
+    "heading": "Buy Grammarly Pro online",
+    "intro": "Grammarly Pro checks grammar, clarity, tone and plagiarism, and rewrites full sentences with AI. It works in your browser, Word, Gmail and most apps."
+   },
+   {
+    "path": "/tools/gumloop-pro/",
+    "heading": "Buy Gumloop Pro online",
+    "intro": "Gumloop is a no-code AI automation builder for scraping, data enrichment and AI workflows. The Pro plan is activated on your email for 12 months."
+   },
+   {
+    "path": "/tools/heygen/",
+    "heading": "Buy HeyGen Creator online",
+    "intro": "HeyGen creates talking-avatar videos from a script, translates videos with lip-sync and builds a digital twin of you. The Creator plan suits regular content production."
+   },
+   {
+    "path": "/tools/higgsfield/",
+    "heading": "Buy Higgsfield Plus online",
+    "intro": "Higgsfield is an AI video studio with cinematic camera moves, effects and access to top video models in one place. The Plus plan comes with 1,200 credits."
+   },
+   {
+    "path": "/tools/hma-vpn/",
+    "heading": "Buy HMA VPN online",
+    "intro": "HMA VPN yearly licence key, delivered digitally for activation in the HMA app."
+   },
+   {
+    "path": "/tools/kling-ai/",
+    "heading": "Buy Kling AI online",
+    "intro": "Kling AI is a popular text-to-video and image-to-video generator known for realistic motion. The Standard plan includes 660 monthly credits."
+   },
+   {
+    "path": "/tools/linkedin-premium/",
+    "heading": "Buy LinkedIn Premium online",
+    "intro": "LinkedIn Premium Career helps job seekers stand out, and Sales Navigator helps sales teams find and contact leads. Both are applied as upgrades to your existing LinkedIn profile."
+   },
+   {
+    "path": "/tools/lovable-pro/",
+    "heading": "Buy Lovable Pro online",
+    "intro": "Lovable builds full web apps from plain-English prompts, with a database, login and one-click publishing. Our Pro plans come with 200, 400 or 600 credits and are activated on your own email."
+   },
+   {
+    "path": "/tools/manus-ai/",
+    "heading": "Buy Manus Pro online",
+    "intro": "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account."
+   },
+   {
+    "path": "/tools/microsoft-office-365/",
+    "heading": "Buy Microsoft 365 online",
+    "intro": "Microsoft 365 includes Word, Excel, PowerPoint, Outlook and OneDrive cloud storage, activated on your own email for 12 months."
+   },
+   {
+    "path": "/tools/n8n-starter/",
+    "heading": "Buy n8n Starter Cloud online",
+    "intro": "n8n is a workflow automation platform for connecting apps, APIs and AI agents. The Starter Cloud plan is hosted by n8n, so you build automations without managing a server."
+   },
+   {
+    "path": "/tools/nordvpn/",
+    "heading": "Buy NordVPN online",
+    "intro": "NordVPN encrypts your connection on public Wi-Fi and gives you fast servers in many countries, activated on your own email."
+   },
+   {
+    "path": "/tools/notion-business/",
+    "heading": "Buy Notion Business online",
+    "intro": "Notion Business adds Notion AI, advanced permissions and team features to the all-in-one workspace for notes, docs, wikis and projects."
+   },
+   {
+    "path": "/tools/picsart-pro/",
+    "heading": "Buy Picsart Pro online",
+    "intro": "Picsart Pro unlocks premium photo and video editing, AI tools and templates on mobile and web."
+   },
+   {
+    "path": "/tools/replit-core/",
+    "heading": "Buy Replit Core online",
+    "intro": "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan or a ready-made account pre-loaded with $100 of credits."
+   },
+   {
+    "path": "/tools/super-grok/",
+    "heading": "Buy SuperGrok + X Premium+ online",
+    "intro": "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Choose a short 10-day plan to try it or a 6 to 12 month plan for the best monthly rate."
+   },
+   {
+    "path": "/tools/surfshark-vpn/",
+    "heading": "Buy Surfshark VPN online",
+    "intro": "Surfshark is a budget VPN that works on unlimited devices. Our monthly plan is the cheapest way to get a premium VPN."
+   },
+   {
+    "path": "/tools/warp-build/",
+    "heading": "Buy Warp Build CI/CD online",
+    "intro": "WarpBuild provides faster, cheaper GitHub Actions runners for CI/CD pipelines. The 12-month plan suits teams that want quicker builds and tests."
+   },
+   {
+    "path": "/tools/windows-pro-key/",
+    "heading": "Buy Windows 10/11 Pro Key online",
+    "intro": "A Windows 10/11 Pro retail key for lifetime activation of your PC, delivered digitally."
+   },
+   {
+    "path": "/tools/wispr-flow/",
+    "heading": "Buy Wispr Flow Pro online",
+    "intro": "Wispr Flow turns your voice into clean, formatted text in any app, much faster than typing. Pro removes the weekly word limit."
+   },
+   {
+    "path": "/tools/xbox-gift/",
+    "heading": "Buy Xbox Gift Codes online",
+    "intro": "Digital Xbox codes delivered on WhatsApp, including random vouchers and 1-month codes."
+   },
+   {
+    "path": "/tools/youtube-premium/",
+    "heading": "Buy YouTube Premium online",
+    "intro": "YouTube Premium removes ads, allows background play and downloads, and includes YouTube Music Premium. It is activated on your own Google account."
+   },
+   {
+    "path": "/tools/zoom-pro/",
+    "heading": "Buy Zoom Pro online",
+    "intro": "Zoom Pro removes the 40-minute limit and adds cloud recording and AI Companion for meetings and online classes."
+   },
+   {
+    "path": "/wedding-card-maker/",
+    "heading": "Wedding Invitation Card Maker",
+    "intro": "Design elegant shaadi, nikah, mehndi, barat and walima invitations with Urdu and English text. Print them or send digital invites on WhatsApp."
+   },
+   {
+    "path": "/youtube-banner-maker/",
+    "heading": "YouTube Banner & Channel Kit Maker",
+    "intro": "Create a complete YouTube channel kit: channel banner with the safe area that shows on every device, profile picture, end screen and Shorts cover. All in matching colours and fonts."
+   },
+   {
+    "path": "/youtube-thumbnail-maker/",
+    "heading": "Free YouTube Thumbnail Maker",
+    "intro": "Make click-worthy YouTube thumbnails in minutes. Start from 40+ proven layouts, cut out your face with a white outline in one click, add bold text effects, and preview how it looks in the video feed before you upload."
+   }
+  ]
+ },
+ "blog": {
+  "posts": []
+ },
+ "_generated": "2026-10-27T06:54:02.069Z"
+}

@@ -226,11 +226,14 @@
     safe.hidden = !safeOn; $("#kit-safe").classList.toggle("on", safeOn);
     if (!safeOn) return;
     const [W, H] = S.size, r = W / H, z = S.zoom, box = (l, t, w, h, label) => `<div style="left:${l * z}px;top:${t * z}px;width:${w * z}px;height:${h * z}px"><span>${label}</span></div>`;
-    let html = "";
-    if (Math.abs(r - 16 / 9) < 0.05) html = box(W * 0.84, H * 0.85, W * 0.14, H * 0.11, "Video length covers this") + box(W * 0.02, H * 0.02, W * 0.96, H * 0.96, "");
+    let html = "", banner = W === 2560 && H === 1440;
+    if (banner) {
+      const band = (w, label) => box((W - w) / 2, (H - 423) / 2, w, 423, label);
+      html = box(0, 0, W, H, "TV: whole image") + band(2560, "Desktop") + band(1855, "Tablet") + band(1546, "Safe area: visible on every device");
+    } else if (Math.abs(r - 16 / 9) < 0.05 && W <= 1600) html = box(W * 0.84, H * 0.85, W * 0.14, H * 0.11, "Video length covers this") + box(W * 0.02, H * 0.02, W * 0.96, H * 0.96, "");
     else if (r < 0.6) html = box(0, 0, W, H * 0.14, "Profile name & buttons cover this") + box(0, H * 0.8, W, H * 0.2, "Caption & call-to-action cover this") + box(W * 0.86, H * 0.4, W * 0.14, H * 0.4, "Like / share buttons");
     else html = box(W * 0.05, H * 0.05, W * 0.9, H * 0.9, "Keep important text inside this line");
-    safe.innerHTML = html; safe.className = "ds-safe" + (Math.abs(r - 16 / 9) < 0.05 ? " yt" : r < 0.6 ? " story" : " feed");
+    safe.innerHTML = html; safe.className = "ds-safe" + (banner ? " banner" : Math.abs(r - 16 / 9) < 0.05 && W <= 1600 ? " yt" : r < 0.6 ? " story" : " feed");
   }
   $("#kit-safe").onclick = () => { safeOn = !safeOn; drawSafe(); };
   let lastKey = "";
@@ -260,4 +263,5 @@
     const m = $('[data-act="magic"]'); if (m) m.click();
     setTimeout(() => presetSizes(b.dataset.adset), 50);
   });
+  window.MDC_PRO = { setSafe(v) { safeOn = !!v; drawSafe(); }, drawSafe };
 })();
