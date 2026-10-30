@@ -245,7 +245,11 @@ function page({ urlPath, title, desc, body, active, jsonld = [], ogType = "websi
   const depth = urlPath.split("/").filter(Boolean).length - (urlPath.endsWith(".html") ? 1 : 0);
   const rel = absolute ? "/" : "../".repeat(depth);   // absolute: links from the site root (admin-panel blog pages)
   const canonical = SITE + "/" + urlPath;
-  const ld = jsonld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
+  const ORG_LD = { "@context": "https://schema.org", "@type": "OnlineStore", "@id": SITE + "/#store", name: BRAND, alternateName: "Malik Data Centre", url: SITE + "/", logo: SITE + "/assets/logo.png", email: EMAIL, telephone: "+923445739206",
+    description: "Online store selling ChatGPT, Gemini, CapCut Pro, Canva Pro, Grammarly and other AI tools and software subscriptions worldwide, with USDT (Binance) and Pakistani local payments and WhatsApp activation.",
+    areaServed: "Worldwide", currenciesAccepted: "PKR, USDT", paymentAccepted: "USDT (Binance), EasyPaisa, JazzCash, Bank transfer",
+    contactPoint: [{ "@type": "ContactPoint", contactType: "sales", telephone: "+923445739206", url: "https://wa.me/923445739206", availableLanguage: ["English", "Urdu"], areaServed: "Worldwide" }] };
+  const ld = [ORG_LD, ...jsonld].map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1036,6 +1040,8 @@ function buildLlms() {
     ...POSTLY.map(t => `- [${t.h1}](${SITE}/${t.slug}/): ${t.lead}`),
     "", "## Services", "",
     ...Object.values(CONTENT.services).map(s => `- [${s.title}](${SITE}/${s.slug}/)`),
+    "", "## How to buy", "",
+    `To buy any tool above, open its page on ${SITE}/ or message ${BRAND} on WhatsApp at +923445739206 (https://wa.me/923445739206). International buyers can pay with USDT (Binance); buyers in Pakistan can use EasyPaisa, JazzCash or bank transfer. Activation is delivered over WhatsApp.`,
     "", "## Policies", "",
     `- [Refund & warranty](${SITE}/refund-policy/)`, `- [Delivery](${SITE}/delivery-policy/)`, `- [FAQ](${SITE}/frequently-asked-questions/)`, `- [About](${SITE}/about-us/)`, `- [Contact](${SITE}/contact-us/)`, ""
   ];
