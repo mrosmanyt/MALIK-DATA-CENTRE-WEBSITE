@@ -130,7 +130,7 @@ const TOURS = [
     stays: [["Sri Lanka", "Transit"], ["Thailand", "4 to 5 Days"], ["Malaysia", "4 Days"], ["Singapore", "3 Days"], ["Maldives", "3 Days"]],
     departure: "Ask on WhatsApp for the next departure",
     group: "40 to 60 people",
-    photo: 38238, photoAlt: "Over-water villas in the Maldives",
+    photo: "/assets/tours/maldives-overwater-villas.webp", photoAlt: "Over-water villas in the Maldives",
     intro: "Our grand escorted circuit across five countries: Sri Lanka in transit, then Thailand, Malaysia, Singapore and 3 days in the Maldives. Visas, round-trip tickets, 4-star hotels with breakfast, airport transfers and city tours in Thailand, Malaysia and Singapore are included.",
     included: ["Visas", "Round-trip tickets", "4-star hotels with breakfast", "Airport transfers", "City tours in Thailand, Malaysia & Singapore"],
     excluded: [STD_EXCLUDED],

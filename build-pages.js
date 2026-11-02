@@ -1178,7 +1178,7 @@ ${items.slice(0, 30).map(it => `<item><title>${esc(it.title)}</title><link>${SIT
 /* ======================================================================
    5c) MALIK TOURS: travel & tourism (site-content/travel.js)
    ====================================================================== */
-const pxImg = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+const pxImg = (id, w) => typeof id === "string" ? (w >= 1200 ? SITE + id : id) : `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 const TR_WA = TRAVEL.WHATSAPP, TR_PHONE = TRAVEL.PHONE;
 const TR_AGENCY = { "@type": "TravelAgency", name: "MALIK TOURS", parentOrganization: { "@type": "Organization", name: BRAND, url: SITE }, telephone: "+" + TR_WA, url: SITE + "/tours/", areaServed: "PK" };
 const trCat = id => (TRAVEL.CATEGORIES.find(c => c.id === id) || {}).label || "";
@@ -1237,6 +1237,17 @@ function buildTravel() {
       <ul class="tr-hero-facts"><li><b>${T.length}</b> tour packages</li><li><b>From ${rs(from)}</b> with visa &amp; flights</li><li><b>${SV.length}</b> travel services</li></ul>
     </div>
     <div class="tr-hero-img"><img src="${pxImg(T[T.length - 1].photo, 900)}" alt="${esc(T[T.length - 1].photoAlt)}" width="900" height="600"></div>
+  </section>
+  <section class="pg-section tr-two" id="upcoming">
+    <div><img src="/assets/tours/shogran-naran-babusar-poster.webp" alt="MALIK TOURS poster: Shogran, Naran and Babusar Top tour, travelling 06 November, PKR 15,000" width="1024" height="1024" loading="lazy" style="width:100%;height:auto;border-radius:16px"></div>
+    <div>
+      <span class="pg-eyebrow"><i class="fa-solid fa-mountain-sun"></i> Upcoming domestic tour</span>
+      <h2>Shogran, Naran &amp; Babusar Top</h2>
+      <p class="pg-lead"><b>Travelling: 06 November</b> · <b>PKR 15,000</b> per person</p>
+      <h3>Included</h3>${trCheck(["Accommodation", "Transport", "Breakfast and dinner", "Bonfire and BBQ night"])}
+      <h3>Not included</h3><ul><li>Jeep charges</li><li>Lunch</li><li>Extra services</li></ul>
+      <div class="tr-hero-btns"><a class="btn btn-success" href="${waLink("Hi MALIK TOURS, I want to book the Shogran, Naran & Babusar Top tour (06 November, PKR 15,000).", TR_WA)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp ${TR_PHONE}</a></div>
+    </div>
   </section>
   <section class="pg-section" id="tours">
     <h2>Tour packages</h2>
