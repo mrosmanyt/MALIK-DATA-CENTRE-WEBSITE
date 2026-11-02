@@ -156,15 +156,15 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #4285f4"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
     },
     {
-        id: "google-ai-ultra-family-1m",
-        name: "Google AI Ultra Private Family Invitation",
+        id: "google-veo3-ultra-20x",
+        name: "Google Veo 3 Ultra (Flow Ultra 20x Plan)",
         category: "ai-chat",
         duration: "1 Month Plan",
-        price: 8500,
-        originalPrice: 18000,
-        setup: "Private Family Invitation",
-        desc: "Google AI Ultra Family Invitation 🚀 — 25K AI Credits, Veo 3, Google Antigravity, Flow, Gemini Ultra & Premium AI Features with high usage limits.",
-        specs: ["25K AI Credits Included", "Veo 3 & Google Antigravity", "Flow & Gemini Ultra Access", "25 Days Full Warranty"],
+        price: 29999,
+        originalPrice: 29999,
+        setup: "Delivered on WhatsApp",
+        desc: "Google's Flow Ultra 20x plan 🚀 — Veo 3 video generation with 20x Flow usage, Google Antigravity, Gemini Ultra and all Google AI Ultra features.",
+        specs: ["Flow Ultra 20x Usage", "Veo 3 Video Generation", "Google Antigravity Included", "Gemini Ultra & All Ultra Features"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #ea4335"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`
     },
     {
@@ -228,39 +228,51 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #00c6ff"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM15 16H5V8h10v8z"/></svg>`
     },
     {
-        id: "grok-10d",
-        name: "Super Grok + X Premium+",
-        category: "ai-chat",
-        duration: "10 Days Plan",
+        id: "vidiq-max",
+        name: "vidIQ Max",
+        category: "video-audio",
+        duration: "1 Month Plan",
         price: 1500,
-        originalPrice: 4000,
+        originalPrice: 1500,
+        setup: "Delivered on WhatsApp",
+        desc: "vidIQ's top plan for YouTube creators: keyword research, AI video ideas, title and tag tools, competitor tracking and channel analytics.",
+        specs: ["vidIQ Max Plan Features", "Keyword Research & SEO Scores", "Daily AI Video Ideas", "Competitor & Trend Tracking"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>`
+    },
+    {
+        id: "grok-1m",
+        name: "Grok Premium",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 4500,
+        originalPrice: 4500,
         setup: "Activated on Client Email",
-        desc: "Get X (formerly Twitter) Premium+ access with a Blue Verification Tick and access to Grok AI chatbot with real-time X search data.",
-        specs: ["Official Blue Tick Badge", "Grok AI Assistant Access", "7 Days Full Warranty", "Full Ad-Free X Experience"],
+        desc: "One month of Grok Premium on X: the Grok AI assistant with real-time X search, the blue verification badge and an ad-free X experience.",
+        specs: ["Grok AI Assistant Access", "Official Blue Tick Badge", "Full Ad-Free X Experience", "25 Days Full Warranty"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #e2e8f0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
     },
     {
-        id: "grok-6m",
-        name: "Super Grok + X Premium+",
+        id: "grok-bot-premium-1m",
+        name: "Grok Bot + Grok Premium",
         category: "ai-chat",
-        duration: "6 Months Account",
-        price: 6300,
-        originalPrice: 15000,
+        duration: "Monthly Plan",
+        price: 4999,
+        originalPrice: 4999,
         setup: "Activated on Client Email",
-        desc: "Double the duration. Includes X Premium+ features, Blue Tick verification, and access to Grok AI with no ads.",
-        specs: ["Official Blue Tick Badge", "Grok AI Assistant Access", "Full Ad-Free X Experience", "6 Months Full Warranty"],
+        desc: "Grok AI bot plus Grok Premium for one month: chat with Grok, use real-time X search and get the premium features on your own account.",
+        specs: ["Grok AI Bot Access", "Grok Premium Features", "Real-Time X Search in Grok", "Setup Help on WhatsApp"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #cbd5e1"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
     },
     {
-        id: "grok-12m",
-        name: "Super Grok + X Premium+",
+        id: "grok-heavy-1m",
+        name: "Grok Heavy",
         category: "ai-chat",
-        duration: "12 Months Account",
-        price: 9500,
-        originalPrice: 28000,
+        duration: "1 Month Plan",
+        price: 19999,
+        originalPrice: 19999,
         setup: "Activated on Client Email",
-        desc: "Best yearly deal. Get X Premium+ features, blue verified badge, and Grok AI access activated directly on your email.",
-        specs: ["Official Blue Tick Badge", "Grok AI Assistant Access", "Full Ad-Free X Experience", "1 Year Warranty Protection"],
+        desc: "Grok Heavy, xAI's most powerful Grok plan, for heavy research, coding and analysis with the highest Grok usage limits.",
+        specs: ["Grok Heavy Model Access", "Highest Grok Usage Limits", "Real-Time X Search in Grok", "Setup Help on WhatsApp"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #94a3b8"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
     },
     {
@@ -916,15 +928,15 @@ const WHATSAPP_NUMBER = "+923445739206";
 const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
-const BESTSELLER_IDS = ["grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m"];
+const BESTSELLER_IDS = ["chatgpt-go-6m"];
 const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
 if (window.MDC_CMS && typeof window.MDC_CMS.ribbons === "function") { try { window.MDC_CMS.ribbons(BESTSELLER_IDS, POPULAR_IDS); } catch (e) { console.warn(e); } }
 // Order used by the "Most Popular" sort
 const POPULARITY_ORDER = [
-    "grok-10d", "chatgpt-go-6m", "google-ai-ultra-family-1m", "google-ai-ultra-shared-1m",
+    "vidiq-max", "chatgpt-go-6m", "google-veo3-ultra-20x", "google-ai-ultra-shared-1m",
     "gemini-18m", "capcut-pro-1m", "canva-yearly", "capcut-pro-3m", "capcut-pro-6m",
     "adobe-12m", "youtube-12m", "cursor-pro", "gemini-pro-18m-private", "google-ai-ultra-25k-slot",
-    "lovable-200", "grok-6m", "elevenlabs-creator", "heygen-200"
+    "lovable-200", "grok-1m", "grok-bot-premium-1m", "elevenlabs-creator", "heygen-200"
 ];
 
 // State Management
@@ -1311,7 +1323,7 @@ function renderTools(tools = TOOLS_DATABASE) {
                 </div>
                 <div class="tool-card-footer">
                     <div class="tool-price-wrapper">
-                        <span class="tool-original-price">${originalPriceDisplay}</span>
+                        ${tool.originalPrice > tool.price ? `<span class="tool-original-price">${originalPriceDisplay}</span>` : ""}
                         <span class="tool-price">${priceDisplay}</span>
                     </div>
                     ${tool.cmsSoldOut ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">

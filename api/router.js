@@ -95,7 +95,7 @@ async function track(req, res) {
   return H.json(res, 200, { ok: true });
 }
 
-const FORM_TYPES = { contact: "Contact message", "tool-request": "Tool request", service: "Service enquiry", "api-credits": "API credits quote", order: "Order", other: "Other" };
+const FORM_TYPES = { contact: "Contact message", "tool-request": "Tool request", service: "Service enquiry", "api-credits": "API credits quote", travel: "Travel enquiry", order: "Order", other: "Other" };
 async function forms(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return fail(res, 405, "Use POST");

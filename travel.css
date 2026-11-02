@@ -1,0 +1,70 @@
+/* MALIK TOURS: travel & tourism pages */
+.tr-logo-icon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, #0284c7, #16a34a); color: #fff; font-size: 1.05rem; }
+
+.tr-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; padding: 18px 0 30px; }
+.tr-hero h1 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); line-height: 1.12; margin: 12px 0 14px; color: var(--text-main); }
+.tr-hero-btns, .tr-contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.pg-cta .tr-contact { justify-content: center; }
+.tr-hero-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 22px 0 0; padding: 0; color: var(--text-muted); font-size: .92rem; }
+.tr-hero-facts b { color: var(--text-main); }
+.tr-hero-img img, .tr-detail-img img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px; box-shadow: var(--shadow-lg); }
+.tr-hero-img { aspect-ratio: 3 / 2; }
+
+.tr-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.tr-filters button { font: inherit; font-size: .88rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border-glass); background: var(--bg-card); color: var(--text-muted); cursor: pointer; }
+.tr-filters button.on { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.tr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.tr-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow .2s, transform .2s; }
+.tr-card[hidden] { display: none; }
+.tr-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.tr-card-img { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-darker); }
+.tr-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tr-card-badge { position: absolute; left: 12px; top: 12px; background: rgba(17, 24, 39, .82); color: #fff; font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+.tr-card-body { display: flex; flex-direction: column; gap: 10px; padding: 16px; flex: 1; }
+.tr-card h3 { font-size: 1.08rem; line-height: 1.35; margin: 0; }
+.tr-card h3 a { color: var(--text-main); text-decoration: none; }
+.tr-flags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tr-flags span { font-size: .74rem; font-weight: 600; color: var(--accent-blue); background: rgba(2, 132, 199, .08); padding: 3px 8px; border-radius: 6px; }
+.tr-meta { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: .86rem; color: var(--text-muted); }
+.tr-meta i { width: 16px; color: var(--text-dark); }
+.tr-card-foot { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tr-price small, .tr-box-price small { display: block; font-size: .74rem; color: var(--text-dark); }
+.tr-price b { font-size: 1.2rem; color: var(--text-main); }
+.tr-card-btns { display: flex; gap: 8px; }
+.tr-card-btns .btn { padding: 8px 12px; font-size: .86rem; }
+
+.tr-two { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.tr-check, .tr-x { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.tr-check li, .tr-x li { display: flex; gap: 10px; color: var(--text-muted); line-height: 1.55; }
+.tr-check i { color: var(--success); margin-top: 4px; }
+.tr-x i { color: #dc2626; margin-top: 4px; }
+
+.tr-detail { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; padding: 14px 0 10px; }
+.tr-detail-img { aspect-ratio: 11 / 7; }
+.tr-box { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; padding: 22px; box-shadow: var(--shadow-md); display: grid; gap: 12px; }
+.tr-box h1 { font-size: clamp(1.4rem, 2.6vw, 1.85rem); line-height: 1.2; margin: 0; color: var(--text-main); }
+.tr-box p { color: var(--text-muted); line-height: 1.7; margin: 0; }
+.tr-box-price { background: var(--success-glow); border-radius: 12px; padding: 12px 14px; }
+.tr-box-price b { font-size: 1.6rem; color: var(--success-hover); }
+.tr-box-price span { display: block; font-size: .78rem; color: var(--text-muted); margin-top: 2px; }
+.tr-facts { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 0; font-size: .9rem; }
+.tr-facts dt { color: var(--text-dark); white-space: nowrap; }
+.tr-facts dt i { width: 16px; }
+.tr-facts dd { margin: 0; color: var(--text-main); font-weight: 500; }
+.tr-book { width: 100%; justify-content: center; }
+.tr-intro { font-size: 1.02rem; }
+.tr-stays { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin-top: 8px; }
+.tr-stays div { border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px; background: var(--bg-card); }
+.tr-stays b { display: block; color: var(--text-main); }
+.tr-stays span { color: var(--text-muted); font-size: .9rem; }
+
+@media (max-width: 860px) {
+  .tr-hero, .tr-detail, .tr-two { grid-template-columns: 1fr; gap: 22px; }
+  .tr-hero-img { order: -1; }
+}
+@media (max-width: 420px) {
+  .tr-grid { grid-template-columns: 1fr; }
+  .tr-card-foot { flex-direction: column; align-items: stretch; }
+  .tr-card-btns .btn { flex: 1; justify-content: center; }
+}

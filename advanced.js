@@ -189,7 +189,7 @@
             // best / popular / deals
             if (/(best|popular|deal|top|recommend|sasta|trending)/i.test(ql)) {
                 var tools = getTools();
-                var picks = tools.filter(function (t) { return ["grok-10d", "chatgpt-go-6m", "canva-yearly", "gemini-18m"].indexOf(t.id) !== -1; });
+                var picks = tools.filter(function (t) { return ["chatgpt-go-6m", "canva-yearly", "gemini-18m"].indexOf(t.id) !== -1; });
                 if (picks.length) return "Our most popular deals: " + toolReply(picks);
             }
             // private vs shared

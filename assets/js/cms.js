@@ -469,6 +469,7 @@
   function formType(form) {
     var p = location.pathname, intro = (form.getAttribute("data-intro") || "").toLowerCase();
     if (/request a tool|not in your catalog/.test(intro)) return "tool-request";
+    if (/\/tours\//.test(p)) return "travel";
     if (/enterprise|api-credits/.test(p)) return "api-credits";
     if (/services/.test(p)) return "service";
     if (/contact/.test(p)) return "contact";

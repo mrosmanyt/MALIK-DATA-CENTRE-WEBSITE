@@ -58,6 +58,7 @@ const TOOLS = loadTools();
 const FAMILIES = require("./site-content/families.js");
 const CONTENT = require("./site-content/pages-content.js");
 const POSTLY = require("./site-content/postly-tools.js");
+const TRAVEL = require("./site-content/travel.js");
 const FAM = {};
 FAMILIES.forEach(f => { FAM[f.slug] = f; });
 const POSTS = CONTENTLIB.loadPosts().filter(p => CONTENTLIB.isPublished(p, TODAY) && p.slug)
@@ -118,20 +119,25 @@ function famStats(f) {
 }
 
 /* ---------- layout ---------- */
-function header(rel, active) {
+function header(rel, active, tours) {
   const a = k => (active === k ? ' class="active"' : "");
+  const ctaNum = tours ? WA2 : WA1, ctaText = tours ? "Plan my trip" : "Order on WhatsApp";
   return `
 <header class="pg-header">
   <div class="pg-header-inner">
-    <a href="${rel}index.html" class="logo" aria-label="${BRAND} home">
+    ${tours ? `<a href="${rel}tours/" class="logo" aria-label="MALIK TOURS home">
+      <span class="logo-icon tr-logo-icon"><i class="fa-solid fa-plane-departure"></i></span>
+      <span class="logo-text">MALIK <span class="logo-highlight">TOURS</span></span>
+    </a>` : `<a href="${rel}index.html" class="logo" aria-label="${BRAND} home">
       <span class="logo-icon logo-icon-img"><img src="${rel}assets/logo.webp" alt="${BRAND} logo" width="36" height="36"></span>
       <span class="logo-text">MALIK DATA <span class="logo-highlight">CENTRE</span></span>
-    </a>
+    </a>`}
     <nav class="pg-nav" aria-label="Main">
       <a href="${rel}index.html#catalog-section">Store</a>
       <a href="${rel}tools/"${a("tools")}>All Tools</a>
       <a href="${rel}comparisons/"${a("compare")}>Compare</a>
       <a href="${rel}design/">Postly Studio <span class="pg-save" style="margin-left:2px">Free</span></a>
+      <a href="${rel}tours/"${a("travel")}>Travel</a>
       <div class="pg-dd">
         <button type="button" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down" style="font-size:.65rem"></i></button>
         <div class="pg-dd-menu">
@@ -145,7 +151,7 @@ function header(rel, active) {
       <a href="${rel}refund-policy/"${a("safety")}>Buyer Safety</a>
     </nav>
     <div class="pg-head-cta">
-      <a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="btn btn-success pg-hide-sm"><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
+      <a href="${wa(ctaNum)}" target="_blank" rel="noopener noreferrer" class="btn btn-success pg-hide-sm"><i class="fa-brands fa-whatsapp"></i> ${ctaText}</a>
       <button class="pg-burger" type="button" aria-label="Open menu" aria-expanded="false" data-pg-burger><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
@@ -154,6 +160,7 @@ function header(rel, active) {
     <a href="${rel}tools/">All Tool Guides</a>
     <a href="${rel}comparisons/">Compare Tools</a>
     <a href="${rel}design/">Postly Design Studio (Free)</a>
+    <a href="${rel}tours/">Travel &amp; Tours (MALIK TOURS)</a>
     <div class="pg-mobile-label">Services</div>
     <a href="${rel}social-media-services/">Social Media Services</a>
     <a href="${rel}ai-automation-services/">AI Automation</a>
@@ -164,12 +171,13 @@ function header(rel, active) {
     <a href="${rel}contact-us/">Contact Us</a>
     <a href="${rel}frequently-asked-questions/">FAQ</a>
     <a href="${rel}refund-policy/">Refund Policy</a>
-    <a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="btn btn-success" style="margin-top:12px;justify-content:center;color:#fff"><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
+    <a href="${wa(ctaNum)}" target="_blank" rel="noopener noreferrer" class="btn btn-success" style="margin-top:12px;justify-content:center;color:#fff"><i class="fa-brands fa-whatsapp"></i> ${ctaText}</a>
   </div>
 </header>`;
 }
 
-function footer(rel) {
+function footer(rel, tours) {
+  const fab = tours ? WA2 : WA1;
   const top = ["chatgpt-go", "super-grok", "google-ai-ultra", "gemini-pro", "capcut-pro", "canva-pro", "adobe-creative-cloud", "cursor-pro"];
   return `
 <footer class="pg-footer">
@@ -203,6 +211,7 @@ function footer(rel) {
           <li><a href="${rel}social-media-services/">Social media services</a></li>
           <li><a href="${rel}ai-automation-services/">AI automation</a></li>
           <li><a href="${rel}enterprise-ai-api-credits/">API credits</a></li>
+          <li><a href="${rel}tours/">Travel &amp; tours</a></li>
           <li><a href="${rel}blog/index.html">Blog</a></li>
         </ul>
       </div>
@@ -224,8 +233,9 @@ function footer(rel) {
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</a></li>
-          <li><a href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></li>
+          ${tours ? `<li><a href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> MALIK TOURS: +92 348 9057646</a></li>
+          <li><a href="tel:+${WA2}"><i class="fa-solid fa-phone"></i> Call +92 348 9057646</a></li>` : `<li><a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</a></li>
+          <li><a href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></li>`}
           <li><a href="mailto:${EMAIL}">${EMAIL}</a></li>
           <li><a href="${rel}about-us/">About us</a></li>
           <li><a href="${rel}contact-us/">Contact us</a></li>
@@ -238,14 +248,18 @@ function footer(rel) {
     </div>
   </div>
 </footer>
-<a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer" class="pg-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`;
+<a href="${wa(fab)}" target="_blank" rel="noopener noreferrer" class="pg-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`;
 }
 
-function page({ urlPath, title, desc, body, active, jsonld = [], ogType = "website", checkout = false, keywords = "", extraCss = [], file = null, absolute = false }) {
+function page({ urlPath, title, desc, body, active, jsonld = [], ogType = "website", checkout = false, keywords = "", extraCss = [], file = null, absolute = false, tours = false, image = "" }) {
   const depth = urlPath.split("/").filter(Boolean).length - (urlPath.endsWith(".html") ? 1 : 0);
   const rel = absolute ? "/" : "../".repeat(depth);   // absolute: links from the site root (admin-panel blog pages)
   const canonical = SITE + "/" + urlPath;
-  const ld = jsonld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
+  const ORG_LD = { "@context": "https://schema.org", "@type": "OnlineStore", "@id": SITE + "/#store", name: BRAND, alternateName: "Malik Data Centre", url: SITE + "/", logo: SITE + "/assets/logo.png", email: EMAIL, telephone: "+923445739206",
+    description: "Online store selling ChatGPT, Gemini, CapCut Pro, Canva Pro, Grammarly and other AI tools and software subscriptions worldwide, with USDT (Binance) and Pakistani local payments and WhatsApp activation.",
+    areaServed: "Worldwide", currenciesAccepted: "PKR, USDT", paymentAccepted: "USDT (Binance), EasyPaisa, JazzCash, Bank transfer",
+    contactPoint: [{ "@type": "ContactPoint", contactType: "sales", telephone: "+923445739206", url: "https://wa.me/923445739206", availableLanguage: ["English", "Urdu"], areaServed: "Worldwide" }] };
+  const ld = [ORG_LD, ...jsonld].map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -259,11 +273,11 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="${BRAND}">
+<meta property="og:site_name" content="${tours ? "MALIK TOURS" : BRAND}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="${SITE}/assets/logo.png">
+<meta property="og:image" content="${esc(image || SITE + "/assets/logo.png")}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@realmickeyai">
 <meta name="twitter:title" content="${esc(title)}">
@@ -283,11 +297,11 @@ ${ld}
 </head>
 <body>
 <div class="bg-glow bg-glow-1"></div>
-${header(rel, active)}
+${header(rel, active, tours)}
 <main class="pg-main">
 ${body(rel)}
 </main>
-${footer(rel)}
+${footer(rel, tours)}
 <script src="/api/content.js"></script>
 <script src="${rel}assets/js/cms.js?v=1.1"></script>
 <script src="${rel}tool-links.js" defer></script>
@@ -1034,8 +1048,14 @@ function buildLlms() {
     `- [Postly Design Studio](${SITE}/design/): free YouTube thumbnail maker and ad creative maker with 200+ templates (YouTube thumbnails, Facebook/Instagram/Google ads, Eid, Ramadan, 14 August, weddings, sales, restaurant menus, YouTube thumbnails, Reels covers, business cards), free stock photos and icons, QR codes, brand kit, photo crop and shape masks, multi-page PDF export, resize to many sizes, AI text-to-image, AI writer and translation, AI background remover, magic eraser and AI product photos.`,
     "", "## Free design tools (Postly)", "",
     ...POSTLY.map(t => `- [${t.h1}](${SITE}/${t.slug}/): ${t.lead}`),
+    "", "## Travel & tours (MALIK TOURS)", "",
+    `MALIK TOURS is the travel and tourism desk of ${BRAND}. Bookings on WhatsApp ${TRAVEL.PHONE} (https://wa.me/${TRAVEL.WHATSAPP}).`, "",
+    ...TRAVEL.TOURS.map(t => `- [${t.title}](${SITE}/tours/${t.slug}/): Rs ${t.price.toLocaleString("en-US")} — ${t.duration}; includes ${t.included.join(", ")}`),
+    ...TRAVEL.SERVICES.map(sv => `- [${sv.title}](${SITE}/tours/${sv.slug}/)`),
     "", "## Services", "",
     ...Object.values(CONTENT.services).map(s => `- [${s.title}](${SITE}/${s.slug}/)`),
+    "", "## How to buy", "",
+    `To buy any tool above, open its page on ${SITE}/ or message ${BRAND} on WhatsApp at +923445739206 (https://wa.me/923445739206). International buyers can pay with USDT (Binance); buyers in Pakistan can use EasyPaisa, JazzCash or bank transfer. Activation is delivered over WhatsApp.`,
     "", "## Policies", "",
     `- [Refund & warranty](${SITE}/refund-policy/)`, `- [Delivery](${SITE}/delivery-policy/)`, `- [FAQ](${SITE}/frequently-asked-questions/)`, `- [About](${SITE}/about-us/)`, `- [Contact](${SITE}/contact-us/)`, ""
   ];
@@ -1154,6 +1174,168 @@ ${items.slice(0, 30).map(it => `<item><title>${esc(it.title)}</title><link>${SIT
   fs.writeFileSync(path.join(ROOT, "blog", "feed.xml"), rss);
 }
 
+
+/* ======================================================================
+   5c) MALIK TOURS: travel & tourism (site-content/travel.js)
+   ====================================================================== */
+const pxImg = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+const TR_WA = TRAVEL.WHATSAPP, TR_PHONE = TRAVEL.PHONE;
+const TR_AGENCY = { "@type": "TravelAgency", name: "MALIK TOURS", parentOrganization: { "@type": "Organization", name: BRAND, url: SITE }, telephone: "+" + TR_WA, url: SITE + "/tours/", areaServed: "PK" };
+const trCat = id => (TRAVEL.CATEGORIES.find(c => c.id === id) || {}).label || "";
+function tourCard(rel, t) {
+  const msg = `Hello MALIK TOURS! I want to book: ${t.title} (${rs(t.price)}). Please share the details.`;
+  return `<article class="tr-card" data-tr-cat="${t.category}">
+    <a class="tr-card-img" href="${rel}tours/${t.slug}/"><img src="${pxImg(t.photo, 700)}" alt="${esc(t.photoAlt)}" loading="lazy" width="700" height="440"><span class="tr-card-badge">${esc(trCat(t.category).replace(" Tours", ""))}</span></a>
+    <div class="tr-card-body">
+      <div class="tr-flags">${t.countries.map(c => `<span>${esc(c)}</span>`).join("")}</div>
+      <h3><a href="${rel}tours/${t.slug}/">${esc(t.title)}</a></h3>
+      <ul class="tr-meta"><li><i class="fa-regular fa-clock"></i> ${esc(t.duration)}</li><li><i class="fa-regular fa-calendar"></i> ${esc(t.departure)}</li><li><i class="fa-solid fa-users"></i> ${esc(t.group)}</li></ul>
+      <div class="tr-card-foot"><div class="tr-price"><small>Package price</small><b>${rs(t.price)}</b></div>
+        <div class="tr-card-btns"><a class="btn btn-outline" href="${rel}tours/${t.slug}/">Details</a><a class="btn btn-success" href="${waLink(msg, TR_WA)}" target="_blank" rel="noopener noreferrer" aria-label="Book ${esc(t.short)} on WhatsApp"><i class="fa-brands fa-whatsapp"></i> Book</a></div></div>
+    </div>
+  </article>`;
+}
+function serviceCard(rel, sv) {
+  return `<a class="pg-card" href="${rel}tours/${sv.slug}/"><div class="pg-card-top"><div class="pg-card-icon"><i class="${sv.icon}"></i></div><h3>${esc(sv.title)}</h3></div><p>${esc(sv.intro.split(". ")[0])}.</p><span class="pg-card-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></a>`;
+}
+function travelForm(selected) {
+  const opts = TRAVEL.TOURS.map(t => `<option${t.slug === selected ? " selected" : ""}>${esc(t.short)} (${rs(t.price)})</option>`).join("") +
+    TRAVEL.SERVICES.map(sv => `<option${sv.slug === selected ? " selected" : ""}>${esc(sv.short)}</option>`).join("") + `<option>Custom / private family package</option>`;
+  return `<form class="pg-form" data-pg-waform data-wa="${TR_WA}" data-intro="Hello MALIK TOURS! I want to plan a trip:">
+    <div class="row">
+      <div><label>Your name *</label><input name="Name" required autocomplete="name"></div>
+      <div><label>Your WhatsApp number</label><input name="WhatsApp" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +92 300 1234567"></div>
+      <div><label>Tour or service</label><select name="Tour">${opts}</select></div>
+    </div>
+    <div class="row">
+      <div><label>Travel month</label><input name="Travel month" placeholder="e.g. December 2026"></div>
+      <div><label>Travellers</label><input name="Travellers" type="number" min="1" inputmode="numeric" placeholder="e.g. 2"></div>
+      <div><label>Departure city</label><input name="Departure city" placeholder="e.g. Islamabad, Lahore, Karachi"></div>
+    </div>
+    <div><label>Message</label><textarea name="Message" placeholder="Room sharing, children, special requests..."></textarea></div>
+    <button class="btn btn-success" type="submit" style="justify-self:start"><i class="fa-brands fa-whatsapp"></i> Send on WhatsApp</button>
+  </form>`;
+}
+const trContact = `<div class="tr-contact"><a class="btn btn-success" href="${wa(TR_WA)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp ${TR_PHONE}</a><a class="btn btn-outline" href="tel:+${TR_WA}"><i class="fa-solid fa-phone"></i> Call ${TR_PHONE}</a></div>`;
+const trSteps = `<ol class="pg-steps">${TRAVEL.BOOKING_STEPS.map(([a, b]) => `<li><span><strong>${esc(a)}</strong>${esc(b)}</span></li>`).join("")}</ol>`;
+const trCheck = list => `<ul class="tr-check">${list.map(x => `<li><i class="fa-solid fa-circle-check"></i> ${esc(x)}</li>`).join("")}</ul>`;
+function buildTravel() {
+  const T = TRAVEL.TOURS, SV = TRAVEL.SERVICES, from = Math.min(...T.map(t => t.price));
+  /* ---- hub ---- */
+  {
+    const url = "tours/";
+    const desc = `MALIK TOURS: group tours and travel packages from Pakistan to Azerbaijan, Uzbekistan, Thailand, Malaysia, Singapore, Sri Lanka and the Maldives from ${rs(from)}, plus visit visas, air tickets and hotel booking. Book on WhatsApp ${TR_PHONE}.`;
+    const body = rel => `
+<div class="pg-wrap">
+  ${crumbHtml(rel, [["Home", "index.html"], ["Travel & Tours", ""]])}
+  <section class="tr-hero">
+    <div class="tr-hero-text">
+      <span class="pg-eyebrow"><i class="fa-solid fa-plane-departure"></i> MALIK TOURS · Travel &amp; Tourism</span>
+      <h1>Group tours &amp; travel packages from Pakistan</h1>
+      <p class="pg-lead">Visa, flights, hotel, breakfast, airport transfers and city tours in one package: Azerbaijan, Uzbekistan, Thailand, Malaysia, Singapore, Sri Lanka and the Maldives. Plus visit visas, air tickets and hotel booking.</p>
+      <div class="tr-hero-btns"><a class="btn btn-gradient" href="#tours"><i class="fa-solid fa-earth-asia"></i> View tour packages</a><a class="btn btn-success" href="${wa(TR_WA)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> ${TR_PHONE}</a></div>
+      <ul class="tr-hero-facts"><li><b>${T.length}</b> tour packages</li><li><b>From ${rs(from)}</b> with visa &amp; flights</li><li><b>${SV.length}</b> travel services</li></ul>
+    </div>
+    <div class="tr-hero-img"><img src="${pxImg(T[T.length - 1].photo, 900)}" alt="${esc(T[T.length - 1].photoAlt)}" width="900" height="600"></div>
+  </section>
+  <section class="pg-section" id="tours">
+    <h2>Tour packages</h2>
+    <div class="tr-filters" role="tablist" aria-label="Filter tours"><button type="button" class="on" data-tr-filter="all">All tours</button>${TRAVEL.CATEGORIES.filter(c => T.some(t => t.category === c.id)).map(c => `<button type="button" data-tr-filter="${c.id}">${esc(c.label)}</button>`).join("")}</div>
+    <div class="tr-grid">${T.map(t => tourCard(rel, t)).join("")}</div>
+  </section>
+  <section class="pg-section tr-two">
+    <div><h2>What a group tour usually includes</h2>${trCheck(TRAVEL.GROUP_INCLUDED)}<p class="pg-muted">Some tours add meals, theme-park tickets or cable cars, as listed on each tour page. Private options are available for families of 8 or more.</p></div>
+    <div><h2>How booking works</h2>${trSteps}</div>
+  </section>
+  <section class="pg-section" id="services">
+    <h2>Travel services</h2>
+    <div class="pg-grid three">${SV.map(sv => serviceCard(rel, sv)).join("")}</div>
+  </section>
+  <section class="pg-section" id="enquire">
+    <h2>Plan your trip</h2>
+    <p>Fill this in and it opens WhatsApp with your request ready to send to MALIK TOURS (${TR_PHONE}).</p>
+    ${travelForm("")}
+  </section>
+  <section class="pg-section"><h2>Frequently asked questions</h2>${faqHtml(TRAVEL.FAQS)}</section>
+  <div class="pg-cta"><h2>Ready to travel?</h2><p>Message MALIK TOURS on WhatsApp for dates, seats and the final price.</p>${trContact}</div>
+</div>
+<script>document.addEventListener("click",function(e){var b=e.target.closest("[data-tr-filter]");if(!b)return;var f=b.getAttribute("data-tr-filter");document.querySelectorAll("[data-tr-filter]").forEach(function(x){x.classList.toggle("on",x===b)});document.querySelectorAll("[data-tr-cat]").forEach(function(c){c.hidden=f!=="all"&&c.getAttribute("data-tr-cat")!==f})});</script>`;
+    const ld = [crumbLd([["Home", ""], ["Travel & Tours", url]]), Object.assign({ "@context": "https://schema.org" }, TR_AGENCY, { description: desc }),
+      { "@context": "https://schema.org", "@type": "ItemList", itemListElement: T.map((t, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/tours/${t.slug}/`, name: t.title })) }, faqLd(TRAVEL.FAQS)].filter(Boolean);
+    write(url, page({ urlPath: url, active: "travel", tours: true, title: "MALIK TOURS: Group Tours & Travel Packages from Pakistan (2026)", desc, keywords: "tour packages from pakistan, group tours 2026, azerbaijan tour package, uzbekistan tour, thailand malaysia singapore tour, maldives package, visit visa consultancy, malik tours", extraCss: ["travel.css"], image: pxImg(T[T.length - 1].photo, 1200), jsonld: ld, body }));
+  }
+  /* ---- tour pages ---- */
+  T.forEach(t => {
+    const url = `tours/${t.slug}/`, msg = `Hello MALIK TOURS! I want to book: ${t.title} (${rs(t.price)}). Please share dates and seat availability.`;
+    const desc = `${t.title} from Pakistan: ${t.included.slice(0, 4).join(", ").toLowerCase()} and more. Package price ${rs(t.price)}. Book with MALIK TOURS on WhatsApp ${TR_PHONE}.`;
+    const others = T.filter(o => o.slug !== t.slug).slice(0, 3);
+    const body = rel => `
+<div class="pg-wrap">
+  ${crumbHtml(rel, [["Home", "index.html"], ["Travel & Tours", "tours/"], [t.short, ""]])}
+  <section class="tr-detail">
+    <div class="tr-detail-img"><img src="${pxImg(t.photo, 1100)}" alt="${esc(t.photoAlt)}" width="1100" height="700"></div>
+    <aside class="tr-box">
+      <span class="pg-eyebrow"><i class="fa-solid fa-plane-departure"></i> ${esc(trCat(t.category))}</span>
+      <h1>${esc(t.title)}</h1>
+      <div class="tr-box-price"><small>Package price</small><b>${rs(t.price)}</b><span>Exact per-person price confirmed on WhatsApp</span></div>
+      <dl class="tr-facts">
+        <dt><i class="fa-regular fa-clock"></i> Duration</dt><dd>${esc(t.duration)}</dd>
+        <dt><i class="fa-regular fa-calendar"></i> Departure</dt><dd>${esc(t.departure)}</dd>
+        <dt><i class="fa-solid fa-users"></i> Group</dt><dd>${esc(t.group)}</dd>
+        <dt><i class="fa-solid fa-earth-asia"></i> Countries</dt><dd>${t.countries.map(esc).join(", ")}</dd>
+        <dt><i class="fa-solid fa-location-dot"></i> Cities</dt><dd>${t.cities.map(esc).join(", ")}</dd>
+      </dl>
+      <a class="btn btn-success tr-book" href="${waLink(msg, TR_WA)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a>
+      <a class="btn btn-outline tr-book" href="tel:+${TR_WA}"><i class="fa-solid fa-phone"></i> Call ${TR_PHONE}</a>
+    </aside>
+  </section>
+  <section class="pg-section"><h2>About this tour</h2><p class="tr-intro">${esc(t.intro)}</p>
+    <div class="tr-stays">${t.stays.map(([c, d]) => `<div><b>${esc(c)}</b><span>${esc(d)}</span></div>`).join("")}</div></section>
+  <section class="pg-section tr-two">
+    <div><h2>What's included</h2>${trCheck(t.included)}</div>
+    <div><h2>Not included</h2><ul class="tr-x">${t.excluded.map(x => `<li><i class="fa-solid fa-circle-xmark"></i> ${esc(x)}</li>`).join("")}</ul></div>
+  </section>
+  <section class="pg-section"><h2>How booking works</h2>${trSteps}</section>
+  <section class="pg-section" id="enquire"><h2>Ask about this tour</h2><p>Send your travel month and number of travellers. MALIK TOURS replies on WhatsApp with dates, seats and the final price.</p>${travelForm(t.slug)}</section>
+  <section class="pg-section"><h2>More tour packages</h2><div class="tr-grid">${others.map(o => tourCard(rel, o)).join("")}</div><p style="margin-top:14px"><a class="pg-card-more" href="${rel}tours/">See all tours and travel services <i class="fa-solid fa-arrow-right"></i></a></p></section>
+  <section class="pg-section"><h2>Questions</h2>${faqHtml(TRAVEL.FAQS)}</section>
+</div>`;
+    const ld = [crumbLd([["Home", ""], ["Travel & Tours", "tours/"], [t.short, url]]),
+      { "@context": "https://schema.org", "@type": "TouristTrip", name: t.title, description: t.intro, image: pxImg(t.photo, 1200), touristType: "Group travellers from Pakistan",
+        itinerary: { "@type": "ItemList", itemListElement: t.stays.map(([c, d], i) => ({ "@type": "ListItem", position: i + 1, item: { "@type": "Place", name: c, description: d } })) },
+        offers: { "@type": "Offer", price: t.price, priceCurrency: "PKR", availability: "https://schema.org/InStock", url: `${SITE}/${url}` }, provider: TR_AGENCY }, faqLd(TRAVEL.FAQS)].filter(Boolean);
+    write(url, page({ urlPath: url, active: "travel", tours: true, title: `${t.title} | ${rs(t.price)} | MALIK TOURS`, desc, keywords: t.keywords, extraCss: ["travel.css"], image: pxImg(t.photo, 1200), ogType: "product", jsonld: ld, body }));
+  });
+  /* ---- service pages ---- */
+  SV.forEach(sv => {
+    const url = `tours/${sv.slug}/`;
+    const desc = `${sv.title} by MALIK TOURS: ${sv.intro.split(". ")[0].replace(/\.$/, "")}. WhatsApp ${TR_PHONE}.`;
+    const body = rel => `
+<div class="pg-wrap">
+  ${crumbHtml(rel, [["Home", "index.html"], ["Travel & Tours", "tours/"], [sv.short, ""]])}
+  <section class="tr-detail">
+    <div class="tr-detail-img"><img src="${pxImg(sv.photo, 1100)}" alt="${esc(sv.photoAlt)}" width="1100" height="700"></div>
+    <aside class="tr-box">
+      <span class="pg-eyebrow"><i class="${sv.icon}"></i> MALIK TOURS service</span>
+      <h1>${esc(sv.title)}</h1>
+      <p>${esc(sv.intro)}</p>
+      <a class="btn btn-success tr-book" href="${waLink(`Hello MALIK TOURS! I need help with: ${sv.title}.`, TR_WA)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp</a>
+      <a class="btn btn-outline tr-book" href="tel:+${TR_WA}"><i class="fa-solid fa-phone"></i> Call ${TR_PHONE}</a>
+    </aside>
+  </section>
+  <section class="pg-section tr-two">${sv.sections.map(([h, list]) => `<div><h2>${esc(h)}</h2>${trCheck(list)}</div>`).join("")}</section>
+  <section class="pg-section"><h2>How it works</h2><ol class="pg-steps">${sv.steps.map(([a, b]) => `<li><span><strong>${esc(a)}</strong>${esc(b)}</span></li>`).join("")}</ol></section>
+  ${sv.notes.length ? `<section class="pg-section"><h2>Good to know</h2>${sv.notes.map(n => `<div class="pg-note">${esc(n)}</div>`).join("")}</section>` : ""}
+  <section class="pg-section" id="enquire"><h2>Get started</h2><p>Send your details and MALIK TOURS replies on WhatsApp the same day.</p>${travelForm(sv.slug)}</section>
+  <section class="pg-section"><h2>Other travel services</h2><div class="pg-grid three">${SV.filter(o => o.slug !== sv.slug).slice(0, 3).map(o => serviceCard(rel, o)).join("")}</div>
+    <p style="margin-top:14px"><a class="pg-card-more" href="${rel}tours/#tours">See our tour packages <i class="fa-solid fa-arrow-right"></i></a></p></section>
+</div>`;
+    const ld = [crumbLd([["Home", ""], ["Travel & Tours", "tours/"], [sv.short, url]]),
+      { "@context": "https://schema.org", "@type": "Service", name: sv.title, description: sv.intro, image: pxImg(sv.photo, 1200), areaServed: "PK", provider: TR_AGENCY }];
+    write(url, page({ urlPath: url, active: "travel", tours: true, title: `${sv.title} | MALIK TOURS`, desc, extraCss: ["travel.css"], image: pxImg(sv.photo, 1200), jsonld: ld, body }));
+  });
+}
+
 /* ---------- run ---------- */
 console.log(`Building pages from ${TOOLS.list.length} catalog items and ${FAMILIES.length} tool families...`);
 const covered = new Set(FAMILIES.flatMap(f => f.ids.concat(f.aliases || [])));
@@ -1164,6 +1346,7 @@ buildComparisons();
 buildPolicies();
 buildServices();
 buildPostlyPages();
+buildTravel();
 buildBlog();
 buildToolLinks();
 updateHomepage();

@@ -5,14 +5,15 @@
 Website: https://www.malikdatacentre.store/
 WhatsApp: +92 344 5739206, +92 348 9057646
 Email: support@malikdatacentre.store
-Prices last changed: 2026-10-25
+Prices last changed: 2026-11-02
 
 ## Tools and starting prices (PKR, approx. USD in brackets)
 
 - [ChatGPT Go](https://www.malikdatacentre.store/tools/chatgpt-go/): from Rs 2,200 ($7.92) — 6 Months Plan Rs 2,200 / $7.92 (Shared Premium Account)
 - [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 700 ($2.52) — 18 Months Subscription Rs 700 / $2.52 (Full Private Code); 18 Months Plan Rs 2,200 / $7.92 (Activated on Client Email)
-- [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 8,500 / $30.60 (Private Family Invitation); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
-- [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 1,500 ($5.40) — 10 Days Plan Rs 1,500 / $5.40 (Activated on Client Email); 6 Months Account Rs 6,300 / $22.68 (Activated on Client Email); 12 Months Account Rs 9,500 / $34.20 (Activated on Client Email)
+- [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 29,999 / $108 (Delivered on WhatsApp); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
+- [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 4,500 ($16.20) — 1 Month Plan Rs 4,500 / $16.20 (Activated on Client Email); Monthly Plan Rs 4,999 / $18 (Activated on Client Email); 1 Month Plan Rs 19,999 / $72 (Activated on Client Email)
+- [vidIQ Max](https://www.malikdatacentre.store/tools/vidiq-max/): from Rs 1,500 ($5.40) — 1 Month Plan Rs 1,500 / $5.40 (Delivered on WhatsApp)
 - [CapCut Pro](https://www.malikdatacentre.store/tools/capcut-pro/): from Rs 800 ($2.88) — 1 Month Rs 800 / $2.88 (2 Devices Login); 3 Months Rs 2,800 / $10.08 (2 Devices Login); 6 Months Rs 4,800 / $17.28 (2 Devices Login); Monthly Access Rs 1,250 / $4.50 (Private Activation)
 - [Canva Pro](https://www.malikdatacentre.store/tools/canva-pro/): from Rs 400 ($1.44) — 12 Months Plan Rs 400 / $1.44 (Activated on Client Email); 12 Months Plan Rs 4,500 / $16.20 (Admin Panel Access)
 - [Adobe Creative Cloud](https://www.malikdatacentre.store/tools/adobe-creative-cloud/): from Rs 3,900 ($14.04) — 3 Months Plan Rs 4,000 / $14.40 (Creative Cloud Suite); 4 Months Plan Rs 3,900 / $14.04 (Activated on Client Email); 6 Months Plan Rs 7,000 / $25.20 (Creative Cloud Suite); 12 Months Plan Rs 12,000 / $43.20 (Creative Cloud Suite)
@@ -48,6 +49,11 @@ Prices last changed: 2026-10-25
 
 ## Latest guides
 
+- [ChatGPT Go Price in Pakistan: What You Get and Who Should Buy It](https://www.malikdatacentre.store/blog/chatgpt-go-price-in-pakistan.html): ChatGPT Go price in Pakistan explained: our Rs 2,200 six-month plan, what Go includes over Free, the shared access trade-off and who should buy it.
+- [Private vs Shared vs Invitation AI Accounts Explained (Pakistan)](https://www.malikdatacentre.store/blog/private-vs-shared-vs-invitation-ai-accounts-pakistan.html): Private vs shared vs invitation AI accounts explained for buyers in Pakistan: who can see your data, what can go wrong, PKR prices and how to choose safely.
+- [Best AI Tools for Pakistani Freelancers on Fiverr and Upwork](https://www.malikdatacentre.store/blog/best-ai-tools-for-freelancers-pakistan-fiverr-upwork.html): The best AI tools for freelancers in Pakistan on Fiverr and Upwork: what ChatGPT Go, Canva Pro and Grammarly Pro do for your gigs, with PKR prices.
+- [ChatGPT Go vs Gemini Pro for Students in Pakistan (2026)](https://www.malikdatacentre.store/blog/chatgpt-go-vs-gemini-pro-for-students-pakistan.html): ChatGPT Go vs Gemini Pro for students in Pakistan: PKR prices, access types, study features and which plan fits assignments, research and exam prep.
+- [How to Activate Canva Pro on Your Own Email (2026 Guide)](https://www.malikdatacentre.store/blog/how-to-activate-canva-pro-on-your-own-email.html): Step-by-step guide to getting Canva Pro activated on your own email, accepting the Canva invitation, switching teams and fixing common problems.
 - [How to Buy ChatGPT and AI Tools Without a Credit Card (2026)](https://www.malikdatacentre.store/blog/buy-ai-tools-without-credit-card-worldwide.html): A worldwide guide to paying for ChatGPT, Gemini, Canva, CapCut and other AI tools without a credit card, using USDT or local payment, and what to check first.
 - [How to Buy AI Tools in Pakistan Without a Credit Card (2026)](https://www.malikdatacentre.store/blog/buy-ai-tools-pakistan-without-credit-card.html): Pay for ChatGPT, Gemini, Canva, CapCut and other AI tools in Pakistan with EasyPaisa, JazzCash or bank transfer, and know what to check before you pay.
 - [ChatGPT vs Super Grok vs Gemini: Which AI Subscription Should You Buy in 2026?](https://www.malikdatacentre.store/blog/chatgpt-vs-super-grok-pakistan-guide.html): A side-by-side comparison of price, features, and warranty to help you pick the right AI chatbot subscription for your budget and use case.
@@ -81,11 +87,33 @@ Prices last changed: 2026-10-25
 - [Business Card Maker](https://www.malikdatacentre.store/business-card-maker/): Design professional visiting cards with your logo, contact details and a QR code. Download print-ready files or order printing.
 - [AI Image Generator](https://www.malikdatacentre.store/ai-image-generator/): Describe what you want and AI creates the image. Use it as a background, a product scene or an illustration, then add text and download. Free daily credits, no signup.
 
+## Travel & tours (MALIK TOURS)
+
+MALIK TOURS is the travel and tourism desk of MALIK DATA CENTRE. Bookings on WhatsApp +92 348 9057646 (https://wa.me/923489057646).
+
+- [Azerbaijan Group Tour: Baku, 4 Nights / 5 Days](https://www.malikdatacentre.store/tours/azerbaijan-baku-group-tour/): Rs 250,000 — 4 Nights / 5 Days; includes Azerbaijan visa, Return air tickets, 4 nights hotel accommodation, Daily breakfast, Baku city tour, Airport transfers (arrival and departure)
+- [4 Days Luxury Uzbekistan Tour with Visa & Flights](https://www.malikdatacentre.store/tours/uzbekistan-luxury-tour-4-days/): Rs 170,000 — 3 Nights / 4 Days; includes Uzbekistan visa processing, Return air ticket from Pakistan, Hotel accommodation for the full stay, Daily breakfast, Guided city tour of Tashkent, Airport pick and drop
+- [Uzbekistan Group Tour: Tashkent, Samarkand & Bukhara](https://www.malikdatacentre.store/tours/uzbekistan-tashkent-samarkand-bukhara/): Rs 200,000 — Ask for dates; includes Visa, Return ticket, 4-star hotel with breakfast, Airport transfers, City tour of Tashkent
+- [Sri Lanka & Thailand Combo Group Tour](https://www.malikdatacentre.store/tours/sri-lanka-thailand-combo-tour/): Rs 410,000 — Thailand 3 Nights / 4 Days; includes Visas, Round-trip tickets, 4-star hotels, Breakfast, Airport transfers, City tour in Thailand
+- [Sri Lanka, Thailand & Malaysia Grand Asia Group Tour](https://www.malikdatacentre.store/tours/sri-lanka-thailand-malaysia-tour/): Rs 510,000 — Thailand 4–5 Days + Malaysia 4 Days; includes Visas, Round-trip tickets, 4-star hotel with breakfast, Airport transfers, City tour in Thailand & Malaysia
+- [Sri Lanka, Thailand, Malaysia & Singapore Grand Group Tour](https://www.malikdatacentre.store/tours/grand-asia-4-countries-tour/): Rs 650,000 — Thailand 4–5 + Malaysia 4 + Singapore 3 Days; includes Visas, Round-trip ticket, 4-star hotel with breakfast, Airport transfers, City tours in Thailand, Malaysia & Singapore
+- [Sri Lanka, Thailand, Malaysia, Singapore & Maldives Grand Luxury Group Tour](https://www.malikdatacentre.store/tours/grand-asia-luxury-5-countries-tour/): Rs 750,000 — Thailand 4–5 + Malaysia 4 + Singapore 3 + Maldives 3 Days; includes Visas, Round-trip tickets, 4-star hotels with breakfast, Airport transfers, City tours in Thailand, Malaysia & Singapore
+- [Visit Visa Consultancy (All Countries)](https://www.malikdatacentre.store/tours/visit-visa-consultancy/)
+- [International & Domestic Air Tickets](https://www.malikdatacentre.store/tours/air-tickets/)
+- [International Hotel Booking](https://www.malikdatacentre.store/tours/hotel-booking/)
+- [USA Visa Interview Preparation (B1/B2 Coaching)](https://www.malikdatacentre.store/tours/usa-visa-interview-preparation/)
+- [Azerbaijan TRC & Investment Services](https://www.malikdatacentre.store/tours/azerbaijan-trc-investment/)
+- [Business Registration in Pakistan (Company Formation)](https://www.malikdatacentre.store/tours/business-registration-pakistan/)
+
 ## Services
 
 - [Social Media Services](https://www.malikdatacentre.store/social-media-services/)
 - [AI Automation Services](https://www.malikdatacentre.store/ai-automation-services/)
 - [Enterprise AI API Credits](https://www.malikdatacentre.store/enterprise-ai-api-credits/)
+
+## How to buy
+
+To buy any tool above, open its page on https://www.malikdatacentre.store/ or message MALIK DATA CENTRE on WhatsApp at +923445739206 (https://wa.me/923445739206). International buyers can pay with USDT (Binance); buyers in Pakistan can use EasyPaisa, JazzCash or bank transfer. Activation is delivered over WhatsApp.
 
 ## Policies
 

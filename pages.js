@@ -85,7 +85,7 @@
                     if (el.name && el.value.trim()) lines.push(el.name + ": " + el.value.trim());
                 });
                 lines.push("", "Source: " + location.href);
-                window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+                window.open("https://wa.me/" + (form.getAttribute("data-wa") || WA) + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
             });
         });
     });

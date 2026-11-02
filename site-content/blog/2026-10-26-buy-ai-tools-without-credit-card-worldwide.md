@@ -58,7 +58,7 @@ Our store prices are set in Pakistani rupees, and the website converts them to y
 | [Gemini Pro (Google AI Pro)](/tools/gemini-pro/) | 18 months, private | Rs 700 | about $2.50 |
 | [Canva Pro](/tools/canva-pro/) | 12 months, on your email | Rs 400 | about $1.45 |
 | [CapCut Pro](/tools/capcut-pro/) | 1 month, 2 devices | Rs 800 | about $2.90 |
-| [SuperGrok + X Premium+](/tools/super-grok/) | 10 days, on your email | Rs 1,500 | about $5.40 |
+| [SuperGrok + X Premium+](/tools/super-grok/) | 1 month, on your email | Rs 4,500 | about $16 |
 
 The USD figure moves a little with exchange rates. The exact amount is confirmed on WhatsApp before you pay. See [all tools and prices](/tools/) for the full list.
 

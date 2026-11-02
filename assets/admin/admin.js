@@ -216,7 +216,7 @@
      ENQUIRIES (LEADS)
      ====================================================================== */
   var LEADS = [], LTYPES = {}, LF = { status: "all", type: "", q: "", from: "", to: "", due: false };
-  var TYPE_ICON = { contact: "fa-solid fa-envelope", "tool-request": "fa-solid fa-magnifying-glass-plus", service: "fa-solid fa-briefcase", "api-credits": "fa-solid fa-plug", order: "fa-solid fa-bag-shopping", other: "fa-solid fa-message" };
+  var TYPE_ICON = { contact: "fa-solid fa-envelope", "tool-request": "fa-solid fa-magnifying-glass-plus", service: "fa-solid fa-briefcase", "api-credits": "fa-solid fa-plug", travel: "fa-solid fa-plane", order: "fa-solid fa-bag-shopping", other: "fa-solid fa-message" };
   function leadMatch(l) {
     if (LF.status !== "all" && l.status !== LF.status) return false;
     if (LF.type && l.type !== LF.type) return false;

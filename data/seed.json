@@ -541,17 +541,17 @@
     "image": ""
    },
    {
-    "id": "google-ai-ultra-family-1m",
-    "name": "Google AI Ultra Private Family Invitation",
+    "id": "google-veo3-ultra-20x",
+    "name": "Google Veo 3 Ultra (Flow Ultra 20x Plan)",
     "category": "ai-chat",
     "duration": "1 Month Plan",
-    "price": 8500,
-    "originalPrice": 18000,
-    "setup": "Private Family Invitation",
-    "desc": "Google AI Ultra Family Invitation 🚀 — 25K AI Credits, Veo 3, Google Antigravity, Flow, Gemini Ultra & Premium AI Features with high usage limits.",
-    "specs": "25K AI Credits Included\nVeo 3 & Google Antigravity\nFlow & Gemini Ultra Access\n25 Days Full Warranty",
+    "price": 29999,
+    "originalPrice": 29999,
+    "setup": "Delivered on WhatsApp",
+    "desc": "Google's Flow Ultra 20x plan 🚀 — Veo 3 video generation with 20x Flow usage, Google Antigravity, Gemini Ultra and all Google AI Ultra features.",
+    "specs": "Flow Ultra 20x Usage\nVeo 3 Video Generation\nGoogle Antigravity Included\nGemini Ultra & All Ultra Features",
     "stock": "in",
-    "ribbon": "bestseller",
+    "ribbon": "",
     "badge": "",
     "image": ""
    },
@@ -631,45 +631,60 @@
     "image": ""
    },
    {
-    "id": "grok-10d",
-    "name": "Super Grok + X Premium+",
-    "category": "ai-chat",
-    "duration": "10 Days Plan",
+    "id": "vidiq-max",
+    "name": "vidIQ Max",
+    "category": "video-audio",
+    "duration": "1 Month Plan",
     "price": 1500,
-    "originalPrice": 4000,
-    "setup": "Activated on Client Email",
-    "desc": "Get X (formerly Twitter) Premium+ access with a Blue Verification Tick and access to Grok AI chatbot with real-time X search data.",
-    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\n7 Days Full Warranty\nFull Ad-Free X Experience",
-    "stock": "in",
-    "ribbon": "bestseller",
-    "badge": "",
-    "image": ""
-   },
-   {
-    "id": "grok-6m",
-    "name": "Super Grok + X Premium+",
-    "category": "ai-chat",
-    "duration": "6 Months Account",
-    "price": 6300,
-    "originalPrice": 15000,
-    "setup": "Activated on Client Email",
-    "desc": "Double the duration. Includes X Premium+ features, Blue Tick verification, and access to Grok AI with no ads.",
-    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\nFull Ad-Free X Experience\n6 Months Full Warranty",
+    "originalPrice": 1500,
+    "setup": "Delivered on WhatsApp",
+    "desc": "vidIQ's top plan for YouTube creators: keyword research, AI video ideas, title and tag tools, competitor tracking and channel analytics.",
+    "specs": "vidIQ Max Plan Features\nKeyword Research & SEO Scores\nDaily AI Video Ideas\nCompetitor & Trend Tracking",
     "stock": "in",
     "ribbon": "",
     "badge": "",
     "image": ""
    },
    {
-    "id": "grok-12m",
-    "name": "Super Grok + X Premium+",
+    "id": "grok-1m",
+    "name": "Grok Premium",
     "category": "ai-chat",
-    "duration": "12 Months Account",
-    "price": 9500,
-    "originalPrice": 28000,
+    "duration": "1 Month Plan",
+    "price": 4500,
+    "originalPrice": 4500,
     "setup": "Activated on Client Email",
-    "desc": "Best yearly deal. Get X Premium+ features, blue verified badge, and Grok AI access activated directly on your email.",
-    "specs": "Official Blue Tick Badge\nGrok AI Assistant Access\nFull Ad-Free X Experience\n1 Year Warranty Protection",
+    "desc": "One month of Grok Premium on X: the Grok AI assistant with real-time X search, the blue verification badge and an ad-free X experience.",
+    "specs": "Grok AI Assistant Access\nOfficial Blue Tick Badge\nFull Ad-Free X Experience\n25 Days Full Warranty",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grok-bot-premium-1m",
+    "name": "Grok Bot + Grok Premium",
+    "category": "ai-chat",
+    "duration": "Monthly Plan",
+    "price": 4999,
+    "originalPrice": 4999,
+    "setup": "Activated on Client Email",
+    "desc": "Grok AI bot plus Grok Premium for one month: chat with Grok, use real-time X search and get the premium features on your own account.",
+    "specs": "Grok AI Bot Access\nGrok Premium Features\nReal-Time X Search in Grok\nSetup Help on WhatsApp",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
+    "id": "grok-heavy-1m",
+    "name": "Grok Heavy",
+    "category": "ai-chat",
+    "duration": "1 Month Plan",
+    "price": 19999,
+    "originalPrice": 19999,
+    "setup": "Activated on Client Email",
+    "desc": "Grok Heavy, xAI's most powerful Grok plan, for heavy research, coding and analysis with the highest Grok usage limits.",
+    "specs": "Grok Heavy Model Access\nHighest Grok Usage Limits\nReal-Time X Search in Grok\nSetup Help on WhatsApp",
     "stock": "in",
     "ribbon": "",
     "badge": "",
@@ -1566,6 +1581,12 @@
     "image": ""
    },
    {
+    "path": "/blog/best-ai-tools-for-freelancers-pakistan-fiverr-upwork.html",
+    "title": "Best AI Tools for Pakistani Freelancers on Fiverr and Upwork | MALIK DATA CENTRE",
+    "description": "The best AI tools for freelancers in Pakistan on Fiverr and Upwork: what ChatGPT Go, Canva Pro and Grammarly Pro do for your gigs, with PKR prices.",
+    "image": ""
+   },
+   {
     "path": "/blog/buy-ai-tools-pakistan-without-credit-card.html",
     "title": "How to Buy AI Tools in Pakistan Without a Credit Card (2026) | MALIK DATA CENTRE",
     "description": "Pay for ChatGPT, Gemini, Canva, CapCut and other AI tools in Pakistan with EasyPaisa, JazzCash or bank transfer, and know what to check before you pay.",
@@ -1590,15 +1611,39 @@
     "image": ""
    },
    {
+    "path": "/blog/chatgpt-go-price-in-pakistan.html",
+    "title": "ChatGPT Go Price in Pakistan: What You Get and Who Should Buy It | MALIK DATA CENTRE",
+    "description": "ChatGPT Go price in Pakistan explained: our Rs 2,200 six-month plan, what Go includes over Free, the shared access trade-off and who should buy it.",
+    "image": ""
+   },
+   {
+    "path": "/blog/chatgpt-go-vs-gemini-pro-for-students-pakistan.html",
+    "title": "ChatGPT Go vs Gemini Pro for Students in Pakistan (2026) | MALIK DATA CENTRE",
+    "description": "ChatGPT Go vs Gemini Pro for students in Pakistan: PKR prices, access types, study features and which plan fits assignments, research and exam prep.",
+    "image": ""
+   },
+   {
     "path": "/blog/chatgpt-vs-super-grok-pakistan-guide.html",
     "title": "ChatGPT vs Super Grok vs Gemini: Best AI Subscription to Buy (2026)",
     "description": "Compare ChatGPT Go, Super Grok + X Premium+, and Gemini Advanced on price, features and warranty to find the best AI chatbot subscription for your budget, wherever you are.",
     "image": ""
    },
    {
+    "path": "/blog/how-to-activate-canva-pro-on-your-own-email.html",
+    "title": "How to Activate Canva Pro on Your Own Email (2026 Guide) | MALIK DATA CENTRE",
+    "description": "Step-by-step guide to getting Canva Pro activated on your own email, accepting the Canva invitation, switching teams and fixing common problems.",
+    "image": ""
+   },
+   {
     "path": "/blog/is-it-safe-to-buy-cheap-ai-subscriptions-pakistan.html",
     "title": "Is It Safe to Buy Cheap AI Tool Subscriptions? (2026 Guide)",
     "description": "How shared and private AI subscriptions actually work, what makes a reseller trustworthy, and the red flags to avoid before you pay for a cheap ChatGPT, Canva, or Adobe subscription.",
+    "image": ""
+   },
+   {
+    "path": "/blog/private-vs-shared-vs-invitation-ai-accounts-pakistan.html",
+    "title": "Private vs Shared vs Invitation AI Accounts Explained (Pakistan) | MALIK DATA CENTRE",
+    "description": "Private vs shared vs invitation AI accounts explained for buyers in Pakistan: who can see your data, what can go wrong, PKR prices and how to choose safely.",
     "image": ""
    },
    {
@@ -1730,7 +1775,7 @@
    {
     "path": "/tools/",
     "title": "Buy AI Tools & Subscriptions Online, Worldwide | MALIK DATA CENTRE",
-    "description": "Compare 36 AI tools and software subscriptions from $1.44: ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva, Adobe, CapCut, Cursor and more. Worldwide delivery, USDT payment and WhatsApp activation.",
+    "description": "Compare 37 AI tools and software subscriptions from $1.44: ChatGPT, Gemini, Google AI Ultra, SuperGrok, Canva, Adobe, CapCut, Cursor and more. Worldwide delivery, USDT payment and WhatsApp activation.",
     "image": ""
    },
    {
@@ -1903,14 +1948,20 @@
    },
    {
     "path": "/tools/super-grok/",
-    "title": "Buy SuperGrok + X Premium+ Online (2026) | From $5.40 | MALIK DATA CENTRE",
-    "description": "Buy SuperGrok + X Premium+ online from $5.40 (Rs 1,500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "title": "Buy SuperGrok + X Premium+ Online (2026) | From $16.20 | MALIK DATA CENTRE",
+    "description": "Buy SuperGrok + X Premium+ online from $16.20 (Rs 4,500). 3 plans, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
     "image": ""
    },
    {
     "path": "/tools/surfshark-vpn/",
     "title": "Buy Surfshark VPN Online (2026) | From $1.44 | MALIK DATA CENTRE",
     "description": "Buy Surfshark VPN online from $1.44 (Rs 400). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tools/vidiq-max/",
+    "title": "Buy vidIQ Max Online (2026) | From $5.40 | MALIK DATA CENTRE",
+    "description": "Buy vidIQ Max online from $5.40 (Rs 1,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
     "image": ""
    },
    {
@@ -1947,6 +1998,90 @@
     "path": "/tools/zoom-pro/",
     "title": "Buy Zoom Pro Online (2026) | From $5.40 | MALIK DATA CENTRE",
     "description": "Buy Zoom Pro online from $5.40 (Rs 1,500). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "image": ""
+   },
+   {
+    "path": "/tours/",
+    "title": "MALIK TOURS: Group Tours & Travel Packages from Pakistan (2026)",
+    "description": "MALIK TOURS: group tours and travel packages from Pakistan to Azerbaijan, Uzbekistan, Thailand, Malaysia, Singapore, Sri Lanka and the Maldives from Rs 170,000, plus visit visas, air tickets and hotel booking. Book on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/air-tickets/",
+    "title": "International & Domestic Air Tickets | MALIK TOURS",
+    "description": "International & Domestic Air Tickets by MALIK TOURS: Cheap international and domestic air tickets from Pakistan: one-way, return and multi-city, group blocks and Umrah-season seats, with fare comparison and after-sales help. WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/azerbaijan-baku-group-tour/",
+    "title": "Azerbaijan Group Tour: Baku, 4 Nights / 5 Days | Rs 250,000 | MALIK TOURS",
+    "description": "Azerbaijan Group Tour: Baku, 4 Nights / 5 Days from Pakistan: azerbaijan visa, return air tickets, 4 nights hotel accommodation, daily breakfast and more. Package price Rs 250,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/azerbaijan-trc-investment/",
+    "title": "Azerbaijan TRC & Investment Services | MALIK TOURS",
+    "description": "Azerbaijan TRC & Investment Services by MALIK TOURS: Help for Pakistani clients planning a Temporary Residence Card (TRC), property purchase or business in Azerbaijan: the right visa, travel, hotel near your meetings and introductions to licensed local lawyers and property consultants. WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/business-registration-pakistan/",
+    "title": "Business Registration in Pakistan (Company Formation) | MALIK TOURS",
+    "description": "Business Registration in Pakistan (Company Formation) by MALIK TOURS: Company formation made simple: sole proprietorship, partnership or private limited company registration in Pakistan, with trade-name reservation, filing support and NTN / tax registration guidance. WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/grand-asia-4-countries-tour/",
+    "title": "Sri Lanka, Thailand, Malaysia & Singapore Grand Group Tour | Rs 650,000 | MALIK TOURS",
+    "description": "Sri Lanka, Thailand, Malaysia & Singapore Grand Group Tour from Pakistan: visas, round-trip ticket, 4-star hotel with breakfast, airport transfers and more. Package price Rs 650,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/grand-asia-luxury-5-countries-tour/",
+    "title": "Sri Lanka, Thailand, Malaysia, Singapore & Maldives Grand Luxury Group Tour | Rs 750,000 | MALIK TOURS",
+    "description": "Sri Lanka, Thailand, Malaysia, Singapore & Maldives Grand Luxury Group Tour from Pakistan: visas, round-trip tickets, 4-star hotels with breakfast, airport transfers and more. Package price Rs 750,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/hotel-booking/",
+    "title": "International Hotel Booking | MALIK TOURS",
+    "description": "International Hotel Booking by MALIK TOURS: Hotel bookings from Pakistan for Azerbaijan, Turkey, Malaysia & Singapore, Thailand, Saudi Arabia (Makkah and Madinah), UAE, UK, Europe, Maldives, Sri Lanka and more, with confirmed vouchers. WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/sri-lanka-thailand-combo-tour/",
+    "title": "Sri Lanka & Thailand Combo Group Tour | Rs 410,000 | MALIK TOURS",
+    "description": "Sri Lanka & Thailand Combo Group Tour from Pakistan: visas, round-trip tickets, 4-star hotels, breakfast and more. Package price Rs 410,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/sri-lanka-thailand-malaysia-tour/",
+    "title": "Sri Lanka, Thailand & Malaysia Grand Asia Group Tour | Rs 510,000 | MALIK TOURS",
+    "description": "Sri Lanka, Thailand & Malaysia Grand Asia Group Tour from Pakistan: visas, round-trip tickets, 4-star hotel with breakfast, airport transfers and more. Package price Rs 510,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/usa-visa-interview-preparation/",
+    "title": "USA Visa Interview Preparation (B1/B2 Coaching) | MALIK TOURS",
+    "description": "USA Visa Interview Preparation (B1/B2 Coaching) by MALIK TOURS: One-to-one coaching for your US B1/B2 visa interview in Pakistan: a file review, a consulate-style mock interview and a question bank built for your profile. WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/uzbekistan-luxury-tour-4-days/",
+    "title": "4 Days Luxury Uzbekistan Tour with Visa & Flights | Rs 170,000 | MALIK TOURS",
+    "description": "4 Days Luxury Uzbekistan Tour with Visa & Flights from Pakistan: uzbekistan visa processing, return air ticket from pakistan, hotel accommodation for the full stay, daily breakfast and more. Package price Rs 170,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/uzbekistan-tashkent-samarkand-bukhara/",
+    "title": "Uzbekistan Group Tour: Tashkent, Samarkand & Bukhara | Rs 200,000 | MALIK TOURS",
+    "description": "Uzbekistan Group Tour: Tashkent, Samarkand & Bukhara from Pakistan: visa, return ticket, 4-star hotel with breakfast, airport transfers and more. Package price Rs 200,000. Book with MALIK TOURS on WhatsApp +92 348 9057646.",
+    "image": ""
+   },
+   {
+    "path": "/tours/visit-visa-consultancy/",
+    "title": "Visit Visa Consultancy (All Countries) | MALIK TOURS",
+    "description": "Visit Visa Consultancy (All Countries) by MALIK TOURS: We prepare visit visa files from Pakistan for the UK, USA, Canada, Australia, Schengen countries, Japan, the Gulf and popular tourist destinations: from profile assessment and a country-specific checklist to the application form, appointment and a pre-interview briefing. WhatsApp +92 348 9057646.",
     "image": ""
    },
    {
@@ -2159,7 +2294,7 @@
    {
     "path": "/tools/google-ai-ultra/",
     "heading": "Buy Google AI Ultra online",
-    "intro": "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to a private family invitation with credits on your own account."
+    "intro": "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to the Flow Ultra 20x plan for heavy Veo 3 video work."
    },
    {
     "path": "/tools/grammarly-pro/",
@@ -2239,12 +2374,17 @@
    {
     "path": "/tools/super-grok/",
     "heading": "Buy SuperGrok + X Premium+ online",
-    "intro": "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Choose a short 10-day plan to try it or a 6 to 12 month plan for the best monthly rate."
+    "intro": "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Pick Grok Premium or Grok Bot + Grok Premium for everyday use, or Grok Heavy for xAI's most powerful model and the highest limits."
    },
    {
     "path": "/tools/surfshark-vpn/",
     "heading": "Buy Surfshark VPN online",
     "intro": "Surfshark is a budget VPN that works on unlimited devices. Our monthly plan is the cheapest way to get a premium VPN."
+   },
+   {
+    "path": "/tools/vidiq-max/",
+    "heading": "Buy vidIQ Max online",
+    "intro": "vidIQ is a YouTube growth tool used by creators to find video ideas, research keywords and optimise titles, descriptions and tags. Max is vidIQ's top plan, with its full set of research and AI tools."
    },
    {
     "path": "/tools/warp-build/",
@@ -2296,5 +2436,5 @@
  "blog": {
   "posts": []
  },
- "_generated": "2026-10-27T14:20:29.535Z"
+ "_generated": "2026-11-02T10:45:03.697Z"
 }

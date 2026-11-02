@@ -125,5 +125,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/travel",
+      "destination": "/tours/",
+      "permanent": true
+    },
+    {
+      "source": "/travel/:path*",
+      "destination": "/tours/:path*",
+      "permanent": true
+    }
   ]
 }

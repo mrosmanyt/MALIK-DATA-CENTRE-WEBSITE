@@ -36,27 +36,39 @@ module.exports = [
   },
   {
     slug: "google-ai-ultra", name: "Google AI Ultra", cat: "ai-chat", icon: "fa-brands fa-google",
-    ids: ["google-ai-ultra-shared-1m", "google-ai-ultra-family-1m", "google-ai-ultra-25k-slot"], official: "https://one.google.com/about/google-ai-plans/",
-    intro: "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to a private family invitation with credits on your own account.",
+    ids: ["google-ai-ultra-shared-1m", "google-veo3-ultra-20x", "google-ai-ultra-25k-slot"], official: "https://one.google.com/about/google-ai-plans/",
+    intro: "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to the Flow Ultra 20x plan for heavy Veo 3 video work.",
     bestFor: ["Video creators who need Veo and Flow for ads, reels and shorts", "Agencies producing AI video at volume", "Power users who need the highest Gemini limits"],
     included: ["Gemini Ultra and the highest Gemini usage limits", "Veo video generation inside Gemini and Flow", "Google Antigravity and other Ultra features", "AI credits (amount depends on the plan you pick)", "Full warranty for the stated plan period"],
     faqs: [
-      ["What is the difference between Shared Base, Family Invitation and the 25k Slot?", "Shared Base is the cheapest way to try Ultra features on a shared account. Family Invitation is sent to your own Gmail with 25K credits. The 25k Credits Slot is a dedicated slot for very heavy usage."],
-      ["How does the invitation work?", "We send an official Google family invitation to your email. Once you accept it, Ultra features and credits appear on your own account."]
+      ["What is the difference between Shared Base, Flow Ultra 20x and the 25k Slot?", "Shared Base is the cheapest way to try Ultra features on a shared account. The Flow Ultra 20x plan gives Veo 3 with 20x Flow usage, Google Antigravity and all Ultra features. The 25k Credits Slot is a dedicated slot for very heavy usage."],
+      ["How is the Flow Ultra 20x plan delivered?", "Message us on WhatsApp after ordering. We send the access details and setup steps, and help you until Veo 3 and Flow are working."]
     ],
     related: ["gemini-pro", "higgsfield", "kling-ai"]
   },
   {
     slug: "super-grok", name: "SuperGrok + X Premium+", cat: "ai-chat", icon: "fa-brands fa-x-twitter",
-    ids: ["grok-10d", "grok-6m", "grok-12m"], official: "https://x.ai/grok",
-    intro: "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Choose a short 10-day plan to try it or a 6 to 12 month plan for the best monthly rate.",
+    ids: ["grok-1m", "grok-bot-premium-1m", "grok-heavy-1m"], official: "https://x.ai/grok",
+    intro: "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Pick Grok Premium or Grok Bot + Grok Premium for everyday use, or Grok Heavy for xAI's most powerful model and the highest limits.",
     bestFor: ["Creators and brands growing on X", "Anyone who wants Grok with live X search", "Users who want the blue badge and ad-free timeline"],
-    included: ["SuperGrok assistant access", "Blue verification badge on X", "Ad-free X experience", "Activated on your own X account", "Warranty for the stated plan period"],
+    included: ["Grok AI assistant with real-time X search", "Blue verification badge and ad-free X on the Grok Premium plans", "Grok Heavy: xAI's most powerful model and the highest limits", "Activated on your own account", "Warranty for the stated plan period"],
     faqs: [
       ["When does the blue badge appear?", "The badge depends on X's own review after Premium+ is active, which usually completes within a short time. We will guide you on WhatsApp if your profile needs changes first."],
       ["Do I need to share my X password?", "Activation is done on your account. We never need your email password. Follow the setup steps we send on WhatsApp."]
     ],
     related: ["chatgpt-go", "gemini-pro", "linkedin-premium"]
+  },
+  {
+    slug: "vidiq-max", name: "vidIQ Max", cat: "video-audio", icon: "fa-solid fa-chart-line",
+    ids: ["vidiq-max"], official: "https://vidiq.com/",
+    intro: "vidIQ is a YouTube growth tool used by creators to find video ideas, research keywords and optimise titles, descriptions and tags. Max is vidIQ's top plan, with its full set of research and AI tools.",
+    bestFor: ["YouTubers who want more views from search and suggested videos", "New channels looking for video ideas that can rank", "Agencies managing several YouTube channels"],
+    included: ["vidIQ Max plan features", "Keyword research with search volume and competition scores", "AI video ideas, titles and descriptions", "Competitor and trending video tracking", "Setup help on WhatsApp"],
+    faqs: [
+      ["Does vidIQ work with my own YouTube channel?", "Yes. vidIQ connects to your YouTube channel to show channel analytics and suggestions. We guide you through the setup on WhatsApp."],
+      ["Is vidIQ allowed by YouTube?", "Yes. vidIQ is a YouTube-certified tool and works through YouTube's official access."]
+    ],
+    related: ["youtube-premium", "capcut-pro", "canva-pro"]
   },
   {
     slug: "capcut-pro", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
