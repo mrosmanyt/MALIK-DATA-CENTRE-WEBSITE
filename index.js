@@ -132,15 +132,15 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #10a37f"><path d="M21.74 11.23a4.91 4.91 0 0 0-.42-1.92 4.92 4.92 0 0 0-2.85-2.85 4.88 4.88 0 0 0-3-.12 4.93 4.93 0 0 0-3.66-3.66 4.9 4.9 0 0 0-3.84 1 4.9 4.9 0 0 0-2.85 2.85 4.93 4.93 0 0 0-.12 3 4.93 4.93 0 0 0-3.66 3.66 4.9 4.9 0 0 0 1 3.84 4.9 4.9 0 0 0 2.85 2.85 4.93 4.93 0 0 0 3 .12 4.93 4.93 0 0 0 3.66 3.66 4.9 4.9 0 0 0 3.84-1 4.9 4.9 0 0 0 2.85-2.85 4.93 4.93 0 0 0 .12-3 4.93 4.93 0 0 0 3.66-3.66 4.89 4.89 0 0 0-.61-1.92zm-9.74 8.64a3 3 0 0 1-1.46-.38l.08-.05 3.93-2.27a.58.58 0 0 0 .29-.5v-5.54l1.64.95a.08.08 0 0 1 .04.06v4.67a3.06 3.06 0 0 1-4.52 2.66zm-5.83-3.37a3 3 0 0 1-.38-1.46v-4.55l.08.05 3.93 2.27a.58.58 0 0 0 .58 0l4.8-2.77v1.9a.08.08 0 0 1-.04.07l-4.05 2.34a3.06 3.06 0 0 1-4.92-1.35zm-1.85-6.72a3 3 0 0 1 1.08-1l.08.05 3.93 2.27a.58.58 0 0 0 .58-.33v-5.54l-1.64.95a.08.08 0 0 1-.04.07V11a3.06 3.06 0 0 1-3.99 1.22zM12 9.22l-1.64-.95a.08.08 0 0 1-.04-.07V3.53a3.06 3.06 0 0 1 4.52-2.66l.08.05-3.93 2.27a.58.58 0 0 0-.29.5zm5.83 3.37v4.55l-.08-.05-3.93-2.27a.58.58 0 0 0-.58 0l-4.8 2.77v-1.9a.08.08 0 0 1 .04-.07l4.05-2.34a3.06 3.06 0 0 1 4.92 1.35zm1.85 6.72a3 3 0 0 1-1.08 1l-.08-.05-3.93-2.27a.58.58 0 0 0-.58.33V22.2l1.64-.95a.08.08 0 0 1 .04-.07v-4.66a3.06 3.06 0 0 1 3.99-1.21z"/></svg>`
     },
     {
-        id: "gemini-18m",
-        name: "Gemini Advanced",
+        id: "gemini-pro-12m",
+        name: "Gemini Pro 1 Year",
         category: "ai-chat",
-        duration: "18 Months Plan",
-        price: 2200,
-        originalPrice: 8500,
+        duration: "12 Months Plan",
+        price: 1500,
+        originalPrice: 3000,
         setup: "Activated on Client Email",
-        desc: "Access Google's state-of-the-art Gemini 1.5 Pro model. Features massive 1M token context, high-speed coding assistance, and seamless Google Workspace integrations.",
-        specs: ["Full Warranty & Private", "Gemini 1.5 Pro Access", "1M Token Context Window", "Google Docs/Gmail Sync"],
+        desc: "Google AI Pro (Gemini Pro) for 1 year, activated on your own Google email. Use the Gemini app with Pro features and Google Workspace integration.",
+        specs: ["Activated on Your Email", "Google AI Pro / Gemini Pro Access", "12 Months Validity", "Gmail & Google Docs Integration"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #4285f4"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><path d="M12 2c3.5 4 6.5 7 10 10-3.5 3-6.5 6-10 10C8.5 19 5.5 16 2 12c3.5-3 6.5-6 10-10z" fill="currentColor" fill-opacity="0.1" stroke-linejoin="round"/></svg>`
     },
     {
@@ -178,18 +178,6 @@ const TOOLS_DATABASE = [
         desc: "Google AI Ultra 25k Credits Slot with full access to Gemini Ultra, Veo 3, and high usage limit AI features.",
         specs: ["25K High Usage AI Credits", "28 Days Full Warranty", "Veo 3 & Gemini Ultra", "Manual Fast Delivery"],
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #fbbc04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>`
-    },
-    {
-        id: "gemini-pro-18m-private",
-        name: "Gemini Pro 18 Months (Private 5TB)",
-        category: "ai-chat",
-        duration: "18 Months Subscription",
-        price: 700,
-        originalPrice: 3500,
-        setup: "Full Private Code",
-        desc: "Google AI Pro 18 Months — Full Private • 5TB Storage • 1,000 AI Credits • Premium AI Features • Instant Redeem.",
-        specs: ["5TB Google Cloud Storage", "1,000 AI Credits Included", "Full Private Account", "1 Day Warranty / Instant Redeem"],
-        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #34a853"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>`
     },
     {
         id: "capcut-pro-1m",
@@ -929,13 +917,13 @@ const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
 const BESTSELLER_IDS = ["chatgpt-go-6m"];
-const POPULAR_IDS = ["gemini-18m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
+const POPULAR_IDS = ["gemini-pro-12m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
 if (window.MDC_CMS && typeof window.MDC_CMS.ribbons === "function") { try { window.MDC_CMS.ribbons(BESTSELLER_IDS, POPULAR_IDS); } catch (e) { console.warn(e); } }
 // Order used by the "Most Popular" sort
 const POPULARITY_ORDER = [
     "vidiq-max", "chatgpt-go-6m", "google-veo3-ultra-20x", "google-ai-ultra-shared-1m",
-    "gemini-18m", "capcut-pro-1m", "canva-yearly", "capcut-pro-3m", "capcut-pro-6m",
-    "adobe-12m", "youtube-12m", "cursor-pro", "gemini-pro-18m-private", "google-ai-ultra-25k-slot",
+    "gemini-pro-12m", "capcut-pro-1m", "canva-yearly", "capcut-pro-3m", "capcut-pro-6m",
+    "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-25k-slot",
     "lovable-200", "grok-1m", "grok-bot-premium-1m", "elevenlabs-creator", "heygen-200"
 ];
 

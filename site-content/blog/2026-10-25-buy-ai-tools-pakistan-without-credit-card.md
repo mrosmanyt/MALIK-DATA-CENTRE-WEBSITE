@@ -42,7 +42,7 @@ Here are a few popular plans and their current store prices:
 | Tool | Plan | Store price |
 |---|---|---|
 | [ChatGPT Go](/tools/chatgpt-go/) | 6 months | Rs 2,200 |
-| [Gemini Pro (Google AI Pro)](/tools/gemini-pro/) | 18 months, private | Rs 700 |
+| [Gemini Pro (Google AI Pro)](/tools/gemini-pro/) | 12 months, on your email | Rs 1,500 |
 | [Canva Pro](/tools/canva-pro/) | 12 months, on your email | Rs 400 |
 | [CapCut Pro](/tools/capcut-pro/) | 1 month, 2 devices | Rs 800 |
 

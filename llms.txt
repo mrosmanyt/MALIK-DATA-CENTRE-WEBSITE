@@ -10,7 +10,7 @@ Prices last changed: 2026-11-02
 ## Tools and starting prices (PKR, approx. USD in brackets)
 
 - [ChatGPT Go](https://www.malikdatacentre.store/tools/chatgpt-go/): from Rs 2,200 ($7.92) — 6 Months Plan Rs 2,200 / $7.92 (Shared Premium Account)
-- [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 700 ($2.52) — 18 Months Subscription Rs 700 / $2.52 (Full Private Code); 18 Months Plan Rs 2,200 / $7.92 (Activated on Client Email)
+- [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 1,500 ($5.40) — 12 Months Plan Rs 1,500 / $5.40 (Activated on Client Email)
 - [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 29,999 / $108 (Delivered on WhatsApp); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
 - [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 4,500 ($16.20) — 1 Month Plan Rs 4,500 / $16.20 (Activated on Client Email); Monthly Plan Rs 4,999 / $18 (Activated on Client Email); 1 Month Plan Rs 19,999 / $72 (Activated on Client Email)
 - [vidIQ Max](https://www.malikdatacentre.store/tools/vidiq-max/): from Rs 1,500 ($5.40) — 1 Month Plan Rs 1,500 / $5.40 (Delivered on WhatsApp)

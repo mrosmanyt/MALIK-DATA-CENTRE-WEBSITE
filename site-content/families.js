@@ -24,13 +24,13 @@ module.exports = [
   },
   {
     slug: "gemini-pro", name: "Gemini Pro (Google AI Pro)", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
-    ids: ["gemini-pro-18m-private", "gemini-18m"], official: "https://gemini.google.com/",
+    ids: ["gemini-pro-12m"], official: "https://gemini.google.com/",
     intro: "Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets. Our long-duration plans are one of the lowest monthly cost ways to use Google AI.",
     bestFor: ["Students and researchers who live in Google Docs and Drive", "Anyone who needs large file and long-document analysis", "Families who also want extra cloud storage"],
     included: ["Gemini Pro model access in the Gemini app", "Gemini in Gmail, Docs, Sheets and Slides", "Deep Research and long-context file analysis", "Google One cloud storage (see plan for size)", "AI credits for image and video tools (see plan)"],
     faqs: [
       ["Is it activated on my own Gmail?", "Yes. Both Gemini plans are activated on your own Google account, so your chats and files stay in your account."],
-      ["Why is the 18-month plan so affordable?", "These are promotional long-term plans redeemed on your account. Ask on WhatsApp for current availability, because promotional stock changes often."]
+      ["Why is the 1-year plan so affordable?", "This is a promotional plan activated on your own Google email. Ask on WhatsApp for current availability, because promotional stock changes often."]
     ],
     related: ["google-ai-ultra", "chatgpt-go", "notion-business"]
   },

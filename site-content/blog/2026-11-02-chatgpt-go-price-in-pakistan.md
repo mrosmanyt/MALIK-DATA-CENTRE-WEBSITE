@@ -94,7 +94,7 @@ If you are a freelancer, our list of the [best AI tools for Pakistani freelancer
 
 For pure value per month, Gemini Pro on a long plan is cheaper, while ChatGPT Go is the better choice if you prefer ChatGPT's style.
 
-Our [Gemini Pro](/tools/gemini-pro/) plans run for 18 months and are activated on your own Google account, which also solves the privacy issue. ChatGPT Go is a 6-month shared plan. Many students in Pakistan simply find ChatGPT easier to talk to, and that matters too. We compared both in detail in [ChatGPT Go vs Gemini Pro for students](/blog/chatgpt-go-vs-gemini-pro-for-students-pakistan.html).
+Our [Gemini Pro](/tools/gemini-pro/) plan runs for 12 months and is activated on your own Google account, which also solves the privacy issue. ChatGPT Go is a 6-month shared plan. Many students in Pakistan simply find ChatGPT easier to talk to, and that matters too. We compared both in detail in [ChatGPT Go vs Gemini Pro for students](/blog/chatgpt-go-vs-gemini-pro-for-students-pakistan.html).
 
 ## How do you buy ChatGPT Go from us?
 

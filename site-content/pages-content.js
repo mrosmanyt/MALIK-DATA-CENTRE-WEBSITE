@@ -29,7 +29,7 @@ exports.comparisons = [
       ["Gemini model", "Gemini Pro", "Gemini Ultra plus all Pro features"],
       ["Video generation", "Limited (with plan credits)", "Veo in Gemini and Flow, much higher limits"],
       ["Cloud storage", "Included (see plan)", "Included on official family plans"],
-      ["Typical duration", "Long-term (18 months)", "1 month"],
+      ["Typical duration", "12 months", "1 month"],
       ["Access options", "Your own Google account", "Shared base, family invitation or dedicated slot"]
     ],
     verdict: [

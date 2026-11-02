@@ -79,10 +79,9 @@ These are current prices from our store, all payable in PKR through EasyPaisa, J
 | ChatGPT Go | 6 months | Shared premium account | Rs 2,200 |
 | Google AI Ultra Shared Base | 1 month | Shared premium account | Rs 2,500 |
 | Google AI Ultra 25k Credits Slot | 1 month | Dedicated slot | Rs 26,000 |
-| Gemini Pro 18 months (Private 5TB) | 18 months | Full private code | Rs 700 |
-| Gemini Advanced | 18 months | Activated on your own email | Rs 2,200 |
+| Gemini Pro 1 Year | 12 months | Activated on your own email | Rs 1,500 |
 
-Notice that a cheaper plan is not always the less private one. The Gemini Pro 18-month private code is one of the lowest prices in the catalog and it goes on your own Google account. You can compare the Google options side by side on the [Google AI Ultra](/tools/google-ai-ultra/) and [Gemini Pro](/tools/gemini-pro/) pages.
+Notice that a cheaper plan is not always the less private one. The Gemini Pro 1 Year plan costs Rs 1,500 and is activated on your own Google account. You can compare the Google options side by side on the [Google AI Ultra](/tools/google-ai-ultra/) and [Gemini Pro](/tools/gemini-pro/) pages.
 
 ## Which account type should you choose?
 

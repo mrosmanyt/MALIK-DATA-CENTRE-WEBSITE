@@ -363,7 +363,7 @@
     "category": "delivery",
     "q": "How long does activation take? (Delivery time)",
     "icon": "fa-solid fa-clock-rotate-left",
-    "a": "Most AI tool and software activations take between **5 to 30 minutes** after your payment confirmation. Client email activation tools (such as Gemini 1.5 Pro, Lovable Pro, or Google AI Ultra Family Invite) are activated directly on your email address immediately upon receiving your details on WhatsApp."
+    "a": "Most AI tool and software activations take between **5 to 30 minutes** after your payment confirmation. Client email activation tools (such as Gemini Pro, Lovable Pro, or Google AI Ultra Family Invite) are activated directly on your email address immediately upon receiving your details on WhatsApp."
    },
    {
     "category": "warranty",
@@ -511,17 +511,17 @@
     "image": ""
    },
    {
-    "id": "gemini-18m",
-    "name": "Gemini Advanced",
+    "id": "gemini-pro-12m",
+    "name": "Gemini Pro 1 Year",
     "category": "ai-chat",
-    "duration": "18 Months Plan",
-    "price": 2200,
-    "originalPrice": 8500,
+    "duration": "12 Months Plan",
+    "price": 1500,
+    "originalPrice": 3000,
     "setup": "Activated on Client Email",
-    "desc": "Access Google's state-of-the-art Gemini 1.5 Pro model. Features massive 1M token context, high-speed coding assistance, and seamless Google Workspace integrations.",
-    "specs": "Full Warranty & Private\nGemini 1.5 Pro Access\n1M Token Context Window\nGoogle Docs/Gmail Sync",
+    "desc": "Google AI Pro (Gemini Pro) for 1 year, activated on your own Google email. Use the Gemini app with Pro features and Google Workspace integration.",
+    "specs": "Activated on Your Email\nGoogle AI Pro / Gemini Pro Access\n12 Months Validity\nGmail & Google Docs Integration",
     "stock": "in",
-    "ribbon": "popular",
+    "ribbon": "",
     "badge": "",
     "image": ""
    },
@@ -565,21 +565,6 @@
     "setup": "Dedicated Slot",
     "desc": "Google AI Ultra 25k Credits Slot with full access to Gemini Ultra, Veo 3, and high usage limit AI features.",
     "specs": "25K High Usage AI Credits\n28 Days Full Warranty\nVeo 3 & Gemini Ultra\nManual Fast Delivery",
-    "stock": "in",
-    "ribbon": "",
-    "badge": "",
-    "image": ""
-   },
-   {
-    "id": "gemini-pro-18m-private",
-    "name": "Gemini Pro 18 Months (Private 5TB)",
-    "category": "ai-chat",
-    "duration": "18 Months Subscription",
-    "price": 700,
-    "originalPrice": 3500,
-    "setup": "Full Private Code",
-    "desc": "Google AI Pro 18 Months — Full Private • 5TB Storage • 1,000 AI Credits • Premium AI Features • Instant Redeem.",
-    "specs": "5TB Google Cloud Storage\n1,000 AI Credits Included\nFull Private Account\n1 Day Warranty / Instant Redeem",
     "stock": "in",
     "ribbon": "",
     "badge": "",
