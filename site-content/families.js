@@ -377,5 +377,14 @@ module.exports = [
     included: ["10M token pack", "API key access", "Setup help on WhatsApp"],
     faqs: [["Need a larger volume?", "See our Enterprise API Credits page or ask on WhatsApp for a custom quote."]],
     related: ["cursor-pro", "n8n-starter", "lovable-pro"]
+  },
+  {
+    slug: "muse-ai", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",
+    ids: ["muse-ai-1b", "muse-ai-31b"],
+    intro: "Muse AI token packs in two sizes, 1B and 31B tokens, paid once in PKR. Message us on WhatsApp for delivery and setup details.",
+    bestFor: ["Users who need a Muse AI token pack", "Anyone who wants to pay in PKR without a credit card"],
+    included: ["Your chosen token pack (1B or 31B)", "Setup help on WhatsApp"],
+    faqs: [["Which pack should I choose?", "Choose 1B tokens for lighter use or 31B tokens for heavy use. Ask on WhatsApp if you are unsure."]],
+    related: ["claude-api-tokens", "chatgpt-go", "super-grok"]
   }
 ];

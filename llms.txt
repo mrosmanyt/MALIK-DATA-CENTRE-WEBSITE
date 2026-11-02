@@ -12,7 +12,7 @@ Prices last changed: 2026-11-02
 - [ChatGPT Go](https://www.malikdatacentre.store/tools/chatgpt-go/): from Rs 2,200 ($7.92) — 6 Months Plan Rs 2,200 / $7.92 (Shared Premium Account)
 - [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 1,500 ($5.40) — 12 Months Plan Rs 1,500 / $5.40 (Activated on Client Email)
 - [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 29,999 / $108 (Delivered on WhatsApp); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
-- [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 4,500 ($16.20) — 1 Month Plan Rs 4,500 / $16.20 (Activated on Client Email); Monthly Plan Rs 4,999 / $18 (Activated on Client Email); 1 Month Plan Rs 19,999 / $72 (Activated on Client Email)
+- [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 3,500 ($12.60) — 1 Month Plan Rs 3,500 / $12.60 (Activated on Client Email); Monthly Plan Rs 4,999 / $18 (Activated on Client Email); 1 Month Plan Rs 19,999 / $72 (Activated on Client Email)
 - [vidIQ Max](https://www.malikdatacentre.store/tools/vidiq-max/): from Rs 1,500 ($5.40) — 1 Month Plan Rs 1,500 / $5.40 (Delivered on WhatsApp)
 - [CapCut Pro](https://www.malikdatacentre.store/tools/capcut-pro/): from Rs 800 ($2.88) — 1 Month Rs 800 / $2.88 (2 Devices Login); 3 Months Rs 2,800 / $10.08 (2 Devices Login); 6 Months Rs 4,800 / $17.28 (2 Devices Login); Monthly Access Rs 1,250 / $4.50 (Private Activation)
 - [Canva Pro](https://www.malikdatacentre.store/tools/canva-pro/): from Rs 400 ($1.44) — 12 Months Plan Rs 400 / $1.44 (Activated on Client Email); 12 Months Plan Rs 4,500 / $16.20 (Admin Panel Access)
@@ -46,6 +46,7 @@ Prices last changed: 2026-11-02
 - [Surfshark VPN](https://www.malikdatacentre.store/tools/surfshark-vpn/): from Rs 400 ($1.44) — Monthly Access Rs 400 / $1.44 (Shared Premium Account)
 - [HMA VPN](https://www.malikdatacentre.store/tools/hma-vpn/): from Rs 5,500 ($19.80) — Yearly License Key Rs 5,500 / $19.80 (License Key Delivery)
 - [Claude API Tokens](https://www.malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 ($4.32) — API Key Pack Rs 1,200 / $4.32 (API Key Access)
+- [Muse AI Tokens](https://www.malikdatacentre.store/tools/muse-ai/): from Rs 300 ($1.08) — 1B Tokens Pack Rs 300 / $1.08 (API Key Access); 31B Tokens Pack Rs 1,500 / $5.40 (API Key Access)
 
 ## Latest guides
 

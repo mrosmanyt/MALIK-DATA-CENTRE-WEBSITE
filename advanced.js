@@ -149,7 +149,7 @@
         function toolReply(matches) {
             return matches.map(function (t) {
                 var priceStr = window.currencyConverter ? window.currencyConverter.format(t.price) : "Rs " + t.price.toLocaleString();
-                var originalPriceStr = window.currencyConverter ? window.currencyConverter.format(t.originalPrice) : "Rs " + t.originalPrice.toLocaleString();
+                var originalPriceStr = t.originalLabel ? t.originalLabel : window.currencyConverter ? window.currencyConverter.format(t.originalPrice) : "Rs " + t.originalPrice.toLocaleString();
                 
                 var checkoutPriceStr = priceStr;
                 if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {

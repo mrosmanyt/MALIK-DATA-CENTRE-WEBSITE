@@ -232,8 +232,9 @@ const TOOLS_DATABASE = [
         name: "Grok Premium",
         category: "ai-chat",
         duration: "1 Month Plan",
-        price: 4500,
-        originalPrice: 4500,
+        price: 3500,
+        originalPrice: 8333,
+        originalLabel: "$30",
         setup: "Activated on Client Email",
         desc: "One month of Grok Premium on X: the Grok AI assistant with real-time X search, the blue verification badge and an ad-free X experience.",
         specs: ["Grok AI Assistant Access", "Official Blue Tick Badge", "Full Ad-Free X Experience", "25 Days Full Warranty"],
@@ -888,6 +889,30 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #e2e8f0"><path d="M12.016 0C5.378 0 0 5.379 0 12.016c0 6.637 5.378 12.016 12.016 12.016 6.637 0 12.016-5.379 12.016-12.016C24.032 5.379 18.653 0 12.016 0zM12 1.58a10.38 10.38 0 0 1 5.926 1.838c-1.42 1.488-3.41 2.656-5.926 3.486-2.516-.83-4.506-1.998-5.926-3.486A10.38 10.38 0 0 1 12 1.58zm-7.058 3.12c1.393 1.399 3.298 2.502 5.666 3.284C8.423 8.71 6.136 9.605 3.75 9.77a10.354 10.354 0 0 1 1.192-5.07zm14.116 0A10.354 10.354 0 0 1 20.25 9.77c-2.386-.165-4.673-1.06-6.858-1.786 2.368-.782 4.273-1.885 5.666-3.284zM12 9.206c2.404.793 4.887 1.769 7.424 2.1a10.463 10.463 0 0 1-.225 3.324c-1.636-1.502-3.87-2.906-7.199-3.799-3.329.893-5.563 2.297-7.199 3.799.145-1.127.07-2.261-.225-3.324 2.537-.331 5.02-1.307 7.424-2.1zm-7.464 6.727c1.34-1.026 3.178-2.148 5.918-2.943v8.528A10.392 10.392 0 0 1 4.536 15.933zm14.928 0a10.392 10.392 0 0 1-5.918 5.603v-8.528c2.74.795 4.578 1.917 5.918 2.943z"/></svg>`
     },
     {
+        id: "muse-ai-1b",
+        name: "Muse AI 1B Tokens",
+        category: "ai-chat",
+        duration: "1B Tokens Pack",
+        price: 300,
+        originalPrice: 300,
+        setup: "API Key Access",
+        desc: "Muse AI token pack with 1 billion (1B) tokens. Delivery and setup details are shared on WhatsApp after ordering.",
+        specs: ["1B Muse AI tokens", "Token pack", "Paid once in PKR", "Setup help on WhatsApp"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #8b5cf6"><path d="M4 18V6l8 7 8-7v12h-2V10l-6 5-6-5v8z"/></svg>`
+    },
+    {
+        id: "muse-ai-31b",
+        name: "Muse AI 31B Tokens",
+        category: "ai-chat",
+        duration: "31B Tokens Pack",
+        price: 1500,
+        originalPrice: 1500,
+        setup: "API Key Access",
+        desc: "Muse AI token pack with 31 billion (31B) tokens. Delivery and setup details are shared on WhatsApp after ordering.",
+        specs: ["31B Muse AI tokens", "Token pack", "Paid once in PKR", "Setup help on WhatsApp"],
+        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #8b5cf6"><path d="M4 18V6l8 7 8-7v12h-2V10l-6 5-6-5v8z"/></svg>`
+    },
+    {
         id: "cinem-ai-monthly",
         name: "Cinem AI Video",
         category: "video-audio",
@@ -1247,7 +1272,7 @@ function renderTools(tools = TOOLS_DATABASE) {
     const cardsHTML = tools.map(tool => {
         // Format price based on active currency
         var priceDisplay = window.currencyConverter ? window.currencyConverter.format(tool.price) : `Rs ${tool.price.toLocaleString()}`;
-        var originalPriceDisplay = window.currencyConverter ? window.currencyConverter.format(tool.originalPrice) : `Rs ${tool.originalPrice.toLocaleString()}`;
+        var originalPriceDisplay = tool.originalLabel ? tool.originalLabel : window.currencyConverter ? window.currencyConverter.format(tool.originalPrice) : `Rs ${tool.originalPrice.toLocaleString()}`;
         
         // WhatsApp single-item checkout message (include converted price + original PKR reference if converted)
         var checkoutPriceStr = priceDisplay;

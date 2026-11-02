@@ -79,6 +79,7 @@ const PRICE_HUMAN = human(PRICE_DATE);
 /* ---------- helpers ---------- */
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const rs = n => "Rs " + Number(n).toLocaleString("en-US");
+const ors = t => t.originalLabel || rs(t.originalPrice);
 // USD rate is read from index.js so the site's currency switcher and these pages always agree.
 const USD_RATE = Number((fs.readFileSync(path.join(__dirname, "index.js"), "utf8").match(/USD:\s*([0-9.]+)/) || [])[1]) || 0.0036;
 const usd = n => "$" + (Number(n) * USD_RATE).toFixed(2).replace(/\.00$/, "");
@@ -346,7 +347,7 @@ function familyCard(rel, f) {
     <div class="pg-card-top"><div class="pg-card-icon"><i class="${f.icon}"></i></div>
       <div><div class="pg-card-cat">${esc(CAT[f.cat] || f.cat)}</div><h3>${esc(f.name)}</h3></div></div>
     <p>${esc(f.intro.split(". ")[0].replace(/\.$/, ""))}.</p>
-    <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.plans.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? `<s>${rs(st.min.originalPrice)}</s>` : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
+    <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.plans.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? (st.min.originalLabel ? `<span style="text-decoration:line-through">${esc(st.min.originalLabel)}</span>` : `<s>${ors(st.min)}</s>`) : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
     <span class="pg-card-more">${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
   </a>`;
 }
@@ -372,7 +373,7 @@ function planRow(t, f) {
     </div>
     <div class="tool-card-footer">
       <div class="tool-price-wrapper">
-        ${t.originalPrice > t.price ? `<span class="tool-original-price">${rs(t.originalPrice)}</span>` : ""}
+        ${t.originalPrice > t.price ? `<span class="tool-original-price">${ors(t)}</span>` : ""}
         <span class="tool-price">${rs(t.price)}</span>
         <span class="pg-usd">≈ ${usd(t.price)}</span>
       </div>
@@ -498,7 +499,7 @@ function buildToolPage(f) {
       <div class="pg-from">Starting from</div>
       <div class="pg-from-price">${rs(st.min.price)}</div>
       <div class="pg-usd" style="margin-top:2px">≈ ${usd(st.min.price)} USD</div>
-      <div>${st.min.originalPrice > st.min.price ? `<span class="pg-from-old">${rs(st.min.originalPrice)}</span>` : ""}${pct(st.min.price, st.min.originalPrice) ? `<span class="pg-save">Save ${pct(st.min.price, st.min.originalPrice)}%</span>` : ""}</div>
+      <div>${st.min.originalPrice > st.min.price ? `<span class="pg-from-old">${ors(st.min)}</span>` : ""}${pct(st.min.price, st.min.originalPrice) ? `<span class="pg-save">Save ${pct(st.min.price, st.min.originalPrice)}%</span>` : ""}</div>
       <ul>
         <li><i class="fa-solid fa-check"></i> ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} available</li>
         <li><i class="fa-solid fa-check"></i> ${esc(accessTypes.join(" / "))}</li>
