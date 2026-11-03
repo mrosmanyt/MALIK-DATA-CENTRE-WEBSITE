@@ -5,7 +5,7 @@
 Website: https://www.malikdatacentre.store/
 WhatsApp: +92 344 5739206, +92 348 9057646
 Email: support@malikdatacentre.store
-Prices last changed: 2026-11-02
+Prices last changed: 2026-11-03
 
 ## Tools and starting prices (PKR, approx. USD in brackets)
 
@@ -28,7 +28,7 @@ Prices last changed: 2026-11-02
 - [Gamma Pro](https://www.malikdatacentre.store/tools/gamma-pro/): from Rs 9,500 ($34.20) — 12 Months Plan Rs 9,500 / $34.20 (Private Account)
 - [Notion Business](https://www.malikdatacentre.store/tools/notion-business/): from Rs 4,600 ($16.56) — 12 Months Plan Rs 4,600 / $16.56 (Workspace Activation)
 - [Grammarly Pro](https://www.malikdatacentre.store/tools/grammarly-pro/): from Rs 3,500 ($12.60) — 12 Months Plan Rs 3,500 / $12.60 (Activated on Client Email)
-- [ElevenLabs Creator](https://www.malikdatacentre.store/tools/elevenlabs-creator/): from Rs 12,000 ($43.20) — 12 Months Plan Rs 12,000 / $43.20 (Private Account)
+- [ElevenLabs Creator](https://www.malikdatacentre.store/tools/elevenlabs-creator/): from Rs 2,300 ($8.28) — 1 Month Plan Rs 2,300 / $8.28 (Private Account); 12 Months Plan Rs 12,000 / $43.20 (Private Account)
 - [HeyGen Creator](https://www.malikdatacentre.store/tools/heygen/): from Rs 5,800 ($20.88) — 200 Credits Plan Rs 5,800 / $20.88 (Private Account)
 - [Higgsfield Plus](https://www.malikdatacentre.store/tools/higgsfield/): from Rs 7,500 ($27) — 1200 Credits Plan Rs 7,500 / $27 (Creator Account)
 - [Kling AI](https://www.malikdatacentre.store/tools/kling-ai/): from Rs 1,300 ($4.68) — 660 Credits Monthly Rs 1,300 / $4.68 (Premium Account)

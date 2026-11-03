@@ -147,7 +147,7 @@ module.exports = [
     ids: ["n8n-starter-12m"], aliases: ["n8n-starter"], official: "https://n8n.io/",
     intro: "n8n is a workflow automation platform for connecting apps, APIs and AI agents. The Starter Cloud plan is hosted by n8n, so you build automations without managing a server.",
     bestFor: ["Agencies building WhatsApp, email and CRM automations", "Businesses automating lead capture and follow-ups", "Developers building AI agents"],
-    included: ["Hosted n8n cloud workspace", "Visual workflow builder", "Hundreds of app integrations", "AI agent and LLM nodes", "Private account for 12 months"],
+    included: ["Hosted n8n cloud workspace", "Visual workflow builder", "Hundreds of app integrations", "AI agent and LLM nodes", "1-month (131k credits) and 12-month plans"],
     faqs: [
       ["Can you build the automation for me?", "Yes. See our AI Automation Services page, or ask on WhatsApp for a quote."]
     ],
@@ -185,7 +185,7 @@ module.exports = [
     ids: ["manus-pro"], official: "https://manus.im/",
     intro: "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account.",
     bestFor: ["Researchers and analysts", "Business owners who delegate long research tasks", "Content teams producing reports"],
-    included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "Private account for 12 months"],
+    included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "1-month (131k credits) and 12-month plans"],
     faqs: [["Manus or ChatGPT?", "ChatGPT is a chat assistant. Manus works more like an agent that completes multi-step tasks on its own."]],
     related: ["chatgpt-go", "gumloop-pro", "gamma-pro"]
   },
@@ -194,7 +194,7 @@ module.exports = [
     ids: ["gamma-pro"], official: "https://gamma.app/",
     intro: "Gamma creates presentations, documents and simple websites from a prompt, with modern design built in. Pro removes the watermark and unlocks more AI generation.",
     bestFor: ["Students preparing presentations", "Founders building pitch decks", "Trainers and teachers"],
-    included: ["Unlimited AI generations on Pro", "No Gamma branding", "PDF and PowerPoint export", "Custom fonts and themes", "Private account for 12 months"],
+    included: ["Unlimited AI generations on Pro", "No Gamma branding", "PDF and PowerPoint export", "Custom fonts and themes", "1-month (131k credits) and 12-month plans"],
     faqs: [["Can I export to PowerPoint?", "Yes. Gamma Pro exports to PDF and PowerPoint."]],
     related: ["canva-pro", "manus-ai", "notion-business"]
   },
@@ -218,10 +218,10 @@ module.exports = [
   },
   {
     slug: "elevenlabs-creator", logo: "elevenlabs.svg", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
-    ids: ["elevenlabs-creator"], official: "https://elevenlabs.io/",
+    ids: ["elevenlabs-creator-1m", "elevenlabs-creator"], official: "https://elevenlabs.io/",
     intro: "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning.",
     bestFor: ["YouTube faceless channels and narrators", "Ad and explainer video makers", "Audiobook and podcast creators"],
-    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "Private account for 12 months"],
+    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "1-month (131k credits) and 12-month plans"],
     faqs: [["Are Urdu or Hindi voices available?", "ElevenLabs supports many languages, including Hindi. Test your script in the free version first."]],
     related: ["heygen", "cinem-ai", "capcut-pro"]
   },

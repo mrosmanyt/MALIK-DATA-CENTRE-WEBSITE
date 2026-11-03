@@ -902,6 +902,21 @@
     "image": ""
    },
    {
+    "id": "elevenlabs-creator-1m",
+    "name": "ElevenLabs Creator",
+    "category": "video-audio",
+    "duration": "1 Month Plan",
+    "price": 2300,
+    "originalPrice": 6200,
+    "setup": "Private Account",
+    "desc": "ElevenLabs Creator plan for 1 month with 131k credits for text-to-speech, voice cloning and dubbing.",
+    "specs": "131k Credits\n1 Month Validity\nCreator Plan Features\nSetup Help on WhatsApp",
+    "stock": "in",
+    "ribbon": "",
+    "badge": "",
+    "image": ""
+   },
+   {
     "id": "elevenlabs-creator",
     "name": "ElevenLabs Creator",
     "category": "video-audio",
