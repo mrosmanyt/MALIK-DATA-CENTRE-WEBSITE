@@ -23,7 +23,7 @@ module.exports = [
     related: ["super-grok", "gemini-pro", "google-ai-ultra"]
   },
   {
-    slug: "gemini-pro", name: "Gemini Pro (Google AI Pro)", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
+    slug: "gemini-pro", logo: "google-gemini.svg", name: "Gemini Pro (Google AI Pro)", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
     ids: ["gemini-pro-12m"], official: "https://gemini.google.com/",
     intro: "Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets. Our long-duration plans are one of the lowest monthly cost ways to use Google AI.",
     bestFor: ["Students and researchers who live in Google Docs and Drive", "Anyone who needs large file and long-document analysis", "Families who also want extra cloud storage"],
@@ -47,7 +47,7 @@ module.exports = [
     related: ["gemini-pro", "higgsfield", "kling-ai"]
   },
   {
-    slug: "super-grok", name: "SuperGrok + X Premium+", cat: "ai-chat", icon: "fa-brands fa-x-twitter",
+    slug: "super-grok", logo: "grok.svg", name: "SuperGrok + X Premium+", cat: "ai-chat", icon: "fa-brands fa-x-twitter",
     ids: ["grok-1m", "grok-bot-premium-1m", "grok-heavy-1m"], official: "https://x.ai/grok",
     intro: "X Premium+ includes SuperGrok, xAI's assistant with real-time X search, plus the blue verification badge and an ad-free X experience. Pick Grok Premium or Grok Bot + Grok Premium for everyday use, or Grok Heavy for xAI's most powerful model and the highest limits.",
     bestFor: ["Creators and brands growing on X", "Anyone who wants Grok with live X search", "Users who want the blue badge and ad-free timeline"],
@@ -379,7 +379,7 @@ module.exports = [
     related: ["cursor-pro", "n8n-starter", "lovable-pro"]
   },
   {
-    slug: "muse-ai", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",
+    slug: "muse-ai", logo: "muse.svg", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",
     ids: ["muse-ai-1b", "muse-ai-31b"],
     intro: "Muse AI token packs in two sizes, 1B and 31B tokens, paid once in PKR. Message us on WhatsApp for delivery and setup details.",
     bestFor: ["Users who need a Muse AI token pack", "Anyone who wants to pay in PKR without a credit card"],

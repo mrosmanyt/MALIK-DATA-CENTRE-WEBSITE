@@ -79,6 +79,7 @@ const PRICE_HUMAN = human(PRICE_DATE);
 /* ---------- helpers ---------- */
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const rs = n => "Rs " + Number(n).toLocaleString("en-US");
+const famIcon = f => f.logo ? `<img src="/assets/logos/${f.logo}" alt="${esc(f.name)} logo" width="28" height="28" style="width:28px;height:28px;object-fit:contain">` : `<i class="${f.icon}"></i>`;
 const ors = t => t.originalLabel || rs(t.originalPrice);
 // USD rate is read from index.js so the site's currency switcher and these pages always agree.
 const USD_RATE = Number((fs.readFileSync(path.join(__dirname, "index.js"), "utf8").match(/USD:\s*([0-9.]+)/) || [])[1]) || 0.0036;
@@ -344,7 +345,7 @@ function familyCard(rel, f) {
   const st = famStats(f);
   if (!st) return "";
   return `<a class="pg-card" href="${rel}tools/${f.slug}/" data-cat="${f.cat}" data-name="${esc((f.name + " " + f.slug).toLowerCase())}">
-    <div class="pg-card-top"><div class="pg-card-icon"><i class="${f.icon}"></i></div>
+    <div class="pg-card-top"><div class="pg-card-icon">${famIcon(f)}</div>
       <div><div class="pg-card-cat">${esc(CAT[f.cat] || f.cat)}</div><h3>${esc(f.name)}</h3></div></div>
     <p>${esc(f.intro.split(". ")[0].replace(/\.$/, ""))}.</p>
     <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.plans.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? (st.min.originalLabel ? `<span style="text-decoration:line-through">${esc(st.min.originalLabel)}</span>` : `<s>${ors(st.min)}</s>`) : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
@@ -494,7 +495,7 @@ function buildToolPage(f) {
     </div>
 
     <aside class="pg-buybox" aria-label="Price summary">
-      <div class="pg-buybox-icon"><i class="${f.icon}"></i></div>
+      <div class="pg-buybox-icon">${famIcon(f)}</div>
       <h2>${esc(f.name)}</h2>
       <div class="pg-from">Starting from</div>
       <div class="pg-from-price">${rs(st.min.price)}</div>
