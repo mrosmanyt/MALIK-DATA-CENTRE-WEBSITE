@@ -292,7 +292,7 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <link rel="stylesheet" href="${rel}index.css">
 ${checkout ? `<link rel="stylesheet" href="${rel}advanced.css">` : ""}
 <link rel="stylesheet" href="${rel}pages.css">
-<link rel="stylesheet" href="${rel}theme.css?v=3.0">
+<link rel="stylesheet" href="${rel}theme.css?v=3.1">
 ${extraCss.map(c => `<link rel="stylesheet" href="${rel}${c}">`).join("\n")}
 ${ld}
 </head>
