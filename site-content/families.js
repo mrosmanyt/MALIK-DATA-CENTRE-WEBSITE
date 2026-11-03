@@ -11,7 +11,7 @@
 
 module.exports = [
   {
-    slug: "chatgpt-go", name: "ChatGPT Go", cat: "ai-chat", icon: "fa-solid fa-comments",
+    slug: "chatgpt-go", logo: "openai.svg", name: "ChatGPT Go", cat: "ai-chat", icon: "fa-solid fa-comments",
     ids: ["chatgpt-go-6m"], official: "https://chatgpt.com/",
     intro: "ChatGPT Go is OpenAI's lower-cost paid plan, with higher message, upload and image limits than the free tier. We set it up for you without an international credit card, wherever you are.",
     bestFor: ["Students writing assignments, notes and summaries", "Freelancers drafting proposals, emails and client copy", "Anyone who keeps hitting the free-plan limit"],
@@ -35,7 +35,7 @@ module.exports = [
     related: ["google-ai-ultra", "chatgpt-go", "notion-business"]
   },
   {
-    slug: "google-ai-ultra", name: "Google AI Ultra", cat: "ai-chat", icon: "fa-brands fa-google",
+    slug: "google-ai-ultra", logo: "google.svg", name: "Google AI Ultra", cat: "ai-chat", icon: "fa-brands fa-google",
     ids: ["google-ai-ultra-shared-1m", "google-veo3-ultra-20x", "google-ai-ultra-25k-slot"], official: "https://one.google.com/about/google-ai-plans/",
     intro: "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to the Flow Ultra 20x plan for heavy Veo 3 video work.",
     bestFor: ["Video creators who need Veo and Flow for ads, reels and shorts", "Agencies producing AI video at volume", "Power users who need the highest Gemini limits"],
@@ -59,7 +59,7 @@ module.exports = [
     related: ["chatgpt-go", "gemini-pro", "linkedin-premium"]
   },
   {
-    slug: "vidiq-max", name: "vidIQ Max", cat: "video-audio", icon: "fa-solid fa-chart-line",
+    slug: "vidiq-max", logo: "vidiq.webp", name: "vidIQ Max", cat: "video-audio", icon: "fa-solid fa-chart-line",
     ids: ["vidiq-max"], official: "https://vidiq.com/",
     intro: "vidIQ is a YouTube growth tool used by creators to find video ideas, research keywords and optimise titles, descriptions and tags. Max is vidIQ's top plan, with its full set of research and AI tools.",
     bestFor: ["YouTubers who want more views from search and suggested videos", "New channels looking for video ideas that can rank", "Agencies managing several YouTube channels"],
@@ -71,7 +71,7 @@ module.exports = [
     related: ["youtube-premium", "capcut-pro", "canva-pro"]
   },
   {
-    slug: "capcut-pro", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
+    slug: "capcut-pro", logo: "capcut.webp", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
     ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro"], official: "https://www.capcut.com/",
     intro: "CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor. Our plans run on 2 devices, so you can edit on your phone and PC.",
     bestFor: ["TikTok, Reels and YouTube Shorts creators", "Freelance video editors on a budget", "Small businesses making product videos"],
@@ -83,7 +83,7 @@ module.exports = [
     related: ["canva-pro", "adobe-creative-cloud", "picsart-pro"]
   },
   {
-    slug: "canva-pro", name: "Canva Pro", cat: "creative", icon: "fa-solid fa-palette",
+    slug: "canva-pro", logo: "canva.svg", name: "Canva Pro", cat: "creative", icon: "fa-solid fa-palette",
     ids: ["canva-yearly", "canva-pro-1y", "canva-admin"], official: "https://www.canva.com/",
     intro: "Canva Pro gives you premium templates, the full stock library, brand kits, background remover and Canva's AI tools. Our yearly plan is activated on your own email, and the Admin Panel option lets resellers and teams add members.",
     bestFor: ["Social media managers and small businesses", "Students making presentations and posters", "Teams and resellers who need to manage many members"],
@@ -95,7 +95,7 @@ module.exports = [
     related: ["adobe-creative-cloud", "capcut-pro", "gamma-pro"]
   },
   {
-    slug: "adobe-creative-cloud", name: "Adobe Creative Cloud", cat: "creative", icon: "fa-solid fa-pen-nib",
+    slug: "adobe-creative-cloud", logo: "adobecreativecloud.svg", name: "Adobe Creative Cloud", cat: "creative", icon: "fa-solid fa-pen-nib",
     ids: ["adobe-3m", "adobe-cc-4m", "adobe-6m", "adobe-12m"], official: "https://www.adobe.com/creativecloud.html",
     intro: "The full Adobe Creative Cloud bundle includes Photoshop, Illustrator, Premiere Pro, After Effects, Acrobat and Firefly AI. Pick a 3, 4, 6 or 12 month plan instead of paying Adobe's full dollar price every month.",
     bestFor: ["Graphic designers and video editors", "Design students learning industry tools", "Agencies that need Photoshop and Premiere daily"],
@@ -107,7 +107,7 @@ module.exports = [
     related: ["canva-pro", "capcut-pro", "picsart-pro"]
   },
   {
-    slug: "cursor-pro", name: "Cursor Pro", cat: "ai-coding", icon: "fa-solid fa-code",
+    slug: "cursor-pro", logo: "cursor.svg", name: "Cursor Pro", cat: "ai-coding", icon: "fa-solid fa-code",
     ids: ["cursor-pro", "cursor-pro-12m"], official: "https://cursor.com/",
     intro: "Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete. Cursor Pro raises the usage limits so you can code with AI all day.",
     bestFor: ["Software developers and freelancers", "CS students building projects", "Startups shipping fast with a small team"],
@@ -119,7 +119,7 @@ module.exports = [
     related: ["replit-core", "lovable-pro", "claude-api-tokens"]
   },
   {
-    slug: "lovable-pro", name: "Lovable Pro", cat: "ai-coding", icon: "fa-solid fa-heart",
+    slug: "lovable-pro", logo: "lovable.webp", name: "Lovable Pro", cat: "ai-coding", icon: "fa-solid fa-heart",
     ids: ["lovable-200", "lovable-400", "lovable-600"], official: "https://lovable.dev/",
     intro: "Lovable builds full web apps from plain-English prompts, with a database, login and one-click publishing. Our Pro plans come with 200, 400 or 600 credits and are activated on your own email.",
     bestFor: ["Founders building an MVP without a dev team", "Freelancers delivering client websites fast", "Non-coders turning ideas into working apps"],
@@ -131,7 +131,7 @@ module.exports = [
     related: ["cursor-pro", "replit-core", "n8n-starter"]
   },
   {
-    slug: "replit-core", name: "Replit Core", cat: "ai-coding", icon: "fa-solid fa-terminal",
+    slug: "replit-core", logo: "replit.svg", name: "Replit Core", cat: "ai-coding", icon: "fa-solid fa-terminal",
     ids: ["replit-core-12m", "replit-core-100"], aliases: ["replit-core"], official: "https://replit.com/",
     intro: "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan or a ready-made account pre-loaded with $100 of credits.",
     bestFor: ["Developers who code from any device in the browser", "Students learning to program", "Builders using Replit Agent to ship apps"],
@@ -143,7 +143,7 @@ module.exports = [
     related: ["cursor-pro", "lovable-pro", "warp-build"]
   },
   {
-    slug: "n8n-starter", name: "n8n Starter Cloud", cat: "ai-coding", icon: "fa-solid fa-diagram-project",
+    slug: "n8n-starter", logo: "n8n.svg", name: "n8n Starter Cloud", cat: "ai-coding", icon: "fa-solid fa-diagram-project",
     ids: ["n8n-starter-12m"], aliases: ["n8n-starter"], official: "https://n8n.io/",
     intro: "n8n is a workflow automation platform for connecting apps, APIs and AI agents. The Starter Cloud plan is hosted by n8n, so you build automations without managing a server.",
     bestFor: ["Agencies building WhatsApp, email and CRM automations", "Businesses automating lead capture and follow-ups", "Developers building AI agents"],
@@ -154,7 +154,7 @@ module.exports = [
     related: ["gumloop-pro", "lovable-pro", "claude-api-tokens"]
   },
   {
-    slug: "gumloop-pro", name: "Gumloop Pro", cat: "ai-coding", icon: "fa-solid fa-infinity",
+    slug: "gumloop-pro", logo: "gumloop.webp", name: "Gumloop Pro", cat: "ai-coding", icon: "fa-solid fa-infinity",
     ids: ["gumloop-pro-12m"], official: "https://www.gumloop.com/",
     intro: "Gumloop is a no-code AI automation builder for scraping, data enrichment and AI workflows. The Pro plan is activated on your email for 12 months.",
     bestFor: ["Marketers automating research and lead lists", "Operations teams with repetitive data tasks", "No-code builders"],
@@ -163,7 +163,7 @@ module.exports = [
     related: ["n8n-starter", "manus-ai", "notion-business"]
   },
   {
-    slug: "warp-build", name: "Warp Build CI/CD", cat: "ai-coding", icon: "fa-solid fa-gears",
+    slug: "warp-build", logo: "warp.svg", name: "Warp Build CI/CD", cat: "ai-coding", icon: "fa-solid fa-gears",
     ids: ["warp-build-12m"], aliases: ["warp-build"], official: "https://www.warpbuild.com/",
     intro: "WarpBuild provides faster, cheaper GitHub Actions runners for CI/CD pipelines. The 12-month plan suits teams that want quicker builds and tests.",
     bestFor: ["Development teams on GitHub Actions", "Startups cutting CI build times", "DevOps engineers"],
@@ -172,7 +172,7 @@ module.exports = [
     related: ["cursor-pro", "replit-core", "n8n-starter"]
   },
   {
-    slug: "wispr-flow", name: "Wispr Flow Pro", cat: "ai-coding", icon: "fa-solid fa-microphone-lines",
+    slug: "wispr-flow", logo: "wispr-flow.webp", name: "Wispr Flow Pro", cat: "ai-coding", icon: "fa-solid fa-microphone-lines",
     ids: ["whisper-flow-12m"], aliases: ["wispr-flow"], official: "https://wisprflow.ai/",
     intro: "Wispr Flow turns your voice into clean, formatted text in any app, much faster than typing. Pro removes the weekly word limit.",
     bestFor: ["Writers and content creators", "Developers dictating prompts and docs", "Anyone who types for hours every day"],
@@ -181,7 +181,7 @@ module.exports = [
     related: ["grammarly-pro", "chatgpt-go", "notion-business"]
   },
   {
-    slug: "manus-ai", name: "Manus Pro", cat: "ai-chat", icon: "fa-solid fa-robot",
+    slug: "manus-ai", logo: "manus.svg", name: "Manus Pro", cat: "ai-chat", icon: "fa-solid fa-robot",
     ids: ["manus-pro"], official: "https://manus.im/",
     intro: "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account.",
     bestFor: ["Researchers and analysts", "Business owners who delegate long research tasks", "Content teams producing reports"],
@@ -190,7 +190,7 @@ module.exports = [
     related: ["chatgpt-go", "gumloop-pro", "gamma-pro"]
   },
   {
-    slug: "gamma-pro", name: "Gamma Pro", cat: "creative", icon: "fa-solid fa-display",
+    slug: "gamma-pro", logo: "gamma.svg", name: "Gamma Pro", cat: "creative", icon: "fa-solid fa-display",
     ids: ["gamma-pro"], official: "https://gamma.app/",
     intro: "Gamma creates presentations, documents and simple websites from a prompt, with modern design built in. Pro removes the watermark and unlocks more AI generation.",
     bestFor: ["Students preparing presentations", "Founders building pitch decks", "Trainers and teachers"],
@@ -199,7 +199,7 @@ module.exports = [
     related: ["canva-pro", "manus-ai", "notion-business"]
   },
   {
-    slug: "notion-business", name: "Notion Business", cat: "creative", icon: "fa-solid fa-note-sticky",
+    slug: "notion-business", logo: "notion.svg", name: "Notion Business", cat: "creative", icon: "fa-solid fa-note-sticky",
     ids: ["notion-business-12m"], official: "https://www.notion.com/",
     intro: "Notion Business adds Notion AI, advanced permissions and team features to the all-in-one workspace for notes, docs, wikis and projects.",
     bestFor: ["Teams running projects and wikis", "Students organising notes", "Agencies managing clients"],
@@ -208,7 +208,7 @@ module.exports = [
     related: ["gamma-pro", "grammarly-pro", "microsoft-office-365"]
   },
   {
-    slug: "grammarly-pro", name: "Grammarly Pro", cat: "creative", icon: "fa-solid fa-spell-check",
+    slug: "grammarly-pro", logo: "grammarly.svg", name: "Grammarly Pro", cat: "creative", icon: "fa-solid fa-spell-check",
     ids: ["grammarly-pro-12m"], official: "https://www.grammarly.com/",
     intro: "Grammarly Pro checks grammar, clarity, tone and plagiarism, and rewrites full sentences with AI. It works in your browser, Word, Gmail and most apps.",
     bestFor: ["Students writing essays and theses", "Freelancers writing for international clients", "Professionals writing English emails"],
@@ -217,7 +217,7 @@ module.exports = [
     related: ["wispr-flow", "chatgpt-go", "coursera-plus"]
   },
   {
-    slug: "elevenlabs-creator", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
+    slug: "elevenlabs-creator", logo: "elevenlabs.svg", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
     ids: ["elevenlabs-creator"], official: "https://elevenlabs.io/",
     intro: "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning.",
     bestFor: ["YouTube faceless channels and narrators", "Ad and explainer video makers", "Audiobook and podcast creators"],
@@ -226,7 +226,7 @@ module.exports = [
     related: ["heygen", "cinem-ai", "capcut-pro"]
   },
   {
-    slug: "heygen", name: "HeyGen Creator", cat: "video-audio", icon: "fa-solid fa-user-astronaut",
+    slug: "heygen", logo: "heygen.webp", name: "HeyGen Creator", cat: "video-audio", icon: "fa-solid fa-user-astronaut",
     ids: ["heygen-200"], official: "https://www.heygen.com/",
     intro: "HeyGen creates talking-avatar videos from a script, translates videos with lip-sync and builds a digital twin of you. The Creator plan suits regular content production.",
     bestFor: ["Faceless YouTube and TikTok channels", "Course creators and trainers", "Marketers making multilingual ads"],
@@ -235,7 +235,7 @@ module.exports = [
     related: ["elevenlabs-creator", "higgsfield", "kling-ai"]
   },
   {
-    slug: "higgsfield", name: "Higgsfield Plus", cat: "video-audio", icon: "fa-solid fa-film",
+    slug: "higgsfield", logo: "higgsfield.webp", name: "Higgsfield Plus", cat: "video-audio", icon: "fa-solid fa-film",
     ids: ["higgsfield-plus"], official: "https://higgsfield.ai/",
     intro: "Higgsfield is an AI video studio with cinematic camera moves, effects and access to top video models in one place. The Plus plan comes with 1,200 credits.",
     bestFor: ["Creators making cinematic reels and ads", "Music video and fashion content", "Agencies testing many AI video models"],
@@ -244,7 +244,7 @@ module.exports = [
     related: ["kling-ai", "google-ai-ultra", "cinem-ai"]
   },
   {
-    slug: "kling-ai", name: "Kling AI", cat: "video-audio", icon: "fa-solid fa-clapperboard",
+    slug: "kling-ai", logo: "kling.webp", name: "Kling AI", cat: "video-audio", icon: "fa-solid fa-clapperboard",
     ids: ["kling-std"], official: "https://klingai.com/",
     intro: "Kling AI is a popular text-to-video and image-to-video generator known for realistic motion. The Standard plan includes 660 monthly credits.",
     bestFor: ["Short-form video creators", "Product and ad animators", "Anyone animating still images"],
@@ -262,7 +262,7 @@ module.exports = [
     related: ["higgsfield", "kling-ai", "heygen"]
   },
   {
-    slug: "picsart-pro", name: "Picsart Pro", cat: "creative", icon: "fa-solid fa-wand-magic-sparkles",
+    slug: "picsart-pro", logo: "picsart.svg", name: "Picsart Pro", cat: "creative", icon: "fa-solid fa-wand-magic-sparkles",
     ids: ["picsart-pro-11m"], official: "https://picsart.com/",
     intro: "Picsart Pro unlocks premium photo and video editing, AI tools and templates on mobile and web.",
     bestFor: ["Mobile editors and influencers", "Small shops editing product photos", "Students and hobbyists"],
@@ -271,7 +271,7 @@ module.exports = [
     related: ["canva-pro", "capcut-pro", "adobe-creative-cloud"]
   },
   {
-    slug: "youtube-premium", name: "YouTube Premium", cat: "entertainment", icon: "fa-brands fa-youtube",
+    slug: "youtube-premium", logo: "youtube.svg", name: "YouTube Premium", cat: "entertainment", icon: "fa-brands fa-youtube",
     ids: ["youtube-1m", "youtube-premium-3m", "youtube-12m"], aliases: ["youtube-3m"], official: "https://www.youtube.com/premium",
     intro: "YouTube Premium removes ads, allows background play and downloads, and includes YouTube Music Premium. It is activated on your own Google account.",
     bestFor: ["Anyone tired of YouTube ads", "Students downloading lectures offline", "Music listeners who want YouTube Music"],
@@ -280,7 +280,7 @@ module.exports = [
     related: ["amazon-prime-video", "xbox-gift", "zoom-pro"]
   },
   {
-    slug: "amazon-prime-video", name: "Amazon Prime Video", cat: "entertainment", icon: "fa-brands fa-amazon",
+    slug: "amazon-prime-video", logo: "primevideo.svg", name: "Amazon Prime Video", cat: "entertainment", icon: "fa-brands fa-amazon",
     ids: ["amazon-prime-6m"], official: "https://www.primevideo.com/",
     intro: "Prime Video gives you movies, series and Amazon Originals. Our 6-month plan comes with a private profile login.",
     bestFor: ["Movie and series fans", "Families on a budget"],
@@ -289,7 +289,7 @@ module.exports = [
     related: ["youtube-premium", "xbox-gift", "coursera-plus"]
   },
   {
-    slug: "xbox-gift", name: "Xbox Gift Codes", cat: "entertainment", icon: "fa-brands fa-xbox",
+    slug: "xbox-gift", logo: "xbox.svg", name: "Xbox Gift Codes", cat: "entertainment", icon: "fa-brands fa-xbox",
     ids: ["xbox-code", "xbox-random-1m"], official: "https://www.xbox.com/",
     intro: "Digital Xbox codes delivered on WhatsApp, including random vouchers and 1-month codes.",
     bestFor: ["Xbox and PC gamers", "Gift buyers"],
@@ -298,7 +298,7 @@ module.exports = [
     related: ["youtube-premium", "amazon-prime-video", "windows-pro-key"]
   },
   {
-    slug: "linkedin-premium", name: "LinkedIn Premium", cat: "creative", icon: "fa-brands fa-linkedin",
+    slug: "linkedin-premium", logo: "linkedin.svg", name: "LinkedIn Premium", cat: "creative", icon: "fa-brands fa-linkedin",
     ids: ["linkedin-career-3m", "linkedin-sales-nav-2m"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
     intro: "LinkedIn Premium Career helps job seekers stand out, and Sales Navigator helps sales teams find and contact leads. Both are applied as upgrades to your existing LinkedIn profile.",
     bestFor: ["Job seekers and fresh graduates", "Freelancers finding international clients", "B2B sales and lead generation"],
@@ -307,7 +307,7 @@ module.exports = [
     related: ["coursera-plus", "grammarly-pro", "super-grok"]
   },
   {
-    slug: "coursera-plus", name: "Coursera Plus", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
+    slug: "coursera-plus", logo: "coursera.svg", name: "Coursera Plus", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
     ids: ["coursera-premium-12m"], official: "https://www.coursera.org/courseraplus",
     intro: "Coursera Plus unlocks thousands of courses, professional certificates and guided projects from Google, IBM, Meta and top universities.",
     bestFor: ["Students building job-ready skills", "Freelancers earning certificates", "Career switchers"],
@@ -316,7 +316,7 @@ module.exports = [
     related: ["linkedin-premium", "grammarly-pro", "chatgpt-go"]
   },
   {
-    slug: "zoom-pro", name: "Zoom Pro", cat: "entertainment", icon: "fa-solid fa-video",
+    slug: "zoom-pro", logo: "zoom.svg", name: "Zoom Pro", cat: "entertainment", icon: "fa-solid fa-video",
     ids: ["zoom-pro-monthly"], official: "https://zoom.us/",
     intro: "Zoom Pro removes the 40-minute limit and adds cloud recording and AI Companion for meetings and online classes.",
     bestFor: ["Teachers and tutors", "Remote teams", "Webinar hosts"],
@@ -325,7 +325,7 @@ module.exports = [
     related: ["microsoft-office-365", "notion-business", "youtube-premium"]
   },
   {
-    slug: "microsoft-office-365", name: "Microsoft 365", cat: "vpn-security", icon: "fa-brands fa-microsoft",
+    slug: "microsoft-office-365", logo: "microsoftoffice.svg", name: "Microsoft 365", cat: "vpn-security", icon: "fa-brands fa-microsoft",
     ids: ["ms-office-1y"], official: "https://www.microsoft.com/microsoft-365",
     intro: "Microsoft 365 includes Word, Excel, PowerPoint, Outlook and OneDrive cloud storage, activated on your own email for 12 months.",
     bestFor: ["Offices and accountants", "Students and teachers", "Anyone who needs genuine Office apps"],
@@ -334,7 +334,7 @@ module.exports = [
     related: ["windows-pro-key", "notion-business", "zoom-pro"]
   },
   {
-    slug: "windows-pro-key", name: "Windows 10/11 Pro Key", cat: "vpn-security", icon: "fa-brands fa-windows",
+    slug: "windows-pro-key", logo: "windows.svg", name: "Windows 10/11 Pro Key", cat: "vpn-security", icon: "fa-brands fa-windows",
     ids: ["windows-activation-key"], official: "https://www.microsoft.com/windows",
     intro: "A Windows 10/11 Pro retail key for lifetime activation of your PC, delivered digitally.",
     bestFor: ["New PC builds", "Upgrading Windows Home to Pro", "Removing the Activate Windows watermark"],
@@ -343,7 +343,7 @@ module.exports = [
     related: ["microsoft-office-365", "nordvpn", "xbox-gift"]
   },
   {
-    slug: "nordvpn", name: "NordVPN", cat: "vpn-security", icon: "fa-solid fa-shield-halved",
+    slug: "nordvpn", logo: "nordvpn.svg", name: "NordVPN", cat: "vpn-security", icon: "fa-solid fa-shield-halved",
     ids: ["nordvpn-monthly"], official: "https://nordvpn.com/",
     intro: "NordVPN encrypts your connection on public Wi-Fi and gives you fast servers in many countries, activated on your own email.",
     bestFor: ["Freelancers working on public Wi-Fi", "Privacy-conscious users", "Travellers"],
@@ -352,7 +352,7 @@ module.exports = [
     related: ["surfshark-vpn", "hma-vpn", "windows-pro-key"]
   },
   {
-    slug: "surfshark-vpn", name: "Surfshark VPN", cat: "vpn-security", icon: "fa-solid fa-water",
+    slug: "surfshark-vpn", logo: "surfshark.svg", name: "Surfshark VPN", cat: "vpn-security", icon: "fa-solid fa-water",
     ids: ["surfshark-monthly"], official: "https://surfshark.com/",
     intro: "Surfshark is a budget VPN that works on unlimited devices. Our monthly plan is the cheapest way to get a premium VPN.",
     bestFor: ["Budget buyers", "Families with many devices"],
@@ -361,7 +361,7 @@ module.exports = [
     related: ["nordvpn", "hma-vpn", "windows-pro-key"]
   },
   {
-    slug: "hma-vpn", name: "HMA VPN", cat: "vpn-security", icon: "fa-solid fa-key",
+    slug: "hma-vpn", logo: "hma.webp", name: "HMA VPN", cat: "vpn-security", icon: "fa-solid fa-key",
     ids: ["key-hma"], official: "https://www.hidemyass.com/",
     intro: "HMA VPN yearly licence key, delivered digitally for activation in the HMA app.",
     bestFor: ["Users who want a full year of VPN", "Windows and Android users"],
@@ -370,7 +370,7 @@ module.exports = [
     related: ["nordvpn", "surfshark-vpn", "windows-pro-key"]
   },
   {
-    slug: "claude-api-tokens", name: "Claude API Tokens", cat: "ai-chat", icon: "fa-solid fa-plug",
+    slug: "claude-api-tokens", logo: "claude.svg", name: "Claude API Tokens", cat: "ai-chat", icon: "fa-solid fa-plug",
     ids: ["claude-api-10m"], official: "https://www.anthropic.com/api",
     intro: "API token packs for developers who want to use Claude models inside their own apps, bots and automations. Contact us for larger volumes.",
     bestFor: ["Developers building chatbots", "Automation agencies", "SaaS builders"],
