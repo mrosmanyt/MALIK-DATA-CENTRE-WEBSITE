@@ -60,7 +60,7 @@ module.exports = [
   },
   {
     slug: "vidiq-max", logo: "vidiq.webp", name: "vidIQ Max", cat: "video-audio", icon: "fa-solid fa-chart-line",
-    ids: ["vidiq-max"], official: "https://vidiq.com/",
+    ids: ["vidiq-max", "vidiq-boost-1m"], official: "https://vidiq.com/",
     intro: "vidIQ is a YouTube growth tool used by creators to find video ideas, research keywords and optimise titles, descriptions and tags. Max is vidIQ's top plan, with its full set of research and AI tools.",
     bestFor: ["YouTubers who want more views from search and suggested videos", "New channels looking for video ideas that can rank", "Agencies managing several YouTube channels"],
     included: ["vidIQ Max plan features", "Keyword research with search volume and competition scores", "AI video ideas, titles and descriptions", "Competitor and trending video tracking", "Setup help on WhatsApp"],
@@ -72,7 +72,7 @@ module.exports = [
   },
   {
     slug: "capcut-pro", logo: "capcut.webp", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
-    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro"], official: "https://www.capcut.com/",
+    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro", "capcut-team-1m", "capcut-team-6m"], official: "https://www.capcut.com/",
     intro: "CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor. Our plans run on 2 devices, so you can edit on your phone and PC.",
     bestFor: ["TikTok, Reels and YouTube Shorts creators", "Freelance video editors on a budget", "Small businesses making product videos"],
     included: ["Pro effects, filters and transitions", "AI tools such as auto captions and background removal", "High-resolution exports", "2 devices on the shared-login plans", "Warranty for the stated plan period"],
@@ -108,7 +108,7 @@ module.exports = [
   },
   {
     slug: "cursor-pro", logo: "cursor.svg", name: "Cursor Pro", cat: "ai-coding", icon: "fa-solid fa-code",
-    ids: ["cursor-pro", "cursor-pro-12m"], official: "https://cursor.com/",
+    ids: ["cursor-pro", "cursor-pro-12m", "cursor-grok-bundle"], official: "https://cursor.com/",
     intro: "Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete. Cursor Pro raises the usage limits so you can code with AI all day.",
     bestFor: ["Software developers and freelancers", "CS students building projects", "Startups shipping fast with a small team"],
     included: ["Higher agent and chat usage limits", "Unlimited tab autocomplete", "Access to frontier coding models", "Works with your existing VS Code extensions", "Private account"],
@@ -120,8 +120,8 @@ module.exports = [
   },
   {
     slug: "lovable-pro", logo: "lovable.webp", name: "Lovable Pro", cat: "ai-coding", icon: "fa-solid fa-heart",
-    ids: ["lovable-200", "lovable-400", "lovable-600"], official: "https://lovable.dev/",
-    intro: "Lovable builds full web apps from plain-English prompts, with a database, login and one-click publishing. Our Pro plans come with 200, 400 or 600 credits and are activated on your own email.",
+    ids: ["lovable-200", "lovable-400", "lovable-600", "lovable-pro-100-1m", "lovable-pro-100-3m", "lovable-lite-12m"], official: "https://lovable.dev/",
+    intro: "Lovable builds full web apps from plain-English prompts, with a database, login and one-click publishing. Choose Pro with 100, 200, 400 or 600 credits, or the yearly Lite plan with 300 credits.",
     bestFor: ["Founders building an MVP without a dev team", "Freelancers delivering client websites fast", "Non-coders turning ideas into working apps"],
     included: ["Monthly Lovable Pro credits (200, 400 or 600)", "Private projects and custom domains", "Supabase database and auth integration", "GitHub sync", "Activated on your own email"],
     faqs: [
@@ -147,7 +147,7 @@ module.exports = [
     ids: ["n8n-starter-12m"], aliases: ["n8n-starter"], official: "https://n8n.io/",
     intro: "n8n is a workflow automation platform for connecting apps, APIs and AI agents. The Starter Cloud plan is hosted by n8n, so you build automations without managing a server.",
     bestFor: ["Agencies building WhatsApp, email and CRM automations", "Businesses automating lead capture and follow-ups", "Developers building AI agents"],
-    included: ["Hosted n8n cloud workspace", "Visual workflow builder", "Hundreds of app integrations", "AI agent and LLM nodes", "1-month (131k credits) and 12-month plans"],
+    included: ["Hosted n8n cloud workspace", "Visual workflow builder", "Hundreds of app integrations", "AI agent and LLM nodes", "Private account for 12 months"],
     faqs: [
       ["Can you build the automation for me?", "Yes. See our AI Automation Services page, or ask on WhatsApp for a quote."]
     ],
@@ -185,16 +185,16 @@ module.exports = [
     ids: ["manus-pro"], official: "https://manus.im/",
     intro: "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account.",
     bestFor: ["Researchers and analysts", "Business owners who delegate long research tasks", "Content teams producing reports"],
-    included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "1-month (131k credits) and 12-month plans"],
+    included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "Private account for 12 months"],
     faqs: [["Manus or ChatGPT?", "ChatGPT is a chat assistant. Manus works more like an agent that completes multi-step tasks on its own."]],
     related: ["chatgpt-go", "gumloop-pro", "gamma-pro"]
   },
   {
     slug: "gamma-pro", logo: "gamma.svg", name: "Gamma Pro", cat: "creative", icon: "fa-solid fa-display",
-    ids: ["gamma-pro"], official: "https://gamma.app/",
+    ids: ["gamma-pro", "gamma-pro-1m"], official: "https://gamma.app/",
     intro: "Gamma creates presentations, documents and simple websites from a prompt, with modern design built in. Pro removes the watermark and unlocks more AI generation.",
     bestFor: ["Students preparing presentations", "Founders building pitch decks", "Trainers and teachers"],
-    included: ["Unlimited AI generations on Pro", "No Gamma branding", "PDF and PowerPoint export", "Custom fonts and themes", "1-month (131k credits) and 12-month plans"],
+    included: ["Unlimited AI generations on Pro", "No Gamma branding", "PDF and PowerPoint export", "Custom fonts and themes", "Monthly and 12-month plans"],
     faqs: [["Can I export to PowerPoint?", "Yes. Gamma Pro exports to PDF and PowerPoint."]],
     related: ["canva-pro", "manus-ai", "notion-business"]
   },
@@ -209,7 +209,7 @@ module.exports = [
   },
   {
     slug: "grammarly-pro", logo: "grammarly.svg", name: "Grammarly Pro", cat: "creative", icon: "fa-solid fa-spell-check",
-    ids: ["grammarly-pro-12m"], official: "https://www.grammarly.com/",
+    ids: ["grammarly-pro-12m", "grammarly-pro-1m"], official: "https://www.grammarly.com/",
     intro: "Grammarly Pro checks grammar, clarity, tone and plagiarism, and rewrites full sentences with AI. It works in your browser, Word, Gmail and most apps.",
     bestFor: ["Students writing essays and theses", "Freelancers writing for international clients", "Professionals writing English emails"],
     included: ["Advanced grammar and clarity suggestions", "Tone adjustments and full-sentence rewrites", "Plagiarism checker", "Generative AI prompts", "Activated on your own email for 12 months"],
@@ -218,10 +218,10 @@ module.exports = [
   },
   {
     slug: "elevenlabs-creator", logo: "elevenlabs.svg", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
-    ids: ["elevenlabs-creator-1m", "elevenlabs-creator"], official: "https://elevenlabs.io/",
+    ids: ["elevenlabs-creator-1m", "elevenlabs-creator", "elevenlabs-creator-3m"], official: "https://elevenlabs.io/",
     intro: "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning.",
     bestFor: ["YouTube faceless channels and narrators", "Ad and explainer video makers", "Audiobook and podcast creators"],
-    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "1-month (131k credits) and 12-month plans"],
+    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "1-month and 3-month plans (131k credits a month) and a 12-month plan"],
     faqs: [["Are Urdu or Hindi voices available?", "ElevenLabs supports many languages, including Hindi. Test your script in the free version first."]],
     related: ["heygen", "cinem-ai", "capcut-pro"]
   },
@@ -236,8 +236,8 @@ module.exports = [
   },
   {
     slug: "higgsfield", logo: "higgsfield.webp", name: "Higgsfield Plus", cat: "video-audio", icon: "fa-solid fa-film",
-    ids: ["higgsfield-plus"], official: "https://higgsfield.ai/",
-    intro: "Higgsfield is an AI video studio with cinematic camera moves, effects and access to top video models in one place. The Plus plan comes with 1,200 credits.",
+    ids: ["higgsfield-plus", "higgsfield-pro-610"], official: "https://higgsfield.ai/",
+    intro: "Higgsfield is an AI video studio with cinematic camera moves, effects and access to top video models in one place. Choose the Plus plan with 1,200 credits or the Pro plan with 610 credits.",
     bestFor: ["Creators making cinematic reels and ads", "Music video and fashion content", "Agencies testing many AI video models"],
     included: ["1,200 generation credits", "Cinematic camera controls and presets", "Access to multiple AI video and image models", "Creator account", "Warranty for the stated plan period"],
     faqs: [["Higgsfield or Google AI Ultra?", "Higgsfield gives you many models and camera presets in one studio. Ultra is best if you mainly want Veo inside Google's ecosystem."]],
@@ -245,8 +245,8 @@ module.exports = [
   },
   {
     slug: "kling-ai", logo: "kling.webp", name: "Kling AI", cat: "video-audio", icon: "fa-solid fa-clapperboard",
-    ids: ["kling-std"], official: "https://klingai.com/",
-    intro: "Kling AI is a popular text-to-video and image-to-video generator known for realistic motion. The Standard plan includes 660 monthly credits.",
+    ids: ["kling-std", "kling-std-750"], official: "https://klingai.com/",
+    intro: "Kling AI is a popular text-to-video and image-to-video generator known for realistic motion. Standard plans come with 660 or 750 credits.",
     bestFor: ["Short-form video creators", "Product and ad animators", "Anyone animating still images"],
     included: ["660 monthly credits", "Text-to-video and image-to-video", "Higher-quality generations than free", "No watermark on paid generations"],
     faqs: [["Kitni videos ban sakti hain?", "It depends on length and quality settings. 660 credits is enough for regular short clips."]],
@@ -299,7 +299,7 @@ module.exports = [
   },
   {
     slug: "linkedin-premium", logo: "linkedin.svg", name: "LinkedIn Premium", cat: "creative", icon: "fa-brands fa-linkedin",
-    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
+    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m", "linkedin-career-duo-2m", "linkedin-business-duo-2m", "linkedin-sales-nav-adv-1m"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
     intro: "LinkedIn Premium Career helps job seekers stand out, and Sales Navigator helps sales teams find and contact leads. Both are applied as upgrades to your existing LinkedIn profile.",
     bestFor: ["Job seekers and fresh graduates", "Freelancers finding international clients", "B2B sales and lead generation"],
     included: ["InMail credits", "See who viewed your profile", "LinkedIn Learning (Career)", "Advanced lead search (Sales Navigator)", "Upgrade on your own profile"],
@@ -386,5 +386,381 @@ module.exports = [
     included: ["Your chosen token pack (1B or 31B)", "Setup help on WhatsApp"],
     faqs: [["Which pack should I choose?", "Choose 1B tokens for lighter use or 31B tokens for heavy use. Ask on WhatsApp if you are unsure."]],
     related: ["claude-api-tokens", "chatgpt-go", "super-grok"]
+  },
+  {
+    "slug": "envato",
+    "logo": "envato.webp",
+    "name": "Envato",
+    "cat": "creative",
+    "icon": "fa-solid fa-leaf",
+    "ids": [
+      "envato-core-1m",
+      "envato-core-12m"
+    ],
+    "official": "https://elements.envato.com/",
+    "intro": "Envato's subscription gives unlimited downloads of stock video, music, graphics, templates, fonts and more from one library. Choose a monthly or yearly Core plan.",
+    "bestFor": [
+      "Video editors needing templates and stock footage",
+      "Designers needing fonts, mockups and graphics",
+      "Agencies producing content every day"
+    ],
+    "included": [
+      "Unlimited downloads from the Envato library",
+      "Video templates, music, graphics and fonts",
+      "Commercial licence for downloaded items",
+      "Monthly or 12-month plans"
+    ],
+    "faqs": [
+      [
+        "Can I use downloads in client projects?",
+        "Envato's licence covers commercial projects. Each item is licensed when you download it, so register the project name at download time."
+      ]
+    ],
+    "related": [
+      "storyblocks",
+      "artlist",
+      "canva-pro"
+    ]
+  },
+  {
+    "slug": "stealthgpt",
+    "logo": "stealthgpt.webp",
+    "name": "StealthGPT Pro",
+    "cat": "creative",
+    "icon": "fa-solid fa-user-secret",
+    "ids": [
+      "stealthgpt-pro"
+    ],
+    "official": "https://www.stealthgpt.ai/",
+    "intro": "StealthGPT is an AI writer and humanizer that rewrites AI-generated text so it reads naturally. The Pro plan raises the word limits.",
+    "bestFor": [
+      "Students editing drafts",
+      "Content writers and bloggers",
+      "Freelancers polishing AI-assisted copy"
+    ],
+    "included": [
+      "StealthGPT Pro plan features",
+      "AI humanizer and rewriter",
+      "AI essay and content writer",
+      "Setup help on WhatsApp"
+    ],
+    "faqs": [
+      [
+        "Is StealthGPT the same as ChatGPT?",
+        "No. StealthGPT focuses on rewriting and humanizing text, while ChatGPT is a general assistant."
+      ]
+    ],
+    "related": [
+      "quillbot",
+      "grammarly-pro",
+      "chatgpt-go"
+    ]
+  },
+  {
+    "slug": "storyblocks",
+    "logo": "storyblocks.webp",
+    "name": "Storyblocks Unlimited",
+    "cat": "creative",
+    "icon": "fa-solid fa-photo-film",
+    "ids": [
+      "storyblocks-unlimited-1m"
+    ],
+    "official": "https://www.storyblocks.com/",
+    "intro": "Storyblocks is a subscription stock library with royalty-free video, audio and images. The Unlimited plan allows unlimited downloads.",
+    "bestFor": [
+      "YouTube and faceless channel creators",
+      "Video editors needing B-roll",
+      "Marketers making ads"
+    ],
+    "included": [
+      "Unlimited downloads",
+      "Stock video, music, sound effects and images",
+      "Royalty-free licence",
+      "1-month plan"
+    ],
+    "faqs": [
+      [
+        "Storyblocks or Envato?",
+        "Storyblocks focuses on stock video and audio. Envato also covers templates, fonts and graphics."
+      ]
+    ],
+    "related": [
+      "envato",
+      "artlist",
+      "capcut-pro"
+    ]
+  },
+  {
+    "slug": "academi-cx",
+    "logo": "academi.webp",
+    "name": "Academi.cx Pro",
+    "cat": "creative",
+    "icon": "fa-solid fa-graduation-cap",
+    "ids": [
+      "academi-cx-pro-1m"
+    ],
+    "official": "https://academi.cx/",
+    "intro": "Academi.cx offers AI tools for academic research and writing. The Pro plan unlocks its full feature set for a month.",
+    "bestFor": [
+      "University students",
+      "Researchers and thesis writers",
+      "Teachers preparing material"
+    ],
+    "included": [
+      "Academi.cx Pro plan features",
+      "AI research and writing tools",
+      "1-month plan",
+      "Setup help on WhatsApp"
+    ],
+    "faqs": [
+      [
+        "Is this activated on my own account?",
+        "Delivery details are confirmed on WhatsApp after ordering."
+      ]
+    ],
+    "related": [
+      "quillbot",
+      "grammarly-pro",
+      "coursera-plus"
+    ]
+  },
+  {
+    "slug": "genspark",
+    "logo": "genspark.webp",
+    "name": "Genspark Plus",
+    "cat": "ai-chat",
+    "icon": "fa-solid fa-wand-sparkles",
+    "ids": [
+      "genspark-plus-1m"
+    ],
+    "official": "https://www.genspark.ai/",
+    "intro": "Genspark is an AI agent workspace that researches, builds slides, writes documents and completes multi-step tasks. Plus raises the credits and unlocks more agents.",
+    "bestFor": [
+      "Researchers and analysts",
+      "Founders and consultants making decks",
+      "Power users of AI agents"
+    ],
+    "included": [
+      "Genspark Plus plan features",
+      "AI Super Agent and specialist agents",
+      "AI slides, docs and research",
+      "1-month plan"
+    ],
+    "faqs": [
+      [
+        "Genspark or Manus?",
+        "Both are AI agents. Genspark is strong at slides and research outputs; Manus is a general autonomous agent."
+      ]
+    ],
+    "related": [
+      "manus-ai",
+      "chatgpt-go",
+      "gamma-pro"
+    ]
+  },
+  {
+    "slug": "ideogram",
+    "logo": "ideogram.webp",
+    "name": "Ideogram Plus",
+    "cat": "creative",
+    "icon": "fa-solid fa-image",
+    "ids": [
+      "ideogram-plus"
+    ],
+    "official": "https://ideogram.ai/",
+    "intro": "Ideogram is an AI image generator known for accurate text inside images, which makes it popular for posters, logos and thumbnails.",
+    "bestFor": [
+      "Designers making posters and logos",
+      "YouTubers creating thumbnails",
+      "Marketers creating social posts"
+    ],
+    "included": [
+      "Ideogram Plus plan features",
+      "Accurate text rendering in images",
+      "Private generations",
+      "Setup help on WhatsApp"
+    ],
+    "faqs": [
+      [
+        "Is Ideogram good for logos?",
+        "Yes. Its strength is readable text inside images, which suits logos and posters."
+      ]
+    ],
+    "related": [
+      "canva-pro",
+      "higgsfield",
+      "artlist"
+    ]
+  },
+  {
+    "slug": "artlist",
+    "logo": "artlist.webp",
+    "name": "Artlist Pro",
+    "cat": "creative",
+    "icon": "fa-solid fa-music",
+    "ids": [
+      "artlist-pro"
+    ],
+    "official": "https://artlist.io/",
+    "intro": "Artlist is a library of royalty-free music, sound effects and stock footage for video creators.",
+    "bestFor": [
+      "YouTubers needing copyright-safe music",
+      "Video editors and filmmakers",
+      "Brands making ads"
+    ],
+    "included": [
+      "Artlist Pro plan features",
+      "Royalty-free music and sound effects",
+      "Stock footage",
+      "Setup help on WhatsApp"
+    ],
+    "faqs": [
+      [
+        "Will I get copyright claims on YouTube?",
+        "Artlist music is licensed for YouTube. Clear any claim with your Artlist licence if one appears."
+      ]
+    ],
+    "related": [
+      "storyblocks",
+      "envato",
+      "capcut-pro"
+    ]
+  },
+  {
+    "slug": "quillbot",
+    "logo": "quillbot.webp",
+    "name": "QuillBot Premium",
+    "cat": "creative",
+    "icon": "fa-solid fa-feather-pointed",
+    "ids": [
+      "quillbot-premium-1m"
+    ],
+    "official": "https://quillbot.com/",
+    "intro": "QuillBot is an AI writing tool for paraphrasing, grammar checking, summarizing and plagiarism checking. Premium removes word limits and unlocks all modes.",
+    "bestFor": [
+      "Students writing assignments",
+      "Non-native English writers",
+      "Bloggers and content writers"
+    ],
+    "included": [
+      "Unlimited paraphrasing and all modes",
+      "Grammar checker and summarizer",
+      "Plagiarism checker",
+      "1-month plan"
+    ],
+    "faqs": [
+      [
+        "QuillBot or Grammarly?",
+        "QuillBot is best at paraphrasing and summarizing. Grammarly is best at grammar, tone and clarity checks."
+      ]
+    ],
+    "related": [
+      "grammarly-pro",
+      "stealthgpt",
+      "academi-cx"
+    ]
+  },
+  {
+    "slug": "wink",
+    "logo": "wink.webp",
+    "name": "Wink Standard",
+    "cat": "video-audio",
+    "icon": "fa-solid fa-wand-magic",
+    "ids": [
+      "wink-standard-1m"
+    ],
+    "official": "https://www.wink.ai/",
+    "intro": "Wink is an AI video and photo editor known for its video quality enhancer, retouching and beauty tools.",
+    "bestFor": [
+      "Reels and TikTok creators",
+      "Anyone improving low-quality videos",
+      "Portrait and selfie editing"
+    ],
+    "included": [
+      "Wink Standard plan features",
+      "AI video quality enhancement",
+      "Retouching and editing tools",
+      "1-month plan"
+    ],
+    "faqs": [
+      [
+        "Does Wink work on phone and PC?",
+        "Wink is mainly a mobile app. Check device support on WhatsApp before ordering."
+      ]
+    ],
+    "related": [
+      "capcut-pro",
+      "dreamface",
+      "picsart-pro"
+    ]
+  },
+  {
+    "slug": "dreamface",
+    "logo": "dreamface.webp",
+    "name": "DreamFace",
+    "cat": "video-audio",
+    "icon": "fa-solid fa-face-smile",
+    "ids": [
+      "dreamface-1m",
+      "dreamface-12m"
+    ],
+    "official": "https://dreamfaceapp.com/",
+    "intro": "DreamFace creates AI avatars, talking photos and lip-sync videos from your images. Choose a monthly or yearly plan.",
+    "bestFor": [
+      "Creators making talking-photo content",
+      "Faceless channels",
+      "Fun and meme content"
+    ],
+    "included": [
+      "DreamFace premium features",
+      "AI talking photos and avatars",
+      "Lip-sync videos",
+      "Monthly or 12-month plans"
+    ],
+    "faqs": [
+      [
+        "DreamFace or HeyGen?",
+        "DreamFace is a simple, low-cost app for talking photos. HeyGen is a professional avatar video platform."
+      ]
+    ],
+    "related": [
+      "heygen",
+      "wink",
+      "kalakar"
+    ]
+  },
+  {
+    "slug": "kalakar",
+    "logo": "kalakar.webp",
+    "name": "Kalakar",
+    "cat": "video-audio",
+    "icon": "fa-solid fa-film",
+    "ids": [
+      "kalakar-editor",
+      "kalakar-creator"
+    ],
+    "official": "https://kalakar.io/",
+    "intro": "Kalakar.io offers AI tools for creating and editing videos. Choose the Editor or the higher Creator plan.",
+    "bestFor": [
+      "Video creators",
+      "Social media managers",
+      "Small businesses making video content"
+    ],
+    "included": [
+      "Kalakar Editor or Creator plan features",
+      "AI video tools",
+      "Setup help on WhatsApp"
+    ],
+    "faqs": [
+      [
+        "Which plan should I pick?",
+        "Editor is the lower plan. Creator has higher limits. Ask on WhatsApp if unsure."
+      ]
+    ],
+    "related": [
+      "capcut-pro",
+      "dreamface",
+      "wink"
+    ]
   }
 ];

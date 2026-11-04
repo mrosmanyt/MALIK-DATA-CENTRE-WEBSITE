@@ -5,7 +5,7 @@
 Website: https://www.malikdatacentre.store/
 WhatsApp: +92 344 5739206, +92 348 9057646
 Email: support@malikdatacentre.store
-Prices last changed: 2026-11-03
+Prices last changed: 2026-11-04
 
 ## Tools and starting prices (PKR, approx. USD in brackets)
 
@@ -13,31 +13,31 @@ Prices last changed: 2026-11-03
 - [Gemini Pro (Google AI Pro)](https://www.malikdatacentre.store/tools/gemini-pro/): from Rs 1,500 ($5.40) — 12 Months Plan Rs 1,500 / $5.40 (Activated on Client Email)
 - [Google AI Ultra](https://www.malikdatacentre.store/tools/google-ai-ultra/): from Rs 2,500 ($9) — 1 Month Subscription Rs 2,500 / $9 (Shared Premium Account); 1 Month Plan Rs 29,999 / $108 (Delivered on WhatsApp); 1 Month Subscription Rs 26,000 / $93.60 (Dedicated Slot)
 - [SuperGrok + X Premium+](https://www.malikdatacentre.store/tools/super-grok/): from Rs 3,500 ($12.60) — 1 Month Plan Rs 3,500 / $12.60 (Activated on Client Email); Monthly Plan Rs 4,999 / $18 (Activated on Client Email); 1 Month Plan Rs 19,999 / $72 (Activated on Client Email)
-- [vidIQ Max](https://www.malikdatacentre.store/tools/vidiq-max/): from Rs 1,500 ($5.40) — 1 Month Plan Rs 1,500 / $5.40 (Delivered on WhatsApp)
-- [CapCut Pro](https://www.malikdatacentre.store/tools/capcut-pro/): from Rs 800 ($2.88) — 1 Month Rs 800 / $2.88 (2 Devices Login); 3 Months Rs 2,800 / $10.08 (2 Devices Login); 6 Months Rs 4,800 / $17.28 (2 Devices Login); Monthly Access Rs 1,250 / $4.50 (Private Activation)
+- [vidIQ Max](https://www.malikdatacentre.store/tools/vidiq-max/): from Rs 700 ($2.52) — 1 Month Plan Rs 1,500 / $5.40 (Delivered on WhatsApp); 1 Month Plan Rs 700 / $2.52 (Delivered on WhatsApp)
+- [CapCut Pro](https://www.malikdatacentre.store/tools/capcut-pro/): from Rs 650 ($2.34) — 1 Month Rs 800 / $2.88 (2 Devices Login); 3 Months Rs 2,800 / $10.08 (2 Devices Login); 6 Months Rs 4,800 / $17.28 (2 Devices Login); Monthly Access Rs 1,250 / $4.50 (Private Activation); 1 Month Plan Rs 650 / $2.34 (Team Invite); 6 Months Plan Rs 4,100 / $14.76 (Team Invite)
 - [Canva Pro](https://www.malikdatacentre.store/tools/canva-pro/): from Rs 400 ($1.44) — 12 Months Plan Rs 400 / $1.44 (Activated on Client Email); 12 Months Plan Rs 4,500 / $16.20 (Admin Panel Access)
 - [Adobe Creative Cloud](https://www.malikdatacentre.store/tools/adobe-creative-cloud/): from Rs 3,900 ($14.04) — 3 Months Plan Rs 4,000 / $14.40 (Creative Cloud Suite); 4 Months Plan Rs 3,900 / $14.04 (Activated on Client Email); 6 Months Plan Rs 7,000 / $25.20 (Creative Cloud Suite); 12 Months Plan Rs 12,000 / $43.20 (Creative Cloud Suite)
-- [Cursor Pro](https://www.malikdatacentre.store/tools/cursor-pro/): from Rs 4,200 ($15.12) — 1 Month Plan Rs 4,200 / $15.12 (Private Account); 12 Months Plan Rs 21,000 / $75.60 (Private Account)
-- [Lovable Pro](https://www.malikdatacentre.store/tools/lovable-pro/): from Rs 3,500 ($12.60) — 200 Credits Plan Rs 3,500 / $12.60 (Activated on Client Email); 400 Credits Plan Rs 5,000 / $18 (Activated on Client Email); 600 Credits Plan Rs 6,000 / $21.60 (Activated on Client Email)
+- [Cursor Pro](https://www.malikdatacentre.store/tools/cursor-pro/): from Rs 4,200 ($15.12) — 1 Month Plan Rs 4,200 / $15.12 (Private Account); 12 Months Plan Rs 21,000 / $75.60 (Private Account); Bundle Rs 4,900 / $17.64 (Delivered on WhatsApp)
+- [Lovable Pro](https://www.malikdatacentre.store/tools/lovable-pro/): from Rs 2,200 ($7.92) — 200 Credits Plan Rs 3,500 / $12.60 (Activated on Client Email); 400 Credits Plan Rs 5,000 / $18 (Activated on Client Email); 600 Credits Plan Rs 6,000 / $21.60 (Activated on Client Email); 1 Month Plan Rs 2,200 / $7.92 (Ready-Made Account); 3 Months Plan Rs 4,650 / $16.74 (Ready-Made Account); 12 Months Plan Rs 2,400 / $8.64 (Ready-Made Account)
 - [Replit Core](https://www.malikdatacentre.store/tools/replit-core/): from Rs 9,500 ($34.20) — 12 Months Plan Rs 10,700 / $38.52 (Private Account); $100 Credit Plan Rs 9,500 / $34.20 (Ready-Made Account)
 - [n8n Starter Cloud](https://www.malikdatacentre.store/tools/n8n-starter/): from Rs 6,500 ($23.40) — 12 Months Plan Rs 6,500 / $23.40 (Private Account)
 - [Gumloop Pro](https://www.malikdatacentre.store/tools/gumloop-pro/): from Rs 4,550 ($16.38) — 12 Months Plan Rs 4,550 / $16.38 (Activated on Client Email)
 - [Warp Build CI/CD](https://www.malikdatacentre.store/tools/warp-build/): from Rs 4,800 ($17.28) — 12 Months Plan Rs 4,800 / $17.28 (Premium Plan)
 - [Wispr Flow Pro](https://www.malikdatacentre.store/tools/wispr-flow/): from Rs 7,500 ($27) — 12 Months Plan Rs 7,500 / $27 (Writing Assistant)
 - [Manus Pro](https://www.malikdatacentre.store/tools/manus-ai/): from Rs 13,000 ($46.80) — 12 Months Plan Rs 13,000 / $46.80 (Private Account)
-- [Gamma Pro](https://www.malikdatacentre.store/tools/gamma-pro/): from Rs 9,500 ($34.20) — 12 Months Plan Rs 9,500 / $34.20 (Private Account)
+- [Gamma Pro](https://www.malikdatacentre.store/tools/gamma-pro/): from Rs 2,400 ($8.64) — 12 Months Plan Rs 9,500 / $34.20 (Private Account); 1 Month Plan Rs 2,400 / $8.64 (Private Account)
 - [Notion Business](https://www.malikdatacentre.store/tools/notion-business/): from Rs 4,600 ($16.56) — 12 Months Plan Rs 4,600 / $16.56 (Workspace Activation)
-- [Grammarly Pro](https://www.malikdatacentre.store/tools/grammarly-pro/): from Rs 3,500 ($12.60) — 12 Months Plan Rs 3,500 / $12.60 (Activated on Client Email)
-- [ElevenLabs Creator](https://www.malikdatacentre.store/tools/elevenlabs-creator/): from Rs 2,300 ($8.28) — 1 Month Plan Rs 2,300 / $8.28 (Private Account); 12 Months Plan Rs 12,000 / $43.20 (Private Account)
+- [Grammarly Pro](https://www.malikdatacentre.store/tools/grammarly-pro/): from Rs 1,400 ($5.04) — 12 Months Plan Rs 3,500 / $12.60 (Activated on Client Email); 1 Month Plan Rs 1,400 / $5.04 (Activated on Client Email)
+- [ElevenLabs Creator](https://www.malikdatacentre.store/tools/elevenlabs-creator/): from Rs 2,300 ($8.28) — 1 Month Plan Rs 2,300 / $8.28 (Private Account); 12 Months Plan Rs 12,000 / $43.20 (Private Account); 3 Months Plan Rs 3,600 / $12.96 (Private Account)
 - [HeyGen Creator](https://www.malikdatacentre.store/tools/heygen/): from Rs 5,800 ($20.88) — 200 Credits Plan Rs 5,800 / $20.88 (Private Account)
-- [Higgsfield Plus](https://www.malikdatacentre.store/tools/higgsfield/): from Rs 7,500 ($27) — 1200 Credits Plan Rs 7,500 / $27 (Creator Account)
-- [Kling AI](https://www.malikdatacentre.store/tools/kling-ai/): from Rs 1,300 ($4.68) — 660 Credits Monthly Rs 1,300 / $4.68 (Premium Account)
+- [Higgsfield Plus](https://www.malikdatacentre.store/tools/higgsfield/): from Rs 6,400 ($23.04) — 1200 Credits Plan Rs 7,500 / $27 (Creator Account); 610 Credits Plan Rs 6,400 / $23.04 (Creator Account)
+- [Kling AI](https://www.malikdatacentre.store/tools/kling-ai/): from Rs 1,300 ($4.68) — 660 Credits Monthly Rs 1,300 / $4.68 (Premium Account); 750 Credits Plan Rs 2,400 / $8.64 (Premium Account)
 - [Cinem AI Video](https://www.malikdatacentre.store/tools/cinem-ai/): from Rs 7,000 ($25.20) — Monthly Access Rs 7,000 / $25.20 (Creator Account Portal)
 - [Picsart Pro](https://www.malikdatacentre.store/tools/picsart-pro/): from Rs 3,500 ($12.60) — 11 Months Plan Rs 3,500 / $12.60 (Activated on Client Email)
 - [YouTube Premium](https://www.malikdatacentre.store/tools/youtube-premium/): from Rs 500 ($1.80) — Monthly Access Rs 500 / $1.80 (Activated on Client Email); 3 Months Plan Rs 1,200 / $4.32 (Activated on Client Email); 12 Months Plan Rs 6,200 / $22.32 (Activated on Client Email)
 - [Amazon Prime Video](https://www.malikdatacentre.store/tools/amazon-prime-video/): from Rs 1,500 ($5.40) — 6 Months Plan Rs 1,500 / $5.40 (Private Profile Login)
 - [Xbox Gift Codes](https://www.malikdatacentre.store/tools/xbox-gift/): from Rs 600 ($2.16) — Random Voucher Rs 600 / $2.16 (Digital Code Delivery); 1 Month Plan Rs 1,800 / $6.48 (Digital Code Delivery)
-- [LinkedIn Premium](https://www.malikdatacentre.store/tools/linkedin-premium/): from Rs 1,800 ($6.48) — 3 Months Plan Rs 1,800 / $6.48 (Professional Premium); 2 Months Plan Rs 1,800 / $6.48 (Core Account Upgrade)
+- [LinkedIn Premium](https://www.malikdatacentre.store/tools/linkedin-premium/): from Rs 1,800 ($6.48) — 3 Months Plan Rs 1,800 / $6.48 (Professional Premium); 2 Months Plan Rs 1,800 / $6.48 (Core Account Upgrade); 2 Months Voucher Rs 3,200 / $11.52 (Voucher on Your Account); 2 Months Voucher Rs 3,700 / $13.32 (Voucher on Your Account); 1 Month Voucher Rs 5,200 / $18.72 (Voucher on Your Account)
 - [Coursera Plus](https://www.malikdatacentre.store/tools/coursera-plus/): from Rs 3,200 ($11.52) — 12 Months Plan Rs 3,200 / $11.52 (Private Activation)
 - [Zoom Pro](https://www.malikdatacentre.store/tools/zoom-pro/): from Rs 1,500 ($5.40) — Monthly Access Rs 1,500 / $5.40 (Premium Account Login)
 - [Microsoft 365](https://www.malikdatacentre.store/tools/microsoft-office-365/): from Rs 29,900 ($107.64) — 12 Months Plan Rs 29,900 / $107.64 (Activated on Client Email)
@@ -47,6 +47,17 @@ Prices last changed: 2026-11-03
 - [HMA VPN](https://www.malikdatacentre.store/tools/hma-vpn/): from Rs 5,500 ($19.80) — Yearly License Key Rs 5,500 / $19.80 (License Key Delivery)
 - [Claude API Tokens](https://www.malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 ($4.32) — API Key Pack Rs 1,200 / $4.32 (API Key Access)
 - [Muse AI Tokens](https://www.malikdatacentre.store/tools/muse-ai/): from Rs 300 ($1.08) — 1B Tokens Pack Rs 300 / $1.08 (API Key Access); 31B Tokens Pack Rs 1,500 / $5.40 (API Key Access)
+- [Envato](https://www.malikdatacentre.store/tools/envato/): from Rs 2,000 ($7.20) — 1 Month Plan Rs 2,000 / $7.20 (Ready-Made Account); 12 Months Plan Rs 8,300 / $29.88 (Ready-Made Account)
+- [StealthGPT Pro](https://www.malikdatacentre.store/tools/stealthgpt/): from Rs 2,400 ($8.64) — Pro Plan Rs 2,400 / $8.64 (Ready-Made Account)
+- [Storyblocks Unlimited](https://www.malikdatacentre.store/tools/storyblocks/): from Rs 3,400 ($12.24) — 1 Month Plan Rs 3,400 / $12.24 (Ready-Made Account)
+- [Academi.cx Pro](https://www.malikdatacentre.store/tools/academi-cx/): from Rs 3,200 ($11.52) — 1 Month Plan Rs 3,200 / $11.52 (Ready-Made Account)
+- [Genspark Plus](https://www.malikdatacentre.store/tools/genspark/): from Rs 5,300 ($19.08) — 1 Month Plan Rs 5,300 / $19.08 (Ready-Made Account)
+- [Ideogram Plus](https://www.malikdatacentre.store/tools/ideogram/): from Rs 2,400 ($8.64) — Plus Plan Rs 2,400 / $8.64 (Ready-Made Account)
+- [Artlist Pro](https://www.malikdatacentre.store/tools/artlist/): from Rs 3,500 ($12.60) — Pro Plan Rs 3,500 / $12.60 (Ready-Made Account)
+- [QuillBot Premium](https://www.malikdatacentre.store/tools/quillbot/): from Rs 1,800 ($6.48) — 1 Month Plan Rs 1,800 / $6.48 (Ready-Made Account)
+- [Wink Standard](https://www.malikdatacentre.store/tools/wink/): from Rs 2,100 ($7.56) — 1 Month Plan Rs 2,100 / $7.56 (Ready-Made Account)
+- [DreamFace](https://www.malikdatacentre.store/tools/dreamface/): from Rs 1,400 ($5.04) — 1 Month Plan Rs 1,400 / $5.04 (Ready-Made Account); 12 Months Plan Rs 4,200 / $15.12 (Ready-Made Account)
+- [Kalakar](https://www.malikdatacentre.store/tools/kalakar/): from Rs 1,400 ($5.04) — Editor Plan Rs 1,400 / $5.04 (Ready-Made Account); Creator Plan Rs 2,100 / $7.56 (Ready-Made Account)
 
 ## Latest guides
 
