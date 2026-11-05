@@ -961,7 +961,7 @@ const TOOLS_DATABASE = [
         setup: "Creator Account Portal",
         desc: "Leading-edge video generation AI software. Generate cinematic, high-definition videos from prompts.",
         specs: ["Cinematic photorealistic videos", "High frame-rate rendering options", "Creator tools subscription tier", "Full monthly warranty"],
-        icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: #7c3aed"><rect x="2" y="3" width="20" height="14" rx="2" stroke-linejoin="round"/><path d="M8 21h8M12 17v4" stroke-linecap="round"/><path d="M10 8l5 3-5 3V8z" fill="currentColor"/></svg>`
+        icon: `<img src="/assets/logos/cinem-ai.webp" alt="Cinem AI Video logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
         id: "vidiq-boost-1m",
@@ -1328,15 +1328,35 @@ const WHATSAPP_NUMBER = "+923445739206";
 const WHATSAPP_NUMBER_2 = "+923489057646";
 
 // Tools flagged as Best Seller / Popular (shown with ribbons + boosted in popularity sort)
-const BESTSELLER_IDS = ["chatgpt-go-6m"];
-const POPULAR_IDS = ["gemini-pro-12m", "canva-yearly", "capcut-pro-1m", "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-shared-1m"];
+const BESTSELLER_IDS = ["chatgpt-go-6m", "capcut-pro-1m", "gemini-pro-12m"];
+const POPULAR_IDS = ["grok-1m", "elevenlabs-creator-1m", "adobe-12m", "canva-yearly", "cursor-pro", "grammarly-pro-1m", "kling-std", "quillbot-premium-1m"];
 if (window.MDC_CMS && typeof window.MDC_CMS.ribbons === "function") { try { window.MDC_CMS.ribbons(BESTSELLER_IDS, POPULAR_IDS); } catch (e) { console.warn(e); } }
-// Order used by the "Most Popular" sort
+// Order used by the "Most Popular" sort (homepage default)
 const POPULARITY_ORDER = [
-    "vidiq-max", "chatgpt-go-6m", "google-veo3-ultra-20x", "google-ai-ultra-shared-1m",
-    "gemini-pro-12m", "capcut-pro-1m", "canva-yearly", "capcut-pro-3m", "capcut-pro-6m",
-    "adobe-12m", "youtube-12m", "cursor-pro", "google-ai-ultra-25k-slot",
-    "lovable-200", "grok-1m", "grok-bot-premium-1m", "elevenlabs-creator", "heygen-200"
+    "chatgpt-go-6m",
+    "capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-team-1m",
+    "gemini-pro-12m",
+    "grok-1m", "grok-bot-premium-1m",
+    "elevenlabs-creator-1m", "elevenlabs-creator-3m",
+    "adobe-12m", "adobe-6m", "adobe-3m", "adobe-cc-4m",
+    "grammarly-pro-1m", "grammarly-pro-12m",
+    "canva-yearly", "canva-pro-1y", "envato-core-1m",
+    "cursor-pro", "cursor-grok-bundle",
+    "kling-std", "kling-std-750", "higgsfield-plus", "higgsfield-pro-610",
+    "quillbot-premium-1m",
+    "linkedin-career", "linkedin-career-3m",
+    "google-ai-ultra-shared-1m", "google-veo3-ultra-20x",
+    "youtube-12m", "youtube-3m", "youtube-1m",
+    "claude-api-10m",
+    "heygen-200",
+    "vidiq-max", "vidiq-boost-1m",
+    "lovable-200", "lovable-pro-100-1m",
+    "gamma-pro-1m", "ideogram-plus",
+    "muse-ai-1b", "muse-ai-31b",
+    "capcut-pro",
+    "grok-heavy-1m",
+    "google-ai-ultra-25k-slot",
+    "elevenlabs-creator"
 ];
 
 // State Management

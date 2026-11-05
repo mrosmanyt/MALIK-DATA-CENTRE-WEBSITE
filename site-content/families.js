@@ -253,8 +253,8 @@ module.exports = [
     related: ["higgsfield", "google-ai-ultra", "heygen"]
   },
   {
-    slug: "cinem-ai", name: "Cinem AI Video", cat: "video-audio", icon: "fa-solid fa-video",
-    ids: ["cinem-ai-monthly"], official: "",
+    slug: "cinem-ai", logo: "cinem-ai.webp", name: "Cinem AI Video", cat: "video-audio", icon: "fa-solid fa-video",
+    ids: ["cinem-ai-monthly"], official: "https://cinem-ai.com/",
     intro: "Cinem AI is a creator portal for generating AI video content. The monthly plan gives you access through a creator account.",
     bestFor: ["Creators producing AI video every week", "Agencies testing AI video tools"],
     included: ["Monthly creator access", "AI video generation tools", "Setup guide on WhatsApp"],
