@@ -410,18 +410,28 @@ module.exports = [
   },
   {
     slug: "claude-api-tokens", logo: "claude.svg", name: "Claude API Tokens", cat: "ai-chat", icon: "fa-solid fa-plug",
-    ids: ["claude-api-10m", "claude-api-10m-1d", "claude-api-50m-1d", "claude-api-100m-3d", "claude-api-200m-1d", "claude-api-500m-1d", "claude-api-1b-30d", "claude-api-500-credits"],
+    ids: ["claude-api-10m", "claude-api-10m-1d", "claude-api-50m-1d", "claude-api-100m-1d", "claude-api-100m-3d", "claude-api-200m-1d", "claude-api-500m-1d", "claude-api-1b-7d", "claude-api-1b-30d", "claude-api-500-credits", "claude-api-50-token-1m", "claude-kiro-100-1m", "claude-kiro-200-1m"],
     official: "https://www.anthropic.com/api",
-    extraKeywords: "Claude API tokens Pakistan, buy Claude API credits, Claude API price on request, Claude 1B tokens, Claude API 500 credits",
-    intro: "Claude API token packs and a $500 credit pack for developers calling Claude from their own apps, bots and automations. One 10 million token pack has a listed PKR price. The 1-day, 3-day and 30-day packs, from 10 million up to 1 billion tokens, are price on request: message us on WhatsApp and we confirm the amount before you pay.",
+    extraKeywords: "Claude API tokens Pakistan, buy Claude API credits, Claude API price on request, Claude 1B tokens, Claude Kiro API, Claude API 100 million 1 day",
+    intro: "Claude API token packs, credit packs and Kiro packs for developers calling Claude from their own apps. One 10 million token pack has a listed PKR price. The other packs, including 1-day, 3-day, 7-day, 30-day and 1-month sizes, are price on request: message us on WhatsApp and we confirm the amount before you pay.",
     bestFor: ["Developers building chatbots and agents", "Teams that need a short high-volume token window", "Anyone buying Claude API credits from Pakistan without listing a card price up front"],
-    included: ["Listed 10M token pack with a PKR price", "10M, 50M, 200M and 500M token packs for 1 day (price on request, full warranty)", "100M tokens for 3 days (price on request, full warranty)", "1 billion tokens for 30 days (price on request, 7-day warranty)", "$500 Claude API credit pack (price on request)", "API key delivered on WhatsApp"],
+    included: ["Listed 10M token pack with a PKR price", "50M, 100M, 200M and 500M packs for 1 day, plus 100M for 3 days", "1 billion credits for 7 days, and 1 billion tokens for 30 days", "$50 token pack for 1 month and a $500 credit pack", "Claude Kiro API $100 and $200 packs for 1 month", "API key delivered on WhatsApp"],
     faqs: [
       ["Why is there no price on some Claude packs?", "Those packs are quoted per order. Tap Contact on WhatsApp, name the plan, and we reply with the price and the delivery steps. They are not added to the cart and they are never billed as zero."],
       ["What does the 1 billion pack include?", "1 billion Claude API tokens for 30 days, with a 7-day warranty. The selling price is confirmed on WhatsApp."],
       ["Is the $500 credit pack the same as a token pack?", "No. Token packs are sold by token count and duration. The $500 pack is a credit balance. $500 is the credit size, not our selling price."]
     ],
-    related: ["cursor-pro", "n8n-starter", "lovable-pro"]
+    related: ["claude-codex", "codex-api", "cursor-pro"]
+  },
+  {
+    slug: "claude-codex", logos: ["claude.svg", "openai.svg"], name: "Claude and Codex Credits", cat: "ai-chat", icon: "fa-solid fa-plug",
+    ids: ["claude-codex-100-7d"], official: "https://www.anthropic.com/api",
+    extraKeywords: "Claude and Codex credits Pakistan, buy Claude Codex API, Claude Codex $100 credits, price on request",
+    intro: "One pack that covers both Claude and Codex credits, sized at $100, for 7 days, with full warranty. $100 is the credit size, not the price you pay. Contact Support on WhatsApp for the amount.",
+    bestFor: ["Developers who call both Claude and Codex", "Teams that want one 7-day credit window", "Anyone comparing a combined pack with separate Claude or Codex plans"],
+    included: ["Claude and Codex credits in one pack", "$100 credit size", "7 days access", "Full warranty", "API keys delivered on WhatsApp"],
+    faqs: [["Is this the same as buying Claude and Codex separately?", "No. This is one combined $100 credit pack for 7 days. Separate Claude and Codex packs are on their own pages."]],
+    related: ["claude-api-tokens", "codex-api", "cursor-pro"]
   },
   {
     slug: "render", logo: "render.svg", name: "Render Credits", cat: "ai-coding", icon: "fa-solid fa-server",
@@ -434,12 +444,17 @@ module.exports = [
   },
   {
     slug: "codex-api", logo: "openai.svg", name: "Codex API", cat: "ai-coding", icon: "fa-solid fa-code",
-    ids: ["codex-api-all-plans"], official: "https://openai.com/codex",
-    intro: "Codex API is sold as a menu of three plans. There is no single listed price. Contact Support on WhatsApp and we confirm which plan and the amount before you pay.",
-    bestFor: ["Developers calling Codex from their own tools", "Teams that need an API plan rather than the Cursor app", "Anyone comparing more than one Codex pack"],
-    included: ["Three Codex API plans in one menu", "Price on request", "API access arranged on WhatsApp"],
-    faqs: [["Why is there no price?", "The supplier lists three plans together, starting from a low amount. We quote the exact plan on WhatsApp. It is not added to the cart."]],
-    related: ["cursor-pro", "claude-api-tokens", "replit-core"]
+    ids: ["codex-api-50m-1d", "codex-api-100m-1d", "codex-api-200m-1d", "codex-api-500m-1d", "codex-api-1b-14d", "codex-astra6-50-1m", "codex-astra6-100-1m", "codex-astra6-200-1m", "codex-astra6-500-1m"],
+    official: "https://openai.com/codex",
+    extraKeywords: "Codex API Pakistan, buy Codex API credits, Codex API price on request, Codex Astra6, Codex 1 billion credits",
+    intro: "Codex API credit packs and Astra6 token packs for developers calling OpenAI Codex from their own tools. Every pack on this page is price on request, with full warranty. Contact Support on WhatsApp and we confirm the amount before you pay.",
+    bestFor: ["Developers calling Codex from their own tools", "Teams that need a 1-day credit burst or a 1-month Astra6 pack", "Anyone comparing Codex with Cursor"],
+    included: ["50M, 100M, 200M and 500M credits for 1 day", "1 billion credits for 14 days", "Astra6 token packs sized at $50, $100, $200 and $500 for 1 month", "Full warranty on every pack", "API key delivered on WhatsApp"],
+    faqs: [
+      ["Why is there no price?", "Each Codex pack is quoted per order. Tap Contact Support, name the plan, and we reply with the price. Nothing is added to the cart at zero."],
+      ["Is $50 the price of Astra6?", "No. $50, $100, $200 and $500 are the token sizes. The amount you pay is confirmed on WhatsApp."]
+    ],
+    related: ["claude-codex", "claude-api-tokens", "cursor-pro"]
   },
   {
     slug: "muse-ai", logo: "muse.svg", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",

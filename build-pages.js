@@ -95,7 +95,11 @@ const PRICE_HUMAN = human(PRICE_DATE);
 /* ---------- helpers ---------- */
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const rs = n => "Rs " + Number(n).toLocaleString("en-US");
-const famIcon = f => f.logo ? `<img src="/assets/logos/${f.logo}" alt="${esc(f.name)} logo" width="28" height="28" style="width:28px;height:28px;object-fit:contain">` : `<i class="${f.icon}"></i>`;
+const famLogos = f => (f.logos && f.logos.length ? f.logos : (f.logo ? [f.logo] : []));
+const famIcon = f => {
+  const logos = famLogos(f);
+  return logos.length ? logos.map(src => `<img src="/assets/logos/${src}" alt="${esc(f.name)} logo" width="28" height="28" style="width:28px;height:28px;object-fit:contain">`).join("") : `<i class="${f.icon}"></i>`;
+};
 const ors = t => t.originalLabel || rs(t.originalPrice);
 // USD rate is read from index.js so the site's currency switcher and these pages always agree.
 const USD_RATE = Number((fs.readFileSync(path.join(__dirname, "index.js"), "utf8").match(/USD:\s*([0-9.]+)/) || [])[1]) || 0.0036;
@@ -413,7 +417,7 @@ function planRow(t, f) {
     : `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-buy"><i class="fa-brands fa-whatsapp"></i> Buy Now</a><button class="btn-addcart" type="button" tabindex="-1" aria-hidden="true" data-id="${esc(t.id)}" data-name="${esc(t.name)}" data-price="${t.price}" data-duration="${esc(t.duration)}" data-setup="${esc(t.setup)}"></button>`;
   return `<article class="pg-plan tool-card" id="plan-${t.id}">
     <div>
-      <div class="pg-plan-name tool-title">${f.slug === "claude-api-tokens" && f.logo ? `<img src="/assets/logos/${esc(f.logo)}" alt="Claude logo" width="22" height="22" style="width:22px;height:22px;object-fit:contain;vertical-align:-4px;margin-right:8px">` : ""}${esc(t.name)} &middot; <span class="tool-duration">${esc(t.duration)}</span></div>
+      <div class="pg-plan-name tool-title">${["claude-api-tokens", "codex-api", "claude-codex"].includes(f.slug) ? famLogos(f).map(src => `<img src="/assets/logos/${esc(src)}" alt="" width="22" height="22" style="width:22px;height:22px;object-fit:contain;vertical-align:-4px;margin-right:6px">`).join("") : ""}${esc(t.name)} &middot; <span class="tool-duration">${esc(t.duration)}</span></div>
       <div class="pg-plan-sub">
         <span class="pg-chip ${ac.cls}"><i class="fa-solid fa-user-shield"></i> ${esc(ac.label)}</span>
         <span class="pg-chip"><i class="fa-solid fa-shield-halved"></i> ${esc(warrantyOf(t))}</span>

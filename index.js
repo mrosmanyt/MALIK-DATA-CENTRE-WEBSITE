@@ -1579,14 +1579,102 @@ const TOOLS_DATABASE = [
         icon: `<img src="/assets/logos/microsoftoffice.svg" alt="Microsoft 365 logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
-        id: "codex-api-all-plans",
-        name: "Codex API All Plans",
+        id: "codex-api-50m-1d",
+        name: "Codex API 50M Credits",
         category: "ai-coding",
-        duration: "3 plans",
+        duration: "1 Day",
         priceOnRequest: true,
         setup: "API Key Access",
-        desc: "Codex API is offered as three plans in one menu. There is no single listed price. Contact Support and we confirm the plan and the amount.",
-        specs: ["Three Codex API plans", "Price on request", "API key delivered on WhatsApp", "Setup help on WhatsApp"],
+        desc: "50 million Codex API credits for 1 day, with full warranty. For developers in Pakistan calling Codex from their own tools. Price on request.",
+        specs: ["50 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-100m-1d",
+        name: "Codex API 100M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "100 million Codex API credits for 1 day, with full warranty. A larger 1-day Codex pack. Price on request.",
+        specs: ["100 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-200m-1d",
+        name: "Codex API 200M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "200 million Codex API credits for 1 day, with full warranty. For heavier Codex jobs. Price on request.",
+        specs: ["200 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-500m-1d",
+        name: "Codex API 500M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "500 million Codex API credits for 1 day, with full warranty. Built for a short burst of Codex API use. Price on request.",
+        specs: ["500 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-1b-14d",
+        name: "Codex API 1B Credits",
+        category: "ai-coding",
+        duration: "14 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "1 billion Codex API credits for 14 days, with full warranty. The longest Codex credit window we arrange. Price on request.",
+        specs: ["1 billion Codex API credits", "14 days access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-50-1m",
+        name: "Codex API Astra6 $50",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $50, for 1 month, with full warranty. $50 is the token size, not the price you pay. Price on request.",
+        specs: ["Codex Astra6 $50 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-100-1m",
+        name: "Codex API Astra6 $100",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $100, for 1 month, with full warranty. $100 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $100 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-200-1m",
+        name: "Codex API Astra6 $200",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $200, for 1 month, with full warranty. $200 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $200 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-500-1m",
+        name: "Codex API Astra6 $500",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $500, for 1 month, with full warranty. $500 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $500 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
         icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
@@ -1755,6 +1843,72 @@ const TOOLS_DATABASE = [
         desc: "Pangram Pro for 12 months: check whether a piece of writing was produced by AI, on a ready-made account.",
         specs: ["Pangram Pro for 12 months", "AI writing checks", "Ready-made account", "Warranty confirmed on WhatsApp"],
         icon: `<img src="/assets/logos/pangram.svg" alt="Pangram logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-100m-1d",
+        name: "Claude API 100M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "100 million Claude API tokens for 1 day, with full warranty. Separate from the 100 million pack that runs for 3 days. Price on request.",
+        specs: ["100 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-1b-7d",
+        name: "Claude API 1B Credits",
+        category: "ai-chat",
+        duration: "7 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "1 billion Claude API credits for 7 days, with full warranty. Separate from the 1 billion pack that runs for 30 days. Price on request.",
+        specs: ["1 billion Claude API credits", "7 days access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-codex-100-7d",
+        name: "Claude and Codex $100 Credits",
+        category: "ai-chat",
+        duration: "7 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "A combined Claude and Codex credit pack sized at $100, for 7 days, with full warranty. $100 is the credit size, not the price you pay. Price on request.",
+        specs: ["Claude and Codex credits together", "$100 credit size", "7 days access", "Full warranty"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px"><img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-50-token-1m",
+        name: "Claude API $50 Token",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude API token pack sized at $50, for 1 month, with a 30-day warranty. $50 is the token size, not the selling price. Price on request.",
+        specs: ["Claude API $50 token size", "1 month access", "30-day warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-kiro-100-1m",
+        name: "Claude Kiro API $100",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude Kiro API pack sized at $100, for 1 month, with full warranty. $100 is the pack size, not the price you pay. Price on request.",
+        specs: ["Claude Kiro API $100 pack", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-kiro-200-1m",
+        name: "Claude Kiro API $200",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude Kiro API pack sized at $200, for 1 month, with full warranty. $200 is the pack size, not the price you pay. Price on request.",
+        specs: ["Claude Kiro API $200 pack", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     }
 ];
 
