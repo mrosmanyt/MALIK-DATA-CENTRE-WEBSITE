@@ -24,7 +24,7 @@ module.exports = [
   },
   {
     slug: "chatgpt-business", logo: "openai.svg", name: "ChatGPT Business", cat: "ai-chat", icon: "fa-solid fa-briefcase",
-    ids: ["chatgpt-business-1m"], official: "https://chatgpt.com/",
+    ids: ["chatgpt-business-1m", "chatgpt-business-1m-slot"], official: "https://chatgpt.com/",
     intro: "ChatGPT Business is OpenAI's team plan, sold here as a ready-made 1-month account with a 1-day warranty. It is not the same product as ChatGPT Go.",
     bestFor: ["Small teams that want a Business workspace", "Freelancers who need more than the Go plan for a month", "Anyone who wants a short trial before a longer plan"],
     included: ["ChatGPT Business workspace", "1-month ready-made account", "1-day warranty", "Setup help on WhatsApp"],
@@ -36,10 +36,10 @@ module.exports = [
     ids: ["gemini-plus-12m-link", "gemini-plus-6m-link"], official: "https://gemini.google.com/",
     intro: "Gemini Plus is Google's lower-cost Gemini plan, delivered here as an activation link for 6 or 12 months. It is a different product from Gemini Pro on your own Gmail.",
     bestFor: ["Students who want Gemini without the Pro plan", "Anyone who can use an activation link", "Buyers comparing a short plan with a full year"],
-    included: ["Gemini Plus access via an activation link", "12-month plan", "6-month plan when it is in stock", "Setup steps on WhatsApp"],
+    included: ["Gemini Plus access via an activation link", "12-month plan", "6-month plan", "Setup steps on WhatsApp"],
     faqs: [
       ["Is this the same as Gemini Pro?", "No. Gemini Pro on this store is activated on your own Gmail. Gemini Plus is a separate plan delivered as a link."],
-      ["The 6-month plan says out of stock.", "The button stays disabled until we have a link again. Message us on WhatsApp and we will tell you when it is back. The 12-month link can still be ordered."]
+      ["Which length should I pick?", "The 12-month link is the lower price. The 6-month link is the shorter plan. Both are ordered from the plans above."]
     ],
     related: ["gemini-pro", "chatgpt-go", "google-ai-ultra"]
   },
@@ -93,7 +93,7 @@ module.exports = [
   },
   {
     slug: "capcut-pro", logo: "capcut.webp", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
-    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro", "capcut-team-1m", "capcut-team-6m"], official: "https://www.capcut.com/",
+    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro", "capcut-team-1m", "capcut-team-6m", "capcut-pro-all-plans"], official: "https://www.capcut.com/",
     intro: "CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor. Our plans run on 2 devices, so you can edit on your phone and PC.",
     bestFor: ["TikTok, Reels and YouTube Shorts creators", "Freelance video editors on a budget", "Small businesses making product videos"],
     included: ["Pro effects, filters and transitions", "AI tools such as auto captions and background removal", "High-resolution exports", "2 devices on the shared-login plans", "Warranty for the stated plan period"],
@@ -129,7 +129,7 @@ module.exports = [
   },
   {
     slug: "cursor-pro", logo: "cursor.svg", name: "Cursor Pro", cat: "ai-coding", icon: "fa-solid fa-code",
-    ids: ["cursor-pro", "cursor-pro-12m", "cursor-grok-bundle"], official: "https://cursor.com/",
+    ids: ["cursor-pro", "cursor-pro-3m", "cursor-pro-12m", "cursor-grok-bundle", "cursor-pro-plus-grok-1m"], official: "https://cursor.com/",
     intro: "Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete. Cursor Pro raises the usage limits so you can code with AI all day.",
     bestFor: ["Software developers and freelancers", "CS students building projects", "Startups shipping fast with a small team"],
     included: ["Higher agent and chat usage limits", "Unlimited tab autocomplete", "Access to frontier coding models", "Works with your existing VS Code extensions", "Private account"],
@@ -203,7 +203,7 @@ module.exports = [
   },
   {
     slug: "manus-ai", logo: "manus.svg", name: "Manus Pro", cat: "ai-chat", icon: "fa-solid fa-robot",
-    ids: ["manus-pro"], official: "https://manus.im/",
+    ids: ["manus-pro", "manus-pro-1m"], official: "https://manus.im/",
     intro: "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account.",
     bestFor: ["Researchers and analysts", "Business owners who delegate long research tasks", "Content teams producing reports"],
     included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "Private account for 12 months"],
@@ -320,7 +320,7 @@ module.exports = [
   },
   {
     slug: "linkedin-premium", logo: "linkedin.svg", name: "LinkedIn Premium", cat: "creative", icon: "fa-brands fa-linkedin",
-    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m", "linkedin-career-duo-2m", "linkedin-business-duo-2m", "linkedin-sales-nav-adv-1m"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
+    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m", "linkedin-career-duo-2m", "linkedin-business-duo-2m", "linkedin-sales-nav-adv-1m", "linkedin-all-plans"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
     intro: "LinkedIn Premium Career helps job seekers stand out, and Sales Navigator helps sales teams find and contact leads. Both are applied as upgrades to your existing LinkedIn profile.",
     bestFor: ["Job seekers and fresh graduates", "Freelancers finding international clients", "B2B sales and lead generation"],
     included: ["InMail credits", "See who viewed your profile", "LinkedIn Learning (Career)", "Advanced lead search (Sales Navigator)", "Upgrade on your own profile"],
@@ -365,7 +365,7 @@ module.exports = [
   },
   {
     slug: "microsoft-office-365", logo: "microsoftoffice.svg", name: "Microsoft 365", cat: "vpn-security", icon: "fa-brands fa-microsoft",
-    ids: ["ms-office-1y"], official: "https://www.microsoft.com/microsoft-365",
+    ids: ["ms-office-1y", "ms365-admin-1y"], official: "https://www.microsoft.com/microsoft-365",
     intro: "Microsoft 365 includes Word, Excel, PowerPoint, Outlook and OneDrive cloud storage, activated on your own email for 12 months.",
     bestFor: ["Offices and accountants", "Students and teachers", "Anyone who needs genuine Office apps"],
     included: ["Word, Excel, PowerPoint and Outlook", "OneDrive cloud storage", "Desktop, web and mobile apps", "Activated on your own email"],
@@ -392,7 +392,7 @@ module.exports = [
   },
   {
     slug: "surfshark-vpn", logo: "surfshark.svg", name: "Surfshark VPN", cat: "vpn-security", icon: "fa-solid fa-water",
-    ids: ["surfshark-monthly", "surfshark-2m"], official: "https://surfshark.com/",
+    ids: ["surfshark-monthly", "surfshark-2m", "surfshark-2m-coupon"], official: "https://surfshark.com/",
     intro: "Surfshark is a budget VPN that works on unlimited devices. The monthly plan is a shared login. A separate 2-month account includes full warranty.",
     bestFor: ["Budget buyers", "Families with many devices"],
     included: ["Monthly access", "Servers in many countries", "Shared premium account"],
@@ -424,8 +424,26 @@ module.exports = [
     related: ["cursor-pro", "n8n-starter", "lovable-pro"]
   },
   {
+    slug: "render", logo: "render.svg", name: "Render Credits", cat: "ai-coding", icon: "fa-solid fa-server",
+    ids: ["render-50-credits"], official: "https://render.com/",
+    intro: "Render credit coupons for hosting apps and sites. The $50 coupon is a credit size. You pay the PKR price on the plan, and we send the coupon on WhatsApp.",
+    bestFor: ["Developers hosting a side project", "Freelancers who need cloud credit", "Anyone who wants a coupon instead of a card charge"],
+    included: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Setup help on WhatsApp"],
+    faqs: [["Is $50 the price I pay?", "No. $50 is the credit on the coupon. The price you pay is the PKR amount on the plan."]],
+    related: ["cursor-pro", "replit-core", "n8n-starter"]
+  },
+  {
+    slug: "codex-api", logo: "openai.svg", name: "Codex API", cat: "ai-coding", icon: "fa-solid fa-code",
+    ids: ["codex-api-all-plans"], official: "https://openai.com/codex",
+    intro: "Codex API is sold as a menu of three plans. There is no single listed price. Contact Support on WhatsApp and we confirm which plan and the amount before you pay.",
+    bestFor: ["Developers calling Codex from their own tools", "Teams that need an API plan rather than the Cursor app", "Anyone comparing more than one Codex pack"],
+    included: ["Three Codex API plans in one menu", "Price on request", "API access arranged on WhatsApp"],
+    faqs: [["Why is there no price?", "The supplier lists three plans together, starting from a low amount. We quote the exact plan on WhatsApp. It is not added to the cart."]],
+    related: ["cursor-pro", "claude-api-tokens", "replit-core"]
+  },
+  {
     slug: "muse-ai", logo: "muse.svg", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",
-    ids: ["muse-ai-1b", "muse-ai-31b"],
+    ids: ["muse-ai-1b", "muse-ai-31b", "muse-ai-all-plans"],
     intro: "Muse AI token packs in two sizes, 1B and 31B tokens, paid once in PKR. Message us on WhatsApp for delivery and setup details.",
     bestFor: ["Users who need a Muse AI token pack", "Anyone who wants to pay in PKR without a credit card"],
     included: ["Your chosen token pack (1B or 31B)", "Setup help on WhatsApp"],

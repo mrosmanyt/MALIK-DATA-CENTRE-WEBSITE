@@ -404,7 +404,7 @@
       }
       if (+c.originalPrice > newP) { if (op) op.textContent = rs(c.originalPrice); else if (pr) pr.insertAdjacentHTML("beforebegin", '<span class="tool-original-price">' + rs(c.originalPrice) + "</span>"); }
       else if (op && c.originalPrice !== undefined) op.remove();
-      if (c.stock === "out" && buy) { buy.outerHTML = '<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>'; if (add) add.remove(); }
+      // Stock is tracked for the admin panel only. Public pages always show the plan as available.
     });
     // "From Rs …" on overview cards
     Array.prototype.forEach.call(document.querySelectorAll("[data-cms-from]"), function (box) {

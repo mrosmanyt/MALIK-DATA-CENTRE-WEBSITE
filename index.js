@@ -1408,9 +1408,8 @@ const TOOLS_DATABASE = [
         price: 650,
         originalPrice: 650,
         setup: "Activation Link",
-        soldOut: true,
-        desc: "Google Gemini Plus for 6 months, delivered as an activation link. Currently out of stock. Ask on WhatsApp when the next link is in.",
-        specs: ["Gemini Plus features", "6 months via activation link", "Warranty confirmed on WhatsApp", "Ask on WhatsApp when it is back"],
+        desc: "Google Gemini Plus for 6 months, delivered as an activation link. A shorter Gemini Plus plan than the 12-month link.",
+        specs: ["Gemini Plus features", "6 months via activation link", "Not the same as Gemini Pro on your Gmail", "Warranty confirmed on WhatsApp"],
         icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
@@ -1421,8 +1420,7 @@ const TOOLS_DATABASE = [
         price: 3350,
         originalPrice: 3350,
         setup: "Activated on Client Email",
-        soldOut: true,
-        desc: "Gemini Pro for 2 years plus YouTube Premium for 1 month, both activated on your own email. Currently out of stock.",
+        desc: "Gemini Pro for 2 years plus YouTube Premium for 1 month, both activated on your own email.",
         specs: ["Gemini Pro for 2 years", "YouTube Premium for 1 month", "Activated on your email", "Warranty covers the stated access"],
         icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
@@ -1533,6 +1531,134 @@ const TOOLS_DATABASE = [
         desc: "edX Premium for 12 months: university courses and programs on a ready-made account, with a 7-day warranty.",
         specs: ["edX Premium features", "12 months access", "7-day warranty", "Setup help on WhatsApp"],
         icon: `<img src="/assets/logos/edx.svg" alt="edX logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "capcut-pro-all-plans",
+        name: "CapCut Pro All Plans",
+        category: "creative",
+        duration: "5 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "A menu of CapCut Pro plans. The supplier lists several durations together, so this row has no single price. Message us and we confirm which plan and the amount.",
+        specs: ["Several CapCut Pro durations in one menu", "Price on request", "Not a replacement for the priced plans above", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/capcut.webp" alt="CapCut logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "render-50-credits",
+        name: "Render $50 Credits",
+        category: "ai-coding",
+        duration: "Credit coupon",
+        price: 2500,
+        originalPrice: 2500,
+        setup: "Coupon Delivery",
+        desc: "A Render coupon for $50 of credits. $50 is the credit size. You pay the PKR price below, and we send the coupon on WhatsApp.",
+        specs: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Warranty confirmed on WhatsApp", "For Render cloud projects"],
+        icon: `<img src="/assets/logos/render.svg" alt="Render logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "muse-ai-all-plans",
+        name: "Muse AI All Plans",
+        category: "ai-chat",
+        duration: "2 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "Muse AI is also sold as a two-plan menu. This row has no single price. The 1B and 31B packs on this page keep their listed PKR prices.",
+        specs: ["Two Muse AI plans in one menu", "Price on request", "Separate from the priced 1B and 31B packs", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/muse.svg" alt="Muse logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "ms365-admin-1y",
+        name: "Microsoft 365 Admin",
+        category: "vpn-security",
+        duration: "12 Months Plan",
+        price: 9150,
+        originalPrice: 9150,
+        setup: "Admin Access",
+        desc: "Microsoft 365 admin access for 1 year, with full warranty. This is the admin plan, not the Office 365 activation on your own email.",
+        specs: ["Microsoft 365 admin for 1 year", "Full warranty", "Separate from the email activation plan", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/microsoftoffice.svg" alt="Microsoft 365 logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-all-plans",
+        name: "Codex API All Plans",
+        category: "ai-coding",
+        duration: "3 plans",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API is offered as three plans in one menu. There is no single listed price. Contact Support and we confirm the plan and the amount.",
+        specs: ["Three Codex API plans", "Price on request", "API key delivered on WhatsApp", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "linkedin-all-plans",
+        name: "LinkedIn All Plans",
+        category: "creative",
+        duration: "3 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "A three-plan LinkedIn menu with no single price. The Career, Business and Sales Navigator rows on this page keep their own PKR prices.",
+        specs: ["Three LinkedIn plans in one menu", "Price on request", "Separate from the priced vouchers", "Applied on your own profile"],
+        icon: `<img src="/assets/logos/linkedin.svg" alt="LinkedIn logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "surfshark-2m-coupon",
+        name: "Surfshark VPN",
+        category: "vpn-security",
+        duration: "2 Months Coupon",
+        price: 850,
+        originalPrice: 850,
+        setup: "Coupon Delivery",
+        desc: "A Surfshark coupon for 2 months. This is a coupon, not the 2-month ready-made account listed separately.",
+        specs: ["2-month Surfshark coupon", "Coupon delivered on WhatsApp", "Separate from the 2-month account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/surfshark.svg" alt="Surfshark logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "manus-pro-1m",
+        name: "Manus Pro",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 2900,
+        originalPrice: 2900,
+        setup: "Ready-Made Account",
+        desc: "Manus Pro for 1 month on a ready-made account. Shorter than the 12-month private plan, and this month has no warranty.",
+        specs: ["Manus Pro agent access", "1 month ready-made account", "No warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/manus.svg" alt="Manus logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-business-1m-slot",
+        name: "ChatGPT Business Slot",
+        category: "ai-chat",
+        duration: "1 Month Slot",
+        price: 5150,
+        originalPrice: 5150,
+        setup: "Dedicated Slot",
+        desc: "A ChatGPT Business slot for 1 month, with no warranty. This is a slot, not the ready-made Business account.",
+        specs: ["ChatGPT Business slot", "1 month", "No warranty", "Separate from the ready-made Business account"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "cursor-pro-plus-grok-1m",
+        name: "Cursor Pro Plus + Grok",
+        category: "ai-coding",
+        duration: "1 Month Plan",
+        price: 29150,
+        originalPrice: 29150,
+        setup: "Delivered on WhatsApp",
+        desc: "Cursor Pro Plus together with Grok for 1 month. A different bundle from Cursor Pro + Grok Premium.",
+        specs: ["Cursor Pro Plus", "Grok for 1 month", "One combined order", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/cursor.svg" alt="Cursor logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "cursor-pro-3m",
+        name: "Cursor Pro",
+        category: "ai-coding",
+        duration: "3 Months Plan",
+        price: 29150,
+        originalPrice: 29150,
+        setup: "Private Account",
+        desc: "Cursor Pro for 3 months on a private account, with full warranty. Between the 1-month and 12-month plans.",
+        specs: ["Cursor Pro private account", "3 months", "Full warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/cursor.svg" alt="Cursor logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     }
 ];
 
@@ -1978,12 +2104,12 @@ function renderTools(tools = TOOLS_DATABASE) {
                         ${!onRequest && tool.originalPrice > tool.price ? `<span class="tool-original-price">${originalPriceDisplay}</span>` : ""}
                         <span class="tool-price">${priceDisplay}</span>
                     </div>
-                    ${(tool.cmsSoldOut || tool.soldOut) ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : onRequest ? `<a href="${checkoutURL}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1" id="btn-order-${tool.id}">
-                        <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
+                    ${onRequest ? `<a href="${checkoutURL}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1" id="btn-order-${tool.id}">
+                        <i class="fa-brands fa-whatsapp"></i> Contact Support
                     </a>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Buy Now
                     </a>`}
-                    ${(tool.cmsSoldOut || tool.soldOut) || onRequest ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
+                    ${onRequest ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
                         data-id="${tool.id}"
                         data-name="${tool.name.replace(/"/g, '&quot;')}"
                         data-price="${tool.price}"

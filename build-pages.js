@@ -336,7 +336,7 @@ ${body(rel)}
 </main>
 ${footer(rel, tours)}
 <script src="/api/content.js"></script>
-<script src="${rel}assets/js/cms.js?v=1.2"></script>
+<script src="${rel}assets/js/cms.js?v=1.3"></script>
 <script src="${rel}tool-links.js" defer></script>
 <script src="${rel}pages.js" defer></script>
 <script src="${rel}assets/js/lang.js?v=2"></script>
@@ -408,10 +408,8 @@ function planRow(t, f) {
   const priceHtml = quote(t)
     ? `<span class="tool-price">${QUOTE}</span><span class="pg-usd">Contact for pricing</span>`
     : `${t.originalPrice > t.price ? `<span class="tool-original-price">${ors(t)}</span>` : ""}<span class="tool-price">${rs(t.price)}</span><span class="pg-usd">≈ ${usd(t.price)}</span>`;
-  const action = t.soldOut
-    ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>`
-    : quote(t)
-    ? `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1"><i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp</a>`
+  const action = quote(t)
+    ? `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1"><i class="fa-brands fa-whatsapp"></i> Contact Support</a>`
     : `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-buy"><i class="fa-brands fa-whatsapp"></i> Buy Now</a><button class="btn-addcart" type="button" tabindex="-1" aria-hidden="true" data-id="${esc(t.id)}" data-name="${esc(t.name)}" data-price="${t.price}" data-duration="${esc(t.duration)}" data-setup="${esc(t.setup)}"></button>`;
   return `<article class="pg-plan tool-card" id="plan-${t.id}">
     <div>
