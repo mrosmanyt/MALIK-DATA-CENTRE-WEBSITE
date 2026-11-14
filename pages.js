@@ -63,7 +63,7 @@
                 var need = form.need.value, budget = Number(form.budget.value), priv = form.privacy.value === "private";
                 var list = fams.filter(function (f) {
                     var price = priv ? f.privMin : f.min;
-                    return f.cat === need && isFinite(price) && price <= budget;
+                    return f.cat === need && Number.isFinite(price) && price > 0 && price <= budget;
                 }).sort(function (a, b) { return (priv ? a.privMin - b.privMin : a.min - b.min); }).slice(0, 3);
                 var root = relRoot();
                 if (!list.length) {

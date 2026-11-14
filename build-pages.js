@@ -34,6 +34,22 @@ const SOCIAL = {
   facebook: "https://www.facebook.com/people/Malik-Data-Centre-Pro/61566733492225/",
   x: "https://x.com/realmickeyai"
 };
+/* Languages offered in the header. English is the indexed source; other
+   languages are applied in the browser by assets/js/lang.js (Google Translate).
+   `pt` is included in the widget allow-list because the homepage widget
+   already allowed it, but it is not a dropdown option. */
+const SITE_LANGS = [
+  ["en", "🌐 English"], ["ur", "🇵🇰 Urdu (اردو)"], ["hi", "🇮🇳 Hindi (हिन्दी)"],
+  ["bn", "🇧🇩 Bangla (বাংলা)"], ["ne", "🇳🇵 Nepali (नेपाली)"], ["ar", "🇸🇦 Arabic (العربية)"],
+  ["ps", "🇦🇫 Pashto / Afghani (پښتو)"], ["ta", "🇮🇳 Tamil (தமிழ்)"], ["pa", "🇵🇰 Punjabi (ਪੰਜਾਬੀ)"],
+  ["it", "🇮🇹 Italian (Italiano)"], ["tr", "🇹🇷 Turkish (Türkçe)"], ["uz", "🇺🇿 Uzbek (Oʻzbek)"],
+  ["es", "🇪🇸 Spanish (Español)"], ["af", "🇿🇦 African (Afrikaans)"], ["de", "🇩🇪 German (Deutsch)"],
+  ["pl", "🇵🇱 Polish (Polski)"], ["ga", "🇮🇪 Irish (Gaeilge)"], ["hu", "🇭🇺 Hungarian (Magyar)"],
+  ["ru", "🇷🇺 Russian (Русский)"], ["fr", "🇫🇷 French (Français)"], ["zh-CN", "🇨🇳 Chinese (中文)"],
+  ["ja", "🇯🇵 Japanese (日本語)"], ["ko", "🇰🇷 Korean (한국어)"]
+];
+const SITE_LANG_CODES = SITE_LANGS.map(x => x[0]).concat(["pt"]).join(",");
+
 const TODAY = new Date().toISOString().slice(0, 10);
 const TODAY_HUMAN = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
@@ -79,13 +95,19 @@ const PRICE_HUMAN = human(PRICE_DATE);
 /* ---------- helpers ---------- */
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const rs = n => "Rs " + Number(n).toLocaleString("en-US");
-const famIcon = f => f.logo ? `<img src="/assets/logos/${f.logo}" alt="${esc(f.name)} logo" width="28" height="28" style="width:28px;height:28px;object-fit:contain">` : `<i class="${f.icon}"></i>`;
+const famLogos = f => (f.logos && f.logos.length ? f.logos : (f.logo ? [f.logo] : []));
+const famIcon = f => {
+  const logos = famLogos(f);
+  return logos.length ? logos.map(src => `<img src="/assets/logos/${src}" alt="${esc(f.name)} logo" width="28" height="28" style="width:28px;height:28px;object-fit:contain">`).join("") : `<i class="${f.icon}"></i>`;
+};
 const ors = t => t.originalLabel || rs(t.originalPrice);
 // USD rate is read from index.js so the site's currency switcher and these pages always agree.
 const USD_RATE = Number((fs.readFileSync(path.join(__dirname, "index.js"), "utf8").match(/USD:\s*([0-9.]+)/) || [])[1]) || 0.0036;
 const usd = n => "$" + (Number(n) * USD_RATE).toFixed(2).replace(/\.00$/, "");
 const both = n => `${usd(n)} (${rs(n)})`;
 const pct = (p, o) => (o > p ? Math.round(((o - p) / o) * 100) : 0);
+const quote = t => !!(t && t.priceOnRequest) || !(Number(t && t.price) > 0);
+const QUOTE = "Price on request";
 const waLink = (text, num = WA1) => `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
 const wa = (num = WA1) => `https://wa.me/${num}`;
 
@@ -105,7 +127,7 @@ function plansFor(f) {
   f.ids.forEach(id => {
     const t = TOOLS.byId[id];
     if (!t) { console.warn(`  ! ${f.slug}: catalog id "${id}" not found in index.js — skipped`); return; }
-    const key = `${t.duration}|${t.price}|${t.setup}`;
+    const key = (t.priceOnRequest ? t.id + "|" : "") + `${t.duration}|${t.price}|${t.setup}`;
     if (seen.has(key)) return;
     seen.add(key);
     out.push(t);
@@ -115,12 +137,20 @@ function plansFor(f) {
 function famStats(f) {
   const plans = plansFor(f);
   if (!plans.length) return null;
-  const min = plans.reduce((a, b) => (b.price < a.price ? b : a));
-  const max = Math.max(...plans.map(p => p.price));
-  return { plans, min, max, save: Math.max(...plans.map(p => pct(p.price, p.originalPrice))) };
+  const priced = plans.filter(p => !quote(p));
+  const min = priced.length ? priced.reduce((a, b) => (b.price < a.price ? b : a)) : null;
+  const max = priced.length ? Math.max(...priced.map(p => p.price)) : null;
+  return { plans, priced, min, max, save: priced.length ? Math.max(...priced.map(p => pct(p.price, p.originalPrice))) : 0, quoteOnly: !priced.length };
 }
 
 /* ---------- layout ---------- */
+function langSelect(id, extraClass) {
+  const opts = SITE_LANGS.map(([v, label]) => `<option value="${esc(v)}">${label}</option>`).join("");
+  return `<div class="mdc-lang-selector-wrap${extraClass ? " " + extraClass : ""}">
+    <select id="${id}" class="mdc-lang-select notranslate" translate="no" aria-label="Select language">${opts}</select>
+  </div>`;
+}
+
 function header(rel, active, tours) {
   const a = k => (active === k ? ' class="active"' : "");
   const ctaNum = tours ? WA2 : WA1, ctaText = tours ? "Plan my trip" : "Order on WhatsApp";
@@ -153,11 +183,14 @@ function header(rel, active, tours) {
       <a href="${rel}refund-policy/"${a("safety")}>Buyer Safety</a>
     </nav>
     <div class="pg-head-cta">
+      ${langSelect("mdc-lang-select", "pg-lang-desktop")}
       <a href="${wa(ctaNum)}" target="_blank" rel="noopener noreferrer" class="btn btn-success pg-hide-sm"><i class="fa-brands fa-whatsapp"></i> ${ctaText}</a>
       <button class="pg-burger" type="button" aria-label="Open menu" aria-expanded="false" data-pg-burger><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
   <div class="pg-mobile" data-pg-mobile>
+    <div class="pg-mobile-label">Language</div>
+    ${langSelect("drawer-lang-select", "pg-lang-mobile")}
     <a href="${rel}index.html#catalog-section">Store &amp; Catalog</a>
     <a href="${rel}tools/">All Tool Guides</a>
     <a href="${rel}comparisons/">Compare Tools</a>
@@ -273,6 +306,8 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0a0a0f">
 <link rel="canonical" href="${canonical}">
+<link rel="alternate" hreflang="en" href="${canonical}">
+<link rel="alternate" hreflang="x-default" href="${canonical}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="${tours ? "MALIK TOURS" : BRAND}">
@@ -305,10 +340,22 @@ ${body(rel)}
 </main>
 ${footer(rel, tours)}
 <script src="/api/content.js"></script>
-<script src="${rel}assets/js/cms.js?v=1.1"></script>
+<script src="${rel}assets/js/cms.js?v=1.3"></script>
 <script src="${rel}tool-links.js" defer></script>
 <script src="${rel}pages.js" defer></script>
+<script src="${rel}assets/js/lang.js?v=2"></script>
 ${checkout ? `<script src="${rel}store-backend.js" defer></script>` : ""}
+<div id="google_translate_element" style="display:none;"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "${SITE_LANG_CODES}",
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 `;
@@ -344,12 +391,12 @@ const COMMON_FAQS = [
 function familyCard(rel, f) {
   const st = famStats(f);
   if (!st) return "";
-  return `<a class="pg-card" href="${rel}tools/${f.slug}/" data-cat="${f.cat}" data-name="${esc((f.name + " " + f.slug).toLowerCase())}">
+  return `<a class="pg-card" href="${rel}tools/${f.slug}/" data-cat="${f.cat}" data-name="${esc((f.name + " " + f.slug + " " + st.plans.map(p => p.name + " " + p.duration).join(" ")).toLowerCase())}">
     <div class="pg-card-top"><div class="pg-card-icon">${famIcon(f)}</div>
       <div><div class="pg-card-cat">${esc(CAT[f.cat] || f.cat)}</div><h3>${esc(f.name)}</h3></div></div>
     <p>${esc(f.intro.split(". ")[0].replace(/\.$/, ""))}.</p>
-    <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.plans.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}><span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? (st.min.originalLabel ? `<span style="text-decoration:line-through">${esc(st.min.originalLabel)}</span>` : `<s>${ors(st.min)}</s>`) : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}</div>
-    <span class="pg-card-more">${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} &middot; View price &amp; details <i class="fa-solid fa-arrow-right"></i></span>
+    <div class="pg-card-price" data-cms-from="${st.plans.map(p => esc(p.id)).join(",")}" ${st.priced.map(p => `data-p-${esc(p.id)}="${p.price}" data-o-${esc(p.id)}="${p.originalPrice || 0}"`).join(" ")}>${st.min ? `<span class="pg-from">From</span> <b>${rs(st.min.price)}</b>${st.min.originalPrice > st.min.price ? (st.min.originalLabel ? `<span style="text-decoration:line-through">${esc(st.min.originalLabel)}</span>` : `<s>${ors(st.min)}</s>`) : ""}${st.save ? ` <span class="pg-save">Up to ${st.save}% off</span>` : ""}` : `<span class="pg-from">Price</span> <b>${QUOTE}</b>`}</div>
+    <span class="pg-card-more">${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} &middot; ${st.min ? "View price &amp; details" : "View plans &amp; request a price"} <i class="fa-solid fa-arrow-right"></i></span>
   </a>`;
 }
 
@@ -358,14 +405,19 @@ function familyCard(rel, f) {
    ====================================================================== */
 function planRow(t, f) {
   const ac = access(t.setup);
-  const off = pct(t.price, t.originalPrice);
-  const msg =
-    `Hello MALIK DATA CENTRE! I want to buy:\n\n` +
-    `🛍️ Tool: ${t.name}\n⏱️ Plan: ${t.duration}\n💰 Price: Rs ${t.price.toLocaleString("en-US")}\n⚙️ Setup: ${t.setup}\n\n` +
-    `Please share payment details and setup instructions.\nSource: malikdatacentre.store/tools/${f.slug}/`;
+  const off = quote(t) ? 0 : pct(t.price, t.originalPrice);
+  const msg = quote(t)
+    ? `Hello MALIK DATA CENTRE! I want a price for:\n\n🛍️ Tool: ${t.name}\n⏱️ Plan: ${t.duration}\n🛡️ Warranty: ${warrantyOf(t)}\n⚙️ Setup: ${t.setup}\n\nPlease tell me the price and how this plan is delivered.\nSource: malikdatacentre.store/tools/${f.slug}/`
+    : `Hello MALIK DATA CENTRE! I want to buy:\n\n🛍️ Tool: ${t.name}\n⏱️ Plan: ${t.duration}\n💰 Price: Rs ${t.price.toLocaleString("en-US")}\n⚙️ Setup: ${t.setup}\n\nPlease share payment details and setup instructions.\nSource: malikdatacentre.store/tools/${f.slug}/`;
+  const priceHtml = quote(t)
+    ? `<span class="tool-price">${QUOTE}</span><span class="pg-usd">Contact for pricing</span>`
+    : `${t.originalPrice > t.price ? `<span class="tool-original-price">${ors(t)}</span>` : ""}<span class="tool-price">${rs(t.price)}</span><span class="pg-usd">≈ ${usd(t.price)}</span>`;
+  const action = quote(t)
+    ? `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1"><i class="fa-brands fa-whatsapp"></i> Contact Support</a>`
+    : `<a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-buy"><i class="fa-brands fa-whatsapp"></i> Buy Now</a><button class="btn-addcart" type="button" tabindex="-1" aria-hidden="true" data-id="${esc(t.id)}" data-name="${esc(t.name)}" data-price="${t.price}" data-duration="${esc(t.duration)}" data-setup="${esc(t.setup)}"></button>`;
   return `<article class="pg-plan tool-card" id="plan-${t.id}">
     <div>
-      <div class="pg-plan-name tool-title">${esc(t.name)} &middot; <span class="tool-duration">${esc(t.duration)}</span></div>
+      <div class="pg-plan-name tool-title">${["claude-api-tokens", "codex-api", "claude-codex"].includes(f.slug) ? famLogos(f).map(src => `<img src="/assets/logos/${esc(src)}" alt="" width="22" height="22" style="width:22px;height:22px;object-fit:contain;vertical-align:-4px;margin-right:6px">`).join("") : ""}${esc(t.name)} &middot; <span class="tool-duration">${esc(t.duration)}</span></div>
       <div class="pg-plan-sub">
         <span class="pg-chip ${ac.cls}"><i class="fa-solid fa-user-shield"></i> ${esc(ac.label)}</span>
         <span class="pg-chip"><i class="fa-solid fa-shield-halved"></i> ${esc(warrantyOf(t))}</span>
@@ -374,12 +426,9 @@ function planRow(t, f) {
     </div>
     <div class="tool-card-footer">
       <div class="tool-price-wrapper">
-        ${t.originalPrice > t.price ? `<span class="tool-original-price">${ors(t)}</span>` : ""}
-        <span class="tool-price">${rs(t.price)}</span>
-        <span class="pg-usd">≈ ${usd(t.price)}</span>
+        ${priceHtml}
       </div>
-      <a href="${waLink(msg)}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-buy"><i class="fa-brands fa-whatsapp"></i> Buy Now</a>
-      <button class="btn-addcart" type="button" tabindex="-1" aria-hidden="true" data-id="${esc(t.id)}" data-name="${esc(t.name)}" data-price="${t.price}" data-duration="${esc(t.duration)}" data-setup="${esc(t.setup)}"></button>
+      ${action}
     </div>
   </article>`;
 }
@@ -389,8 +438,12 @@ function buildToolPage(f) {
   if (!st) return;
   const url = `tools/${f.slug}/`;
   const faqs = [...(f.faqs || []), ...COMMON_FAQS];
-  const title = `Buy ${f.name} Online (${new Date().getFullYear()}) | From ${usd(st.min.price)} | ${BRAND}`;
-  const desc = `Buy ${f.name} online from ${usd(st.min.price)} (${rs(st.min.price)}). ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.`;
+  const title = st.min
+    ? `Buy ${f.name} Online (${new Date().getFullYear()}) | From ${usd(st.min.price)} | ${BRAND}`
+    : `Buy ${f.name} Online (${new Date().getFullYear()}) | ${QUOTE} | ${BRAND}`;
+  const desc = st.min
+    ? `Buy ${f.name} online from ${usd(st.min.price)} (${rs(st.min.price)}). ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}${st.plans.some(quote) ? ", some packs price on request" : ""}, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.`
+    : `${f.name}: ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}, price on request. Message us on WhatsApp for the amount, then we deliver worldwide.`;
   const related = (f.related || []).map(s => FAM[s]).filter(Boolean);
   const accessTypes = [...new Set(st.plans.map(p => p.setup))];
 
@@ -399,9 +452,13 @@ function buildToolPage(f) {
       "@context": "https://schema.org", "@type": "Product",
       name: f.name, description: f.intro, image: `${SITE}/assets/logo.png`, category: CAT[f.cat],
       brand: { "@type": "Brand", name: f.name.split(" ")[0] },
-      offers: {
+      offers: st.min ? {
         "@type": "AggregateOffer", priceCurrency: "PKR", lowPrice: st.min.price, highPrice: st.max, offerCount: st.plans.length,
         availability: "https://schema.org/InStock", url: SITE + "/" + url,
+        seller: { "@type": "Organization", name: BRAND, url: SITE }
+      } : {
+        "@type": "Offer", availability: "https://schema.org/InStock", url: SITE + "/" + url,
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "PKR", description: QUOTE },
         seller: { "@type": "Organization", name: BRAND, url: SITE }
       }
     },
@@ -428,7 +485,7 @@ function buildToolPage(f) {
     <div>
       <section class="pg-section" id="plans" style="padding-top:0">
         <h2>Plans &amp; prices</h2>
-        <p>Prices are set in Pakistani rupees (PKR), with an approximate US dollar price shown next to each plan. The exact amount in your currency is confirmed on WhatsApp. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.</p>
+        <p>${st.plans.some(quote) ? `Listed prices are in Pakistani rupees (PKR). Packs marked <strong>${QUOTE}</strong> are not given a number here and cannot be added to the cart: tap <strong>Contact on WhatsApp</strong> and we reply with the price before you pay.` : `Prices are set in Pakistani rupees (PKR), with an approximate US dollar price shown next to each plan. The exact amount in your currency is confirmed on WhatsApp. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.`}</p>
         <div class="pg-plans">${st.plans.map(t => planRow(t, f)).join("")}</div>
       </section>
 
@@ -453,7 +510,7 @@ function buildToolPage(f) {
         <h2>Plan, access &amp; warranty</h2>
         <div class="pg-table-wrap"><table class="pg-table">
           <thead><tr><th>Plan</th><th>Duration</th><th>Access type</th><th>Warranty</th><th>Price</th></tr></thead>
-          <tbody>${st.plans.map(t => `<tr><td>${esc(t.name)}</td><td>${esc(t.duration)}</td><td>${esc(t.setup)}</td><td>${esc(warrantyOf(t))}</td><td><strong style="color:var(--text-main)">${rs(t.price)}</strong><br><span class="pg-usd">≈ ${usd(t.price)}</span></td></tr>`).join("")}</tbody>
+          <tbody>${st.plans.map(t => `<tr><td>${esc(t.name)}</td><td>${esc(t.duration)}</td><td>${esc(t.setup)}</td><td>${esc(warrantyOf(t))}</td><td>${quote(t) ? `<strong style="color:var(--text-main)">${QUOTE}</strong>` : `<strong style="color:var(--text-main)">${rs(t.price)}</strong><br><span class="pg-usd">≈ ${usd(t.price)}</span>`}</td></tr>`).join("")}</tbody>
         </table></div>
         ${accessTypes.some(a => /shared/i.test(a)) ? `<div class="pg-note warn"><strong>Shared plans:</strong> the login is used by more than one buyer. Do not change the password or account details, and keep private work in your own account. Choose a plan marked private or "on client email" if you need full privacy.</div>` : ""}
         <p style="font-size:.88rem">Features and limits are set by the tool's owner and can change. Confirm the exact plan on WhatsApp before paying.</p>
@@ -462,7 +519,7 @@ function buildToolPage(f) {
       <section class="pg-section">
         <h2>How activation works</h2>
         <ol class="pg-steps">
-          <li><span><strong>Choose your plan</strong>Pick a duration above and tap Buy Now.</span></li>
+          <li><span><strong>Choose your plan</strong>${st.plans.some(quote) ? "Pick a duration above. Priced plans use Buy Now. Price-on-request packs use Contact on WhatsApp." : "Pick a duration above and tap Buy Now."}</span></li>
           <li><span><strong>Place the order</strong>Enter your name and WhatsApp number. Your order number appears on screen.</span></li>
           <li><span><strong>Pay</strong>Send the amount with USDT from anywhere, or via EasyPaisa, JazzCash or bank in Pakistan, and share the screenshot on WhatsApp.</span></li>
           <li><span><strong>Get activated</strong>We activate on your email or send login details, usually within 5–30 minutes, with a setup guide.</span></li>
@@ -497,10 +554,10 @@ function buildToolPage(f) {
     <aside class="pg-buybox" aria-label="Price summary">
       <div class="pg-buybox-icon">${famIcon(f)}</div>
       <h2>${esc(f.name)}</h2>
-      <div class="pg-from">Starting from</div>
-      <div class="pg-from-price">${rs(st.min.price)}</div>
-      <div class="pg-usd" style="margin-top:2px">≈ ${usd(st.min.price)} USD</div>
-      <div>${st.min.originalPrice > st.min.price ? `<span class="pg-from-old">${ors(st.min)}</span>` : ""}${pct(st.min.price, st.min.originalPrice) ? `<span class="pg-save">Save ${pct(st.min.price, st.min.originalPrice)}%</span>` : ""}</div>
+      <div class="pg-from">${st.min ? "Starting from" : "Price"}</div>
+      <div class="pg-from-price">${st.min ? rs(st.min.price) : QUOTE}</div>
+      <div class="pg-usd" style="margin-top:2px">${st.min ? `≈ ${usd(st.min.price)} USD` : "Contact for pricing"}</div>
+      <div>${st.min && st.min.originalPrice > st.min.price ? `<span class="pg-from-old">${ors(st.min)}</span>` : ""}${st.min && pct(st.min.price, st.min.originalPrice) ? `<span class="pg-save">Save ${pct(st.min.price, st.min.originalPrice)}%</span>` : ""}${st.min && st.plans.some(quote) ? `<span class="pg-save">Some packs: ${QUOTE}</span>` : ""}</div>
       <ul>
         <li><i class="fa-solid fa-check"></i> ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""} available</li>
         <li><i class="fa-solid fa-check"></i> ${esc(accessTypes.join(" / "))}</li>
@@ -516,7 +573,7 @@ function buildToolPage(f) {
 </div>`;
 
   write(url, page({ urlPath: url, title, desc, body, active: "tools", jsonld, ogType: "product", checkout: true,
-    keywords: `buy ${f.name}, ${f.name} price, cheap ${f.name}, ${f.name} subscription, ${f.name} discount, ${f.name} USDT, ${f.name} worldwide, ${f.name} UK, ${f.name} USA, ${f.name} UAE, ${f.name} India, ${f.name} Pakistan` }));
+    keywords: `buy ${f.name}, ${f.name} price, cheap ${f.name}, ${f.name} subscription, ${f.name} discount, ${f.name} USDT, ${f.name} worldwide, ${f.name} UK, ${f.name} USA, ${f.name} UAE, ${f.name} India, ${f.name} Pakistan${f.extraKeywords ? ", " + f.extraKeywords : ""}` }));
 }
 
 /* ======================================================================
@@ -566,7 +623,7 @@ function requestFormHtml() {
 function buildToolsIndex() {
   const url = "tools/";
   const fams = FAMILIES.filter(f => famStats(f));
-  const minAll = Math.min(...fams.map(f => famStats(f).min.price));
+  const minAll = Math.min(...fams.map(f => famStats(f).min).filter(Boolean).map(m => m.price));
   const body = rel => `
 <div class="pg-wrap">
   ${crumbHtml(rel, [["Home", "index.html"], ["All Tools", ""]])}
@@ -591,7 +648,7 @@ function buildToolsIndex() {
     <p>Already know what you want? Order straight from this list.</p>
     <div class="pg-table-wrap"><table class="pg-table">
       <thead><tr><th>Tool</th><th>Category</th><th>From</th><th>Plans</th><th></th></tr></thead>
-      <tbody>${fams.map(f => { const s = famStats(f); return `<tr><td><a href="${rel}tools/${f.slug}/">${esc(f.name)}</a></td><td>${esc(CAT[f.cat])}</td><td><strong style="color:var(--text-main)">${rs(s.min.price)}</strong></td><td>${s.plans.length}</td><td><a href="${rel}tools/${f.slug}/#plans">Order <i class="fa-solid fa-arrow-right"></i></a></td></tr>`; }).join("")}</tbody>
+      <tbody>${fams.map(f => { const s = famStats(f); return `<tr><td><a href="${rel}tools/${f.slug}/">${esc(f.name)}</a></td><td>${esc(CAT[f.cat])}</td><td><strong style="color:var(--text-main)">${s.min ? rs(s.min.price) : QUOTE}</strong></td><td>${s.plans.length}</td><td><a href="${rel}tools/${f.slug}/#plans">${s.min ? "Order" : "Request a price"} <i class="fa-solid fa-arrow-right"></i></a></td></tr>`; }).join("")}</tbody>
     </table></div>
   </section>
 
@@ -626,7 +683,7 @@ function buildComparisons() {
   CONTENT.comparisons.forEach(c => {
     const url = `comparisons/${c.slug}/`;
     const cols = c.cols.map(s => FAM[s]).filter(Boolean);
-    const priceRow = ["Starting price", ...cols.map(f => { const s = famStats(f); return s ? both(s.min.price) : "—"; })];
+    const priceRow = ["Starting price", ...cols.map(f => { const s = famStats(f); return s && s.min ? both(s.min.price) : s && s.quoteOnly ? QUOTE : "—"; })];
     const body = rel => `
 <div class="pg-narrow">
   ${crumbHtml(rel, [["Home", "index.html"], ["Compare", "comparisons/"], [c.short, ""]])}
@@ -924,8 +981,9 @@ function buildToolLinks() {
     if (!s) return;
     s.plans.forEach(p => { pages[p.id] = `tools/${f.slug}/`; });
     f.ids.concat(f.aliases || []).forEach(id => { if (TOOLS.byId[id] && !pages[id]) pages[id] = `tools/${f.slug}/`; });
-    fams.push({ slug: f.slug, name: f.name, cat: f.cat, icon: f.icon, min: s.min.price, private: s.plans.some(p => access(p.setup).cls === "private"),
-      privMin: Math.min(...s.plans.filter(p => access(p.setup).cls === "private").map(p => p.price).concat([Infinity])),
+    const privatePrices = s.priced.filter(p => access(p.setup).cls === "private").map(p => p.price);
+    fams.push({ slug: f.slug, name: f.name, cat: f.cat, icon: f.icon, min: s.min ? s.min.price : null, private: s.plans.some(p => access(p.setup).cls === "private"),
+      privMin: privatePrices.length ? Math.min(...privatePrices) : null,
       blurb: f.intro.split(". ")[0].replace(/\.$/, "") + "." });
   });
   const js = `/* Auto-generated by build-pages.js on ${TODAY}. Do not edit by hand. */\nwindow.MDC_TOOL_PAGES = ${JSON.stringify(pages)};\nwindow.MDC_FAMILIES = ${JSON.stringify(fams)};\n`;
@@ -1041,7 +1099,7 @@ function buildLlms() {
     `> Online store for AI tools and software subscriptions, serving customers worldwide. Prices are set in PKR with approximate USD shown; payment by USDT (Binance) from any country, or EasyPaisa, JazzCash and bank transfer in Pakistan. WhatsApp activation in 5–30 minutes and a written warranty.`, "",
     `Website: ${SITE}/`, `WhatsApp: +92 344 5739206, +92 348 9057646`, `Email: ${EMAIL}`, `Prices last changed: ${PRICE_DATE}`, "",
     "## Tools and starting prices (PKR, approx. USD in brackets)", "",
-    ...fams.map(f => { const s = famStats(f); return `- [${f.name}](${SITE}/tools/${f.slug}/): from Rs ${s.min.price.toLocaleString("en-US")} (${usd(s.min.price)}) — ${s.plans.map(p => `${p.duration} Rs ${p.price.toLocaleString("en-US")} / ${usd(p.price)} (${p.setup})`).join("; ")}`; }),
+    ...fams.map(f => { const s = famStats(f); const head = s.min ? `from Rs ${s.min.price.toLocaleString("en-US")} (${usd(s.min.price)})` : "price on request"; return `- [${f.name}](${SITE}/tools/${f.slug}/): ${head} — ${s.plans.map(p => quote(p) ? `${p.name}: ${p.duration}, price on request (${p.setup})` : `${p.duration} Rs ${p.price.toLocaleString("en-US")} / ${usd(p.price)} (${p.setup})`).join("; ")}`; }),
     "", "## Latest guides", "",
     ...allBlogItems().slice(0, 40).map(it => `- [${it.title}](${SITE}/${it.href}): ${it.description}`),
     "", "## Comparisons", "",
@@ -1161,7 +1219,7 @@ function buildBlog() {
     desc: "Buying guides, comparisons, setup tutorials and price updates for ChatGPT, Gemini, Grok, Canva, Adobe, CapCut, Cursor and more, for buyers worldwide.",
     extraCss: ["blog.css"], jsonld: [{ "@context": "https://schema.org", "@type": "Blog", name: `${BRAND} Blog`, url: `${SITE}/blog/`,
       blogPost: POSTS.slice(0, 20).map(p => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}.html`, datePublished: p.date })) },
-      crumbLd([["Home", ""], ["Blog", url]])], body }).replace(`<link rel="canonical" href="${SITE}/blog/index.html">`, `<link rel="canonical" href="${SITE}/blog/">`);
+      crumbLd([["Home", ""], ["Blog", url]])], body }).split(`${SITE}/blog/index.html`).join(`${SITE}/blog/`);
   fs.writeFileSync(path.join(ROOT, "blog", "index.html"), html);
   BUILT.push("blog/");
 

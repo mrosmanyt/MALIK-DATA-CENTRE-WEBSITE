@@ -1,0 +1,90 @@
+# Blog content plan
+
+Future daily runs publish the next **5** rows with status `todo`, in order: all `P1` before `P2`, then `P3`. After a post is live, move that row into **Published** and do not reuse its target keyword. One post, one primary keyword.
+
+Rules the validator enforces (`node scripts/validate.js`):
+
+- File name `YYYY-MM-DD-slug.md`. Front matter matches the template in `_TEMPLATE.md`. No `draft: true` on posts that should go live.
+- At most **5** published posts on the same calendar date.
+- Body 700–3,500 words (aim 1,200–2,000). Title 25–75 characters. Description 110–170 characters. Answer box 25–80 words. 3–10 keywords.
+- Every `Rs` amount must be a price or original price in `index.js`. Official prices are written as `PKR … (official)` or `$… (official)` and linked.
+- `tools:` values are family slugs from `site-content/families.js`. At least two internal links and a `## FAQ` with two questions.
+- Do not hand-edit `blog/*.html`, `sitemap.xml`, `llms.txt` or `blog/feed.xml`. Run `node build-pages.js`.
+
+Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepali, Arabic, Pashto, Tamil, Punjabi, Italian, Turkish, Uzbek, Spanish, Afrikaans, German, Polish, Irish, Hungarian, Russian, French, Chinese, Japanese, Korean). Posts stay English in Markdown. Do not add machine-translated copies or fake hreflang URLs.
+
+## Published
+
+| Date | Slug | Target keyword | Tools |
+|---|---|---|---|
+| 2026-09-21 | chatgpt-vs-super-grok-pakistan-guide | chatgpt vs super grok pakistan | chatgpt-go, super-grok, gemini-pro |
+| 2026-09-21 | canva-pro-vs-adobe-creative-cloud | canva pro vs adobe creative cloud | canva-pro, adobe-creative-cloud |
+| 2026-09-21 | is-it-safe-to-buy-cheap-ai-subscriptions-pakistan | is it safe to buy cheap ai subscriptions | (store-wide) |
+| 2026-09-21 | capcut-pro-review | capcut pro review 2026 | capcut-pro |
+| 2026-10-25 | buy-ai-tools-pakistan-without-credit-card | buy ai tools pakistan without credit card | chatgpt-go, gemini-pro, canva-pro |
+| 2026-10-26 | buy-ai-tools-without-credit-card-worldwide | buy ai tools without credit card | chatgpt-go, gemini-pro |
+| 2026-10-27 | how-to-activate-canva-pro-on-your-own-email | how to activate canva pro on your own email | canva-pro |
+| 2026-10-28 | chatgpt-go-vs-gemini-pro-for-students-pakistan | chatgpt go vs gemini pro for students | chatgpt-go, gemini-pro |
+| 2026-10-29 | best-ai-tools-for-freelancers-pakistan-fiverr-upwork | best ai tools for freelancers pakistan | chatgpt-go, canva-pro, grammarly-pro |
+| 2026-10-30 | private-vs-shared-vs-invitation-ai-accounts-pakistan | private vs shared ai account pakistan | (access types) |
+| 2026-11-02 | chatgpt-go-price-in-pakistan | chatgpt go price in pakistan | chatgpt-go |
+| 2026-11-03 | how-to-activate-windows-11-pro-with-retail-key | how to activate windows 11 pro retail key | windows-pro-key |
+| 2026-11-04 | capcut-pro-vs-adobe-premiere-pro-for-reels-pakistan | capcut pro vs premiere pro for reels | capcut-pro, adobe-creative-cloud |
+| 2026-11-05 | best-ai-tools-for-university-students-pakistan | best ai tools for university students pakistan | gemini-pro, grammarly-pro, quillbot |
+| 2026-11-06 | how-to-spot-fake-ai-subscription-seller-pakistan | fake ai subscription seller pakistan | chatgpt-go, canva-pro |
+| 2026-11-14 | cursor-pro-price-in-pakistan | cursor pro price in pakistan | cursor-pro |
+| 2026-11-14 | elevenlabs-price-in-pakistan | elevenlabs price in pakistan | elevenlabs-creator |
+| 2026-11-14 | youtube-premium-price-in-pakistan | youtube premium price in pakistan | youtube-premium |
+| 2026-11-14 | linkedin-premium-price-in-pakistan | linkedin premium price in pakistan | linkedin-premium |
+| 2026-11-14 | best-ai-tools-for-youtubers-pakistan | best ai tools for youtubers pakistan | vidiq-max, capcut-pro, canva-pro |
+
+The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
+
+## Backlog
+
+Status stays `todo` until a daily run publishes the piece. Prefer a tool that still has no dedicated post.
+
+| Pri | Status | Target keyword | Working title | Tools | Angle |
+|---|---|---|---|---|---|
+| P1 | todo | grammarly pro price in pakistan | Grammarly Pro Price in Pakistan: 1 Month vs 1 Year | grammarly-pro, quillbot | Price page. Student roundup only mentions it. Go deep on tone, plagiarism check and own-email activation. |
+| P1 | todo | quillbot premium price in pakistan | QuillBot Premium Price in Pakistan and When to Use It | quillbot, grammarly-pro | Paraphrase and summary, not a way around university rules. |
+| P1 | todo | gamma pro price in pakistan | Gamma Pro Price in Pakistan for Pitch Decks and Lectures | gamma-pro, canva-pro | Monthly Rs plan vs yearly. Export to PowerPoint. |
+| P1 | todo | coursera plus price in pakistan | Coursera Plus Price in Pakistan: Certificates and Who Should Buy | coursera-plus, linkedin-premium | 12-month private activation. What a certificate does and does not do. |
+| P1 | todo | nordvpn vs surfshark pakistan | NordVPN vs Surfshark in Pakistan: Price, Privacy and Devices | nordvpn, surfshark-vpn | Blog version of the comparison page, with payment and own-email vs shared. |
+| P1 | todo | heygen price in pakistan | HeyGen Price in Pakistan: 200 Credits and Talking Avatars | heygen, elevenlabs-creator | What 200 credits roughly cover. Link the existing vs page. |
+| P1 | todo | kling ai price in pakistan | Kling AI Price in Pakistan: 660 vs 750 Credits | kling-ai, higgsfield | Text-to-video for ads and product clips. |
+| P1 | todo | adobe creative cloud price in pakistan | Adobe Creative Cloud Price in Pakistan: 3, 6 and 12 Months | adobe-creative-cloud, canva-pro | Full bundle durations. Do not repeat the old Canva vs Adobe article. |
+| P1 | todo | capcut pro price in pakistan | CapCut Pro Price in Pakistan: Device, Private and Team Plans | capcut-pro | Price table the review does not lead with. |
+| P1 | todo | gemini pro price in pakistan | Gemini Pro Price in Pakistan: 1 Year on Your Gmail | gemini-pro, google-ai-ultra | Own-email promo plan. Send heavy video users to Ultra. |
+| P1 | todo | google ai ultra price in pakistan | Google AI Ultra Price in Pakistan: Shared, Flow and 25k Slot | google-ai-ultra, gemini-pro | Three access types, very different prices. No invented Veo quotas. |
+| P1 | todo | super grok price in pakistan | SuperGrok and X Premium+ Price in Pakistan | super-grok, chatgpt-go | Premium, Bot and Heavy. Badge timing. Legacy comparison stays separate. |
+| P1 | todo | replit core price in pakistan | Replit Core Price in Pakistan: Yearly Plan vs $100 Credits | replit-core, cursor-pro | Browser IDE and Agent. Who should not buy Cursor instead. |
+| P1 | todo | lovable pro price in pakistan | Lovable Pro Price in Pakistan: 100 to 600 Credits | lovable-pro, cursor-pro | Credit sizing for a landing page vs a full app. |
+| P1 | todo | notion business price in pakistan | Notion Business Price in Pakistan for Teams and Notes | notion-business, gamma-pro | Workspace activation, history, what AI is included. |
+| P2 | todo | how to use vidiq for a new youtube channel | How to Use vidIQ on a New YouTube Channel in Pakistan | vidiq-max, youtube-premium | Keyword workflow. Boost vs Max. No ranking promise. |
+| P2 | todo | how to activate youtube premium on your email | How to Activate YouTube Premium on Your Own Email | youtube-premium | Step-through after the price post. TV apps and family limits. |
+| P2 | todo | how to use elevenlabs for a faceless channel | How to Use ElevenLabs for a Faceless YouTube Channel | elevenlabs-creator, capcut-pro | Script, generate, edit. Consent for cloning. |
+| P2 | todo | how to use cursor pro for a client project | How to Use Cursor Pro on a Freelance Code Project | cursor-pro | Usage pool, diffs, secrets. Not a repeat of the price table. |
+| P2 | todo | how to write linkedin inmail that gets a reply | How to Write a LinkedIn InMail That Gets a Reply | linkedin-premium, grammarly-pro | Five Career credits. No "guaranteed jobs". |
+| P2 | todo | higgsfield price in pakistan | Higgsfield Price in Pakistan: Plus vs Pro Credits | higgsfield, kling-ai | Camera presets vs a single video model. |
+| P2 | todo | picsart pro price in pakistan | Picsart Pro Price in Pakistan for Phone Editing | picsart-pro, canva-pro | 11-month own-email plan. Shops and students. |
+| P2 | todo | zoom pro price in pakistan | Zoom Pro Price in Pakistan for Classes and Client Calls | zoom-pro, microsoft-office-365 | Monthly login, meeting length, who still needs the free plan. |
+| P2 | todo | microsoft 365 price in pakistan | Microsoft 365 Price in Pakistan on Your Own Email | microsoft-office-365, windows-pro-key | The 12-month plan only. Do not invent extra Office SKUs. |
+| P2 | todo | envato elements price in pakistan | Envato Price in Pakistan: 1 Month vs 1 Year of Downloads | envato, storyblocks | Licence at download. Client projects. |
+| P2 | todo | artlist price in pakistan | Artlist Pro Price in Pakistan for YouTube Music | artlist, capcut-pro | Claims and where the licence lives. |
+| P2 | todo | n8n starter price in pakistan | n8n Starter Price in Pakistan for WhatsApp and CRM Workflows | n8n-starter, gumloop-pro | When to buy the seat vs hire the automation service. |
+| P2 | todo | claude api tokens price in pakistan | Claude API Token Price in Pakistan: What 10M Tokens Means | claude-api-tokens, chatgpt-go | Developers only. Not a chat login. |
+| P2 | todo | manus ai price in pakistan | Manus Pro Price in Pakistan: When an Agent Beats a Chatbot | manus-ai, genspark | 12-month private account. Research tasks, not a second ChatGPT. |
+| P3 | todo | genspark plus price in pakistan | Genspark Plus Price in Pakistan for Slides and Research | genspark, gamma-pro | One-month agent workspace. |
+| P3 | todo | ideogram plus for youtube thumbnails | Ideogram Plus for Thumbnails: When Canva Is Not Enough | ideogram, canva-pro | Text-in-image. YouTuber post only mentions it. |
+| P3 | todo | storyblocks vs envato for b-roll | Storyblocks vs Envato for YouTube B-roll in Pakistan | storyblocks, envato | One-month unlimited vs the wider library. |
+| P3 | todo | surfshark vpn price in pakistan | Surfshark VPN Price in Pakistan on a Shared Account | surfshark-vpn, nordvpn | Budget VPN. What not to do on a shared login. |
+| P3 | todo | hma vpn price in pakistan | HMA VPN Key Price in Pakistan: Yearly Licence | hma-vpn, nordvpn | Key delivery vs email activation. |
+| P3 | todo | amazon prime video price in pakistan | Amazon Prime Video Price in Pakistan: 6-Month Private Profile | amazon-prime-video, youtube-premium | What a private profile means. |
+| P3 | todo | dreamface price in pakistan | DreamFace Price in Pakistan: Talking Photos vs HeyGen | dreamface, heygen | Monthly vs yearly. Fun content vs client work. |
+| P3 | todo | wispr flow price in pakistan | Wispr Flow Pro Price in Pakistan for Dictation | wispr-flow, grammarly-pro | 12-month plan. Test the language on free first. |
+| P3 | todo | gumloop pro price in pakistan | Gumloop Pro Price in Pakistan for No-Code Scraping | gumloop-pro, n8n-starter | Who should pick n8n instead. |
+| P3 | todo | best ai tools for small shops in pakistan | Best AI Tools for Small Shops in Pakistan | canva-pro, chatgpt-go, capcut-pro | Product photos, WhatsApp replies, a short reel. Not the freelancer list again. |
+| P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
+
+Next run starts at **Grammarly Pro price in Pakistan**.

@@ -67,7 +67,11 @@
     /* ======================================================================
        CART LOGIC
        ====================================================================== */
+    function payable(item) {
+        return !!(item && !item.quote && Number.isInteger(item.price) && item.price > 0);
+    }
     function addToCart(data) {
+        if (!payable(data)) return false; // quote-only plans are not a Rs 0 line
         if (cart.some((i) => i.id === data.id)) return false; // already in cart
         cart.push(data);
         renderCart();
@@ -94,7 +98,13 @@
     function buildOrderText() {
         let msg = "Hello MALIK DATA CENTRE! I would like to order:\n\n";
         let total = 0;
+        var quoted = 0;
         cart.forEach((item, idx) => {
+            if (!payable(item)) {
+                quoted++;
+                msg += (idx + 1) + ") " + item.name + " — " + item.duration + " — Price on request\n";
+                return;
+            }
             var priceStr = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
             if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
                 priceStr += " (Rs " + item.price.toLocaleString() + ")";
@@ -102,10 +112,13 @@
             msg += (idx + 1) + ") " + item.name + " — " + item.duration + " — " + priceStr + "\n";
             total += item.price;
         });
-        var totalStr = window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString();
-        if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+        var totalStr = quoted && total === 0
+            ? "Price on request"
+            : (window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString());
+        if (total > 0 && window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
             totalStr += " (Rs " + total.toLocaleString() + ")";
         }
+        if (quoted && total > 0) totalStr += " plus " + quoted + " item(s) at price on request";
         msg += "\nTotal: " + totalStr + "\n\n";
         msg += "Please share payment details (EasyPaisa/JazzCash/Bank) and setup steps.\nSource: malikdatacentre.store";
         return msg;
@@ -134,9 +147,16 @@
         }
 
         let total = 0;
+        var quoted = 0;
         itemsEl.innerHTML = cart.map((item) => {
-            total += item.price;
-            var priceDisplay = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
+            var priceDisplay;
+            if (!payable(item)) {
+                quoted++;
+                priceDisplay = "Price on request";
+            } else {
+                total += item.price;
+                priceDisplay = window.currencyConverter ? window.currencyConverter.format(item.price) : "Rs " + item.price.toLocaleString();
+            }
             return (
                 '<div class="mdc-cart-item">' +
                     '<div class="mdc-cart-item-info">' +
@@ -148,7 +168,9 @@
                 '</div>'
             );
         }).join("");
-        totalEl.textContent = window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString();
+        totalEl.textContent = quoted && total === 0
+            ? "Price on request"
+            : ((window.currencyConverter ? window.currencyConverter.format(total) : "Rs " + total.toLocaleString()) + (quoted ? " + quote" : ""));
         checkout.style.opacity = "1";
         checkout.style.pointerEvents = "auto";
         checkout.setAttribute("href", getWaUrl(buildOrderText()));
@@ -168,10 +190,13 @@
             const btn = e.target.closest(".btn-addcart");
             if (!btn) return;
             e.preventDefault();
+            if (btn.getAttribute("data-quote") === "1") return;
+            const rawPrice = parseInt(btn.getAttribute("data-price"), 10);
+            if (!Number.isInteger(rawPrice) || rawPrice <= 0) return;
             const data = {
                 id: btn.getAttribute("data-id"),
                 name: btn.getAttribute("data-name"),
-                price: parseInt(btn.getAttribute("data-price"), 10) || 0,
+                price: rawPrice,
                 duration: btn.getAttribute("data-duration") || "",
                 setup: btn.getAttribute("data-setup") || ""
             };

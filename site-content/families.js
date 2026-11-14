@@ -12,7 +12,7 @@
 module.exports = [
   {
     slug: "chatgpt-go", logo: "openai.svg", name: "ChatGPT Go", cat: "ai-chat", icon: "fa-solid fa-comments",
-    ids: ["chatgpt-go-6m"], official: "https://chatgpt.com/",
+    ids: ["chatgpt-go-6m", "chatgpt-go-3m"], official: "https://chatgpt.com/",
     intro: "ChatGPT Go is OpenAI's lower-cost paid plan, with higher message, upload and image limits than the free tier. We set it up for you without an international credit card, wherever you are.",
     bestFor: ["Students writing assignments, notes and summaries", "Freelancers drafting proposals, emails and client copy", "Anyone who keeps hitting the free-plan limit"],
     included: ["Higher daily message limits than ChatGPT Free", "More file uploads and image generations", "Longer memory and context for ongoing work", "Custom GPTs and Projects", "Setup guide sent on WhatsApp after activation"],
@@ -20,11 +20,32 @@ module.exports = [
       ["What is the difference between ChatGPT Go and ChatGPT Plus?", "Go is the budget tier: generous limits for everyday writing, study and research. Plus adds higher limits and more advanced models. For most students and freelancers, Go is enough."],
       ["Is this plan shared or private?", "Check the access type shown in the plan table above before ordering. If you need a private setup, ask on WhatsApp and we will confirm what is available today."]
     ],
-    related: ["super-grok", "gemini-pro", "google-ai-ultra"]
+    related: ["chatgpt-business", "super-grok", "gemini-pro"]
+  },
+  {
+    slug: "chatgpt-business", logo: "openai.svg", name: "ChatGPT Business", cat: "ai-chat", icon: "fa-solid fa-briefcase",
+    ids: ["chatgpt-business-1m", "chatgpt-business-1m-slot"], official: "https://chatgpt.com/",
+    intro: "ChatGPT Business is OpenAI's team plan, sold here as a ready-made 1-month account with a 1-day warranty. It is not the same product as ChatGPT Go.",
+    bestFor: ["Small teams that want a Business workspace", "Freelancers who need more than the Go plan for a month", "Anyone who wants a short trial before a longer plan"],
+    included: ["ChatGPT Business workspace", "1-month ready-made account", "1-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Is this ChatGPT Go?", "No. Go is the lower personal plan. Business is a separate workspace account for one month."]],
+    related: ["chatgpt-go", "gemini-pro", "claude-api-tokens"]
+  },
+  {
+    slug: "gemini-plus", logo: "google-gemini.svg", name: "Gemini Plus", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
+    ids: ["gemini-plus-12m-link", "gemini-plus-6m-link"], official: "https://gemini.google.com/",
+    intro: "Gemini Plus is Google's lower-cost Gemini plan, delivered here as an activation link for 6 or 12 months. It is a different product from Gemini Pro on your own Gmail.",
+    bestFor: ["Students who want Gemini without the Pro plan", "Anyone who can use an activation link", "Buyers comparing a short plan with a full year"],
+    included: ["Gemini Plus access via an activation link", "12-month plan", "6-month plan", "Setup steps on WhatsApp"],
+    faqs: [
+      ["Is this the same as Gemini Pro?", "No. Gemini Pro on this store is activated on your own Gmail. Gemini Plus is a separate plan delivered as a link."],
+      ["Which length should I pick?", "The 12-month link is the lower price. The 6-month link is the shorter plan. Both are ordered from the plans above."]
+    ],
+    related: ["gemini-pro", "chatgpt-go", "google-ai-ultra"]
   },
   {
     slug: "gemini-pro", logo: "google-gemini.svg", name: "Gemini Pro (Google AI Pro)", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
-    ids: ["gemini-pro-12m"], official: "https://gemini.google.com/",
+    ids: ["gemini-pro-12m", "gemini-pro-2y-yt-1m"], official: "https://gemini.google.com/",
     intro: "Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets. Our long-duration plans are one of the lowest monthly cost ways to use Google AI.",
     bestFor: ["Students and researchers who live in Google Docs and Drive", "Anyone who needs large file and long-document analysis", "Families who also want extra cloud storage"],
     included: ["Gemini Pro model access in the Gemini app", "Gemini in Gmail, Docs, Sheets and Slides", "Deep Research and long-context file analysis", "Google One cloud storage (see plan for size)", "AI credits for image and video tools (see plan)"],
@@ -72,7 +93,7 @@ module.exports = [
   },
   {
     slug: "capcut-pro", logo: "capcut.webp", name: "CapCut Pro", cat: "creative", icon: "fa-solid fa-scissors",
-    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro", "capcut-team-1m", "capcut-team-6m"], official: "https://www.capcut.com/",
+    ids: ["capcut-pro-1m", "capcut-pro-3m", "capcut-pro-6m", "capcut-pro", "capcut-team-1m", "capcut-team-6m", "capcut-pro-all-plans"], official: "https://www.capcut.com/",
     intro: "CapCut Pro unlocks premium effects, AI editing tools and higher-quality exports in the most popular short-video editor. Our plans run on 2 devices, so you can edit on your phone and PC.",
     bestFor: ["TikTok, Reels and YouTube Shorts creators", "Freelance video editors on a budget", "Small businesses making product videos"],
     included: ["Pro effects, filters and transitions", "AI tools such as auto captions and background removal", "High-resolution exports", "2 devices on the shared-login plans", "Warranty for the stated plan period"],
@@ -108,7 +129,7 @@ module.exports = [
   },
   {
     slug: "cursor-pro", logo: "cursor.svg", name: "Cursor Pro", cat: "ai-coding", icon: "fa-solid fa-code",
-    ids: ["cursor-pro", "cursor-pro-12m", "cursor-grok-bundle"], official: "https://cursor.com/",
+    ids: ["cursor-pro", "cursor-pro-3m", "cursor-pro-12m", "cursor-grok-bundle", "cursor-pro-plus-grok-1m"], official: "https://cursor.com/",
     intro: "Cursor is an AI code editor built on VS Code, with agent mode, codebase-aware chat and smart autocomplete. Cursor Pro raises the usage limits so you can code with AI all day.",
     bestFor: ["Software developers and freelancers", "CS students building projects", "Startups shipping fast with a small team"],
     included: ["Higher agent and chat usage limits", "Unlimited tab autocomplete", "Access to frontier coding models", "Works with your existing VS Code extensions", "Private account"],
@@ -132,8 +153,8 @@ module.exports = [
   },
   {
     slug: "replit-core", logo: "replit.svg", name: "Replit Core", cat: "ai-coding", icon: "fa-solid fa-terminal",
-    ids: ["replit-core-12m", "replit-core-100"], aliases: ["replit-core"], official: "https://replit.com/",
-    intro: "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan or a ready-made account pre-loaded with $100 of credits.",
+    ids: ["replit-core-12m", "replit-core-100", "replit-core-1m"], aliases: ["replit-core"], official: "https://replit.com/",
+    intro: "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan, a 1-month account, or a ready-made account pre-loaded with $100 of credits.",
     bestFor: ["Developers who code from any device in the browser", "Students learning to program", "Builders using Replit Agent to ship apps"],
     included: ["Replit Agent access", "More compute and storage", "Private apps and deployments", "Monthly usage credits", "Private or ready-made account (see plan)"],
     faqs: [
@@ -182,7 +203,7 @@ module.exports = [
   },
   {
     slug: "manus-ai", logo: "manus.svg", name: "Manus Pro", cat: "ai-chat", icon: "fa-solid fa-robot",
-    ids: ["manus-pro"], official: "https://manus.im/",
+    ids: ["manus-pro", "manus-pro-1m"], official: "https://manus.im/",
     intro: "Manus is an autonomous AI agent that researches, browses, writes and builds deliverables for you from start to finish. The Pro plan is a private 12-month account.",
     bestFor: ["Researchers and analysts", "Business owners who delegate long research tasks", "Content teams producing reports"],
     included: ["Pro agent credits", "Web browsing and research tasks", "Reports, slides and file outputs", "Private account for 12 months"],
@@ -200,10 +221,10 @@ module.exports = [
   },
   {
     slug: "notion-business", logo: "notion.svg", name: "Notion Business", cat: "creative", icon: "fa-solid fa-note-sticky",
-    ids: ["notion-business-12m"], official: "https://www.notion.com/",
+    ids: ["notion-business-12m", "notion-business-3m"], official: "https://www.notion.com/",
     intro: "Notion Business adds Notion AI, advanced permissions and team features to the all-in-one workspace for notes, docs, wikis and projects.",
     bestFor: ["Teams running projects and wikis", "Students organising notes", "Agencies managing clients"],
-    included: ["Notion AI", "Unlimited pages and blocks", "Advanced sharing and permissions", "Workspace activation for 12 months"],
+    included: ["Notion AI", "Unlimited pages and blocks", "Advanced sharing and permissions", "Workspace activation for 3 or 12 months"],
     faqs: [["Can my existing workspace be upgraded?", "Ask on WhatsApp before ordering. We will confirm whether we upgrade your workspace or set up a new one."]],
     related: ["gamma-pro", "grammarly-pro", "microsoft-office-365"]
   },
@@ -218,19 +239,19 @@ module.exports = [
   },
   {
     slug: "elevenlabs-creator", logo: "elevenlabs.svg", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
-    ids: ["elevenlabs-creator-1m", "elevenlabs-creator", "elevenlabs-creator-3m"], official: "https://elevenlabs.io/",
+    ids: ["elevenlabs-creator-1m", "elevenlabs-creator-1m-link", "elevenlabs-creator", "elevenlabs-creator-3m"], official: "https://elevenlabs.io/",
     intro: "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning.",
     bestFor: ["YouTube faceless channels and narrators", "Ad and explainer video makers", "Audiobook and podcast creators"],
-    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "1-month and 3-month plans (131k credits a month) and a 12-month plan"],
+    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "Private 1-month, 3-month and 12-month accounts, plus a separate 1-month activation link"],
     faqs: [["Are Urdu or Hindi voices available?", "ElevenLabs supports many languages, including Hindi. Test your script in the free version first."]],
     related: ["heygen", "cinem-ai", "capcut-pro"]
   },
   {
     slug: "heygen", logo: "heygen.webp", name: "HeyGen Creator", cat: "video-audio", icon: "fa-solid fa-user-astronaut",
-    ids: ["heygen-200"], official: "https://www.heygen.com/",
+    ids: ["heygen-200", "heygen-creator-1m"], official: "https://www.heygen.com/",
     intro: "HeyGen creates talking-avatar videos from a script, translates videos with lip-sync and builds a digital twin of you. The Creator plan suits regular content production.",
     bestFor: ["Faceless YouTube and TikTok channels", "Course creators and trainers", "Marketers making multilingual ads"],
-    included: ["Avatar video generation credits", "Video translation with lip-sync", "Custom avatar (digital twin)", "Private account"],
+    included: ["Avatar video generation credits", "Video translation with lip-sync", "Custom avatar (digital twin)", "200-credit pack or a separate 1-month Creator account"],
     faqs: [["How many videos can I make with 200 credits?", "It depends on video length and features. Share your planned usage on WhatsApp and we will suggest the right plan."]],
     related: ["elevenlabs-creator", "higgsfield", "kling-ai"]
   },
@@ -299,12 +320,30 @@ module.exports = [
   },
   {
     slug: "linkedin-premium", logo: "linkedin.svg", name: "LinkedIn Premium", cat: "creative", icon: "fa-brands fa-linkedin",
-    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m", "linkedin-career-duo-2m", "linkedin-business-duo-2m", "linkedin-sales-nav-adv-1m"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
+    ids: ["linkedin-career-3m", "linkedin-sales-nav-2m", "linkedin-career-duo-2m", "linkedin-business-duo-2m", "linkedin-sales-nav-adv-1m", "linkedin-all-plans"], aliases: ["linkedin-career"], official: "https://premium.linkedin.com/",
     intro: "LinkedIn Premium Career helps job seekers stand out, and Sales Navigator helps sales teams find and contact leads. Both are applied as upgrades to your existing LinkedIn profile.",
     bestFor: ["Job seekers and fresh graduates", "Freelancers finding international clients", "B2B sales and lead generation"],
     included: ["InMail credits", "See who viewed your profile", "LinkedIn Learning (Career)", "Advanced lead search (Sales Navigator)", "Upgrade on your own profile"],
     faqs: [["Career or Sales Navigator?", "Career is for job hunting and personal growth. Sales Navigator is built for finding and contacting leads."]],
     related: ["coursera-plus", "grammarly-pro", "super-grok"]
+  },
+  {
+    slug: "udemy", logo: "udemy.svg", name: "Udemy Personal", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
+    ids: ["udemy-personal-1m"], official: "https://www.udemy.com/",
+    intro: "Udemy Personal Plan opens Udemy's course library for one month on a ready-made account, with a 7-day warranty.",
+    bestFor: ["Learners who want many courses for a month", "Freelancers picking up a practical skill", "Anyone who does not want an annual course plan"],
+    included: ["Udemy Personal Plan", "1 month on a ready-made account", "7-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Do I get every Udemy course?", "Personal Plan includes the courses Udemy puts in that subscription. Individual paid courses outside the plan are not included."]],
+    related: ["coursera-plus", "edx", "gemini-pro"]
+  },
+  {
+    slug: "edx", logo: "edx.svg", name: "edX Premium", cat: "entertainment", icon: "fa-solid fa-building-columns",
+    ids: ["edx-premium-12m"], official: "https://www.edx.org/",
+    intro: "edX Premium is a 12-month course membership on a ready-made account, with a 7-day warranty.",
+    bestFor: ["Students taking university-style online courses", "Career switchers", "Anyone who wants a year of edX rather than one course"],
+    included: ["edX Premium features", "12 months on a ready-made account", "7-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Is a certificate included in every course?", "Certificates follow the rules of the course you take. Ask on WhatsApp if you need a specific program confirmed before you pay."]],
+    related: ["coursera-plus", "udemy", "linkedin-premium"]
   },
   {
     slug: "coursera-plus", logo: "coursera.svg", name: "Coursera Plus", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
@@ -326,7 +365,7 @@ module.exports = [
   },
   {
     slug: "microsoft-office-365", logo: "microsoftoffice.svg", name: "Microsoft 365", cat: "vpn-security", icon: "fa-brands fa-microsoft",
-    ids: ["ms-office-1y"], official: "https://www.microsoft.com/microsoft-365",
+    ids: ["ms-office-1y", "ms365-admin-1y"], official: "https://www.microsoft.com/microsoft-365",
     intro: "Microsoft 365 includes Word, Excel, PowerPoint, Outlook and OneDrive cloud storage, activated on your own email for 12 months.",
     bestFor: ["Offices and accountants", "Students and teachers", "Anyone who needs genuine Office apps"],
     included: ["Word, Excel, PowerPoint and Outlook", "OneDrive cloud storage", "Desktop, web and mobile apps", "Activated on your own email"],
@@ -353,8 +392,8 @@ module.exports = [
   },
   {
     slug: "surfshark-vpn", logo: "surfshark.svg", name: "Surfshark VPN", cat: "vpn-security", icon: "fa-solid fa-water",
-    ids: ["surfshark-monthly"], official: "https://surfshark.com/",
-    intro: "Surfshark is a budget VPN that works on unlimited devices. Our monthly plan is the cheapest way to get a premium VPN.",
+    ids: ["surfshark-monthly", "surfshark-2m", "surfshark-2m-coupon"], official: "https://surfshark.com/",
+    intro: "Surfshark is a budget VPN that works on unlimited devices. The monthly plan is a shared login. A separate 2-month account includes full warranty.",
     bestFor: ["Budget buyers", "Families with many devices"],
     included: ["Monthly access", "Servers in many countries", "Shared premium account"],
     faqs: [["Is a shared account safe?", "A VPN account only stores your connection settings, not your files. For full privacy, choose NordVPN on your own email."]],
@@ -371,16 +410,55 @@ module.exports = [
   },
   {
     slug: "claude-api-tokens", logo: "claude.svg", name: "Claude API Tokens", cat: "ai-chat", icon: "fa-solid fa-plug",
-    ids: ["claude-api-10m"], official: "https://www.anthropic.com/api",
-    intro: "API token packs for developers who want to use Claude models inside their own apps, bots and automations. Contact us for larger volumes.",
-    bestFor: ["Developers building chatbots", "Automation agencies", "SaaS builders"],
-    included: ["10M token pack", "API key access", "Setup help on WhatsApp"],
-    faqs: [["Need a larger volume?", "See our Enterprise API Credits page or ask on WhatsApp for a custom quote."]],
-    related: ["cursor-pro", "n8n-starter", "lovable-pro"]
+    ids: ["claude-api-10m", "claude-api-10m-1d", "claude-api-50m-1d", "claude-api-100m-1d", "claude-api-100m-3d", "claude-api-200m-1d", "claude-api-500m-1d", "claude-api-1b-7d", "claude-api-1b-30d", "claude-api-500-credits", "claude-api-50-token-1m", "claude-kiro-100-1m", "claude-kiro-200-1m"],
+    official: "https://www.anthropic.com/api",
+    extraKeywords: "Claude API tokens Pakistan, buy Claude API credits, Claude API price on request, Claude 1B tokens, Claude Kiro API, Claude API 100 million 1 day",
+    intro: "Claude API token packs, credit packs and Kiro packs for developers calling Claude from their own apps. One 10 million token pack has a listed PKR price. The other packs, including 1-day, 3-day, 7-day, 30-day and 1-month sizes, are price on request: message us on WhatsApp and we confirm the amount before you pay.",
+    bestFor: ["Developers building chatbots and agents", "Teams that need a short high-volume token window", "Anyone buying Claude API credits from Pakistan without listing a card price up front"],
+    included: ["Listed 10M token pack with a PKR price", "50M, 100M, 200M and 500M packs for 1 day, plus 100M for 3 days", "1 billion credits for 7 days, and 1 billion tokens for 30 days", "$50 token pack for 1 month and a $500 credit pack", "Claude Kiro API $100 and $200 packs for 1 month", "API key delivered on WhatsApp"],
+    faqs: [
+      ["Why is there no price on some Claude packs?", "Those packs are quoted per order. Tap Contact on WhatsApp, name the plan, and we reply with the price and the delivery steps. They are not added to the cart and they are never billed as zero."],
+      ["What does the 1 billion pack include?", "1 billion Claude API tokens for 30 days, with a 7-day warranty. The selling price is confirmed on WhatsApp."],
+      ["Is the $500 credit pack the same as a token pack?", "No. Token packs are sold by token count and duration. The $500 pack is a credit balance. $500 is the credit size, not our selling price."]
+    ],
+    related: ["claude-codex", "codex-api", "cursor-pro"]
+  },
+  {
+    slug: "claude-codex", logos: ["claude.svg", "openai.svg"], name: "Claude and Codex Credits", cat: "ai-chat", icon: "fa-solid fa-plug",
+    ids: ["claude-codex-100-7d"], official: "https://www.anthropic.com/api",
+    extraKeywords: "Claude and Codex credits Pakistan, buy Claude Codex API, Claude Codex $100 credits, price on request",
+    intro: "One pack that covers both Claude and Codex credits, sized at $100, for 7 days, with full warranty. $100 is the credit size, not the price you pay. Contact Support on WhatsApp for the amount.",
+    bestFor: ["Developers who call both Claude and Codex", "Teams that want one 7-day credit window", "Anyone comparing a combined pack with separate Claude or Codex plans"],
+    included: ["Claude and Codex credits in one pack", "$100 credit size", "7 days access", "Full warranty", "API keys delivered on WhatsApp"],
+    faqs: [["Is this the same as buying Claude and Codex separately?", "No. This is one combined $100 credit pack for 7 days. Separate Claude and Codex packs are on their own pages."]],
+    related: ["claude-api-tokens", "codex-api", "cursor-pro"]
+  },
+  {
+    slug: "render", logo: "render.svg", name: "Render Credits", cat: "ai-coding", icon: "fa-solid fa-server",
+    ids: ["render-50-credits"], official: "https://render.com/",
+    intro: "Render credit coupons for hosting apps and sites. The $50 coupon is a credit size. You pay the PKR price on the plan, and we send the coupon on WhatsApp.",
+    bestFor: ["Developers hosting a side project", "Freelancers who need cloud credit", "Anyone who wants a coupon instead of a card charge"],
+    included: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Setup help on WhatsApp"],
+    faqs: [["Is $50 the price I pay?", "No. $50 is the credit on the coupon. The price you pay is the PKR amount on the plan."]],
+    related: ["cursor-pro", "replit-core", "n8n-starter"]
+  },
+  {
+    slug: "codex-api", logo: "openai.svg", name: "Codex API", cat: "ai-coding", icon: "fa-solid fa-code",
+    ids: ["codex-api-50m-1d", "codex-api-100m-1d", "codex-api-200m-1d", "codex-api-500m-1d", "codex-api-1b-14d", "codex-astra6-50-1m", "codex-astra6-100-1m", "codex-astra6-200-1m", "codex-astra6-500-1m"],
+    official: "https://openai.com/codex",
+    extraKeywords: "Codex API Pakistan, buy Codex API credits, Codex API price on request, Codex Astra6, Codex 1 billion credits",
+    intro: "Codex API credit packs and Astra6 token packs for developers calling OpenAI Codex from their own tools. Every pack on this page is price on request, with full warranty. Contact Support on WhatsApp and we confirm the amount before you pay.",
+    bestFor: ["Developers calling Codex from their own tools", "Teams that need a 1-day credit burst or a 1-month Astra6 pack", "Anyone comparing Codex with Cursor"],
+    included: ["50M, 100M, 200M and 500M credits for 1 day", "1 billion credits for 14 days", "Astra6 token packs sized at $50, $100, $200 and $500 for 1 month", "Full warranty on every pack", "API key delivered on WhatsApp"],
+    faqs: [
+      ["Why is there no price?", "Each Codex pack is quoted per order. Tap Contact Support, name the plan, and we reply with the price. Nothing is added to the cart at zero."],
+      ["Is $50 the price of Astra6?", "No. $50, $100, $200 and $500 are the token sizes. The amount you pay is confirmed on WhatsApp."]
+    ],
+    related: ["claude-codex", "claude-api-tokens", "cursor-pro"]
   },
   {
     slug: "muse-ai", logo: "muse.svg", name: "Muse AI Tokens", cat: "ai-chat", icon: "fa-solid fa-feather",
-    ids: ["muse-ai-1b", "muse-ai-31b"],
+    ids: ["muse-ai-1b", "muse-ai-31b", "muse-ai-all-plans"],
     intro: "Muse AI token packs in two sizes, 1B and 31B tokens, paid once in PKR. Message us on WhatsApp for delivery and setup details.",
     bestFor: ["Users who need a Muse AI token pack", "Anyone who wants to pay in PKR without a credit card"],
     included: ["Your chosen token pack (1B or 31B)", "Setup help on WhatsApp"],
@@ -762,5 +840,77 @@ module.exports = [
       "dreamface",
       "wink"
     ]
+  },
+  {
+    slug: "adobe-express", logo: "adobecreativecloud.svg", name: "Adobe Express", cat: "creative", icon: "fa-solid fa-bolt",
+    ids: ["adobe-express-12m"], official: "https://www.adobe.com/express/",
+    intro: "Adobe Express is the quick design app for social posts, flyers and short videos. The 12-month plan is a ready-made account, separate from the full Creative Cloud bundle.",
+    bestFor: ["Social media managers who need posts fast", "Small shops making flyers", "Anyone who does not need Photoshop every day"],
+    included: ["Adobe Express for 12 months", "Templates for posts and video", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this Photoshop and Premiere?", "No. Those apps are in the Creative Cloud bundle. Express is the lighter design app."]],
+    related: ["adobe-creative-cloud", "canva-pro", "capcut-pro"]
+  },
+  {
+    slug: "granola", logo: "granola.svg", name: "Granola Business", cat: "ai-chat", icon: "fa-solid fa-note-sticky",
+    ids: ["granola-business"], official: "https://www.granola.ai/",
+    intro: "Granola writes notes from your meetings. This is the Business plan on a ready-made account. The supplier listing does not split it into a separate duration.",
+    bestFor: ["Founders who sit in a lot of calls", "Agencies that need meeting notes", "Teams that do not want to type minutes"],
+    included: ["Granola Business", "Meeting notes", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["How long does the plan run?", "The supplier lists Business as one plan. Ask on WhatsApp if you need the exact end date confirmed before you pay."]],
+    related: ["notion-business", "chatgpt-go", "wispr-flow"]
+  },
+  {
+    slug: "framer", logo: "framer.svg", name: "Framer Pro", cat: "creative", icon: "fa-solid fa-pen-ruler",
+    ids: ["framer-pro-12m"], official: "https://www.framer.com/",
+    intro: "Framer Pro lets you design a site on the canvas and publish it. The plan is 12 months on a ready-made account.",
+    bestFor: ["Designers shipping a marketing site", "Founders who want a published page without a developer", "Freelancers building client landing pages"],
+    included: ["Framer Pro for 12 months", "Design and publish tools", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Framer or Lovable?", "Framer is a design canvas you publish. Lovable builds an app from a written prompt."]],
+    related: ["lovable-pro", "canva-pro", "adobe-express"]
+  },
+  {
+    slug: "linear", logo: "linear.svg", name: "Linear Business", cat: "ai-coding", icon: "fa-solid fa-list-check",
+    ids: ["linear-business-12m"], official: "https://linear.app/",
+    intro: "Linear Business is the issue tracker for software teams. The plan is 12 months on a ready-made account.",
+    bestFor: ["Engineering teams tracking issues", "Startups running a roadmap", "Agencies managing client bugs"],
+    included: ["Linear Business for 12 months", "Issues, projects and cycles", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this a seat on my existing workspace?", "It is a ready-made account. Ask on WhatsApp before you pay if you need it joined to a workspace you already use."]],
+    related: ["notion-business", "cursor-pro", "n8n-starter"]
+  },
+  {
+    slug: "bolt-new", logo: "bolt.svg", name: "Bolt.new Pro", cat: "ai-coding", icon: "fa-solid fa-bolt",
+    ids: ["bolt-new-pro-12m"], official: "https://bolt.new/",
+    intro: "Bolt.new Pro builds a web app from a prompt in the browser. The plan is 12 months on a ready-made account.",
+    bestFor: ["Founders prototyping an app", "Freelancers who want a first version the same day", "People comparing Bolt with Lovable"],
+    included: ["Bolt.new Pro for 12 months", "Prompt-to-app building", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Bolt or Cursor?", "Bolt runs in the browser and starts from a prompt. Cursor is a desktop editor for a codebase you already have."]],
+    related: ["lovable-pro", "cursor-pro", "replit-core"]
+  },
+  {
+    slug: "resend", logo: "resend.svg", name: "Resend Pro", cat: "ai-coding", icon: "fa-solid fa-envelope",
+    ids: ["resend-pro-12m"], official: "https://resend.com/",
+    intro: "Resend Pro sends transactional email from an app: sign-up mail, receipts and alerts. The plan is 12 months on a ready-made account.",
+    bestFor: ["Developers sending app email", "Startups that need a sending domain", "Agencies wiring email into a client product"],
+    included: ["Resend Pro for 12 months", "Transactional email tools", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Does this include my own domain?", "Domain setup depends on the account we deliver. Ask on WhatsApp if you need a specific domain connected before you pay."]],
+    related: ["n8n-starter", "cursor-pro", "bolt-new"]
+  },
+  {
+    slug: "arize", logo: "arize.svg", name: "Arize Pro", cat: "ai-coding", icon: "fa-solid fa-chart-line",
+    ids: ["arize-pro-12m"], official: "https://arize.com/",
+    intro: "Arize Pro is for tracing and monitoring AI applications. The plan is 12 months on a ready-made account.",
+    bestFor: ["Teams running models in production", "Developers debugging agent traces", "Anyone who needs AI monitoring for a year"],
+    included: ["Arize Pro for 12 months", "Tracing and monitoring", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this an API key or a login?", "It is a ready-made account. We send the setup steps on WhatsApp after you order."]],
+    related: ["claude-api-tokens", "codex-api", "cursor-pro"]
+  },
+  {
+    slug: "pangram", logo: "pangram.svg", name: "Pangram Pro", cat: "creative", icon: "fa-solid fa-spell-check",
+    ids: ["pangram-pro-12m"], official: "https://www.pangram.com/",
+    intro: "Pangram Pro checks whether a piece of writing was produced by AI. The plan is 12 months on a ready-made account.",
+    bestFor: ["Editors reviewing submissions", "Teachers checking assignments", "Teams that need an AI-writing check"],
+    included: ["Pangram Pro for 12 months", "AI writing checks", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Does a Pangram result prove who wrote the text?", "It is a check, not a verdict. Use it as one signal and read the text yourself."]],
+    related: ["grammarly-pro", "quillbot", "chatgpt-go"]
   }
 ];

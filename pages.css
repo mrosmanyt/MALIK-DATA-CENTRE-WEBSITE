@@ -286,6 +286,28 @@ a.pg-card:hover { transform: translateY(-3px); border-color: var(--border-glass-
     .navbar .mdc-currency-selector-wrap { display: none !important; }
 }
 
+/* ---------- Language selector (same list as the homepage) ---------- */
+.pg-head-cta .mdc-lang-selector-wrap { margin-right: 0; }
+.pg-head-cta .mdc-lang-select { max-width: 148px; }
+.pg-mobile .mdc-lang-selector-wrap { display: block; width: 100%; margin: 0 0 8px; }
+.pg-mobile .mdc-lang-select { width: 100%; }
+@media (max-width: 1180px) {
+    .pg-lang-desktop { display: none !important; }
+}
+html[data-mdc-lang="ur"] body { font-family: "Noto Nastaliq Urdu", "Noto Sans Arabic", Inter, sans-serif; }
+html[data-mdc-lang="ar"] body,
+html[data-mdc-lang="ps"] body { font-family: "Noto Sans Arabic", Inter, sans-serif; }
+html[data-mdc-lang="hi"] body,
+html[data-mdc-lang="ne"] body { font-family: "Noto Sans Devanagari", Inter, sans-serif; }
+html[data-mdc-lang="bn"] body { font-family: "Noto Sans Bengali", Inter, sans-serif; }
+html[data-mdc-lang="ta"] body { font-family: "Noto Sans Tamil", Inter, sans-serif; }
+html[data-mdc-lang="pa"] body { font-family: "Noto Sans Gurmukhi", Inter, sans-serif; }
+html[data-mdc-lang="zh-CN"] body { font-family: "Noto Sans SC", Inter, sans-serif; }
+html[data-mdc-lang="ja"] body { font-family: "Noto Sans JP", Inter, sans-serif; }
+html[data-mdc-lang="ko"] body { font-family: "Noto Sans KR", Inter, sans-serif; }
+html[data-mdc-lang="ru"] body { font-family: "Noto Sans", Inter, sans-serif; }
+html[dir="rtl"] .article-body, html[dir="rtl"] .pg-lead { text-align: right; }
+
 /* Blog post table of contents */
 .pg-toc { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 16px 20px; margin: 18px 0 8px; }
 .pg-toc strong { color: var(--text-main); font-size: 0.9rem; }

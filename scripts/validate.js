@@ -28,9 +28,13 @@ if (tools) {
     ["id", "name", "category", "duration", "setup", "desc"].forEach(k => { if (!t[k] || typeof t[k] !== "string") err(w, `missing text field "${k}"`); });
     if (!/^[a-z0-9-]+$/.test(t.id || "")) err(w, "id must be lowercase letters, numbers and dashes");
     if (ids.has(t.id)) err(w, "duplicate id"); ids.add(t.id);
-    if (!(Number.isInteger(t.price) && t.price > 0)) err(w, "price must be a whole number above 0");
-    if (!(Number.isInteger(t.originalPrice) && t.originalPrice >= t.price)) err(w, "originalPrice must be a whole number >= price");
-    if (t.originalPrice > t.price * 15) warn(w, "originalPrice is more than 15x price — looks like a fake discount");
+    if (t.priceOnRequest === true) {
+      if (t.price != null || t.originalPrice != null) err(w, "priceOnRequest plans must not set price or originalPrice (the page shows Price on request)");
+    } else {
+      if (!(Number.isInteger(t.price) && t.price > 0)) err(w, "price must be a whole number above 0");
+      if (!(Number.isInteger(t.originalPrice) && t.originalPrice >= t.price)) err(w, "originalPrice must be a whole number >= price");
+      if (t.originalPrice > t.price * 15) warn(w, "originalPrice is more than 15x price — looks like a fake discount");
+    }
     if (!CATS.includes(t.category)) err(w, `category must be one of: ${CATS.join(", ")}`);
     if (!Array.isArray(t.specs) || !t.specs.length) err(w, "specs must be a non-empty array");
     if (!t.icon) warn(w, "no icon svg");
@@ -123,7 +127,7 @@ posts.forEach(p => {
   if (nt) { if (seenTitle.has(nt)) err(w, `same title as ${seenTitle.get(nt)}`); seenTitle.set(nt, p.file); }
   if (!p.draft && p.date) { perDay[p.date] = (perDay[p.date] || 0) + 1; }
 });
-Object.entries(perDay).forEach(([d, n]) => { if (n > 2) err("site-content/blog", `${n} posts dated ${d} — maximum is 2 per day`); });
+Object.entries(perDay).forEach(([d, n]) => { if (n > 5) err("site-content/blog", `${n} posts dated ${d} — maximum is 5 per day`); });
 
 /* ---------------- report ---------------- */
 console.log(`Checked ${tools ? tools.list.length : 0} catalog items and ${posts.length} blog posts.`);

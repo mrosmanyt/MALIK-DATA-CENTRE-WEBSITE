@@ -925,7 +925,84 @@ const TOOLS_DATABASE = [
         setup: "API Key Access",
         desc: "Access Anthropic's Claude 3.5 models through API keys. Fully loaded with 10 Million input/output tokens.",
         specs: ["10M input/output tokens pack", "High concurrency API keys", "Claude 3.5 Sonnet & Opus support", "Full warranty replacement"],
-        icon: `<svg width="24" height="24" fill="#D97757" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>`
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-10m-1d",
+        name: "Claude API 10M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "10 million Claude API tokens for 1 day, with full warranty. For developers in Pakistan who need Claude API access. Price on request.",
+        specs: ["10 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-50m-1d",
+        name: "Claude API 50M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "50 million Claude API tokens for 1 day, with full warranty. Buy Claude API tokens in Pakistan and get the price on WhatsApp.",
+        specs: ["50 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-100m-3d",
+        name: "Claude API 100M Tokens",
+        category: "ai-chat",
+        duration: "3 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "100 million Claude API tokens for 3 days, with full warranty. A short high-volume pack for apps and agents. Price on request.",
+        specs: ["100 million Claude API tokens", "3 days access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-200m-1d",
+        name: "Claude API 200M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "200 million Claude API tokens for 1 day, with full warranty. For heavier API jobs. The selling price is confirmed on WhatsApp.",
+        specs: ["200 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-500m-1d",
+        name: "Claude API 500M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "500 million Claude API tokens for 1 day, with full warranty. Built for burst usage. Contact us for the price before you pay.",
+        specs: ["500 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-1b-30d",
+        name: "Claude API 1B Tokens",
+        category: "ai-chat",
+        duration: "30 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "1 billion (1B) Claude API tokens for 30 days, with a 7-day warranty. The largest token pack we arrange. Price on request.",
+        specs: ["1 billion (1B) Claude API tokens", "30 days access", "7-day warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-500-credits",
+        name: "Claude API $500 Credits",
+        category: "ai-chat",
+        duration: "Credit pack",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "A Claude API credit pack worth $500 at Anthropic. Our selling price is not listed: message us on WhatsApp for the amount and delivery.",
+        specs: ["$500 of Claude API credits", "Credit pack, not a token-count plan", "Warranty terms confirmed on WhatsApp", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
         id: "muse-ai-1b",
@@ -1310,6 +1387,528 @@ const TOOLS_DATABASE = [
         desc: "Kalakar.io Creator plan: AI tools for creating and editing videos, with higher limits than Editor.",
         specs: ["Creator Plan Features","AI Video Tools","Higher Limits than Editor","Setup Help on WhatsApp"],
         icon: `<img src="/assets/logos/kalakar.webp" alt="Kalakar Creator logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-plus-12m-link",
+        name: "Gemini Plus",
+        category: "ai-chat",
+        duration: "12 Months Plan",
+        price: 600,
+        originalPrice: 600,
+        setup: "Activation Link",
+        desc: "Google Gemini Plus for 12 months, delivered as an activation link. A lower-cost Gemini plan than Pro, for everyday chat and study.",
+        specs: ["Gemini Plus features", "12 months via activation link", "Not the same as Gemini Pro on your Gmail", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-plus-6m-link",
+        name: "Gemini Plus",
+        category: "ai-chat",
+        duration: "6 Months Plan",
+        price: 650,
+        originalPrice: 650,
+        setup: "Activation Link",
+        desc: "Google Gemini Plus for 6 months, delivered as an activation link. A shorter Gemini Plus plan than the 12-month link.",
+        specs: ["Gemini Plus features", "6 months via activation link", "Not the same as Gemini Pro on your Gmail", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-pro-2y-yt-1m",
+        name: "Gemini Pro 2 Years + YouTube Premium",
+        category: "ai-chat",
+        duration: "2 Years + YouTube 1 Month",
+        price: 3350,
+        originalPrice: 3350,
+        setup: "Activated on Client Email",
+        desc: "Gemini Pro for 2 years plus YouTube Premium for 1 month, both activated on your own email.",
+        specs: ["Gemini Pro for 2 years", "YouTube Premium for 1 month", "Activated on your email", "Warranty covers the stated access"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-business-1m",
+        name: "ChatGPT Business",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 4000,
+        originalPrice: 4000,
+        setup: "Ready-Made Account",
+        desc: "ChatGPT Business account for 1 month, for team-style ChatGPT use. A ready-made account with a 1-day warranty.",
+        specs: ["ChatGPT Business workspace", "1 month account", "1-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-go-3m",
+        name: "ChatGPT Go",
+        category: "ai-chat",
+        duration: "3 Months Plan",
+        price: 2900,
+        originalPrice: 2900,
+        setup: "Ready-Made Account",
+        desc: "ChatGPT Go account for 3 months. A separate plan from the 6-month shared login, with a 5-day warranty.",
+        specs: ["ChatGPT Go features", "3 months on a ready-made account", "5-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "udemy-personal-1m",
+        name: "Udemy Personal",
+        category: "entertainment",
+        duration: "1 Month Plan",
+        price: 1250,
+        originalPrice: 1250,
+        setup: "Ready-Made Account",
+        desc: "Udemy Personal Plan for 1 month: thousands of on-demand courses on one account, with a 7-day warranty.",
+        specs: ["Udemy Personal Plan", "1 month access", "7-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/udemy.svg" alt="Udemy logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "replit-core-1m",
+        name: "Replit Core",
+        category: "ai-coding",
+        duration: "1 Month Plan",
+        price: 1850,
+        originalPrice: 1850,
+        setup: "Ready-Made Account",
+        desc: "Replit Core for 1 month on a ready-made account. Shorter than the yearly plan, with a 3-day warranty.",
+        specs: ["Replit Core features", "1 month ready-made account", "3-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/replit.svg" alt="Replit logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "heygen-creator-1m",
+        name: "HeyGen Creator",
+        category: "video-audio",
+        duration: "1 Month Plan",
+        price: 9150,
+        originalPrice: 9150,
+        setup: "Ready-Made Account",
+        desc: "HeyGen Creator for 1 month. A monthly account, separate from the 200-credit pack, with a 20-day warranty.",
+        specs: ["HeyGen Creator features", "1 month account", "20-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/heygen.webp" alt="HeyGen logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "elevenlabs-creator-1m-link",
+        name: "ElevenLabs Creator",
+        category: "video-audio",
+        duration: "1 Month Plan",
+        price: 3350,
+        originalPrice: 3350,
+        setup: "Activation Link",
+        desc: "ElevenLabs Creator for 1 month, delivered as an activation link. This is not the private-account 1-month plan.",
+        specs: ["ElevenLabs Creator features", "1 month via activation link", "Separate from the private account plan", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/elevenlabs.svg" alt="ElevenLabs logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "surfshark-2m",
+        name: "Surfshark VPN",
+        category: "vpn-security",
+        duration: "2 Months Plan",
+        price: 1900,
+        originalPrice: 1900,
+        setup: "Ready-Made Account",
+        desc: "Surfshark VPN account for 2 months with full warranty. A longer plan than the monthly shared login.",
+        specs: ["Surfshark VPN account", "2 months access", "Full warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/surfshark.svg" alt="Surfshark logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "notion-business-3m",
+        name: "Notion Business",
+        category: "creative",
+        duration: "3 Months Plan",
+        price: 1250,
+        originalPrice: 1250,
+        setup: "Workspace Activation",
+        desc: "Notion Business for 3 months, activated on a workspace. Shorter than the 12-month plan.",
+        specs: ["Notion Business features", "3 months workspace activation", "Warranty for the plan period", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/notion.svg" alt="Notion logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "edx-premium-12m",
+        name: "edX Premium",
+        category: "entertainment",
+        duration: "12 Months Plan",
+        price: 400,
+        originalPrice: 400,
+        setup: "Ready-Made Account",
+        desc: "edX Premium for 12 months: university courses and programs on a ready-made account, with a 7-day warranty.",
+        specs: ["edX Premium features", "12 months access", "7-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/edx.svg" alt="edX logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "capcut-pro-all-plans",
+        name: "CapCut Pro All Plans",
+        category: "creative",
+        duration: "5 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "A menu of CapCut Pro plans. The supplier lists several durations together, so this row has no single price. Message us and we confirm which plan and the amount.",
+        specs: ["Several CapCut Pro durations in one menu", "Price on request", "Not a replacement for the priced plans above", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/capcut.webp" alt="CapCut logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "render-50-credits",
+        name: "Render $50 Credits",
+        category: "ai-coding",
+        duration: "Credit coupon",
+        price: 2500,
+        originalPrice: 2500,
+        setup: "Coupon Delivery",
+        desc: "A Render coupon for $50 of credits. $50 is the credit size. You pay the PKR price below, and we send the coupon on WhatsApp.",
+        specs: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Warranty confirmed on WhatsApp", "For Render cloud projects"],
+        icon: `<img src="/assets/logos/render.svg" alt="Render logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "muse-ai-all-plans",
+        name: "Muse AI All Plans",
+        category: "ai-chat",
+        duration: "2 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "Muse AI is also sold as a two-plan menu. This row has no single price. The 1B and 31B packs on this page keep their listed PKR prices.",
+        specs: ["Two Muse AI plans in one menu", "Price on request", "Separate from the priced 1B and 31B packs", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/muse.svg" alt="Muse logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "ms365-admin-1y",
+        name: "Microsoft 365 Admin",
+        category: "vpn-security",
+        duration: "12 Months Plan",
+        price: 9150,
+        originalPrice: 9150,
+        setup: "Admin Access",
+        desc: "Microsoft 365 admin access for 1 year, with full warranty. This is the admin plan, not the Office 365 activation on your own email.",
+        specs: ["Microsoft 365 admin for 1 year", "Full warranty", "Separate from the email activation plan", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/microsoftoffice.svg" alt="Microsoft 365 logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-50m-1d",
+        name: "Codex API 50M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "50 million Codex API credits for 1 day, with full warranty. For developers in Pakistan calling Codex from their own tools. Price on request.",
+        specs: ["50 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-100m-1d",
+        name: "Codex API 100M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "100 million Codex API credits for 1 day, with full warranty. A larger 1-day Codex pack. Price on request.",
+        specs: ["100 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-200m-1d",
+        name: "Codex API 200M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "200 million Codex API credits for 1 day, with full warranty. For heavier Codex jobs. Price on request.",
+        specs: ["200 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-500m-1d",
+        name: "Codex API 500M Credits",
+        category: "ai-coding",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "500 million Codex API credits for 1 day, with full warranty. Built for a short burst of Codex API use. Price on request.",
+        specs: ["500 million Codex API credits", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-api-1b-14d",
+        name: "Codex API 1B Credits",
+        category: "ai-coding",
+        duration: "14 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "1 billion Codex API credits for 14 days, with full warranty. The longest Codex credit window we arrange. Price on request.",
+        specs: ["1 billion Codex API credits", "14 days access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-50-1m",
+        name: "Codex API Astra6 $50",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $50, for 1 month, with full warranty. $50 is the token size, not the price you pay. Price on request.",
+        specs: ["Codex Astra6 $50 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-100-1m",
+        name: "Codex API Astra6 $100",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $100, for 1 month, with full warranty. $100 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $100 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-200-1m",
+        name: "Codex API Astra6 $200",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $200, for 1 month, with full warranty. $200 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $200 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "codex-astra6-500-1m",
+        name: "Codex API Astra6 $500",
+        category: "ai-coding",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Codex API Astra6 token pack sized at $500, for 1 month, with full warranty. $500 is the token size, not the selling price. Price on request.",
+        specs: ["Codex Astra6 $500 token size", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "linkedin-all-plans",
+        name: "LinkedIn All Plans",
+        category: "creative",
+        duration: "3 plans",
+        priceOnRequest: true,
+        setup: "Plan confirmed on WhatsApp",
+        desc: "A three-plan LinkedIn menu with no single price. The Career, Business and Sales Navigator rows on this page keep their own PKR prices.",
+        specs: ["Three LinkedIn plans in one menu", "Price on request", "Separate from the priced vouchers", "Applied on your own profile"],
+        icon: `<img src="/assets/logos/linkedin.svg" alt="LinkedIn logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "surfshark-2m-coupon",
+        name: "Surfshark VPN",
+        category: "vpn-security",
+        duration: "2 Months Coupon",
+        price: 850,
+        originalPrice: 850,
+        setup: "Coupon Delivery",
+        desc: "A Surfshark coupon for 2 months. This is a coupon, not the 2-month ready-made account listed separately.",
+        specs: ["2-month Surfshark coupon", "Coupon delivered on WhatsApp", "Separate from the 2-month account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/surfshark.svg" alt="Surfshark logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "manus-pro-1m",
+        name: "Manus Pro",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 2900,
+        originalPrice: 2900,
+        setup: "Ready-Made Account",
+        desc: "Manus Pro for 1 month on a ready-made account. Shorter than the 12-month private plan, and this month has no warranty.",
+        specs: ["Manus Pro agent access", "1 month ready-made account", "No warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/manus.svg" alt="Manus logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-business-1m-slot",
+        name: "ChatGPT Business Slot",
+        category: "ai-chat",
+        duration: "1 Month Slot",
+        price: 5150,
+        originalPrice: 5150,
+        setup: "Dedicated Slot",
+        desc: "A ChatGPT Business slot for 1 month, with no warranty. This is a slot, not the ready-made Business account.",
+        specs: ["ChatGPT Business slot", "1 month", "No warranty", "Separate from the ready-made Business account"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "cursor-pro-plus-grok-1m",
+        name: "Cursor Pro Plus + Grok",
+        category: "ai-coding",
+        duration: "1 Month Plan",
+        price: 29150,
+        originalPrice: 29150,
+        setup: "Delivered on WhatsApp",
+        desc: "Cursor Pro Plus together with Grok for 1 month. A different bundle from Cursor Pro + Grok Premium.",
+        specs: ["Cursor Pro Plus", "Grok for 1 month", "One combined order", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/cursor.svg" alt="Cursor logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "cursor-pro-3m",
+        name: "Cursor Pro",
+        category: "ai-coding",
+        duration: "3 Months Plan",
+        price: 29150,
+        originalPrice: 29150,
+        setup: "Private Account",
+        desc: "Cursor Pro for 3 months on a private account, with full warranty. Between the 1-month and 12-month plans.",
+        specs: ["Cursor Pro private account", "3 months", "Full warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/cursor.svg" alt="Cursor logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "adobe-express-12m",
+        name: "Adobe Express",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 650,
+        originalPrice: 650,
+        setup: "Ready-Made Account",
+        desc: "Adobe Express for 12 months: quick social posts, videos and flyers. This is Express, not the full Creative Cloud bundle.",
+        specs: ["Adobe Express for 12 months", "Templates for social and video", "Separate from Creative Cloud", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/adobecreativecloud.svg" alt="Adobe logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "granola-business",
+        name: "Granola Business",
+        category: "ai-chat",
+        duration: "Business Plan",
+        price: 5850,
+        originalPrice: 5850,
+        setup: "Ready-Made Account",
+        desc: "Granola Business writes meeting notes from your calls. The supplier lists the Business plan without a separate duration.",
+        specs: ["Granola Business meeting notes", "Ready-made account", "Warranty confirmed on WhatsApp", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/granola.svg" alt="Granola logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "framer-pro-12m",
+        name: "Framer Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 6650,
+        originalPrice: 6650,
+        setup: "Ready-Made Account",
+        desc: "Framer Pro for 12 months: design and publish a website from the canvas, on a ready-made account.",
+        specs: ["Framer Pro for 12 months", "Site publishing tools", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/framer.svg" alt="Framer logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "linear-business-12m",
+        name: "Linear Business",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 8350,
+        originalPrice: 8350,
+        setup: "Ready-Made Account",
+        desc: "Linear Business for 12 months: issue tracking and project planning for a software team.",
+        specs: ["Linear Business for 12 months", "Issues, projects and cycles", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/linear.svg" alt="Linear logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "bolt-new-pro-12m",
+        name: "Bolt.new Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 10850,
+        originalPrice: 10850,
+        setup: "Ready-Made Account",
+        desc: "Bolt.new Pro for 12 months: build a web app from a prompt in the browser.",
+        specs: ["Bolt.new Pro for 12 months", "Prompt-to-app building", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/bolt.svg" alt="Bolt.new logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "resend-pro-12m",
+        name: "Resend Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 15850,
+        originalPrice: 15850,
+        setup: "Ready-Made Account",
+        desc: "Resend Pro for 12 months: send transactional email from your app, on a ready-made account.",
+        specs: ["Resend Pro for 12 months", "Transactional email", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/resend.svg" alt="Resend logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "arize-pro-12m",
+        name: "Arize Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 6650,
+        originalPrice: 6650,
+        setup: "Ready-Made Account",
+        desc: "Arize Pro for 12 months: monitor and trace AI applications, on a ready-made account.",
+        specs: ["Arize Pro for 12 months", "AI tracing and monitoring", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/arize.svg" alt="Arize logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "pangram-pro-12m",
+        name: "Pangram Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 8350,
+        originalPrice: 8350,
+        setup: "Ready-Made Account",
+        desc: "Pangram Pro for 12 months: check whether a piece of writing was produced by AI, on a ready-made account.",
+        specs: ["Pangram Pro for 12 months", "AI writing checks", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/pangram.svg" alt="Pangram logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-100m-1d",
+        name: "Claude API 100M Tokens",
+        category: "ai-chat",
+        duration: "1 Day",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "100 million Claude API tokens for 1 day, with full warranty. Separate from the 100 million pack that runs for 3 days. Price on request.",
+        specs: ["100 million Claude API tokens", "1 day access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-1b-7d",
+        name: "Claude API 1B Credits",
+        category: "ai-chat",
+        duration: "7 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "1 billion Claude API credits for 7 days, with full warranty. Separate from the 1 billion pack that runs for 30 days. Price on request.",
+        specs: ["1 billion Claude API credits", "7 days access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-codex-100-7d",
+        name: "Claude and Codex $100 Credits",
+        category: "ai-chat",
+        duration: "7 Days",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "A combined Claude and Codex credit pack sized at $100, for 7 days, with full warranty. $100 is the credit size, not the price you pay. Price on request.",
+        specs: ["Claude and Codex credits together", "$100 credit size", "7 days access", "Full warranty"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px"><img src="/assets/logos/openai.svg" alt="Codex logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-api-50-token-1m",
+        name: "Claude API $50 Token",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude API token pack sized at $50, for 1 month, with a 30-day warranty. $50 is the token size, not the selling price. Price on request.",
+        specs: ["Claude API $50 token size", "1 month access", "30-day warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-kiro-100-1m",
+        name: "Claude Kiro API $100",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude Kiro API pack sized at $100, for 1 month, with full warranty. $100 is the pack size, not the price you pay. Price on request.",
+        specs: ["Claude Kiro API $100 pack", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "claude-kiro-200-1m",
+        name: "Claude Kiro API $200",
+        category: "ai-chat",
+        duration: "1 Month",
+        priceOnRequest: true,
+        setup: "API Key Access",
+        desc: "Claude Kiro API pack sized at $200, for 1 month, with full warranty. $200 is the pack size, not the price you pay. Price on request.",
+        specs: ["Claude Kiro API $200 pack", "1 month access", "Full warranty", "API key delivered on WhatsApp"],
+        icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     }
 ];
 
@@ -1388,10 +1987,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.currencyConverter.init();
     }
 
-    // Initialize Multi-Language Selector
-    if (typeof window.initLanguageSelector === "function") {
-        window.initLanguageSelector();
-    }
+    // Language switching lives in assets/js/lang.js (also used on blog and tool pages).
 
     // Render initial database (sorted by popularity)
     filterAndRender();
@@ -1677,24 +2273,36 @@ function renderTools(tools = TOOLS_DATABASE) {
     }
 
     const cardsHTML = tools.map(tool => {
+        const onRequest = !!(tool.priceOnRequest) || !(Number(tool.price) > 0);
         // Format price based on active currency
-        var priceDisplay = window.currencyConverter ? window.currencyConverter.format(tool.price) : `Rs ${tool.price.toLocaleString()}`;
-        var originalPriceDisplay = tool.originalLabel ? tool.originalLabel : window.currencyConverter ? window.currencyConverter.format(tool.originalPrice) : `Rs ${tool.originalPrice.toLocaleString()}`;
+        var priceDisplay = onRequest ? "Price on request" : (window.currencyConverter ? window.currencyConverter.format(tool.price) : `Rs ${tool.price.toLocaleString()}`);
+        var originalPriceDisplay = onRequest ? "" : (tool.originalLabel ? tool.originalLabel : window.currencyConverter ? window.currencyConverter.format(tool.originalPrice) : `Rs ${tool.originalPrice.toLocaleString()}`);
         
         // WhatsApp single-item checkout message (include converted price + original PKR reference if converted)
         var checkoutPriceStr = priceDisplay;
-        if (window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
+        if (!onRequest && window.currencyConverter && window.currencyConverter.currentCurrency !== "PKR") {
             checkoutPriceStr += ` (Rs. ${tool.price.toLocaleString()})`;
         }
         
-        const waText = encodeURIComponent(
-            `Hello MALIK DATA CENTRE! I want to buy:\n\n` +
-            `🛍️ Tool: ${tool.name}\n` +
-            `⏱️ Plan: ${tool.duration}\n` +
-            `💰 Price: ${checkoutPriceStr}\n` +
-            `⚙️ Setup: ${tool.setup}\n\n` +
-            `Please share payment details (EasyPaisa/JazzCash/Bank) and setup instructions.\n` +
-            `Source: malikdatacentre.store`
+        const waText = encodeURIComponent(onRequest
+            ? (
+                `Hello MALIK DATA CENTRE! I want a price for:\n\n` +
+                `🛍️ Tool: ${tool.name}\n` +
+                `⏱️ Plan: ${tool.duration}\n` +
+                `💰 Price: on request\n` +
+                `⚙️ Setup: ${tool.setup}\n\n` +
+                `Please tell me the price and how this plan is delivered.\n` +
+                `Source: malikdatacentre.store`
+            )
+            : (
+                `Hello MALIK DATA CENTRE! I want to buy:\n\n` +
+                `🛍️ Tool: ${tool.name}\n` +
+                `⏱️ Plan: ${tool.duration}\n` +
+                `💰 Price: ${checkoutPriceStr}\n` +
+                `⚙️ Setup: ${tool.setup}\n\n` +
+                `Please share payment details (EasyPaisa/JazzCash/Bank) and setup instructions.\n` +
+                `Source: malikdatacentre.store`
+            )
         );
         const checkoutURL = `https://wa.me/${getWhatsAppNumber()}?text=${waText}`;
 
@@ -1702,8 +2310,8 @@ function renderTools(tools = TOOLS_DATABASE) {
         const specsHTML = tool.specs.map(spec => `<li><i class="fa-solid fa-circle-check"></i> ${spec}</li>`).join("");
 
         // Calculate estimated savings
-        const discountAmount = tool.originalPrice - tool.price;
-        const discountPercentage = Math.round((discountAmount / tool.originalPrice) * 100);
+        const discountAmount = onRequest ? 0 : tool.originalPrice - tool.price;
+        const discountPercentage = onRequest || !(tool.originalPrice > 0) ? 0 : Math.round((discountAmount / tool.originalPrice) * 100);
 
         // Best Seller / Popular ribbon
         let ribbonHTML = "";
@@ -1743,13 +2351,15 @@ function renderTools(tools = TOOLS_DATABASE) {
                 </div>
                 <div class="tool-card-footer">
                     <div class="tool-price-wrapper">
-                        ${tool.originalPrice > tool.price ? `<span class="tool-original-price">${originalPriceDisplay}</span>` : ""}
+                        ${!onRequest && tool.originalPrice > tool.price ? `<span class="tool-original-price">${originalPriceDisplay}</span>` : ""}
                         <span class="tool-price">${priceDisplay}</span>
                     </div>
-                    ${tool.cmsSoldOut ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
+                    ${onRequest ? `<a href="${checkoutURL}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1" id="btn-order-${tool.id}">
+                        <i class="fa-brands fa-whatsapp"></i> Contact Support
+                    </a>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Buy Now
                     </a>`}
-                    ${tool.cmsSoldOut ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
+                    ${onRequest ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
                         data-id="${tool.id}"
                         data-name="${tool.name.replace(/"/g, '&quot;')}"
                         data-price="${tool.price}"
@@ -1794,118 +2404,15 @@ function filterAndRender() {
 }
 window.filterAndRender = filterAndRender;
 
-// Helper to manage Google Translate cookies across domains
-function setGoogleTranslateCookie(langCode) {
-    var domain = window.location.hostname;
-    var cookieVal = (langCode && langCode !== "en") ? ("/en/" + langCode) : "";
-    var expires = (langCode && langCode !== "en") ? "; expires=Thu, 31 Dec 2037 23:59:59 GMT" : "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-
-    document.cookie = "googtrans=" + cookieVal + expires + "; path=/;";
-    if (domain) {
-        document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=" + domain;
-        if (domain.includes(".")) {
-            document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=." + domain.replace(/^www\./, "");
-        }
-    }
-}
-
-// Toggle a small "Translating..." busy state on both language dropdowns
-function setLangSelectorsBusy(isBusy) {
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) el.disabled = !!isBusy;
-    });
-}
-
-// Robust helper: waits (patiently) for Google's translate widget to be ready,
-// then applies the chosen language. Used on page load AND on manual switch,
-// so both paths behave the same way instead of one being fragile.
-// maxWaitMs defaults to 8s — the widget can genuinely take a few seconds on
-// slower mobile connections, so bailing out after ~1s (as before) was the
-// main reason switching/reloading silently "did nothing".
-function applyGoogleTranslate(langCode, maxWaitMs) {
-    maxWaitMs = maxWaitMs || 8000;
-    var startedAt = Date.now();
-    setLangSelectorsBusy(true);
-
-    function tryApply() {
-        var combo = document.querySelector(".goog-te-combo");
-        if (combo) {
-            setLangSelectorsBusy(false);
-            if (combo.value !== langCode) {
-                combo.value = langCode;
-                combo.dispatchEvent(new Event("change"));
-            }
-            return true;
-        }
-        if (Date.now() - startedAt >= maxWaitMs) {
-            // Give up quietly — no forced reload (that just re-triggers the
-            // same race on a slow connection and looks like a broken loop).
-            // The cookie is already set, so a later reload/navigation will
-            // pick the language up as soon as the widget becomes available.
-            setLangSelectorsBusy(false);
-            return false;
-        }
-        setTimeout(tryApply, 250);
-    }
-    tryApply();
-}
-
-// Global Multi-Language Switcher Manager
-window.initLanguageSelector = function() {
-    var savedLang = "en";
-    try {
-        savedLang = localStorage.getItem("mdc_language") || "en";
-    } catch(e){}
-
-    // Guarantee English by default: if this is a fresh visitor (nothing saved
-    // yet) but a stale "googtrans" cookie exists from a previous test/session
-    // on this browser, clear it so the page never opens pre-translated.
-    if (savedLang === "en") {
-        setGoogleTranslateCookie("en");
-    }
-
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) {
-            el.value = savedLang;
-            el.onchange = function(e) {
-                window.changeSiteLanguage(e.target.value);
-            };
-        }
-    });
-
-    if (savedLang && savedLang !== "en") {
-        setGoogleTranslateCookie(savedLang);
-        applyGoogleTranslate(savedLang);
-    }
-};
-
-window.changeSiteLanguage = function(langCode) {
-    if (!langCode) return;
-
-    try {
-        localStorage.setItem("mdc_language", langCode);
-    } catch(e){}
-
-    setGoogleTranslateCookie(langCode);
-
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.value = langCode;
-    });
-
-    applyGoogleTranslate(langCode);
-};
-
 // Sort engine
 function sortTools(list) {
+    const priceRank = (t, high) => (t.priceOnRequest || !(Number(t.price) > 0)) ? (high ? -Infinity : Infinity) : t.price;
     if (sortBy === "price-low") {
-        list.sort((a, b) => a.price - b.price);
+        list.sort((a, b) => priceRank(a, false) - priceRank(b, false));
     } else if (sortBy === "price-high") {
-        list.sort((a, b) => b.price - a.price);
+        list.sort((a, b) => priceRank(b, true) - priceRank(a, true));
     } else if (sortBy === "discount") {
-        const disc = (t) => (t.originalPrice - t.price) / t.originalPrice;
+        const disc = (t) => (t.priceOnRequest || !(t.originalPrice > 0)) ? -1 : (t.originalPrice - t.price) / t.originalPrice;
         list.sort((a, b) => disc(b) - disc(a));
     } else {
         // popular (default): featured order first, then the rest as-is
