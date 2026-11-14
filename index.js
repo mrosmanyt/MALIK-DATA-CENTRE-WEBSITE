@@ -1388,10 +1388,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.currencyConverter.init();
     }
 
-    // Initialize Multi-Language Selector
-    if (typeof window.initLanguageSelector === "function") {
-        window.initLanguageSelector();
-    }
+    // Language switching lives in assets/js/lang.js (also used on blog and tool pages).
 
     // Render initial database (sorted by popularity)
     filterAndRender();
@@ -1793,110 +1790,6 @@ function filterAndRender() {
     renderTools(filtered);
 }
 window.filterAndRender = filterAndRender;
-
-// Helper to manage Google Translate cookies across domains
-function setGoogleTranslateCookie(langCode) {
-    var domain = window.location.hostname;
-    var cookieVal = (langCode && langCode !== "en") ? ("/en/" + langCode) : "";
-    var expires = (langCode && langCode !== "en") ? "; expires=Thu, 31 Dec 2037 23:59:59 GMT" : "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-
-    document.cookie = "googtrans=" + cookieVal + expires + "; path=/;";
-    if (domain) {
-        document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=" + domain;
-        if (domain.includes(".")) {
-            document.cookie = "googtrans=" + cookieVal + expires + "; path=/; domain=." + domain.replace(/^www\./, "");
-        }
-    }
-}
-
-// Toggle a small "Translating..." busy state on both language dropdowns
-function setLangSelectorsBusy(isBusy) {
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) el.disabled = !!isBusy;
-    });
-}
-
-// Robust helper: waits (patiently) for Google's translate widget to be ready,
-// then applies the chosen language. Used on page load AND on manual switch,
-// so both paths behave the same way instead of one being fragile.
-// maxWaitMs defaults to 8s — the widget can genuinely take a few seconds on
-// slower mobile connections, so bailing out after ~1s (as before) was the
-// main reason switching/reloading silently "did nothing".
-function applyGoogleTranslate(langCode, maxWaitMs) {
-    maxWaitMs = maxWaitMs || 8000;
-    var startedAt = Date.now();
-    setLangSelectorsBusy(true);
-
-    function tryApply() {
-        var combo = document.querySelector(".goog-te-combo");
-        if (combo) {
-            setLangSelectorsBusy(false);
-            if (combo.value !== langCode) {
-                combo.value = langCode;
-                combo.dispatchEvent(new Event("change"));
-            }
-            return true;
-        }
-        if (Date.now() - startedAt >= maxWaitMs) {
-            // Give up quietly — no forced reload (that just re-triggers the
-            // same race on a slow connection and looks like a broken loop).
-            // The cookie is already set, so a later reload/navigation will
-            // pick the language up as soon as the widget becomes available.
-            setLangSelectorsBusy(false);
-            return false;
-        }
-        setTimeout(tryApply, 250);
-    }
-    tryApply();
-}
-
-// Global Multi-Language Switcher Manager
-window.initLanguageSelector = function() {
-    var savedLang = "en";
-    try {
-        savedLang = localStorage.getItem("mdc_language") || "en";
-    } catch(e){}
-
-    // Guarantee English by default: if this is a fresh visitor (nothing saved
-    // yet) but a stale "googtrans" cookie exists from a previous test/session
-    // on this browser, clear it so the page never opens pre-translated.
-    if (savedLang === "en") {
-        setGoogleTranslateCookie("en");
-    }
-
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) {
-            el.value = savedLang;
-            el.onchange = function(e) {
-                window.changeSiteLanguage(e.target.value);
-            };
-        }
-    });
-
-    if (savedLang && savedLang !== "en") {
-        setGoogleTranslateCookie(savedLang);
-        applyGoogleTranslate(savedLang);
-    }
-};
-
-window.changeSiteLanguage = function(langCode) {
-    if (!langCode) return;
-
-    try {
-        localStorage.setItem("mdc_language", langCode);
-    } catch(e){}
-
-    setGoogleTranslateCookie(langCode);
-
-    ["mdc-lang-select", "drawer-lang-select"].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.value = langCode;
-    });
-
-    applyGoogleTranslate(langCode);
-};
 
 // Sort engine
 function sortTools(list) {

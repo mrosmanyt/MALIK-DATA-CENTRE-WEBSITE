@@ -34,6 +34,22 @@ const SOCIAL = {
   facebook: "https://www.facebook.com/people/Malik-Data-Centre-Pro/61566733492225/",
   x: "https://x.com/realmickeyai"
 };
+/* Languages offered in the header. English is the indexed source; other
+   languages are applied in the browser by assets/js/lang.js (Google Translate).
+   `pt` is included in the widget allow-list because the homepage widget
+   already allowed it, but it is not a dropdown option. */
+const SITE_LANGS = [
+  ["en", "🌐 English"], ["ur", "🇵🇰 Urdu (اردو)"], ["hi", "🇮🇳 Hindi (हिन्दी)"],
+  ["bn", "🇧🇩 Bangla (বাংলা)"], ["ne", "🇳🇵 Nepali (नेपाली)"], ["ar", "🇸🇦 Arabic (العربية)"],
+  ["ps", "🇦🇫 Pashto / Afghani (پښتو)"], ["ta", "🇮🇳 Tamil (தமிழ்)"], ["pa", "🇵🇰 Punjabi (ਪੰਜਾਬੀ)"],
+  ["it", "🇮🇹 Italian (Italiano)"], ["tr", "🇹🇷 Turkish (Türkçe)"], ["uz", "🇺🇿 Uzbek (Oʻzbek)"],
+  ["es", "🇪🇸 Spanish (Español)"], ["af", "🇿🇦 African (Afrikaans)"], ["de", "🇩🇪 German (Deutsch)"],
+  ["pl", "🇵🇱 Polish (Polski)"], ["ga", "🇮🇪 Irish (Gaeilge)"], ["hu", "🇭🇺 Hungarian (Magyar)"],
+  ["ru", "🇷🇺 Russian (Русский)"], ["fr", "🇫🇷 French (Français)"], ["zh-CN", "🇨🇳 Chinese (中文)"],
+  ["ja", "🇯🇵 Japanese (日本語)"], ["ko", "🇰🇷 Korean (한국어)"]
+];
+const SITE_LANG_CODES = SITE_LANGS.map(x => x[0]).concat(["pt"]).join(",");
+
 const TODAY = new Date().toISOString().slice(0, 10);
 const TODAY_HUMAN = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
@@ -121,6 +137,13 @@ function famStats(f) {
 }
 
 /* ---------- layout ---------- */
+function langSelect(id, extraClass) {
+  const opts = SITE_LANGS.map(([v, label]) => `<option value="${esc(v)}">${label}</option>`).join("");
+  return `<div class="mdc-lang-selector-wrap${extraClass ? " " + extraClass : ""}">
+    <select id="${id}" class="mdc-lang-select notranslate" translate="no" aria-label="Select language">${opts}</select>
+  </div>`;
+}
+
 function header(rel, active, tours) {
   const a = k => (active === k ? ' class="active"' : "");
   const ctaNum = tours ? WA2 : WA1, ctaText = tours ? "Plan my trip" : "Order on WhatsApp";
@@ -153,11 +176,14 @@ function header(rel, active, tours) {
       <a href="${rel}refund-policy/"${a("safety")}>Buyer Safety</a>
     </nav>
     <div class="pg-head-cta">
+      ${langSelect("mdc-lang-select", "pg-lang-desktop")}
       <a href="${wa(ctaNum)}" target="_blank" rel="noopener noreferrer" class="btn btn-success pg-hide-sm"><i class="fa-brands fa-whatsapp"></i> ${ctaText}</a>
       <button class="pg-burger" type="button" aria-label="Open menu" aria-expanded="false" data-pg-burger><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
   <div class="pg-mobile" data-pg-mobile>
+    <div class="pg-mobile-label">Language</div>
+    ${langSelect("drawer-lang-select", "pg-lang-mobile")}
     <a href="${rel}index.html#catalog-section">Store &amp; Catalog</a>
     <a href="${rel}tools/">All Tool Guides</a>
     <a href="${rel}comparisons/">Compare Tools</a>
@@ -273,6 +299,8 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ""}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0a0a0f">
 <link rel="canonical" href="${canonical}">
+<link rel="alternate" hreflang="en" href="${canonical}">
+<link rel="alternate" hreflang="x-default" href="${canonical}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="${tours ? "MALIK TOURS" : BRAND}">
@@ -305,10 +333,22 @@ ${body(rel)}
 </main>
 ${footer(rel, tours)}
 <script src="/api/content.js"></script>
-<script src="${rel}assets/js/cms.js?v=1.1"></script>
+<script src="${rel}assets/js/cms.js?v=1.2"></script>
 <script src="${rel}tool-links.js" defer></script>
 <script src="${rel}pages.js" defer></script>
+<script src="${rel}assets/js/lang.js?v=2"></script>
 ${checkout ? `<script src="${rel}store-backend.js" defer></script>` : ""}
+<div id="google_translate_element" style="display:none;"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "${SITE_LANG_CODES}",
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 `;
@@ -1161,7 +1201,7 @@ function buildBlog() {
     desc: "Buying guides, comparisons, setup tutorials and price updates for ChatGPT, Gemini, Grok, Canva, Adobe, CapCut, Cursor and more, for buyers worldwide.",
     extraCss: ["blog.css"], jsonld: [{ "@context": "https://schema.org", "@type": "Blog", name: `${BRAND} Blog`, url: `${SITE}/blog/`,
       blogPost: POSTS.slice(0, 20).map(p => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}.html`, datePublished: p.date })) },
-      crumbLd([["Home", ""], ["Blog", url]])], body }).replace(`<link rel="canonical" href="${SITE}/blog/index.html">`, `<link rel="canonical" href="${SITE}/blog/">`);
+      crumbLd([["Home", ""], ["Blog", url]])], body }).split(`${SITE}/blog/index.html`).join(`${SITE}/blog/`);
   fs.writeFileSync(path.join(ROOT, "blog", "index.html"), html);
   BUILT.push("blog/");
 

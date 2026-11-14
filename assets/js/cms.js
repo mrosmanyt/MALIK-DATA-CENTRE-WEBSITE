@@ -525,3 +525,15 @@
     if (document.body) ready(); else document.addEventListener("DOMContentLoaded", ready);
   } catch (e) { if (window.console) console.warn("CMS:", e); }
 })();
+
+/* Older hand-written pages (the September 2026 blog posts) have no language
+   dropdown and do not load lang.js. Generated pages and the homepage already
+   include both, so this only fills the gap. */
+(function () {
+  if (document.getElementById("mdc-lang-select")) return;
+  if (document.querySelector("script[src*='assets/js/lang.js']")) return;
+  var s = document.createElement("script");
+  s.src = "/assets/js/lang.js?v=2";
+  s.defer = true;
+  document.body.appendChild(s);
+})();
