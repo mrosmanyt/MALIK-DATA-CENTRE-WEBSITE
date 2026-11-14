@@ -1659,6 +1659,102 @@ const TOOLS_DATABASE = [
         desc: "Cursor Pro for 3 months on a private account, with full warranty. Between the 1-month and 12-month plans.",
         specs: ["Cursor Pro private account", "3 months", "Full warranty", "Setup help on WhatsApp"],
         icon: `<img src="/assets/logos/cursor.svg" alt="Cursor logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "adobe-express-12m",
+        name: "Adobe Express",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 650,
+        originalPrice: 650,
+        setup: "Ready-Made Account",
+        desc: "Adobe Express for 12 months: quick social posts, videos and flyers. This is Express, not the full Creative Cloud bundle.",
+        specs: ["Adobe Express for 12 months", "Templates for social and video", "Separate from Creative Cloud", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/adobecreativecloud.svg" alt="Adobe logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "granola-business",
+        name: "Granola Business",
+        category: "ai-chat",
+        duration: "Business Plan",
+        price: 5850,
+        originalPrice: 5850,
+        setup: "Ready-Made Account",
+        desc: "Granola Business writes meeting notes from your calls. The supplier lists the Business plan without a separate duration.",
+        specs: ["Granola Business meeting notes", "Ready-made account", "Warranty confirmed on WhatsApp", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/granola.svg" alt="Granola logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "framer-pro-12m",
+        name: "Framer Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 6650,
+        originalPrice: 6650,
+        setup: "Ready-Made Account",
+        desc: "Framer Pro for 12 months: design and publish a website from the canvas, on a ready-made account.",
+        specs: ["Framer Pro for 12 months", "Site publishing tools", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/framer.svg" alt="Framer logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "linear-business-12m",
+        name: "Linear Business",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 8350,
+        originalPrice: 8350,
+        setup: "Ready-Made Account",
+        desc: "Linear Business for 12 months: issue tracking and project planning for a software team.",
+        specs: ["Linear Business for 12 months", "Issues, projects and cycles", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/linear.svg" alt="Linear logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "bolt-new-pro-12m",
+        name: "Bolt.new Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 10850,
+        originalPrice: 10850,
+        setup: "Ready-Made Account",
+        desc: "Bolt.new Pro for 12 months: build a web app from a prompt in the browser.",
+        specs: ["Bolt.new Pro for 12 months", "Prompt-to-app building", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/bolt.svg" alt="Bolt.new logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "resend-pro-12m",
+        name: "Resend Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 15850,
+        originalPrice: 15850,
+        setup: "Ready-Made Account",
+        desc: "Resend Pro for 12 months: send transactional email from your app, on a ready-made account.",
+        specs: ["Resend Pro for 12 months", "Transactional email", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/resend.svg" alt="Resend logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "arize-pro-12m",
+        name: "Arize Pro",
+        category: "ai-coding",
+        duration: "12 Months Plan",
+        price: 6650,
+        originalPrice: 6650,
+        setup: "Ready-Made Account",
+        desc: "Arize Pro for 12 months: monitor and trace AI applications, on a ready-made account.",
+        specs: ["Arize Pro for 12 months", "AI tracing and monitoring", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/arize.svg" alt="Arize logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "pangram-pro-12m",
+        name: "Pangram Pro",
+        category: "creative",
+        duration: "12 Months Plan",
+        price: 8350,
+        originalPrice: 8350,
+        setup: "Ready-Made Account",
+        desc: "Pangram Pro for 12 months: check whether a piece of writing was produced by AI, on a ready-made account.",
+        specs: ["Pangram Pro for 12 months", "AI writing checks", "Ready-made account", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/pangram.svg" alt="Pangram logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     }
 ];
 

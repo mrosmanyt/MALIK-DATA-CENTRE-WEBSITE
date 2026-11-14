@@ -825,5 +825,77 @@ module.exports = [
       "dreamface",
       "wink"
     ]
+  },
+  {
+    slug: "adobe-express", logo: "adobecreativecloud.svg", name: "Adobe Express", cat: "creative", icon: "fa-solid fa-bolt",
+    ids: ["adobe-express-12m"], official: "https://www.adobe.com/express/",
+    intro: "Adobe Express is the quick design app for social posts, flyers and short videos. The 12-month plan is a ready-made account, separate from the full Creative Cloud bundle.",
+    bestFor: ["Social media managers who need posts fast", "Small shops making flyers", "Anyone who does not need Photoshop every day"],
+    included: ["Adobe Express for 12 months", "Templates for posts and video", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this Photoshop and Premiere?", "No. Those apps are in the Creative Cloud bundle. Express is the lighter design app."]],
+    related: ["adobe-creative-cloud", "canva-pro", "capcut-pro"]
+  },
+  {
+    slug: "granola", logo: "granola.svg", name: "Granola Business", cat: "ai-chat", icon: "fa-solid fa-note-sticky",
+    ids: ["granola-business"], official: "https://www.granola.ai/",
+    intro: "Granola writes notes from your meetings. This is the Business plan on a ready-made account. The supplier listing does not split it into a separate duration.",
+    bestFor: ["Founders who sit in a lot of calls", "Agencies that need meeting notes", "Teams that do not want to type minutes"],
+    included: ["Granola Business", "Meeting notes", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["How long does the plan run?", "The supplier lists Business as one plan. Ask on WhatsApp if you need the exact end date confirmed before you pay."]],
+    related: ["notion-business", "chatgpt-go", "wispr-flow"]
+  },
+  {
+    slug: "framer", logo: "framer.svg", name: "Framer Pro", cat: "creative", icon: "fa-solid fa-pen-ruler",
+    ids: ["framer-pro-12m"], official: "https://www.framer.com/",
+    intro: "Framer Pro lets you design a site on the canvas and publish it. The plan is 12 months on a ready-made account.",
+    bestFor: ["Designers shipping a marketing site", "Founders who want a published page without a developer", "Freelancers building client landing pages"],
+    included: ["Framer Pro for 12 months", "Design and publish tools", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Framer or Lovable?", "Framer is a design canvas you publish. Lovable builds an app from a written prompt."]],
+    related: ["lovable-pro", "canva-pro", "adobe-express"]
+  },
+  {
+    slug: "linear", logo: "linear.svg", name: "Linear Business", cat: "ai-coding", icon: "fa-solid fa-list-check",
+    ids: ["linear-business-12m"], official: "https://linear.app/",
+    intro: "Linear Business is the issue tracker for software teams. The plan is 12 months on a ready-made account.",
+    bestFor: ["Engineering teams tracking issues", "Startups running a roadmap", "Agencies managing client bugs"],
+    included: ["Linear Business for 12 months", "Issues, projects and cycles", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this a seat on my existing workspace?", "It is a ready-made account. Ask on WhatsApp before you pay if you need it joined to a workspace you already use."]],
+    related: ["notion-business", "cursor-pro", "n8n-starter"]
+  },
+  {
+    slug: "bolt-new", logo: "bolt.svg", name: "Bolt.new Pro", cat: "ai-coding", icon: "fa-solid fa-bolt",
+    ids: ["bolt-new-pro-12m"], official: "https://bolt.new/",
+    intro: "Bolt.new Pro builds a web app from a prompt in the browser. The plan is 12 months on a ready-made account.",
+    bestFor: ["Founders prototyping an app", "Freelancers who want a first version the same day", "People comparing Bolt with Lovable"],
+    included: ["Bolt.new Pro for 12 months", "Prompt-to-app building", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Bolt or Cursor?", "Bolt runs in the browser and starts from a prompt. Cursor is a desktop editor for a codebase you already have."]],
+    related: ["lovable-pro", "cursor-pro", "replit-core"]
+  },
+  {
+    slug: "resend", logo: "resend.svg", name: "Resend Pro", cat: "ai-coding", icon: "fa-solid fa-envelope",
+    ids: ["resend-pro-12m"], official: "https://resend.com/",
+    intro: "Resend Pro sends transactional email from an app: sign-up mail, receipts and alerts. The plan is 12 months on a ready-made account.",
+    bestFor: ["Developers sending app email", "Startups that need a sending domain", "Agencies wiring email into a client product"],
+    included: ["Resend Pro for 12 months", "Transactional email tools", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Does this include my own domain?", "Domain setup depends on the account we deliver. Ask on WhatsApp if you need a specific domain connected before you pay."]],
+    related: ["n8n-starter", "cursor-pro", "bolt-new"]
+  },
+  {
+    slug: "arize", logo: "arize.svg", name: "Arize Pro", cat: "ai-coding", icon: "fa-solid fa-chart-line",
+    ids: ["arize-pro-12m"], official: "https://arize.com/",
+    intro: "Arize Pro is for tracing and monitoring AI applications. The plan is 12 months on a ready-made account.",
+    bestFor: ["Teams running models in production", "Developers debugging agent traces", "Anyone who needs AI monitoring for a year"],
+    included: ["Arize Pro for 12 months", "Tracing and monitoring", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Is this an API key or a login?", "It is a ready-made account. We send the setup steps on WhatsApp after you order."]],
+    related: ["claude-api-tokens", "codex-api", "cursor-pro"]
+  },
+  {
+    slug: "pangram", logo: "pangram.svg", name: "Pangram Pro", cat: "creative", icon: "fa-solid fa-spell-check",
+    ids: ["pangram-pro-12m"], official: "https://www.pangram.com/",
+    intro: "Pangram Pro checks whether a piece of writing was produced by AI. The plan is 12 months on a ready-made account.",
+    bestFor: ["Editors reviewing submissions", "Teachers checking assignments", "Teams that need an AI-writing check"],
+    included: ["Pangram Pro for 12 months", "AI writing checks", "Ready-made account", "Setup help on WhatsApp"],
+    faqs: [["Does a Pangram result prove who wrote the text?", "It is a check, not a verdict. Use it as one signal and read the text yourself."]],
+    related: ["grammarly-pro", "quillbot", "chatgpt-go"]
   }
 ];
