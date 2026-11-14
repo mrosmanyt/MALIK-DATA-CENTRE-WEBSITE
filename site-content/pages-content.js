@@ -177,7 +177,7 @@ exports.services = {
     eyebrow: "For developers & businesses",
     lead: "Need API access for Claude, OpenAI, Gemini or DeepSeek in your product, chatbot or automation? Tell us your monthly volume and we will send a custom quote in USD, USDT or PKR.",
     items: [
-      ["fa-solid fa-plug", "Claude API token packs", "Ready token packs for apps and bots. See our 10M token pack."],
+      ["fa-solid fa-plug", "Claude API token packs", "Ready token packs for apps and bots. Every Claude API pack is price on request."],
       ["fa-solid fa-microchip", "OpenAI, Gemini & DeepSeek", "Volume credits for other major model providers on request."],
       ["fa-solid fa-file-invoice", "Flexible payment", "USDT for teams anywhere in the world, or PKR via bank and wallets in Pakistan."],
       ["fa-solid fa-headset", "Integration help", "Setup help for n8n, Python, Node and popular SDKs."]

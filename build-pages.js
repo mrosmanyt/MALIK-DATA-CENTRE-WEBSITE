@@ -485,7 +485,7 @@ function buildToolPage(f) {
     <div>
       <section class="pg-section" id="plans" style="padding-top:0">
         <h2>Plans &amp; prices</h2>
-        <p>${st.plans.some(quote) ? `Listed prices are in Pakistani rupees (PKR). Packs marked <strong>${QUOTE}</strong> are not given a number here and cannot be added to the cart: tap <strong>Contact on WhatsApp</strong> and we reply with the price before you pay.` : `Prices are set in Pakistani rupees (PKR), with an approximate US dollar price shown next to each plan. The exact amount in your currency is confirmed on WhatsApp. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.`}</p>
+        <p>${st.quoteOnly ? `Every pack on this page is <strong>${QUOTE}</strong>. There is no rupee price, no discount badge, and nothing is added to the cart. Tap <strong>Contact Support</strong> and we reply with the amount before you pay.` : st.plans.some(quote) ? `Listed prices are in Pakistani rupees (PKR). Packs marked <strong>${QUOTE}</strong> are not given a number here and cannot be added to the cart: tap <strong>Contact Support</strong> and we reply with the price before you pay.` : `Prices are set in Pakistani rupees (PKR), with an approximate US dollar price shown next to each plan. The exact amount in your currency is confirmed on WhatsApp. Tap <strong>Buy Now</strong>, enter your name and WhatsApp number, then send the payment screenshot on WhatsApp.`}</p>
         <div class="pg-plans">${st.plans.map(t => planRow(t, f)).join("")}</div>
       </section>
 
@@ -505,6 +505,14 @@ function buildToolPage(f) {
         <h2>What's included</h2>
         <ul class="pg-checks cols">${f.included.map(x => `<li><i class="fa-solid fa-circle-check"></i>${esc(x)}</li>`).join("")}</ul>
       </section>
+${f.proof ? `
+      <section class="pg-section" id="order-proof">
+        <h2>Order proof</h2>
+        <p><strong>${esc(f.proof.label)}</strong></p>
+        <p>"${esc(f.proof.quote)}"</p>
+        <img src="${rel}assets/reviews/${esc(f.proof.image)}" alt="${esc(f.proof.alt)}" width="360" loading="lazy" style="width:min(360px,100%);height:auto;border-radius:12px">
+        <p style="margin-top:12px"><a href="${rel}index.html#reviews-section">See this proof with the other customer feedback</a></p>
+      </section>` : ""}
 
       <section class="pg-section">
         <h2>Plan, access &amp; warranty</h2>
@@ -519,7 +527,7 @@ function buildToolPage(f) {
       <section class="pg-section">
         <h2>How activation works</h2>
         <ol class="pg-steps">
-          <li><span><strong>Choose your plan</strong>${st.plans.some(quote) ? "Pick a duration above. Priced plans use Buy Now. Price-on-request packs use Contact on WhatsApp." : "Pick a duration above and tap Buy Now."}</span></li>
+          <li><span><strong>Choose your plan</strong>${st.quoteOnly ? "Pick a pack above and tap Contact Support. We confirm the price before you pay." : st.plans.some(quote) ? "Pick a duration above. Priced plans use Buy Now. Price-on-request packs use Contact Support." : "Pick a duration above and tap Buy Now."}</span></li>
           <li><span><strong>Place the order</strong>Enter your name and WhatsApp number. Your order number appears on screen.</span></li>
           <li><span><strong>Pay</strong>Send the amount with USDT from anywhere, or via EasyPaisa, JazzCash or bank in Pakistan, and share the screenshot on WhatsApp.</span></li>
           <li><span><strong>Get activated</strong>We activate on your email or send login details, usually within 5–30 minutes, with a setup guide.</span></li>
@@ -565,8 +573,8 @@ function buildToolPage(f) {
         <li><i class="fa-solid fa-check"></i> Delivered worldwide</li>
         <li><i class="fa-solid fa-check"></i> Warranty + refund if we can't fix it</li>
       </ul>
-      <a href="#plans" class="btn btn-gradient"><i class="fa-solid fa-list"></i> Choose a plan</a>
-      <a href="${waLink(`Hello MALIK DATA CENTRE! I have a question about ${f.name} (malikdatacentre.store/tools/${f.slug}/)`)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:8px"><i class="fa-brands fa-whatsapp"></i> Ask a question</a>
+      <a href="#plans" class="btn btn-gradient"><i class="fa-solid fa-list"></i> ${st.quoteOnly ? "See the packs" : "Choose a plan"}</a>
+      <a href="${waLink(st.quoteOnly ? `Hello MALIK DATA CENTRE! I want a price for ${f.name}.\n\nPlease tell me the price and how this plan is delivered.\nSource: malikdatacentre.store/tools/${f.slug}/` : `Hello MALIK DATA CENTRE! I have a question about ${f.name} (malikdatacentre.store/tools/${f.slug}/)`)}" target="_blank" rel="noopener noreferrer" class="${st.quoteOnly ? "btn btn-success btn-contact" : "btn btn-outline"}" style="margin-top:8px"><i class="fa-brands fa-whatsapp"></i> ${st.quoteOnly ? "Contact Support" : "Ask a question"}</a>
       <p class="pg-small">Prices updated ${PRICE_HUMAN}. We never ask for your email password.</p>
     </aside>
   </div>

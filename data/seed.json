@@ -130,6 +130,16 @@
   "subtitle": "Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.",
   "items": [
    {
+    "color": "color-green",
+    "name": "International client",
+    "purchase": "Render $50 Credits Coupon",
+    "rating": 0,
+    "text": "\"need the account for my work right now. It's extremely urgent. Please hurry up, bro.\"",
+    "image": "assets/reviews/review-render-50-coupon.webp",
+    "date": "14 November 2026",
+    "badge": "Delivered"
+   },
+   {
     "color": "color-purple",
     "name": "Ameer Hamza",
     "purchase": "Grok 3 Months Plan",
@@ -1461,11 +1471,11 @@
     "name": "Claude 10M API Tokens",
     "category": "ai-chat",
     "duration": "API Key Pack",
-    "price": 1200,
-    "originalPrice": 4000,
+    "price": null,
+    "originalPrice": null,
     "setup": "API Key Access",
-    "desc": "Access Anthropic's Claude 3.5 models through API keys. Fully loaded with 10 Million input/output tokens.",
-    "specs": "10M input/output tokens pack\nHigh concurrency API keys\nClaude 3.5 Sonnet & Opus support\nFull warranty replacement",
+    "desc": "10 million Claude API tokens as an API key pack, with full warranty. There is no listed price. Contact Support and we confirm the amount before you pay.",
+    "specs": "10 million Claude API tokens\nAPI key pack\nFull warranty\nAPI key delivered on WhatsApp",
     "stock": "in",
     "ribbon": "",
     "badge": "",
@@ -2282,8 +2292,8 @@
    },
    {
     "path": "/tools/claude-api-tokens/",
-    "title": "Buy Claude API Tokens Online (2026) | From $4.32 | MALIK DATA CENTRE",
-    "description": "Buy Claude API Tokens online from $4.32 (Rs 1,200). 1 plan, worldwide delivery, USDT or local payment, 5–30 min activation on WhatsApp and full plan warranty.",
+    "title": "Buy Claude API Tokens Online (2026) | Price on request | MALIK DATA CENTRE",
+    "description": "Claude API Tokens: 13 plans, price on request. Message us on WhatsApp for the amount, then we deliver worldwide.",
     "image": ""
    },
    {
@@ -2730,7 +2740,7 @@
    {
     "path": "/tools/claude-api-tokens/",
     "heading": "Buy Claude API Tokens online",
-    "intro": "API token packs for developers who want to use Claude models inside their own apps, bots and automations. Contact us for larger volumes."
+    "intro": "Claude API token packs, credit packs and Kiro packs for developers calling Claude from their own apps. Every pack on this page is price on request, including the 10 million token API key pack. Message us on WhatsApp and we confirm the amount before you pay."
    },
    {
     "path": "/tools/coursera-plus/",

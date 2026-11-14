@@ -413,11 +413,11 @@ module.exports = [
     ids: ["claude-api-10m", "claude-api-10m-1d", "claude-api-50m-1d", "claude-api-100m-1d", "claude-api-100m-3d", "claude-api-200m-1d", "claude-api-500m-1d", "claude-api-1b-7d", "claude-api-1b-30d", "claude-api-500-credits", "claude-api-50-token-1m", "claude-kiro-100-1m", "claude-kiro-200-1m"],
     official: "https://www.anthropic.com/api",
     extraKeywords: "Claude API tokens Pakistan, buy Claude API credits, Claude API price on request, Claude 1B tokens, Claude Kiro API, Claude API 100 million 1 day",
-    intro: "Claude API token packs, credit packs and Kiro packs for developers calling Claude from their own apps. One 10 million token pack has a listed PKR price. The other packs, including 1-day, 3-day, 7-day, 30-day and 1-month sizes, are price on request: message us on WhatsApp and we confirm the amount before you pay.",
-    bestFor: ["Developers building chatbots and agents", "Teams that need a short high-volume token window", "Anyone buying Claude API credits from Pakistan without listing a card price up front"],
-    included: ["Listed 10M token pack with a PKR price", "50M, 100M, 200M and 500M packs for 1 day, plus 100M for 3 days", "1 billion credits for 7 days, and 1 billion tokens for 30 days", "$50 token pack for 1 month and a $500 credit pack", "Claude Kiro API $100 and $200 packs for 1 month", "API key delivered on WhatsApp"],
+    intro: "Claude API token packs, credit packs and Kiro packs for developers calling Claude from their own apps. Every pack on this page is price on request, including the 10 million token API key pack. Message us on WhatsApp and we confirm the amount before you pay.",
+    bestFor: ["Developers building chatbots and agents", "Teams that need a short high-volume token window", "Anyone buying Claude API credits from Pakistan without a listed price"],
+    included: ["10M token API key pack, price on request", "50M, 100M, 200M and 500M packs for 1 day, plus 100M for 3 days", "1 billion credits for 7 days, and 1 billion tokens for 30 days", "$50 token pack for 1 month and a $500 credit pack", "Claude Kiro API $100 and $200 packs for 1 month", "API key delivered on WhatsApp"],
     faqs: [
-      ["Why is there no price on some Claude packs?", "Those packs are quoted per order. Tap Contact on WhatsApp, name the plan, and we reply with the price and the delivery steps. They are not added to the cart and they are never billed as zero."],
+      ["Why is there no price on Claude packs?", "Every Claude API pack is quoted per order, including the 10 million token API key pack. Tap Contact Support, name the plan, and we reply with the price and the delivery steps. They are not added to the cart and they are never billed as zero."],
       ["What does the 1 billion pack include?", "1 billion Claude API tokens for 30 days, with a 7-day warranty. The selling price is confirmed on WhatsApp."],
       ["Is the $500 credit pack the same as a token pack?", "No. Token packs are sold by token count and duration. The $500 pack is a credit balance. $500 is the credit size, not our selling price."]
     ],
@@ -440,6 +440,12 @@ module.exports = [
     bestFor: ["Developers hosting a side project", "Freelancers who need cloud credit", "Anyone who wants a coupon instead of a card charge"],
     included: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Setup help on WhatsApp"],
     faqs: [["Is $50 the price I pay?", "No. $50 is the credit on the coupon. The price you pay is the PKR amount on the plan."]],
+    proof: {
+      image: "review-render-50-coupon.webp",
+      alt: "Render $50 Credits Coupon delivered, international client",
+      label: "Render $50 Credits Coupon delivered, international client",
+      quote: "need the account for my work right now. It's extremely urgent. Please hurry up, bro."
+    },
     related: ["cursor-pro", "replit-core", "n8n-starter"]
   },
   {

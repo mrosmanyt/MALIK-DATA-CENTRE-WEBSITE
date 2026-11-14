@@ -920,11 +920,10 @@ const TOOLS_DATABASE = [
         name: "Claude 10M API Tokens",
         category: "ai-chat",
         duration: "API Key Pack",
-        price: 1200,
-        originalPrice: 4000,
+        priceOnRequest: true,
         setup: "API Key Access",
-        desc: "Access Anthropic's Claude 3.5 models through API keys. Fully loaded with 10 Million input/output tokens.",
-        specs: ["10M input/output tokens pack", "High concurrency API keys", "Claude 3.5 Sonnet & Opus support", "Full warranty replacement"],
+        desc: "10 million Claude API tokens as an API key pack, with full warranty. There is no listed price. Contact Support and we confirm the amount before you pay.",
+        specs: ["10 million Claude API tokens", "API key pack", "Full warranty", "API key delivered on WhatsApp"],
         icon: `<img src="/assets/logos/claude.svg" alt="Claude logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     },
     {
