@@ -130,6 +130,16 @@
   "subtitle": "Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.",
   "items": [
    {
+    "color": "color-green",
+    "name": "International client",
+    "purchase": "Render $50 Credits Coupon",
+    "rating": 0,
+    "text": "\"need the account for my work right now. It's extremely urgent. Please hurry up, bro.\"",
+    "image": "assets/reviews/review-render-50-coupon.webp",
+    "date": "14 November 2026",
+    "badge": "Delivered"
+   },
+   {
     "color": "color-purple",
     "name": "Ameer Hamza",
     "purchase": "Grok 3 Months Plan",

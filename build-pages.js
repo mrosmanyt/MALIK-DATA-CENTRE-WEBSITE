@@ -505,6 +505,14 @@ function buildToolPage(f) {
         <h2>What's included</h2>
         <ul class="pg-checks cols">${f.included.map(x => `<li><i class="fa-solid fa-circle-check"></i>${esc(x)}</li>`).join("")}</ul>
       </section>
+${f.proof ? `
+      <section class="pg-section" id="order-proof">
+        <h2>Order proof</h2>
+        <p><strong>${esc(f.proof.label)}</strong></p>
+        <p>"${esc(f.proof.quote)}"</p>
+        <img src="${rel}assets/reviews/${esc(f.proof.image)}" alt="${esc(f.proof.alt)}" width="360" loading="lazy" style="width:min(360px,100%);height:auto;border-radius:12px">
+        <p style="margin-top:12px"><a href="${rel}index.html#reviews-section">See this proof with the other customer feedback</a></p>
+      </section>` : ""}
 
       <section class="pg-section">
         <h2>Plan, access &amp; warranty</h2>

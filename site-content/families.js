@@ -440,6 +440,12 @@ module.exports = [
     bestFor: ["Developers hosting a side project", "Freelancers who need cloud credit", "Anyone who wants a coupon instead of a card charge"],
     included: ["$50 Render credit coupon", "Coupon delivered on WhatsApp", "Setup help on WhatsApp"],
     faqs: [["Is $50 the price I pay?", "No. $50 is the credit on the coupon. The price you pay is the PKR amount on the plan."]],
+    proof: {
+      image: "review-render-50-coupon.webp",
+      alt: "Render $50 Credits Coupon delivered, international client",
+      label: "Render $50 Credits Coupon delivered, international client",
+      quote: "need the account for my work right now. It's extremely urgent. Please hurry up, bro."
+    },
     related: ["cursor-pro", "replit-core", "n8n-starter"]
   },
   {
