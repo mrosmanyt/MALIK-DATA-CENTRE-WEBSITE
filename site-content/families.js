@@ -12,7 +12,7 @@
 module.exports = [
   {
     slug: "chatgpt-go", logo: "openai.svg", name: "ChatGPT Go", cat: "ai-chat", icon: "fa-solid fa-comments",
-    ids: ["chatgpt-go-6m"], official: "https://chatgpt.com/",
+    ids: ["chatgpt-go-6m", "chatgpt-go-3m"], official: "https://chatgpt.com/",
     intro: "ChatGPT Go is OpenAI's lower-cost paid plan, with higher message, upload and image limits than the free tier. We set it up for you without an international credit card, wherever you are.",
     bestFor: ["Students writing assignments, notes and summaries", "Freelancers drafting proposals, emails and client copy", "Anyone who keeps hitting the free-plan limit"],
     included: ["Higher daily message limits than ChatGPT Free", "More file uploads and image generations", "Longer memory and context for ongoing work", "Custom GPTs and Projects", "Setup guide sent on WhatsApp after activation"],
@@ -20,11 +20,32 @@ module.exports = [
       ["What is the difference between ChatGPT Go and ChatGPT Plus?", "Go is the budget tier: generous limits for everyday writing, study and research. Plus adds higher limits and more advanced models. For most students and freelancers, Go is enough."],
       ["Is this plan shared or private?", "Check the access type shown in the plan table above before ordering. If you need a private setup, ask on WhatsApp and we will confirm what is available today."]
     ],
-    related: ["super-grok", "gemini-pro", "google-ai-ultra"]
+    related: ["chatgpt-business", "super-grok", "gemini-pro"]
+  },
+  {
+    slug: "chatgpt-business", logo: "openai.svg", name: "ChatGPT Business", cat: "ai-chat", icon: "fa-solid fa-briefcase",
+    ids: ["chatgpt-business-1m"], official: "https://chatgpt.com/",
+    intro: "ChatGPT Business is OpenAI's team plan, sold here as a ready-made 1-month account with a 1-day warranty. It is not the same product as ChatGPT Go.",
+    bestFor: ["Small teams that want a Business workspace", "Freelancers who need more than the Go plan for a month", "Anyone who wants a short trial before a longer plan"],
+    included: ["ChatGPT Business workspace", "1-month ready-made account", "1-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Is this ChatGPT Go?", "No. Go is the lower personal plan. Business is a separate workspace account for one month."]],
+    related: ["chatgpt-go", "gemini-pro", "claude-api-tokens"]
+  },
+  {
+    slug: "gemini-plus", logo: "google-gemini.svg", name: "Gemini Plus", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
+    ids: ["gemini-plus-12m-link", "gemini-plus-6m-link"], official: "https://gemini.google.com/",
+    intro: "Gemini Plus is Google's lower-cost Gemini plan, delivered here as an activation link for 6 or 12 months. It is a different product from Gemini Pro on your own Gmail.",
+    bestFor: ["Students who want Gemini without the Pro plan", "Anyone who can use an activation link", "Buyers comparing a short plan with a full year"],
+    included: ["Gemini Plus access via an activation link", "12-month plan", "6-month plan when it is in stock", "Setup steps on WhatsApp"],
+    faqs: [
+      ["Is this the same as Gemini Pro?", "No. Gemini Pro on this store is activated on your own Gmail. Gemini Plus is a separate plan delivered as a link."],
+      ["The 6-month plan says out of stock.", "The button stays disabled until we have a link again. Message us on WhatsApp and we will tell you when it is back. The 12-month link can still be ordered."]
+    ],
+    related: ["gemini-pro", "chatgpt-go", "google-ai-ultra"]
   },
   {
     slug: "gemini-pro", logo: "google-gemini.svg", name: "Gemini Pro (Google AI Pro)", cat: "ai-chat", icon: "fa-solid fa-star-of-life",
-    ids: ["gemini-pro-12m"], official: "https://gemini.google.com/",
+    ids: ["gemini-pro-12m", "gemini-pro-2y-yt-1m"], official: "https://gemini.google.com/",
     intro: "Google's Gemini Pro plan bundles a stronger Gemini model with Google Drive storage and Gemini inside Gmail, Docs and Sheets. Our long-duration plans are one of the lowest monthly cost ways to use Google AI.",
     bestFor: ["Students and researchers who live in Google Docs and Drive", "Anyone who needs large file and long-document analysis", "Families who also want extra cloud storage"],
     included: ["Gemini Pro model access in the Gemini app", "Gemini in Gmail, Docs, Sheets and Slides", "Deep Research and long-context file analysis", "Google One cloud storage (see plan for size)", "AI credits for image and video tools (see plan)"],
@@ -132,8 +153,8 @@ module.exports = [
   },
   {
     slug: "replit-core", logo: "replit.svg", name: "Replit Core", cat: "ai-coding", icon: "fa-solid fa-terminal",
-    ids: ["replit-core-12m", "replit-core-100"], aliases: ["replit-core"], official: "https://replit.com/",
-    intro: "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan or a ready-made account pre-loaded with $100 of credits.",
+    ids: ["replit-core-12m", "replit-core-100", "replit-core-1m"], aliases: ["replit-core"], official: "https://replit.com/",
+    intro: "Replit Core gives you the Replit Agent, more compute and private deployments in a browser-based coding environment. Choose the yearly plan, a 1-month account, or a ready-made account pre-loaded with $100 of credits.",
     bestFor: ["Developers who code from any device in the browser", "Students learning to program", "Builders using Replit Agent to ship apps"],
     included: ["Replit Agent access", "More compute and storage", "Private apps and deployments", "Monthly usage credits", "Private or ready-made account (see plan)"],
     faqs: [
@@ -200,10 +221,10 @@ module.exports = [
   },
   {
     slug: "notion-business", logo: "notion.svg", name: "Notion Business", cat: "creative", icon: "fa-solid fa-note-sticky",
-    ids: ["notion-business-12m"], official: "https://www.notion.com/",
+    ids: ["notion-business-12m", "notion-business-3m"], official: "https://www.notion.com/",
     intro: "Notion Business adds Notion AI, advanced permissions and team features to the all-in-one workspace for notes, docs, wikis and projects.",
     bestFor: ["Teams running projects and wikis", "Students organising notes", "Agencies managing clients"],
-    included: ["Notion AI", "Unlimited pages and blocks", "Advanced sharing and permissions", "Workspace activation for 12 months"],
+    included: ["Notion AI", "Unlimited pages and blocks", "Advanced sharing and permissions", "Workspace activation for 3 or 12 months"],
     faqs: [["Can my existing workspace be upgraded?", "Ask on WhatsApp before ordering. We will confirm whether we upgrade your workspace or set up a new one."]],
     related: ["gamma-pro", "grammarly-pro", "microsoft-office-365"]
   },
@@ -218,19 +239,19 @@ module.exports = [
   },
   {
     slug: "elevenlabs-creator", logo: "elevenlabs.svg", name: "ElevenLabs Creator", cat: "video-audio", icon: "fa-solid fa-wave-square",
-    ids: ["elevenlabs-creator-1m", "elevenlabs-creator", "elevenlabs-creator-3m"], official: "https://elevenlabs.io/",
+    ids: ["elevenlabs-creator-1m", "elevenlabs-creator-1m-link", "elevenlabs-creator", "elevenlabs-creator-3m"], official: "https://elevenlabs.io/",
     intro: "ElevenLabs is the leading AI voice platform for natural text-to-speech, voice cloning and dubbing. The Creator plan includes commercial use and professional voice cloning.",
     bestFor: ["YouTube faceless channels and narrators", "Ad and explainer video makers", "Audiobook and podcast creators"],
-    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "1-month and 3-month plans (131k credits a month) and a 12-month plan"],
+    included: ["Creator-tier monthly character credits", "Professional voice cloning", "Commercial usage rights", "AI dubbing in many languages", "Private 1-month, 3-month and 12-month accounts, plus a separate 1-month activation link"],
     faqs: [["Are Urdu or Hindi voices available?", "ElevenLabs supports many languages, including Hindi. Test your script in the free version first."]],
     related: ["heygen", "cinem-ai", "capcut-pro"]
   },
   {
     slug: "heygen", logo: "heygen.webp", name: "HeyGen Creator", cat: "video-audio", icon: "fa-solid fa-user-astronaut",
-    ids: ["heygen-200"], official: "https://www.heygen.com/",
+    ids: ["heygen-200", "heygen-creator-1m"], official: "https://www.heygen.com/",
     intro: "HeyGen creates talking-avatar videos from a script, translates videos with lip-sync and builds a digital twin of you. The Creator plan suits regular content production.",
     bestFor: ["Faceless YouTube and TikTok channels", "Course creators and trainers", "Marketers making multilingual ads"],
-    included: ["Avatar video generation credits", "Video translation with lip-sync", "Custom avatar (digital twin)", "Private account"],
+    included: ["Avatar video generation credits", "Video translation with lip-sync", "Custom avatar (digital twin)", "200-credit pack or a separate 1-month Creator account"],
     faqs: [["How many videos can I make with 200 credits?", "It depends on video length and features. Share your planned usage on WhatsApp and we will suggest the right plan."]],
     related: ["elevenlabs-creator", "higgsfield", "kling-ai"]
   },
@@ -307,6 +328,24 @@ module.exports = [
     related: ["coursera-plus", "grammarly-pro", "super-grok"]
   },
   {
+    slug: "udemy", logo: "udemy.svg", name: "Udemy Personal", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
+    ids: ["udemy-personal-1m"], official: "https://www.udemy.com/",
+    intro: "Udemy Personal Plan opens Udemy's course library for one month on a ready-made account, with a 7-day warranty.",
+    bestFor: ["Learners who want many courses for a month", "Freelancers picking up a practical skill", "Anyone who does not want an annual course plan"],
+    included: ["Udemy Personal Plan", "1 month on a ready-made account", "7-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Do I get every Udemy course?", "Personal Plan includes the courses Udemy puts in that subscription. Individual paid courses outside the plan are not included."]],
+    related: ["coursera-plus", "edx", "gemini-pro"]
+  },
+  {
+    slug: "edx", logo: "edx.svg", name: "edX Premium", cat: "entertainment", icon: "fa-solid fa-building-columns",
+    ids: ["edx-premium-12m"], official: "https://www.edx.org/",
+    intro: "edX Premium is a 12-month course membership on a ready-made account, with a 7-day warranty.",
+    bestFor: ["Students taking university-style online courses", "Career switchers", "Anyone who wants a year of edX rather than one course"],
+    included: ["edX Premium features", "12 months on a ready-made account", "7-day warranty", "Setup help on WhatsApp"],
+    faqs: [["Is a certificate included in every course?", "Certificates follow the rules of the course you take. Ask on WhatsApp if you need a specific program confirmed before you pay."]],
+    related: ["coursera-plus", "udemy", "linkedin-premium"]
+  },
+  {
     slug: "coursera-plus", logo: "coursera.svg", name: "Coursera Plus", cat: "entertainment", icon: "fa-solid fa-graduation-cap",
     ids: ["coursera-premium-12m"], official: "https://www.coursera.org/courseraplus",
     intro: "Coursera Plus unlocks thousands of courses, professional certificates and guided projects from Google, IBM, Meta and top universities.",
@@ -353,8 +392,8 @@ module.exports = [
   },
   {
     slug: "surfshark-vpn", logo: "surfshark.svg", name: "Surfshark VPN", cat: "vpn-security", icon: "fa-solid fa-water",
-    ids: ["surfshark-monthly"], official: "https://surfshark.com/",
-    intro: "Surfshark is a budget VPN that works on unlimited devices. Our monthly plan is the cheapest way to get a premium VPN.",
+    ids: ["surfshark-monthly", "surfshark-2m"], official: "https://surfshark.com/",
+    intro: "Surfshark is a budget VPN that works on unlimited devices. The monthly plan is a shared login. A separate 2-month account includes full warranty.",
     bestFor: ["Budget buyers", "Families with many devices"],
     included: ["Monthly access", "Servers in many countries", "Shared premium account"],
     faqs: [["Is a shared account safe?", "A VPN account only stores your connection settings, not your files. For full privacy, choose NordVPN on your own email."]],

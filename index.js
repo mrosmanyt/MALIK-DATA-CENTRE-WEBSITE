@@ -1387,6 +1387,152 @@ const TOOLS_DATABASE = [
         desc: "Kalakar.io Creator plan: AI tools for creating and editing videos, with higher limits than Editor.",
         specs: ["Creator Plan Features","AI Video Tools","Higher Limits than Editor","Setup Help on WhatsApp"],
         icon: `<img src="/assets/logos/kalakar.webp" alt="Kalakar Creator logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-plus-12m-link",
+        name: "Gemini Plus",
+        category: "ai-chat",
+        duration: "12 Months Plan",
+        price: 600,
+        originalPrice: 600,
+        setup: "Activation Link",
+        desc: "Google Gemini Plus for 12 months, delivered as an activation link. A lower-cost Gemini plan than Pro, for everyday chat and study.",
+        specs: ["Gemini Plus features", "12 months via activation link", "Not the same as Gemini Pro on your Gmail", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-plus-6m-link",
+        name: "Gemini Plus",
+        category: "ai-chat",
+        duration: "6 Months Plan",
+        price: 650,
+        originalPrice: 650,
+        setup: "Activation Link",
+        soldOut: true,
+        desc: "Google Gemini Plus for 6 months, delivered as an activation link. Currently out of stock. Ask on WhatsApp when the next link is in.",
+        specs: ["Gemini Plus features", "6 months via activation link", "Warranty confirmed on WhatsApp", "Ask on WhatsApp when it is back"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "gemini-pro-2y-yt-1m",
+        name: "Gemini Pro 2 Years + YouTube Premium",
+        category: "ai-chat",
+        duration: "2 Years + YouTube 1 Month",
+        price: 3350,
+        originalPrice: 3350,
+        setup: "Activated on Client Email",
+        soldOut: true,
+        desc: "Gemini Pro for 2 years plus YouTube Premium for 1 month, both activated on your own email. Currently out of stock.",
+        specs: ["Gemini Pro for 2 years", "YouTube Premium for 1 month", "Activated on your email", "Warranty covers the stated access"],
+        icon: `<img src="/assets/logos/google-gemini.svg" alt="Gemini logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-business-1m",
+        name: "ChatGPT Business",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 4000,
+        originalPrice: 4000,
+        setup: "Ready-Made Account",
+        desc: "ChatGPT Business account for 1 month, for team-style ChatGPT use. A ready-made account with a 1-day warranty.",
+        specs: ["ChatGPT Business workspace", "1 month account", "1-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "chatgpt-go-3m",
+        name: "ChatGPT Go",
+        category: "ai-chat",
+        duration: "3 Months Plan",
+        price: 2900,
+        originalPrice: 2900,
+        setup: "Ready-Made Account",
+        desc: "ChatGPT Go account for 3 months. A separate plan from the 6-month shared login, with a 5-day warranty.",
+        specs: ["ChatGPT Go features", "3 months on a ready-made account", "5-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/openai.svg" alt="ChatGPT logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "udemy-personal-1m",
+        name: "Udemy Personal",
+        category: "entertainment",
+        duration: "1 Month Plan",
+        price: 1250,
+        originalPrice: 1250,
+        setup: "Ready-Made Account",
+        desc: "Udemy Personal Plan for 1 month: thousands of on-demand courses on one account, with a 7-day warranty.",
+        specs: ["Udemy Personal Plan", "1 month access", "7-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/udemy.svg" alt="Udemy logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "replit-core-1m",
+        name: "Replit Core",
+        category: "ai-coding",
+        duration: "1 Month Plan",
+        price: 1850,
+        originalPrice: 1850,
+        setup: "Ready-Made Account",
+        desc: "Replit Core for 1 month on a ready-made account. Shorter than the yearly plan, with a 3-day warranty.",
+        specs: ["Replit Core features", "1 month ready-made account", "3-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/replit.svg" alt="Replit logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "heygen-creator-1m",
+        name: "HeyGen Creator",
+        category: "video-audio",
+        duration: "1 Month Plan",
+        price: 9150,
+        originalPrice: 9150,
+        setup: "Ready-Made Account",
+        desc: "HeyGen Creator for 1 month. A monthly account, separate from the 200-credit pack, with a 20-day warranty.",
+        specs: ["HeyGen Creator features", "1 month account", "20-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/heygen.webp" alt="HeyGen logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "elevenlabs-creator-1m-link",
+        name: "ElevenLabs Creator",
+        category: "video-audio",
+        duration: "1 Month Plan",
+        price: 3350,
+        originalPrice: 3350,
+        setup: "Activation Link",
+        desc: "ElevenLabs Creator for 1 month, delivered as an activation link. This is not the private-account 1-month plan.",
+        specs: ["ElevenLabs Creator features", "1 month via activation link", "Separate from the private account plan", "Warranty confirmed on WhatsApp"],
+        icon: `<img src="/assets/logos/elevenlabs.svg" alt="ElevenLabs logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "surfshark-2m",
+        name: "Surfshark VPN",
+        category: "vpn-security",
+        duration: "2 Months Plan",
+        price: 1900,
+        originalPrice: 1900,
+        setup: "Ready-Made Account",
+        desc: "Surfshark VPN account for 2 months with full warranty. A longer plan than the monthly shared login.",
+        specs: ["Surfshark VPN account", "2 months access", "Full warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/surfshark.svg" alt="Surfshark logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "notion-business-3m",
+        name: "Notion Business",
+        category: "creative",
+        duration: "3 Months Plan",
+        price: 1250,
+        originalPrice: 1250,
+        setup: "Workspace Activation",
+        desc: "Notion Business for 3 months, activated on a workspace. Shorter than the 12-month plan.",
+        specs: ["Notion Business features", "3 months workspace activation", "Warranty for the plan period", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/notion.svg" alt="Notion logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
+    },
+    {
+        id: "edx-premium-12m",
+        name: "edX Premium",
+        category: "entertainment",
+        duration: "12 Months Plan",
+        price: 400,
+        originalPrice: 400,
+        setup: "Ready-Made Account",
+        desc: "edX Premium for 12 months: university courses and programs on a ready-made account, with a 7-day warranty.",
+        specs: ["edX Premium features", "12 months access", "7-day warranty", "Setup help on WhatsApp"],
+        icon: `<img src="/assets/logos/edx.svg" alt="edX logo" width="24" height="24" loading="lazy" style="width:24px;height:24px;object-fit:contain;border-radius:5px">`
     }
 ];
 
@@ -1832,12 +1978,12 @@ function renderTools(tools = TOOLS_DATABASE) {
                         ${!onRequest && tool.originalPrice > tool.price ? `<span class="tool-original-price">${originalPriceDisplay}</span>` : ""}
                         <span class="tool-price">${priceDisplay}</span>
                     </div>
-                    ${tool.cmsSoldOut ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : onRequest ? `<a href="${checkoutURL}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1" id="btn-order-${tool.id}">
+                    ${(tool.cmsSoldOut || tool.soldOut) ? `<span class="btn btn-outline" aria-disabled="true" style="opacity:.6;cursor:not-allowed">Out of stock</span>` : onRequest ? `<a href="${checkoutURL}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-contact" data-quote="1" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
                     </a>` : `<a href="${checkoutURL}" target="_blank" class="btn btn-success btn-buy" id="btn-order-${tool.id}">
                         <i class="fa-brands fa-whatsapp"></i> Buy Now
                     </a>`}
-                    ${tool.cmsSoldOut || onRequest ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
+                    ${(tool.cmsSoldOut || tool.soldOut) || onRequest ? "" : `<button class="btn-addcart" id="addcart-${tool.id}"
                         data-id="${tool.id}"
                         data-name="${tool.name.replace(/"/g, '&quot;')}"
                         data-price="${tool.price}"
