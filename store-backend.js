@@ -206,13 +206,14 @@
         document.addEventListener("click", function (e) {
             var buy = e.target.closest("a.btn-buy");
             var cart = e.target.closest("#mdc-cart-checkout");
+            if (buy && (buy.getAttribute("data-quote") === "1" || buy.classList.contains("btn-contact"))) return;
             if (!buy && !cart) return;
             var href = (buy || cart).getAttribute("href") || "";
             if (href.indexOf("wa.me/923489057646") === -1 && href.indexOf("wa.me/923445739206") === -1) return; // safety
             e.preventDefault();
             e.stopPropagation();
             var context = buy ? fromBuyButton(buy) : fromCart();
-            if (!context.items.length) { window.open(href, "_blank"); return; }
+            if (!context.items.length || !context.items.some(function (i) { return i.price > 0; })) { window.open(href, "_blank", "noopener"); return; }
             startCheckout(context, href);
         }, true);
     }

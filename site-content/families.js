@@ -371,11 +371,17 @@ module.exports = [
   },
   {
     slug: "claude-api-tokens", logo: "claude.svg", name: "Claude API Tokens", cat: "ai-chat", icon: "fa-solid fa-plug",
-    ids: ["claude-api-10m"], official: "https://www.anthropic.com/api",
-    intro: "API token packs for developers who want to use Claude models inside their own apps, bots and automations. Contact us for larger volumes.",
-    bestFor: ["Developers building chatbots", "Automation agencies", "SaaS builders"],
-    included: ["10M token pack", "API key access", "Setup help on WhatsApp"],
-    faqs: [["Need a larger volume?", "See our Enterprise API Credits page or ask on WhatsApp for a custom quote."]],
+    ids: ["claude-api-10m", "claude-api-10m-1d", "claude-api-50m-1d", "claude-api-100m-3d", "claude-api-200m-1d", "claude-api-500m-1d", "claude-api-1b-30d", "claude-api-500-credits"],
+    official: "https://www.anthropic.com/api",
+    extraKeywords: "Claude API tokens Pakistan, buy Claude API credits, Claude API price on request, Claude 1B tokens, Claude API 500 credits",
+    intro: "Claude API token packs and a $500 credit pack for developers calling Claude from their own apps, bots and automations. One 10 million token pack has a listed PKR price. The 1-day, 3-day and 30-day packs, from 10 million up to 1 billion tokens, are price on request: message us on WhatsApp and we confirm the amount before you pay.",
+    bestFor: ["Developers building chatbots and agents", "Teams that need a short high-volume token window", "Anyone buying Claude API credits from Pakistan without listing a card price up front"],
+    included: ["Listed 10M token pack with a PKR price", "10M, 50M, 200M and 500M token packs for 1 day (price on request, full warranty)", "100M tokens for 3 days (price on request, full warranty)", "1 billion tokens for 30 days (price on request, 7-day warranty)", "$500 Claude API credit pack (price on request)", "API key delivered on WhatsApp"],
+    faqs: [
+      ["Why is there no price on some Claude packs?", "Those packs are quoted per order. Tap Contact on WhatsApp, name the plan, and we reply with the price and the delivery steps. They are not added to the cart and they are never billed as zero."],
+      ["What does the 1 billion pack include?", "1 billion Claude API tokens for 30 days, with a 7-day warranty. The selling price is confirmed on WhatsApp."],
+      ["Is the $500 credit pack the same as a token pack?", "No. Token packs are sold by token count and duration. The $500 pack is a credit balance. $500 is the credit size, not our selling price."]
+    ],
     related: ["cursor-pro", "n8n-starter", "lovable-pro"]
   },
   {

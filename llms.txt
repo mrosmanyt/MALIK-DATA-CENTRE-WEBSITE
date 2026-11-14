@@ -5,7 +5,7 @@
 Website: https://www.malikdatacentre.store/
 WhatsApp: +92 344 5739206, +92 348 9057646
 Email: support@malikdatacentre.store
-Prices last changed: 2026-11-04
+Prices last changed: 2026-11-14
 
 ## Tools and starting prices (PKR, approx. USD in brackets)
 
@@ -45,7 +45,7 @@ Prices last changed: 2026-11-04
 - [NordVPN](https://www.malikdatacentre.store/tools/nordvpn/): from Rs 2,500 ($9) — Monthly Access Rs 2,500 / $9 (Activated on Client Email)
 - [Surfshark VPN](https://www.malikdatacentre.store/tools/surfshark-vpn/): from Rs 400 ($1.44) — Monthly Access Rs 400 / $1.44 (Shared Premium Account)
 - [HMA VPN](https://www.malikdatacentre.store/tools/hma-vpn/): from Rs 5,500 ($19.80) — Yearly License Key Rs 5,500 / $19.80 (License Key Delivery)
-- [Claude API Tokens](https://www.malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 ($4.32) — API Key Pack Rs 1,200 / $4.32 (API Key Access)
+- [Claude API Tokens](https://www.malikdatacentre.store/tools/claude-api-tokens/): from Rs 1,200 ($4.32) — API Key Pack Rs 1,200 / $4.32 (API Key Access); Claude API 10M Tokens: 1 Day, price on request (API Key Access); Claude API 50M Tokens: 1 Day, price on request (API Key Access); Claude API 100M Tokens: 3 Days, price on request (API Key Access); Claude API 200M Tokens: 1 Day, price on request (API Key Access); Claude API 500M Tokens: 1 Day, price on request (API Key Access); Claude API 1B Tokens: 30 Days, price on request (API Key Access); Claude API $500 Credits: Credit pack, price on request (API Key Access)
 - [Muse AI Tokens](https://www.malikdatacentre.store/tools/muse-ai/): from Rs 300 ($1.08) — 1B Tokens Pack Rs 300 / $1.08 (API Key Access); 31B Tokens Pack Rs 1,500 / $5.40 (API Key Access)
 - [Envato](https://www.malikdatacentre.store/tools/envato/): from Rs 2,000 ($7.20) — 1 Month Plan Rs 2,000 / $7.20 (Ready-Made Account); 12 Months Plan Rs 8,300 / $29.88 (Ready-Made Account)
 - [StealthGPT Pro](https://www.malikdatacentre.store/tools/stealthgpt/): from Rs 2,400 ($8.64) — Pro Plan Rs 2,400 / $8.64 (Ready-Made Account)
