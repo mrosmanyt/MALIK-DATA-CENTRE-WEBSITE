@@ -37,6 +37,11 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-14 | youtube-premium-price-in-pakistan | youtube premium price in pakistan | youtube-premium |
 | 2026-11-14 | linkedin-premium-price-in-pakistan | linkedin premium price in pakistan | linkedin-premium |
 | 2026-11-14 | best-ai-tools-for-youtubers-pakistan | best ai tools for youtubers pakistan | vidiq-max, capcut-pro, canva-pro |
+| 2026-11-15 | grammarly-pro-price-in-pakistan | grammarly pro price in pakistan | grammarly-pro, quillbot |
+| 2026-11-15 | quillbot-premium-price-in-pakistan | quillbot premium price in pakistan | quillbot, grammarly-pro |
+| 2026-11-15 | gamma-pro-price-in-pakistan | gamma pro price in pakistan | gamma-pro, canva-pro |
+| 2026-11-15 | coursera-plus-price-in-pakistan | coursera plus price in pakistan | coursera-plus, linkedin-premium |
+| 2026-11-15 | nordvpn-vs-surfshark-pakistan | nordvpn vs surfshark pakistan | nordvpn, surfshark-vpn |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
 
@@ -46,11 +51,6 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 
 | Pri | Status | Target keyword | Working title | Tools | Angle |
 |---|---|---|---|---|---|
-| P1 | todo | grammarly pro price in pakistan | Grammarly Pro Price in Pakistan: 1 Month vs 1 Year | grammarly-pro, quillbot | Price page. Student roundup only mentions it. Go deep on tone, plagiarism check and own-email activation. |
-| P1 | todo | quillbot premium price in pakistan | QuillBot Premium Price in Pakistan and When to Use It | quillbot, grammarly-pro | Paraphrase and summary, not a way around university rules. |
-| P1 | todo | gamma pro price in pakistan | Gamma Pro Price in Pakistan for Pitch Decks and Lectures | gamma-pro, canva-pro | Monthly Rs plan vs yearly. Export to PowerPoint. |
-| P1 | todo | coursera plus price in pakistan | Coursera Plus Price in Pakistan: Certificates and Who Should Buy | coursera-plus, linkedin-premium | 12-month private activation. What a certificate does and does not do. |
-| P1 | todo | nordvpn vs surfshark pakistan | NordVPN vs Surfshark in Pakistan: Price, Privacy and Devices | nordvpn, surfshark-vpn | Blog version of the comparison page, with payment and own-email vs shared. |
 | P1 | todo | heygen price in pakistan | HeyGen Price in Pakistan: 200 Credits and Talking Avatars | heygen, elevenlabs-creator | What 200 credits roughly cover. Link the existing vs page. |
 | P1 | todo | kling ai price in pakistan | Kling AI Price in Pakistan: 660 vs 750 Credits | kling-ai, higgsfield | Text-to-video for ads and product clips. |
 | P1 | todo | adobe creative cloud price in pakistan | Adobe Creative Cloud Price in Pakistan: 3, 6 and 12 Months | adobe-creative-cloud, canva-pro | Full bundle durations. Do not repeat the old Canva vs Adobe article. |
@@ -87,4 +87,4 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P3 | todo | best ai tools for small shops in pakistan | Best AI Tools for Small Shops in Pakistan | canva-pro, chatgpt-go, capcut-pro | Product photos, WhatsApp replies, a short reel. Not the freelancer list again. |
 | P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
 
-Next run starts at **Grammarly Pro price in Pakistan**.
+Next run starts at **HeyGen price in Pakistan**.
