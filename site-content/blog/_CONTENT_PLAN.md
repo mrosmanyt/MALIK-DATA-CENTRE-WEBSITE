@@ -42,6 +42,11 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-15 | gamma-pro-price-in-pakistan | gamma pro price in pakistan | gamma-pro, canva-pro |
 | 2026-11-15 | coursera-plus-price-in-pakistan | coursera plus price in pakistan | coursera-plus, linkedin-premium |
 | 2026-11-15 | nordvpn-vs-surfshark-pakistan | nordvpn vs surfshark pakistan | nordvpn, surfshark-vpn |
+| 2026-11-16 | heygen-price-in-pakistan | heygen price in pakistan | heygen, elevenlabs-creator |
+| 2026-11-16 | kling-ai-price-in-pakistan | kling ai price in pakistan | kling-ai, higgsfield |
+| 2026-11-16 | adobe-creative-cloud-price-in-pakistan | adobe creative cloud price in pakistan | adobe-creative-cloud, canva-pro |
+| 2026-11-16 | capcut-pro-price-in-pakistan | capcut pro price in pakistan | capcut-pro |
+| 2026-11-16 | gemini-pro-price-in-pakistan | gemini pro price in pakistan | gemini-pro, google-ai-ultra |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
 
@@ -51,11 +56,6 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 
 | Pri | Status | Target keyword | Working title | Tools | Angle |
 |---|---|---|---|---|---|
-| P1 | todo | heygen price in pakistan | HeyGen Price in Pakistan: 200 Credits and Talking Avatars | heygen, elevenlabs-creator | What 200 credits roughly cover. Link the existing vs page. |
-| P1 | todo | kling ai price in pakistan | Kling AI Price in Pakistan: 660 vs 750 Credits | kling-ai, higgsfield | Text-to-video for ads and product clips. |
-| P1 | todo | adobe creative cloud price in pakistan | Adobe Creative Cloud Price in Pakistan: 3, 6 and 12 Months | adobe-creative-cloud, canva-pro | Full bundle durations. Do not repeat the old Canva vs Adobe article. |
-| P1 | todo | capcut pro price in pakistan | CapCut Pro Price in Pakistan: Device, Private and Team Plans | capcut-pro | Price table the review does not lead with. |
-| P1 | todo | gemini pro price in pakistan | Gemini Pro Price in Pakistan: 1 Year on Your Gmail | gemini-pro, google-ai-ultra | Own-email promo plan. Send heavy video users to Ultra. |
 | P1 | todo | google ai ultra price in pakistan | Google AI Ultra Price in Pakistan: Shared, Flow and 25k Slot | google-ai-ultra, gemini-pro | Three access types, very different prices. No invented Veo quotas. |
 | P1 | todo | super grok price in pakistan | SuperGrok and X Premium+ Price in Pakistan | super-grok, chatgpt-go | Premium, Bot and Heavy. Badge timing. Legacy comparison stays separate. |
 | P1 | todo | replit core price in pakistan | Replit Core Price in Pakistan: Yearly Plan vs $100 Credits | replit-core, cursor-pro | Browser IDE and Agent. Who should not buy Cursor instead. |
@@ -87,4 +87,4 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P3 | todo | best ai tools for small shops in pakistan | Best AI Tools for Small Shops in Pakistan | canva-pro, chatgpt-go, capcut-pro | Product photos, WhatsApp replies, a short reel. Not the freelancer list again. |
 | P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
 
-Next run starts at **HeyGen price in Pakistan**.
+Next run starts at **Google AI Ultra price in Pakistan**.
