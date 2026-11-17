@@ -44,6 +44,10 @@
                 if (empty) empty.hidden = shown > 0;
             };
             search.addEventListener("input", apply);
+            try {
+                var initialQ = new URLSearchParams(window.location.search).get("q");
+                if (initialQ) { search.value = initialQ; apply(); }
+            } catch (err) { /* ignore malformed search URLs */ }
             filter.querySelectorAll(".pg-pill").forEach(function (p) {
                 p.addEventListener("click", function () {
                     filter.querySelectorAll(".pg-pill").forEach(function (x) { x.classList.remove("active"); });

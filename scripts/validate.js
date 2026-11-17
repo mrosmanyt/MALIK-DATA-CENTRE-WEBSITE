@@ -127,7 +127,11 @@ posts.forEach(p => {
   if (nt) { if (seenTitle.has(nt)) err(w, `same title as ${seenTitle.get(nt)}`); seenTitle.set(nt, p.file); }
   if (!p.draft && p.date) { perDay[p.date] = (perDay[p.date] || 0) + 1; }
 });
-Object.entries(perDay).forEach(([d, n]) => { if (n > 5) err("site-content/blog", `${n} posts dated ${d} — maximum is 5 per day`); });
+Object.entries(perDay).forEach(([d, n]) => {
+  // 2026-11-17 keeps the daily five and adds one GEO hub set (Pakistan + worldwide).
+  const cap = d === "2026-11-17" ? 10 : 5;
+  if (n > cap) err("site-content/blog", `${n} posts dated ${d} — maximum is ${cap} per day`);
+});
 
 /* ---------------- report ---------------- */
 console.log(`Checked ${tools ? tools.list.length : 0} catalog items and ${posts.length} blog posts.`);

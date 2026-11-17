@@ -6,47 +6,136 @@ Disallow: /api/
 Allow: /api/content.js
 Disallow: /data/
 
-# Explicitly allow AI Search Indexers & LLM Crawlers for GEO (Generative Engine Optimization)
-User-agent: GPTBot
+# AI and search crawlers. English pages are the source; the language switcher translates them in the browser.
+User-agent: Googlebot
 Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: Claude-User
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /admin/
+Disallow: /admin.html
+Disallow: /api/
+Allow: /api/content.js
+Disallow: /data/
 
 Sitemap: https://www.malikdatacentre.store/sitemap.xml
 Sitemap: https://www.malikdatacentre.store/sitemap-cms.xml
-# LLM Context File for AI search recommendations
-# https://www.malikdatacentre.store/llm.txt
+# https://www.malikdatacentre.store/llms.txt
+# https://www.malikdatacentre.store/llms-full.txt
