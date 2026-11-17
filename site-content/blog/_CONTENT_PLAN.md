@@ -47,6 +47,11 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-16 | adobe-creative-cloud-price-in-pakistan | adobe creative cloud price in pakistan | adobe-creative-cloud, canva-pro |
 | 2026-11-16 | capcut-pro-price-in-pakistan | capcut pro price in pakistan | capcut-pro |
 | 2026-11-16 | gemini-pro-price-in-pakistan | gemini pro price in pakistan | gemini-pro, google-ai-ultra |
+| 2026-11-17 | google-ai-ultra-price-in-pakistan | google ai ultra price in pakistan | google-ai-ultra, gemini-pro |
+| 2026-11-17 | super-grok-price-in-pakistan | super grok price in pakistan | super-grok, chatgpt-go |
+| 2026-11-17 | replit-core-price-in-pakistan | replit core price in pakistan | replit-core, cursor-pro |
+| 2026-11-17 | lovable-pro-price-in-pakistan | lovable pro price in pakistan | lovable-pro, cursor-pro |
+| 2026-11-17 | notion-business-price-in-pakistan | notion business price in pakistan | notion-business, gamma-pro |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
 
@@ -56,11 +61,6 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 
 | Pri | Status | Target keyword | Working title | Tools | Angle |
 |---|---|---|---|---|---|
-| P1 | todo | google ai ultra price in pakistan | Google AI Ultra Price in Pakistan: Shared, Flow and 25k Slot | google-ai-ultra, gemini-pro | Three access types, very different prices. No invented Veo quotas. |
-| P1 | todo | super grok price in pakistan | SuperGrok and X Premium+ Price in Pakistan | super-grok, chatgpt-go | Premium, Bot and Heavy. Badge timing. Legacy comparison stays separate. |
-| P1 | todo | replit core price in pakistan | Replit Core Price in Pakistan: Yearly Plan vs $100 Credits | replit-core, cursor-pro | Browser IDE and Agent. Who should not buy Cursor instead. |
-| P1 | todo | lovable pro price in pakistan | Lovable Pro Price in Pakistan: 100 to 600 Credits | lovable-pro, cursor-pro | Credit sizing for a landing page vs a full app. |
-| P1 | todo | notion business price in pakistan | Notion Business Price in Pakistan for Teams and Notes | notion-business, gamma-pro | Workspace activation, history, what AI is included. |
 | P2 | todo | how to use vidiq for a new youtube channel | How to Use vidIQ on a New YouTube Channel in Pakistan | vidiq-max, youtube-premium | Keyword workflow. Boost vs Max. No ranking promise. |
 | P2 | todo | how to activate youtube premium on your email | How to Activate YouTube Premium on Your Own Email | youtube-premium | Step-through after the price post. TV apps and family limits. |
 | P2 | todo | how to use elevenlabs for a faceless channel | How to Use ElevenLabs for a Faceless YouTube Channel | elevenlabs-creator, capcut-pro | Script, generate, edit. Consent for cloning. |
@@ -87,4 +87,4 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P3 | todo | best ai tools for small shops in pakistan | Best AI Tools for Small Shops in Pakistan | canva-pro, chatgpt-go, capcut-pro | Product photos, WhatsApp replies, a short reel. Not the freelancer list again. |
 | P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
 
-Next run starts at **Google AI Ultra price in Pakistan**.
+Next run starts at **How to Use vidIQ on a New YouTube Channel in Pakistan**.
