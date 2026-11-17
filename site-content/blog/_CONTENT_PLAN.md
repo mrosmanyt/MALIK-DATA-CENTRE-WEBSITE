@@ -5,7 +5,7 @@ Future daily runs publish the next **5** rows with status `todo`, in order: all 
 Rules the validator enforces (`node scripts/validate.js`):
 
 - File name `YYYY-MM-DD-slug.md`. Front matter matches the template in `_TEMPLATE.md`. No `draft: true` on posts that should go live.
-- At most **5** published posts on the same calendar date.
+- At most **5** published posts on the same calendar date. 2026-11-17 is the one exception (10), because that day already had the daily five and then a GEO hub set.
 - Body 700–3,500 words (aim 1,200–2,000). Title 25–75 characters. Description 110–170 characters. Answer box 25–80 words. 3–10 keywords.
 - Every `Rs` amount must be a price or original price in `index.js`. Official prices are written as `PKR … (official)` or `$… (official)` and linked.
 - `tools:` values are family slugs from `site-content/families.js`. At least two internal links and a `## FAQ` with two questions.
@@ -52,6 +52,11 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-17 | replit-core-price-in-pakistan | replit core price in pakistan | replit-core, cursor-pro |
 | 2026-11-17 | lovable-pro-price-in-pakistan | lovable pro price in pakistan | lovable-pro, cursor-pro |
 | 2026-11-17 | notion-business-price-in-pakistan | notion business price in pakistan | notion-business, gamma-pro |
+| 2026-11-17 | best-ai-tools-to-buy-in-pakistan-2026 | best ai tools to buy in pakistan | chatgpt-go, gemini-pro, capcut-pro |
+| 2026-11-17 | chatgpt-go-vs-gemini-pro-vs-supergrok-pakistan | chatgpt plus vs gemini pro vs supergrok pakistan | chatgpt-go, gemini-pro, super-grok |
+| 2026-11-17 | cheapest-ai-tools-for-students-in-pakistan | cheapest ai tools for students pakistan | gemini-pro, canva-pro, chatgpt-go |
+| 2026-11-17 | where-to-buy-ai-tools-online-2026 | where to buy ai tools online | capcut-pro, super-grok, lovable-pro |
+| 2026-11-17 | buy-claude-api-keys-and-ai-subscriptions | buy claude api keys | claude-api-tokens, codex-api |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
 
