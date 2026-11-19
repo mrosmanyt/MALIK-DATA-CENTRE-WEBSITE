@@ -5,7 +5,7 @@ Future daily runs publish the next **5** rows with status `todo`, in order: all 
 Rules the validator enforces (`node scripts/validate.js`):
 
 - File name `YYYY-MM-DD-slug.md`. Front matter matches the template in `_TEMPLATE.md`. No `draft: true` on posts that should go live.
-- At most **5** published posts on the same calendar date. 2026-11-17 is the one exception (10), because that day already had the daily five and then a GEO hub set.
+- At most **5** published posts on the same calendar date. 2026-11-17 and 2026-11-19 are the exceptions (10 each): a Pakistan set plus a worldwide set on the same day.
 - Body 700–3,500 words (aim 1,200–2,000). Title 25–75 characters. Description 110–170 characters. Answer box 25–80 words. 3–10 keywords.
 - Every `Rs` amount must be a price or original price in `index.js`. Official prices are written as `PKR … (official)` or `$… (official)` and linked.
 - `tools:` values are family slugs from `site-content/families.js`. At least two internal links and a `## FAQ` with two questions.
@@ -57,6 +57,16 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-17 | cheapest-ai-tools-for-students-in-pakistan | cheapest ai tools for students pakistan | gemini-pro, canva-pro, chatgpt-go |
 | 2026-11-17 | where-to-buy-ai-tools-online-2026 | where to buy ai tools online | capcut-pro, super-grok, lovable-pro |
 | 2026-11-17 | buy-claude-api-keys-and-ai-subscriptions | buy claude api keys | claude-api-tokens, codex-api |
+| 2026-11-19 | higgsfield-price-in-pakistan | higgsfield price in pakistan | higgsfield, kling-ai |
+| 2026-11-19 | picsart-pro-price-in-pakistan | picsart pro price in pakistan | picsart-pro, canva-pro |
+| 2026-11-19 | zoom-pro-price-in-pakistan | zoom pro price in pakistan | zoom-pro, microsoft-office-365 |
+| 2026-11-19 | microsoft-365-price-in-pakistan | microsoft 365 price in pakistan | microsoft-office-365, windows-pro-key |
+| 2026-11-19 | envato-price-in-pakistan | envato elements price in pakistan | envato, storyblocks |
+| 2026-11-19 | best-ai-tools-for-small-shops-in-pakistan | best ai tools for small shops in pakistan | canva-pro, chatgpt-go, capcut-pro |
+| 2026-11-19 | buy-muse-ai-tokens-online | buy muse ai tokens | muse-ai, chatgpt-go |
+| 2026-11-19 | buy-warp-build-online | buy warp build online | warp-build, cursor-pro |
+| 2026-11-19 | cheap-adobe-express-subscription | cheap adobe express subscription | adobe-express, canva-pro, adobe-creative-cloud |
+| 2026-11-19 | buy-udemy-personal-plan-online | buy udemy online | udemy, coursera-plus |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files.
 
@@ -71,11 +81,6 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P2 | todo | how to use elevenlabs for a faceless channel | How to Use ElevenLabs for a Faceless YouTube Channel | elevenlabs-creator, capcut-pro | Script, generate, edit. Consent for cloning. |
 | P2 | todo | how to use cursor pro for a client project | How to Use Cursor Pro on a Freelance Code Project | cursor-pro | Usage pool, diffs, secrets. Not a repeat of the price table. |
 | P2 | todo | how to write linkedin inmail that gets a reply | How to Write a LinkedIn InMail That Gets a Reply | linkedin-premium, grammarly-pro | Five Career credits. No "guaranteed jobs". |
-| P2 | todo | higgsfield price in pakistan | Higgsfield Price in Pakistan: Plus vs Pro Credits | higgsfield, kling-ai | Camera presets vs a single video model. |
-| P2 | todo | picsart pro price in pakistan | Picsart Pro Price in Pakistan for Phone Editing | picsart-pro, canva-pro | 11-month own-email plan. Shops and students. |
-| P2 | todo | zoom pro price in pakistan | Zoom Pro Price in Pakistan for Classes and Client Calls | zoom-pro, microsoft-office-365 | Monthly login, meeting length, who still needs the free plan. |
-| P2 | todo | microsoft 365 price in pakistan | Microsoft 365 Price in Pakistan on Your Own Email | microsoft-office-365, windows-pro-key | The 12-month plan only. Do not invent extra Office SKUs. |
-| P2 | todo | envato elements price in pakistan | Envato Price in Pakistan: 1 Month vs 1 Year of Downloads | envato, storyblocks | Licence at download. Client projects. |
 | P2 | todo | artlist price in pakistan | Artlist Pro Price in Pakistan for YouTube Music | artlist, capcut-pro | Claims and where the licence lives. |
 | P2 | todo | n8n starter price in pakistan | n8n Starter Price in Pakistan for WhatsApp and CRM Workflows | n8n-starter, gumloop-pro | When to buy the seat vs hire the automation service. |
 | P2 | todo | claude api tokens price in pakistan | Claude API Token Price in Pakistan: What 10M Tokens Means | claude-api-tokens, chatgpt-go | Developers only. Not a chat login. |
@@ -89,7 +94,10 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P3 | todo | dreamface price in pakistan | DreamFace Price in Pakistan: Talking Photos vs HeyGen | dreamface, heygen | Monthly vs yearly. Fun content vs client work. |
 | P3 | todo | wispr flow price in pakistan | Wispr Flow Pro Price in Pakistan for Dictation | wispr-flow, grammarly-pro | 12-month plan. Test the language on free first. |
 | P3 | todo | gumloop pro price in pakistan | Gumloop Pro Price in Pakistan for No-Code Scraping | gumloop-pro, n8n-starter | Who should pick n8n instead. |
-| P3 | todo | best ai tools for small shops in pakistan | Best AI Tools for Small Shops in Pakistan | canva-pro, chatgpt-go, capcut-pro | Product photos, WhatsApp replies, a short reel. Not the freelancer list again. |
 | P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
+| P3 | todo | buy framer pro online | Buy Framer Pro Online for a Marketing Site | framer | 12-month ready-made account. Not Lovable. |
+| P3 | todo | buy bolt new pro online | Buy Bolt.new Pro Online: Prompt to a Web App | bolt-new, lovable-pro | 12-month ready-made. Compare with Cursor only at a high level. |
+| P3 | todo | buy render credits online | Buy Render Credits Online: What the $50 Coupon Means | render | $50 is the credit size. Quote the PKR price only. |
+| P3 | todo | cheap edx subscription | Cheap edX Premium: A Year of Courses Online | edx, coursera-plus | Rs 400 year vs Coursera. Certificates follow the course. |
 
-Next run starts at **How to Use vidIQ on a New YouTube Channel in Pakistan**.
+Next run starts at **How to Use vidIQ on a New YouTube Channel in Pakistan**. The 2026-11-19 batch skipped the how-to queue so it could publish six Pakistan price and shop posts plus four worldwide buy posts. Do not reuse those ten keywords.
