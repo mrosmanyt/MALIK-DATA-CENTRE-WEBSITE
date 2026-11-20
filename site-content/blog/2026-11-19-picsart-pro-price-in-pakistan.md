@@ -62,7 +62,7 @@ Students who need slides and a brand kit should start with Canva. The longer Pic
 
 ## How to order and what to check on day one
 
-1. Open the [Picsart Pro page](/tools/picsart-pro/) and message WhatsApp +92 344 5739206 with the email you want activated. Use an email you can open. A university alias that dies in June is a bad choice for an 11-month plan.
+1. Open the [Picsart Pro page](/tools/picsart-pro/) and message WhatsApp +92 348 9057646 with the email you want activated. Use an email you can open. A university alias that dies in June is a bad choice for an 11-month plan.
 2. Pay in PKR, or in USDT if you are outside Pakistan. Send the screenshot.
 3. Do not send your email password or a one-time code. Activation on your email does not need the password handed to a stranger.
 4. Most orders are ready within 5–30 minutes after payment is confirmed, as the [delivery policy](/delivery-policy/) describes. A bank transfer can take longer to appear than JazzCash or EasyPaisa.

@@ -25,7 +25,7 @@ const path = require("path");
 const ROOT = __dirname;
 const SITE = "https://www.malikdatacentre.store";
 const BRAND = "MALIK DATA CENTRE";
-const WA1 = "923445739206";
+const WA1 = "923489057646";
 const WA2 = "923489057646";
 const EMAIL = "support@malikdatacentre.store";
 /* Owner-provided client total. Show it as text only. Never as a rating or review count. */
@@ -286,7 +286,7 @@ function footer(rel, tours) {
         <h4>Contact</h4>
         <ul>
           ${tours ? `<li><a href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> MALIK TOURS: +92 348 9057646</a></li>
-          <li><a href="tel:+${WA2}"><i class="fa-solid fa-phone"></i> Call +92 348 9057646</a></li>` : `<li><a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</a></li>
+          <li><a href="tel:+${WA2}"><i class="fa-solid fa-phone"></i> Call +92 348 9057646</a></li>` : `<li><a href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></li>
           <li><a href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></li>`}
           <li><a href="mailto:${EMAIL}">${EMAIL}</a></li>
           <li><a href="${rel}about/">About</a></li>
@@ -319,13 +319,13 @@ function orgGraph() {
         url: SITE + "/",
         logo: { "@type": "ImageObject", url: SITE + "/assets/logo.png" },
         email: EMAIL,
-        telephone: "+923445739206",
+        telephone: "+923489057646",
         sameAs: [SOCIAL.youtube, SOCIAL.facebook, SOCIAL.x, CHANNEL],
         contactPoint: [{
           "@type": "ContactPoint",
           contactType: "sales",
-          telephone: "+923445739206",
-          url: "https://wa.me/923445739206",
+          telephone: "+923489057646",
+          url: "https://wa.me/923489057646",
           availableLanguage: ["English", "Urdu"],
           areaServed: area
         }]
@@ -338,13 +338,13 @@ function orgGraph() {
         image: SITE + "/assets/logo.png",
         logo: SITE + "/assets/logo.png",
         email: EMAIL,
-        telephone: "+923445739206",
+        telephone: "+923489057646",
         parentOrganization: { "@id": SITE + "/#organization" },
         address: { "@type": "PostalAddress", addressCountry: "PK" },
         areaServed: area,
         currenciesAccepted: "PKR",
         paymentAccepted: PAYMENT_ACCEPTED,
-        description: "Independent reseller of AI tools and software subscriptions for customers in Pakistan and worldwide. Prices on the website are in PKR. Orders are placed on WhatsApp +92 344 5739206."
+        description: "Independent reseller of AI tools and software subscriptions for customers in Pakistan and worldwide. Prices on the website are in PKR. Orders are placed on WhatsApp +92 348 9057646."
       },
       {
         "@type": "WebSite",
@@ -516,13 +516,13 @@ function buildToolPage(f) {
   const st = famStats(f);
   if (!st) return;
   const url = `tools/${f.slug}/`;
-  const abroadFaq = [`Can I buy ${f.name} from outside Pakistan?`, `Yes. ${f.name} is sold to customers in Pakistan and worldwide. Message WhatsApp +92 344 5739206. Customers outside Pakistan pay with USDT (Binance, BEP20 or TRC20), and we confirm the amount in your currency on WhatsApp before you pay. Setup is usually ready in 5–30 minutes.`];
+  const abroadFaq = [`Can I buy ${f.name} from outside Pakistan?`, `Yes. ${f.name} is sold to customers in Pakistan and worldwide. Message WhatsApp +92 348 9057646. Customers outside Pakistan pay with USDT (Binance, BEP20 or TRC20), and we confirm the amount in your currency on WhatsApp before you pay. Setup is usually ready in 5–30 minutes.`];
   const faqs = [abroadFaq, ...(f.faqs || []), ...COMMON_FAQS.filter(([q]) => !/outside Pakistan/i.test(q))];
   const priceBit = st.min ? `From ${usd(st.min.price)}` : QUOTE;
   const title = `Buy ${f.name} in Pakistan & Worldwide | ${priceBit} | ${BRAND}`;
   const desc = st.min
     ? `Buy ${f.name} in Pakistan or worldwide from ${usd(st.min.price)} (${rs(st.min.price)}). ${st.plans.length} plan${st.plans.length > 1 ? "s" : ""}${st.plans.some(quote) ? "; some packs are price on request" : ""}. Pay with USDT from any country, or EasyPaisa, JazzCash or bank transfer in Pakistan. WhatsApp activation in 5–30 minutes.`
-    : `Buy ${f.name} in Pakistan or worldwide. These packs are price on request: message WhatsApp +92 344 5739206 and we confirm the amount before you pay. No rupee price is listed. Activation in 5–30 minutes.`;
+    : `Buy ${f.name} in Pakistan or worldwide. These packs are price on request: message WhatsApp +92 348 9057646 and we confirm the amount before you pay. No rupee price is listed. Activation in 5–30 minutes.`;
   const related = (f.related || []).map(s => FAM[s]).filter(Boolean);
   const accessTypes = [...new Set(st.plans.map(p => p.setup))];
   const productLd = {
@@ -843,7 +843,7 @@ function simplePage(url, { title, h1, eyebrow, icon, lead, desc, inner, active, 
   </section>
   <div class="pg-prose">${inner(rel)}</div>
   <div class="pg-cta"><h2>Need help?</h2><p>Our team replies on WhatsApp.</p>
-    <div class="pg-cta-btns"><a class="btn btn-success" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</a><a class="btn btn-outline" href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></div></div>
+    <div class="pg-cta-btns"><a class="btn btn-success" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a><a class="btn btn-outline" href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a></div></div>
 </div>`;
   write(url, page({ urlPath: url, active, title: `${title} | ${BRAND}`, desc,
     jsonld: [crumbLd([["Home", ""], [h1, url]]), faqLd(faqs)].filter(Boolean), body }));
@@ -932,11 +932,11 @@ function buildPolicies() {
 
   simplePage("contact-us/", {
     title: "Contact Us", h1: "Contact Us", eyebrow: "We reply on WhatsApp", icon: "fa-solid fa-headset", active: "",
-    desc: `Contact ${BRAND} on WhatsApp (+92 344 5739206, +92 348 9057646) or email for orders, setup help and warranty claims.`,
+    desc: `Contact ${BRAND} on WhatsApp (+92 348 9057646, +92 348 9057646) or email for orders, setup help and warranty claims.`,
     lead: "WhatsApp is the fastest way to reach us for orders, setup help and warranty claims.",
     inner: () => `
 <section class="pg-section" style="padding-top:0"><div class="pg-contact-grid">
-  <a class="pg-card" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><div class="pg-card-icon"><i class="fa-brands fa-whatsapp"></i></div><h3>WhatsApp Line 1</h3><p>+92 344 5739206</p></a>
+  <a class="pg-card" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><div class="pg-card-icon"><i class="fa-brands fa-whatsapp"></i></div><h3>WhatsApp Line 1</h3><p>+92 348 9057646</p></a>
   <a class="pg-card" href="${wa(WA2)}" target="_blank" rel="noopener noreferrer"><div class="pg-card-icon"><i class="fa-brands fa-whatsapp"></i></div><h3>WhatsApp Line 2</h3><p>+92 348 9057646</p></a>
   <a class="pg-card" href="mailto:${EMAIL}"><div class="pg-card-icon"><i class="fa-solid fa-envelope"></i></div><h3>Email</h3><p>${EMAIL}</p></a>
   <a class="pg-card" href="${CHANNEL}" target="_blank" rel="noopener noreferrer"><div class="pg-card-icon"><i class="fa-solid fa-bullhorn"></i></div><h3>WhatsApp Channel</h3><p>Daily setups, offers and coupon codes</p></a>
@@ -1194,21 +1194,21 @@ function liveFrom(slug) {
 
 function buildGeoPages() {
   const pkFaqs = [
-    ["Where can I buy AI tools in Pakistan?", `${BRAND} sells AI tools and software subscriptions to customers in Pakistan and worldwide. Open the tool page, or message WhatsApp +92 344 5739206. Prices on this website are in Pakistani rupees. In Pakistan you can pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.`],
+    ["Where can I buy AI tools in Pakistan?", `${BRAND} sells AI tools and software subscriptions to customers in Pakistan and worldwide. Open the tool page, or message WhatsApp +92 348 9057646. Prices on this website are in Pakistani rupees. In Pakistan you can pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.`],
     ["How do I pay from Pakistan without an international card?", "Pay from a Pakistani wallet or bank: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or another bank transfer. Send the screenshot on WhatsApp. We do not ask for your email password."],
     ["What does ChatGPT cost in Pakistan on this store?", `ChatGPT Go starts at ${liveFrom("chatgpt-go")}. ChatGPT Business starts at ${liveFrom("chatgpt-business")}. We do not list a plan named ChatGPT Plus. The live price is on each tool page.`],
     ["Can I buy from outside Pakistan?", "Yes. Customers outside Pakistan pay with USDT (Binance, BEP20 or TRC20). We confirm the amount in your currency on WhatsApp before you pay. See the worldwide buying guide for the steps."],
     ["Which plans have no public price?", "Claude API, Codex API, and plans marked Contact Support or Price on request do not show a rupee price. Message WhatsApp and we reply with the amount before you pay."]
   ];
   const worldFaqs = [
-    ["Where can I buy AI tools online?", `${BRAND} takes orders on WhatsApp at +92 344 5739206 for customers in Pakistan and in other countries. Prices on the website are in PKR, with an approximate US dollar amount beside priced plans.`],
+    ["Where can I buy AI tools online?", `${BRAND} takes orders on WhatsApp at +92 348 9057646 for customers in Pakistan and in other countries. Prices on the website are in PKR, with an approximate US dollar amount beside priced plans.`],
     ["How do international customers pay?", "Customers outside Pakistan pay with USDT via Binance (BEP20 or TRC20). We confirm the amount in your currency on WhatsApp before you pay. We do not list card checkout in USD, EUR or GBP."],
     ["Do you deliver outside Pakistan?", "Yes. Plans are digital. Activation or login details are sent on WhatsApp, usually within 5–30 minutes after payment is confirmed."],
     ["What if a plan says Price on request?", "Claude API, Codex API and other Contact Support packs have no public rupee price and are not added to the cart. Ask on WhatsApp and we confirm the amount first."],
     ["Is this an official store for ChatGPT, Google or CapCut?", `No. ${BRAND} is an independent reseller. Product names belong to their owners. No official partnership is implied.`]
   ];
   const aboutFaqs = [
-    ["Who is Malik Data Centre?", `${BRAND} is an independent reseller of AI tools and software subscriptions. The business is reached on WhatsApp +92 344 5739206 and +92 348 9057646, and by email at ${EMAIL}. It sells to customers in Pakistan and worldwide.`],
+    ["Who is Malik Data Centre?", `${BRAND} is an independent reseller of AI tools and software subscriptions. The business is reached on WhatsApp +92 348 9057646 and +92 348 9057646, and by email at ${EMAIL}. It sells to customers in Pakistan and worldwide.`],
     ["How do I order?", "Choose a plan on the tool page, or send the tool name on WhatsApp. Pay using a method we confirm in the chat, then we activate the plan or send the login steps."],
     ["What will you never ask for?", "We never ask for your email password or an OTP code. Pay only to the account shown at checkout or on the two WhatsApp numbers published on this website."]
   ];
@@ -1218,7 +1218,7 @@ function buildGeoPages() {
     urlPath: pkUrl,
     active: "",
     title: `Buy AI Tools in Pakistan | WhatsApp Orders | ${BRAND}`,
-    desc: `Where to buy AI tools in Pakistan: ChatGPT Go, Gemini Pro, SuperGrok, CapCut and Canva, priced in PKR. Pay with EasyPaisa, JazzCash, bank transfer or USDT. WhatsApp +92 344 5739206.`,
+    desc: `Where to buy AI tools in Pakistan: ChatGPT Go, Gemini Pro, SuperGrok, CapCut and Canva, priced in PKR. Pay with EasyPaisa, JazzCash, bank transfer or USDT. WhatsApp +92 348 9057646.`,
     keywords: "buy AI tools in Pakistan, AI tools Pakistan, ChatGPT price in Pakistan, cheap AI subscriptions Pakistan, AI tools WhatsApp Pakistan",
     jsonld: [
       { "@context": "https://schema.org", "@type": "WebPage", name: "Buy AI tools in Pakistan", url: SITE + "/" + pkUrl, description: "Where to buy AI tools in Pakistan from MALIK DATA CENTRE, with PKR prices and WhatsApp ordering.", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": SITE + "/#store" } },
@@ -1234,7 +1234,7 @@ function buildGeoPages() {
     <p class="pg-lead">${BRAND} is an independent reseller of AI assistants, coding tools, design and video software, and other subscriptions. Pakistan is the primary market. The same store also sells to customers in other countries. Prices on this website are in Pakistani rupees.</p>
     <div class="pg-meta">
       <span><i class="fa-solid fa-users"></i> ${CLIENTS_SERVED}</span>
-      <span><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</span>
+      <span><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</span>
       <span><i class="fa-solid fa-wallet"></i> EasyPaisa · JazzCash · Bank · USDT</span>
       <span><i class="fa-solid fa-bolt"></i> 5–30 min activation</span>
     </div>
@@ -1270,8 +1270,8 @@ function buildGeoPages() {
     <h2>Frequently asked questions</h2>
     ${faqHtml(pkFaqs)}
   </section>
-  <div class="pg-cta"><h2>Order on WhatsApp</h2><p>Message +92 344 5739206 with the tool and the plan length you want.</p>
-    <div class="pg-cta-btns"><a class="btn btn-success" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</a><a class="btn btn-outline" href="${rel}about/">About this store</a></div></div>
+  <div class="pg-cta"><h2>Order on WhatsApp</h2><p>Message +92 348 9057646 with the tool and the plan length you want.</p>
+    <div class="pg-cta-btns"><a class="btn btn-success" href="${wa(WA1)}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</a><a class="btn btn-outline" href="${rel}about/">About this store</a></div></div>
 </div>`
   }));
 
@@ -1280,7 +1280,7 @@ function buildGeoPages() {
     urlPath: worldUrl,
     active: "",
     title: `Buy AI Tools Online Worldwide | WhatsApp and USDT | ${BRAND}`,
-    desc: `Buy AI tools online from any country. Prices are listed in PKR. Pay with USDT (Binance) and confirm the amount on WhatsApp +92 344 5739206. Pakistan customers can also use local wallets.`,
+    desc: `Buy AI tools online from any country. Prices are listed in PKR. Pay with USDT (Binance) and confirm the amount on WhatsApp +92 348 9057646. Pakistan customers can also use local wallets.`,
     keywords: "where to buy AI tools, buy AI tools online, AI subscriptions reseller worldwide, buy CapCut Pro, buy SuperGrok, buy Lovable Pro",
     jsonld: [
       { "@context": "https://schema.org", "@type": "WebPage", name: "Buy AI tools online", url: SITE + "/" + worldUrl, description: "Worldwide ordering guide for MALIK DATA CENTRE. PKR prices, USDT payment, WhatsApp activation.", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": SITE + "/#store" } },
@@ -1296,7 +1296,7 @@ function buildGeoPages() {
     <p class="pg-lead">${BRAND} sells AI tools and software subscriptions to customers in Pakistan and to customers in other countries. There is no separate international catalog. The price you see is in Pakistani rupees, with an approximate dollar amount next to priced plans.</p>
     <div class="pg-meta">
       <span><i class="fa-solid fa-users"></i> ${CLIENTS_SERVED}</span>
-      <span><i class="fa-brands fa-whatsapp"></i> +92 344 5739206</span>
+      <span><i class="fa-brands fa-whatsapp"></i> +92 348 9057646</span>
       <span><i class="fa-solid fa-coins"></i> USDT (BEP20 / TRC20)</span>
       <span><i class="fa-solid fa-bolt"></i> 5–30 min activation</span>
     </div>
@@ -1305,7 +1305,7 @@ function buildGeoPages() {
     <h2>How an international order works</h2>
     <ol class="pg-steps">
       <li><span><strong>Open the tool page</strong>Choose the duration and read the access type before you pay.</span></li>
-      <li><span><strong>Message WhatsApp</strong>Use +92 344 5739206. Say which plan you want and which country you are in.</span></li>
+      <li><span><strong>Message WhatsApp</strong>Use +92 348 9057646. Say which plan you want and which country you are in.</span></li>
       <li><span><strong>Pay with USDT</strong>International customers pay with USDT via Binance, on BEP20 or TRC20. We confirm the amount in your currency on WhatsApp before you pay.</span></li>
       <li><span><strong>Receive the setup</strong>Activation or login steps arrive on WhatsApp, usually within 5–30 minutes after the payment is confirmed.</span></li>
     </ol>
@@ -1333,7 +1333,7 @@ function buildGeoPages() {
     ${faqHtml(worldFaqs)}
   </section>
   <div class="pg-cta"><h2>Ask for the plan on WhatsApp</h2><p>Tell us the tool, the duration and your country. We reply with the payment steps.</p>
-    <div class="pg-cta-btns"><a class="btn btn-success" href="${waLink("Hello MALIK DATA CENTRE! I want to buy an AI tool from outside Pakistan. Please confirm the plan and the USDT amount.")}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp +92 344 5739206</a><a class="btn btn-outline" href="${rel}about/">About this store</a></div></div>
+    <div class="pg-cta-btns"><a class="btn btn-success" href="${waLink("Hello MALIK DATA CENTRE! I want to buy an AI tool from outside Pakistan. Please confirm the plan and the USDT amount.")}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp +92 348 9057646</a><a class="btn btn-outline" href="${rel}about/">About this store</a></div></div>
 </div>`
   }));
 
@@ -1342,7 +1342,7 @@ function buildGeoPages() {
     urlPath: aboutUrl,
     active: "about",
     title: `About Malik Data Centre | AI Tools in Pakistan and Worldwide`,
-    desc: `Malik Data Centre is an independent reseller of AI tools and software subscriptions for customers in Pakistan and worldwide. Order on WhatsApp +92 344 5739206. Prices are in PKR.`,
+    desc: `Malik Data Centre is an independent reseller of AI tools and software subscriptions for customers in Pakistan and worldwide. Order on WhatsApp +92 348 9057646. Prices are in PKR.`,
     keywords: "Malik Data Centre, AI tools reseller, buy AI tools Pakistan, AI subscriptions worldwide",
     jsonld: [
       { "@context": "https://schema.org", "@type": "AboutPage", name: "About Malik Data Centre", url: SITE + "/" + aboutUrl, description: "Who MALIK DATA CENTRE is, what it sells, and how orders, payment and warranty work.", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": SITE + "/#organization" } },
@@ -1375,7 +1375,7 @@ function buildGeoPages() {
     <section class="pg-section"><h2>How to check you are talking to this store</h2>
     <ul class="pg-checks">
       <li><i class="fa-solid fa-circle-check"></i><span>Website: <a href="${SITE}/">${SITE.replace("https://", "")}</a></span></li>
-      <li><i class="fa-solid fa-circle-check"></i><span>WhatsApp orders: <a href="${wa(WA1)}">+92 344 5739206</a> and <a href="${wa(WA2)}">+92 348 9057646</a></span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>WhatsApp orders: <a href="${wa(WA1)}">+92 348 9057646</a> and <a href="${wa(WA2)}">+92 348 9057646</a></span></li>
       <li><i class="fa-solid fa-circle-check"></i><span>Email: <a href="mailto:${EMAIL}">${EMAIL}</a></span></li>
       <li><i class="fa-solid fa-circle-check"></i><span><a href="${CHANNEL}" target="_blank" rel="noopener noreferrer">WhatsApp channel</a>, <a href="${COMMUNITY}" target="_blank" rel="noopener noreferrer">community</a>, <a href="${SOCIAL.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a>, <a href="${SOCIAL.facebook}" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="${SOCIAL.x}" target="_blank" rel="noopener noreferrer">X</a></span></li>
     </ul>
@@ -1444,7 +1444,7 @@ function llmBody({ full }) {
     `# ${BRAND}`, "",
     `> Malik Data Centre (malikdatacentre.store) is an independent reseller of AI tools and software subscriptions. It sells to customers in Pakistan and to customers worldwide. Pakistan is the primary market. Prices on the website are in Pakistani rupees (PKR), with an approximate US dollar amount shown beside priced plans. The homepage currency menu is a display conversion, not a card checkout.`,
     `>`,
-    `> Order on WhatsApp +92 344 5739206 (https://wa.me/923445739206) or +92 348 9057646 (https://wa.me/923489057646). Email: ${EMAIL}.`,
+    `> Order on WhatsApp +92 348 9057646 (https://wa.me/923489057646) or +92 348 9057646 (https://wa.me/923489057646). Email: ${EMAIL}.`,
     `>`,
     `> Pakistan payments named on the site: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer.`,
     `> Payments from other countries: USDT via Binance (BEP20 or TRC20). The amount in the buyer's currency is confirmed on WhatsApp before payment.`,
@@ -1499,7 +1499,7 @@ function llmBody({ full }) {
     "",
     "## How to buy",
     "",
-    `Open the tool page on ${SITE}/ or message ${BRAND} on WhatsApp at +923445739206 (https://wa.me/923445739206). Customers in Pakistan can pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Customers in other countries pay with USDT (Binance, BEP20 or TRC20), and the amount in their currency is confirmed on WhatsApp before they pay. Activation is delivered over WhatsApp.`,
+    `Open the tool page on ${SITE}/ or message ${BRAND} on WhatsApp at +923489057646 (https://wa.me/923489057646). Customers in Pakistan can pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Customers in other countries pay with USDT (Binance, BEP20 or TRC20), and the amount in their currency is confirmed on WhatsApp before they pay. Activation is delivered over WhatsApp.`,
     "",
     "## Policies",
     "",
@@ -1533,7 +1533,7 @@ function buildLlms() {
     "",
     `Malik Data Centre sells AI tools and software subscriptions to customers in Pakistan and worldwide.`,
     `The store states ${CLIENTS_SERVED}. That figure is not a star rating or a review count.`,
-    `Prices are in PKR. Order on WhatsApp +92 344 5739206.`,
+    `Prices are in PKR. Order on WhatsApp +92 348 9057646.`,
     "",
     `Full context for assistants: ${SITE}/llms.txt`,
     `Extended context: ${SITE}/llms-full.txt`,

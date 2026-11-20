@@ -62,7 +62,7 @@ Open [ChatGPT Go](/tools/chatgpt-go/) and [ChatGPT Business](/tools/chatgpt-busi
 
 ### Can I buy SuperGrok from outside Pakistan?
 
-Yes. Message WhatsApp +92 344 5739206, pay with USDT, and we confirm the amount before you pay. The same answer is on each tool page.
+Yes. Message WhatsApp +92 348 9057646, pay with USDT, and we confirm the amount before you pay. The same answer is on each tool page.
 
 ### Is the shared ChatGPT Go plan private?
 

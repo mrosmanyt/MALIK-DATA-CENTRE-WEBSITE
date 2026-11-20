@@ -76,4 +76,4 @@ Only for general practice. The Rs 2,200 plan is shared, so do not paste a thesis
 
 ### How do I pay without a credit card?
 
-Message WhatsApp +92 344 5739206 from the tool page. In Pakistan, pay with EasyPaisa, JazzCash, NayaPay, UPaisa or a bank transfer. The longer payment guide is [buy AI tools without a credit card](/blog/buy-ai-tools-pakistan-without-credit-card.html).
+Message WhatsApp +92 348 9057646 from the tool page. In Pakistan, pay with EasyPaisa, JazzCash, NayaPay, UPaisa or a bank transfer. The longer payment guide is [buy AI tools without a credit card](/blog/buy-ai-tools-pakistan-without-credit-card.html).

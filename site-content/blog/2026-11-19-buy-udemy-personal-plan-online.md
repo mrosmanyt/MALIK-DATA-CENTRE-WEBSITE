@@ -25,7 +25,7 @@ The original price is also Rs 1,250. The specs are the Personal Plan, 1 month of
 
 Udemy’s own site is [udemy.com](https://www.udemy.com/). A Personal Plan bought there is billed by Udemy, on a card, at the price their site shows for your country. Our price is Rs 1,250 for the ready-made month. Those are different checkouts. Do not pay both unless you mean to hold two accounts.
 
-Order worldwide from [buy AI tools online](/buy-ai-tools-online/). In Pakistan, use [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) and pay with EasyPaisa, JazzCash, NayaPay, UPaisa or bank transfer. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. WhatsApp +92 344 5739206 confirms the amount in your currency before you pay. The page shows PKR either way.
+Order worldwide from [buy AI tools online](/buy-ai-tools-online/). In Pakistan, use [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) and pay with EasyPaisa, JazzCash, NayaPay, UPaisa or bank transfer. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. WhatsApp +92 348 9057646 confirms the amount in your currency before you pay. The page shows PKR either way.
 
 A ready-made account means the courses and the progress sit on the login we deliver. They do not jump onto an old Udemy account where you already have certificates. If you need a specific course confirmed before you pay, name it in the WhatsApp message. The tool page says Personal Plan includes the courses Udemy puts in that subscription, and that individual paid courses outside the plan are not included. If the course you want is outside the plan, Rs 1,250 will not unlock it. We would rather say that before the transfer than after.
 
@@ -61,7 +61,7 @@ None of these is a visa, a job, or a government licence. A course can teach the 
 
 ## How to order without a card
 
-1. Message WhatsApp +92 344 5739206 with “Udemy Personal Plan, 1 month” and your country.
+1. Message WhatsApp +92 348 9057646 with “Udemy Personal Plan, 1 month” and your country.
 2. Name the course if you need it confirmed first. Wait for that answer if the course is the whole reason for the purchase.
 3. Pay Rs 1,250 in Pakistan, or the USDT amount we confirm if you are abroad. Send the screenshot. Do not send your email password.
 4. Sign in the same day. Open the course. If the login fails, reply the same day so the 7-day warranty is not spent in silence.

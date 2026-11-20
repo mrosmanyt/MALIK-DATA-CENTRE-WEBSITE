@@ -29,7 +29,7 @@ Wispr Flow's site is [wisprflow.ai](https://wisprflow.ai/). Their public price c
 
 There is no 1-month Wispr row in the catalog. If you only need dictation for a single assignment, a year is more plan than the assignment. If you dictate most working days, the year matches the product we list. Do not ask for a one-week price. It is not on the page.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. The Pakistan path is [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Other countries use [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 and say Wispr Flow Pro, 12 months.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. The Pakistan path is [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Other countries use [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 and say Wispr Flow Pro, 12 months.
 
 ## Dictate, then edit. Do not skip the read
 

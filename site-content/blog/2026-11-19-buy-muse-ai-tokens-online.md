@@ -25,7 +25,7 @@ The rows are on the [Muse AI page](/tools/muse-ai/).
 
 The 1B price and original price are both Rs 300. The 31B price and original price are both Rs 1,500. There is no crossed-out discount on either pack.
 
-The all-plans row is price on request. The page shows Contact Support. Nothing from that row is a rupee figure, and this guide will not invent one. The 1B and 31B packs keep the prices in the table. If you want the menu instead of a named pack, message WhatsApp +92 344 5739206, name the menu, and wait for the amount before you pay.
+The all-plans row is price on request. The page shows Contact Support. Nothing from that row is a rupee figure, and this guide will not invent one. The 1B and 31B packs keep the prices in the table. If you want the menu instead of a named pack, message WhatsApp +92 348 9057646, name the menu, and wait for the amount before you pay.
 
 Worldwide ordering steps are on [buy AI tools online](/buy-ai-tools-online/). Pakistan wallet methods are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/).
 
@@ -45,7 +45,7 @@ Other API packs on this store are not Muse. Claude API and Codex API rows are al
 ## How to order from any country
 
 1. Open the Muse page and copy the pack name: 1B tokens or 31B tokens. If you want the menu, say that it is the row with no public price.
-2. Message WhatsApp +92 344 5739206. Include your country and whether you need a key or a chat login.
+2. Message WhatsApp +92 348 9057646. Include your country and whether you need a key or a chat login.
 3. In Pakistan, pay the listed amount with EasyPaisa, JazzCash, NayaPay, UPaisa or bank transfer after we confirm the pack.
 4. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. We confirm the amount in your currency on WhatsApp before you pay. The website shows PKR.
 5. The key arrives on WhatsApp. Most orders are ready within 5–30 minutes after payment is confirmed, as the [delivery policy](/delivery-policy/) describes.

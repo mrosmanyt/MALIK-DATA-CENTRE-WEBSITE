@@ -27,7 +27,7 @@ The tool page describes a hosted n8n cloud workspace: a visual builder, app conn
 
 n8n's site is [n8n.io](https://n8n.io/). Their own Starter limits and dollar price can differ from this row. Our price is Rs 6,500 for the plan in the table. A card checkout on their site is their invoice. This row is a private account arranged through the store.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. Ordering from Pakistan is on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Other countries use [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 and name "n8n Starter, 12 months" so the order is not confused with a custom build.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. Ordering from Pakistan is on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Other countries use [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 and name "n8n Starter, 12 months" so the order is not confused with a custom build.
 
 Five active workflows is a cap, not a suggestion. A test flow that you leave switched on still counts. 20k monthly executions is the spec line. One execution is not one customer. A workflow that runs on every message can spend the month faster than a workflow that runs once each morning. Read the counter inside n8n after the first real week. This guide does not invent a "one shop equals X executions" rate.
 
@@ -66,7 +66,7 @@ Claude API and other API packs are a third thing. They are price on request and 
 ## How to order and what to test in week one
 
 1. Open the [n8n page](/tools/n8n-starter/). Confirm you are ordering the 12-month private Starter row at Rs 6,500.
-2. Pay and send the screenshot to WhatsApp +92 344 5739206. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
+2. Pay and send the screenshot to WhatsApp +92 348 9057646. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 3. Sign in. Check that the workspace shows Starter, that you can create a workflow, and that the execution counter is visible.
 4. Build one small flow that cannot hurt a customer if it misfires. A row in a sheet is a better first test than a message to every old lead.
 5. Leave it running for a day. Read the execution count. Five active workflows and 20k executions are the caps on the spec, not a target to hit.

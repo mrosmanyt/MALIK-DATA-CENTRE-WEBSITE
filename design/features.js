@@ -11,7 +11,7 @@
   const c = S.canvas;
   const $ = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
-  const WA = "923445739206";
+  const WA = "923489057646";
   ["mdcMask", "mdcCrop", "mdcGroup", "mdcIcon", "mdcQR", "mdcCredit"].forEach(p => { if (!S.PROPS.includes(p)) S.PROPS.push(p); });
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },

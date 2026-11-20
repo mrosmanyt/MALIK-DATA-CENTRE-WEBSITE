@@ -208,7 +208,7 @@
   var linkMap = [];
   function fmtNum(n) { n = String(n).replace(/\D/g, ""); return n.length === 12 && n.indexOf("92") === 0 ? "+92 " + n.slice(2, 5) + " " + n.slice(5) : "+" + n; }
   function buildLinkMap(ct) {
-    var seed = { orderWhatsapp: "923489057646", supportWhatsapp: "923445739206", channel: "https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z", community: "https://chat.whatsapp.com/FA4CLYGdoZn1PXhENEAMGJ",
+    var seed = { orderWhatsapp: "923489057646", supportWhatsapp: "923489057646", channel: "https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z", community: "https://chat.whatsapp.com/FA4CLYGdoZn1PXhENEAMGJ",
       youtube: "https://www.youtube.com/@MalikDataCentre0", facebook: "https://www.facebook.com/people/Malik-Data-Centre-Pro/61566733492225/", x: "https://x.com/realmickeyai" };
     ["orderWhatsapp", "supportWhatsapp"].forEach(function (k) {
       var nv = String(ct[k] || "").replace(/\D/g, "");
@@ -229,7 +229,7 @@
       var h = a.getAttribute("href"), n = mapUrl(h);
       if (n !== h) {
         a.setAttribute("href", n);
-        // the number written inside the button too (e.g. "+92 344 5739206"), even in nested tags
+        // the number written inside the button too (e.g. "+92 348 9057646"), even in nested tags
         linkMap.forEach(function (m) {
           if (!m.text || a.textContent.indexOf(m.text[0]) === -1) return;
           var w = document.createTreeWalker(a, NodeFilter.SHOW_TEXT), t;

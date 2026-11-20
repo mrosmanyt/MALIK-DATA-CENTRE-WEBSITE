@@ -55,7 +55,7 @@ Do not buy the Rs 7,500 pack to see whether AI video is useful at all. One short
 ## How to order and what to check on day one
 
 1. Open the [Higgsfield page](/tools/higgsfield/) and choose Plus or Pro. Say the credit count in the WhatsApp message, not only the word Plus or Pro.
-2. Pay in PKR, or in USDT if you are outside Pakistan. Send the payment screenshot to WhatsApp +92 344 5739206.
+2. Pay in PKR, or in USDT if you are outside Pakistan. Send the payment screenshot to WhatsApp +92 348 9057646.
 3. Access is a creator account. Do not send us the password of your personal email. Do not change the password on the account until you know whether the login is yours alone.
 4. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Bank transfers can take longer to show than a wallet payment.
 5. If the balance is not the pack you paid for, screenshot it the same day. The [refund policy](/refund-policy/) explains repair, replacement and a refund when we cannot deliver.
