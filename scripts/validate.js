@@ -128,8 +128,8 @@ posts.forEach(p => {
   if (!p.draft && p.date) { perDay[p.date] = (perDay[p.date] || 0) + 1; }
 });
 Object.entries(perDay).forEach(([d, n]) => {
-  // 2026-11-17 and 2026-11-19 each keep a Pakistan set plus a worldwide set (10).
-  const cap = d === "2026-11-17" || d === "2026-11-19" ? 10 : 5;
+  // 2026-11-17, 2026-11-19 and 2026-11-20 each keep a Pakistan set plus a worldwide set (10).
+  const cap = d === "2026-11-17" || d === "2026-11-19" || d === "2026-11-20" ? 10 : 5;
   if (n > cap) err("site-content/blog", `${n} posts dated ${d} — maximum is ${cap} per day`);
 });
 
