@@ -65,6 +65,12 @@ module.exports = [
       ["What is the difference between Shared Base, Flow Ultra 20x and the 25k Slot?", "Shared Base is the cheapest way to try Ultra features on a shared account. The Flow Ultra 20x plan gives Veo 3 with 20x Flow usage, Google Antigravity and all Ultra features. The 25k Credits Slot is a dedicated slot for very heavy usage."],
       ["How is the Flow Ultra 20x plan delivered?", "Message us on WhatsApp after ordering. We send the access details and setup steps, and help you until Veo 3 and Flow are working."]
     ],
+    proof: {
+      image: "review-veo3-ultra-45k.webp",
+      alt: "WhatsApp proof of Veo 3 Ultra 45K credits delivered by Malik Data Centre",
+      label: "Veo 3 Ultra 45K Credits delivered on customer's email",
+      quote: "Veo 3 Ultra with 45K credits activated directly on the customer's own email."
+    },
     related: ["gemini-pro", "higgsfield", "kling-ai"]
   },
   {

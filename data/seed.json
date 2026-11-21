@@ -134,6 +134,16 @@
   "subtitle": "Real feedback and activation proofs from our premium subscription buyers on WhatsApp. Click on screenshots to view full-size setup validations.",
   "items": [
    {
+    "color": "color-blue",
+    "name": "Verified customer",
+    "purchase": "Veo 3 Ultra 45K Credits delivered on customer's email",
+    "rating": 0,
+    "text": "\"Veo 3 Ultra with 45K credits activated directly on the customer's own email.\"",
+    "image": "assets/reviews/review-veo3-ultra-45k.webp",
+    "date": "21 November 2026",
+    "badge": "Delivered"
+   },
+   {
     "color": "color-green",
     "name": "International client",
     "purchase": "Render $50 Credits Coupon",
