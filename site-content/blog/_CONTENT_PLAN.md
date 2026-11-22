@@ -5,7 +5,7 @@ Future daily runs publish the next **5** rows with status `todo`, in order: all 
 Rules the validator enforces (`node scripts/validate.js`):
 
 - File name `YYYY-MM-DD-slug.md`. Front matter matches the template in `_TEMPLATE.md`. No `draft: true` on posts that should go live.
-- At most **5** published posts on the same calendar date. 2026-11-17, 2026-11-19, 2026-11-20 and 2026-11-21 are the exceptions (10 each): a Pakistan set plus a worldwide set on the same day.
+- At most **5** published posts on the same calendar date. 2026-11-17, 2026-11-19, 2026-11-20, 2026-11-21 and 2026-11-22 are the exceptions (10 each): a Pakistan set plus a worldwide set on the same day.
 - Body 700–3,500 words (aim 1,200–2,000). Title 25–75 characters. Description 110–170 characters. Answer box 25–80 words. 3–10 keywords.
 - Every `Rs` amount must be a price or original price in `index.js`. Official prices are written as `PKR … (official)` or `$… (official)` and linked.
 - `tools:` values are family slugs from `site-content/families.js`. At least two internal links and a `## FAQ` with two questions.
@@ -87,6 +87,16 @@ Language: the site translates in the browser (English, Urdu, Hindi, Bangla, Nepa
 | 2026-11-21 | storyblocks-vs-envato | storyblocks vs envato | storyblocks, envato |
 | 2026-11-21 | buy-linear-business-online | buy linear business online | linear, notion-business |
 | 2026-11-21 | buy-granola-business-online | buy granola business online | granola, notion-business |
+| 2026-11-22 | cinem-ai-price-in-pakistan | cinem ai price in pakistan | cinem-ai, kling-ai |
+| 2026-11-22 | stealthgpt-pro-price-in-pakistan | stealthgpt pro price in pakistan | stealthgpt, quillbot |
+| 2026-11-22 | kalakar-price-in-pakistan | kalakar price in pakistan | kalakar, capcut-pro |
+| 2026-11-22 | pangram-pro-price-in-pakistan | pangram pro price in pakistan | pangram, grammarly-pro |
+| 2026-11-22 | best-ai-video-tools-in-pakistan | best ai video tools in pakistan | kling-ai, higgsfield, heygen, capcut-pro |
+| 2026-11-22 | best-ai-tools-for-developers-in-pakistan | best ai tools for developers in pakistan | cursor-pro, replit-core, lovable-pro |
+| 2026-11-22 | buy-resend-pro-online | buy resend pro online | resend, n8n-starter |
+| 2026-11-22 | buy-arize-pro-online | buy arize pro online | arize, cursor-pro |
+| 2026-11-22 | codex-api-keys-how-to-order | codex api keys | codex-api, claude-codex |
+| 2026-11-22 | stealthgpt-vs-quillbot | stealthgpt vs quillbot | stealthgpt, quillbot, grammarly-pro |
 
 The four 2026-09-21 rows are hand-written HTML, not Markdown. Do not regenerate them by pasting over those files. Five further HTML posts (Gemini Plus, Claude Pro, ChatGPT Plus vs Go, vidIQ price, How to Buy ChatGPT Plus) are listed in `site-content/pages-content.js` as `legacyPosts` so the blog index keeps them. Do not add Markdown with those slugs.
 
@@ -103,6 +113,5 @@ Status stays `todo` until a daily run publishes the piece. Prefer a tool that st
 | P2 | todo | how to write linkedin inmail that gets a reply | How to Write a LinkedIn InMail That Gets a Reply | linkedin-premium, grammarly-pro | Five Career credits. No "guaranteed jobs". |
 | P2 | todo | claude api tokens price in pakistan | Claude API Token Price in Pakistan: What 10M Tokens Means | claude-api-tokens, chatgpt-go | Developers only. Not a chat login. No rupee price: Contact Support only. The 2026-11-17 post already covers buying the keys. |
 | P3 | todo | ideogram plus for youtube thumbnails | Ideogram Plus for Thumbnails: When Canva Is Not Enough | ideogram, canva-pro | Text-in-image workflow only. The 2026-11-21 buy post already states the Rs 2,400 price. Do not repeat that price table. |
-| P3 | todo | best ai video tools in pakistan 2026 | Best AI Video Tools in Pakistan: Kling, Higgsfield, CapCut, HeyGen | kling-ai, higgsfield, heygen, capcut-pro | Pick by output: clip, avatar, edit. |
 
-Next run starts at **How to Use vidIQ on a New YouTube Channel in Pakistan**. The 2026-11-19, 2026-11-20 and 2026-11-21 batches each published six Pakistan posts and four worldwide posts, and left this how-to queue in place. Do not reuse the 2026-11-21 keywords (Surfshark, HMA, Prime Video, Gumloop, Wink, Academi.cx, Ideogram Plus buy, Storyblocks vs Envato, Linear, Granola). Claude API stays on request: do not print a rupee price for it. Wink, Academi.cx, the Ideogram buy guide, Linear and Granola were added for the 2026-11-21 run because the price backlog was shorter than ten posts.
+Next run starts at **How to Use vidIQ on a New YouTube Channel in Pakistan**. The 2026-11-19, 2026-11-20, 2026-11-21 and 2026-11-22 batches each published six Pakistan posts and four worldwide posts, and left this how-to queue in place. Do not reuse the 2026-11-21 keywords (Surfshark, HMA, Prime Video, Gumloop, Wink, Academi.cx, Ideogram Plus buy, Storyblocks vs Envato, Linear, Granola) or the 2026-11-22 keywords (Cinem AI, StealthGPT, Kalakar, Pangram, best AI video tools, developers, Resend, Arize, Codex API keys, StealthGPT vs QuillBot). Claude API and Codex API stay on request: do not print a rupee price for either. The 2026-11-22 run added Cinem AI, StealthGPT, Kalakar, Pangram, Resend and Arize because those catalog tools had no dedicated post, plus a developers guide and a Codex pack guide with no selling price. Wink, Academi.cx, the Ideogram buy guide, Linear and Granola were added for the 2026-11-21 run because the price backlog was shorter than ten posts.
