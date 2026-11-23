@@ -23,7 +23,7 @@ The page is [Ideogram Plus](/tools/ideogram/). One row is in the catalog. Order 
 
 The original price is Rs 2,400. The specs are Plus plan features, accurate text in images, private generations, and setup help on WhatsApp.
 
-Read the duration column again. It says "Plus plan". It does not say "1 month" or "12 months". The supplier listing on this row does not split out a separate length. Before you pay, ask WhatsApp +92 348 9057646 for the end date in writing. A weekend of thumbnails and a year of client posters are not the same purchase if the end date is short. Do not guess the length from the price.
+Read the duration column again. It says "Plus plan". It does not say "1 month" or "12 months". The supplier listing on this row does not split out a separate length. Before you pay, ask WhatsApp +92 344 5739206 for the end date in writing. A weekend of thumbnails and a year of client posters are not the same purchase if the end date is short. Do not guess the length from the price.
 
 Ideogram's site is [ideogram.ai](https://ideogram.ai/). Their limits and their card price can change. Our price is the rupee row. This page does not state a dollar price for their checkout. A subscription you start on their site with a card is a different order.
 
@@ -58,7 +58,7 @@ Many people use both: Ideogram for a first image with the title drawn in, Canva 
 ## How to order from any country
 
 1. Open the [Ideogram page](/tools/ideogram/) and confirm Rs 2,400.
-2. Ask for the end date. Pay after the reply names it. Send the payment screenshot to WhatsApp +92 348 9057646.
+2. Ask for the end date. Pay after the reply names it. Send the payment screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in on the ready-made account. Do not change the email or password until the chat tells you the rule.
 5. Generate one image that includes a short line of text you can check, in the language you actually publish in. Zoom in. If a letter is wrong, try one more prompt before you blame the login.
@@ -103,4 +103,4 @@ The catalog does not say. Generate one image and read the counter in the app. We
 
 ### How do I pay from outside Pakistan?
 
-USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 348 9057646. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The site lists the price in PKR either way.
+USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 344 5739206. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The site lists the price in PKR either way.

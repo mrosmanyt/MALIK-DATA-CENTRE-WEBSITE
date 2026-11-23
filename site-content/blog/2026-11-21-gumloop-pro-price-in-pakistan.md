@@ -29,7 +29,7 @@ Gumloop's site is [gumloop.com](https://www.gumloop.com/). Their own limits and 
 
 There is no 1-month Gumloop row in the catalog. A one-week test still sits on a 12-month plan if this is the row you buy. Know that before you pay. If you only need a single scrape done for you, that is a service quote, not this seat.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The Pakistan path is [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. That path is [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 and write "Gumloop Pro, 12 months, on this email" plus the address. An order that says only "automation" can be read as n8n or as a custom build.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The Pakistan path is [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. That path is [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 and write "Gumloop Pro, 12 months, on this email" plus the address. An order that says only "automation" can be read as n8n or as a custom build.
 
 ## Gumloop or n8n
 
@@ -68,7 +68,7 @@ Activation on your email means the plan should show on that address. Screenshot 
 ## How to order and what to run first
 
 1. Open the [Gumloop page](/tools/gumloop-pro/) and confirm 12 months at Rs 4,550 on your email.
-2. Send the email address and the payment screenshot on WhatsApp +92 348 9057646. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Bank transfers can take longer to appear than a wallet payment.
+2. Send the email address and the payment screenshot on WhatsApp +92 344 5739206. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Bank transfers can take longer to appear than a wallet payment.
 3. Sign in on that email. Check that Pro is the plan name and that you can open the visual builder.
 4. Build one small pipeline against a public page you are allowed to read. Write the rows to a sheet. Leave it on a schedule only after the first run looks right.
 5. Read whatever usage number the product shows. The catalog does not translate that number into "customers". Your first week of real runs is the measurement.
@@ -102,4 +102,4 @@ Not on this catalog. The only Gumloop row is 12 months. A short test is still a 
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. We confirm a non-PKR amount on WhatsApp +92 348 9057646 before you pay.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. We confirm a non-PKR amount on WhatsApp +92 344 5739206 before you pay.

@@ -167,7 +167,7 @@ async function blogPage(req, res, slug) {
     ${post.cover ? `<figure class="article-cover"><img src="${esc(post.cover)}" alt="${esc(post.title)}" style="width:100%;border-radius:16px"></figure>` : ""}
     <div class="article-body">${mdToHtml(post.body)}</div>
     <div class="pg-cta" style="margin:30px 0"><h2>Need help choosing?</h2><p>Ask our team on WhatsApp. We reply with the right plan for your budget.</p>
-      <div class="pg-cta-btns"><a class="btn btn-success" target="_blank" rel="noopener noreferrer" href="https://wa.me/923489057646?text=${encodeURIComponent(`Hello MALIK DATA CENTRE! I read "${post.title}" and need help.`)}"><i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp</a><a class="btn btn-outline" href="/tools/">Browse all tools</a></div></div>
+      <div class="pg-cta-btns"><a class="btn btn-success" target="_blank" rel="noopener noreferrer" href="https://wa.me/923445739206?text=${encodeURIComponent(`Hello MALIK DATA CENTRE! I read "${post.title}" and need help.`)}"><i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp</a><a class="btn btn-outline" href="/tools/">Browse all tools</a></div></div>
   </article></div>`;
   const title = `${post.seoTitle || post.title} | MALIK DATA CENTRE`, desc = post.description || "";
   const html = SHELL.split("__CMS_TITLE__").join(esc(title)).split("__CMS_DESC__").join(esc(desc)).split("__CMS_URL__").join(esc(url))

@@ -27,7 +27,7 @@ The specs are Pro plan features, royalty-free music and sound effects, stock foo
 
 Artlist's site is [artlist.io](https://artlist.io/). Their public price moves by country and by which Artlist tier the checkout shows. Our price is the rupee row above. A ready-made account we deliver is not the same invoice as a card subscription on an email you have used for years.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or another bank transfer. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. The steps for a local wallet are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Buyers in other countries use [buy AI tools online](/buy-ai-tools-online/). We confirm the amount in your currency on WhatsApp +92 348 9057646 before you pay if you are not paying the PKR figure directly.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or another bank transfer. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. The steps for a local wallet are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Buyers in other countries use [buy AI tools online](/buy-ai-tools-online/). We confirm the amount in your currency on WhatsApp +92 344 5739206 before you pay if you are not paying the PKR figure directly.
 
 Read the duration cell before you compare this row with a "one year of music" offer you saw somewhere else. Our cell says Pro Plan. It does not say 1 month and it does not say 12 months. Do not invent the length in your own notes. Write down the length from the WhatsApp reply.
 
@@ -67,7 +67,7 @@ Buying all three in the same week is how a one-person channel spends Rs 3,500 pl
 
 ## How to order and what to check on day one
 
-1. Open the [Artlist page](/tools/artlist/) and message WhatsApp +92 348 9057646. Say Artlist Pro, and ask for the end date if the word Pro Plan is not specific enough for your calendar.
+1. Open the [Artlist page](/tools/artlist/) and message WhatsApp +92 344 5739206. Say Artlist Pro, and ask for the end date if the word Pro Plan is not specific enough for your calendar.
 2. Pay in PKR, or in USDT if you are outside Pakistan. Send the screenshot.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in on the ready-made account. Do not change the email or the password until the WhatsApp reply says whether this login is yours alone.

@@ -8,7 +8,7 @@ category: Buying Guide
 icon: fa-solid fa-key
 keywords: codex api keys, buy codex api, codex api credits, codex astra6 tokens, codex api pakistan, codex vs cursor
 tools: codex-api, claude-codex
-answer: Codex API keys at Malik Data Centre are price on request. Every row says Contact Support, so there is no public rupee price. Credit packs run from 50 million credits for 1 day to 1 billion credits for 14 days. Astra6 sizes of $50, $100, $200, and $500 are token sizes for 1 month, not the amount you pay. Name the pack on WhatsApp +92 348 9057646 and wait for the quote.
+answer: Codex API keys at Malik Data Centre are price on request. Every row says Contact Support, so there is no public rupee price. Credit packs run from 50 million credits for 1 day to 1 billion credits for 14 days. Astra6 sizes of $50, $100, $200, and $500 are token sizes for 1 month, not the amount you pay. Name the pack on WhatsApp +92 344 5739206 and wait for the quote.
 ---
 
 Codex API keys on this store are for developers who call Codex from their own tools. They are not a ChatGPT website login, and they are not Cursor. Every Codex pack is price on request. Open [Codex API](/tools/codex-api/) and you will see Contact Support, not a PKR figure and not an add-to-cart button. This guide names the packs and the durations so you can ask for the right one. It does not print a selling price, because the catalog does not have one.
@@ -64,7 +64,7 @@ The [developer tool guide](/blog/best-ai-tools-for-developers-in-pakistan.html) 
 ## How to order without paying the wrong amount
 
 1. Open the [Codex API page](/tools/codex-api/) and copy the pack name, the size, and the duration. Use the words on the row, not a nickname.
-2. Message WhatsApp +92 348 9057646. Say you need an API key, not a chat login. Paste the pack name.
+2. Message WhatsApp +92 344 5739206. Say you need an API key, not a chat login. Paste the pack name.
 3. Wait for the amount. In Pakistan, pay only after that message, with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount in your currency.
 4. Do not pay a number you saw on a forum, in an old chat, or next to a dollar size on the pack. The dollar size is not the invoice.
 5. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment. The key arrives on WhatsApp.
@@ -93,7 +93,7 @@ We do not claim a rate limit, a latency number, or a count of developers who bou
 
 ### How much do Codex API keys cost?
 
-There is no public price. Every Codex pack is Contact Support. Message WhatsApp +92 348 9057646 with the pack name and wait for the amount. Do not pay the dollar size printed on an Astra6 row. That number is the token size.
+There is no public price. Every Codex pack is Contact Support. Message WhatsApp +92 344 5739206 with the pack name and wait for the amount. Do not pay the dollar size printed on an Astra6 row. That number is the token size.
 
 ### Which pack should I name?
 

@@ -29,7 +29,7 @@ HideMyAss lists its own plans at [hidemyass.com](https://www.hidemyass.com/). A 
 
 Five devices is the spec line. It is a cap, not a suggestion to share the key in a group larger than that. Count phones, laptops, and a TV box if the app is installed there. If you need more than five at the same time, say so before you pay. This row does not grow past the line it prints.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Pakistan orders start at [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, use [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20. We confirm a non-PKR amount on WhatsApp +92 348 9057646 before you pay. Write "HMA yearly key" in the message so it is not mixed with a Surfshark month.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Pakistan orders start at [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, use [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20. We confirm a non-PKR amount on WhatsApp +92 344 5739206 before you pay. Write "HMA yearly key" in the message so it is not mixed with a Surfshark month.
 
 ## Key delivery is not a shared login
 
@@ -60,7 +60,7 @@ The warranty is 12 months on this row. If the key fails to redeem, or the app wi
 ## How to order the yearly key
 
 1. Open the [HMA page](/tools/hma-vpn/) and confirm the only priced row is the yearly key at Rs 5,500.
-2. Message WhatsApp +92 348 9057646. Pay in PKR or, outside Pakistan, in USDT after we confirm the amount.
+2. Message WhatsApp +92 344 5739206. Pay in PKR or, outside Pakistan, in USDT after we confirm the amount.
 3. Send the payment screenshot. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 4. Install the HMA app on the device you will actually use. Choose the path for a purchase you already made. Enter the key. Do this while you still have the chat open.
 5. Connect once. Read the expiry if the app shows it. Screenshot the screen that shows the key was accepted.
@@ -94,4 +94,4 @@ Buy the HMA key at Rs 5,500 when you want a year and you will type a key into th
 
 ### How do I pay?
 
-From Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. From other countries: USDT via Binance on BEP20 or TRC20 after we confirm the amount on WhatsApp +92 348 9057646.
+From Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. From other countries: USDT via Binance on BEP20 or TRC20 after we confirm the amount on WhatsApp +92 344 5739206.

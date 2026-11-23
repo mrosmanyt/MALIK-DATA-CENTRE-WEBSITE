@@ -640,7 +640,7 @@
         work.posts.forEach(function (p) { if (!p.title) throw new Error("Every post needs a title."); p.slug = slugify(p.slug || p.title); if (slugs[p.slug]) throw new Error('Two posts use the address "' + p.slug + '".'); slugs[p.slug] = 1; if (p.published && !p.date) p.date = today(); });
       }
       if (key === "coupons") work.items.forEach(function (c) { if (!/^[A-Z0-9_-]{3,20}$/.test(c.code || "")) throw new Error("Coupon codes: 3–20 letters or numbers, no spaces (" + (c.code || "empty") + ")."); });
-      if (key === "contact") ["orderWhatsapp", "supportWhatsapp"].forEach(function (k) { work[k] = String(work[k] || "").replace(/\D/g, ""); if (!/^\d{10,15}$/.test(work[k])) throw new Error("WhatsApp numbers need the country code, e.g. 923489057646."); });
+      if (key === "contact") ["orderWhatsapp", "supportWhatsapp"].forEach(function (k) { work[k] = String(work[k] || "").replace(/\D/g, ""); if (!/^\d{10,15}$/.test(work[k])) throw new Error("WhatsApp numbers need the country code, e.g. 923445739206."); });
     }
     function clean(o) { return JSON.parse(JSON.stringify(o, function (k, val) { return k === "_open" || k === "_slugEdited" || k === "_prevTitle" || k === "isNewPost" ? undefined : val; })); }
     async function save() {

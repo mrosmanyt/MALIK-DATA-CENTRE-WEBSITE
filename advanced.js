@@ -5,7 +5,7 @@
 (function () {
     "use strict";
 
-    var WA = "https://wa.me/923489057646?text=";
+    var WA = "https://wa.me/923445739206?text=";
     function getTools() {
         try { if (typeof TOOLS_DATABASE !== "undefined" && Array.isArray(TOOLS_DATABASE)) return TOOLS_DATABASE; }
         catch (e) {}
@@ -28,7 +28,7 @@
             var r = "";
             try { r = localStorage.getItem("mdc_ref") || ""; } catch (e2) {}
             if (!r) return;
-            var link = e.target.closest('a[href*="wa.me/923489057646?text="], a[href*="wa.me/923489057646?text="]');
+            var link = e.target.closest('a[href*="wa.me/923445739206?text="], a[href*="wa.me/923445739206?text="]');
             if (!link) return;
             var href = link.getAttribute("href");
             if (!href || href.indexOf("Referral") !== -1) return;
@@ -185,7 +185,7 @@
                 return "Active coupons: \u{1F3F7}️ <b>MALIK10</b> = 10% off, <b>WAIT5</b> = 5% off. It's applied to your WhatsApp order message at checkout.";
             // contact / human
             if (/(human|agent|talk|contact|baat|rabta|whatsapp|number)/i.test(ql))
-                return "Our team is available 24/7. \u{1F4F1} <a class='ai-wa' href='" + waLink("Hello MALIK DATA CENTRE! I need help.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Chat on WhatsApp</a> or call: +92 348 9057646";
+                return "Our team is available 24/7. \u{1F4F1} <a class='ai-wa' href='" + waLink("Hello MALIK DATA CENTRE! I need help.") + "' target='_blank'><i class='fa-brands fa-whatsapp'></i> Chat on WhatsApp</a> or call: +92 344 5739206";
             // best / popular / deals
             if (/(best|popular|deal|top|recommend|sasta|trending)/i.test(ql)) {
                 var tools = getTools();

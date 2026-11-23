@@ -60,7 +60,7 @@ CapCut or Premiere still does the cutting. Envato does not edit the video. It su
 
 ## How to order and what to download first
 
-1. Open the [Envato page](/tools/envato/) and say "Core, 1 month" or "Core, 12 months" on WhatsApp +92 348 9057646.
+1. Open the [Envato page](/tools/envato/) and say "Core, 1 month" or "Core, 12 months" on WhatsApp +92 344 5739206.
 2. Pay and send the screenshot. Most orders are ready within 5–30 minutes after payment is confirmed. See the [delivery policy](/delivery-policy/).
 3. Sign in on the ready-made account. Do not change the email or password until you know the access rules in the WhatsApp reply. A ready-made login is not the same as an activation on your own address.
 4. Download one item you already need, with the project name filled in. Confirm the licence text is visible.

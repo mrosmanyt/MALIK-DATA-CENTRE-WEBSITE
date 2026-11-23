@@ -25,7 +25,7 @@ The listed original price is Rs 4,000. The specs are host meetings up to 30 hour
 
 Pay with EasyPaisa, JazzCash, NayaPay, UPaisa or bank transfer. Outside Pakistan, pay in USDT. The path is the same as [buying AI tools in Pakistan](/buy-ai-tools-in-pakistan/), even though Zoom is a meetings app rather than a chat model.
 
-The setup line says "premium account login." It does not say "activated on your existing Zoom email." Before you pay, ask on WhatsApp whether the month is a login we provide or an upgrade on an account you already use. The answer changes who owns the cloud recordings and whether your students already have the right link. Get that sentence in the chat, then send the payment screenshot to +92 348 9057646.
+The setup line says "premium account login." It does not say "activated on your existing Zoom email." Before you pay, ask on WhatsApp whether the month is a login we provide or an upgrade on an account you already use. The answer changes who owns the cloud recordings and whether your students already have the right link. Get that sentence in the chat, then send the payment screenshot to +92 344 5739206.
 
 ## What the month is for
 
@@ -61,7 +61,7 @@ For client calls, send the meeting from the Pro host. If you join the client's r
 
 ## How to order and what to keep
 
-1. Message WhatsApp +92 348 9057646 with "Zoom Pro, 1 month" and say whether you need a new login or an upgrade on an email you already use.
+1. Message WhatsApp +92 344 5739206 with "Zoom Pro, 1 month" and say whether you need a new login or an upgrade on an email you already use.
 2. Pay Rs 1,500 and send the screenshot. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 3. Do not send your email password. A one-time code from Zoom is also not something to forward.
 4. Run the four checks above on the same day. If the meeting still dies at 40 minutes, screenshot the timer and the account plan page. The [refund policy](/refund-policy/) is the process when the login is not the plan you paid for.

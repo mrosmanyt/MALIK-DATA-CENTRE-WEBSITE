@@ -60,7 +60,7 @@ Voice is a separate bill if you need a cloned voice rather than the voice inside
 
 ## How to order and what to export
 
-1. Open the [DreamFace page](/tools/dreamface/) and say "1 month" or "12 months" on WhatsApp +92 348 9057646.
+1. Open the [DreamFace page](/tools/dreamface/) and say "1 month" or "12 months" on WhatsApp +92 344 5739206.
 2. Pay and send the screenshot. Most orders are ready within 5–30 minutes after payment is confirmed. See the [delivery policy](/delivery-policy/).
 3. Sign in on the ready-made account. Do not change the email or password until the reply tells you the access rule.
 4. Animate one photo you have the right to use. Keep it short.

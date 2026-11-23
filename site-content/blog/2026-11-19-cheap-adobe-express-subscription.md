@@ -25,7 +25,7 @@ The original price is also Rs 650. The specs say Adobe Express for 12 months, te
 
 Adobe’s own Express page is [adobe.com/express](https://www.adobe.com/express/). Their checkout price depends on country and on whether you are already paying for Creative Cloud. Our price is Rs 650 for the ready-made year above. A subscription you start on Adobe’s site, billed to your card, is their invoice. Do not buy both for the same week of posting unless you have a reason to hold two logins.
 
-Order from [buy AI tools online](/buy-ai-tools-online/) if you are outside Pakistan, and from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you are paying with a local wallet. Outside Pakistan, payment is USDT via Binance on BEP20 or TRC20, and we confirm the amount in your currency on WhatsApp +92 348 9057646 before you pay. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa and bank transfer are the usual methods.
+Order from [buy AI tools online](/buy-ai-tools-online/) if you are outside Pakistan, and from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you are paying with a local wallet. Outside Pakistan, payment is USDT via Binance on BEP20 or TRC20, and we confirm the amount in your currency on WhatsApp +92 344 5739206 before you pay. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa and bank transfer are the usual methods.
 
 “Cheap” here means Rs 650 against the Creative Cloud rows, not a claim that Adobe’s official site is expensive in every country. Compare the product, then the price.
 
@@ -79,7 +79,7 @@ Rs 650 for 12 months on a ready-made account. The original price is also Rs 650.
 
 ### Can I buy Adobe Express online from outside Pakistan?
 
-Yes. Pay with USDT on Binance, BEP20 or TRC20. WhatsApp +92 348 9057646 confirms the amount in your currency before you pay. The site shows the price in PKR.
+Yes. Pay with USDT on Binance, BEP20 or TRC20. WhatsApp +92 344 5739206 confirms the amount in your currency before you pay. The site shows the price in PKR.
 
 ### Is Express the same as Photoshop?
 

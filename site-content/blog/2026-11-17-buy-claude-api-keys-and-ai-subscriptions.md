@@ -8,7 +8,7 @@ category: Buying Guide
 icon: fa-solid fa-key
 keywords: buy claude api keys, claude api pakistan, codex api reseller, ai subscriptions reseller worldwide, buy ai subscriptions online
 tools: claude-api-tokens, claude-codex, codex-api, chatgpt-go
-answer: Claude API keys and Codex API credits on Malik Data Centre are price on request. The pages show Contact Support and no rupee price, because the pack is confirmed on WhatsApp before you pay. They are API access, not a Claude or ChatGPT website login. Chat subscriptions that do have a public price, such as ChatGPT Go from Rs 2,200, are separate products. Customers in Pakistan and worldwide order on WhatsApp +92 348 9057646.
+answer: Claude API keys and Codex API credits on Malik Data Centre are price on request. The pages show Contact Support and no rupee price, because the pack is confirmed on WhatsApp before you pay. They are API access, not a Claude or ChatGPT website login. Chat subscriptions that do have a public price, such as ChatGPT Go from Rs 2,200, are separate products. Customers in Pakistan and worldwide order on WhatsApp +92 344 5739206.
 ---
 
 “Buy Claude API keys” and “buy an AI subscription” are different orders. An API key is a credential a developer puts in an app. A subscription is a login for a person in a chat, design or video product. Malik Data Centre sells both, to customers in Pakistan and worldwide, and the pages do not pretend they are the same thing.
@@ -23,7 +23,7 @@ Open these pages and you will not see a PKR figure on the API rows:
 - [Claude and Codex credits](/tools/claude-codex/) lists a combined credit pack, also price on request.
 - [Codex API](/tools/codex-api/) lists Codex credit packs, also price on request.
 
-The button on those rows is Contact Support. Nothing from those rows is added to the cart. There is no public rupee price for this guide to repeat, and a chat message that invents one is not a quote from the website. Ask on WhatsApp +92 348 9057646, name the pack, and wait for the amount before you pay.
+The button on those rows is Contact Support. Nothing from those rows is added to the cart. There is no public rupee price for this guide to repeat, and a chat message that invents one is not a quote from the website. Ask on WhatsApp +92 344 5739206, name the pack, and wait for the amount before you pay.
 
 [Enterprise API credits](/enterprise-ai-api-credits/) is the page for a larger or custom volume. That is a quote as well, not a shelf price.
 
@@ -42,7 +42,7 @@ Keep the key out of screenshots, GitHub repos and shared docs. A key that leaks 
 ## How to order from Pakistan or from another country
 
 1. Open the Claude or Codex page and copy the pack name exactly. The duration and the size are in the row.
-2. Message WhatsApp +92 348 9057646. Say whether you need an API key or a chat login.
+2. Message WhatsApp +92 344 5739206. Say whether you need an API key or a chat login.
 3. In Pakistan, pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer after we confirm the amount.
 4. Outside Pakistan, pay with USDT via Binance on BEP20 or TRC20. We confirm the amount in your currency on WhatsApp before you pay.
 5. Delivery is on WhatsApp, usually within 5–30 minutes after payment is confirmed, as the [delivery policy](/delivery-policy/) describes.
@@ -63,7 +63,7 @@ No stock count. No “out of stock” label. No star rating. No customer total. 
 
 ### How much is a Claude API key in Pakistan?
 
-There is no public PKR price. The [Claude API page](/tools/claude-api-tokens/) says price on request and shows Contact Support. Message WhatsApp +92 348 9057646 and we confirm the amount before you pay.
+There is no public PKR price. The [Claude API page](/tools/claude-api-tokens/) says price on request and shows Contact Support. Message WhatsApp +92 344 5739206 and we confirm the amount before you pay.
 
 ### Is a Claude API key the same as Claude Pro in the browser?
 

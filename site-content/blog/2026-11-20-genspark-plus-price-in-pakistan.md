@@ -29,7 +29,7 @@ The tool page says Plus raises credits and unlocks more agents, including a Supe
 
 Genspark's site is [genspark.ai](https://www.genspark.ai/). Their checkout price can change by plan and by country. Our price is Rs 5,300 for the ready-made month. A subscription on your own card is their invoice, not this row.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. The Pakistan steps are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Worldwide steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 and say Genspark Plus, 1 month.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, pay in USDT. The Pakistan steps are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Worldwide steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 and say Genspark Plus, 1 month.
 
 One month is the whole catalog entry. If the meeting is in three days and you will not open the tool again, a month is more plan than the meeting. If you produce decks every week, one month is a fair test and you will need to reorder when it ends. We do not list a 12-month Genspark plan to "save" you from that. Do not pay a yearly figure that is not on the tool page.
 
@@ -68,7 +68,7 @@ ChatGPT Go, from Rs 2,200 for 6 months on a shared account, is a chat. Use it wh
 ## How to order and what to open first
 
 1. Open the [Genspark page](/tools/genspark/) and confirm the only priced row is 1 month at Rs 5,300.
-2. Pay in PKR, or in USDT outside Pakistan. Send the screenshot to WhatsApp +92 348 9057646.
+2. Pay in PKR, or in USDT outside Pakistan. Send the screenshot to WhatsApp +92 344 5739206.
 3. Delivery is usually within 5–30 minutes after payment is confirmed, as the [delivery policy](/delivery-policy/) describes. Bank transfers can take longer to appear than a wallet payment.
 4. Sign in on the ready-made account. Do not change the email or password until the reply says whether you should.
 5. Check the credit balance and screenshot it. The specs do not print the number, so the screenshot is your record of what arrived.

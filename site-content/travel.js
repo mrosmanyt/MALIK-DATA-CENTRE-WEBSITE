@@ -1,7 +1,7 @@
 /* ==========================================================================
    MALIK TOURS: travel & tourism packages and services (by MALIK DATA CENTRE)
    Every tour gets its own page at /travel/<slug>/ and a card on /travel/.
-   Bookings and questions go to WhatsApp +92 348 9057646.
+   Bookings and questions go to WhatsApp +92 344 5739206.
 
    To change a price or add a tour: edit this file, then run  node build-pages.js
    Photos come from Pexels (free to use): put the photo's number in `photo`.
@@ -322,7 +322,7 @@ const FAQS = [
   ["What is usually included in a group tour?", "Return airfare, visa assistance, twin-sharing hotel rooms, daily breakfast, airport transfers and sightseeing as per the itinerary. Some tours add meals, theme-park tickets or cable cars, as listed on each tour page."],
   ["Can you arrange a private tour for my family?", "Yes. Seat-in-coach and private-group options are available for families of 8 or more. Tell us your dates and destination for a custom package."],
   ["Which documents do I need to book?", "Passport copies to start your visa and ticketing. For visit visas we send a country-specific checklist the same day."],
-  ["How do I book?", "Choose a tour, message us on WhatsApp at +92 348 9057646, confirm your month and number of travellers, then pay the booking token to lock your seats."]
+  ["How do I book?", "Choose a tour, message us on WhatsApp at +92 344 5739206, confirm your month and number of travellers, then pay the booking token to lock your seats."]
 ];
 
-module.exports = { BRAND: "MALIK TOURS", WHATSAPP: "923489057646", PHONE: "+92 348 9057646", TOURS, CATEGORIES, SERVICES, GROUP_INCLUDED, BOOKING_STEPS, FAQS };
+module.exports = { BRAND: "MALIK TOURS", WHATSAPP: "923445739206", PHONE: "+92 344 5739206", TOURS, CATEGORIES, SERVICES, GROUP_INCLUDED, BOOKING_STEPS, FAQS };

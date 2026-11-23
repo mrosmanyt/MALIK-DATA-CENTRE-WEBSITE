@@ -144,7 +144,7 @@
     function startCheckout(context, baseHref) {
         ctx = context;
         ctx.meta = parseFromHref(baseHref || "");
-        ctx.baseHref = baseHref || "https://wa.me/923489057646";
+        ctx.baseHref = baseHref || "https://wa.me/923445739206";
         // summary
         var sum = ctx.items.map(function (i) {
             return '<div class="mdc-co-line"><span>' + (i.name || "Item") + (i.duration ? ' <small>(' + i.duration + ')</small>' : '') + '</span><b>' + money(i.price) + '</b></div>';
@@ -209,7 +209,7 @@
             if (buy && (buy.getAttribute("data-quote") === "1" || buy.classList.contains("btn-contact"))) return;
             if (!buy && !cart) return;
             var href = (buy || cart).getAttribute("href") || "";
-            if (href.indexOf("wa.me/923489057646") === -1 && href.indexOf("wa.me/923489057646") === -1) return; // safety
+            if (href.indexOf("wa.me/923445739206") === -1 && href.indexOf("wa.me/923445739206") === -1) return; // safety
             e.preventDefault();
             e.stopPropagation();
             var context = buy ? fromBuyButton(buy) : fromCart();

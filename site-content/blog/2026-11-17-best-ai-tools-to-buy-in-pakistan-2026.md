@@ -49,7 +49,7 @@ Creators who need voice or talking video should read [best AI tools for YouTuber
 A low price is not a reason to skip the label on the plan. Before you pay any seller, including us, check four things:
 
 - The page says private, invitation or shared.
-- Payment goes to the number published on the website, +92 348 9057646 or +92 348 9057646.
+- Payment goes to the number published on the website, +92 344 5739206 or +92 344 5739206.
 - Nobody asks for your email password or an OTP.
 - A written warranty exists. Ours is the [refund policy](/refund-policy/).
 
@@ -74,7 +74,7 @@ For most students and office work, Gemini Pro at Rs 1,500 for 12 months on your 
 
 ### How do I buy these tools from Pakistan?
 
-Open the tool page or the [Pakistan buying guide](/buy-ai-tools-in-pakistan/), then message WhatsApp +92 348 9057646. Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.
+Open the tool page or the [Pakistan buying guide](/buy-ai-tools-in-pakistan/), then message WhatsApp +92 344 5739206. Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.
 
 ### Do you sell ChatGPT Plus?
 

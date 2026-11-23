@@ -75,7 +75,7 @@ Shops waste money in a predictable order. Skip it.
 - An annual stack of five tools on day one. Buy Canva. Use it for two weeks. Add ChatGPT only if replies are the bottleneck. Add CapCut only if you will actually post the reel.
 - Any seller who will not say whether the login is shared, on your email, or a team invite. Our pages say it. The [refund policy](/refund-policy/) says what happens when delivery does not match.
 
-The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Send the screenshot to WhatsApp +92 348 9057646 and name the row: Canva year on your email, ChatGPT Go 6-month shared, or the CapCut row you chose.
+The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Send the screenshot to WhatsApp +92 344 5739206 and name the row: Canva year on your email, ChatGPT Go 6-month shared, or the CapCut row you chose.
 
 ## A month that matches a real shop
 

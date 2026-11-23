@@ -63,7 +63,7 @@ const pick = (html, re) => { const m = html.match(re); return m ? m[1].replace(/
   pages.sort((a, b) => a.path.localeCompare(b.path));
 
   const seed = Object.assign({}, home, {
-    contact: Object.assign({ orderWhatsapp: "923489057646", supportWhatsapp: "923489057646", channel: "https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z", community: "https://chat.whatsapp.com/FA4CLYGdoZn1PXhENEAMGJ",
+    contact: Object.assign({ orderWhatsapp: "923445739206", supportWhatsapp: "923445739206", channel: "https://whatsapp.com/channel/0029Vb8Hycp3gvWclMCHv02Z", community: "https://chat.whatsapp.com/FA4CLYGdoZn1PXhENEAMGJ",
       youtube: "https://www.youtube.com/@MalikDataCentre0", facebook: "https://www.facebook.com/people/Malik-Data-Centre-Pro/61566733492225/", x: "https://x.com/realmickeyai" }, home.contact || {}),
     announcement: { on: false, text: "", link: "", linkText: "Shop now", bg: "#111827", color: "#ffffff", start: "", end: "", dismissible: true },
     popup: { on: false, image: "", title: "", text: "", link: "", buttonText: "See offer", pages: "home", frequency: "day", delay: 5, start: "", end: "" },

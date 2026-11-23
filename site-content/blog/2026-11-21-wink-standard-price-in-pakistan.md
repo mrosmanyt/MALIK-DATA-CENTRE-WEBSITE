@@ -29,7 +29,7 @@ The description on the catalog row says AI video and photo enhancement, retouchi
 
 Wink's site is [wink.ai](https://www.wink.ai/). Their own price and their own device list can change. Our price is Rs 2,100 for the ready-made month. This page does not quote a dollar checkout. A subscription billed to a card on their site is a different purchase.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Start from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you are in Pakistan. Outside Pakistan, start from [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. WhatsApp is +92 348 9057646. Write "Wink Standard, 1 month" and the phone you will install it on.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Start from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you are in Pakistan. Outside Pakistan, start from [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. WhatsApp is +92 344 5739206. Write "Wink Standard, 1 month" and the phone you will install it on.
 
 ## Wink or CapCut
 
@@ -94,4 +94,4 @@ The catalog does not say. There is no minute cap and no credit count on the Wink
 
 ### How do I pay?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer in Pakistan. USDT via Binance on BEP20 or TRC20 outside Pakistan, after we confirm the amount on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer in Pakistan. USDT via Binance on BEP20 or TRC20 outside Pakistan, after we confirm the amount on WhatsApp +92 344 5739206.

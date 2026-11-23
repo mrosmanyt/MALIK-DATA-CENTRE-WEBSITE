@@ -31,7 +31,7 @@ The 2-month account specs are a Surfshark VPN account, 2 months of access, a ful
 
 Surfshark's own site is [surfshark.com](https://surfshark.com/). Their card checkout and any dollar price on that site are their invoice. Our prices are the three rupee rows. We do not print a dollar figure here, because this order is not their card checkout.
 
-Pay in Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The steps for a local order are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20, and we confirm the amount on WhatsApp +92 348 9057646 before you send it. Worldwide orders start at [buy AI tools online](/buy-ai-tools-online/). Name the row in the first message: "shared month", "2-month account", or "2-month coupon". A message that only says "Surfshark" can be filled with the wrong one.
+Pay in Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The steps for a local order are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20, and we confirm the amount on WhatsApp +92 344 5739206 before you send it. Worldwide orders start at [buy AI tools online](/buy-ai-tools-online/). Name the row in the first message: "shared month", "2-month account", or "2-month coupon". A message that only says "Surfshark" can be filled with the wrong one.
 
 ## What not to do on the shared month
 
@@ -61,7 +61,7 @@ There is no 12-month Surfshark row on the tool page. Do not pay a yearly figure 
 ## How to order and what to check
 
 1. Open the [Surfshark page](/tools/surfshark-vpn/) and point at one row.
-2. Message WhatsApp +92 348 9057646 with the duration and the access type. Pay and send the screenshot. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
+2. Message WhatsApp +92 344 5739206 with the duration and the access type. Pay and send the screenshot. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 3. On the shared month, sign in with the details we send. Do not change them. Connect once, open a normal site, and disconnect. That is the test.
 4. On the 2-month account, sign in and read the plan name and the time left. Screenshot that screen the same day.
 5. On the coupon, confirm you received a code and that you know where it is redeemed. Do not mark the order finished if the message only contains a login and you paid for a coupon, or the other way around.
@@ -91,7 +91,7 @@ No. The catalog says the coupon is separate from the 2-month account. The coupon
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name the row on WhatsApp +92 348 9057646 so the order is not the other Surfshark product.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name the row on WhatsApp +92 344 5739206 so the order is not the other Surfshark product.
 
 ### Does the shared month include a written number of warranty days?
 

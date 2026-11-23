@@ -31,7 +31,7 @@ There is no 1-month Linear row in the catalog. A two-week sprint still sits on a
 
 The warranty is confirmed on WhatsApp. It is not a day count printed in the specs. Ask for the sentence before you pay if you need it in writing, and keep that reply with the payment screenshot.
 
-Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer through [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Pay from other countries in USDT via Binance on BEP20 or TRC20 after we confirm the amount, through [buy AI tools online](/buy-ai-tools-online/). WhatsApp is +92 348 9057646. Write "Linear Business, 12 months, new workspace" or "Linear Business, join this workspace" so the two requests cannot be confused.
+Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer through [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Pay from other countries in USDT via Binance on BEP20 or TRC20 after we confirm the amount, through [buy AI tools online](/buy-ai-tools-online/). WhatsApp is +92 344 5739206. Write "Linear Business, 12 months, new workspace" or "Linear Business, join this workspace" so the two requests cannot be confused.
 
 ## Linear, Notion, or Cursor
 
@@ -48,7 +48,7 @@ A ready-made Linear account is not your company's existing Linear login unless w
 ## How to order and what to check in week one
 
 1. Open the [Linear page](/tools/linear/) and confirm 12 months at Rs 8,350.
-2. Tell us whether you need a new workspace or a join. Pay after that is clear. Send the screenshot to WhatsApp +92 348 9057646.
+2. Tell us whether you need a new workspace or a join. Pay after that is clear. Send the screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. Bank transfers can take longer to show than a wallet payment.
 4. Sign in. Check that Business is the plan and that the term reads as the year you ordered. Screenshot it.
 5. Create one project, one cycle, and one issue that is real. Assign it to a person who will actually open Linear. An empty workspace does not prove the team will use it, but a missing Business label proves the row is wrong.
@@ -92,4 +92,4 @@ No. Cursor Pro is a separate editor, Rs 4,200 for 1 month on a private account o
 
 ### How do I pay from another country?
 
-USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 348 9057646. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The price on the site is in PKR.
+USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 344 5739206. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The price on the site is in PKR.

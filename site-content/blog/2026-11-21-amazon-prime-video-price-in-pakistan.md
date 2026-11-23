@@ -27,7 +27,7 @@ The tool page says you get your own profile on the account, so your watch list a
 
 Amazon's own video site is [primevideo.com](https://www.primevideo.com/). Their price, their region, and their catalogue of shows are theirs. A show that is missing in one country can be missing on a profile too. We do not promise a named series. We promise the plan in the table: 6 months, private profile, the spec lines above.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer through [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20. The amount is confirmed on WhatsApp +92 348 9057646 before you send it. The path for that order is [buy AI tools online](/buy-ai-tools-online/). Say "Prime Video, 6 months, private profile" so the order is not read as a shopping account.
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer through [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20. The amount is confirmed on WhatsApp +92 344 5739206 before you send it. The path for that order is [buy AI tools online](/buy-ai-tools-online/). Say "Prime Video, 6 months, private profile" so the order is not read as a shopping account.
 
 ## What a private profile changes, and what it does not
 
@@ -61,7 +61,7 @@ There is no bundle of the two on a single catalog row. Order them as two product
 ## How to order and how to test the profile
 
 1. Open the [Prime Video page](/tools/amazon-prime-video/) and confirm 6 months at Rs 1,500.
-2. Pay and send the screenshot to WhatsApp +92 348 9057646. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
+2. Pay and send the screenshot to WhatsApp +92 344 5739206. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 3. Sign in and select the profile we name. Do not create a second profile "to be safe" until you have seen yours. Extra profiles can hide the one you paid for.
 4. Play one title for a minute. Check that ads are not playing on that stream, and look at the quality control if you care about the 4K line. A phone screen will not always show a visible difference. The spec still says 4K Ultra HD playback.
 5. Screenshot the profile. Save it with the payment screenshot. Six months is long enough to forget which phone has the app.
@@ -97,4 +97,4 @@ Prime Video is Rs 1,500 for 6 months on a private profile. YouTube Premium start
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20 after the amount is confirmed on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20 after the amount is confirmed on WhatsApp +92 344 5739206.

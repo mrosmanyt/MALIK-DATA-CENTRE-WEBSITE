@@ -63,7 +63,7 @@ A single YouTube video that needs five clips does not need a year. A channel tha
 
 Both rows are ready-made accounts. A ready-made login is not your old Storyblocks or Envato account unless the chat says this order extends it. Downloads on another account stay there. Start the project registration, where Envato asks for it, on the account you actually received.
 
-1. Decide the length. One month of Storyblocks, one month of Envato, or 12 months of Envato. Say that in the first message to WhatsApp +92 348 9057646.
+1. Decide the length. One month of Storyblocks, one month of Envato, or 12 months of Envato. Say that in the first message to WhatsApp +92 344 5739206.
 2. Pay in Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The steps are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. The steps are on [buy AI tools online](/buy-ai-tools-online/).
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 4. Sign in. Download one clip you need this week. On Envato, register the project name at download. On either library, save the file to a drive you control.
@@ -99,4 +99,4 @@ No. Both are stock libraries on ready-made accounts. Cutting the video is a sepa
 
 ### How do I pay?
 
-Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Other countries: USDT via Binance on BEP20 or TRC20 after we confirm the amount on WhatsApp +92 348 9057646. Name Storyblocks or Envato, and name the length, in the first message.
+Pakistan: EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Other countries: USDT via Binance on BEP20 or TRC20 after we confirm the amount on WhatsApp +92 344 5739206. Name Storyblocks or Envato, and name the length, in the first message.

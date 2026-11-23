@@ -8,7 +8,7 @@ category: Buying Guide
 icon: fa-solid fa-building-columns
 keywords: cheap edx subscription, buy edx online, edx premium price, edx vs coursera, edx 12 months, edx certificate
 tools: edx, coursera-plus, udemy
-answer: The cheap edX subscription at Malik Data Centre is Rs 400 for 12 months of edX Premium on a ready-made account. The original price matches, and the specs include a 7-day warranty. Certificates follow the rules of each course. Coursera Plus is a different library at Rs 3,200 for 12 months. Udemy Personal is Rs 1,250 for 1 month. Order from any country on WhatsApp +92 348 9057646.
+answer: The cheap edX subscription at Malik Data Centre is Rs 400 for 12 months of edX Premium on a ready-made account. The original price matches, and the specs include a 7-day warranty. Certificates follow the rules of each course. Coursera Plus is a different library at Rs 3,200 for 12 months. Udemy Personal is Rs 1,250 for 1 month. Order from any country on WhatsApp +92 344 5739206.
 ---
 
 Learners look for a cheap edX subscription when they want a year of university-style courses and they do not want an annual card charge in dollars. This page is the plan we list: edX Premium for Rs 400 for 12 months on a ready-made account, with a 7-day warranty. The price is low because that is the catalog row, not because every professional certificate on the internet is included. Read the warranty length before you treat Rs 400 as a no-risk year.
@@ -29,7 +29,7 @@ edX's site is [edx.org](https://www.edx.org/). Their own prices and which progra
 
 "Cheap" here means Rs 400 against the other course plans on this store. It is not a claim about edX's official checkout in every country. Compare the library, then the price.
 
-Pay from [buy AI tools online](/buy-ai-tools-online/) if you are outside Pakistan. Pay from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you use a local wallet. Outside Pakistan, payment is USDT via Binance on BEP20 or TRC20, and we confirm the amount in your currency on WhatsApp +92 348 9057646 before you pay. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer are the usual methods.
+Pay from [buy AI tools online](/buy-ai-tools-online/) if you are outside Pakistan. Pay from [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/) if you use a local wallet. Outside Pakistan, payment is USDT via Binance on BEP20 or TRC20, and we confirm the amount in your currency on WhatsApp +92 344 5739206 before you pay. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank and bank transfer are the usual methods.
 
 ## Certificates follow the course
 
@@ -69,7 +69,7 @@ A chatbot is not a course platform. ChatGPT Go and similar plans do not issue an
 
 ## How to order and what to open in the first week
 
-1. Message WhatsApp +92 348 9057646 with the course title, or open the [edX page](/tools/edx/) and say edX Premium, 12 months.
+1. Message WhatsApp +92 344 5739206 with the course title, or open the [edX page](/tools/edx/) and say edX Premium, 12 months.
 2. If you need a named certificate, wait for the answer before you pay.
 3. Pay and send the screenshot. Most orders are ready within 5–30 minutes after payment is confirmed. See the [delivery policy](/delivery-policy/).
 4. Sign in during the 7-day warranty. Confirm the plan and the 12-month term. Open the course you named.
@@ -90,7 +90,7 @@ There is no second edX duration. The cheap year is Rs 400, the warranty is 7 day
 
 ### Where can I buy a cheap edX subscription online?
 
-Malik Data Centre lists edX Premium at Rs 400 for 12 months on a ready-made account. Order on the edX page or on WhatsApp +92 348 9057646. Pakistan buyers pay with a local wallet or bank. Buyers elsewhere pay with USDT after we confirm the amount.
+Malik Data Centre lists edX Premium at Rs 400 for 12 months on a ready-made account. Order on the edX page or on WhatsApp +92 344 5739206. Pakistan buyers pay with a local wallet or bank. Buyers elsewhere pay with USDT after we confirm the amount.
 
 ### Is the warranty as long as the subscription?
 

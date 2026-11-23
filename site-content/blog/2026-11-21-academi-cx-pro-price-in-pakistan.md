@@ -29,7 +29,7 @@ The specs do not print a word limit, a paper count, or a list of databases. Do n
 
 Academi's site is [academi.cx](https://academi.cx/). Their own plan names and prices can differ from this row. Our price is Rs 3,200 for the ready-made month. This page does not quote a dollar figure for their checkout. A card subscription on their site is a different purchase.
 
-Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Pakistan buyers start at [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Buyers elsewhere start at [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. WhatsApp is +92 348 9057646. Write "Academi.cx Pro, 1 month".
+Pay with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Pakistan buyers start at [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Buyers elsewhere start at [buy AI tools online](/buy-ai-tools-online/) and pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. WhatsApp is +92 344 5739206. Write "Academi.cx Pro, 1 month".
 
 ## What the month is for, and what it is not for
 
@@ -95,4 +95,4 @@ The catalog setup is a ready-made account. The tool page says delivery details a
 
 ### How do I pay?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer in Pakistan. USDT via Binance on BEP20 or TRC20 outside Pakistan, after the amount is confirmed on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer in Pakistan. USDT via Binance on BEP20 or TRC20 outside Pakistan, after the amount is confirmed on WhatsApp +92 344 5739206.

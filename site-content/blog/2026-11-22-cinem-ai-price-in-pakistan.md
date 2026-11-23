@@ -8,7 +8,7 @@ category: Buying Guide
 icon: fa-solid fa-video
 keywords: cinem ai price in pakistan, cinem ai video pakistan, buy cinem ai, cinem ai monthly, cinem ai creator portal, cinem ai vs kling
 tools: cinem-ai, kling-ai
-answer: Cinem AI Video at Malik Data Centre is Rs 7,000 for monthly creator access through a creator account portal. The original price is Rs 15,000. Specs name cinematic photorealistic videos, high frame-rate rendering options, a creator tools subscription tier, and a full monthly warranty. The catalog does not print a credit count. Order on WhatsApp +92 348 9057646 and confirm what the portal includes before you pay.
+answer: Cinem AI Video at Malik Data Centre is Rs 7,000 for monthly creator access through a creator account portal. The original price is Rs 15,000. Specs name cinematic photorealistic videos, high frame-rate rendering options, a creator tools subscription tier, and a full monthly warranty. The catalog does not print a credit count. Order on WhatsApp +92 344 5739206 and confirm what the portal includes before you pay.
 ---
 
 The Cinem AI Video price in Pakistan is one row. On our [Cinem AI page](/tools/cinem-ai/) the monthly creator plan is Rs 7,000, and the original price printed beside it is Rs 15,000. You get portal access on a creator account, not a pile of named credits and not a login you activate on an email you already use unless the chat says so. This page is for people who already want AI video every week and need the rupee figure before they pay.
@@ -27,7 +27,7 @@ Read those four lines as the product. The tool page intro says Cinem AI is a cre
 
 The duration field says monthly access. The warranty line says full monthly warranty. Together those are the length the catalog is willing to print. They are not a promise that a particular prompt will render, and they are not a count of clips. The page does not say how many videos Rs 7,000 produces. We will not invent that number. Generate one clip on day one, read whatever counter or limit the portal shows, and screenshot it. If the limit makes the plan useless for the job you named in the order, that screenshot is what you send back the same day.
 
-Pay in Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The local steps are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. Worldwide steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 with "Cinem AI Video, monthly creator portal" so the order is not a different video tool.
+Pay in Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. The local steps are on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20 after we confirm the amount. Worldwide steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 with "Cinem AI Video, monthly creator portal" so the order is not a different video tool.
 
 ## What the portal is, and what it is not
 
@@ -56,7 +56,7 @@ A wider pick-by-output guide is [best AI video tools in Pakistan](/blog/best-ai-
 ## How to order and what to check
 
 1. Open the [Cinem AI page](/tools/cinem-ai/) and confirm Rs 7,000 for monthly access.
-2. Ask what the portal includes and where you sign in. Pay after the reply matches the job. Send the payment screenshot to WhatsApp +92 348 9057646.
+2. Ask what the portal includes and where you sign in. Pay after the reply matches the job. Send the payment screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in on the portal with the details we send. Do not change them until the chat says you can.
 5. Generate one short clip and save the file to your own disk. A portal login is not your archive of client videos.
@@ -89,7 +89,7 @@ The setup line is a creator account portal, and delivery is portal access plus a
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name "Cinem AI Video, monthly" on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name "Cinem AI Video, monthly" on WhatsApp +92 344 5739206.
 
 ### Does the monthly warranty have a number of days?
 

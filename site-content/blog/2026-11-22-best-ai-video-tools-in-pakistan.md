@@ -13,7 +13,7 @@ answer: Pick an AI video tool in Pakistan by the output. Kling starts at Rs 1,30
 
 The best AI video tool in Pakistan is the one that makes the file you actually need. A product clip, a talking avatar, and a finished Reel are three purchases. Kling, Higgsfield, HeyGen, and CapCut are the four this guide sorts. Cinem AI is a fifth option when you want a creator portal instead of a named credit pack. Prices below are the rows on this store. They are not a ranking, and they are not a promise about views.
 
-Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20. Those steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 348 9057646 with the tool name and the row, not only the word "video".
+Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer on [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Outside Pakistan, pay in USDT via Binance on BEP20 or TRC20. Those steps are on [buy AI tools online](/buy-ai-tools-online/). Message WhatsApp +92 344 5739206 with the tool name and the row, not only the word "video".
 
 ## Pick by the output
 
@@ -88,7 +88,7 @@ Choose Cinem over Kling when you want the portal and the monthly warranty line, 
 
 1. Write the output in one sentence: clip, avatar, or edit.
 2. Open the tool page for that output and point at one row.
-3. Pay and send the screenshot to WhatsApp +92 348 9057646. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
+3. Pay and send the screenshot to WhatsApp +92 344 5739206. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 4. Generate or export one file on day one. Save it to your own disk. Screenshot the credit balance if the plan has credits.
 5. If the row is wrong, screenshot it while the warranty on that listing still applies. The [refund policy](/refund-policy/) covers a plan we cannot deliver on the terms we confirmed. Warranty text differs by row. HeyGen's month and Higgsfield Plus print a 20-day line. Other rows print a different line or tell you to confirm on WhatsApp.
 
@@ -110,7 +110,7 @@ No. Kling, Higgsfield, and HeyGen spend credits by length and settings. Read the
 
 ### Can I pay without a credit card?
 
-Yes. In Pakistan use EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan use USDT via Binance on BEP20 or TRC20. Name the row on WhatsApp +92 348 9057646.
+Yes. In Pakistan use EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan use USDT via Binance on BEP20 or TRC20. Name the row on WhatsApp +92 344 5739206.
 
 ### What if I only need a talking photo?
 

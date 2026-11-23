@@ -112,8 +112,8 @@
     contact: { group: "site", label: "Contact & social links", icon: "fa-solid fa-address-book", owner: true,
       hint: "Changing a number updates every WhatsApp button on the website, including order buttons.",
       fields: [
-        { k: "orderWhatsapp", label: "Orders WhatsApp number", type: "text", half: true, hint: "With country code, no + or spaces, e.g. 923489057646" },
-        { k: "supportWhatsapp", label: "Support WhatsApp number", type: "text", half: true, hint: "With country code, e.g. 923489057646" },
+        { k: "orderWhatsapp", label: "Orders WhatsApp number", type: "text", half: true, hint: "With country code, no + or spaces, e.g. 923445739206" },
+        { k: "supportWhatsapp", label: "Support WhatsApp number", type: "text", half: true, hint: "With country code, e.g. 923445739206" },
         { k: "channel", label: "WhatsApp channel link", type: "url" }, { k: "community", label: "WhatsApp community link", type: "url" },
         { k: "youtube", label: "YouTube", type: "url", half: true }, { k: "facebook", label: "Facebook", type: "url", half: true }, { k: "x", label: "X (Twitter)", type: "url", half: true },
         { k: "footerNote", label: "Footer text", type: "textarea", rows: 2 }

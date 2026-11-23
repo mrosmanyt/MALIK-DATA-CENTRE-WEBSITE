@@ -8,7 +8,7 @@ category: Buying Guide
 icon: fa-solid fa-chart-line
 keywords: buy arize pro online, arize pro price, cheap arize subscription, arize ai tracing, arize 12 months, arize vs cursor
 tools: arize, cursor-pro
-answer: Buy Arize Pro online from Malik Data Centre for Rs 6,650 for 12 months on a ready-made account. The original price matches. It traces and monitors AI apps. It is a login, not a Claude or Codex API key, and those packs have no public rupee price. There is no 1-month row. Order on WhatsApp +92 348 9057646.
+answer: Buy Arize Pro online from Malik Data Centre for Rs 6,650 for 12 months on a ready-made account. The original price matches. It traces and monitors AI apps. It is a login, not a Claude or Codex API key, and those packs have no public rupee price. There is no 1-month row. Order on WhatsApp +92 344 5739206.
 ---
 
 You can buy Arize Pro online for Rs 6,650. The plan is 12 months on a ready-made account, and the original price matches. Arize traces and monitors AI applications: the calls your app already makes, the failures, the traces you open when an agent misbehaves in production. It is not the model, and it is not the editor you write the agent in.
@@ -54,7 +54,7 @@ Claude API and Codex API packs are price on request. The button is Contact Suppo
 ## How to order from any country
 
 1. Open the [Arize page](/tools/arize/) and confirm Rs 6,650 for 12 months.
-2. Confirm you want a ready-made login for tracing, not an API key. Pay and send the screenshot to WhatsApp +92 348 9057646.
+2. Confirm you want a ready-made login for tracing, not an API key. Pay and send the screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in with the details we send. Follow the setup steps in the chat. Do not change the password until you are told the rule.
 5. Open one trace, or send one test span if your app is ready. Screenshot the plan name.
@@ -88,4 +88,4 @@ Buy Cursor if you need the editor, from Rs 4,200 for 1 month. Buy Arize if you n
 
 ### How do I pay from another country?
 
-USDT via Binance on BEP20 or TRC20 after we confirm the amount. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Name Arize Pro, 12 months, on WhatsApp +92 348 9057646.
+USDT via Binance on BEP20 or TRC20 after we confirm the amount. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Name Arize Pro, 12 months, on WhatsApp +92 344 5739206.

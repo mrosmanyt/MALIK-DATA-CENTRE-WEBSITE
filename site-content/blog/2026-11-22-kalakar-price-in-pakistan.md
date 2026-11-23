@@ -26,7 +26,7 @@ Editor specs are Editor plan features, AI video tools, and setup help on WhatsAp
 
 Read "higher limits" carefully. It is the only comparison the catalog gives. It does not say higher by how much, and it does not name the unit. Credits, export minutes, and projects are all guesses until the app shows a number. We will not invent the cap. After login, screenshot the limit screen on the plan you paid for. If Creator does not show a higher limit than the Editor description you were given, that screenshot is what you send the same day.
 
-The duration column says "Editor plan" or "Creator plan". It does not say "1 month" or "12 months". Before you pay, ask WhatsApp +92 348 9057646 for the end date on the row you want. A shop video this week and a year of daily reels are not the same order if the end date is short. Do not guess the length from the price. Rs 1,400 is not "cheap because it is a year", and Rs 2,100 is not "expensive because it is a year". The length is whatever the reply names.
+The duration column says "Editor plan" or "Creator plan". It does not say "1 month" or "12 months". Before you pay, ask WhatsApp +92 344 5739206 for the end date on the row you want. A shop video this week and a year of daily reels are not the same order if the end date is short. Do not guess the length from the price. Rs 1,400 is not "cheap because it is a year", and Rs 2,100 is not "expensive because it is a year". The length is whatever the reply names.
 
 Kalakar's site is [kalakar.io](https://kalakar.io/). Their card price can change. Our prices are the two rupee rows. This page does not state a dollar price for their checkout.
 
@@ -57,7 +57,7 @@ If the job is a generated clip rather than a timeline, look at [Kling AI](/tools
 ## How to order and what to check
 
 1. Open the [Kalakar page](/tools/kalakar/) and point at Editor or Creator.
-2. Ask for the end date and, for Creator, ask what the higher limit is. Pay after the reply names both. Send the payment screenshot to WhatsApp +92 348 9057646.
+2. Ask for the end date and, for Creator, ask what the higher limit is. Pay after the reply names both. Send the payment screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in. Do not change the email or password until the chat tells you the rule.
 5. Open one video you are allowed to edit. Export it to your own phone or laptop. Confirm the file plays without the login.
@@ -78,7 +78,7 @@ Rs 1,400 for the Editor plan or Rs 2,100 for the Creator plan. Both are ready-ma
 
 ### How many months do Editor and Creator last?
 
-The catalog duration says Editor plan or Creator plan. It does not print a number of months. Ask WhatsApp +92 348 9057646 for the end date before you pay.
+The catalog duration says Editor plan or Creator plan. It does not print a number of months. Ask WhatsApp +92 344 5739206 for the end date before you pay.
 
 ### What does "higher limits" mean on Creator?
 
@@ -90,4 +90,4 @@ No. CapCut Pro starts at Rs 800 for 1 month on 2 devices, with the length printe
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name Editor or Creator on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name Editor or Creator on WhatsApp +92 344 5739206.

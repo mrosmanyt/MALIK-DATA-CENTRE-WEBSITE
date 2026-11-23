@@ -31,7 +31,7 @@ The specs do not say "records the whole call and stores it forever", and they do
 
 People on the call should know notes are being taken when your own rules, or theirs, require that. This plan does not include permission from the other person. If you cannot take notes in that meeting, do not connect the tool to it.
 
-Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Use [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Pay from other countries in USDT via Binance on BEP20 or TRC20 after we confirm the amount. Use [buy AI tools online](/buy-ai-tools-online/). WhatsApp is +92 348 9057646. Write "Granola Business, confirm the end date" in the first message.
+Pay from Pakistan with EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Use [buy AI tools in Pakistan](/buy-ai-tools-in-pakistan/). Pay from other countries in USDT via Binance on BEP20 or TRC20 after we confirm the amount. Use [buy AI tools online](/buy-ai-tools-online/). WhatsApp is +92 344 5739206. Write "Granola Business, confirm the end date" in the first message.
 
 ## Granola, Notion, or dictation
 
@@ -46,7 +46,7 @@ Copy the note out. The warranty confirmed on WhatsApp covers the plan we agreed.
 ## How to order and what to test
 
 1. Open the [Granola page](/tools/granola/) and confirm Rs 5,850.
-2. Ask for the end date and for the warranty sentence. Pay after both are in the chat. Send the payment screenshot to WhatsApp +92 348 9057646.
+2. Ask for the end date and for the warranty sentence. Pay after both are in the chat. Send the payment screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to appear than a wallet payment.
 4. Sign in on the ready-made account. Do not change the email or password until the reply explains the rule.
 5. Take notes on one short call you are allowed to record or summarize. Read the result. Fix the names and the numbers. Paste the corrected note into a document you own.
@@ -92,4 +92,4 @@ No. Wispr Flow Pro is a separate dictation plan at Rs 7,500 for 12 months. Buy i
 
 ### How do I pay from outside Pakistan?
 
-USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 348 9057646. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.
+USDT via Binance on BEP20 or TRC20, after we confirm the amount on WhatsApp +92 344 5739206. In Pakistan, EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer.

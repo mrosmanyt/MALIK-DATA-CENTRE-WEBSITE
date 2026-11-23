@@ -52,7 +52,7 @@ Do not buy Manus because a video called every chatbot obsolete. If you will not 
 
 ## What to check in the first task
 
-1. Open the [Manus page](/tools/manus-ai/) and say "12-month private" or "1-month, no warranty" in the WhatsApp message to +92 348 9057646. Do not say only "Manus."
+1. Open the [Manus page](/tools/manus-ai/) and say "12-month private" or "1-month, no warranty" in the WhatsApp message to +92 344 5739206. Do not say only "Manus."
 2. Pay and send the screenshot. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed.
 3. Sign in. On the 12-month plan, do not change the password until you know whether the account is yours alone. On the 1-month plan, it is a ready-made account. Save files out of it the same day.
 4. Run one task you already understand, so you can tell a good file from a wrong one. A topic you know is a better test than a client project on minute one.

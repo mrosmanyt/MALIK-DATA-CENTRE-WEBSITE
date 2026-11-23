@@ -56,7 +56,7 @@ Buy Grammarly when you want grammar, tone, and a plagiarism check on an email yo
 ## How to order and what to test
 
 1. Open the [Pangram page](/tools/pangram/) and confirm Rs 8,350 for 12 months.
-2. Ask for the warranty sentence if you need it before you pay. Send the payment screenshot to WhatsApp +92 348 9057646.
+2. Ask for the warranty sentence if you need it before you pay. Send the payment screenshot to WhatsApp +92 344 5739206.
 3. The [delivery policy](/delivery-policy/) says most orders are ready within 5–30 minutes after payment is confirmed. A bank transfer can take longer to show than a wallet payment.
 4. Sign in on the ready-made account. Do not change the email or password until the chat tells you the rule.
 5. Run one short text you are allowed to check. Read the result. Screenshot the plan name, the date, and any quota.
@@ -93,4 +93,4 @@ Grammarly Pro is Rs 1,400 for 1 month or Rs 3,500 for 12 months, on your own ema
 
 ### How do I pay from Pakistan?
 
-EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name Pangram Pro, 12 months, on WhatsApp +92 348 9057646.
+EasyPaisa, JazzCash, NayaPay, UPaisa, Meezan Bank or bank transfer. Outside Pakistan, USDT via Binance on BEP20 or TRC20. Name Pangram Pro, 12 months, on WhatsApp +92 344 5739206.
