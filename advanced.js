@@ -5,13 +5,28 @@
 (function () {
     "use strict";
 
-    var WA = "https://wa.me/923445739206?text=";
+    /* WhatsApp round-robin (owner order 2026-11-26): share the site-wide
+       rotation counter from pages.js (window.mdcNextWa, localStorage
+       "mdc_wa_rot"); fall back to the same counter locally if pages.js
+       is not present. */
+    var WA_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+    var waRotMem = 0;
+    function nextWa() {
+        if (typeof window.mdcNextWa === "function") return window.mdcNextWa();
+        var n;
+        try {
+            n = parseInt(localStorage.getItem("mdc_wa_rot") || "0", 10);
+            if (!isFinite(n) || n < 0) n = 0;
+            localStorage.setItem("mdc_wa_rot", String(n + 1));
+        } catch (e) { n = waRotMem++; }
+        return WA_NUMBERS[n % WA_NUMBERS.length];
+    }
     function getTools() {
         try { if (typeof TOOLS_DATABASE !== "undefined" && Array.isArray(TOOLS_DATABASE)) return TOOLS_DATABASE; }
         catch (e) {}
         return [];
     }
-    function waLink(text) { return WA + encodeURIComponent(text); }
+    function waLink(text) { return "https://wa.me/" + nextWa() + "?text=" + encodeURIComponent(text); }
 
     /* ======================================================================
        REFERRAL / AFFILIATE
@@ -28,7 +43,7 @@
             var r = "";
             try { r = localStorage.getItem("mdc_ref") || ""; } catch (e2) {}
             if (!r) return;
-            var link = e.target.closest('a[href*="wa.me/923445739206?text="], a[href*="wa.me/923445739206?text="]');
+            var link = e.target.closest('a[href*="wa.me/923445739206?text="], a[href*="wa.me/923404104017?text="], a[href*="wa.me/923489057646?text="]');
             if (!link) return;
             var href = link.getAttribute("href");
             if (!href || href.indexOf("Referral") !== -1) return;

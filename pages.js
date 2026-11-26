@@ -6,6 +6,36 @@
     "use strict";
     var WA = "923445739206";
 
+    /* WhatsApp round-robin rotation (owner order 2026-11-26): incoming
+       customers are spread evenly across the three store numbers —
+       1st click -> number 1, 2nd -> number 2, 3rd -> number 3, 4th -> 1...
+       The counter persists per visitor in localStorage ("mdc_wa_rot"), so
+       the spread stays even across pages and visits in aggregate. */
+    var WA_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+    var waRotMem = 0;
+    function nextWa() {
+        var n;
+        try {
+            n = parseInt(localStorage.getItem("mdc_wa_rot") || "0", 10);
+            if (!isFinite(n) || n < 0) n = 0;
+            localStorage.setItem("mdc_wa_rot", String(n + 1));
+        } catch (e) { n = waRotMem++; }
+        return WA_NUMBERS[n % WA_NUMBERS.length];
+    }
+    window.mdcNextWa = nextWa;
+
+    /* Rotate the number on any store WhatsApp link at click time (capture
+       phase, before navigation). Only the number segment is rewritten —
+       the pre-filled ?text= message is untouched, and the coupon/referral
+       handlers in promo.js / advanced.js still match all three numbers. */
+    document.addEventListener("click", function (e) {
+        var link = e.target && e.target.closest && e.target.closest('a[href*="wa.me/923445739206"]');
+        if (!link) return;
+        var href = link.getAttribute("href");
+        if (!href) return;
+        link.setAttribute("href", href.replace("wa.me/923445739206", "wa.me/" + nextWa()));
+    }, true);
+
     function relRoot() {
         // works for /, /tools/, /tools/x/ and file:// previews
         var s = document.querySelector('script[src$="pages.js"]');
@@ -71,7 +101,7 @@
                 }).sort(function (a, b) { return (priv ? a.privMin - b.privMin : a.min - b.min); }).slice(0, 3);
                 var root = relRoot();
                 if (!list.length) {
-                    out.innerHTML = '<p style="color:var(--text-muted)">No exact match in this budget. <a style="color:var(--primary);font-weight:700" target="_blank" rel="noopener noreferrer" href="https://wa.me/' + WA + '?text=' + encodeURIComponent("Hello MALIK DATA CENTRE! Please suggest a tool for my need and budget.") + '">Ask us on WhatsApp</a> and we will suggest one.</p>';
+                    out.innerHTML = '<p style="color:var(--text-muted)">No exact match in this budget. <a style="color:var(--primary);font-weight:700" target="_blank" rel="noopener noreferrer" href="https://wa.me/' + nextWa() + '?text=' + encodeURIComponent("Hello MALIK DATA CENTRE! Please suggest a tool for my need and budget.") + '">Ask us on WhatsApp</a> and we will suggest one.</p>';
                     return;
                 }
                 out.innerHTML = list.map(function (f) {
@@ -89,7 +119,7 @@
                     if (el.name && el.value.trim()) lines.push(el.name + ": " + el.value.trim());
                 });
                 lines.push("", "Source: " + location.href);
-                window.open("https://wa.me/" + (form.getAttribute("data-wa") || WA) + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+                window.open("https://wa.me/" + (form.getAttribute("data-wa") || nextWa()) + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
             });
         });
     });

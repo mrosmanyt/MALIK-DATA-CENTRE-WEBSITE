@@ -209,7 +209,7 @@
             if (buy && (buy.getAttribute("data-quote") === "1" || buy.classList.contains("btn-contact"))) return;
             if (!buy && !cart) return;
             var href = (buy || cart).getAttribute("href") || "";
-            if (href.indexOf("wa.me/923445739206") === -1 && href.indexOf("wa.me/923445739206") === -1) return; // safety
+            if (href.indexOf("wa.me/923445739206") === -1 && href.indexOf("wa.me/923404104017") === -1 && href.indexOf("wa.me/923489057646") === -1) return; // safety — any of the three rotation numbers is a valid store link
             e.preventDefault();
             e.stopPropagation();
             var context = buy ? fromBuyButton(buy) : fromCart();
