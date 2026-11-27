@@ -182,34 +182,90 @@
     return '<div class="ad-bars">' + list.map(function (r) { return '<div class="ad-bar"><span>' + esc(r[0]) + "</span><b>" + r[1] + (unit || "") + '</b><em><i style="width:' + Math.max(2, 100 * r[1] / max) + '%"></i></em></div>'; }).join("") + "</div>";
   }
   var STATUS = { new: "New", contacted: "Contacted", payment: "Payment pending", won: "Delivered / won", lost: "Not interested" };
+  function hourChart(values) {
+    var W = 640, H = 130, n = values.length, peak = Math.max.apply(null, values), max = Math.max(3, peak), bw = W / n, total = values.reduce(function (a, b) { return a + b; }, 0), bi = values.indexOf(peak);
+    return '<svg class="ad-chart" style="height:130px" viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="none" role="img" aria-label="Page views by hour">' +
+      '<line x1="0" x2="' + W + '" y1="' + (H - 1) + '" y2="' + (H - 1) + '" stroke="currentColor" opacity=".12"/>' +
+      values.map(function (v, i) { var h = (H - 8) * v / max; return '<rect x="' + (i * bw + 1) + '" y="' + (H - 1 - h) + '" width="' + Math.max(1, bw - 3) + '" height="' + h + '" rx="2" fill="#0284c7"><title>' + String(i).padStart(2, "0") + ":00 UTC: " + v + " views</title></rect>"; }).join("") +
+      '</svg><div class="ad-chart-foot"><span>00:00</span><span>' + total + " views so far · busiest hour " + String(bi).padStart(2, "0") + ":00 (" + peak + ')</span><span>23:00</span></div>';
+  }
+  function hitRow(h) {
+    var meta = [h.c, h.d, h.b].filter(Boolean).join(" · ");
+    return '<div class="ad-hit"><span class="ad-hit-p" title="' + esc(h.p) + '">' + esc(h.p) + "</span>" +
+      (meta ? '<span class="ad-pill">' + esc(meta) + "</span>" : "") +
+      (h.r ? '<span class="ad-pill blue">via ' + esc(h.r) + "</span>" : "") +
+      '<span class="ad-hit-t">' + esc(ago(h.t)) + "</span></div>";
+  }
+  function feedHTML(d) {
+    return d.recentHits && d.recentHits.length ? d.recentHits.map(hitRow).join("") : '<p class="ad-empty">No visitors recorded yet — new visits appear here within a minute.</p>';
+  }
+  var dashTimer = null;
   async function pageDashboard(v) {
     title("Dashboard");
-    var days = +(sessionStorage.getItem("dash_days") || 30), d = await api("dashboard?days=" + days);
+    if (dashTimer) { clearInterval(dashTimer); dashTimer = null; }
+    var range = sessionStorage.getItem("dash_range") || sessionStorage.getItem("dash_days") || "30";
+    if (range !== "today" && [7, 30, 90].indexOf(+range) < 0) range = "30";
+    var isToday = range === "today", days = isToday ? 7 : +range;
+    var d = await api("dashboard?days=" + days);
     var k = function (cls, ico, val, lbl) { return '<div class="ad-kpi ' + cls + '"><i class="' + ico + '"></i><b>' + val + "</b><span>" + lbl + "</span></div>"; };
-    var html = '<div class="ad-toolbar"><div class="ad-tabs" style="margin:0">' + [7, 30, 90].map(function (n) { return '<button class="ad-tab' + (n === days ? " on" : "") + '" data-days="' + n + '">Last ' + n + " days</button>"; }).join("") + "</div></div>";
-    html += '<div class="ad-grid k" style="margin-bottom:16px">' + k("blue", "fa-solid fa-eye", d.totals.views.toLocaleString(), "Page views") + k("", "fa-solid fa-user", d.totals.visitors.toLocaleString(), "Visitors (daily unique)");
+    var tabs = [["today", "Today"], ["7", "Last 7 days"], ["30", "Last 30 days"], ["90", "Last 90 days"]];
+    var html = '<div class="ad-toolbar"><div class="ad-tabs" style="margin:0">' + tabs.map(function (t) { return '<button class="ad-tab' + (String(range) === t[0] ? " on" : "") + '" data-range="' + t[0] + '">' + t[1] + "</button>"; }).join("") + "</div></div>";
+    html += '<div class="ad-grid k" style="margin-bottom:16px">';
+    if (isToday) {
+      html += k("blue", "fa-solid fa-eye", d.today.views.toLocaleString(), "Page views · today so far") + k("", "fa-solid fa-user", d.today.visitors.toLocaleString(), "Visitors · today so far") +
+        k("green", "fa-solid fa-signal", d.onlineNow, "Online now (last 5 min)") + k("", "fa-solid fa-clock-rotate-left", d.yesterday.views.toLocaleString(), "Page views yesterday (full day)");
+    } else {
+      var cv = d.change.views;
+      html += k("blue", "fa-solid fa-eye", d.totals.views.toLocaleString(), "Page views") + k("", "fa-solid fa-user", d.totals.visitors.toLocaleString(), "Visitors (daily unique)" + (d.change.visitors === null ? "" : " · " + (d.change.visitors > 0 ? "+" : "") + d.change.visitors + "% vs previous")) +
+        k("green", "fa-solid fa-signal", d.onlineNow, "Online now (last 5 min)") +
+        k(cv === null ? "" : cv >= 0 ? "green" : "red", "fa-solid fa-arrow-trend-" + (cv !== null && cv < 0 ? "down" : "up"), cv === null ? "—" : (cv > 0 ? "+" : "") + cv + "%", "Views vs previous " + days + " days");
+    }
     if (d.newLeads !== undefined) html += k("green", "fa-solid fa-inbox", d.newLeads, "New enquiries") + k(d.followDue.length ? "warn" : "", "fa-solid fa-bell", d.followDue.length, "Follow-ups due");
     if (d.orders && !d.orders.error) html += k("warn", "fa-solid fa-hourglass-half", d.orders.pending, "Orders waiting") + k("green", "fa-solid fa-sack-dollar", rs(d.orders.revenue), "Completed sales");
     html += "</div>";
-    html += '<div class="ad-card"><h3>Visitors <small>' + days + ' days</small></h3><div class="ad-legend"><span><i style="background:#0284c7"></i>Page views</span><span><i style="background:#16a34a"></i>Visitors</span></div>' +
-      lineChart(d.dates, [{ values: d.views, color: "#0284c7", fill: true }, { values: d.visitors, color: "#16a34a" }]) + "</div>";
+    if (isToday) {
+      html += '<div class="ad-card"><h3>Today so far <small>page views by hour · the day is counted in UTC</small></h3>' + hourChart(d.today.hourly) +
+        '<p class="ad-hint">Today is still in progress — these numbers keep growing until midnight UTC (5 am Pakistan time). A low figure in the morning is normal, not a drop.</p></div>';
+    } else {
+      html += '<div class="ad-card"><h3>Visitors <small>' + days + ' days</small></h3><div class="ad-legend"><span><i style="background:#0284c7"></i>Page views</span><span><i style="background:#16a34a"></i>Visitors</span></div>' +
+        lineChart(d.dates, [{ values: d.views, color: "#0284c7", fill: true }, { values: d.visitors, color: "#16a34a" }]) +
+        '<p class="ad-hint">Days are counted in UTC and today is still in progress, so the last point is always lower in the morning — it fills up by midnight UTC (5 am Pakistan time).</p></div>';
+    }
     html += '<div class="ad-grid two">';
     if (d.leadsPerDay) html += '<div class="ad-card"><h3>Enquiries per day</h3>' + barChart(d.dates, d.leadsPerDay, "#16a34a") + "</div>" +
       '<div class="ad-card"><h3>Enquiry pipeline</h3>' + bars(d.pipeline.map(function (p) { return [STATUS[p[0]], p[1]]; })) + "</div>";
     if (d.followDue) html += '<div class="ad-card"><h3><i class="fa-solid fa-bell" style="color:var(--warn)"></i> Follow-ups due</h3>' + (d.followDue.length ? d.followDue.map(function (f) {
       return '<a class="ad-lead due" href="#leads/' + esc(f.id) + '" style="text-decoration:none;grid-template-columns:1fr auto"><div><b>' + esc(f.name || f.phone || "Enquiry") + "</b><p>" + esc(f.phone || "") + '</p></div><span class="ad-pill ' + (f.overdue ? "red" : "warn") + '">' + (f.overdue ? "Overdue · " : "Today · ") + esc(f.followUp) + "</span></a>";
     }).join("") : '<p class="ad-empty">Nothing due. 🎉</p>') + "</div>";
-    html += '<div class="ad-card"><h3>Top pages</h3>' + bars(d.topPages) + "</div>";
-    html += '<div class="ad-card"><h3>Devices</h3>' + bars(d.devices) + "</div>";
-    html += '<div class="ad-card"><h3>Where visitors came from</h3>' + bars(d.referrers) + '<p class="ad-hint">Visits that came from other websites (Google, Facebook, YouTube…). Typing the address or using bookmarks is not counted here.</p></div>';
+    html += "</div>";
+    var B = isToday ? d.todayBreakdown : d, scope = isToday ? "today so far" : days + " days";
+    var newHint = '<p class="ad-hint">This breakdown only started collecting today — earlier days are not included yet.</p>';
+    var card = function (t, list, hint) { return '<div class="ad-card"><h3>' + t + " <small>" + scope + "</small></h3>" + bars(list) + (hint && (!list || !list.length) ? hint : "") + "</div>"; };
+    html += '<div class="ad-grid two">';
+    html += card("Top pages", (B.topPages || []).slice(0, 10));
+    html += card("Page types", B.pageTypes);
+    html += "</div>";
+    if (B.topPages && B.topPages.length > 10) html += '<div class="ad-card"><h3>Every page <small>top ' + B.topPages.length + " · " + scope + "</small></h3>" + bars(B.topPages) + "</div>";
+    html += '<div class="ad-grid two">';
+    html += card("Countries", B.countries, newHint);
+    html += '<div class="ad-card"><h3>Where visitors came from <small>' + scope + '</small></h3>' + bars((B.referrers || []).slice(0, 10)) + '<p class="ad-hint">Visits that came from other websites (Google, Facebook, YouTube…). Typing the address or using bookmarks is not counted here.</p></div>';
+    html += card("Browsers", B.browsers, newHint);
+    html += card("Devices", B.devices);
+    html += card("Operating systems", B.os, newHint);
+    html += "</div>";
+    html += '<div class="ad-card"><h3><span class="ad-live-dot"></span> Recent visitors <small>latest visits across the whole site · refreshes every minute</small></h3><div id="ana-feed">' + feedHTML(d) + "</div></div>";
     html += '<div class="ad-card"><h3>Quick links</h3><div class="ad-row">' +
       (can("leads.view") ? '<a class="ad-btn" href="#leads"><i class="fa-solid fa-inbox"></i> Enquiries</a>' : "") + (can("orders.view") ? '<a class="ad-btn" href="#orders"><i class="fa-solid fa-bag-shopping"></i> Orders</a>' : "") +
       (can("content.view") ? '<a class="ad-btn" href="#content/tools"><i class="fa-solid fa-tags"></i> Prices</a><a class="ad-btn" href="#content/announcement"><i class="fa-solid fa-bullhorn"></i> Announcement</a><a class="ad-btn" href="#content/blog"><i class="fa-solid fa-pen"></i> New blog post</a>' : "") +
       '<a class="ad-btn" href="/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Website</a></div></div>';
-    html += "</div>";
     if (d.orders && d.orders.error) html = '<div class="ad-callout warn"><i class="fa-solid fa-plug-circle-exclamation"></i><div>Orders could not be loaded from the store database.</div></div>' + html;
     v.innerHTML = html;
-    $$("[data-days]", v).forEach(function (b) { b.onclick = function () { sessionStorage.setItem("dash_days", b.getAttribute("data-days")); route(); }; });
+    $$("[data-range]", v).forEach(function (b) { b.onclick = function () { sessionStorage.setItem("dash_range", b.getAttribute("data-range")); sessionStorage.setItem("dash_days", b.getAttribute("data-range") === "today" ? "7" : b.getAttribute("data-range")); route(); }; });
+    dashTimer = setInterval(async function () {
+      var feed = document.getElementById("ana-feed");
+      if (!feed || (location.hash || "#dashboard") !== "#dashboard") { clearInterval(dashTimer); dashTimer = null; return; }
+      try { var nd = await api("dashboard?days=7"); feed.innerHTML = feedHTML(nd); } catch (e) {}
+    }, 60000);
   }
 
   /* ======================================================================

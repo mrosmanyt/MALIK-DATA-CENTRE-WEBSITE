@@ -104,6 +104,10 @@ label { display: block; font-weight: 600; font-size: .82rem; margin: 0 0 5px; co
 .ad-bar span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ad-bar em { grid-column: 1 / -1; height: 6px; border-radius: 4px; background: var(--bg3); overflow: hidden; } .ad-bar em i { display: block; height: 100%; background: var(--acc); border-radius: 4px; }
 .ad-empty { color: var(--tx3); text-align: center; padding: 26px 10px; font-size: .9rem; }
+.ad-hit { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 6px; font-size: .84rem; }
+.ad-hit-p { font-weight: 600; flex: 1 1 180px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ad-hit-t { color: var(--tx3); font-size: .76rem; margin-left: auto; white-space: nowrap; }
+.ad-live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); display: inline-block; flex: none; }
 .ad-legend { display: flex; gap: 14px; font-size: .78rem; color: var(--tx3); } .ad-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
 
 /* ---------- pills & tags ---------- */

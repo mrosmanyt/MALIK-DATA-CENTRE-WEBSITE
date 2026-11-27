@@ -73,6 +73,31 @@ async function contentJS(req, res) {
 }
 
 const BOT = /bot|crawl|spider|slurp|preview|headless|lighthouse|facebookexternalhit|whatsapp|curl|wget|python|monitor/i;
+/* small hand-rolled user-agent parsers for the analytics breakdowns (no dependencies; order matters — Edge/Samsung/Opera UAs also contain "Chrome", Chrome's also contains "Safari") */
+function uaBrowser(ua) {
+  if (/edg\//i.test(ua)) return "Edge";
+  if (/samsungbrowser\//i.test(ua)) return "Samsung Internet";
+  if (/opr\/|opera/i.test(ua)) return "Opera";
+  if (/firefox\//i.test(ua)) return "Firefox";
+  if (/chromium\//i.test(ua)) return "Chromium";
+  if (/chrome\//i.test(ua)) return "Chrome";
+  if (/safari\//i.test(ua)) return "Safari";
+  if (/msie |trident\//i.test(ua)) return "Internet Explorer";
+  return "Other";
+}
+function uaOS(ua) {
+  if (/windows/i.test(ua)) return /windows nt (10|11)/i.test(ua) ? "Windows 10/11" : "Windows";
+  if (/android/i.test(ua)) return "Android";
+  if (/iphone|ipad|ipod/i.test(ua)) return "iOS";
+  if (/mac os x|macintosh/i.test(ua)) return "macOS";
+  if (/linux/i.test(ua)) return "Linux";
+  return "Other";
+}
+// Vercel sets this header on every request at the edge; XX/T1 are its "unknown" values
+function hitCountry(req) {
+  const c = String(req.headers["x-vercel-ip-country"] || "").toUpperCase();
+  return /^[A-Z]{2}$/.test(c) && c !== "XX" && c !== "T1" ? c : "Unknown";
+}
 async function track(req, res) {
   res.setHeader("Cache-Control", "no-store");
   const ua = String(req.headers["user-agent"] || "");
@@ -88,8 +113,14 @@ async function track(req, res) {
   const device = /ipad|tablet/i.test(ua) ? "Tablet" : /mobi|android|iphone/i.test(ua) ? "Phone" : "Computer";
   let ref = "";
   try { const r = new URL(String(b.r || "")); if (!/malikdatacentre\.(store|online)$/i.test(r.hostname)) ref = r.hostname.replace(/^www\./, "").slice(0, 60); } catch (e) {}
+  const browser = uaBrowser(ua), os = uaOS(ua), country = hitCountry(req);
+  const now = Date.now(), hour = String(new Date(now).getUTCHours());
   const ttl = 400 * DAY, cmds = [["HINCRBY", "pv:" + day, p, 1], ["INCR", "pvt:" + day], ["PFADD", "uv:" + day, visitor], ["HINCRBY", "dev:" + day, device, 1],
-    ["EXPIRE", "pv:" + day, ttl], ["EXPIRE", "pvt:" + day, ttl], ["EXPIRE", "uv:" + day, ttl], ["EXPIRE", "dev:" + day, ttl]];
+    ["HINCRBY", "cty:" + day, country, 1], ["HINCRBY", "brw:" + day, browser, 1], ["HINCRBY", "os:" + day, os, 1], ["HINCRBY", "hr:" + day, hour, 1],
+    ["EXPIRE", "pv:" + day, ttl], ["EXPIRE", "pvt:" + day, ttl], ["EXPIRE", "uv:" + day, ttl], ["EXPIRE", "dev:" + day, ttl],
+    ["EXPIRE", "cty:" + day, ttl], ["EXPIRE", "brw:" + day, ttl], ["EXPIRE", "os:" + day, ttl], ["EXPIRE", "hr:" + day, ttl],
+    ["LPUSH", "hits", JSON.stringify({ t: now, p: p, c: country, d: device, b: browser, r: ref })], ["LTRIM", "hits", 0, 199],
+    ["ZADD", "online", now, visitor], ["ZREMRANGEBYSCORE", "online", 0, now - 10 * 60 * 1000]];
   if (ref) cmds.push(["HINCRBY", "ref:" + day, ref, 1], ["EXPIRE", "ref:" + day, ttl]);
   await pipe(cmds);
   return H.json(res, 200, { ok: true });
@@ -474,15 +505,44 @@ async function exportLeads(req, res, me) {
 /* ---------------- dashboard ---------------- */
 async function dashboard(me, days) {
   days = Math.max(7, Math.min(90, days));
-  const dates = []; for (let i = days - 1; i >= 0; i--) dates.push(H.today(new Date(Date.now() - i * DAY * 1000)));
+  const DAYMS = DAY * 1000, nowMs = Date.now();
+  const dates = []; for (let i = days - 1; i >= 0; i--) dates.push(H.today(new Date(nowMs - i * DAYMS)));
+  const prevDates = []; for (let i = days * 2 - 1; i >= days; i--) prevDates.push(H.today(new Date(nowMs - i * DAYMS)));
+  const todayStr = dates[dates.length - 1];
   const cmds = [];
-  dates.forEach(d => cmds.push(["GET", "pvt:" + d], ["PFCOUNT", "uv:" + d], ["HGETALL", "pv:" + d], ["HGETALL", "dev:" + d], ["HGETALL", "ref:" + d]));
+  dates.forEach(d => cmds.push(["GET", "pvt:" + d], ["PFCOUNT", "uv:" + d], ["HGETALL", "pv:" + d], ["HGETALL", "dev:" + d], ["HGETALL", "ref:" + d], ["HGETALL", "cty:" + d], ["HGETALL", "brw:" + d], ["HGETALL", "os:" + d]));
+  prevDates.forEach(d => cmds.push(["GET", "pvt:" + d], ["PFCOUNT", "uv:" + d]));
+  cmds.push(["HGETALL", "hr:" + todayStr], ["LRANGE", "hits", 0, 49], ["ZREMRANGEBYSCORE", "online", 0, nowMs - 10 * 60 * 1000], ["ZCOUNT", "online", nowMs - 5 * 60 * 1000, "+inf"]);
   const r = await pipe(cmds);
-  const views = [], visitors = [], pages = {}, devices = {}, refs = {};
-  const add = (into, obj) => { const o = pairs(obj); for (const k in o) into[k] = (into[k] || 0) + Number(o[k]); };
-  dates.forEach((d, i) => { views.push(Number(r[i * 5]) || 0); visitors.push(Number(r[i * 5 + 1]) || 0); add(pages, r[i * 5 + 2]); add(devices, r[i * 5 + 3]); add(refs, r[i * 5 + 4]); });
-  const top = o => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, 10);
-  const out = { dates, views, visitors, topPages: top(pages), devices: top(devices), referrers: top(refs), totals: { views: views.reduce((a, b) => a + b, 0), visitors: visitors.reduce((a, b) => a + b, 0) } };
+  const views = [], visitors = [], pages = {}, devices = {}, refs = {}, countries = {}, browsers = {}, oss = {};
+  const addObj = (into, o) => { for (const k in o) into[k] = (into[k] || 0) + Number(o[k]); };
+  let tm = null; // today's own breakdown maps (last date in the range)
+  dates.forEach((d, i) => {
+    const b = i * 8;
+    views.push(Number(r[b]) || 0); visitors.push(Number(r[b + 1]) || 0);
+    const pg = pairs(r[b + 2]), dv = pairs(r[b + 3]), rf = pairs(r[b + 4]), ct = pairs(r[b + 5]), br = pairs(r[b + 6]), os = pairs(r[b + 7]);
+    addObj(pages, pg); addObj(devices, dv); addObj(refs, rf); addObj(countries, ct); addObj(browsers, br); addObj(oss, os);
+    if (i === dates.length - 1) tm = { pages: pg, devices: dv, refs: rf, countries: ct, browsers: br, os: os };
+  });
+  let pi = days * 8, prevViews = 0, prevVisitors = 0;
+  prevDates.forEach(() => { prevViews += Number(r[pi]) || 0; prevVisitors += Number(r[pi + 1]) || 0; pi += 2; });
+  const hrObj = pairs(r[pi]); pi++;
+  const hourly = []; for (let h = 0; h < 24; h++) hourly.push(Number(hrObj[String(h)]) || 0);
+  const recentHits = (r[pi] || []).map(s => parse(s)).filter(h => h && h.t && h.p); pi += 2; // skip LRANGE result + prune count
+  const onlineNow = Number(r[pi]) || 0;
+  const top = (o, n) => Object.entries(o).map(([k, v]) => [k, Number(v) || 0]).sort((a, b) => b[1] - a[1]).slice(0, n || 10);
+  const typeOf = p => (p === "/" || p === "") ? "Homepage" : /^\/tools(\/|$)/.test(p) ? "Tools" : /^\/blog(\/|$)/.test(p) ? "Blog" : "Other pages";
+  const typesOf = pg => { const t = {}; for (const p in pg) { const k = typeOf(p); t[k] = (t[k] || 0) + Number(pg[p]); } return top(t, 4); };
+  const totals = { views: views.reduce((a, b) => a + b, 0), visitors: visitors.reduce((a, b) => a + b, 0) };
+  const pct = (cur, prev) => prev > 0 ? Math.round((cur - prev) / prev * 1000) / 10 : null;
+  const out = { dates, views, visitors, topPages: top(pages, 50), devices: top(devices), referrers: top(refs, 50), totals,
+    countries: top(countries), browsers: top(browsers), os: top(oss), pageTypes: typesOf(pages),
+    prevTotals: { views: prevViews, visitors: prevVisitors },
+    change: { views: pct(totals.views, prevViews), visitors: pct(totals.visitors, prevVisitors) },
+    today: { date: todayStr, views: views[views.length - 1] || 0, visitors: visitors[visitors.length - 1] || 0, hourly: hourly },
+    yesterday: { views: views[views.length - 2] || 0, visitors: visitors[visitors.length - 2] || 0 },
+    todayBreakdown: { topPages: top(tm.pages, 50), devices: top(tm.devices), referrers: top(tm.refs, 50), countries: top(tm.countries), browsers: top(tm.browsers), os: top(tm.os), pageTypes: typesOf(tm.pages) },
+    onlineNow: onlineNow, recentHits: recentHits };
   if (A.can(me, "leads.view")) {
     const leads = await allLeads(), start = Date.parse(dates[0]), td = H.today();
     out.leadsPerDay = dates.map(d => leads.filter(l => H.today(new Date(l.ts)) === d).length);
