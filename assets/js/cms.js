@@ -505,6 +505,16 @@
     if (document.readyState === "complete") setTimeout(send, 300); else window.addEventListener("load", function () { setTimeout(send, 300); });
   }
 
+  /* ---------------- Vercel Web Analytics ---------------- */
+  function vercelAnalytics() {
+    if (/^\/admin/.test(location.pathname)) return;
+    if (document.querySelector("script[src^='/_vercel/insights/']")) return;
+    var s = document.createElement("script");
+    s.defer = true;
+    s.src = "/_vercel/insights/script.js";
+    (document.head || document.documentElement).appendChild(s);
+  }
+
   /* ---------------- run ---------------- */
   window.MDC_CMS = {
     content: C, extract: extract, esc: esc, safeUrl: safeUrl, richHTML: richHTML,
@@ -512,6 +522,7 @@
   };
   captureForms();
   track();
+  vercelAnalytics();
   if (!C) return;
   try {
     applyMarked(C);
