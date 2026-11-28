@@ -1939,7 +1939,7 @@ const TOOLS_DATABASE = [
 if (window.MDC_CMS && typeof window.MDC_CMS.tools === "function") { try { window.MDC_CMS.tools(TOOLS_DATABASE); } catch (e) { console.warn(e); } }
 
 // Official WhatsApp numbers — round-robin rotation across the three store lines (owner order 2026-11-26)
-const WHATSAPP_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+const WHATSAPP_NUMBERS = ["923445739206", "923404104017"];
 let waCounter = 0;
 function getWhatsAppNumber() {
     const num = WHATSAPP_NUMBERS[waCounter % WHATSAPP_NUMBERS.length];

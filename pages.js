@@ -11,7 +11,7 @@
        1st click -> number 1, 2nd -> number 2, 3rd -> number 3, 4th -> 1...
        The counter persists per visitor in localStorage ("mdc_wa_rot"), so
        the spread stays even across pages and visits in aggregate. */
-    var WA_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+    var WA_NUMBERS = ["923445739206", "923404104017"];
     var waRotMem = 0;
     function nextWa() {
         var n;

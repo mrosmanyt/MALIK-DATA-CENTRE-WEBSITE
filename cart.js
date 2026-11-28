@@ -4,7 +4,7 @@
 (function () {
     "use strict";
 
-    const WA_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+    const WA_NUMBERS = ["923445739206", "923404104017"];
     let cartWaIdx = 0;
     function getWaUrl(text) {
         const num = WA_NUMBERS[cartWaIdx % WA_NUMBERS.length];

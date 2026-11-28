@@ -9,7 +9,7 @@
        rotation counter from pages.js (window.mdcNextWa, localStorage
        "mdc_wa_rot"); fall back to the same counter locally if pages.js
        is not present. */
-    var WA_NUMBERS = ["923445739206", "923404104017", "923489057646"];
+    var WA_NUMBERS = ["923445739206", "923404104017"];
     var waRotMem = 0;
     function nextWa() {
         if (typeof window.mdcNextWa === "function") return window.mdcNextWa();
@@ -43,7 +43,7 @@
             var r = "";
             try { r = localStorage.getItem("mdc_ref") || ""; } catch (e2) {}
             if (!r) return;
-            var link = e.target.closest('a[href*="wa.me/923445739206?text="], a[href*="wa.me/923404104017?text="], a[href*="wa.me/923489057646?text="]');
+            var link = e.target.closest('a[href*="wa.me/923445739206?text="], a[href*="wa.me/923404104017?text="]');
             if (!link) return;
             var href = link.getAttribute("href");
             if (!href || href.indexOf("Referral") !== -1) return;
