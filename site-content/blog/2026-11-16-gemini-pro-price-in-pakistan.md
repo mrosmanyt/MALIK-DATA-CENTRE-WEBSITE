@@ -75,14 +75,14 @@ Ultra on our store is three access types, at very different prices:
 | Ultra plan | Duration | Access | Price |
 |---|---|---|---|
 | Shared base | 1 month | Shared account | Rs 2,500 |
-| Flow Ultra 20x | 1 month | Delivered on WhatsApp | Rs 29,999 |
+| Flow Ultra 20x | 1 month | Delivered on WhatsApp | Rs 30,000 |
 | 25k credits slot | 1 month | Dedicated slot | Rs 26,000 |
 
-The shared plan's listed original price is Rs 6,000. The 25k slot's listed original price is Rs 45,000. The Flow Ultra 20x price and original price are both Rs 29,999.
+The shared plan's listed original price is Rs 6,000. The 25k slot's listed original price is Rs 45,000. The Flow Ultra 20x price is Rs 30,000, with a listed original price of Rs 60,000.
 
 The shared listing describes unlimited video generation, Antigravity, and other Ultra features, with a 25-day warranty line. "Unlimited" is the word on that listing. It is a shared account, so it is the budget way to try Ultra, not a private studio. The Flow Ultra 20x listing is Veo 3 with 20x Flow usage, Antigravity, Gemini Ultra and the other Ultra features, delivered on WhatsApp. The 25k slot is a dedicated slot listed as 25,000 credits, with a 28-day warranty line, for heavy use. Those three sentences are the catalog. They are not a guess at how many finished videos a credit produces. Google's own Ultra prices on the plans page are $99.99 a month (official) for Ultra 5x and $199.99 a month (official) for Ultra 20x. Our rows are the access types above, not a copy of that dollar checkout.
 
-The side-by-side is on [Gemini Pro vs Google AI Ultra](/comparisons/gemini-pro-vs-google-ai-ultra/). Start on Pro if you write. Move to Ultra if you are generating video every week. A shared Ultra month at Rs 2,500 is the test for video. The Rs 26,000 and Rs 29,999 rows are for people who already know they need the slot or the Flow 20x plan.
+The side-by-side is on [Gemini Pro vs Google AI Ultra](/comparisons/gemini-pro-vs-google-ai-ultra/). Start on Pro if you write. Move to Ultra if you are generating video every week. A shared Ultra month at Rs 2,500 is the test for video. The Rs 26,000 and Rs 30,000 rows are for people who already know they need the slot or the Flow 20x plan.
 
 ## How own-email activation works
 
@@ -125,7 +125,7 @@ No. Gemini Plus on this store is an activation link, Rs 600 for 12 months or Rs 
 
 ### I want to generate video. Is Pro enough?
 
-Buy Ultra if video is the job. Shared Ultra is Rs 2,500 for 1 month. The Flow Ultra 20x plan is Rs 29,999. The 25k credits slot is Rs 26,000. Pro is the writing and Google-apps plan. The comparison page walks through the difference without a made-up video quota.
+Buy Ultra if video is the job. Shared Ultra is Rs 2,500 for 1 month. The Flow Ultra 20x plan is Rs 30,000. The 25k credits slot is Rs 26,000. Pro is the writing and Google-apps plan. The comparison page walks through the difference without a made-up video quota.
 
 ### Do I need a credit card?
 

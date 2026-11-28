@@ -144,6 +144,18 @@ const TOOLS_DATABASE = [
         icon: `<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Gemini"><defs><linearGradient id="mdcGemGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4285F4"/><stop offset=".55" stop-color="#9B72CB"/><stop offset="1" stop-color="#D96570"/></linearGradient></defs><path fill="url(#mdcGemGrad)" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>`
     },
     {
+        id: "google-veo3-extension-ultra",
+        name: "Veo 3 Extension Based Ultra Official Plan",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 1990,
+        originalPrice: 2000,
+        setup: "Delivered on WhatsApp",
+        desc: "Veo 3 Extension Based Ultra Official Plan — Veo 3 video generation with Google AI Ultra features, delivered on WhatsApp.",
+        specs: ["30 Days Full Warranty", "Veo 3 Video Generation", "Official Extension Based Plan", "Google AI Ultra Features", "Delivered on WhatsApp"],
+        icon: `<svg width="24" height="24" fill="#4285F4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>`
+    },
+    {
         id: "google-ai-ultra-shared-1m",
         name: "Google AI Ultra Shared Base Unlimited",
         category: "ai-chat",
@@ -156,15 +168,27 @@ const TOOLS_DATABASE = [
         icon: `<svg width="24" height="24" fill="#4285F4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>`
     },
     {
+        id: "google-veo3-ultra-5x",
+        name: "Google Veo 3 Ultra (Flow Ultra 5x Plan)",
+        category: "ai-chat",
+        duration: "1 Month Plan",
+        price: 15000,
+        originalPrice: 30000,
+        setup: "Delivered on WhatsApp",
+        desc: "Google's Flow Ultra 5x plan 🚀 — Veo 3 video generation with 5x Flow usage, Google Antigravity, Gemini Ultra and all Google AI Ultra features. This is the smaller 5X Ultra tier; the 20X Full Max Ultra Plan is the bigger, maximum tier.",
+        specs: ["15 Days Full Warranty", "Flow Ultra 5x Usage", "Veo 3 Video Generation", "Google Antigravity Included", "Gemini Ultra & All Ultra Features"],
+        icon: `<svg width="24" height="24" fill="#4285F4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>`
+    },
+    {
         id: "google-veo3-ultra-20x",
         name: "Google Veo 3 Ultra (Flow Ultra 20x Plan)",
         category: "ai-chat",
         duration: "1 Month Plan",
-        price: 29999,
-        originalPrice: 29999,
+        price: 30000,
+        originalPrice: 60000,
         setup: "Delivered on WhatsApp",
-        desc: "Google's Flow Ultra 20x plan 🚀 — Veo 3 video generation with 20x Flow usage, Google Antigravity, Gemini Ultra and all Google AI Ultra features.",
-        specs: ["Flow Ultra 20x Usage", "Veo 3 Video Generation", "Google Antigravity Included", "Gemini Ultra & All Ultra Features"],
+        desc: "The 20X Full Max Ultra Plan 🚀 — Google's Flow Ultra 20x plan: Veo 3 video generation with 20x Flow usage, Google Antigravity, Gemini Ultra and all Google AI Ultra features. This is the full, maximum Ultra tier; the 5x plan below is the smaller Ultra tier.",
+        specs: ["15 Days Full Warranty", "Flow Ultra 20x Usage", "Veo 3 Video Generation", "Google Antigravity Included", "Gemini Ultra & All Ultra Features"],
         icon: `<svg width="24" height="24" fill="#4285F4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>`
     },
     {

@@ -57,12 +57,12 @@ module.exports = [
   },
   {
     slug: "google-ai-ultra", logo: "google.svg", name: "Google AI Ultra", cat: "ai-chat", icon: "fa-brands fa-google",
-    ids: ["google-ai-ultra-shared-1m", "google-veo3-ultra-20x", "google-ai-ultra-25k-slot"], official: "https://one.google.com/about/google-ai-plans/",
-    intro: "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer three ways in, from a budget shared base to the Flow Ultra 20x plan for heavy Veo 3 video work.",
+    ids: ["google-veo3-extension-ultra", "google-ai-ultra-shared-1m", "google-veo3-ultra-5x", "google-ai-ultra-25k-slot", "google-veo3-ultra-20x"], official: "https://one.google.com/about/google-ai-plans/",
+    intro: "Google AI Ultra is Google's top AI tier: Gemini Ultra, Veo video generation, Flow and the highest usage limits. We offer five ways in, from the budget Veo 3 Extension plan and a shared base to the 20X Full Max Ultra Plan for heavy Veo 3 video work.",
     bestFor: ["Video creators who need Veo and Flow for ads, reels and shorts", "Agencies producing AI video at volume", "Power users who need the highest Gemini limits"],
     included: ["Gemini Ultra and the highest Gemini usage limits", "Veo video generation inside Gemini and Flow", "Google Antigravity and other Ultra features", "AI credits (amount depends on the plan you pick)", "Full warranty for the stated plan period"],
     faqs: [
-      ["What is the difference between Shared Base, Flow Ultra 20x and the 25k Slot?", "Shared Base is the cheapest way to try Ultra features on a shared account. The Flow Ultra 20x plan gives Veo 3 with 20x Flow usage, Google Antigravity and all Ultra features. The 25k Credits Slot is a dedicated slot for very heavy usage."],
+      ["What is the difference between the Extension plan, Shared Base, Flow Ultra 5x, Flow Ultra 20x and the 25k Slot?", "The Extension Based Ultra plan is the lowest-cost official way in to Veo 3. Shared Base is the cheapest way to try Ultra features on a shared account. The Flow Ultra 5x plan is the smaller Ultra tier, with Veo 3 and 5x Flow usage. The 20X Full Max Ultra Plan is the full, maximum Ultra tier: Veo 3 with 20x Flow usage, Google Antigravity and all Ultra features. The 25k Credits Slot is a dedicated slot for very heavy usage."],
       ["How is the Flow Ultra 20x plan delivered?", "Message us on WhatsApp after ordering. We send the access details and setup steps, and help you until Veo 3 and Flow are working."]
     ],
     proof: {

@@ -1,14 +1,14 @@
 ---
 title: Google AI Ultra Price in Pakistan: Shared, Flow and 25k Slot
 slug: google-ai-ultra-price-in-pakistan
-description: Google AI Ultra price in Pakistan is Rs 2,500 shared, Rs 29,999 for Flow Ultra 20x, or Rs 26,000 for a 25k credits slot.
+description: Google AI Ultra price in Pakistan is Rs 2,500 shared, Rs 30,000 for Flow Ultra 20x, or Rs 26,000 for a 25k credits slot.
 date: 2026-11-17
 updated: 2026-11-17
 category: Buying Guide
 icon: fa-brands fa-google
 keywords: google ai ultra price in pakistan, google ai ultra shared, flow ultra 20x price, google ai ultra 25k slot, veo 3 pakistan, buy google ai ultra
 tools: google-ai-ultra, gemini-pro
-answer: Google AI Ultra at Malik Data Centre is Rs 2,500 for a 1-month shared account, Rs 29,999 for Flow Ultra 20x on WhatsApp, or Rs 26,000 for a dedicated 25k credits slot. Shared shows an original price of Rs 6,000. The slot shows Rs 45,000. Google lists Ultra 5x at $99.99 a month (official) and Ultra 20x at $199.99 a month (official). Those credits are not a count of finished videos.
+answer: Google AI Ultra at Malik Data Centre is Rs 2,500 for a 1-month shared account, Rs 30,000 for Flow Ultra 20x on WhatsApp, or Rs 26,000 for a dedicated 25k credits slot. Shared shows an original price of Rs 6,000. The slot shows Rs 45,000. Google lists Ultra 5x at $99.99 a month (official) and Ultra 20x at $199.99 a month (official). Those credits are not a count of finished videos.
 ---
 
 People search the Google AI Ultra price when Gemini Pro is already open and the job has moved to video. This page is the rupee price for the three Ultra rows we sell, what each access type actually is, and the point where a cheaper Gemini Pro year is the better buy. It is for editors, small agencies and anyone generating in Flow or Veo. It is not a writing plan, and it does not invent a quota of finished videos.
@@ -20,10 +20,10 @@ All three rows are on our [Google AI Ultra page](/tools/google-ai-ultra/). The p
 | Plan | Duration | Access | Price |
 |---|---|---|---|
 | Google AI Ultra Shared Base | 1 month | Shared account | Rs 2,500 |
-| Flow Ultra 20x (Veo 3) | 1 month | Delivered on WhatsApp | Rs 29,999 |
+| Flow Ultra 20x (Veo 3) | 1 month | Delivered on WhatsApp | Rs 30,000 |
 | Google AI Ultra 25k credits slot | 1 month | Dedicated slot | Rs 26,000 |
 
-The shared plan's listed original price is Rs 6,000. The 25k slot's listed original price is Rs 45,000. The Flow Ultra 20x price and original price are both Rs 29,999, so that row has no separate discount figure.
+The shared plan's listed original price is Rs 6,000. The 25k slot's listed original price is Rs 45,000. The Flow Ultra 20x price is Rs 30,000, with a listed original price of Rs 60,000.
 
 Pay with EasyPaisa, JazzCash, NayaPay, UPaisa or bank transfer. Outside Pakistan, pay in USDT. The steps match our guide to [buying AI tools in Pakistan without a credit card](/blog/buy-ai-tools-pakistan-without-credit-card.html).
 
@@ -42,10 +42,10 @@ Those three paragraphs are the catalog. They are not a guess at how many finishe
 Pick the row by the job:
 
 1. You want to see whether Ultra video is useful at all. Start with the shared month at Rs 2,500. Export anything you need to keep.
-2. You already know you need the Flow Ultra 20x plan, with Veo 3 called out on the listing. That is the Rs 29,999 row.
+2. You already know you need the Flow Ultra 20x plan, with Veo 3 called out on the listing. That is the Rs 30,000 row.
 3. You want a dedicated 25k credits slot for heavy use, with the 28-day warranty line. That is the Rs 26,000 row.
 
-Do not buy the Rs 26,000 or Rs 29,999 row to "try a reel". One shared month answers that question. Move up only after you have used the shared plan, or after you already know the access type from a previous job.
+Do not buy the Rs 26,000 or Rs 30,000 row to "try a reel". One shared month answers that question. Move up only after you have used the shared plan, or after you already know the access type from a previous job.
 
 ## What Google lists on the AI plans page
 
@@ -77,7 +77,7 @@ Gemini Pro is the writing and Google-apps plan. The price and the lengths are in
 
 The 12-month Gemini listing shows an original price of Rs 3,000. The side-by-side of the two families is on [Gemini Pro vs Google AI Ultra](/comparisons/gemini-pro-vs-google-ai-ultra/).
 
-Buy the Rs 1,500 year if the work is Docs, Gmail, study notes and ordinary chat. Pro includes some image and video tools. The amount is whatever Google shows on that account. If the real job is generating video every week, Pro is the wrong row. A shared Ultra month at Rs 2,500 is the test. The Rs 26,000 and Rs 29,999 rows are for people who already know they need the slot or the Flow 20x plan.
+Buy the Rs 1,500 year if the work is Docs, Gmail, study notes and ordinary chat. Pro includes some image and video tools. The amount is whatever Google shows on that account. If the real job is generating video every week, Pro is the wrong row. A shared Ultra month at Rs 2,500 is the test. The Rs 26,000 and Rs 30,000 rows are for people who already know they need the slot or the Flow 20x plan.
 
 A student who needs a stronger Gemini model for essays should not pay Ultra prices to get there. The year of Pro on your own Gmail keeps the chats in the account you already use. Ultra shared does not.
 
@@ -105,11 +105,11 @@ For a client ad, a price, or a face you do not have rights to use, the model is 
 
 ### What is the Google AI Ultra price in Pakistan?
 
-Rs 2,500 for 1 month on a shared account, Rs 29,999 for 1 month of Flow Ultra 20x delivered on WhatsApp, or Rs 26,000 for a 1-month 25k credits slot. The shared listing shows an original price of Rs 6,000. The 25k slot shows an original price of Rs 45,000. Google's plans page lists Ultra 5x at $99.99 a month (official) and Ultra 20x at $199.99 a month (official).
+Rs 2,500 for 1 month on a shared account, Rs 30,000 for 1 month of Flow Ultra 20x delivered on WhatsApp, or Rs 26,000 for a 1-month 25k credits slot. The shared listing shows an original price of Rs 6,000. The 25k slot shows an original price of Rs 45,000. Google's plans page lists Ultra 5x at $99.99 a month (official) and Ultra 20x at $199.99 a month (official).
 
 ### Google AI Ultra Pakistan mein kitne ka hai?
 
-Shared account 1 mahine ka Rs 2,500 hai. Flow Ultra 20x Rs 29,999 hai. 25k credits slot Rs 26,000 hai. Payment EasyPaisa, JazzCash, NayaPay, UPaisa, bank transfer ya USDT se hoti hai.
+Shared account 1 mahine ka Rs 2,500 hai. Flow Ultra 20x Rs 30,000 hai. 25k credits slot Rs 26,000 hai. Payment EasyPaisa, JazzCash, NayaPay, UPaisa, bank transfer ya USDT se hoti hai.
 
 ### How many videos do 25,000 credits make?
 
@@ -117,7 +117,7 @@ We do not publish that number, because a credit is not a finished video. Length,
 
 ### Is the shared plan private?
 
-No. The Rs 2,500 row is a shared account with a 25-day warranty line. Use it to test Ultra. Export work you need to keep. The dedicated slot is the Rs 26,000 row. Flow Ultra 20x is the Rs 29,999 row, delivered on WhatsApp.
+No. The Rs 2,500 row is a shared account with a 25-day warranty line. Use it to test Ultra. Export work you need to keep. The dedicated slot is the Rs 26,000 row. Flow Ultra 20x is the Rs 30,000 row, delivered on WhatsApp.
 
 ### I only write in Docs. Which plan?
 
